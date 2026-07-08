@@ -1,0 +1,152 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Fermentation Analysis Mobile Phase | Organic Acid & Sugar HPLC | LANCHROM™",
+  description: "Ready-to-use HPLC mobile phase for fermentation QC: lactic acid, citric acid, acetic acid, malic acid, succinic acid, glucose, fructose. 5L-20L flex bags, nitrogen-sealed.",
+  alternates: { canonical: "https://www.lanchrom.com/solutions/mobile-phase/fermentation-analysis" },
+};
+
+const ANALYTES = [
+  { name: "Lactic Acid", use: "Dairy, lactic acid production, silage QC" },
+  { name: "Citric Acid", use: "Citric acid fermentation, beverage QC" },
+  { name: "Acetic Acid", use: "Vinegar, fermentation byproduct monitoring" },
+  { name: "Malic Acid", use: "Wine, fruit fermentation" },
+  { name: "Succinic Acid", use: "Bio-based chemical production" },
+  { name: "Glucose", use: "Substrate consumption monitoring" },
+  { name: "Fructose", use: "Sugar profile analysis" },
+  { name: "Pyruvic Acid", use: "Metabolic intermediate tracking" },
+];
+
+const SECTORS = [
+  { name: "Lactic Acid Production", detail: "Monitor substrate consumption and lactic acid titer through fermentation cycles." },
+  { name: "Baijiu / Huangjiu (Chinese Liquor)", detail: "Organic acid profile is a core quality marker in traditional fermentation QC." },
+  { name: "Wine & Grape Fermentation", detail: "Track malic acid, tartaric acid, and sugar conversion during fermentation." },
+  { name: "Dairy Fermentation", detail: "Lactic and acetic acid monitoring in yogurt and cheese starter culture QC." },
+  { name: "Bioethanol Production", detail: "Glucose, fructose, and ethanol yield tracking through the fermentation process." },
+  { name: "Vinegar Production", detail: "Acetic acid concentration verification for product release." },
+];
+
+export default function FermentationAnalysisPage() {
+  return (
+    <div className="bg-white">
+      <div className="border-b border-[#E6E3DD]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
+          <Link href="/solutions/mobile-phase" className="hover:text-[#3C6E71]">Solutions</Link> {" › "}
+          <span className="text-[#5C5A55]">Fermentation Analysis</span>
+        </div>
+      </div>
+
+      {/* Hero */}
+      <section className="py-14 bg-[#FBF0EB] border-b border-[#ECCFC1]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-bold tracking-[0.06em] uppercase text-[#B5654A] mb-3">Featured Solution</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-4 max-w-2xl">
+            Mobile phase, pre-made, for fermentation quality control
+          </h1>
+          <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed mb-8">
+            Our 0.005N sulfuric acid mobile phase comes pre-filtered, pH-verified, and nitrogen-sealed
+            in 5L–20L flex bags — connect it directly to your HPLC pump and start running organic acid
+            and sugar analysis without a prep room.
+          </p>
+          <div className="flex gap-3 flex-wrap">
+            <Link href="/contact?type=sample&product=organic-acid-mobile-phase" className="btn-fill" style={{ background: "#B5654A" }}>
+              Get free sample
+            </Link>
+            <Link href="/contact?type=quote&product=organic-acid-mobile-phase" className="btn-line">
+              Request quote
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* What it detects */}
+      <section className="py-14">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-[#2B2A28] mb-2">What it detects</h2>
+          <p className="text-[#5C5A55] mb-8 max-w-2xl">Run on an ion-exclusion column (Aminex HPX-87H or equivalent) with RI or UV detection.</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {ANALYTES.map(a => (
+              <div key={a.name} className="card-flat p-4">
+                <h3 className="font-bold text-[#2B2A28] text-sm mb-1">{a.name}</h3>
+                <p className="text-[#8A8782] text-xs">{a.use}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Specifications */}
+      <section className="py-14 bg-[#FBFAF8] border-y border-[#E6E3DD]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-[#2B2A28] mb-6">Specifications</h2>
+          <table className="w-full border-collapse max-w-2xl">
+            <tbody>
+              {[
+                ["H₂SO₄ Concentration", "0.005N (±2%)"],
+                ["pH", "2.2 ± 0.1"],
+                ["Water Quality", "TOC < 50 ppb, Resistivity > 18 MΩ·cm"],
+                ["Filtration", "0.2 µm membrane filtered"],
+                ["Packaging Atmosphere", "Nitrogen-filled"],
+                ["Available Sizes", "5L · 7L · 10L · 20L flex bag"],
+              ].map(([param, val]) => (
+                <tr key={param} className="border-b border-[#EFEDE8]">
+                  <td className="py-3 text-sm font-semibold text-[#2B2A28] w-1/2">{param}</td>
+                  <td className="py-3 text-sm text-[#5C5A55]">{val}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* Industries */}
+      <section className="py-14">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-[#2B2A28] mb-8">Where it's used</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {SECTORS.map(s => (
+              <div key={s.name} className="border border-[#EFEDE8] rounded-xl p-5">
+                <h3 className="font-bold text-[#2B2A28] text-sm mb-2">{s.name}</h3>
+                <p className="text-[#5C5A55] text-sm leading-relaxed">{s.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Column compatibility */}
+      <section className="py-14 bg-[#FBFAF8] border-y border-[#E6E3DD]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-[#2B2A28] mb-6">Column compatibility</h2>
+          <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
+            {[
+              { col: "Aminex HPX-87H", app: "Organic acids, sugars, alcohols — the most common ion-exclusion column for fermentation QC" },
+              { col: "Bio-Rad Fermentation Monitoring", app: "Purpose-built for complete fermentation profile analysis" },
+              { col: "Shodex SH-1011", app: "High-temperature operation for sugar analysis" },
+              { col: "Rezex ROA-Organic Acid H+", app: "Weak organic acid HPLC analysis" },
+            ].map(item => (
+              <div key={item.col} className="bg-white border border-[#EFEDE8] rounded-lg p-4">
+                <p className="font-semibold text-[#2B2A28] text-sm">{item.col}</p>
+                <p className="text-[#8A8782] text-xs mt-1">{item.app}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-[#8A8782] text-sm mt-6">Using a different column? <Link href="/contact" className="text-[#3C6E71] font-semibold hover:underline">Tell us your method</Link> and we'll verify compatibility or formulate a custom variant.</p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-14">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold text-[#2B2A28] mb-3">Skip the prep room</h2>
+          <p className="text-[#5C5A55] mb-7 max-w-lg mx-auto">Request a sample and run it on your method this week.</p>
+          <div className="flex gap-3 justify-center flex-wrap">
+            <Link href="/contact?type=sample&product=organic-acid-mobile-phase" className="btn-fill">Get free sample</Link>
+            <Link href="/products/mobile-phase-bags" className="btn-line">See all mobile phase products</Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

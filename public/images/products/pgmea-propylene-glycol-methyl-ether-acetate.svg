@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="400" height="480">
+  <defs>
+    <linearGradient id="drum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E8E6E1"/>
+      <stop offset="25%" stop-color="#F5F4F0"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="75%" stop-color="#F5F4F0"/>
+      <stop offset="100%" stop-color="#E8E6E1"/>
+    </linearGradient>
+    <linearGradient id="drumcap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2B6EB5"/>
+      <stop offset="50%" stop-color="#3A8FD4"/>
+      <stop offset="100%" stop-color="#2B6EB5"/>
+    </linearGradient>
+    <filter id="shadow2" x="-10%" y="-5%" width="120%" height="115%">
+      <feDropShadow dx="3" dy="6" stdDeviation="8" flood-color="#00000018"/>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="480" fill="#FBFAF8" rx="12"/>
+  
+  <g filter="url(#shadow2)">
+    <!-- Cap / top -->
+    <ellipse cx="200" cy="72" rx="85" ry="18" fill="url(#drumcap)"/>
+    <rect x="115" y="60" width="170" height="14" fill="url(#drumcap)"/>
+    
+    <!-- Handle -->
+    <path d="M160 55 Q160 35 180 35 L220 35 Q240 35 240 55" fill="none" stroke="#888" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Body -->
+    <rect x="115" y="72" width="170" height="310" fill="url(#drum)"/>
+    <rect x="115" y="72" width="170" height="310" fill="white" fill-opacity="0.3"/>
+    
+    <!-- Ribs -->
+    <line x1="115" y1="130" x2="285" y2="130" stroke="#D5D2CC" stroke-width="1"/>
+    <line x1="115" y1="320" x2="285" y2="320" stroke="#D5D2CC" stroke-width="1"/>
+    
+    <!-- Bottom -->
+    <ellipse cx="200" cy="382" rx="85" ry="14" fill="#D5D2CC"/>
+    
+    <!-- ═══ LABEL ═══ -->
+    <rect x="130" y="145" width="140" height="165" rx="4" fill="white" stroke="#D5D2CC" stroke-width="0.8"/>
+    
+    <!-- Brand bar -->
+    <rect x="130" y="145" width="140" height="30" rx="4" fill="#3C6E71"/>
+    <rect x="130" y="167" width="140" height="8" fill="#3C6E71"/>
+    <text x="200" y="165" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="11" font-weight="bold" letter-spacing="2">LANCHROM</text>
+    
+    <!-- Product name -->
+    <text x="200" y="198" text-anchor="middle" fill="#2B2A28" font-family="Arial,sans-serif" font-size="10" font-weight="bold">PGMEA</text>
+    
+    <!-- Grade -->
+    <text x="200" y="218" text-anchor="middle" fill="#5C5A55" font-family="Arial,sans-serif" font-size="8">Electronic Grade</text>
+    
+    <line x1="145" y1="228" x2="255" y2="228" stroke="#E6E3DD" stroke-width="0.5"/>
+    
+    <!-- CAS -->
+    <text x="200" y="244" text-anchor="middle" fill="#8A8782" font-family="Arial,sans-serif" font-size="7">CAS: 108-65-6</text>
+    
+    <!-- Volume -->
+    <text x="200" y="266" text-anchor="middle" fill="#3C6E71" font-family="Arial,sans-serif" font-size="14" font-weight="bold">25 L</text>
+    
+    <!-- Hazard symbols -->
+    <g transform="translate(145, 278)">
+      <rect x="0" y="0" width="14" height="14" rx="1" fill="#FF4444" transform="rotate(45 7 7)"/>
+      <text x="7" y="11" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="7" font-weight="bold">3</text>
+    </g>
+    <text x="175" y="290" fill="#8A8782" font-family="Arial,sans-serif" font-size="6">Flammable Liquid</text>
+  </g>
+</svg>

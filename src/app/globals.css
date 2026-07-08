@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────
+   LANCHROM™ — Design Tokens
+   A warmer, more editorial palette than the typical
+   "SaaS blue on white" template look.
+   ────────────────────────────────────────────── */
+:root {
+  /* Ink — slightly warm charcoal, not pure navy */
+  --ink: #2B2A28;
+  --ink-soft: #5C5A55;
+  --ink-faint: #8A8782;
+
+  /* Primary — a muted, slightly desaturated teal-blue
+     instead of stock #2563EB "Tailwind blue" */
+  --accent: #3C6E71;
+  --accent-deep: #2C5154;
+  --accent-soft: #E8F0EF;
+  --accent-line: #C9DBD9;
+
+  /* Secondary warm accent — terracotta, used sparingly
+     for "featured" callouts instead of amber/yellow */
+  --warm: #B5654A;
+  --warm-soft: #FBF0EB;
+  --warm-line: #ECCFC1;
+
+  /* Neutrals — warm off-white, not cold #FAFBFC */
+  --paper: #FBFAF8;
+  --paper-deep: #F3F1ED;
+  --line: #E6E3DD;
+  --line-soft: #EFEDE8;
+
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: #FFFFFF;
+  color: var(--ink-soft);
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* Slightly irregular, hand-set feeling for body copy */
+p { line-height: 1.65; }
+
+.product-sticky-panel {
+  position: sticky;
+  top: 76px;
+  max-height: calc(100vh - 96px);
+  overflow-y: auto;
+}
+
+/* Reusable, non-generic utility classes */
+.tag-line {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.divider-rule {
+  width: 36px;
+  height: 2px;
+  background: var(--warm);
+  border-radius: 2px;
+}
+
+.btn-fill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ink);
+  color: #FFF;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 11px 22px;
+  border-radius: var(--radius-sm);
+  transition: background 0.18s ease;
+}
+.btn-fill:hover { background: var(--accent-deep); }
+
+.btn-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--line);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+.btn-line:hover { border-color: var(--ink-faint); background: var(--paper-deep); }
+
+.card-flat {
+  background: #FFF;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}

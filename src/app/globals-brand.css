@@ -1,0 +1,21 @@
+/* ═══════════════════════════════════════════════════════
+   LANCHROM™ Brand Design System v2
+   Primary: #003D91 (LANCHROM Blue)
+   Secondary: #00B7C7 (Tech Cyan)
+   Background: #F5F8FC
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  --brand-blue: #003D91;
+  --brand-cyan: #00B7C7;
+  --brand-dark: #0A1628;
+  --brand-bg: #F5F8FC;
+  --brand-card: #FFFFFF;
+  --brand-border: #E2E8F0;
+  --brand-text: #1E293B;
+  --brand-text-secondary: #64748B;
+  --brand-text-muted: #94A3B8;
+  --brand-accent: #00B7C7;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
