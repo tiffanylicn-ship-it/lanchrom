@@ -31,15 +31,15 @@ export default function FermentationAnalysisPage() {
   return (
     <div className="bg-white">
       <div className="border-b border-[#E6E3DD]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
           <Link href="/solutions/mobile-phase" className="hover:text-[#3C6E71]">Solutions</Link> {" › "}
           <span className="text-[#5C5A55]">Fermentation Analysis</span>
         </div>
       </div>
 
       {/* Hero */}
-      <section className="py-14 bg-[#FBF0EB] border-b border-[#ECCFC1]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-20 bg-[#F7FAFC] border-b border-[#E6E3DD]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-bold tracking-[0.06em] uppercase text-[#B5654A] mb-3">Featured Solution</p>
           <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-4 max-w-2xl">
             Mobile phase, pre-made, for fermentation quality control
@@ -62,7 +62,7 @@ export default function FermentationAnalysisPage() {
 
       {/* What it detects */}
       <section className="py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-[#2B2A28] mb-2">What it detects</h2>
           <p className="text-[#5C5A55] mb-8 max-w-2xl">Run on an ion-exclusion column (Aminex HPX-87H or equivalent) with RI or UV detection.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -78,7 +78,7 @@ export default function FermentationAnalysisPage() {
 
       {/* Specifications */}
       <section className="py-14 bg-[#FBFAF8] border-y border-[#E6E3DD]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-[#2B2A28] mb-6">Specifications</h2>
           <table className="w-full border-collapse max-w-2xl">
             <tbody>
@@ -102,7 +102,7 @@ export default function FermentationAnalysisPage() {
 
       {/* Industries */}
       <section className="py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-[#2B2A28] mb-8">Where it's used</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {SECTORS.map(s => (
@@ -117,7 +117,7 @@ export default function FermentationAnalysisPage() {
 
       {/* Column compatibility */}
       <section className="py-14 bg-[#FBFAF8] border-y border-[#E6E3DD]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-[#2B2A28] mb-6">Column compatibility</h2>
           <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
             {[
@@ -138,7 +138,7 @@ export default function FermentationAnalysisPage() {
 
       {/* CTA */}
       <section className="py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-[#2B2A28] mb-3">Skip the prep room</h2>
           <p className="text-[#5C5A55] mb-7 max-w-lg mx-auto">Request a sample and run it on your method this week.</p>
           <div className="flex gap-3 justify-center flex-wrap">

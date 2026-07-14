@@ -50,6 +50,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body style={{ margin: 0, fontFamily: "'Inter', system-ui, sans-serif" }}>
         <Script id="hs-script" src="//js.hs-scripts.com/246539586.js" strategy="afterInteractive" />
+        {process.env.NEXT_PUBLIC_GA4_ID && (
+          <>
+            <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA4_ID}`} strategy="afterInteractive" />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){window.dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA4_ID}');
+              `}
+            </Script>
+          </>
+        )}
         <Script
           src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}`}
           strategy="afterInteractive"

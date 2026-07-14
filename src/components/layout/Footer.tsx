@@ -45,7 +45,7 @@ const FOOTER_LINKS = {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A1628] text-white">
+    <footer className="bg-[#E8F5F2] text-[#0A1628]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-8">
           {/* Brand */}
@@ -56,14 +56,14 @@ export default function Footer() {
                 alt="LANCHROM™"
                 width={944}
                 height={181}
-                className="h-6 w-auto brightness-0 invert"
+                className="h-6 w-auto"
               />
-              <span className="text-white/40 text-[9px] block mt-1 tracking-wider">ANALYTICAL SCIENCE</span>
+              <span className="text-[#64748B] text-[9px] block mt-1 tracking-wider">ANALYTICAL SCIENCE</span>
             </Link>
-            <p className="text-white/50 text-xs leading-relaxed mb-4 max-w-xs">
+            <p className="text-[#475569] text-xs leading-relaxed mb-4 max-w-xs">
               Factory-direct manufacturer of HPLC, LC-MS, GC grade solvents, mobile phase solutions, reagent kits, and OEM packaging.
             </p>
-            <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-white/60 mb-4">
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-[#475569] mb-4">
               <a href="mailto:sales@lanchrom.com" className="hover:text-[#00B7C7] transition-colors">sales@lanchrom.com</a>
               <a href="https://www.lanchrom.com" className="hover:text-[#00B7C7] transition-colors">lanchrom.com</a>
             </div>
@@ -76,11 +76,11 @@ export default function Footer() {
 
           {Object.entries(FOOTER_LINKS).map(([heading, links]) => (
             <div key={heading}>
-              <h4 className="text-[#00B7C7] text-[11px] font-bold uppercase tracking-wider mb-3">{heading}</h4>
+              <h4 className="text-[#0E918C] text-[11px] font-bold uppercase tracking-wider mb-3">{heading}</h4>
               <ul className="space-y-1.5">
                 {links.map(link => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-white/60 hover:text-[#00B7C7] text-xs transition-colors leading-snug">
+                    <Link href={link.href} className="text-[#475569] hover:text-[#0E918C] text-xs transition-colors leading-snug">
                       {link.label}
                     </Link>
                   </li>
@@ -91,13 +91,13 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 py-4 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-white/30">
+      <div className="border-t border-[#CDE5DF] py-4 px-4">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-[#64748B]">
           <p>© 2025 LANCHROM™. All rights reserved.</p>
           <div className="flex gap-4">
-            <Link href="/privacy" className="hover:text-white/60 transition-colors">Privacy</Link>
-            <Link href="/sitemap.xml" className="hover:text-white/60 transition-colors">Sitemap</Link>
-            <Link href="/contact" className="hover:text-white/60 transition-colors">Contact</Link>
+            <Link href="/privacy" className="hover:text-[#0E918C] transition-colors">Privacy</Link>
+            <Link href="/sitemap.xml" className="hover:text-[#0E918C] transition-colors">Sitemap</Link>
+            <Link href="/contact" className="hover:text-[#0E918C] transition-colors">Contact</Link>
           </div>
         </div>
       </div>

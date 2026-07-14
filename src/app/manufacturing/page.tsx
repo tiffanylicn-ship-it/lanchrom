@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Manufacturing & Engineering | LANCHROM™",
+  title: "Manufacturing & Engineering | LANCHROM",
   description: "Inside LANCHROM's solvent manufacturing facility — CFD-optimized distillation, controlled-environment filling, and full-spectrum analytical QC.",
   alternates: { canonical: "https://www.lanchrom.com/manufacturing" },
 };
@@ -37,13 +38,22 @@ const SECTIONS = [
 export default function ManufacturingPage() {
   return (
     <div className="bg-white">
-      <section className="py-14 border-b border-[#E6E3DD] bg-[#FBFAF8]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative min-h-[430px] py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC] overflow-hidden flex items-center">
+        <Image
+          src="/images/backgrounds/production-process2.png"
+          alt="LANCHROM production process"
+          fill
+          sizes="100vw"
+          className="object-contain object-right p-0 md:p-2"
+          priority
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#F7FAFC_0%,rgba(247,250,252,0.96)_31%,rgba(247,250,252,0.72)_50%,rgba(247,250,252,0.22)_68%,rgba(247,250,252,0)_100%)]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <p className="tag-line mb-3">Manufacturing</p>
           <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-4">Engineering-Led Purification</h1>
           <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">
-            We don't buy standard distillation columns off the shelf. Every tray and packing geometry is
-            computationally modeled and optimized for the specific impurity profile we're removing — the
+            We do not buy standard distillation columns off the shelf. Every tray and packing geometry is
+            computationally modeled and optimized for the specific impurity profile we remove - the
             difference between commodity-grade and electronic-grade solvent starts here.
           </p>
         </div>

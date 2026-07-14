@@ -40,7 +40,7 @@ export default async function MarketPage({ params }: Props) {
         </div>
       </div>
 
-      <section className="py-14 border-b border-[#E6E3DD] bg-[#FBFAF8]">
+      <section className="py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="tag-line mb-3">{info.region}</p>
           <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">HPLC Solvent Supplier — {info.countryName}</h1>
@@ -101,7 +101,7 @@ export default async function MarketPage({ params }: Props) {
       </section>
 
       {/* Certifications & import documentation */}
-      <section className="py-14 border-b border-[#E6E3DD] bg-[#FBFAF8]">
+      <section className="py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl font-bold text-[#2B2A28] mb-6">Certifications &amp; Import Documentation</h2>
           {hasCerts ? (

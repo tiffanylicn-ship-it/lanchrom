@@ -47,7 +47,7 @@ const FAQ_DATA = [
 export default function FAQPage() {
   return (
     <div className="bg-white">
-      <section className="py-14 border-b border-[#E6E3DD] bg-[#FBFAF8]">
+      <section className="py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="tag-line mb-3">Resources</p>
           <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Frequently Asked Questions</h1>

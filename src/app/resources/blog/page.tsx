@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Technical Blog | LANCHROM™",
+  title: "Technical Blog | LANCHROM",
   description: "Technical articles on solvent selection, HPLC method development, ICH Q3C compliance, and fermentation analysis.",
   alternates: { canonical: "https://www.lanchrom.com/resources/blog" },
 };
@@ -37,8 +37,8 @@ const POSTS = [
 export default function BlogIndexPage() {
   return (
     <div className="bg-white">
-      <section className="py-14 border-b border-[#E6E3DD] bg-[#FBFAF8]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="tag-line mb-3">Resources</p>
           <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Technical Blog</h1>
           <p className="text-[#5C5A55] text-lg max-w-2xl">Notes on solvent selection, method development, regulatory compliance, and the engineering behind what we manufacture.</p>
@@ -46,7 +46,7 @@ export default function BlogIndexPage() {
       </section>
 
       <section className="py-14">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           {POSTS.map(post => (
             <div key={post.title} className="border-b border-[#EFEDE8] pb-6 last:border-0">
               <div className="flex items-center gap-3 mb-2">
@@ -58,7 +58,7 @@ export default function BlogIndexPage() {
             </div>
           ))}
         </div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 text-center">
           <p className="text-[#8A8782] text-sm mb-4">New articles publish regularly. Have a topic you'd like us to cover?</p>
           <Link href="/contact" className="btn-line inline-flex">Suggest a topic</Link>
         </div>

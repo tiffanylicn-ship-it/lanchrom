@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "About LANCHROM™ | 15+ Years Manufacturing Electronic & Pharmaceutical Solvents",
+  title: "About LANCHROM | Solvent Manufacturing",
   description: "LANCHROM — 15+ years manufacturing electronic and pharmaceutical grade solvents. 20+ production lines, Sulzer internals, 3ppt metal purity, sub-3nm particle control.",
   alternates: { canonical: "https://www.lanchrom.com/about" },
 };
@@ -11,21 +11,26 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="bg-white">
-      <section className="py-14 border-b border-[#E6E3DD] bg-[#FBFAF8]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="tag-line mb-3">About LANCHROM™</p>
+      <section className="relative min-h-[430px] py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC] overflow-hidden flex items-center">
+        <Image
+          src="/images/hero/lcms-solvent-factory-manufacturer.png"
+          alt="LANCHROM LCMS solvent factory manufacturer"
+          fill
+          sizes="100vw"
+          className="object-contain object-right p-0 md:p-2"
+          priority
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#F7FAFC_0%,rgba(247,250,252,0.96)_31%,rgba(247,250,252,0.72)_50%,rgba(247,250,252,0.22)_68%,rgba(247,250,252,0)_100%)]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <p className="tag-line mb-3">About LANCHROM</p>
           <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-4">
             15+ Years of Precision Solvent Manufacturing
           </h1>
           <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">
             LANCHROM is a specialist manufacturer of electronic-grade and pharmaceutical-grade
             chemical solvents, with over 15 years of production experience and a product catalog
-            spanning 209 grades across two core domains — electronic materials and pharmaceutical science.
+            spanning 209 grades across electronic materials and pharmaceutical science.
           </p>
-          <div className="relative mt-8 rounded-2xl overflow-hidden border border-[#DDE7EE] shadow-sm aspect-[16/5] bg-white">
-            <Image src="/images/factory-panorama.jpg" alt="LANCHROM production base and solvent manufacturing facility" fill className="object-cover" priority />
-            <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/10" />
-          </div>
         </div>
       </section>
 

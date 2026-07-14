@@ -17,14 +17,14 @@ export default function MobilePhaseIndexPage() {
   return (
     <div className="bg-white">
       <div className="border-b border-[#E6E3DD]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
           <Link href="/solutions" className="hover:text-[#3C6E71]">Solutions</Link> {" › "}
           <span className="text-[#5C5A55]">Mobile Phase</span>
         </div>
       </div>
 
-      <section className="py-14 border-b border-[#E6E3DD] bg-[#FBFAF8]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="tag-line mb-3">Solutions</p>
           <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Mobile Phase, Pre-Made</h1>
           <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">
@@ -35,7 +35,7 @@ export default function MobilePhaseIndexPage() {
       </section>
 
       <section className="py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3 mb-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3 mb-14">
           {USE_CASES.map(uc => (
             <Link key={uc.href} href={uc.href} className={`group flex items-center justify-between py-5 px-5 border rounded-xl transition-all ${uc.featured ? "border-[#ECCFC1] bg-[#FBF0EB] hover:bg-[#F5E3DA]" : "border-[#EFEDE8] hover:border-[#C9DBD9] hover:bg-[#FBFAF8]"}`}>
               <div>

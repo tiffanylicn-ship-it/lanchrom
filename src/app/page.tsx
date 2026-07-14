@@ -4,54 +4,126 @@ import Image from "next/image";
 import RevealOnScroll from "@/components/home/RevealOnScroll";
 
 export const metadata: Metadata = {
-  title: "LANCHROM™ | HPLC, LC-MS & OEM Solvents Manufacturer",
+  title: "LANCHROM| HPLC, LC-MS & OEM Solvents Manufacturer",
   description: "Factory-direct HPLC, LC-MS, spectroscopy and OEM solvents. Acetonitrile, Methanol, IPA, THF and custom mobile phases for laboratory and industrial use.",
   alternates: { canonical: "https://www.lanchrom.com" },
 };
 
 const M = "'Montserrat', sans-serif";
 
+const HOME_HERO_SLIDES = [
+  {
+    href: "/manufacturing",
+    src: "/images/backgrounds/production-process2.png",
+    alt: "LANCHROM solvent production process",
+    label: "Manufacturing",
+  },
+  {
+    href: "/about",
+    src: "/images/hero/lcms-solvent-factory-manufacturer.png",
+    alt: "LANCHROM LCMS solvent factory manufacturer",
+    label: "About LANCHROM",
+  },
+  {
+    href: "/products",
+    src: "/images/hero/product-solutions.png",
+    alt: "LANCHROM product solutions",
+    label: "Products",
+  },
+  {
+    href: "/guides",
+    src: "/images/hero/solvents-production-lines.png",
+    alt: "LANCHROM solvents production lines",
+    label: "Guides",
+  },
+  {
+    href: "/oem",
+    src: "/images/hero/solvents-oem-services.png",
+    alt: "LANCHROM solvents OEM services",
+    label: "OEM & Private Label",
+  },
+];
+
 export default function HomePage() {
   return (
     <>
-      {/* ═══ SCREEN 1 — HERO (fix4: brighter title) ═══ */}
+      {/* --- SCREEN 1 - HERO --- */}
       <RevealOnScroll>
-      <section className="relative min-h-[600px] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/images/gmp-cleanroom.jpg" alt="LANCHROM GMP clean room" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#021526]/95 via-[#021526]/85 to-[#021526]/50" />
-        </div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-          <p className="text-[#00B7C7] text-sm font-semibold tracking-wider uppercase mb-4" style={{ fontFamily: M }}>HPLC · LC-MS · GC · Electronic Grade Solvents</p>
-          <h1 className="text-3xl md:text-5xl font-bold text-[#F8FAFC] leading-tight mb-6 max-w-2xl" style={{ fontFamily: M }}>
-            High-Purity Solvents for Analytical Labs &amp; Electronic Manufacturing
-          </h1>
-          <p className="text-[#DDEAF7] text-lg mb-8 max-w-xl">
-            Factory-direct chromatography solvents, OEM mobile phase solutions, and selected electronic-grade chemicals with reliable documentation and global export support.
-          </p>
-          <div className="flex flex-wrap gap-x-6 gap-y-2 mb-10 text-sm">
-            {["HPLC & LC-MS Grades", "UV Cutoff Qualified", "Low Residue ≤1 ppm",
-              "CoA / SDS Available", "OEM & Private Label", "Global Regulatory Support"
-            ].map(item => (
-              <span key={item} className="text-white flex items-center gap-2"><span className="text-[#00B7C7]">✓</span> {item}</span>
-            ))}
-          </div>
-          <div className="flex gap-4 flex-wrap">
-            <Link href="/contact?type=sample" className="bg-[#0E918C] text-white font-bold px-7 py-3 rounded-lg hover:bg-[#0A7A76] transition-colors text-sm" style={{ fontFamily: M }}>Get Free Sample</Link>
-            <Link href="/products" className="border border-white/40 text-white font-bold px-7 py-3 rounded-lg hover:bg-white/10 transition-colors text-sm" style={{ fontFamily: M }}>Browse Catalog</Link>
+      <section className="relative overflow-hidden bg-[#F7FAFC]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-18">
+          <div className="grid lg:grid-cols-[0.82fr_1.18fr] gap-8 lg:gap-12 items-stretch">
+            <div className="relative z-10 text-left min-h-[330px] sm:min-h-[430px] lg:min-h-[560px] flex flex-col justify-center">
+              <p className="text-[#00B7C7] text-sm font-semibold tracking-wider uppercase mb-4" style={{ fontFamily: M }}>HPLC - LC-MS - GC - Electronic Grade Solvents</p>
+              <h1 className="text-3xl md:text-4xl font-bold text-[#0A1628] leading-tight mb-5 max-w-xl" style={{ fontFamily: M }}>
+                High-Purity Solvents for Analytical Labs &amp; Electronic Manufacturing
+              </h1>
+              <p className="text-[#334155] text-base mb-6 max-w-lg">
+                Factory-direct HPLC, LC-MS, GC and OEM solvent solutions with reliable documentation and export support.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-x-5 gap-y-2 mb-8 text-sm max-w-lg">
+                {["HPLC & LC-MS Grades", "UV Cutoff Qualified", "Low Residue < ppm",
+                  "CoA / SDS Available", "OEM & Private Label", "Global Regulatory Support"
+                ].map(item => (
+                  <span key={item} className="text-[#0A1628] flex items-center gap-2"><span className="text-[#00B7C7]">✓</span> {item}</span>
+                ))}
+              </div>
+              <div className="flex gap-4 flex-wrap">
+                <Link href="/contact?type=sample" className="bg-[#0E918C] text-white font-bold px-7 py-3 rounded-lg hover:bg-[#0A7A76] transition-colors text-sm" style={{ fontFamily: M }}>Get Free Sample</Link>
+                <Link href="/products" className="border border-[#94A3B8] text-[#003D91] bg-white/80 font-bold px-7 py-3 rounded-lg hover:bg-white transition-colors text-sm" style={{ fontFamily: M }}>Browse Catalog</Link>
+              </div>
+            </div>
+
+            <div className="home-hero-stage relative min-h-[330px] sm:min-h-[430px] lg:min-h-[560px] rounded-lg overflow-hidden border border-[#DDE7EE] bg-white shadow-[0_24px_70px_rgba(15,23,42,0.12)]">
+              {HOME_HERO_SLIDES.map((slide, index) => (
+                <Link
+                  key={slide.href}
+                  href={slide.href}
+                  className="home-hero-slide absolute inset-0 flex items-center justify-center bg-white"
+                  style={{ animationDelay: `${index * 5}s`, opacity: index === 0 ? 1 : 0 }}
+                  aria-label={slide.label}
+                >
+                  <Image
+                    src={slide.src}
+                    alt={slide.alt}
+                    fill
+                    sizes="(min-width: 1024px) 58vw, 100vw"
+                    className="object-contain p-2 sm:p-3"
+                    priority={index === 0}
+                  />
+                  {slide.href === "/manufacturing" && (
+                    <div className="absolute left-4 top-4 grid grid-cols-2 gap-2 max-w-[300px]">
+                      {[
+                        { metric: "99.998%", label: "Ultra High Purity" },
+                        { metric: "<=.004%", label: "Ultra Low Water" },
+                        { metric: "<=.02 ppb", label: "Ultra Low Metal" },
+                        { metric: "<= pcs/ml", label: "Ultra Low Particle" },
+                      ].map(item => (
+                        <span key={item.label} className="rounded-md bg-white/88 px-3 py-2 text-left shadow-sm border border-white/70">
+                          <strong className="block text-[#003D91] text-lg leading-none">{item.metric}</strong>
+                          <span className="block text-[#334155] text-[10px] font-semibold mt-1">{item.label}</span>
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </Link>
+              ))}
+              <div className="absolute inset-x-4 bottom-4 z-20 flex flex-wrap gap-2">
+                {HOME_HERO_SLIDES.map(slide => (
+                  <Link key={slide.label} href={slide.href} className="home-hero-tab rounded-md bg-white/88 px-3 py-1.5 text-[11px] font-bold text-[#003D91] shadow-sm hover:bg-[#003D91] hover:text-white transition-colors">
+                    {slide.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
       </RevealOnScroll>
 
-      {/* ═══ SCREEN 2 — PRODUCT LINES (fix3: categories + key products, no icons) ═══ */}
+      {/* --- SCREEN 2 - PRODUCT LINES (fix3: categories + key products, no icons) --- */}
       <RevealOnScroll>
-      <section className="py-16 bg-[#F5F8FC] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.18]">
-          <Image src="/images/hero/WEBPIC2.jpg" alt="LANCHROM analytical solvent product chemistry background" fill className="object-cover object-center" />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#F8FBFF]/95 via-[#F8FBFF]/88 to-[#F8FBFF]/70" />
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-16 bg-[#F5F8FC]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-[#00B7C7] text-xs font-bold tracking-widest uppercase mb-2" style={{ fontFamily: M }}>Core Product Portfolio</p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
@@ -80,91 +152,24 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-          <div className="space-y-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
             {[
-              { title: "HPLC Solvents", href: "/products/hplc-solvents", products: [
-                { name: "Acetonitrile", grade: "Gradient Grade", cas: "75-05-8" },
-                { name: "Methanol", grade: "HPLC Grade", cas: "67-56-1" },
-                { name: "Ethanol", grade: "Gradient Grade", cas: "64-17-5" },
-                { name: "IPA", grade: "HPLC Grade", cas: "67-63-0" },
-                { name: "n-Hexane", grade: "NP-HPLC", cas: "110-54-3" },
-                { name: "THF", grade: "BHT Stabilized", cas: "109-99-9" },
-              ]},
-              { title: "LC-MS Solvents", href: "/products/lcms-solvents", products: [
-                { name: "Acetonitrile", grade: "LC-MS Ultra", cas: "75-05-8" },
-                { name: "Methanol", grade: "LC-MS Ultra", cas: "67-56-1" },
-                { name: "IPA", grade: "LC-MS Grade", cas: "67-63-0" },
-                { name: "Water (Ultrapure)", grade: "TOC<5ppb", cas: "7732-18-5" },
-                { name: "0.1% Formic Acid", grade: "LC-MS Ready", cas: "64-18-6" },
-              ]},
-              { title: "Spectroscopy & GC Solvents", href: "/products/spectroscopic-solvents", products: [
-                { name: "Acetonitrile", grade: "UV 190nm", cas: "75-05-8" },
-                { name: "Methanol", grade: "UV 205nm", cas: "67-56-1" },
-                { name: "n-Hexane", grade: "GC Residue", cas: "110-54-3" },
-                { name: "Toluene", grade: "GC Grade", cas: "108-88-3" },
-                { name: "Chloroform", grade: "Spectroscopic", cas: "67-66-3" },
-              ]},
-              { title: "Electronic Grade Solvents", href: "/products/electronic-grade", products: [
-                { name: "IPA", grade: "SEMI Grade", cas: "67-63-0" },
-                { name: "PGME", grade: "Electronic", cas: "107-98-2" },
-                { name: "PGMEA", grade: "Electronic", cas: "108-65-6" },
-                { name: "Acetone", grade: "Electronic", cas: "67-64-1" },
-              ]},
-              { title: "OEM & Mobile Phase", href: "/oem", products: [
-                { name: "0.005N H₂SO₄ Bag", grade: "Fermentation QC", cas: "" },
-                { name: "0.1% Formic Acid Bag", grade: "LC-MS Ready", cas: "" },
-                { name: "Private Label Service", grade: "MOQ 50 units", cas: "" },
-                { name: "Custom Packaging", grade: "500mL–200L", cas: "" },
-              ]},
-            ].map(cat => (
-              <div key={cat.title}>
-                <div className="flex items-center justify-between mb-3">
-                  <Link href={cat.href} className="group">
-                    <h3 className="text-lg font-bold text-[#003D91] group-hover:text-[#0E918C] transition-colors" style={{ fontFamily: M }}>{cat.title}</h3>
-                  </Link>
-                  <Link href={cat.href} className="text-[#0E918C] text-xs font-semibold hover:underline hidden sm:block">View all →</Link>
-                </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
-                  {cat.products.map(p => (
-                    <div key={p.name} className="bg-white border border-[#E2E8F0] rounded-lg p-3 hover:border-[#00B7C7] transition-colors">
-                      <p className="text-[#0A1628] font-semibold text-xs">{p.name}</p>
-                      <p className="text-[#00B7C7] text-[10px] font-medium">{p.grade}</p>
-                      {p.cas && <p className="text-[#94A3B8] text-[9px] font-mono mt-0.5">{p.cas}</p>}
-                    </div>
-                  ))}
-                </div>
-              </div>
+              { name: "HPLC Solvents", href: "/products/hplc-solvents", tag: "Analytical" },
+              { name: "LC-MS Solvents", href: "/products/lcms-solvents", tag: "Bioanalysis" },
+              { name: "Electronic Grade", href: "/products/electronic-grade", tag: "Semiconductor" },
+              { name: "OEM & Mobile Phase", href: "/oem", tag: "Custom Supply" },
+            ].map(p => (
+              <Link key={p.name} href={p.href} className="group bg-white/90 border border-[#DCE7EE] rounded-xl p-4 hover:border-[#00B7C7] hover:shadow-md transition-all">
+                <p className="text-[#0A1628] font-bold text-sm group-hover:text-[#003D91]" style={{ fontFamily: M }}>{p.name}</p>
+                <p className="text-[#0E918C] text-[10px] font-semibold mt-1">{p.tag}</p>
+              </Link>
             ))}
           </div>
         </div>
       </section>
       </RevealOnScroll>
 
-      {/* ═══ SCREEN 3 — QUALITY METRICS ═══ */}
-      <RevealOnScroll>
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-[#00B7C7] text-xs font-bold tracking-widest uppercase mb-2 text-center" style={{ fontFamily: M }}>Quality Advantage</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0A1628] mb-12 text-center" style={{ fontFamily: M }}>Ultra High Purity Standards</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { metric: "99.998%", label: "Ultra High Purity", sub: "GC assay verified" },
-              { metric: "≤0.004%", label: "Ultra Low Water", sub: "Karl Fischer tested" },
-              { metric: "≤0.02 ppb", label: "Ultra Low Metal", sub: "ICP-MS verified" },
-              { metric: "≤1 pcs/ml", label: "Ultra Low Particle", sub: "@ 0.5μm detection" },
-            ].map(item => (
-              <div key={item.label} className="text-center p-6 rounded-xl bg-[#F5F8FC] border border-[#E2E8F0]">
-                <div className="text-3xl md:text-4xl font-bold text-[#003D91] mb-2" style={{ fontFamily: M }}>{item.metric}</div>
-                <div className="text-[#0A1628] font-semibold text-sm mb-1">{item.label}</div>
-                <div className="text-[#64748B] text-xs">{item.sub}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      </RevealOnScroll>
-
-      {/* ═══ FACILITY SHOWCASE — 3 real photos ═══ */}
+      {/* --- FACILITY SHOWCASE - 3 real photos --- */}
       <RevealOnScroll>
       <section className="bg-[#0A1628] py-2">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -189,7 +194,7 @@ export default function HomePage() {
       </section>
       </RevealOnScroll>
 
-      {/* ═══ SCREEN 4 — PACKAGING ═══ */}
+      {/* --- SCREEN 4 - PACKAGING --- */}
       <RevealOnScroll>
       <section className="py-16 bg-[#F5F8FC]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -214,7 +219,7 @@ export default function HomePage() {
       </section>
       </RevealOnScroll>
 
-      {/* ═══ SCREEN 6 — QC PROCESS (fix2: 7 individual step cards with cropped photos) ═══ */}
+      {/* --- SCREEN 6 - QC PROCESS (fix2: 7 individual step cards with cropped photos) --- */}
       <RevealOnScroll>
       <section className="py-16 bg-[#F5F8FC]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -224,10 +229,10 @@ export default function HomePage() {
             {[
               { n: "01", title: "Raw Materials", img: "/images/qc/raw-materials.jpg", points: ["Qualified suppliers", "Incoming inspection", "Full traceability"] },
               { n: "02", title: "Distillation", img: "/images/qc/distillation.jpg", points: ["Multi-stage precision", "Low-temp crystallization", "Impurity removal"] },
-              { n: "03", title: "Filtration", img: "/images/qc/filtration.jpg", points: ["Multi-layer precision", "Remove ≥3nm particles", "Integrity monitoring"] },
+              { n: "03", title: "Filtration", img: "/images/qc/filtration.jpg", points: ["Multi-layer precision", "Remove <=nm particles", "Integrity monitoring"] },
               { n: "04", title: "Filling", img: "/images/qc/filling.jpg", points: ["Class 100 cleanroom", "Closed system filling", "Contamination prevention"] },
               { n: "05", title: "Testing", img: "/images/qc/testing.jpg", points: ["Comprehensive QC", "Advanced instruments", "Each batch verified"] },
-              { n: "06", title: "Packaging", img: "/images/qc/packaging-cropped.jpg", points: ["Clean & durable", "Nitrogen purging", "Secure sealing"] },
+              { n: "06", title: "Packaging", img: "/images/qc/packaging-sitechat.png", points: ["Clean & durable", "Nitrogen purging", "Secure sealing"] },
               { n: "07", title: "Shipment", img: "/images/qc/shipment.jpg", points: ["Global distribution", "Safe delivery", "Full documentation"] },
             ].map((step) => (
               <div key={step.n} className="bg-white rounded-xl border border-[#E2E8F0] overflow-hidden">
@@ -239,7 +244,7 @@ export default function HomePage() {
                   <h3 className="font-bold text-[#0A1628] text-xs mb-2" style={{ fontFamily: M }}>{step.title}</h3>
                   <ul className="space-y-0.5">
                     {step.points.map(p => (
-                      <li key={p} className="text-[#64748B] text-[9px] flex gap-1"><span className="text-[#00B7C7]">•</span> {p}</li>
+                      <li key={p} className="text-[#64748B] text-[9px] flex gap-1"><span className="text-[#00B7C7]">-</span> {p}</li>
                     ))}
                   </ul>
                 </div>
@@ -262,7 +267,7 @@ export default function HomePage() {
       </section>
       </RevealOnScroll>
 
-      {/* ═══ SCREEN 7 — OEM SERVICES ═══ */}
+      {/* --- SCREEN 7 - OEM SERVICES --- */}
       <RevealOnScroll>
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -299,7 +304,7 @@ export default function HomePage() {
       </section>
       </RevealOnScroll>
 
-      {/* ═══ SCREEN 8 — INDUSTRIES ═══ */}
+      {/* --- SCREEN 8 - INDUSTRIES --- */}
       <RevealOnScroll>
       <section className="py-16 bg-[#F5F8FC]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -323,7 +328,7 @@ export default function HomePage() {
       </section>
       </RevealOnScroll>
 
-      {/* ═══ SCREEN 9 — INQUIRY CTA (was screen 10, removed certifications) ═══ */}
+      {/* --- SCREEN 9 - INQUIRY CTA (was screen 10, removed certifications) --- */}
       <RevealOnScroll>
       <section className="py-16 bg-[#EEF6FB] border-t border-[#D7E7F0]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

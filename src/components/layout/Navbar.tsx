@@ -245,6 +245,13 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-3 ml-auto">
+            <form action="/search" className="relative">
+              <input
+                name="q"
+                placeholder="Search products..."
+                className="w-44 xl:w-56 border border-[#D8E2EA] rounded-lg px-3 py-2 text-xs text-[#334155] focus:outline-none focus:border-[#0E918C]"
+              />
+            </form>
             <Link href="/contact?type=sample" className="bg-[#003D91] text-white text-sm font-bold px-5 py-2.5 rounded-lg hover:bg-[#002D6B] transition-colors whitespace-nowrap">Get Free Sample</Link>
           </div>
 

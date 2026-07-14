@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "OEM & Private Label Solvents | LANCHROM™",
+  title: "OEM & Private Label Solvents | LANCHROM",
   description: "Private label, contract manufacturing, and custom formulation services. Configure your own brand packaging from 50 units.",
   alternates: { canonical: "https://www.lanchrom.com/oem" },
 };
@@ -11,26 +11,20 @@ export const metadata: Metadata = {
 export default function OEMIndexPage() {
   return (
     <div className="bg-white">
-      <section className="py-14 border-b border-[#E6E3DD] bg-[#FBFAF8]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-[1fr_420px] gap-8 items-center">
-            <div>
-              <p className="tag-line mb-3">OEM &amp; Private Label</p>
-              <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Your Brand, Our Manufacturing</h1>
-              <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">From 50 units, we'll put your label on the bottle, your name on the CoA, and your choice of documentation in the box.</p>
-            </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#E6E3DD]">
-              <Image
-                src="/images/categories/oem-services.jpg"
-                alt="OEM private label packaging — custom manufacturing tailored to your brand"
-                fill
-                sizes="(min-width: 1024px) 420px, 100vw"
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#2B2A28]/30 via-transparent to-transparent" />
-            </div>
-          </div>
+      <section className="relative min-h-[430px] py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC] overflow-hidden flex items-center">
+        <Image
+          src="/images/backgrounds/solvents-oem-services.png"
+          alt="LANCHROM solvents OEM services"
+          fill
+          sizes="100vw"
+          className="object-contain object-right p-0 md:p-2"
+          priority
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#F7FAFC_0%,rgba(247,250,252,0.96)_31%,rgba(247,250,252,0.72)_50%,rgba(247,250,252,0.22)_68%,rgba(247,250,252,0)_100%)]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <p className="tag-line mb-3">OEM &amp; Private Label</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Your Brand, Our Manufacturing</h1>
+          <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">From 50 units, we'll put your label on the bottle, your name on the CoA, and your choice of documentation in the box.</p>
         </div>
       </section>
 

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function CoAPage() {
   return (
     <div className="bg-white">
-      <section className="py-14 border-b border-[#E6E3DD] bg-[#FBFAF8]">
+      <section className="py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-xs text-[#8A8782] mb-3">
             <Link href="/downloads" className="hover:text-[#3C6E71]">Downloads</Link> {" › "} <span className="text-[#5C5A55]">Certificate of Analysis</span>

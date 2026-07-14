@@ -6,7 +6,7 @@ import { PRODUCTS } from "@/data/products";
 import ProductSidebar from "@/components/product/ProductSidebar";
 
 export const metadata: Metadata = {
-  title: "Product Catalog | HPLC, LC-MS, GC Solvents & Reagents | LANCHROM™",
+  title: "Product Catalog | HPLC, LC-MS, GC Solvents & Reagents | LANCHROM",
   description: "Full catalog organized into 8 product lines — pharmaceutical solvents, analytical solvents, mobile phase bags, standards, reagent kits, consumables, life science, and excipients.",
   alternates: { canonical: "https://www.lanchrom.com/products" },
 };
@@ -29,20 +29,20 @@ export default function ProductsIndexPage() {
 
   return (
     <div className="bg-white">
-      {/* Hero with products-hero background */}
-      <section className="relative overflow-hidden min-h-[420px] flex items-center">
+      {/* Hero with product solutions background */}
+      <section className="relative overflow-hidden min-h-[460px] flex items-center bg-[#F7FAFC]">
         <div className="absolute inset-0">
-          <Image src="/images/lab-products.jpg" alt="LANCHROM products" fill priority className="object-cover object-center" />
-          <div className="absolute inset-0 bg-[#2B3D3E]/55" />
+          <Image src="/images/backgrounds/product-solutions.png" alt="LANCHROM product solutions" fill priority className="object-contain object-right p-0 md:p-2" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,#F7FAFC_0%,rgba(247,250,252,0.96)_31%,rgba(247,250,252,0.72)_50%,rgba(247,250,252,0.22)_68%,rgba(247,250,252,0)_100%)]" />
         </div>
-        <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-10 py-24 relative z-10 w-full">
-          <p className="text-xs font-bold tracking-[0.1em] uppercase text-[#6DBFC2] mb-3">Product Catalog</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
-            8 Product Lines · {totalCategories} Categories · {totalProducts}+ SKUs
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10 w-full">
+          <p className="text-xs font-bold tracking-[0.1em] uppercase text-[#0E918C] mb-3">Product Catalog</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#0A1628] mb-3">
+            8 Product Lines - {totalCategories} Categories - {totalProducts}+ SKUs
           </h1>
-          <p className="text-white/80 text-lg max-w-2xl leading-relaxed">
+          <p className="text-[#334155] text-lg max-w-2xl leading-relaxed">
             From pharmaceutical-grade solvents to ready-to-use mobile phase bags, certified reference
-            standards, and chromatography consumables — organized into 8 focused product lines.
+            standards, and chromatography consumables - organized into 8 focused product lines.
           </p>
         </div>
       </section>

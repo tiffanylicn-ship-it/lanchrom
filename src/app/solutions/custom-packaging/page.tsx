@@ -22,14 +22,14 @@ export default function CustomPackagingPage() {
   return (
     <div className="bg-white">
       <div className="border-b border-[#E6E3DD]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
           <Link href="/solutions" className="hover:text-[#3C6E71]">Solutions</Link> {" › "}
           <span className="text-[#5C5A55]">Custom Packaging</span>
         </div>
       </div>
 
-      <section className="py-14 border-b border-[#E6E3DD] bg-[#FBFAF8]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="tag-line mb-3">Solutions</p>
           <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Order From 100mL. Your Label. Our Quality.</h1>
           <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">
@@ -41,7 +41,7 @@ export default function CustomPackagingPage() {
 
       {/* Pack sizes */}
       <section className="py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl font-bold text-[#2B2A28] mb-6">Standard packaging sizes</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {PACK_SIZES.map(p => (
@@ -57,7 +57,7 @@ export default function CustomPackagingPage() {
 
       {/* Private label */}
       <section className="py-14 bg-[#FBFAF8] border-y border-[#E6E3DD]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-start">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-start">
           <div>
             <h2 className="text-xl font-bold text-[#2B2A28] mb-4">Private label, from 50 units</h2>
             <p className="text-[#5C5A55] leading-relaxed mb-5">
@@ -80,7 +80,7 @@ export default function CustomPackagingPage() {
       </section>
 
       <section className="py-14 text-center">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-[#2B2A28] mb-3">Want to test it small first?</h2>
           <p className="text-[#5C5A55] mb-6">Request a free sample before committing to a packaging configuration.</p>
           <Link href="/contact?type=sample" className="btn-fill inline-flex">Get free sample</Link>

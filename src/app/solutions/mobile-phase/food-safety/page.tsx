@@ -11,14 +11,14 @@ export default function FoodSafetyMobilePhasePage() {
   return (
     <div className="bg-white">
       <div className="border-b border-[#E6E3DD]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
           <Link href="/solutions/mobile-phase" className="hover:text-[#3C6E71]">Mobile Phase</Link> {" › "}
           <span className="text-[#5C5A55]">Food Safety Testing</span>
         </div>
       </div>
 
-      <section className="py-14 border-b border-[#E6E3DD] bg-[#FBFAF8]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="tag-line mb-3">Mobile Phase</p>
           <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Food Safety Testing Mobile Phase</h1>
           <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">
@@ -29,7 +29,7 @@ export default function FoodSafetyMobilePhasePage() {
       </section>
 
       <section className="py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl font-bold text-[#2B2A28] mb-6">Application areas</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
