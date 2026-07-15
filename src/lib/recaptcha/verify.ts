@@ -26,6 +26,15 @@ export async function verifyRecaptcha(token: string): Promise<{
     return { valid: true, score: 1.0 };
   }
 
+  // The client sends an empty token when the widget wasn't available (ad
+  // blocker, corporate firewall, slow script load, etc). Treat that the
+  // same as "verification unavailable" rather than an automatic failure —
+  // reCAPTCHA is a spam signal, not the sole gate on legitimate leads.
+  if (!token) {
+    console.warn("No reCAPTCHA token supplied — skipping verification for this submission");
+    return { valid: true, score: 1.0 };
+  }
+
   try {
     const response = await fetch(RECAPTCHA_VERIFY_URL, {
       method: "POST",

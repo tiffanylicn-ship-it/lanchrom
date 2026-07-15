@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { APPLICATIONS } from "@/data/applications";
+import { APPLICATIONS, getApplicationNavItems } from "@/data/applications";
 import SectionSidebar from "@/components/layout/SectionSidebar";
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function ApplicationsIndexPage() {
-  const applicationNav = Object.values(APPLICATIONS).map((app) => ({ href: `/applications/${app.slug}`, label: app.h1, sublabel: app.tagline }));
+  const applicationNav = getApplicationNavItems();
 
   return (
     <div className="bg-white">

@@ -173,3 +173,10 @@ export const INDUSTRIES: Record<string, IndustryInfo> = {
 
 export function getIndustryInfo(slug: string) { return INDUSTRIES[slug]; }
 export function getAllIndustrySlugs() { return Object.keys(INDUSTRIES); }
+
+// Flat, sublabel-free nav items for the persistent sidebar — shared by the
+// index page and every individual industry page so the list only lives in
+// one place and stays in sync.
+export function getIndustryNavItems() {
+  return Object.values(INDUSTRIES).map(ind => ({ href: `/industries/${ind.slug}`, label: ind.name }));
+}

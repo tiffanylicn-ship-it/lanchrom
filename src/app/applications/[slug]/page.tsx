@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getApplicationInfo, getAllApplicationSlugs } from "@/data/applications";
+import { getApplicationInfo, getAllApplicationSlugs, getApplicationNavItems } from "@/data/applications";
 import { getCategoryInfo } from "@/data/categories";
 import { getIndustryInfo } from "@/data/industries";
 import Image from "next/image";
 import { PAGE_BACKGROUNDS } from "@/data/backgrounds";
+import SectionSidebar from "@/components/layout/SectionSidebar";
 
 interface Props { params: Promise<{ slug: string }>; }
 
@@ -68,7 +69,9 @@ export default async function ApplicationPage({ params }: Props) {
       </section>
 
       <section className="py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8">
+          <SectionSidebar title="Applications" baseHref="/applications" items={getApplicationNavItems()} accent="#3C6E71" />
+          <div className="flex-1 min-w-0">
           <h2 className="text-xl font-bold text-[#2B2A28] mb-5">Relevant Products</h2>
           <div className="flex flex-wrap gap-3 mb-12">
             {info.relevantCategories.map(slug => {
@@ -106,6 +109,7 @@ export default async function ApplicationPage({ params }: Props) {
           <div className="flex gap-3 flex-wrap">
             <Link href="/contact?type=sample" className="btn-fill">Get free sample</Link>
             <Link href="/products" className="btn-line">Browse all products</Link>
+          </div>
           </div>
         </div>
       </section>

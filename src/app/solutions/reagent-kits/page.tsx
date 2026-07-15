@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SectionSidebar from "@/components/layout/SectionSidebar";
+import { SOLUTION_NAV_ITEMS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
   title: "Custom Reagent Kits | LANCHROM™",
@@ -62,7 +64,9 @@ export default function ReagentKitsPage() {
       </section>
 
       <section className="py-14">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8">
+          <SectionSidebar title="Solutions" baseHref="/solutions" items={SOLUTION_NAV_ITEMS} accent="#B5654A" />
+          <div className="flex-1 min-w-0">
           <h2 className="text-xl font-bold text-[#2B2A28] mb-6">Common kit configurations</h2>
           <div className="grid md:grid-cols-2 gap-5">
             {KITS.map(kit => (
@@ -84,6 +88,7 @@ export default function ReagentKitsPage() {
               <Link href="/contact?type=quote" className="btn-fill">Request a custom kit quote</Link>
               <Link href="/oem/quote-calculator" className="btn-line">Private label your kit</Link>
             </div>
+          </div>
           </div>
         </div>
       </section>

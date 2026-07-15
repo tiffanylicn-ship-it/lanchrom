@@ -339,3 +339,10 @@ export function getApplicationInfo(slug: string): ApplicationInfo | undefined {
 export function getAllApplicationSlugs(): string[] {
   return Object.keys(APPLICATIONS);
 }
+
+// Flat, sublabel-free nav items for the persistent sidebar — shared by the
+// index page and every individual application page so the list only lives
+// in one place and stays in sync.
+export function getApplicationNavItems() {
+  return Object.values(APPLICATIONS).map(app => ({ href: `/applications/${app.slug}`, label: app.h1 }));
+}

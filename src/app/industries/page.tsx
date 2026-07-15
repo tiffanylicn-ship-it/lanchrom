@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { INDUSTRIES } from "@/data/industries";
+import { INDUSTRIES, getIndustryNavItems } from "@/data/industries";
 import SectionSidebar from "@/components/layout/SectionSidebar";
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function IndustriesIndexPage() {
-  const industryNav = Object.values(INDUSTRIES).map((ind) => ({ href: `/industries/${ind.slug}`, label: ind.name, sublabel: ind.tagline }));
+  const industryNav = getIndustryNavItems();
 
   return (
     <div className="bg-white">

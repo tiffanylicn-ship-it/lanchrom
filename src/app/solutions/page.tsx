@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import SectionSidebar from "@/components/layout/SectionSidebar";
+import { SOLUTION_NAV_ITEMS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
   title: "Solutions | Fermentation Analysis, Reagent Kits, Custom Packaging | LANCHROM",
@@ -9,13 +10,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.lanchrom.com/solutions" },
 };
 
-const solutionNav = [
-  { href: "/solutions", label: "Overview", sublabel: "Beyond the catalog" },
-  { href: "/solutions/mobile-phase/fermentation-analysis", label: "Fermentation", sublabel: "Organic acid QC" },
-  { href: "/solutions/mobile-phase", label: "Mobile Phase", sublabel: "Ready-to-use bags" },
-  { href: "/solutions/reagent-kits", label: "Reagent Kits", sublabel: "Workflow kits" },
-  { href: "/solutions/custom-packaging", label: "Custom Packaging", sublabel: "OEM bottling" },
-];
 
 const solutionCards = [
   { title: "Fermentation Analysis", description: "Ready-to-use mobile phase for organic acid and sugar QC.", href: "/solutions/mobile-phase/fermentation-analysis" },
@@ -76,7 +70,7 @@ export default function SolutionsIndexPage() {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8">
-        <SectionSidebar title="Solutions" baseHref="/solutions" items={solutionNav} accent="#B5654A" />
+        <SectionSidebar title="Solutions" baseHref="/solutions" items={SOLUTION_NAV_ITEMS} accent="#B5654A" />
         <main className="flex-1 min-w-0 py-12">
           <div className="grid sm:grid-cols-2 gap-4 mb-14">
             {solutionCards.map((item) => (

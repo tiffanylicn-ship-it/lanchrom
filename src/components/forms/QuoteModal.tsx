@@ -22,23 +22,10 @@ export default function QuoteModal({ isOpen, onClose, prefilledProduct = "", sel
     setLoading(true);
     try {
       const token = await getRecaptchaToken("quote");
-      const res = await fetch("/api/lead", {
+      const res = await fetch("/api/quote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: `${data.firstName} ${data.lastName}`.trim(),
-          email: data.email,
-          company: data.company,
-          country: data.country,
-          product: data.productOfInterest,
-          message: data.notes,
-          type: "quote",
-          grade: data.gradeRequired,
-          packaging: data.packagingSize,
-          quantity: data.quantity,
-          annualVolume: data.annualVolume,
-          recaptchaToken: token,
-        }),
+        body: JSON.stringify({ ...data, recaptchaToken: token, sourceUrl: window.location.href }),
       });
       if (!res.ok) throw new Error();
       setSubmitted(true);

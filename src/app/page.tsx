@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.lanchrom.com" },
 };
 
-const M = "'Montserrat', sans-serif";
+const M = "var(--font-montserrat), sans-serif";
 
 const HOME_HERO_SLIDES = [
   {
@@ -90,21 +90,6 @@ export default function HomePage() {
                     className="object-contain p-2 sm:p-3"
                     priority={index === 0}
                   />
-                  {slide.href === "/manufacturing" && (
-                    <div className="absolute left-4 top-4 grid grid-cols-2 gap-2 max-w-[300px]">
-                      {[
-                        { metric: "99.998%", label: "Ultra High Purity" },
-                        { metric: "<=.004%", label: "Ultra Low Water" },
-                        { metric: "<=.02 ppb", label: "Ultra Low Metal" },
-                        { metric: "<= pcs/ml", label: "Ultra Low Particle" },
-                      ].map(item => (
-                        <span key={item.label} className="rounded-md bg-white/88 px-3 py-2 text-left shadow-sm border border-white/70">
-                          <strong className="block text-[#003D91] text-lg leading-none">{item.metric}</strong>
-                          <span className="block text-[#334155] text-[10px] font-semibold mt-1">{item.label}</span>
-                        </span>
-                      ))}
-                    </div>
-                  )}
                 </Link>
               ))}
               <div className="absolute inset-x-4 bottom-4 z-20 flex flex-wrap gap-2">

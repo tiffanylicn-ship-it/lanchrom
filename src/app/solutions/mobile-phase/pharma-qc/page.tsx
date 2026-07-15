@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SectionSidebar from "@/components/layout/SectionSidebar";
+import { SOLUTION_NAV_ITEMS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
   title: "Pharmaceutical QC Mobile Phase | LANCHROM™",
@@ -28,8 +30,9 @@ export default function PharmaQCMobilePhasePage() {
         </div>
       </section>
 
-      <section className="py-14">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8 py-14">
+        <SectionSidebar title="Solutions" baseHref="/solutions" items={SOLUTION_NAV_ITEMS} accent="#B5654A" />
+        <div className="flex-1 min-w-0">
           <h2 className="text-xl font-bold text-[#2B2A28] mb-6">Common configurations</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
@@ -51,7 +54,7 @@ export default function PharmaQCMobilePhasePage() {
             <Link href="/products/mobile-phase-bags" className="btn-line">See all mobile phase products</Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

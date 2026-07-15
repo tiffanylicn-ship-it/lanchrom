@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SectionSidebar from "@/components/layout/SectionSidebar";
+import { SOLUTION_NAV_ITEMS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
   title: "Custom Packaging & Private Label | LANCHROM™",
@@ -39,53 +41,54 @@ export default function CustomPackagingPage() {
         </div>
       </section>
 
-      {/* Pack sizes */}
-      <section className="py-14">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#2B2A28] mb-6">Standard packaging sizes</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {PACK_SIZES.map(p => (
-              <div key={p.vol} className="border border-[#EFEDE8] rounded-lg p-4 text-center">
-                <div className="text-xl font-bold text-[#3C6E71]">{p.vol}</div>
-                <div className="text-[#8A8782] text-xs mt-1">{p.note}</div>
-              </div>
-            ))}
-          </div>
-          <p className="text-[#8A8782] text-sm mt-4">Not every product is available in every size — check the packaging selector on individual product pages for confirmed options.</p>
-        </div>
-      </section>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8 py-14">
+        <SectionSidebar title="Solutions" baseHref="/solutions" items={SOLUTION_NAV_ITEMS} accent="#B5654A" />
+        <div className="flex-1 min-w-0 space-y-14">
 
-      {/* Private label */}
-      <section className="py-14 bg-[#FBFAF8] border-y border-[#E6E3DD]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-start">
-          <div>
-            <h2 className="text-xl font-bold text-[#2B2A28] mb-4">Private label, from 50 units</h2>
-            <p className="text-[#5C5A55] leading-relaxed mb-5">
-              Most customers move to private label on their first reorder, once a product is qualified.
-              We configure the bottle, label design and language, and which name appears on the CoA header.
-            </p>
-            <ul className="space-y-2 text-sm text-[#5C5A55]">
-              <li className="flex gap-2"><span className="text-[#3C6E71]">→</span> Your brand label or ours — your choice</li>
-              <li className="flex gap-2"><span className="text-[#3C6E71]">→</span> CoA and SDS branded to your company</li>
-              <li className="flex gap-2"><span className="text-[#3C6E71]">→</span> English, Chinese, Hindi, Arabic, or multi-language labels</li>
-              <li className="flex gap-2"><span className="text-[#3C6E71]">→</span> GMP, kosher, halal, and REACH documentation on request</li>
-            </ul>
-          </div>
-          <div className="bg-white border border-[#E6E3DD] rounded-xl p-6">
-            <h3 className="font-bold text-[#2B2A28] mb-3">Configure your order</h3>
-            <p className="text-[#8A8782] text-sm mb-5">Use our calculator to specify product, container, label, and destination. No pricing is shown online — our team follows up with a detailed quote.</p>
-            <Link href="/oem/quote-calculator" className="btn-fill w-full justify-center">OEM Quote Calculator</Link>
-          </div>
-        </div>
-      </section>
+          {/* Pack sizes */}
+          <section>
+            <h2 className="text-xl font-bold text-[#2B2A28] mb-6">Standard packaging sizes</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {PACK_SIZES.map(p => (
+                <div key={p.vol} className="border border-[#EFEDE8] rounded-lg p-4 text-center">
+                  <div className="text-xl font-bold text-[#3C6E71]">{p.vol}</div>
+                  <div className="text-[#8A8782] text-xs mt-1">{p.note}</div>
+                </div>
+              ))}
+            </div>
+            <p className="text-[#8A8782] text-sm mt-4">Not every product is available in every size — check the packaging selector on individual product pages for confirmed options.</p>
+          </section>
 
-      <section className="py-14 text-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#2B2A28] mb-3">Want to test it small first?</h2>
-          <p className="text-[#5C5A55] mb-6">Request a free sample before committing to a packaging configuration.</p>
-          <Link href="/contact?type=sample" className="btn-fill inline-flex">Get free sample</Link>
+          {/* Private label */}
+          <section className="bg-[#FBFAF8] border border-[#E6E3DD] rounded-2xl p-6 md:p-8 grid md:grid-cols-2 gap-10 items-start">
+            <div>
+              <h2 className="text-xl font-bold text-[#2B2A28] mb-4">Private label, from 50 units</h2>
+              <p className="text-[#5C5A55] leading-relaxed mb-5">
+                Most customers move to private label on their first reorder, once a product is qualified.
+                We configure the bottle, label design and language, and which name appears on the CoA header.
+              </p>
+              <ul className="space-y-2 text-sm text-[#5C5A55]">
+                <li className="flex gap-2"><span className="text-[#3C6E71]">→</span> Your brand label or ours — your choice</li>
+                <li className="flex gap-2"><span className="text-[#3C6E71]">→</span> CoA and SDS branded to your company</li>
+                <li className="flex gap-2"><span className="text-[#3C6E71]">→</span> English, Chinese, Hindi, Arabic, or multi-language labels</li>
+                <li className="flex gap-2"><span className="text-[#3C6E71]">→</span> GMP, kosher, halal, and REACH documentation on request</li>
+              </ul>
+            </div>
+            <div className="bg-white border border-[#E6E3DD] rounded-xl p-6">
+              <h3 className="font-bold text-[#2B2A28] mb-3">Configure your order</h3>
+              <p className="text-[#8A8782] text-sm mb-5">Use our calculator to specify product, container, label, and destination. No pricing is shown online — our team follows up with a detailed quote.</p>
+              <Link href="/oem/quote-calculator" className="btn-fill w-full justify-center">OEM Quote Calculator</Link>
+            </div>
+          </section>
+
+          <section className="text-center">
+            <h2 className="text-2xl font-bold text-[#2B2A28] mb-3">Want to test it small first?</h2>
+            <p className="text-[#5C5A55] mb-6">Request a free sample before committing to a packaging configuration.</p>
+            <Link href="/contact?type=sample" className="btn-fill inline-flex">Get free sample</Link>
+          </section>
+
         </div>
-      </section>
+      </div>
     </div>
   );
 }

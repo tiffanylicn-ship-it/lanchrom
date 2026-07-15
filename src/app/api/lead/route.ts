@@ -130,7 +130,7 @@ export async function POST(req: Request) {
     }
 
     const zohoEmail = process.env.ZOHO_EMAIL;
-    const zohoPassword = process.env.ZOHO_PASSWORD;
+    const zohoPassword = process.env.ZOHO_APP_PASSWORD || process.env.ZOHO_PASSWORD;
     const notifyTo = process.env.LEAD_NOTIFY_TO || "sales@lanchrom.com";
 
     if (!zohoEmail || !zohoPassword) {
