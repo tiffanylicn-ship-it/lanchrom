@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SectionSidebar from "@/components/layout/SectionSidebar";
-import { SOLUTION_NAV_ITEMS } from "@/data/solutions-nav";
+import { SOLUTION_NAV_GROUPS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
   title: "Mobile Phase Solutions | Ready-to-Use HPLC Buffers | LANCHROM™",
@@ -37,7 +37,7 @@ export default function MobilePhaseIndexPage() {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8 py-14">
-        <SectionSidebar title="Solutions" baseHref="/solutions" items={SOLUTION_NAV_ITEMS} accent="#B5654A" />
+        <SectionSidebar title="Solutions" baseHref="/solutions" groups={SOLUTION_NAV_GROUPS} accent="#B5654A" />
         <div className="flex-1 min-w-0">
         <div className="space-y-3 mb-14">
           {USE_CASES.map(uc => (

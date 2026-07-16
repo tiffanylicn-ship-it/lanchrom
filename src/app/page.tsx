@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import RevealOnScroll from "@/components/home/RevealOnScroll";
+import { INDUSTRIES_NAV, MARKETS_NAV } from "@/data/nav-links";
 
 export const metadata: Metadata = {
   title: "LANCHROM| HPLC, LC-MS & OEM Solvents Manufacturer",
@@ -47,63 +48,67 @@ const HOME_HERO_SLIDES = [
 export default function HomePage() {
   return (
     <>
-      {/* --- SCREEN 1 - HERO --- */}
-      <RevealOnScroll>
-      <section className="relative overflow-hidden bg-[#F7FAFC]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-18">
-          <div className="grid lg:grid-cols-[0.82fr_1.18fr] gap-8 lg:gap-12 items-stretch">
-            <div className="relative z-10 text-left min-h-[330px] sm:min-h-[430px] lg:min-h-[560px] flex flex-col justify-center">
-              <p className="text-[#00B7C7] text-sm font-semibold tracking-wider uppercase mb-4" style={{ fontFamily: M }}>HPLC - LC-MS - GC - Electronic Grade Solvents</p>
-              <h1 className="text-3xl md:text-4xl font-bold text-[#0A1628] leading-tight mb-5 max-w-xl" style={{ fontFamily: M }}>
-                High-Purity Solvents for Analytical Labs &amp; Electronic Manufacturing
-              </h1>
-              <p className="text-[#334155] text-base mb-6 max-w-lg">
-                Factory-direct HPLC, LC-MS, GC and OEM solvent solutions with reliable documentation and export support.
-              </p>
-              <div className="grid sm:grid-cols-2 gap-x-5 gap-y-2 mb-8 text-sm max-w-lg">
-                {["HPLC & LC-MS Grades", "UV Cutoff Qualified", "Low Residue < ppm",
-                  "CoA / SDS Available", "OEM & Private Label", "Global Regulatory Support"
-                ].map(item => (
-                  <span key={item} className="text-[#0A1628] flex items-center gap-2"><span className="text-[#00B7C7]">✓</span> {item}</span>
-                ))}
-              </div>
-              <div className="flex gap-4 flex-wrap">
-                <Link href="/contact?type=sample" className="bg-[#0E918C] text-white font-bold px-7 py-3 rounded-lg hover:bg-[#0A7A76] transition-colors text-sm" style={{ fontFamily: M }}>Get Free Sample</Link>
-                <Link href="/products" className="border border-[#94A3B8] text-[#003D91] bg-white/80 font-bold px-7 py-3 rounded-lg hover:bg-white transition-colors text-sm" style={{ fontFamily: M }}>Browse Catalog</Link>
+      {/* --- SCREEN 1 - HERO (full-bleed background slideshow, LCY-style) --- */}
+      <section className="home-hero-stage relative min-h-[100svh] lg:min-h-[88vh] overflow-hidden bg-[#0A1628]">
+        {HOME_HERO_SLIDES.map((slide, index) => (
+          <div
+            key={slide.href}
+            className="home-hero-slide absolute inset-0"
+            style={{ animationDelay: `${index * 5}s`, opacity: index === 0 ? 1 : 0 }}
+          >
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              sizes="100vw"
+              className="object-cover"
+              priority={index === 0}
+            />
+          </div>
+        ))}
+
+        {/* Gradient overlay for text legibility, matching a full-bleed corporate hero */}
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,22,40,0.55)_0%,rgba(10,22,40,0.35)_35%,rgba(10,22,40,0.75)_100%)]" />
+
+        {/* Foreground content */}
+        <div className="relative z-10 flex flex-col min-h-[100svh] lg:min-h-[88vh]">
+          <div className="flex-1 flex items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16">
+              <div className="max-w-2xl">
+                <p className="text-[#5FD4DC] text-sm font-semibold tracking-wider uppercase mb-4" style={{ fontFamily: M }}>HPLC · LC-MS · GC · Electronic Grade Solvents</p>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.08] mb-6" style={{ fontFamily: M }}>
+                  High-Purity Solvents for Analytical Labs &amp; Electronic Manufacturing
+                </h1>
+                <p className="text-white/85 text-base sm:text-lg mb-8 max-w-xl leading-relaxed">
+                  Factory-direct HPLC, LC-MS, GC and OEM solvent solutions with reliable documentation and export support.
+                </p>
+                <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2.5 mb-10 text-sm max-w-lg">
+                  {["HPLC & LC-MS Grades", "UV Cutoff Qualified", "Low Residue < ppm",
+                    "CoA / SDS Available", "OEM & Private Label", "Global Regulatory Support"
+                  ].map(item => (
+                    <span key={item} className="text-white flex items-center gap-2"><span className="text-[#5FD4DC]">✓</span> {item}</span>
+                  ))}
+                </div>
+                <div className="flex gap-4 flex-wrap">
+                  <Link href="/contact?type=sample" className="bg-[#0E918C] text-white font-bold px-7 py-3.5 rounded-lg hover:bg-[#0DA8A2] transition-colors text-sm" style={{ fontFamily: M }}>Get Free Sample</Link>
+                  <Link href="/products" className="border border-white/40 text-white bg-white/10 backdrop-blur-sm font-bold px-7 py-3.5 rounded-lg hover:bg-white/20 transition-colors text-sm" style={{ fontFamily: M }}>Browse Catalog</Link>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div className="home-hero-stage relative min-h-[330px] sm:min-h-[430px] lg:min-h-[560px] rounded-lg overflow-hidden border border-[#DDE7EE] bg-white shadow-[0_24px_70px_rgba(15,23,42,0.12)]">
-              {HOME_HERO_SLIDES.map((slide, index) => (
-                <Link
-                  key={slide.href}
-                  href={slide.href}
-                  className="home-hero-slide absolute inset-0 flex items-center justify-center bg-white"
-                  style={{ animationDelay: `${index * 5}s`, opacity: index === 0 ? 1 : 0 }}
-                  aria-label={slide.label}
-                >
-                  <Image
-                    src={slide.src}
-                    alt={slide.alt}
-                    fill
-                    sizes="(min-width: 1024px) 58vw, 100vw"
-                    className="object-contain p-2 sm:p-3"
-                    priority={index === 0}
-                  />
+          {/* Slide tabs, overlaid at the bottom of the hero */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-8 sm:pb-10">
+            <div className="flex flex-wrap gap-2">
+              {HOME_HERO_SLIDES.map(slide => (
+                <Link key={slide.label} href={slide.href} className="home-hero-tab rounded-md bg-white/12 border border-white/25 backdrop-blur-sm px-3.5 py-2 text-xs font-bold text-white shadow-sm hover:bg-white hover:text-[#003D91] transition-colors">
+                  {slide.label}
                 </Link>
               ))}
-              <div className="absolute inset-x-4 bottom-4 z-20 flex flex-wrap gap-2">
-                {HOME_HERO_SLIDES.map(slide => (
-                  <Link key={slide.label} href={slide.href} className="home-hero-tab rounded-md bg-white/88 px-3 py-1.5 text-[11px] font-bold text-[#003D91] shadow-sm hover:bg-[#003D91] hover:text-white transition-colors">
-                    {slide.label}
-                  </Link>
-                ))}
-              </div>
             </div>
           </div>
         </div>
       </section>
-      </RevealOnScroll>
 
       {/* --- SCREEN 2 - PRODUCT LINES (fix3: categories + key products, no icons) --- */}
       <RevealOnScroll>
@@ -309,6 +314,62 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center mt-6"><Link href="/industries" className="text-[#003D91] font-semibold text-sm">All 20 Industries →</Link></div>
+        </div>
+      </section>
+      </RevealOnScroll>
+
+      {/* --- EXPLORE MORE (Industries / Markets / Guides / Downloads — moved off the top nav) --- */}
+      <RevealOnScroll>
+      <section className="py-16 bg-white border-t border-[#E2E8F0]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-[#00B7C7] text-xs font-bold tracking-widest uppercase mb-2 text-center" style={{ fontFamily: M }}>Explore More</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0A1628] mb-10 text-center" style={{ fontFamily: M }}>Industries, Markets, Guides &amp; Downloads</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div>
+              <h3 className="font-bold text-[#0A1628] text-sm mb-3" style={{ fontFamily: M }}>Industries</h3>
+              <ul className="space-y-2 mb-3">
+                {INDUSTRIES_NAV.slice(0, 5).map(item => (
+                  <li key={item.href}><Link href={item.href} className="text-[#475569] text-sm hover:text-[#0E918C] transition-colors">{item.label}</Link></li>
+                ))}
+              </ul>
+              <Link href="/industries" className="text-[#003D91] font-semibold text-sm">All Industries →</Link>
+            </div>
+            <div>
+              <h3 className="font-bold text-[#0A1628] text-sm mb-3" style={{ fontFamily: M }}>Export Markets</h3>
+              <ul className="space-y-2 mb-3">
+                {MARKETS_NAV.slice(0, 5).map(item => (
+                  <li key={item.href}><Link href={item.href} className="text-[#475569] text-sm hover:text-[#0E918C] transition-colors">{item.label}</Link></li>
+                ))}
+              </ul>
+              <Link href="/markets" className="text-[#003D91] font-semibold text-sm">All Markets →</Link>
+            </div>
+            <div>
+              <h3 className="font-bold text-[#0A1628] text-sm mb-3" style={{ fontFamily: M }}>Guides</h3>
+              <ul className="space-y-2 mb-3">
+                {[
+                  { label: "The Complete Guide to HPLC Solvents", href: "/guides/complete-guide-to-hplc-solvents" },
+                  { label: "The Mobile Phase Handbook", href: "/guides/mobile-phase-handbook" },
+                  { label: "Chromatography Solvent Buying Guide", href: "/guides/chromatography-solvent-buying-guide" },
+                ].map(item => (
+                  <li key={item.label}><Link href={item.href} className="text-[#475569] text-sm hover:text-[#0E918C] transition-colors">{item.label}</Link></li>
+                ))}
+              </ul>
+              <Link href="/guides" className="text-[#003D91] font-semibold text-sm">All Guides →</Link>
+            </div>
+            <div>
+              <h3 className="font-bold text-[#0A1628] text-sm mb-3" style={{ fontFamily: M }}>Downloads</h3>
+              <ul className="space-y-2 mb-3">
+                {[
+                  { label: "Certificates of Analysis (CoA)", href: "/downloads/coa" },
+                  { label: "Safety Data Sheets (SDS)", href: "/downloads/sds" },
+                  { label: "Technical Data Sheets (TDS)", href: "/downloads/tds" },
+                ].map(item => (
+                  <li key={item.label}><Link href={item.href} className="text-[#475569] text-sm hover:text-[#0E918C] transition-colors">{item.label}</Link></li>
+                ))}
+              </ul>
+              <Link href="/downloads" className="text-[#003D91] font-semibold text-sm">All Downloads →</Link>
+            </div>
+          </div>
         </div>
       </section>
       </RevealOnScroll>
