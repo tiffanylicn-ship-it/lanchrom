@@ -132,7 +132,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center flex-shrink-0">
             <div className="leading-tight">
               <Image src="/images/brand/lanchrom-logo.png" alt="LANCHROM™" width={944} height={181} className="h-11 sm:h-12 w-auto" priority />
-              <span className="text-[#8A8782] text-[11px] block font-medium tracking-wide mt-0.5">ANALYTICAL SCIENCE</span>
+              <span className="text-[#8A8782] text-[11px] block text-center font-medium tracking-wide mt-0.5">ANALYTICAL SCIENCE</span>
             </div>
           </Link>
 

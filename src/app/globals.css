@@ -86,8 +86,8 @@ p { line-height: 1.65; }
 
 .product-sticky-panel {
   position: sticky;
-  top: 112px;
-  max-height: calc(100vh - 132px);
+  top: 156px;
+  max-height: calc(100vh - 176px);
   overflow-y: auto;
 }
 

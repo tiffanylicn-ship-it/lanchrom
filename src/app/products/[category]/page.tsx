@@ -34,10 +34,10 @@ export default async function CategoryPage({ params }: Props) {
 
   return (
     <div className="bg-white">
-      <div className="border-b border-[#E6E3DD]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
+      <div className="sticky top-20 md:top-28 z-30 bg-white/95 backdrop-blur-sm border-b border-[#E6E3DD]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-sm text-left text-[#8A8782]">
           <Link href="/products" className="hover:text-[#3C6E71]">Products</Link> {" › "}
-          <span className="text-[#5C5A55]">{info.name}</span>
+          <span className="text-[#5C5A55] font-medium">{info.name}</span>
         </div>
       </div>
 

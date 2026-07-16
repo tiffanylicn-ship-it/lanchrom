@@ -30,10 +30,10 @@ function ItemLink({ item, accent }: { item: SidebarItem; accent: string }) {
   return (
     <Link
       href={item.href}
-      className={`block py-1.5 text-[14.5px] leading-snug transition-colors ${
-        active ? "font-semibold -ml-[14px] pl-[12px] border-l-2" : "text-[#5C5A55] hover:text-[#2B2A28]"
+      className={`block py-1.5 px-2.5 -ml-2.5 rounded-md text-[14.5px] leading-snug transition-colors ${
+        active ? "font-semibold" : "text-[#5C5A55] hover:text-[#2B2A28] hover:bg-[#F5F3EF]"
       }`}
-      style={active ? { color: accent, borderColor: accent } : undefined}
+      style={active ? { backgroundColor: `${accent}1A`, color: accent } : undefined}
     >
       <span className="block">{item.label}</span>
       {item.sublabel && (

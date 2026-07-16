@@ -57,12 +57,12 @@ export default async function ProductDetailPage({ params }: Props) {
 
   return (
     <div className="bg-white">
-      {/* Breadcrumb */}
-      <div className="border-b border-[#E6E3DD]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
+      {/* Breadcrumb — sticky beneath the main nav for easy backtracking */}
+      <div className="sticky top-20 md:top-28 z-30 bg-white/95 backdrop-blur-sm border-b border-[#E6E3DD]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-sm text-left text-[#8A8782]">
           <Link href="/products" className="hover:text-[#3C6E71]">Products</Link> {" › "}
           <Link href={`/products/${category}`} className="hover:text-[#3C6E71]">{categoryInfo?.name || category}</Link> {" › "}
-          <span className="text-[#5C5A55]">{product.name}</span>
+          <span className="text-[#5C5A55] font-medium">{product.name}</span>
         </div>
       </div>
 

@@ -26,22 +26,24 @@ function ProductGroup({ groupKey, color }: { groupKey: keyof typeof GROUP_LABELS
 
   return (
     <div>
+      {/* The whole row toggles the sub-menu — click once to reveal it, click
+          again to collapse it. Navigation to the line overview lives on the
+          "All Product Lines" pages themselves, not here, so this row has one
+          clear job. */}
       <button
         type="button"
         onClick={() => setOpen(o => !o)}
         aria-expanded={open}
-        className="w-full flex items-center justify-between gap-2 mb-1"
+        className="w-full flex items-center justify-between gap-2 py-1 -ml-1 pl-1 pr-1 rounded-md hover:bg-[#F5F3EF] transition-colors"
       >
         <span className="flex items-center gap-2 min-w-0">
           <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
-          <Link
-            href={`/products/line/${groupKey}`}
-            onClick={e => e.stopPropagation()}
-            className={`text-[13px] font-bold uppercase tracking-wider transition-colors truncate ${groupActive ? "" : "text-[#5C5A55] hover:text-[#2B2A28]"}`}
+          <span
+            className={`text-[13px] font-bold uppercase tracking-wider truncate ${groupActive ? "" : "text-[#5C5A55]"}`}
             style={groupActive ? { color } : undefined}
           >
             {info.label}
-          </Link>
+          </span>
         </span>
         <span className="flex-shrink-0 text-[10px] transition-transform duration-200" style={{ color, transform: open ? "rotate(180deg)" : "none" }}>▾</span>
       </button>
@@ -54,10 +56,10 @@ function ProductGroup({ groupKey, color }: { groupKey: keyof typeof GROUP_LABELS
                 <li key={cat.slug}>
                   <Link
                     href={`/products/${cat.slug}`}
-                    className={`block text-[14.5px] py-1 transition-colors ${
-                      isActive ? "font-semibold -ml-[14px] pl-[12px] border-l-2" : "text-[#5C5A55] hover:text-[#2B2A28]"
+                    className={`block text-[14.5px] py-1.5 px-2.5 -ml-2.5 rounded-md transition-colors ${
+                      isActive ? "font-semibold" : "text-[#5C5A55] hover:text-[#2B2A28] hover:bg-[#F5F3EF]"
                     }`}
-                    style={isActive ? { color, borderColor: color } : undefined}
+                    style={isActive ? { backgroundColor: `${color}1A`, color } : undefined}
                   >
                     {cat.name}
                   </Link>
@@ -73,7 +75,7 @@ function ProductGroup({ groupKey, color }: { groupKey: keyof typeof GROUP_LABELS
 
 export default function ProductSidebar() {
   return (
-    <nav className="hidden lg:block w-[260px] flex-shrink-0 sticky top-28 self-start max-h-[calc(100vh-150px)] overflow-y-auto pr-4 pb-8">
+    <nav className="hidden lg:block w-[260px] flex-shrink-0 sticky top-[156px] self-start max-h-[calc(100vh-194px)] overflow-y-auto pr-4 pb-8">
       <Link href="/products" className="flex items-center mb-5 group">
         <span className="text-[13px] font-bold uppercase tracking-wider text-[#2B2A28] group-hover:text-[#3C6E71]">All Product Lines</span>
       </Link>
