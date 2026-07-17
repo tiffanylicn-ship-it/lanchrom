@@ -14,7 +14,7 @@ export default function DownloadsPage() {
     <div className="bg-white">
       <section className="relative overflow-hidden py-20 border-b border-[#E6E3DD] bg-[#FBFAF8]">
         <div className="absolute inset-0">
-          <Image src="/images/WEBPIC4.jpg" alt="LANCHROM analytical solvent documentation background" fill priority className="object-cover object-center" />
+          <Image src="/images/WEBPIC4.jpg" alt="LANCHROM analytical solvent documentation background" fill priority sizes="100vw" className="object-cover object-center" />
           <div className="absolute inset-0 bg-white/72" />
         </div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

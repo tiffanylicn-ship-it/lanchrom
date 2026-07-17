@@ -15,16 +15,16 @@ export default function ApplicationsIndexPage() {
 
   return (
     <div className="bg-white">
-      <section className="relative min-h-[430px] py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC] overflow-hidden flex items-center">
+      <section className="relative min-h-[460px] py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC] overflow-hidden flex items-center">
         <Image
           src="/images/backgrounds/application-back.jpg"
           alt="LANCHROM analytical method applications"
           fill
           sizes="100vw"
-          className="object-contain object-right p-0 md:p-2"
+          className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#F7FAFC_0%,rgba(247,250,252,0.96)_31%,rgba(247,250,252,0.72)_50%,rgba(247,250,252,0.22)_68%,rgba(247,250,252,0)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#F7FAFC_0%,rgba(247,250,252,0.9)_22%,rgba(247,250,252,0.55)_42%,rgba(247,250,252,0.12)_62%,rgba(247,250,252,0)_82%)]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <p className="tag-line mb-3">Applications</p>
           <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Solvents By Analytical Method</h1>

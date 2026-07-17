@@ -6,6 +6,9 @@
    "SaaS blue on white" template look.
    ────────────────────────────────────────────── */
 :root {
+  --font-inter: Inter, "Segoe UI", Arial, sans-serif;
+  --font-montserrat: Montserrat, "Segoe UI", Arial, sans-serif;
+
   /* Ink — slightly warm charcoal, not pure navy */
   --ink: #2B2A28;
   --ink-soft: #5C5A55;
@@ -73,6 +76,175 @@ body {
 .home-hero-stage:has(.home-hero-tab:nth-child(4):hover) .home-hero-slide:nth-child(4),
 .home-hero-stage:has(.home-hero-tab:nth-child(5):hover) .home-hero-slide:nth-child(5) {
   opacity: 1 !important;
+}
+
+.home-hero-green-wash {
+  width: min(70vw, 920px);
+  background: linear-gradient(145deg, rgba(95, 212, 220, 0.32), rgba(95, 212, 220, 0.24));
+  clip-path: polygon(0 0, 100% 0, 78% 100%, 0 100%);
+  pointer-events: none;
+}
+
+.home-hero-stage h1,
+.home-hero-stage p,
+.home-hero-stage li,
+.home-hero-stage span {
+  text-shadow: 0 1px 14px rgba(4, 47, 45, 0.32);
+}
+
+.home-flow-page {
+  overflow: clip;
+  background: #f6faf8;
+}
+
+.home-flow-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.home-flow-section::before,
+.home-flow-section::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-flow-section::after {
+  left: 18%;
+  bottom: -70px;
+  width: 68%;
+  height: 150px;
+  transform: rotate(-3deg);
+  background: linear-gradient(90deg, transparent, rgba(14, 145, 140, 0.12), transparent);
+}
+
+.home-flow-right-green {
+  background: #f7faf8;
+}
+
+.home-flow-right-green::before {
+  inset: 0 0 0 auto;
+  width: 42%;
+  background:
+    repeating-linear-gradient(135deg, rgba(14, 145, 140, 0.07) 0 1px, transparent 1px 22px),
+    linear-gradient(160deg, #d8eee4, #edf7f2);
+  clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.home-flow-left-gray {
+  background: #ffffff;
+}
+
+.home-flow-left-gray::before {
+  inset: 0 auto 0 0;
+  width: 38%;
+  background:
+    repeating-linear-gradient(45deg, rgba(54, 79, 73, 0.055) 0 1px, transparent 1px 24px),
+    linear-gradient(145deg, #e6ecea, #f2f5f4);
+  clip-path: polygon(0 0, 100% 12%, 76% 100%, 0 100%);
+}
+
+.home-flow-right-yellow {
+  background: #f7faf8;
+}
+
+.home-flow-right-yellow::before {
+  inset: 0 0 0 auto;
+  width: 36%;
+  background:
+    repeating-linear-gradient(135deg, rgba(140, 116, 39, 0.06) 0 1px, transparent 1px 20px),
+    linear-gradient(155deg, #f2e8bb, #f8f3dc);
+  clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 88%);
+}
+
+.home-flow-left-green {
+  background: #edf6f1;
+}
+
+.home-flow-left-green::before {
+  inset: 0 auto 0 0;
+  width: 42%;
+  background:
+    repeating-linear-gradient(45deg, rgba(14, 145, 140, 0.065) 0 1px, transparent 1px 22px),
+    linear-gradient(160deg, #cfe8dc, #e1f0e8);
+  clip-path: polygon(0 0, 78% 0, 100% 100%, 0 100%);
+}
+
+.home-flow-cta {
+  background: #073f3b;
+}
+
+.home-flow-cta::before {
+  inset: 0 0 0 auto;
+  width: 34%;
+  background:
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 22px),
+    linear-gradient(145deg, #0e918c, #0a6863);
+  clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.home-service-panel {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 260ms ease, transform 260ms ease, visibility 260ms;
+}
+
+.home-service-panel.is-default {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.home-service-stage:has(.home-service-tab:hover) .home-service-panel {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
+.home-service-stage:has(.home-service-tab:nth-child(1):hover) .home-service-panel:nth-child(1),
+.home-service-stage:has(.home-service-tab:nth-child(2):hover) .home-service-panel:nth-child(2),
+.home-service-stage:has(.home-service-tab:nth-child(3):hover) .home-service-panel:nth-child(3) {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (max-width: 767px) {
+  .home-hero-green-wash {
+    width: 100%;
+    background: linear-gradient(155deg, rgba(95, 212, 220, 0.36), rgba(95, 212, 220, 0.28));
+    clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+  }
+
+  .home-flow-right-green::before,
+  .home-flow-left-gray::before,
+  .home-flow-right-yellow::before,
+  .home-flow-left-green::before,
+  .home-flow-cta::before {
+    width: 72%;
+    opacity: 0.75;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero-slide {
+    animation: none;
+  }
+
+  .home-hero-slide:not(:first-child) {
+    display: none;
+  }
+
+  .home-service-panel {
+    transition: none;
+  }
 }
 
 h1, h2, h3, h4 {

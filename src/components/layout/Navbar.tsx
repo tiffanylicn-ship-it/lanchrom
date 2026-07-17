@@ -120,7 +120,7 @@ export default function Navbar() {
   const navLinkClass = "text-[#5C5A55] hover:text-[#003D91] text-[15px] font-medium px-3 py-2 rounded-md hover:bg-[#FBFAF8] transition-colors";
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E6E3DD]">
+    <header className="sticky top-0 z-50 bg-[#EAF4EF]/95 backdrop-blur-md border-b border-[#C9DBD3] shadow-[0_1px_0_rgba(10,81,76,0.04)]">
       <div className="border-b border-[#EFEDE8] hidden md:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-end items-center h-8 text-xs text-[#8A8782]">
           <a href="mailto:sales@lanchrom.com" className="hover:text-[#003D91] transition-colors">sales@lanchrom.com</a>
@@ -207,7 +207,7 @@ export default function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-[#E6E3DD] px-4 pb-6 space-y-1 max-h-[calc(100vh-5rem)] overflow-y-auto">
+        <div className="lg:hidden bg-[#F3F8F5] border-t border-[#C9DBD3] px-4 pb-6 space-y-1 max-h-[calc(100vh-5rem)] overflow-y-auto">
           {[
             { label: "All Products", href: "/products" },
             { label: "HPLC Solvents", href: "/products/hplc-solvents" },

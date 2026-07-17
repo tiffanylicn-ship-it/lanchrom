@@ -29,6 +29,7 @@ const nextConfig: NextConfig = {
         source: "/images/:path*",
         headers: [
           { key: "Cross-Origin-Resource-Policy", value: "same-site" },
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
       },
     ];
