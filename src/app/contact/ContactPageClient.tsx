@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import dynamic from "next/dynamic";
@@ -16,14 +16,6 @@ function ContactContent() {
 
   return (
     <div className="bg-white">
-      <section className="py-14 border-b border-[#E6E3DD] bg-[#FBFAF8]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="tag-line mb-3">Get in Touch</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Contact LANCHROM™</h1>
-          <p className="text-[#5C5A55] text-lg max-w-xl">Sample requests, quotes, OEM inquiries, or technical questions — our team responds within 1 business day.</p>
-        </div>
-      </section>
-
       <section className="py-14">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-6">
@@ -52,7 +44,7 @@ function ContactContent() {
               <div className="space-y-3 text-sm">
                 <div>
                   <p className="text-[#8A8782] text-xs uppercase tracking-wide mb-0.5">Sales &amp; Quotes</p>
-                  <a href="mailto:sales@lanchrom.com" className="text-[#3C6E71] font-medium hover:underline">sales@lanchrom.com</a>
+                  <a href="mailto:info@lanchrom.com" className="text-[#3C6E71] font-medium hover:underline">info@lanchrom.com</a>
                 </div>
                 <div>
                   <p className="text-[#8A8782] text-xs uppercase tracking-wide mb-0.5">Technical Support</p>
@@ -89,3 +81,4 @@ export default function ContactPageClient() {
     </Suspense>
   );
 }
+

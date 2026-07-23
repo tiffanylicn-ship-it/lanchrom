@@ -27,10 +27,10 @@ export default function PrivacyPage() {
           <p>Our website uses Google Analytics (GA4) to collect anonymized usage data, and Google reCAPTCHA v3 to prevent spam submissions. These services may set cookies in your browser. You can disable cookies through your browser settings, though this may affect form submission functionality.</p>
 
           <h2 className="text-lg font-bold text-[#2B2A28] mt-8">Data Retention</h2>
-          <p>We retain your contact information and inquiry history in our CRM system for as long as there is a legitimate business relationship or potential relationship. You can request deletion of your data at any time by emailing sales@lanchrom.com.</p>
+          <p>We retain your contact information and inquiry history in our CRM system for as long as there is a legitimate business relationship or potential relationship. You can request deletion of your data at any time by emailing info@lanchrom.com.</p>
 
           <h2 className="text-lg font-bold text-[#2B2A28] mt-8">Contact</h2>
-          <p>For any questions about this privacy policy or your data, contact us at sales@lanchrom.com.</p>
+          <p>For any questions about this privacy policy or your data, contact us at info@lanchrom.com.</p>
         </div>
       </section>
     </div>

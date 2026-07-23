@@ -101,6 +101,7 @@ export interface QuoteRequestForm {
   notes?: string;
   recaptchaToken: string;
   sourceProduct?: string;
+  sourceUrl?: string;
 }
 
 export interface OEMQuoteForm {
@@ -160,7 +161,7 @@ export interface HubSpotContact {
 
 export interface HubSpotDeal {
   dealname: string;
-  pipeline: "sample-requests" | "quote-requests" | "oem-inquiries" | "distributor";
+  pipeline: string;
   dealstage: string;
   amount?: number;
   closedate?: string;

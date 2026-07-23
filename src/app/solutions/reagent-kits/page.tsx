@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SectionSidebar from "@/components/layout/SectionSidebar";
+import EditorialPageHero from "@/components/layout/EditorialPageHero";
+import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
 import { SOLUTION_NAV_GROUPS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
@@ -45,25 +47,17 @@ const KITS = [
 export default function ReagentKitsPage() {
   return (
     <div className="bg-white">
-      <div className="border-b border-[#E6E3DD]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
-          <Link href="/solutions" className="hover:text-[#3C6E71]">Solutions</Link> {" › "}
-          <span className="text-[#5C5A55]">Reagent Kits</span>
-        </div>
-      </div>
+      <SectionBreadcrumb items={[{ label: "Solutions", href: "/solutions" }, { label: "Reagent Kits" }]} />
 
-      <section className="py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="tag-line mb-3">Solutions</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Custom Reagent Kits</h1>
-          <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">
-            Rather than ordering five products separately for one workflow, we assemble them into a single
-            kit — with one CoA set, one shipment, and configuration to your exact components and concentrations.
-          </p>
-        </div>
-      </section>
+      <EditorialPageHero
+        eyebrow="Solutions"
+        title="Custom Reagent Kits"
+        description="Rather than ordering five products separately for one workflow, we assemble them into a single kit - with one CoA set, one shipment, and configuration to your exact components and concentrations."
+        image="/images/backgrounds/oem-bottle-pic.png"
+        imageAlt="LANCHROM custom reagent kits"
+      />
 
-      <section className="py-14">
+      <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8">
           <SectionSidebar title="Solutions" baseHref="/solutions" groups={SOLUTION_NAV_GROUPS} accent="#B5654A" />
           <div className="flex-1 min-w-0">

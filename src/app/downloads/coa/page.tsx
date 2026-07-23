@@ -35,7 +35,7 @@ export default function CoAPage() {
               <div className="space-y-4">
                 {[
                   { n: "01", t: "From a product page", d: "Visit any product page and click 'Request CoA' with the lot number from your bottle label" },
-                  { n: "02", t: "By email", d: "Email sales@lanchrom.com with the product name and lot number — reply within 1 business day" },
+                  { n: "02", t: "By email", d: "Email info@lanchrom.com with the product name and lot number — reply within 1 business day" },
                   { n: "03", t: "Pre-shipment", d: "CoAs are sent by email before shipment arrives, so you can review before receiving" },
                 ].map(item => (
                   <div key={item.n} className="flex gap-3">

@@ -4,19 +4,41 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { FlaskConical } from "lucide-react";
 import { getProductBySlug, getRelatedProducts, PRODUCTS } from "@/data/products";
-import { getCategoryInfo } from "@/data/categories";
+import { getCategoryInfo, GROUP_LABELS } from "@/data/categories";
+import {
+  getNestedCategoryStaticParams,
+  getProductLineBySlug,
+  getProductLinePath,
+} from "@/data/product-line-pages";
 import ProductStickyPanel from "@/components/product/ProductStickyPanel";
+import ProductCategoryOverview from "@/components/product/ProductCategoryOverview";
+import EditorialPageHero from "@/components/layout/EditorialPageHero";
+import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
 
 interface Props {
   params: Promise<{ category: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return PRODUCTS.map(p => ({ category: p.category, slug: p.slug }));
+  return [
+    ...PRODUCTS.map(p => ({ category: p.category, slug: p.slug })),
+    ...getNestedCategoryStaticParams(),
+  ];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category, slug } = await params;
+  const line = getProductLineBySlug(category);
+  const nestedCategory = getCategoryInfo(slug);
+
+  if (line && nestedCategory?.group === line.group) {
+    return {
+      title: nestedCategory.seoTitle,
+      description: nestedCategory.seoDescription,
+      alternates: { canonical: `https://www.lanchrom.com/products/${line.slug}/${nestedCategory.slug}` },
+    };
+  }
+
   const product = getProductBySlug(slug, category);
   if (!product) return { title: "Product Not Found | LANCHROM™" };
   return {
@@ -49,6 +71,12 @@ const PHYSICAL_PROPERTY_ROWS: { key: keyof NonNullable<import("@/types").Product
 
 export default async function ProductDetailPage({ params }: Props) {
   const { category, slug } = await params;
+  const line = getProductLineBySlug(category);
+  const nestedCategory = getCategoryInfo(slug);
+  if (line && nestedCategory?.group === line.group) {
+    return <ProductCategoryOverview info={nestedCategory} />;
+  }
+
   const product = getProductBySlug(slug, category);
   if (!product) notFound();
 
@@ -57,41 +85,41 @@ export default async function ProductDetailPage({ params }: Props) {
 
   return (
     <div className="bg-white">
-      {/* Breadcrumb — sticky beneath the main nav for easy backtracking */}
-      <div className="sticky top-20 md:top-28 z-30 bg-white/95 backdrop-blur-sm border-b border-[#E6E3DD]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-sm text-left text-[#8A8782]">
-          <Link href="/products" className="hover:text-[#3C6E71]">Products</Link> {" › "}
-          <Link href={`/products/${category}`} className="hover:text-[#3C6E71]">{categoryInfo?.name || category}</Link> {" › "}
-          <span className="text-[#5C5A55] font-medium">{product.name}</span>
-        </div>
-      </div>
+      <SectionBreadcrumb items={[
+        { label: "Products", href: "/products" },
+        ...(categoryInfo ? [{ label: GROUP_LABELS[categoryInfo.group].label, href: getProductLinePath(categoryInfo.group) }] : []),
+        { label: categoryInfo?.name || category, href: categoryInfo ? `${getProductLinePath(categoryInfo.group)}/${categoryInfo.slug}` : `/products/${category}` },
+        { label: product.name },
+      ]} />
 
-      <section className="py-12">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <EditorialPageHero
+        eyebrow={categoryInfo?.shortName || "Product"}
+        title={product.name}
+        description={product.shortDescription || `Technical specifications, documentation, and packaging options for ${product.name}.`}
+        image={categoryInfo?.bannerImage}
+        imageAlt={categoryInfo?.name || product.name}
+      >
+        <div className="flex flex-wrap items-center gap-2 text-sm text-[#42615A]">
+          {(product.grades ?? []).map(g => (
+            <span key={g} className="rounded-full bg-white/75 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-[#0A514C]">
+              {GRADE_LABELS[g] || g}
+            </span>
+          ))}
+          {product.cas && <span className="ml-1 font-mono">CAS: {product.cas}</span>}
+        </div>
+      </EditorialPageHero>
+
+      <section className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_340px] gap-12">
             {/* Main content */}
             <div>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {(product.grades ?? []).map(g => (
-                  <span key={g} className="text-[11px] font-bold uppercase tracking-wide px-2.5 py-1 rounded-full bg-[#E8F0EF] text-[#2C5154]">
-                    {GRADE_LABELS[g] || g}
-                  </span>
-                ))}
-                {!product.isHazmat && (
-                  <span className="text-[11px] font-bold uppercase tracking-wide px-2.5 py-1 rounded-full bg-[#FBF0EB] text-[#B5654A]">
-                    Non-Hazmat
-                  </span>
-                )}
-              </div>
-
-              <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">{product.name}</h1>
               <div className="flex flex-wrap gap-x-5 gap-y-1 text-sm text-[#8A8782] mb-6 font-mono">
                 {product.cas && <span>CAS: {product.cas}</span>}
                 {product.formula && <span>{product.formula}</span>}
                 {product.mw && <span>MW: {product.mw}</span>}
+                {!product.isHazmat && <span className="font-sans font-bold text-[#B5654A]">Non-Hazmat</span>}
               </div>
-
-              <p className="text-[#5C5A55] text-lg leading-relaxed mb-10 max-w-2xl">{product.shortDescription}</p>
 
               {/* Product image */}
               <div className="mb-12">

@@ -28,7 +28,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "HPLC Grade Solvents Manufacturer | Acetonitrile, Methanol, IPA | LANCHROM™",
     seoDescription: "Factory-direct HPLC grade solvents — acetonitrile, methanol, IPA, hexane, heptane. UV-tested, gradient grade available. Free samples, 1-day quote response.",
   group: "analytical-solvents",
-  bannerImage: "/images/categories/hplc-solvents.jpg",
+  bannerImage: "/images/product-lines/hplc-solvents.jpg",
   },
   "lcms-solvents": {
     slug: "lcms-solvents",
@@ -39,7 +39,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "LC-MS Grade Solvents | Sub-ppb Metal Content | LANCHROM™",
     seoDescription: "LC-MS grade acetonitrile, methanol, IPA, water. Metal ions <1ppb, MS blank tested. For bioanalytical and pharmaceutical LC-MS/MS methods.",
   group: "analytical-solvents",
-  bannerImage: "/images/categories/lcms-solvents.jpg",
+  bannerImage: "/images/product-lines/lcms-solvents.jpg",
   },
   "uplc-solvents": {
     slug: "uplc-solvents",
@@ -50,6 +50,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "UPLC Grade Solvents | 0.1µm Filtered | LANCHROM™",
     seoDescription: "UPLC grade acetonitrile, methanol, water. Filtered to 0.1µm for column protection in ultra-high-performance liquid chromatography.",
   group: "analytical-solvents",
+  bannerImage: "/images/product-lines/lanchrom-hplc-lcms.jpg",
   },
   "gc-solvents": {
     slug: "gc-solvents",
@@ -60,6 +61,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "GC Grade Solvents Manufacturer | RESI Grade | LANCHROM™",
     seoDescription: "GC grade hexane, acetone, ethyl acetate, DCM, methanol, toluene. RESI grade, free of GC-interfering peaks. Factory-direct.",
   group: "analytical-solvents",
+  bannerImage: "/images/product-lines/gc-solvents.jpg",
   },
   "spectroscopic-solvents": {
     slug: "spectroscopic-solvents",
@@ -70,7 +72,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "Spectroscopic & NMR Deuterated Solvents | LANCHROM™",
     seoDescription: "UV-grade spectroscopic solvents and deuterated NMR solvents — CDCl3, DMSO-d6, D2O, CD3OD. High isotopic purity, small-pack available.",
   group: "analytical-solvents",
-  bannerImage: "/images/categories/spectroscopic-solvents.jpg",
+  bannerImage: "/images/product-lines/spectroscopic-nmr-solvents.jpg",
   },
   "anhydrous-solvents": {
     slug: "anhydrous-solvents",
@@ -81,6 +83,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "Anhydrous Solvents | <50ppm Water | LANCHROM™",
     seoDescription: "Anhydrous ethanol, acetonitrile, THF, methanol. Water content <50ppm, nitrogen-sealed packaging for moisture-sensitive synthesis.",
   group: "pharma-solvents",
+  bannerImage: "/images/product-lines/lanchrom-packaging.jpg",
   },
   "prep-solvents": {
     slug: "prep-solvents",
@@ -91,6 +94,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "Preparative Grade Bulk Solvents | LANCHROM™",
     seoDescription: "Prep grade acetonitrile and methanol for preparative HPLC at industrial scale. Drum and IBC packaging.",
   group: "pharma-solvents",
+  bannerImage: "/images/product-lines/lanchrom-distillation.jpg",
   },
   "trace-analysis-grade": {
     slug: "trace-analysis-grade",
@@ -101,6 +105,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "Trace Metal Grade Acids for ICP-MS | LANCHROM™",
     seoDescription: "Trace analysis grade nitric acid, hydrochloric acid, hydrofluoric acid, hydrogen peroxide, ultrapure water. For ICP-MS digestion and semiconductor processing.",
     group: "analytical-solvents",
+    bannerImage: "/images/product-lines/trace-analysis-grade.jpg",
     comingSoonItems: [
       "Trace Analysis Grade Nitric Acid (65%) — ICP-MS digestion",
       "Trace Analysis Grade Hydrochloric Acid (37%) — elemental analysis",
@@ -119,6 +124,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "Pharmaceutical Grade Solvents USP EP | LANCHROM™",
     seoDescription: "USP/EP pharmaceutical grade IPA, ethanol, acetone, DMSO, DCM. Full ICH Q3C documentation, GMP manufactured.",
   group: "pharma-solvents",
+  bannerImage: "/images/product-lines/pharmaceutical-grade.jpg",
   },
   "electronic-grade": {
     slug: "electronic-grade",
@@ -129,6 +135,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "Electronic Grade Solvents SEMI Spec | LANCHROM™",
     seoDescription: "Electronic grade IPA, ethanol, methanol. SEMI spec, <1ppb metal ions. For semiconductor wafer cleaning and advanced packaging.",
   group: "pharma-solvents",
+  bannerImage: "/images/product-lines/lanchrom-semiconductor.jpg",
   },
   "excipients": {
     slug: "excipients",
@@ -139,6 +146,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "Pharmaceutical Excipients USP EP | LANCHROM™",
     seoDescription: "Glycerol, propylene glycol, PEG series, mannitol, sorbitol, polysorbate 80, benzyl alcohol. USP/EP grade excipients.",
   group: "excipients",
+  bannerImage: "/images/product-lines/pharmaceutical-excipients.jpg",
   },
   "food-grade": {
     slug: "food-grade",
@@ -149,6 +157,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "Food Grade Chemicals FCC | Kosher Halal | LANCHROM™",
     seoDescription: "Food grade citric acid, tartaric acid, malic acid, sodium benzoate, glycerol. FCC compliant, kosher/halal certified.",
   group: "excipients",
+  bannerImage: "/images/product-lines/pharmaceutical-excipients.jpg",
   },
   "lab-consumable-chemicals": {
     slug: "lab-consumable-chemicals",
@@ -159,6 +168,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "Molecular Sieves, Ion Exchange Resin, Filter Aids | LANCHROM™",
     seoDescription: "Lab consumable chemicals: molecular sieves 3A/4A/5A, ion exchange resins, diatomaceous earth, Kjeldahl tablets. Factory-direct.",
     group: "excipients",
+    bannerImage: "/images/product-lines/lanchrom-packaging.jpg",
     comingSoonItems: [
       "Molecular Sieves (3A / 4A / 5A) — drying and separation",
       "Ion Exchange Resins — pharmaceutical and industrial grade",
@@ -176,6 +186,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "ICP AAS pH Standard Solutions | LANCHROM™",
     seoDescription: "Certified ICP standard solutions, AAS standards, pH buffers, conductivity standards, titration reagents. Traceable reference materials.",
   group: "standards",
+  bannerImage: "/images/product-lines/standard-solutions.jpg",
   },
   "elemental-impurities": {
     slug: "elemental-impurities",
@@ -186,6 +197,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "ICH Q3D Elemental Impurities Standards | USP 232 233 | LANCHROM™",
     seoDescription: "ICH Q3D Class 1/2A/2B/3 elemental impurity standards for ICP-MS. USP <232>/<233> and EP 5.20 compliant. As, Cd, Hg, Pb, Co, V, Ni, and full PDE-mapped series.",
     group: "standards",
+    bannerImage: "/images/product-lines/trace-analysis-grade.jpg",
   },
   "karl-fischer": {
     slug: "karl-fischer",
@@ -226,6 +238,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "Ready-to-Use HPLC Mobile Phase Bags | LANCHROM™",
     seoDescription: "Pre-made HPLC mobile phase in 5L-20L flex bags. Formic acid, sulfuric acid, ammonium buffers, organic acid analysis. Nitrogen-sealed.",
   group: "mobile-phase",
+  bannerImage: "/images/product-lines/mobile-phase-bags.jpg",
   },
   "nmr-deuterated": {
     slug: "nmr-deuterated",
@@ -236,6 +249,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "Deuterated NMR Solvents CDCl3 DMSO-d6 | LANCHROM™",
     seoDescription: "Deuterated NMR solvents: CDCl3, DMSO-d6, D2O, CD3OD, CD3CN, C6D6. High isotopic purity, ampoule and bulk packaging.",
     group: "consumables",
+    bannerImage: "/images/product-lines/spectroscopic-nmr-solvents.jpg",
   },
   "life-science-reagents": {
     slug: "life-science-reagents",
@@ -246,6 +260,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "Microbiology Culture Media & Detection Kits | LANCHROM™",
     seoDescription: "Dehydrated culture media, PCR pathogen detection kits, GMP cleanroom environmental monitoring media, ATP hygiene testing.",
     group: "life-science",
+    bannerImage: "/images/product-lines/life-science-reagents.jpg",
   },
   "reagent-kits": {
     slug: "reagent-kits",
@@ -256,6 +271,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "Custom Reagent Kits for HPLC & Lab Workflows | LANCHROM™",
     seoDescription: "Pre-assembled reagent kits: HPLC starter kits, cell cryopreservation kits, Karl Fischer kits, fermentation QC kits. Minimum 10 kits.",
     group: "reagent-kits",
+    bannerImage: "/images/product-lines/reagent-kits.jpg",
   },
   "cell-culture-reagents": {
     slug: "cell-culture-reagents",
@@ -266,6 +282,7 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
     seoTitle: "cGMP DMSO & Cell Cryopreservation Reagents | LANCHROM™",
     seoDescription: "cGMP-grade DMSO for cell cryopreservation, CAR-T freezing kits, PBMC cryopreservation reagents. For cell and gene therapy manufacturing.",
     group: "life-science",
+    bannerImage: "/images/product-lines/life-science-reagents-v2.jpg",
     comingSoonItems: [
       "Cell Cryopreservation Kit — cGMP DMSO 100mL + cryo vials + CoA",
       "CAR-T Process-Grade Freezing Kit — cGMP DMSO 500mL + 10% pre-formulated cryo solution",

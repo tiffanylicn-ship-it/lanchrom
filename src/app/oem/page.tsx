@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import EditorialPageHero from "@/components/layout/EditorialPageHero";
 
 export const metadata: Metadata = {
   title: "OEM & Private Label Solvents | LANCHROM",
@@ -11,25 +11,16 @@ export const metadata: Metadata = {
 export default function OEMIndexPage() {
   return (
     <div className="bg-white">
-      <section className="relative min-h-[430px] py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC] overflow-hidden flex items-center">
-        <Image
-          src="/images/backgrounds/solvents-oem-services.png"
-          alt="LANCHROM solvents OEM services"
-          fill
-          sizes="100vw"
-          className="object-contain object-right p-0 md:p-2"
-          priority
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#F7FAFC_0%,rgba(247,250,252,0.96)_31%,rgba(247,250,252,0.72)_50%,rgba(247,250,252,0.22)_68%,rgba(247,250,252,0)_100%)]" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <p className="tag-line mb-3">OEM &amp; Private Label</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Your Brand, Our Manufacturing</h1>
-          <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">From 50 units, we'll put your label on the bottle, your name on the CoA, and your choice of documentation in the box.</p>
-        </div>
-      </section>
+      <EditorialPageHero
+        eyebrow="OEM & Private Label"
+        title="Your Brand, Our Manufacturing"
+        description="From 50 units, we'll put your label on the bottle, your name on the CoA, and your choice of documentation in the box."
+        image="/images/backgrounds/solvents-oem-services.png"
+        imageAlt="LANCHROM solvents OEM services"
+      />
 
-      <section className="py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {[
               { t: "Private Label", d: "Your brand on standard packaging — bottle, label, and CoA header all configured to your specification." },

@@ -44,31 +44,48 @@ export async function POST(request: NextRequest) {
     }
 
     let crmData: { contactId?: string; dealId?: string; isPriority?: boolean } = {};
+    let crmSynced = false;
     try {
       crmData = await processQuoteRequest(body);
+      crmSynced = Boolean(crmData.contactId);
     } catch (error) {
       console.warn("HubSpot quote processing skipped/failed:", error);
     }
 
-    const mailResults = await Promise.allSettled([
-      sendQuoteLeadNotification(body),
-      sendQuoteAutoReply(body),
-    ]);
+    let emailDelivered = false;
+    try {
+      const notification = await sendQuoteLeadNotification(body);
+      emailDelivered = notification.delivered;
+      if (emailDelivered) {
+        sendQuoteAutoReply(body).catch(error => {
+          console.warn("Quote auto-reply failed:", error);
+        });
+      }
+    } catch (error) {
+      console.error("Quote lead notification failed:", error);
+    }
 
-    const leadNotification = mailResults[0];
-    const leadMailConfigured = leadNotification.status === "fulfilled" && leadNotification.value?.configured !== false;
-    if (!leadMailConfigured) {
-      console.error("Quote lead notification not delivered:", mailResults);
+    if (!emailDelivered && !crmSynced) {
       return NextResponse.json(
-        { success: false, message: "Website email is not configured yet. Set ZOHO_EMAIL, ZOHO_APP_PASSWORD, FROM_EMAIL, and NOTIFICATION_EMAIL in .env.local." },
-        { status: 500 }
+        {
+          success: false,
+          message:
+            "Inquiry service is temporarily unavailable. Please email info@lanchrom.com.",
+        },
+        { status: 503 }
       );
     }
 
     return NextResponse.json({
       success: true,
       message: "Quote request received. Our team will respond within 1 business day.",
-      data: crmData,
+      data: {
+        ...crmData,
+        delivery: {
+          email: emailDelivered,
+          hubspot: crmSynced,
+        },
+      },
     });
   } catch (error) {
     console.error("Quote API error:", error);

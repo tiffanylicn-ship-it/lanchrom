@@ -2,48 +2,55 @@
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 interface NavGroupItem { label: string; href: string; badge?: string; }
 interface NavGroup { heading: string; href: string; items: NavGroupItem[]; }
 
 const PRODUCTS_NAV: { col1: NavGroup[]; col2: NavGroup[]; col3: NavGroup[] } = {
   col1: [
-    { heading: "Pharmaceutical & Process", href: "/products/line/pharma-solvents", items: [
-      { label: "Pharma Grade (USP/EP)", href: "/products/pharma-grade" },
-      { label: "Anhydrous Solvents", href: "/products/anhydrous-solvents" },
-      { label: "Prep / Bulk Grade", href: "/products/prep-solvents" },
-      { label: "Electronic Grade", href: "/products/electronic-grade" },
+    { heading: "Pharmaceutical Grade Solvents", href: "/products/pharmaceutical-grade-solvents", items: [
+      { label: "Pharma Grade (USP/EP)", href: "/products/pharmaceutical-grade-solvents/pharma-grade" },
+      { label: "Anhydrous Solvents", href: "/products/pharmaceutical-grade-solvents/anhydrous-solvents" },
+      { label: "Prep / Bulk Grade", href: "/products/pharmaceutical-grade-solvents/prep-solvents" },
+      { label: "Electronic Grade", href: "/products/pharmaceutical-grade-solvents/electronic-grade" },
     ]},
-    { heading: "HPLC / GC Analytical", href: "/products/line/analytical-solvents", items: [
-      { label: "HPLC Solvents", href: "/products/hplc-solvents" },
-      { label: "LC-MS Solvents", href: "/products/lcms-solvents" },
-      { label: "UPLC Solvents", href: "/products/uplc-solvents" },
-      { label: "GC Solvents", href: "/products/gc-solvents" },
-      { label: "Spectroscopic / NMR", href: "/products/spectroscopic-solvents" },
-      { label: "Trace Analysis Grade", href: "/products/trace-analysis-grade", badge: "NEW" },
+    { heading: "HPLC / GC Analytical Solvents", href: "/products/analytical-solvents", items: [
+      { label: "HPLC Solvents", href: "/products/analytical-solvents/hplc-solvents" },
+      { label: "LC-MS Solvents", href: "/products/analytical-solvents/lcms-solvents" },
+      { label: "UPLC Solvents", href: "/products/analytical-solvents/uplc-solvents" },
+      { label: "GC Solvents", href: "/products/analytical-solvents/gc-solvents" },
+      { label: "Spectroscopic / NMR", href: "/products/analytical-solvents/spectroscopic-solvents" },
+      { label: "Trace Analysis Grade", href: "/products/analytical-solvents/trace-analysis-grade", badge: "NEW" },
     ]},
   ],
   col2: [
-    { heading: "Mobile Phase & Standards", href: "/products/line/mobile-phase", items: [
-      { label: "Mobile Phase Bags", href: "/products/mobile-phase-bags" },
-      { label: "Standard Solutions", href: "/products/standard-solutions" },
-      { label: "Elemental Impurities (ICH Q3D)", href: "/products/elemental-impurities" },
-      { label: "Karl Fischer Reagents", href: "/products/karl-fischer" },
+    { heading: "Ready-to-Use Mobile Phase Bags", href: "/products/ready-to-use-mobile-phase-bags", items: [
+      { label: "Mobile Phase Bags", href: "/products/ready-to-use-mobile-phase-bags/mobile-phase-bags" },
     ]},
-    { heading: "Kits & Consumables", href: "/products/line/consumables", items: [
-      { label: "Reagent Kits", href: "/products/reagent-kits" },
-      { label: "TLC Products", href: "/products/tlc-products" },
-      { label: "SPE Products", href: "/products/spe-products" },
-      { label: "Deuterated NMR Solvents", href: "/products/nmr-deuterated" },
+    { heading: "Standards & Reference Materials", href: "/products/standard-solutions-reference-materials", items: [
+      { label: "Standard Solutions", href: "/products/standard-solutions-reference-materials/standard-solutions" },
+      { label: "Elemental Impurities", href: "/products/standard-solutions-reference-materials/elemental-impurities" },
+    ]},
+    { heading: "Reagent Kits & Custom Sets", href: "/products/reagent-kits-custom-sets", items: [
+      { label: "Reagent Kits", href: "/products/reagent-kits-custom-sets/reagent-kits" },
     ]},
   ],
   col3: [
-    { heading: "Life Science & Excipients", href: "/products/line/life-science", items: [
-      { label: "Cell Culture & Cryopreservation", href: "/products/cell-culture-reagents", badge: "NEW" },
-      { label: "Life Science Reagents", href: "/products/life-science-reagents" },
-      { label: "Pharmaceutical Excipients", href: "/products/excipients" },
-      { label: "Food Grade Chemicals", href: "/products/food-grade" },
-      { label: "Lab Consumable Chemicals", href: "/products/lab-consumable-chemicals", badge: "NEW" },
+    { heading: "Chromatography Consumables", href: "/products/chromatography-consumables", items: [
+      { label: "Karl Fischer Reagents", href: "/products/chromatography-consumables/karl-fischer" },
+      { label: "TLC Products", href: "/products/chromatography-consumables/tlc-products" },
+      { label: "SPE Products", href: "/products/chromatography-consumables/spe-products" },
+      { label: "Deuterated NMR Solvents", href: "/products/chromatography-consumables/nmr-deuterated" },
+    ]},
+    { heading: "Life Science Reagents", href: "/products/life-science-products", items: [
+      { label: "Cell Culture & Cryopreservation", href: "/products/life-science-products/cell-culture-reagents", badge: "NEW" },
+      { label: "Life Science Reagents", href: "/products/life-science-products/life-science-reagents" },
+    ]},
+    { heading: "Pharmaceutical Excipients", href: "/products/pharmaceutical-excipients-food-grade", items: [
+      { label: "Pharmaceutical Excipients", href: "/products/pharmaceutical-excipients-food-grade/excipients" },
+      { label: "Food Grade Chemicals", href: "/products/pharmaceutical-excipients-food-grade/food-grade" },
+      { label: "Lab Consumable Chemicals", href: "/products/pharmaceutical-excipients-food-grade/lab-consumable-chemicals", badge: "NEW" },
     ]},
   ],
 };
@@ -59,6 +66,7 @@ const SOLUTIONS_NAV = [
 const ABOUT_NAV = [
   { label: "About LANCHROM™", href: "/about" },
   { label: "Manufacturing", href: "/manufacturing" },
+  { label: "Distributor Program", href: "/distributor-program" },
 ];
 
 const APPLICATIONS_NAV = [
@@ -99,6 +107,8 @@ function SimpleDropdown({ items, viewAllHref, viewAllLabel, onMouseEnter, onMous
 }
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<MenuKey | null>(null);
 
@@ -120,10 +130,10 @@ export default function Navbar() {
   const navLinkClass = "text-[#5C5A55] hover:text-[#003D91] text-[15px] font-medium px-3 py-2 rounded-md hover:bg-[#FBFAF8] transition-colors";
 
   return (
-    <header className="sticky top-0 z-50 bg-[#EAF4EF]/95 backdrop-blur-md border-b border-[#C9DBD3] shadow-[0_1px_0_rgba(10,81,76,0.04)]">
+    <header className={`${isHome ? "home-page-header" : "sticky top-0 bg-[#EAF4EF]/95 backdrop-blur-md"} z-50 border-b border-[#C9DBD3] shadow-[0_1px_0_rgba(10,81,76,0.04)]`}>
       <div className="border-b border-[#EFEDE8] hidden md:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-end items-center h-8 text-xs text-[#8A8782]">
-          <a href="mailto:sales@lanchrom.com" className="hover:text-[#003D91] transition-colors">sales@lanchrom.com</a>
+          <a href="mailto:info@lanchrom.com" className="hover:text-[#003D91] transition-colors">info@lanchrom.com</a>
         </div>
       </div>
 
@@ -217,6 +227,7 @@ export default function Navbar() {
             { label: "OEM & Custom Packaging", href: "/oem" },
             { label: "About Us", href: "/about" },
             { label: "Manufacturing", href: "/manufacturing" },
+            { label: "Distributor Program", href: "/distributor-program" },
             { label: "Industries", href: "/industries" },
             { label: "Markets", href: "/markets" },
             { label: "Guides", href: "/guides" },

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import EditorialPageHero from "@/components/layout/EditorialPageHero";
 
 export const metadata: Metadata = {
   title: "About LANCHROM | Solvent Manufacturing",
@@ -11,32 +11,17 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="bg-white">
-      <section className="relative min-h-[430px] py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC] overflow-hidden flex items-center">
-        <Image
-          src="/images/hero/lcms-solvent-factory-manufacturer.png"
-          alt="LANCHROM LCMS solvent factory manufacturer"
-          fill
-          sizes="100vw"
-          className="object-contain object-right p-0 md:p-2"
-          priority
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#F7FAFC_0%,rgba(247,250,252,0.96)_31%,rgba(247,250,252,0.72)_50%,rgba(247,250,252,0.22)_68%,rgba(247,250,252,0)_100%)]" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <p className="tag-line mb-3">About LANCHROM</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-4">
-            15+ Years of Precision Solvent Manufacturing
-          </h1>
-          <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">
-            LANCHROM is a specialist manufacturer of electronic-grade and pharmaceutical-grade
-            chemical solvents, with over 15 years of production experience and a product catalog
-            spanning 209 grades across electronic materials and pharmaceutical science.
-          </p>
-        </div>
-      </section>
+      <EditorialPageHero
+        eyebrow="About LANCHROM"
+        title="15+ Years of Precision Solvent Manufacturing"
+        description="LANCHROM is a specialist manufacturer of electronic-grade and pharmaceutical-grade chemical solvents, with over 15 years of production experience and a product catalog spanning 209 grades across electronic materials and pharmaceutical science."
+        image="/images/hero/lcms-solvent-factory-manufacturer.png"
+        imageAlt="LANCHROM LCMS solvent factory manufacturer"
+      />
 
       {/* Two core business domains */}
-      <section className="py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10">
+      <section className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10">
           <div className="p-7 rounded-2xl border border-[#E6E3DD] bg-[#FBFAF8]">
             <p className="text-xs font-bold tracking-[0.08em] uppercase text-[#3C6E71] mb-3">Electronic Materials</p>
             <h2 className="text-xl font-bold text-[#2B2A28] mb-3">Electronic-Grade Solvents</h2>
@@ -70,7 +55,7 @@ export default function AboutPage() {
 
       {/* Production base */}
       <section className="py-14 relative overflow-hidden bg-[#F5F8FC] border-y border-[#E2E8F0]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <p className="text-xs font-bold tracking-[0.1em] uppercase text-[#0E918C] mb-2">2026 Production Base — Zhejiang, China</p>
           <h2 className="text-2xl font-bold text-[#0A1628] mb-6">World-Class Equipment, Proprietary Process</h2>
           <div className="grid md:grid-cols-2 gap-10 mb-8">
@@ -121,7 +106,7 @@ export default function AboutPage() {
 
       {/* How we work */}
       <section className="py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-[#2B2A28] mb-6">How we work with you</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
@@ -141,7 +126,7 @@ export default function AboutPage() {
       </section>
 
       <section className="py-12 bg-[#F5F4F0] border-t border-[#E6E3DD]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-[#2B2A28] mb-3">See the engineering behind it</h2>
           <p className="text-[#5C5A55] mb-6">Take a closer look at our manufacturing process, QC lab, and filling facility.</p>
           <div className="flex gap-3 justify-center flex-wrap">

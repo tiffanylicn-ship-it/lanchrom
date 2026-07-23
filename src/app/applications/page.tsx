@@ -1,43 +1,58 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { APPLICATIONS, getApplicationNavItems } from "@/data/applications";
 import SectionSidebar from "@/components/layout/SectionSidebar";
+import EditorialPageHero from "@/components/layout/EditorialPageHero";
 
 export const metadata: Metadata = {
-  title: "Applications | LANCHROM",
-  description: "Solvents and standard solutions organized by analytical method — HPLC, LC-MS, GC, pesticide residue, organic acid, water testing, and more.",
+  title: "Analytical Applications | HPLC, LC-MS & GC Solvents | LANCHROM",
+  description: "Choose HPLC, LC-MS, GC, ICP-MS and spectroscopy solvents by analytical method, detection mode, blank requirement and sample-preparation workflow.",
   alternates: { canonical: "https://www.lanchrom.com/applications" },
 };
+
+const METHOD_SELECTION_GUIDE = [
+  ["HPLC and UPLC analysis", "Prioritize UV cutoff, gradient baseline, water and particulate filtration. UPLC methods also require tighter particle control."],
+  ["LC-MS and bioanalysis", "Review solvent-background screening, trace metals, adduct risk and lot consistency before low-level quantitation."],
+  ["GC and extraction workflows", "Focus on residue after evaporation, interfering peaks and compatibility with liquid-liquid extraction or headspace methods."],
+  ["ICP-MS and elemental analysis", "Use trace-metal grade acids, certified standards and containers qualified for ppb-to-ppt work."],
+];
 
 export default function ApplicationsIndexPage() {
   const applicationNav = getApplicationNavItems();
 
   return (
     <div className="bg-white">
-      <section className="relative min-h-[460px] py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC] overflow-hidden flex items-center">
-        <Image
-          src="/images/backgrounds/application-back.jpg"
-          alt="LANCHROM analytical method applications"
-          fill
-          sizes="100vw"
-          className="object-cover object-center"
-          priority
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#F7FAFC_0%,rgba(247,250,252,0.9)_22%,rgba(247,250,252,0.55)_42%,rgba(247,250,252,0.12)_62%,rgba(247,250,252,0)_82%)]" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <p className="tag-line mb-3">Applications</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Solvents By Analytical Method</h1>
-          <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">
-            Find the right grade by what you are measuring - from routine HPLC method development to
-            trace-level LC-MS bioanalysis and multi-residue pesticide screening.
-          </p>
-        </div>
-      </section>
+      <EditorialPageHero
+        eyebrow="Applications"
+        title="Solvents By Analytical Method"
+        description="Find the right grade by what you are measuring - from routine HPLC method development to trace-level LC-MS bioanalysis and multi-residue pesticide screening."
+        image="/images/backgrounds/application-back.jpg"
+        imageAlt="LANCHROM analytical method applications"
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8">
         <SectionSidebar title="Applications" baseHref="/applications" items={applicationNav} accent="#3C6E71" />
-        <main className="flex-1 min-w-0 py-12">
+        <main className="flex-1 min-w-0 py-16 md:py-20">
+          <section className="mb-12 border-b border-[#DCE7E2] pb-10" aria-labelledby="method-selection-title">
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#0E918C]">Method-first selection</p>
+            <h2 id="method-selection-title" className="mt-2 text-2xl font-bold text-[#203D38]">Choose solvent quality by detector and blank requirement</h2>
+            <p className="mt-3 max-w-3xl leading-relaxed text-[#5C6E69]">
+              A grade name is useful only when it maps to the analytical risk. Start with the detector, expected concentration, sample preparation and documentation requirement, then qualify the selected lot in the method.
+            </p>
+            <div className="mt-7 grid gap-x-8 gap-y-6 md:grid-cols-2">
+              {METHOD_SELECTION_GUIDE.map(([title, description]) => (
+                <div key={title} className="border-l-2 border-[#8CC7BB] pl-5">
+                  <h3 className="font-bold text-[#1D403A]">{title}</h3>
+                  <p className="mt-2 text-sm leading-7 text-[#63736F]">{description}</p>
+                </div>
+              ))}
+            </div>
+            <Link href="/resources/blog/lcms-solvent-background-comparison" className="mt-7 inline-block border-b border-[#0A514C] pb-1 text-sm font-bold text-[#0A514C]">
+              See the LC-MS solvent background comparison
+            </Link>
+          </section>
+
+          <h2 className="mb-5 text-xl font-bold text-[#203D38]">Browse all analytical applications</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {Object.values(APPLICATIONS).map(app => (
               <Link key={app.slug} href={`/applications/${app.slug}`} className="group flex items-center justify-between py-5 px-5 border border-[#EFEDE8] rounded-xl hover:border-[#C9DBD9] hover:bg-[#FBFAF8] transition-all">

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SectionSidebar from "@/components/layout/SectionSidebar";
+import EditorialPageHero from "@/components/layout/EditorialPageHero";
+import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
 import { SOLUTION_NAV_GROUPS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
@@ -15,28 +17,27 @@ const USE_CASES = [
   { name: "Food Safety Testing", desc: "Pesticide residue and contaminant analysis mobile phase systems.", href: "/solutions/mobile-phase/food-safety" },
 ];
 
+const SPECIFICATION_CHECKS = [
+  ["Method composition", "Solvent ratio, buffer species, concentration, target pH and acceptable preparation tolerance."],
+  ["Instrument compatibility", "HPLC or LC-MS detector, column chemistry, wetted materials and required blank performance."],
+  ["Bag and connection", "5 L to 20 L format, port type, tubing compatibility and expected consumption after opening."],
+  ["Release documents", "Lot-specific CoA, formulation traceability, filtration record and any method-specific qualification data."],
+];
+
 export default function MobilePhaseIndexPage() {
   return (
     <div className="bg-white">
-      <div className="border-b border-[#E6E3DD]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
-          <Link href="/solutions" className="hover:text-[#3C6E71]">Solutions</Link> {" › "}
-          <span className="text-[#5C5A55]">Mobile Phase</span>
-        </div>
-      </div>
+      <SectionBreadcrumb items={[{ label: "Solutions", href: "/solutions" }, { label: "Mobile Phase" }]} />
 
-      <section className="py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="tag-line mb-3">Solutions</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Mobile Phase, Pre-Made</h1>
-          <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">
-            Pre-filtered, pH-verified, nitrogen-sealed mobile phase in 5L–20L flex bags. Connect directly
-            to your pump — no prep room, no batch-to-batch variability from manual preparation.
-          </p>
-        </div>
-      </section>
+      <EditorialPageHero
+        eyebrow="Solutions"
+        title="Mobile Phase, Pre-Made"
+        description="Pre-filtered, pH-verified, nitrogen-sealed mobile phase in 5L-20L flex bags. Connect directly to your pump - no prep room, no batch-to-batch variability from manual preparation."
+        image="/images/backgrounds/gradient-mobile-phase-optimization.jpg"
+        imageAlt="Ready-to-use mobile phase preparation"
+      />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8 py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8 py-16 md:py-20">
         <SectionSidebar title="Solutions" baseHref="/solutions" groups={SOLUTION_NAV_GROUPS} accent="#B5654A" />
         <div className="flex-1 min-w-0">
         <div className="space-y-3 mb-14">
@@ -66,6 +67,26 @@ export default function MobilePhaseIndexPage() {
             ))}
           </div>
         </div>
+
+        <section className="mt-12 border-y border-[#DCE7E2] py-9" aria-labelledby="mobile-phase-specification-title">
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#0E918C]">Before requesting a formulation</p>
+          <h2 id="mobile-phase-specification-title" className="mt-2 text-2xl font-bold text-[#203D38]">What to specify for a ready-to-use mobile phase</h2>
+          <p className="mt-3 max-w-3xl leading-relaxed text-[#5C6E69]">
+            A useful quotation starts with the analytical method rather than the bag size. Share the current SOP or the details below so composition, filtration, packaging and release tests can be aligned from the first qualification lot.
+          </p>
+          <div className="mt-7 grid gap-x-8 gap-y-6 md:grid-cols-2">
+            {SPECIFICATION_CHECKS.map(([title, description]) => (
+              <div key={title} className="border-l-2 border-[#8CC7BB] pl-5">
+                <h3 className="font-bold text-[#1D403A]">{title}</h3>
+                <p className="mt-2 text-sm leading-7 text-[#63736F]">{description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <Link href="/contact?type=quote" className="btn-fill">Request a mobile phase quote</Link>
+            <Link href="/applications/mobile-phase-buffer-prep" className="btn-line">Mobile phase preparation guide</Link>
+          </div>
+        </section>
         </div>
       </div>
     </div>

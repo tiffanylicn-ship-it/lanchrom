@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SectionSidebar from "@/components/layout/SectionSidebar";
+import EditorialPageHero from "@/components/layout/EditorialPageHero";
+import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
 import { SOLUTION_NAV_GROUPS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
@@ -32,37 +34,24 @@ const SECTORS = [
 export default function FermentationAnalysisPage() {
   return (
     <div className="bg-white">
-      <div className="border-b border-[#E6E3DD]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
-          <Link href="/solutions/mobile-phase" className="hover:text-[#3C6E71]">Solutions</Link> {" › "}
-          <span className="text-[#5C5A55]">Fermentation Analysis</span>
-        </div>
-      </div>
+      <SectionBreadcrumb items={[
+        { label: "Solutions", href: "/solutions" },
+        { label: "Mobile Phase", href: "/solutions/mobile-phase" },
+        { label: "Fermentation Analysis" },
+      ]} />
 
-      {/* Hero */}
-      <section className="py-16 md:py-20 bg-[#F7FAFC] border-b border-[#E6E3DD]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-bold tracking-[0.06em] uppercase text-[#B5654A] mb-3">Featured Solution</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-4 max-w-2xl">
-            Mobile phase, pre-made, for fermentation quality control
-          </h1>
-          <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed mb-8">
-            Our 0.005N sulfuric acid mobile phase comes pre-filtered, pH-verified, and nitrogen-sealed
-            in 5L–20L flex bags — connect it directly to your HPLC pump and start running organic acid
-            and sugar analysis without a prep room.
-          </p>
-          <div className="flex gap-3 flex-wrap">
-            <Link href="/contact?type=sample&product=organic-acid-mobile-phase" className="btn-fill" style={{ background: "#B5654A" }}>
-              Get free sample
-            </Link>
-            <Link href="/contact?type=quote&product=organic-acid-mobile-phase" className="btn-line">
-              Request quote
-            </Link>
-          </div>
-        </div>
-      </section>
+      <EditorialPageHero
+        eyebrow="Featured Solution"
+        title="Mobile phase, pre-made, for fermentation quality control"
+        description="Our 0.005N sulfuric acid mobile phase comes pre-filtered, pH-verified, and nitrogen-sealed in 5L-20L flex bags - connect it directly to your HPLC pump and start running organic acid and sugar analysis without a prep room."
+        image="/images/backgrounds/organic-acid-mobile-phase.png"
+        imageAlt="Organic acid mobile phase for fermentation analysis"
+      >
+        <Link href="/contact?type=sample&product=organic-acid-mobile-phase" className="rounded-md bg-[#0A514C] px-5 py-3 text-sm font-bold text-white hover:bg-[#083E3B]">Get free sample</Link>
+        <Link href="/contact?type=quote&product=organic-acid-mobile-phase" className="rounded-md border border-[#7EA99F] bg-white/70 px-5 py-3 text-sm font-bold text-[#0A514C]">Request quote</Link>
+      </EditorialPageHero>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8 py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8 py-16 md:py-20">
         <SectionSidebar title="Solutions" baseHref="/solutions" groups={SOLUTION_NAV_GROUPS} accent="#B5654A" />
         <div className="flex-1 min-w-0 space-y-14">
 

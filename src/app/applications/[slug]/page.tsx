@@ -4,9 +4,10 @@ import { notFound } from "next/navigation";
 import { getApplicationInfo, getAllApplicationSlugs, getApplicationNavItems } from "@/data/applications";
 import { getCategoryInfo } from "@/data/categories";
 import { getIndustryInfo } from "@/data/industries";
-import Image from "next/image";
 import { PAGE_BACKGROUNDS } from "@/data/backgrounds";
 import SectionSidebar from "@/components/layout/SectionSidebar";
+import EditorialPageHero from "@/components/layout/EditorialPageHero";
+import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
 
 interface Props { params: Promise<{ slug: string }>; }
 
@@ -33,42 +34,24 @@ export default async function ApplicationPage({ params }: Props) {
   const relatedIndustries = (info.relevantIndustries ?? [])
     .map(s => getIndustryInfo(s))
     .filter((x): x is NonNullable<typeof x> => Boolean(x));
+  const showSolventScanLink = ["hplc-analysis", "lcms-analysis", "gradient-mobile-phase-optimization"].includes(slug);
 
   return (
     <div className="bg-white">
-      <div className="border-b border-[#E6E3DD]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
-          <Link href="/applications" className="hover:text-[#3C6E71]">Applications</Link> {" › "}
-          <span className="text-[#5C5A55]">{info.h1}</span>
-        </div>
-      </div>
+      <SectionBreadcrumb items={[{ label: "Applications", href: "/applications" }, { label: info.h1 }]} />
 
-      <section className="relative min-h-[430px] py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC] overflow-hidden flex items-center">
-        {PAGE_BACKGROUNDS[slug] && (
-          <>
-            <Image
-              src={PAGE_BACKGROUNDS[slug]}
-              alt={info.h1}
-              fill
-              sizes="100vw"
-              className="object-contain object-right p-0 md:p-2"
-              priority
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,#F7FAFC_0%,rgba(247,250,252,0.96)_31%,rgba(247,250,252,0.72)_50%,rgba(247,250,252,0.22)_68%,rgba(247,250,252,0)_100%)]" />
-          </>
-        )}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <p className="tag-line mb-3">Application</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">{info.h1}</h1>
-          <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">{info.description}</p>
-          <div className="mt-7 flex gap-3 flex-wrap">
-            <Link href="/contact?type=sample" className="btn-fill">Get Free Sample</Link>
-            <Link href="/contact?type=quote" className="btn-line">Request a Quote</Link>
-          </div>
-        </div>
-      </section>
+      <EditorialPageHero
+        eyebrow="Application"
+        title={info.h1}
+        description={info.description}
+        image={PAGE_BACKGROUNDS[slug]}
+        imageAlt={info.h1}
+      >
+        <Link href="/contact?type=sample" className="rounded-md bg-[#0A514C] px-5 py-3 text-sm font-bold text-white hover:bg-[#083E3B]">Get Free Sample</Link>
+        <Link href="/contact?type=quote" className="rounded-md border border-[#7EA99F] bg-white/70 px-5 py-3 text-sm font-bold text-[#0A514C]">Request a Quote</Link>
+      </EditorialPageHero>
 
-      <section className="py-14">
+      <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8">
           <SectionSidebar title="Applications" baseHref="/applications" items={getApplicationNavItems()} accent="#3C6E71" />
           <div className="flex-1 min-w-0">
@@ -105,6 +88,35 @@ export default async function ApplicationPage({ params }: Props) {
               </div>
             </>
           )}
+
+          <section className="mb-12 border-y border-[#DCE7E2] py-9" aria-labelledby="application-checklist-title">
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#0E918C]">Method qualification</p>
+            <h2 id="application-checklist-title" className="mt-2 text-2xl font-bold text-[#203D38]">Selection checklist for {info.h1}</h2>
+            <p className="mt-3 max-w-3xl leading-relaxed text-[#5C6E69]">
+              Use the method requirement to define the solvent or reagent specification, then confirm performance with a representative sample and the current lot documentation.
+            </p>
+            <ol className="mt-7 grid gap-x-8 gap-y-6 md:grid-cols-2">
+              {[
+                ["01", "Define the detector risk", "Set acceptance criteria for UV absorbance, MS background, residue, trace metals or titration accuracy before comparing grades."],
+                ["02", "Match preparation and container", "Confirm filtration, water control, closure compatibility and pack size for the actual workflow and consumption rate."],
+                ["03", "Review lot-specific evidence", "Use the batch CoA and supporting blank or suitability data, not the product grade name alone."],
+                ["04", "Run the method blank", "Qualify the lot using the same instrument, additives, column, source settings and acquisition window used for samples."],
+              ].map(([number, title, description]) => (
+                <li key={number} className="grid grid-cols-[2.25rem_1fr] gap-3">
+                  <span className="font-extrabold text-[#0A514C]">{number}</span>
+                  <div>
+                    <h3 className="font-bold text-[#203D38]">{title}</h3>
+                    <p className="mt-1 text-sm leading-7 text-[#63736F]">{description}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            {showSolventScanLink && (
+              <Link href="/resources/blog/lcms-solvent-background-comparison" className="mt-7 inline-block border-b border-[#0A514C] pb-1 text-sm font-bold text-[#0A514C]">
+                Review HPLC methanol and acetonitrile Q1 scan data
+              </Link>
+            )}
+          </section>
 
           <div className="flex gap-3 flex-wrap">
             <Link href="/contact?type=sample" className="btn-fill">Get free sample</Link>

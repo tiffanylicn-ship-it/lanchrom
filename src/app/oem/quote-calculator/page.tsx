@@ -36,7 +36,7 @@ export default function OEMCalculatorPage() {
       const res = await fetch("/api/oem-quote", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...data, recaptchaToken: token }) });
       if (!res.ok) throw new Error();
       setSubmitted(true);
-    } catch { setError("Submission failed. Please email sales@lanchrom.com"); }
+    } catch { setError("Submission failed. Please email info@lanchrom.com"); }
     finally { setLoading(false); }
   };
 

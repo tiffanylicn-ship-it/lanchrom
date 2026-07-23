@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import FAQClient from "./FAQClient";
+import EditorialPageHero from "@/components/layout/EditorialPageHero";
 
 export const metadata: Metadata = {
   title: "FAQ | LANCHROM™ — Solvent Grades, Shipping, Custom Packaging",
@@ -42,18 +43,25 @@ const FAQ_DATA = [
       { q: "Can you formulate a custom mobile phase for a specific fermentation process?", a: "Yes. If your QC method targets a specific set of analytes not covered by our standard organic acid mobile phase, describe your method (column, detector, target compounds) and we'll quote a custom formulation." },
     ],
   },
+  {
+    category: "LC-MS Solvent Background & Qualification",
+    items: [
+      { q: "What does an LC-MS Q1 solvent scan tell me?", a: "A Q1 full scan shows ions detected while the solvent blank is introduced under a defined source and acquisition method. It can reveal persistent background ions, clusters, extractables, and other signals that may raise chemical noise or form adducts. The result is most useful when the supplier lot, reference solvent, system blank, source settings, and intensity scale are documented together." },
+      { q: "Does a cleaner-looking Q1 scan prove that a solvent is LC-MS grade?", a: "No. A sparse scan is useful screening evidence, but a solvent grade should be supported by a complete specification and batch CoA covering the parameters relevant to the method, such as water, residue, UV absorbance, trace metals, and MS background. Final suitability must be confirmed in the customer's instrument and mobile-phase composition." },
+      { q: "How should I compare HPLC-grade methanol or acetonitrile blanks?", a: "Use the same instrument, source settings, tubing, additives, flow rate, acquisition window, and displayed axis scale. Start with a system blank, then compare equal volumes of each solvent lot. Look beyond the maximum peak: compare the number and location of persistent ions, the high-mass background, baseline stability, and whether any signal overlaps the analyte or internal standard." },
+      { q: "Are LANCHROM solvent scan results batch-specific?", a: "Yes. The published comparison is an internal screening example for the displayed samples and conditions, not a universal performance guarantee. Request the current lot CoA and, when required, a representative sample so your laboratory can run its own solvent blank and method suitability test before routine use." },
+    ],
+  },
 ];
 
 export default function FAQPage() {
   return (
     <div className="bg-white">
-      <section className="py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="tag-line mb-3">Resources</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Frequently Asked Questions</h1>
-          <p className="text-[#5C5A55] text-lg max-w-xl">Common questions about solvent grades, packaging, shipping, and our fermentation analysis solutions.</p>
-        </div>
-      </section>
+      <EditorialPageHero
+        eyebrow="Resources"
+        title="Frequently Asked Questions"
+        description="Common questions about solvent grades, packaging, shipping, and our fermentation analysis solutions."
+      />
       <FAQClient sections={FAQ_DATA} />
     </div>
   );

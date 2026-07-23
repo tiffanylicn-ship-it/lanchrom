@@ -46,9 +46,18 @@ export default function SampleModal({ isOpen, onClose, prefilledProduct = "" }: 
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...data, recaptchaToken: token, sourceUrl: window.location.href }),
       });
-      if (!res.ok) throw new Error();
+      const result = await res.json().catch(() => null);
+      if (!res.ok || !result?.success) {
+        throw new Error(result?.message || "Unable to submit this request.");
+      }
       setSubmitted(true);
-    } catch { setError("Failed. Please email sales@lanchrom.com"); }
+    } catch (submitError) {
+      setError(
+        submitError instanceof Error
+          ? submitError.message
+          : "Submission failed. Please email info@lanchrom.com."
+      );
+    }
     finally { setLoading(false); }
   };
 

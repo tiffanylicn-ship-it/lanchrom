@@ -30,7 +30,7 @@ function ItemLink({ item, accent }: { item: SidebarItem; accent: string }) {
   return (
     <Link
       href={item.href}
-      className={`block py-1.5 px-2.5 -ml-2.5 rounded-md text-[14.5px] leading-snug transition-colors ${
+      className={`-ml-2.5 block rounded-md px-2.5 py-2 text-[15px] leading-snug transition-colors ${
         active ? "font-semibold" : "text-[#5C5A55] hover:text-[#2B2A28] hover:bg-[#F5F3EF]"
       }`}
       style={active ? { backgroundColor: `${accent}1A`, color: accent } : undefined}
@@ -57,7 +57,7 @@ function AccordionGroup({ group, accent }: { group: SidebarGroup; accent: string
     return (
       <Link
         href={group.href ?? "#"}
-        className={`block py-1.5 text-[13px] font-bold uppercase tracking-wider transition-colors ${containsActive ? "" : "text-[#5C5A55] hover:text-[#2B2A28]"}`}
+        className={`block py-1.5 text-[14.5px] font-extrabold uppercase leading-snug tracking-[0.06em] transition-colors ${containsActive ? "" : "text-[#455E58] hover:text-[#2B2A28]"}`}
         style={containsActive ? { color: accent } : undefined}
       >
         {group.label}
@@ -77,13 +77,13 @@ function AccordionGroup({ group, accent }: { group: SidebarGroup; accent: string
           <Link
             href={group.href}
             onClick={e => e.stopPropagation()}
-            className={`text-[13px] font-bold uppercase tracking-wider transition-colors ${containsActive ? "" : "text-[#5C5A55] hover:text-[#2B2A28]"}`}
+            className={`text-[14.5px] font-extrabold uppercase leading-snug tracking-[0.06em] transition-colors ${containsActive ? "" : "text-[#455E58] hover:text-[#2B2A28]"}`}
             style={containsActive ? { color: accent } : undefined}
           >
             {group.label}
           </Link>
         ) : (
-          <span className={`text-[13px] font-bold uppercase tracking-wider ${containsActive ? "" : "text-[#5C5A55]"}`} style={containsActive ? { color: accent } : undefined}>
+          <span className={`text-[14.5px] font-extrabold uppercase leading-snug tracking-[0.06em] ${containsActive ? "" : "text-[#455E58]"}`} style={containsActive ? { color: accent } : undefined}>
             {group.label}
           </span>
         )}
@@ -116,10 +116,10 @@ export default function SectionSidebar({
   const [listOpen, setListOpen] = useState(true);
 
   return (
-    <nav className="hidden lg:block w-[260px] flex-shrink-0 sticky top-28 self-start max-h-[calc(100vh-150px)] overflow-y-auto pr-4 pb-8">
-      <div className="flex items-center justify-between mb-5">
+    <nav className="sticky top-28 hidden max-h-[calc(100vh-150px)] w-[300px] flex-shrink-0 self-start overflow-y-auto pr-5 pb-8 lg:block">
+      <div className="mb-6 flex items-center justify-between rounded-md border border-[#B9D8CC] bg-[#DDEFE8] px-4 py-3">
         <Link href={baseHref} className="flex items-center group">
-          <span className="text-[13px] font-bold uppercase tracking-wider text-[#2B2A28] group-hover:text-[#3C6E71]">
+          <span className="text-[15px] font-extrabold uppercase tracking-[0.08em] text-[#0A514C] group-hover:text-[#0E918C]">
             {title}
           </span>
         </Link>

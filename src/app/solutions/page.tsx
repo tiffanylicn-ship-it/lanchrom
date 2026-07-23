@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import SectionSidebar from "@/components/layout/SectionSidebar";
+import EditorialPageHero from "@/components/layout/EditorialPageHero";
 import { SOLUTION_NAV_GROUPS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
@@ -16,6 +16,29 @@ const solutionCards = [
   { title: "Mobile Phase Solutions", description: "Pre-made, nitrogen-sealed flex bags for pharma and food safety QC.", href: "/solutions/mobile-phase" },
   { title: "Reagent Kits", description: "Custom-assembled kits for specific workflows.", href: "/solutions/reagent-kits" },
   { title: "Custom Packaging", description: "Private label, small-pack, and OEM bottling.", href: "/solutions/custom-packaging" },
+];
+
+const buyingPaths = [
+  {
+    title: "Ready-to-use HPLC mobile phase",
+    description: "For laboratories replacing daily weighing, pH adjustment, filtration and degassing with a documented, pump-ready bag.",
+    href: "/solutions/mobile-phase",
+  },
+  {
+    title: "Organic acid and fermentation analysis",
+    description: "For lactic, acetic, citric and other organic acid methods using ion-exclusion HPLC columns.",
+    href: "/solutions/mobile-phase/fermentation-analysis",
+  },
+  {
+    title: "Custom solvent packaging",
+    description: "For buyers who need amber glass, HDPE, small laboratory packs, export cartons or distributor-specific formats.",
+    href: "/solutions/custom-packaging",
+  },
+  {
+    title: "Private-label analytical solvents",
+    description: "For distributors and laboratory brands seeking OEM filling, multilingual labels, CoA support and repeatable supply.",
+    href: "/oem",
+  },
 ];
 
 const solutionDetails = [
@@ -59,19 +82,17 @@ const solutionDetails = [
 export default function SolutionsIndexPage() {
   return (
     <div className="bg-white">
-      <section className="relative min-h-[430px] py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC] overflow-hidden flex items-center">
-        <Image src="/images/backgrounds/product-solutions.png" alt="LANCHROM product solutions" fill sizes="100vw" className="object-contain object-right p-0 md:p-2" priority />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#F7FAFC_0%,rgba(247,250,252,0.96)_31%,rgba(247,250,252,0.72)_50%,rgba(247,250,252,0.22)_68%,rgba(247,250,252,0)_100%)]" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <p className="tag-line mb-3">Solutions</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Beyond the Catalog</h1>
-          <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">Ready-to-use mobile phase, custom reagent kits, and packaging configured around how your lab actually works.</p>
-        </div>
-      </section>
+      <EditorialPageHero
+        eyebrow="Solutions"
+        title="Beyond the Catalog"
+        description="Ready-to-use mobile phase, custom reagent kits, and packaging configured around how your lab actually works."
+        image="/images/backgrounds/solutions-aseptic-filling.jpg"
+        imageAlt="Aseptic filling production line for custom analytical solutions"
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8">
         <SectionSidebar title="Solutions" baseHref="/solutions" groups={SOLUTION_NAV_GROUPS} accent="#B5654A" />
-        <main className="flex-1 min-w-0 py-12">
+        <main className="flex-1 min-w-0 py-16 md:py-20">
           <div className="grid sm:grid-cols-2 gap-4 mb-14">
             {solutionCards.map((item) => (
               <Link key={item.href} href={item.href} className="group rounded-xl border border-[#EFEDE8] bg-white p-5 hover:border-[#C9DBD9] hover:bg-[#FBFAF8] transition-all">
@@ -80,6 +101,23 @@ export default function SolutionsIndexPage() {
               </Link>
             ))}
           </div>
+
+          <section className="mb-14 border-y border-[#DCE7E2] py-9" aria-labelledby="solution-paths-title">
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#0E918C]">High-intent solution paths</p>
+            <h2 id="solution-paths-title" className="mt-2 text-2xl font-bold text-[#203D38]">Start with the workflow or purchasing problem</h2>
+            <p className="mt-3 max-w-3xl leading-relaxed text-[#5C6E69]">
+              Product grade is only one part of a usable solution. These paths combine solvent specification, preparation, packaging, documentation and delivery around the way a laboratory or distributor will actually use the material.
+            </p>
+            <div className="mt-7 grid gap-x-8 gap-y-6 md:grid-cols-2">
+              {buyingPaths.map(path => (
+                <Link key={path.href} href={path.href} className="group border-l-2 border-[#8CC7BB] pl-5">
+                  <h3 className="font-bold text-[#1D403A] group-hover:text-[#0E918C]">{path.title}</h3>
+                  <p className="mt-2 text-sm leading-7 text-[#63736F]">{path.description}</p>
+                  <span className="mt-2 inline-block text-xs font-bold uppercase tracking-wide text-[#0A514C]">View solution</span>
+                </Link>
+              ))}
+            </div>
+          </section>
 
           <div className="space-y-12">
             {solutionDetails.map((detail) => (

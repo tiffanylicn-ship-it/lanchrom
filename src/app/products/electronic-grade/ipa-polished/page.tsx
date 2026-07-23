@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import EditorialPageHero from "@/components/layout/EditorialPageHero";
+import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
 
 export const metadata: Metadata = {
   title: "Ultra-Polished Electronic Grade IPA | ≤5 PPT Metal Ions | LANCHROM™",
@@ -27,29 +29,19 @@ const BATCH_DATA = [
 export default function PolishedIPAPage() {
   return (
     <div className="bg-white">
-      {/* Breadcrumb */}
-      <div className="border-b border-[#E6E3DD]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
-          <Link href="/products" className="hover:text-[#3C6E71]">Products</Link> ›{" "}
-          <Link href="/products/electronic-grade" className="hover:text-[#3C6E71]">Electronic Grade</Link> ›{" "}
-          <span className="text-[#5C5A55]">Ultra-Polished IPA</span>
-        </div>
-      </div>
+      <SectionBreadcrumb items={[
+        { label: "Products", href: "/products" },
+        { label: "Electronic Grade", href: "/products/electronic-grade" },
+        { label: "Ultra-Polished IPA" },
+      ]} />
 
-      {/* Hero */}
-      <section className="py-12 border-b border-[#E6E3DD]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 bg-[#E8F0EF] text-[#3C6E71] text-xs font-bold px-3 py-1 rounded-full mb-4">
-            Semiconductor Wafer Cleaning Grade
-          </div>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-[#2B2A28] mb-3 tracking-tight">
-            Ultra-Polished Electronic Grade Isopropanol
-          </h1>
-          <p className="text-[#5C5A55] text-lg max-w-3xl leading-relaxed">
-            Trace-metal polished to ≤5 PPT. UV-clean to 201nm. CFD-engineered distillation eliminates the impurities that cause wafer defects — metal ion contamination, dissolved gases, and heat-sensitive residues.
-          </p>
-        </div>
-      </section>
+      <EditorialPageHero
+        eyebrow="Semiconductor Wafer Cleaning Grade"
+        title="Ultra-Polished Electronic Grade Isopropanol"
+        description="Trace-metal polished to ≤5 PPT. UV-clean to 201nm. CFD-engineered distillation eliminates the impurities that cause wafer defects - metal ion contamination, dissolved gases, and heat-sensitive residues."
+        image="/images/backgrounds/semiconductor.png"
+        imageAlt="Semiconductor wafer cleaning with electronic-grade solvent"
+      />
 
       {/* Why wafer cleaning demands more */}
       <section className="py-14 bg-[#FAFBFC]">

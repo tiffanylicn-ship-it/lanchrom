@@ -1,6 +1,7 @@
 const RESEND_API = "https://api.resend.com/emails";
 const FROM = process.env.FROM_EMAIL || "noreply@lanchrom.com";
-const NOTIFY_TO = process.env.NOTIFICATION_EMAIL || "sales@lanchrom.com";
+const NOTIFY_TO =
+  process.env.INQUIRY_NOTIFICATION_EMAIL || "info@lanchrom.com";
 
 async function sendEmail(to: string | string[], subject: string, html: string) {
   const key = process.env.RESEND_API_KEY;
@@ -17,7 +18,7 @@ function row(label: string, value: string) {
 }
 
 const header = `<div style="background:#2B2A28;padding:20px 24px"><span style="color:white;font-weight:700">LANCHROM™</span><br><span style="color:#7FA8AA;font-size:.78rem">Precision Solvents for Analytical Science</span></div>`;
-const footer = `<div style="padding:12px 24px;background:#F8FAFC;font-size:.72rem;color:#94A3B8;margin-top:16px">LANCHROM™ · lanchrom.com · sales@lanchrom.com</div>`;
+const footer = `<div style="padding:12px 24px;background:#F8FAFC;font-size:.72rem;color:#94A3B8;margin-top:16px">LANCHROM™ · lanchrom.com · info@lanchrom.com</div>`;
 
 export async function sendSampleConfirmation(d: { firstName: string; email: string; company: string; product: string; grade: string; packaging: string }) {
   await sendEmail(d.email, `Sample Request Confirmed — ${d.product}`, `<div style="font-family:Inter,sans-serif;max-width:600px;margin:0 auto">${header}<div style="padding:24px"><h2 style="color:#2B2A28">Your request has been received</h2><p style="color:#64748B">Dear ${d.firstName}, our team will respond within 1 business day.</p><table style="width:100%;border-collapse:collapse">${row("Product",d.product)}${row("Grade",d.grade)}${row("Packaging",d.packaging)}${row("Company",d.company)}</table></div>${footer}</div>`);
@@ -37,5 +38,5 @@ export async function sendOEMNotification(d: { firstName: string; lastName: stri
 }
 
 export async function sendDownloadLink(email: string, product: string, fileType: string) {
-  await sendEmail(email, `Your ${fileType.toUpperCase()} request — LANCHROM™`, `<div style="font-family:Inter,sans-serif;max-width:600px;margin:0 auto">${header}<div style="padding:24px"><h2 style="color:#2B2A28">${fileType.toUpperCase()} Request Received</h2><p style="color:#64748B">Thank you for your interest in <strong>${product}</strong>. Our team will send the ${fileType.toUpperCase()} within <strong>1 business day</strong>.</p><p style="color:#64748B">Questions? Email <a href="mailto:sales@lanchrom.com" style="color:#3C6E71">sales@lanchrom.com</a></p></div>${footer}</div>`);
+  await sendEmail(email, `Your ${fileType.toUpperCase()} request — LANCHROM™`, `<div style="font-family:Inter,sans-serif;max-width:600px;margin:0 auto">${header}<div style="padding:24px"><h2 style="color:#2B2A28">${fileType.toUpperCase()} Request Received</h2><p style="color:#64748B">Thank you for your interest in <strong>${product}</strong>. Our team will send the ${fileType.toUpperCase()} within <strong>1 business day</strong>.</p><p style="color:#64748B">Questions? Email <a href="mailto:info@lanchrom.com" style="color:#3C6E71">info@lanchrom.com</a></p></div>${footer}</div>`);
 }

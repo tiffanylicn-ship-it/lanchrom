@@ -1,11 +1,13 @@
 import type { MetadataRoute } from "next";
 import { PRODUCTS } from "@/data/products";
-import { getAllCategorySlugs, GROUP_LABELS } from "@/data/categories";
+import { getAllCategorySlugs } from "@/data/categories";
 import { getAllIndustrySlugs } from "@/data/industries";
 import { getAllApplicationSlugs } from "@/data/applications";
 import { getAllMarketSlugs } from "@/data/markets";
 import { getAllGuideSlugs } from "@/data/guides";
 import { getAllKnowledgeArticleSlugs } from "@/data/knowledge-articles";
+import { getDistributorMarketSlugs } from "@/data/distributor-program";
+import { getCategoryPath, PRODUCT_LINE_PAGES } from "@/data/product-line-pages";
 
 const BASE_URL = "https://www.lanchrom.com";
 
@@ -31,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/industries", "weekly", 0.8),
     entry("/applications", "weekly", 0.8),
     entry("/markets", "monthly", 0.7),
+    entry("/distributor-program", "monthly", 0.8),
     entry("/manufacturing", "monthly", 0.7),
     entry("/manufacturing/clean-filling", "monthly", 0.5),
     entry("/manufacturing/distillation-system", "monthly", 0.5),
@@ -40,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/oem/quote-calculator", "monthly", 0.6),
     entry("/guides", "weekly", 0.7),
     entry("/resources/blog", "weekly", 0.6),
+    entry("/resources/blog/lcms-solvent-background-comparison", "monthly", 0.7),
     entry("/resources/faq", "monthly", 0.6),
     entry("/resources/knowledge-center", "weekly", 0.7),
     entry("/downloads", "monthly", 0.5),
@@ -52,12 +56,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/privacy", "yearly", 0.2),
   ];
 
-  const productLines: Entry[] = Object.keys(GROUP_LABELS).map(group =>
-    entry(`/products/line/${group}`, "weekly", 0.7)
+  const productLines: Entry[] = Object.values(PRODUCT_LINE_PAGES).map(line =>
+    entry(`/products/${line.slug}`, "weekly", 0.7)
   );
 
   const productCategories: Entry[] = getAllCategorySlugs().map(slug =>
-    entry(`/products/${slug}`, "weekly", 0.8)
+    entry(getCategoryPath(slug), "weekly", 0.8)
   );
 
   const productDetails: Entry[] = PRODUCTS.map(p =>
@@ -76,6 +80,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry(`/markets/${slug}`, "monthly", 0.5)
   );
 
+  const distributorMarkets: Entry[] = getDistributorMarketSlugs().map(slug =>
+    entry(`/distributor-program/${slug}`, "monthly", 0.7)
+  );
+
   const guides: Entry[] = getAllGuideSlugs().map(slug =>
     entry(`/guides/${slug}`, "monthly", 0.6)
   );
@@ -92,6 +100,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...industries,
     ...applications,
     ...markets,
+    ...distributorMarkets,
     ...guides,
     ...knowledgeArticles,
   ];

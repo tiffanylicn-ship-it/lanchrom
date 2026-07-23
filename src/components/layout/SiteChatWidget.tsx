@@ -14,7 +14,7 @@ export default function SiteChatWidget() {
     brandName: "LANCHROM™",
     welcomeMessage: "Hi, welcome to LANCHROM. Ask about HPLC solvents, LC-MS solvents, OEM packaging, CoA, SDS, samples, or lead time.",
     leadCapture: true,
-    handoffEmail: process.env.NEXT_PUBLIC_SITECHAT_HANDOFF_EMAIL ?? "sales@lanchrom.com",
+    handoffEmail: process.env.NEXT_PUBLIC_SITECHAT_HANDOFF_EMAIL ?? "info@lanchrom.com",
   };
 
   return (

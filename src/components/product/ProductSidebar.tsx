@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { getCategoriesByGroup, GROUP_LABELS } from "@/data/categories";
+import { getCategoryPath, getProductLinePath } from "@/data/product-line-pages";
 
 const GROUP_ORDER: { key: keyof typeof GROUP_LABELS; color: string }[] = [
   { key: "pharma-solvents", color: "#3C6E71" },
@@ -19,7 +20,9 @@ function ProductGroup({ groupKey, color }: { groupKey: keyof typeof GROUP_LABELS
   const pathname = usePathname();
   const categories = getCategoriesByGroup(groupKey);
   const info = GROUP_LABELS[groupKey];
-  const groupActive = categories.some(c => pathname.includes(`/products/${c.slug}`));
+  const pathSegments = pathname.split("/");
+  const groupPath = getProductLinePath(groupKey);
+  const groupActive = pathname === groupPath || categories.some(c => pathSegments.includes(c.slug));
   const [open, setOpen] = useState(groupActive);
 
   if (categories.length === 0) return null;
@@ -34,29 +37,37 @@ function ProductGroup({ groupKey, color }: { groupKey: keyof typeof GROUP_LABELS
         type="button"
         onClick={() => setOpen(o => !o)}
         aria-expanded={open}
-        className="w-full flex items-center justify-between gap-2 py-1 -ml-1 pl-1 pr-1 rounded-md hover:bg-[#F5F3EF] transition-colors"
+        className="-ml-1 flex w-full items-start justify-between gap-2 rounded-md py-1.5 pl-1 pr-1 text-left transition-colors hover:bg-[#F5F3EF]"
       >
-        <span className="flex items-center gap-2 min-w-0">
-          <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
+        <span className="flex min-w-0 items-start gap-2.5">
+          <span className="mt-1.5 h-2.5 w-2.5 flex-shrink-0 rounded-full" style={{ backgroundColor: color }} />
           <span
-            className={`text-[13px] font-bold uppercase tracking-wider truncate ${groupActive ? "" : "text-[#5C5A55]"}`}
+            className={`whitespace-normal break-words text-[14.5px] font-extrabold uppercase leading-[1.35] tracking-[0.06em] ${groupActive ? "" : "text-[#455E58]"}`}
             style={groupActive ? { color } : undefined}
           >
             {info.label}
           </span>
         </span>
-        <span className="flex-shrink-0 text-[10px] transition-transform duration-200" style={{ color, transform: open ? "rotate(180deg)" : "none" }}>▾</span>
+        <span className="mt-1 flex-shrink-0 text-xs transition-transform duration-200" style={{ color, transform: open ? "rotate(180deg)" : "none" }}>▾</span>
       </button>
       <div className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${open ? "grid-rows-[1fr] mt-1" : "grid-rows-[0fr]"}`}>
         <div className="overflow-hidden min-h-0">
           <ul className="space-y-0.5 ml-1 border-l-2 pl-3" style={{ borderColor: groupActive ? color : "#EFEDE8" }}>
+            <li>
+              <Link
+                href={groupPath}
+                className="-ml-2.5 block rounded-md px-2.5 py-2 text-[13px] font-extrabold uppercase tracking-[0.06em] text-[#355F59] transition-colors hover:bg-[#F5F3EF] hover:text-[#0E918C]"
+              >
+                View product line
+              </Link>
+            </li>
             {categories.map(cat => {
-              const isActive = pathname.includes(`/products/${cat.slug}`);
+              const isActive = pathSegments.includes(cat.slug);
               return (
                 <li key={cat.slug}>
                   <Link
-                    href={`/products/${cat.slug}`}
-                    className={`block text-[14.5px] py-1.5 px-2.5 -ml-2.5 rounded-md transition-colors ${
+                    href={getCategoryPath(cat)}
+                    className={`-ml-2.5 block rounded-md px-2.5 py-2 text-[15px] leading-snug transition-colors ${
                       isActive ? "font-semibold" : "text-[#5C5A55] hover:text-[#2B2A28] hover:bg-[#F5F3EF]"
                     }`}
                     style={isActive ? { backgroundColor: `${color}1A`, color } : undefined}
@@ -75,9 +86,9 @@ function ProductGroup({ groupKey, color }: { groupKey: keyof typeof GROUP_LABELS
 
 export default function ProductSidebar() {
   return (
-    <nav className="hidden lg:block w-[260px] flex-shrink-0 sticky top-[156px] self-start max-h-[calc(100vh-194px)] overflow-y-auto pr-4 pb-8">
-      <Link href="/products" className="flex items-center mb-5 group">
-        <span className="text-[13px] font-bold uppercase tracking-wider text-[#2B2A28] group-hover:text-[#3C6E71]">All Product Lines</span>
+    <nav className="sticky top-[156px] hidden max-h-[calc(100vh-194px)] w-[300px] flex-shrink-0 self-start overflow-y-auto pr-5 pb-8 lg:block">
+      <Link href="/products" className="group mb-6 flex items-center rounded-md border border-[#B9D8CC] bg-[#DDEFE8] px-4 py-3">
+        <span className="text-[15px] font-extrabold uppercase tracking-[0.08em] text-[#0A514C] group-hover:text-[#0E918C]">All Product Lines</span>
       </Link>
       <div className="space-y-4">
         {GROUP_ORDER.map(({ key, color }) => (

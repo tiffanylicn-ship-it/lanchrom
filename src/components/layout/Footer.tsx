@@ -39,13 +39,14 @@ const FOOTER_LINKS = {
     { label: "Manufacturing", href: "/manufacturing" },
     { label: "FAQ Center", href: "/resources/faq" },
     { label: "Technical Blog", href: "/resources/blog" },
+    { label: "Distributor Program", href: "/distributor-program" },
     { label: "About LANCHROM™", href: "/about" },
   ],
 };
 
 export default function Footer() {
   return (
-    <footer className="bg-[#E8F5F2] text-[#0A1628]">
+    <footer className="home-page-footer bg-[#E8F5F2] text-[#0A1628]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-8">
           {/* Brand */}
@@ -64,12 +65,12 @@ export default function Footer() {
               Factory-direct manufacturer of HPLC, LC-MS, GC grade solvents, mobile phase solutions, reagent kits, and OEM packaging.
             </p>
             <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-[#475569] mb-4">
-              <a href="mailto:sales@lanchrom.com" className="hover:text-[#00B7C7] transition-colors">sales@lanchrom.com</a>
+              <a href="mailto:info@lanchrom.com" className="hover:text-[#00B7C7] transition-colors">info@lanchrom.com</a>
               <a href="https://www.lanchrom.com" className="hover:text-[#00B7C7] transition-colors">lanchrom.com</a>
             </div>
             <div className="flex flex-wrap gap-1.5">
-              {["GMP", "USP/EP", "ISO 9001", "Kosher"].map(cert => (
-                <span key={cert} className="text-[9px] font-bold px-1.5 py-0.5 bg-white/8 border border-white/12 rounded text-white/50">{cert}</span>
+              {["GMP", "USP/EP", "ISO 9001", "ISO 14001", "Kosher"].map(cert => (
+                <span key={cert} className="footer-cert-badge"><span aria-hidden="true">✓</span>{cert}</span>
               ))}
             </div>
           </div>

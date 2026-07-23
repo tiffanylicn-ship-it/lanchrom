@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  turbopack: { root: process.cwd() },
+  experimental: { workerThreads: true, cpus: 1 },
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [

@@ -36,7 +36,7 @@ export default function CertificatesPage() {
               </div>
             ))}
           </div>
-          <p className="text-[#5C5A55] text-sm mb-6">All certificates are available by email. For supplier qualification packages (multiple documents bundled), contact sales@lanchrom.com.</p>
+          <p className="text-[#5C5A55] text-sm mb-6">All certificates are available by email. For supplier qualification packages (multiple documents bundled), contact info@lanchrom.com.</p>
           <Link href="/contact?type=certificates" className="btn-fill">Request Certificates</Link>
         </div>
       </section>

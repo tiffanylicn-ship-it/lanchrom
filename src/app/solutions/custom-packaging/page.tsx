@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SectionSidebar from "@/components/layout/SectionSidebar";
+import EditorialPageHero from "@/components/layout/EditorialPageHero";
+import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
 import { SOLUTION_NAV_GROUPS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
@@ -20,28 +23,29 @@ const PACK_SIZES = [
   { vol: "200L / IBC", note: "Manufacturing scale" },
 ];
 
+const PACKAGING_STEPS = [
+  ["01", "Amber glass bottle", "Protects light-sensitive HPLC solvents and supports stable storage."],
+  ["02", "Tamper-evident closure", "An airtight black screw cap limits evaporation and provides visible seal integrity."],
+  ["03", "Molded pulp insert", "A fitted fiber insert absorbs handling shock and separates each bottle in transit."],
+  ["04", "Four-bottle arrangement", "Four 1 L bottles are secured upright in an individual compartment system."],
+  ["05", "Heavy-duty carton", "Corrugated construction is selected for stacking strength and export handling."],
+  ["06", "Sealed export pack", "The carton is closed, labeled and prepared with handling and batch identification."],
+];
+
 export default function CustomPackagingPage() {
   return (
     <div className="bg-white">
-      <div className="border-b border-[#E6E3DD]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-[#8A8782]">
-          <Link href="/solutions" className="hover:text-[#3C6E71]">Solutions</Link> {" › "}
-          <span className="text-[#5C5A55]">Custom Packaging</span>
-        </div>
-      </div>
+      <SectionBreadcrumb items={[{ label: "Solutions", href: "/solutions" }, { label: "Custom Packaging" }]} />
 
-      <section className="py-16 md:py-20 border-b border-[#E6E3DD] bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="tag-line mb-3">Solutions</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#2B2A28] mb-3">Order From 100mL. Your Label. Our Quality.</h1>
-          <p className="text-[#5C5A55] text-lg max-w-2xl leading-relaxed">
-            We hold lab-pack sizes in stock specifically so you don't have to commit to a drum before
-            qualifying a product — and we'll put your name on the bottle once you do.
-          </p>
-        </div>
-      </section>
+      <EditorialPageHero
+        eyebrow="Solutions"
+        title="Order From 100mL. Your Label. Our Quality."
+        description="We hold lab-pack sizes in stock specifically so you don't have to commit to a drum before qualifying a product - and we'll put your name on the bottle once you do."
+        image="/images/backgrounds/oem-bottle-pic.png"
+        imageAlt="LANCHROM custom packaging and private-label bottles"
+      />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8 py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8 py-16 md:py-20">
         <SectionSidebar title="Solutions" baseHref="/solutions" groups={SOLUTION_NAV_GROUPS} accent="#B5654A" />
         <div className="flex-1 min-w-0 space-y-14">
 
@@ -57,6 +61,44 @@ export default function CustomPackagingPage() {
               ))}
             </div>
             <p className="text-[#8A8782] text-sm mt-4">Not every product is available in every size — check the packaging selector on individual product pages for confirmed options.</p>
+          </section>
+
+          <section aria-labelledby="packaging-process-title">
+            <div className="mb-6 max-w-3xl">
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#0E918C]">Export-ready protection</p>
+              <h2 id="packaging-process-title" className="mt-2 text-2xl font-bold text-[#2B2A28]">Six-step acetonitrile packaging process</h2>
+              <p className="mt-3 leading-relaxed text-[#5C5A55]">
+                Our standard 4 x 1 L acetonitrile pack combines solvent-compatible amber glass, a tamper-evident closure,
+                molded pulp protection and a reinforced export carton. The system is designed to protect bottle integrity,
+                preserve product identification and simplify receiving inspection for laboratories and distributors.
+              </p>
+            </div>
+
+            <figure className="overflow-hidden rounded-lg border border-[#D7E3DE] bg-[#F5FAF8]">
+              <Image
+                src="/images/solutions/packaging-process.jpg"
+                alt="LANCHROM six-step acetonitrile packaging and quality assurance process"
+                width={1600}
+                height={1070}
+                sizes="(min-width: 1280px) 900px, (min-width: 768px) 70vw, 100vw"
+                className="h-auto w-full"
+              />
+              <figcaption className="border-t border-[#D7E3DE] px-5 py-3 text-xs leading-relaxed text-[#667973]">
+                Standard export configuration shown: four 1 L amber glass bottles. Final container and carton specifications are confirmed by solvent, destination and transport mode.
+              </figcaption>
+            </figure>
+
+            <ol className="mt-7 grid gap-x-8 gap-y-5 sm:grid-cols-2">
+              {PACKAGING_STEPS.map(([number, title, description]) => (
+                <li key={number} className="grid grid-cols-[2.5rem_1fr] gap-3 border-t border-[#DDE8E3] pt-4">
+                  <span className="text-lg font-extrabold text-[#0A514C]">{number}</span>
+                  <div>
+                    <h3 className="font-bold text-[#203D38]">{title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-[#66736F]">{description}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
           </section>
 
           {/* Private label */}

@@ -37,7 +37,7 @@ export default function TDSPage() {
               </div>
             ))}
           </div>
-          <p className="text-[#5C5A55] text-sm mb-6">TDS documents are available for all products. Email sales@lanchrom.com with the product name, or visit the specific product page.</p>
+          <p className="text-[#5C5A55] text-sm mb-6">TDS documents are available for all products. Email info@lanchrom.com with the product name, or visit the specific product page.</p>
           <Link href="/contact?type=tds" className="btn-fill">Request a TDS</Link>
         </div>
       </section>

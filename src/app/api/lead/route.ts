@@ -73,7 +73,7 @@ We will reply within 1 business day with pricing, lead time, packaging options, 
 
 Best regards,
 LANCHROM™ Sales Team
-sales@lanchrom.com`,
+info@lanchrom.com`,
     };
   }
 
@@ -88,7 +88,7 @@ Our team will check product availability, suitable grade, sample size, and expor
 
 Best regards,
 LANCHROM™ Sales Team
-sales@lanchrom.com`,
+info@lanchrom.com`,
     };
   }
 
@@ -102,7 +102,7 @@ Our team has received your inquiry and will reply within 1 business day.
 
 Best regards,
 LANCHROM™ Sales Team
-sales@lanchrom.com`,
+info@lanchrom.com`,
   };
 }
 
@@ -131,7 +131,8 @@ export async function POST(req: Request) {
 
     const zohoEmail = process.env.ZOHO_EMAIL;
     const zohoPassword = process.env.ZOHO_APP_PASSWORD || process.env.ZOHO_PASSWORD;
-    const notifyTo = process.env.LEAD_NOTIFY_TO || "sales@lanchrom.com";
+    const notifyTo =
+      process.env.INQUIRY_NOTIFICATION_EMAIL || "info@lanchrom.com";
 
     if (!zohoEmail || !zohoPassword) {
       console.error("Zoho SMTP is not configured. Missing ZOHO_EMAIL or ZOHO_PASSWORD.");

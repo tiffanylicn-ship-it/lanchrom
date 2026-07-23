@@ -1,5 +1,6 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { Search, X } from "lucide-react";
 
 interface FAQItem { q: string; a: string; }
 interface FAQSection { category: string; items: FAQItem[]; }
@@ -52,7 +53,23 @@ function AccordionRow({ item, isOpen, onToggle }: { item: FAQItem; isOpen: boole
 export default function FAQClient({ sections }: { sections: FAQSection[] }) {
   const [openId, setOpenId] = useState<string | null>(null);
   const [pendingCloseId, setPendingCloseId] = useState<string | null>(null);
+  const [query, setQuery] = useState("");
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const normalizedQuery = query.trim().toLocaleLowerCase();
+  const filteredSections = useMemo(() => {
+    if (!normalizedQuery) return sections;
+    return sections
+      .map(section => ({
+        ...section,
+        items: section.items.filter(item =>
+          `${section.category} ${item.q} ${item.a}`.toLocaleLowerCase().includes(normalizedQuery),
+        ),
+      }))
+      .filter(section => section.items.length > 0);
+  }, [normalizedQuery, sections]);
+
+  const resultCount = filteredSections.reduce((total, section) => total + section.items.length, 0);
 
   const handleToggle = (id: string) => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -74,10 +91,39 @@ export default function FAQClient({ sections }: { sections: FAQSection[] }) {
 
   return (
     <section className="py-14">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        {sections.map(section => (
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-10 border-b border-[#DCE8E3] pb-8">
+          <label htmlFor="faq-search" className="mb-3 block text-sm font-bold text-[#173C36]">Search the FAQ Center</label>
+          <div className="relative">
+            <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#0E918C]" aria-hidden="true" />
+            <input
+              id="faq-search"
+              type="text"
+              role="searchbox"
+              value={query}
+              onChange={event => setQuery(event.target.value)}
+              placeholder="Search solvents, grades, shipping, OEM..."
+              className="h-13 w-full rounded-md border border-[#9FC7BB] bg-[#F4F9F7] py-3 pl-12 pr-12 text-base text-[#173C36] outline-none transition focus:border-[#0E918C] focus:bg-white focus:ring-2 focus:ring-[#0E918C]/20"
+            />
+            {query && (
+              <button
+                type="button"
+                onClick={() => setQuery("")}
+                aria-label="Clear FAQ search"
+                className="absolute right-3 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center text-[#60736D] hover:text-[#0A514C]"
+              >
+                <X className="h-4 w-4" aria-hidden="true" />
+              </button>
+            )}
+          </div>
+          <p className="mt-3 text-sm text-[#60736D]" aria-live="polite">
+            {normalizedQuery ? `${resultCount} matching ${resultCount === 1 ? "answer" : "answers"}` : "Search across every question and answer."}
+          </p>
+        </div>
+
+        {filteredSections.map(section => (
           <div key={section.category} className="mb-12 last:mb-0">
-            <h2 className="text-sm font-bold uppercase tracking-wide text-[#8A8782] mb-5">{section.category}</h2>
+            <h2 className="mb-5 text-sm font-extrabold uppercase tracking-[0.08em] text-[#0A514C]">{section.category}</h2>
             <div className="space-y-2">
               {section.items.map((item, i) => {
                 const id = `${section.category}-${i}`;
@@ -89,6 +135,13 @@ export default function FAQClient({ sections }: { sections: FAQSection[] }) {
             </div>
           </div>
         ))}
+        {filteredSections.length === 0 && (
+          <div className="border border-[#DCE8E3] bg-[#F4F9F7] px-6 py-12 text-center">
+            <h2 className="text-xl font-extrabold text-[#173C36]">No matching answers</h2>
+            <p className="mt-3 text-sm text-[#60736D]">Try a broader keyword or clear the search to view all topics.</p>
+            <button type="button" onClick={() => setQuery("")} className="mt-6 rounded-md bg-[#0A514C] px-5 py-2.5 text-sm font-bold text-white hover:bg-[#083E3B]">Clear search</button>
+          </div>
+        )}
       </div>
     </section>
   );
