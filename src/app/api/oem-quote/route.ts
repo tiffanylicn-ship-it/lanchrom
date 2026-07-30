@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyRecaptcha } from "@/lib/recaptcha/verify";
 import { processOEMQuote } from "@/lib/hubspot/client";
-import { sendOEMNotification } from "@/lib/resend/email";
+import { sendOEMNotification } from "@/lib/mail/oem";
 import type { OEMQuoteForm } from "@/types";
 
 export async function POST(request: NextRequest) {
@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
 
     let contactId: string | undefined;
     let dealId: string | undefined;
-    let isPriority = body.unitsPerOrder >= 500;
+    let isPriority = Number(body.unitsPerOrder) >= 500;
     try {
       const result = await processOEMQuote(body);
       contactId = result.contactId;
