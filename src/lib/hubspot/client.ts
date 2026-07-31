@@ -63,10 +63,17 @@ async function hubspotFetch(
   method: string,
   body?: object
 ): Promise<HubSpotResponse> {
-  const token = process.env.HUBSPOT_ACCESS_TOKEN || process.env.HUBSPOT_API_KEY;
-  if (!token) {
-    throw new Error("HubSpot private app access token is not configured");
-  }
+const token =
+  process.env.HUBSPOT_ACCESS_TOKEN ||
+  process.env.HUBSPOT_API_KEY;
+
+if (!token) {
+  console.info(
+    "HubSpot sync skipped: access token is not configured."
+  );
+
+  return {};
+}
 
   const response = await fetch(`${API_BASE}${endpoint}`, {
     method,
