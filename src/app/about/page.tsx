@@ -3,8 +3,9 @@ import Link from "next/link";
 import EditorialPageHero from "@/components/layout/EditorialPageHero";
 
 export const metadata: Metadata = {
-  title: "About LANCHROM | Solvent Manufacturing",
-  description: "LANCHROM — 15+ years manufacturing electronic and pharmaceutical grade solvents. 20+ production lines, Sulzer internals, 3ppt metal purity, sub-3nm particle control.",
+  title: "High-Purity Solvent Manufacturer | LANCHROM",
+  description: "Meet LANCHROM, a high-purity solvent manufacturer with more than 15 years of production and quality-control experience.",
+  keywords: ["high-purity solvent manufacturer"],
   alternates: { canonical: "https://www.lanchrom.com/about" },
 };
 
@@ -15,8 +16,8 @@ export default function AboutPage() {
         eyebrow="About LANCHROM"
         title="15+ Years of Precision Solvent Manufacturing"
         description="LANCHROM is a specialist manufacturer of electronic-grade and pharmaceutical-grade chemical solvents, with over 15 years of production experience and a product catalog spanning 209 grades across electronic materials and pharmaceutical science."
-        image="/images/hero/lcms-solvent-factory-manufacturer.png"
-        imageAlt="LANCHROM LCMS solvent factory manufacturer"
+        image="/images/hero/lanchrom-hero.png"
+        imageAlt="LANCHROM high-purity solvent manufacturing site"
       />
 
       {/* Two core business domains */}

@@ -4,7 +4,7 @@ import EditorialPageHero from "@/components/layout/EditorialPageHero";
 import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
 
 export const metadata: Metadata = {
-  title: "Ultra-Polished Electronic Grade IPA | ≤5 PPT Metal Ions | LANCHROM™",
+  title: "Ultra-Polished Electronic Grade IPA | LANCHROM™",
   description: "Electronic grade isopropanol with ultra-low UV absorbance, ≤50ppm water content, and trace metal polishing to ≤5 PPT. CFD-engineered distillation for batch-to-batch consistency. For semiconductor wafer cleaning.",
   alternates: { canonical: "https://www.lanchrom.com/products/electronic-grade/ipa-polished" },
 };

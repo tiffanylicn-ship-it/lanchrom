@@ -14,9 +14,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const info = getMarketInfo(slug);
   if (!info) return { title: "Not Found | LANCHROM™" };
+  const primaryTopic = info.seoTitle.split("|")[0].trim();
   return {
-    title: info.seoTitle,
+    title: `${primaryTopic} | LANCHROM™`,
     description: info.seoDescription,
+    keywords: [primaryTopic],
     alternates: { canonical: `https://www.lanchrom.com/markets/${slug}` },
   };
 }

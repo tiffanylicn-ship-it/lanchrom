@@ -56,7 +56,7 @@ export interface Product {
   coaStatus?: "available" | "request-only";
   seoTitle?: string;
   seoDescription?: string;
-  keywords?: string[];
+  keywords?: string[]; // one primary SEO phrase per product
   unNumber?: string;
   hazmatClass?: string;
   isHazmat?: boolean;
@@ -157,6 +157,11 @@ export interface HubSpotContact {
   source_product?: string;
   source_url?: string;
   current_supplier?: string;
+  inquiry_tags?: string;
+  search_keywords?: string;
+  inquiry_priority?: string;
+  product_category?: string;
+  inquiry_region?: string;
 }
 
 export interface HubSpotDeal {

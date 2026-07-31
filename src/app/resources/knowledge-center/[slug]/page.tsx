@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${article.title} | LANCHROM™`,
     description: article.seoDescription,
+    keywords: [article.title],
     alternates: { canonical: `https://www.lanchrom.com/resources/knowledge-center/${slug}` },
   };
 }

@@ -3,8 +3,8 @@ import FAQClient from "./FAQClient";
 import EditorialPageHero from "@/components/layout/EditorialPageHero";
 
 export const metadata: Metadata = {
-  title: "FAQ | LANCHROM™ — Solvent Grades, Shipping, Custom Packaging",
-  description: "Answers to common questions about HPLC/LC-MS solvent grades, custom packaging, OEM services, shipping and hazmat classification, and quality documentation.",
+  title: "Laboratory Solvent FAQ | LANCHROM™",
+  description: "Clear answers to common laboratory solvent purchasing, handling, documentation and delivery questions.",
   alternates: { canonical: "https://www.lanchrom.com/resources/faq" },
 };
 

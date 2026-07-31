@@ -38,7 +38,7 @@ export const PRODUCTS_ELEMENTAL_IMPURITIES: Product[] = [
     isHazmat: false,
     seoTitle: "ICH Q3D Class 1 Element Standard | As Cd Hg Pb | LANCHROM™",
     seoDescription: "Certified ICH Q3D Class 1 elemental impurity standard — arsenic, cadmium, mercury, lead. USP <232>/<233> compliant. ICP-MS ready, batch CoA.",
-    keywords: ["ICH Q3D Class 1 standard", "elemental impurity standard arsenic cadmium mercury lead", "USP 232 233 standard", "ICP-MS elemental impurity calibration"],
+    keywords: ["ICH Q3D Class 1 standard"],
   },
 
   // ── ICH Q3D Class 2A — high probability of occurrence ─────
@@ -70,7 +70,7 @@ export const PRODUCTS_ELEMENTAL_IMPURITIES: Product[] = [
     isHazmat: false,
     seoTitle: "ICH Q3D Class 2A Standard | Cobalt Nickel Vanadium | LANCHROM™",
     seoDescription: "ICH Q3D Class 2A elemental impurity standard — cobalt, nickel, vanadium. For catalyst residue and equipment leaching risk assessment.",
-    keywords: ["ICH Q3D Class 2A standard", "cobalt nickel vanadium ICP standard", "catalyst residue elemental standard"],
+    keywords: ["ICH Q3D Class 2A standard"],
   },
 
   // ── ICH Q3D Class 2B — low probability, route-dependent ───
@@ -100,7 +100,7 @@ export const PRODUCTS_ELEMENTAL_IMPURITIES: Product[] = [
     isHazmat: false,
     seoTitle: "ICH Q3D Class 2B Precious Metal Standard | LANCHROM™",
     seoDescription: "ICH Q3D Class 2B standard — Pd, Pt, Rh, Ru, Os, Ir, Ag, Au, Se, Tl. For precious metal catalyst residue testing in API manufacturing.",
-    keywords: ["ICH Q3D Class 2B standard", "palladium platinum catalyst residue standard", "precious metal ICP standard"],
+    keywords: ["ICH Q3D Class 2B standard"],
   },
 
   // ── ICH Q3D Class 3 — assess only if intentionally added ──
@@ -131,7 +131,7 @@ export const PRODUCTS_ELEMENTAL_IMPURITIES: Product[] = [
     isHazmat: false,
     seoTitle: "ICH Q3D Class 3 Element Standard | Ba Cr Cu Li Mo Sb Sn | LANCHROM™",
     seoDescription: "ICH Q3D Class 3 elemental impurity standard. Barium, chromium, copper, lithium, molybdenum, antimony, tin. Oral route risk assessment.",
-    keywords: ["ICH Q3D Class 3 standard", "chromium copper tin antimony ICP standard"],
+    keywords: ["ICH Q3D Class 3 standard"],
   },
 
   // ── Full ICH Q3D Panel — all 24 elements in one kit ───────
@@ -162,6 +162,6 @@ export const PRODUCTS_ELEMENTAL_IMPURITIES: Product[] = [
     isHazmat: false,
     seoTitle: "ICH Q3D Full Panel Standard Kit 24 Elements | LANCHROM™",
     seoDescription: "Complete ICH Q3D(R2) elemental impurity standard kit — all 24 Class 1/2A/2B/3 elements. USP <232>/<233>, EP 5.20 compliant. Single configured order.",
-    keywords: ["ICH Q3D full panel standard", "USP 232 233 element kit", "elemental impurities ICP-MS kit", "ICH Q3D 24 element standard"],
+    keywords: ["ICH Q3D full panel standard"],
   },
 ];

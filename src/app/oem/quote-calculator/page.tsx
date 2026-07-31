@@ -31,12 +31,22 @@ export default function OEMCalculatorPage() {
 
   const onSubmit = async (data: OEMQuoteForm) => {
     setLoading(true);
+    setError("");
     try {
       const token = await getRecaptchaToken("oem_quote");
       const res = await fetch("/api/oem-quote", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...data, recaptchaToken: token }) });
-      if (!res.ok) throw new Error();
+      const result = await res.json().catch(() => null);
+      if (!res.ok || !result?.success) {
+        throw new Error(result?.message || "Unable to submit this OEM request.");
+      }
       setSubmitted(true);
-    } catch { setError("Submission failed. Please email info@lanchrom.com"); }
+    } catch (submitError) {
+      setError(
+        submitError instanceof Error
+          ? submitError.message
+          : "Submission failed. Please email info@lanchrom.com",
+      );
+    }
     finally { setLoading(false); }
   };
 

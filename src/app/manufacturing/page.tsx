@@ -3,8 +3,8 @@ import Link from "next/link";
 import EditorialPageHero from "@/components/layout/EditorialPageHero";
 
 export const metadata: Metadata = {
-  title: "Manufacturing & Engineering | LANCHROM",
-  description: "Inside LANCHROM's solvent manufacturing facility — CFD-optimized distillation, controlled-environment filling, and full-spectrum analytical QC.",
+  title: "High-Purity Solvent Manufacturing | LANCHROM",
+  description: "See how LANCHROM controls high-purity solvent manufacturing from purification through filling and batch release.",
   alternates: { canonical: "https://www.lanchrom.com/manufacturing" },
 };
 

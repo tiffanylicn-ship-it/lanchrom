@@ -5,8 +5,8 @@ import SectionSidebar from "@/components/layout/SectionSidebar";
 import EditorialPageHero from "@/components/layout/EditorialPageHero";
 
 export const metadata: Metadata = {
-  title: "Analytical Applications | HPLC, LC-MS & GC Solvents | LANCHROM",
-  description: "Choose HPLC, LC-MS, GC, ICP-MS and spectroscopy solvents by analytical method, detection mode, blank requirement and sample-preparation workflow.",
+  title: "Analytical Solvent Applications | LANCHROM",
+  description: "Choose analytical solvents by method, detection mode, blank requirement and sample-preparation workflow.",
   alternates: { canonical: "https://www.lanchrom.com/applications" },
 };
 

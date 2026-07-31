@@ -60,12 +60,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Isopropyl Alcohol (IPA) | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Isopropyl Alcohol (IPA): Pharmaceutical grade, pharmacopeia-compliant, low impurity profile. Packaging: 25L, 200L, 100mL, 500mL, 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Isopropyl Alcohol (IPA)",
-      "Isopropyl Alcohol(IPA)",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Isopropyl Alcohol (IPA)"]
   },
   {
     "_id": "excel-pharma-grade-ethanol-anhydrous-96percent",
@@ -121,12 +116,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Ethanol (Anhydrous/96%) | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Ethanol (Anhydrous/96%): Pharmaceutical grade, pharmacopeia-compliant, methanol-residue controlled. Packaging: 25L, 200L, 500mL, 1L, 2.5L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ethanol (Anhydrous/96%)",
-      "Ethanol(Anhydrous/96%)",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ethanol (Anhydrous/96%)"]
   },
   {
     "_id": "excel-pharma-grade-dimethyl-sulfoxide-dmso",
@@ -180,12 +170,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Dimethyl Sulfoxide (DMSO) | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Dimethyl Sulfoxide (DMSO): Pharmaceutical grade, sterile filtered, low endotoxin. Packaging: 1L, 25L, 100mL, 250mL, 500mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Dimethyl Sulfoxide (DMSO)",
-      "Dimethyl Sulfoxide(DMSO)",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Dimethyl Sulfoxide (DMSO)"]
   },
   {
     "_id": "excel-pharma-grade-acetone",
@@ -238,12 +223,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetone | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetone: Pharmaceutical grade, pharmacopeia-compliant, low residue. Packaging: 25L, 200L, 2.5L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Acetone",
-      "Acetone",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Acetone"]
   },
   {
     "_id": "excel-pharma-grade-dichloromethane-dcm",
@@ -296,12 +276,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Dichloromethane (DCM) | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Dichloromethane (DCM): Pharmaceutical grade, pharmacopeia-compliant, low water content. Packaging: 25L, 200L, 2.5L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Dichloromethane (DCM)",
-      "Dichloromethane(DCM)",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Dichloromethane (DCM)"]
   },
   {
     "_id": "excel-pharma-grade-propylene-glycol-methyl-ether-pgme",
@@ -354,12 +329,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Propylene Glycol Methyl Ether (PGME) | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Propylene Glycol Methyl Ether (PGME): Pharmaceutical grade, low volatility, high purity. Packaging: 25L, 200L, 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Propylene Glycol Methyl Ether (PGME)",
-      "Propylene Glycol Methyl Ether(PGME)",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Propylene Glycol Methyl Ether (PGME)"]
   },
   {
     "_id": "excel-pharma-grade-propylene-glycol-methyl-ether-acetate-pgmea",
@@ -412,12 +382,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Propylene Glycol Methyl Ether Acetate (PGMEA) | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Propylene Glycol Methyl Ether Acetate (PGMEA): Pharmaceutical grade, electronic grade available, low metal ions. Packaging: 25L, 200L, 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Propylene Glycol Methyl Ether Acetate (PGMEA)",
-      "Propylene Glycol Methyl Ether Acetate(PGMEA)",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Propylene Glycol Methyl Ether Acetate (PGMEA)"]
   },
   {
     "_id": "excel-pharma-grade-dimethyl-carbonate-dmc",
@@ -470,12 +435,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Dimethyl Carbonate (DMC) | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Dimethyl Carbonate (DMC): Pharmaceutical grade, low toxicity, high purity. Packaging: 25L, 200L, 2.5L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Dimethyl Carbonate (DMC)",
-      "Dimethyl Carbonate(DMC)",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Dimethyl Carbonate (DMC)"]
   },
   {
     "_id": "excel-pharma-grade-ethyl-acetate",
@@ -528,12 +488,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Ethyl Acetate | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Ethyl Acetate: Pharmaceutical grade, pharmacopeia-compliant, low residue. Packaging: 25L, 200L, 2.5L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ethyl Acetate",
-      "Ethyl Acetate",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ethyl Acetate"]
   },
   {
     "_id": "excel-pharma-grade-n-hexane",
@@ -585,12 +540,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "n-Hexane | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ n-Hexane: Pharmaceutical grade, low aromatics, high purity. Packaging: 25L, 200L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "n-Hexane",
-      "n-Hexane",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["n-Hexane"]
   },
   {
     "_id": "excel-pharma-grade-n-heptane",
@@ -642,12 +592,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "n-Heptane | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ n-Heptane: Pharmaceutical grade, low aromatics, high purity. Packaging: 25L, 200L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "n-Heptane",
-      "n-Heptane",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["n-Heptane"]
   },
   {
     "_id": "excel-pharma-grade-toluene",
@@ -699,12 +644,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Toluene | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Toluene: Pharmaceutical grade, low sulfur, high purity. Packaging: 25L, 200L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Toluene",
-      "Toluene",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Toluene"]
   },
   {
     "_id": "excel-pharma-grade-2-butanone-mek",
@@ -755,12 +695,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "2-Butanone (MEK) | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ 2-Butanone (MEK): Reagent grade, high purity, low residue. Packaging: 4L, 25L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "2-Butanone (MEK)",
-      "2-Butanone(MEK)",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["2-Butanone (MEK)"]
   },
   {
     "_id": "excel-pharma-grade-cyclohexanone",
@@ -811,12 +746,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Cyclohexanone | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Cyclohexanone: Reagent grade, high purity, low water content. Packaging: 4L, 25L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Cyclohexanone",
-      "Cyclohexanone",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Cyclohexanone"]
   },
   {
     "_id": "excel-pharma-grade-n-butanol",
@@ -867,12 +797,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "n-Butanol | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ n-Butanol: Pharmaceutical or reagent grade, pharmacopeia-compliant. Packaging: 4L, 25L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "n-Butanol",
-      "n-Butanol",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["n-Butanol"]
   },
   {
     "_id": "excel-pharma-grade-ethylene-glycol-ethyl-ether",
@@ -923,12 +848,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Ethylene Glycol Ethyl Ether | Pharmaceutical Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Ethylene Glycol Ethyl Ether: Industrial or reagent grade, high purity. Packaging: 4L, 25L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ethylene Glycol Ethyl Ether",
-      "Ethylene Glycol Ethyl Ether",
-      "Pharmaceutical Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ethylene Glycol Ethyl Ether"]
   },
   {
     "_id": "excel-hplc-solvents-ipa-for-hplc",
@@ -981,12 +901,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "IPA for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ IPA for HPLC: Gradient grade, low UV absorbance, low impurities. Packaging: 1L, 2.5L, 4L, 20L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "IPA for HPLC",
-      "HPLCgradeIsopropyl Alcohol(IPA)",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["IPA for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-ethanol-for-hplc",
@@ -1039,12 +954,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Ethanol for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Ethanol for HPLC: laboratory usegrade，Low UV absorbance，No impurity peaks. Packaging: 1L, 2.5L, 4L, 20L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ethanol for HPLC",
-      "HPLCgradeEthanol",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ethanol for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-methanol-for-hplc",
@@ -1097,12 +1007,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Methanol for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Methanol for HPLC: laboratory usegrade，Low UV absorbance，High purity. Packaging: 1L, 2.5L, 4L, 20L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Methanol for HPLC",
-      "HPLCgradeMethanol",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Methanol for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-acetonitrile-for-hplc",
@@ -1155,12 +1060,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetonitrile for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetonitrile for HPLC: Ultra gradient grade，Extremely low UV absorbance，No impurity peaks. Packaging: 1L, 2.5L, 4L, 20L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Acetonitrile for HPLC",
-      "HPLCgradeAcetonitrile",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Acetonitrile for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-n-hexane-for-hplc",
@@ -1212,12 +1112,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "n-Hexane for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ n-Hexane for HPLC: Low aromatic content，High purity，No significant UV absorbance. Packaging: 1L, 4L, 20L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "n-Hexane for HPLC",
-      "HPLCgraden-Hexane",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["n-Hexane for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-n-heptane-for-hplc",
@@ -1269,12 +1164,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "n-Heptane for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ n-Heptane for HPLC: Low aromatic content，High purity，Low UV absorbance. Packaging: 1L, 4L, 20L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "n-Heptane for HPLC",
-      "HPLCgraden-Heptane",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["n-Heptane for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-ethyl-acetate-for-hplc",
@@ -1327,12 +1217,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Ethyl Acetate for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Ethyl Acetate for HPLC: Low UV absorbance，High purity，No impurity peaks. Packaging: 1L, 2.5L, 4L, 20L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ethyl Acetate for HPLC",
-      "HPLCgradeEthyl Acetate",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ethyl Acetate for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-dcm-for-hplc",
@@ -1383,12 +1268,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "DCM for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ DCM for HPLC: Low UV absorbance，Low water content，High purity. Packaging: 2.5L, 4L, 20L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "DCM for HPLC",
-      "HPLCgradeDichloromethane",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["DCM for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-thf-for-hplc",
@@ -1439,12 +1319,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "THF for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ THF for HPLC: Low UV absorbance，Stable stabilizer content. Packaging: 1L, 4L, 20L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "THF for HPLC",
-      "HPLCgradeTetrahydrofuran(THF)",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["THF for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-acetone-for-hplc",
@@ -1495,12 +1370,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetone for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetone for HPLC: High purity，Low UV absorbance，No impurity peaks. Packaging: 2.5L, 4L, 20L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Acetone for HPLC",
-      "HPLCgradeAcetone",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Acetone for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-n-propyl-acetate-for-hplc",
@@ -1551,12 +1421,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "n-Propyl Acetate for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ n-Propyl Acetate for HPLC: High purity，Low UV absorbance，No impurity peaks. Packaging: 1L, 4L, 20L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "n-Propyl Acetate for HPLC",
-      "HPLCgraden-Propyl Acetate",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["n-Propyl Acetate for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-n-butyl-acetate-for-hplc",
@@ -1607,12 +1472,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "n-Butyl Acetate for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ n-Butyl Acetate for HPLC: High purity，Low UV absorbance，No impurity peaks. Packaging: 1L, 4L, 20L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "n-Butyl Acetate for HPLC",
-      "HPLCgraden-Butyl Acetate",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["n-Butyl Acetate for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-chloroform-for-hplc",
@@ -1663,12 +1523,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Chloroform for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Chloroform for HPLC: High purity，Low UV absorbance，No impurity peaks. Packaging: 1L, 4L, 20L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Chloroform for HPLC",
-      "HPLCgradeChloroform(Chloroform)",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Chloroform for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-petroleum-ether-for-hplc",
@@ -1719,12 +1574,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Petroleum Ether for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Petroleum Ether for HPLC: Low aromatic content，High purity，No significant UV absorbance. Packaging: 1L, 4L, 20L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Petroleum Ether for HPLC",
-      "HPLCgradePetroleum Ether",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Petroleum Ether for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-cyclohexane-for-hplc",
@@ -1775,12 +1625,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Cyclohexane for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Cyclohexane for HPLC: High purity，Low UV absorbance，No impurity peaks. Packaging: 1L, 4L, 20L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Cyclohexane for HPLC",
-      "HPLCgradeCyclohexane",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Cyclohexane for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-nmp-for-hplc",
@@ -1831,12 +1676,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "NMP for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ NMP for HPLC: High purity，Low UV absorbance，Low water content. Packaging: 1L, 4L, 20L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "NMP for HPLC",
-      "HPLCgradeN-Methyl-2-pyrrolidone(NMP)",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["NMP for HPLC"]
   },
   {
     "_id": "excel-hplc-solvents-dea-for-hplc",
@@ -1887,12 +1727,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "DEA for HPLC | HPLCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ DEA for HPLC: High purity，Low UV absorbance，Low impurities. Packaging: 1L, 4L, 20L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "DEA for HPLC",
-      "HPLCgradeDiethanolamine(DEA)",
-      "HPLCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["DEA for HPLC"]
   },
   {
     "_id": "excel-gc-solvents-n-hexane-for-gc",
@@ -1943,12 +1778,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "n-Hexane for GC | GCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ n-Hexane for GC: High purity，No residue peaks，Low boiling range. Packaging: 1L, 4L, 20L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "n-Hexane for GC",
-      "GCgraden-Hexane",
-      "GCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["n-Hexane for GC"]
   },
   {
     "_id": "excel-gc-solvents-acetone-for-gc",
@@ -1999,12 +1829,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetone for GC | GCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetone for GC: High purity，No residue peaks，Low boiling range. Packaging: 1L, 4L, 20L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Acetone for GC",
-      "GCgradeAcetone",
-      "GCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Acetone for GC"]
   },
   {
     "_id": "excel-gc-solvents-ethyl-acetate-for-gc",
@@ -2055,12 +1880,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Ethyl Acetate for GC | GCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Ethyl Acetate for GC: High purity，No residue peaks，Low boiling range. Packaging: 1L, 4L, 20L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ethyl Acetate for GC",
-      "GCgradeEthyl Acetate",
-      "GCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ethyl Acetate for GC"]
   },
   {
     "_id": "excel-gc-solvents-dcm-for-gc",
@@ -2110,12 +1930,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "DCM for GC | GCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ DCM for GC: High purity，No residue peaks，Low boiling range. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "DCM for GC",
-      "GCgradeDichloromethane",
-      "GCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["DCM for GC"]
   },
   {
     "_id": "excel-gc-solvents-methanol-for-gc",
@@ -2165,12 +1980,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Methanol for GC | GCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Methanol for GC: High purity，No residue peaks，Low boiling range. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Methanol for GC",
-      "GCgradeMethanol",
-      "GCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Methanol for GC"]
   },
   {
     "_id": "excel-gc-solvents-ipa-for-gc",
@@ -2220,12 +2030,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "IPA for GC | GCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ IPA for GC: High purity，No residue peaks，Low boiling range. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "IPA for GC",
-      "GCgradeIsopropyl Alcohol(IPA)",
-      "GCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["IPA for GC"]
   },
   {
     "_id": "excel-gc-solvents-toluene-for-gc",
@@ -2275,12 +2080,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Toluene for GC | GCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Toluene for GC: High purity，No residue peaks，Low boiling range. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Toluene for GC",
-      "GCgradeToluene",
-      "GCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Toluene for GC"]
   },
   {
     "_id": "excel-gc-solvents-xylene-for-gc",
@@ -2330,12 +2130,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Xylene for GC | GCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Xylene for GC: High purity，No residue peaks，Low boiling range. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Xylene for GC",
-      "GCgradelaboratory useToluene",
-      "GCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Xylene for GC"]
   },
   {
     "_id": "excel-gc-solvents-n-propyl-acetate-for-gc",
@@ -2385,12 +2180,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "n-Propyl Acetate for GC | GCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ n-Propyl Acetate for GC: High purity，No residue peaks，Low boiling range. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "n-Propyl Acetate for GC",
-      "GCgraden-Propyl Acetate",
-      "GCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["n-Propyl Acetate for GC"]
   },
   {
     "_id": "excel-gc-solvents-n-butyl-acetate-for-gc",
@@ -2440,12 +2230,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "n-Butyl Acetate for GC | GCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ n-Butyl Acetate for GC: High purity，No residue peaks，Low boiling range. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "n-Butyl Acetate for GC",
-      "GCgraden-Butyl Acetate",
-      "GCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["n-Butyl Acetate for GC"]
   },
   {
     "_id": "excel-gc-solvents-chloroform-for-gc",
@@ -2495,12 +2280,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Chloroform for GC | GCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Chloroform for GC: High purity，No residue peaks，Low boiling range. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Chloroform for GC",
-      "GCgradeChloroform(Chloroform)",
-      "GCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Chloroform for GC"]
   },
   {
     "_id": "excel-gc-solvents-petroleum-ether-for-gc",
@@ -2550,12 +2330,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Petroleum Ether for GC | GCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Petroleum Ether for GC: High purity，No residue peaks，Low boiling range. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Petroleum Ether for GC",
-      "GCgradePetroleum Ether",
-      "GCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Petroleum Ether for GC"]
   },
   {
     "_id": "excel-gc-solvents-cyclohexane-for-gc",
@@ -2605,12 +2380,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Cyclohexane for GC | GCChromatography Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Cyclohexane for GC: High purity，No residue peaks，Low boiling range. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Cyclohexane for GC",
-      "GCgradeCyclohexane",
-      "GCChromatography Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Cyclohexane for GC"]
   },
   {
     "_id": "excel-lcms-solvents-acetonitrile-for-lc-ms",
@@ -2660,12 +2430,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetonitrile for LC-MS | LC-MSgradelaboratory use | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetonitrile for LC-MS: Ultrapure grade，Ultra-low metal ions，Low residue. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Acetonitrile for LC-MS",
-      "LC-MSgradeAcetonitrile",
-      "LC-MSgradelaboratory use",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Acetonitrile for LC-MS"]
   },
   {
     "_id": "excel-lcms-solvents-methanol-for-lc-ms",
@@ -2715,12 +2480,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Methanol for LC-MS | LC-MSgradelaboratory use | LANCHROM™",
     "seoDescription": "LANCHROM™ Methanol for LC-MS: Ultrapure grade，Ultra-low metal ions，Low residue. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Methanol for LC-MS",
-      "LC-MSgradeMethanol",
-      "LC-MSgradelaboratory use",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Methanol for LC-MS"]
   },
   {
     "_id": "excel-lcms-solvents-ipa-for-lc-ms",
@@ -2770,12 +2530,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "IPA for LC-MS | LC-MSgradelaboratory use | LANCHROM™",
     "seoDescription": "LANCHROM™ IPA for LC-MS: Ultrapure grade，Ultra-low metal ions，Low residue. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "IPA for LC-MS",
-      "LC-MSgradeIsopropyl Alcohol(IPA)",
-      "LC-MSgradelaboratory use",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["IPA for LC-MS"]
   },
   {
     "_id": "excel-lcms-solvents-ultra-pure-water-for-lc-ms",
@@ -2825,12 +2580,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Ultra-Pure Water for LC-MS | LC-MSgradelaboratory use | LANCHROM™",
     "seoDescription": "LANCHROM™ Ultra-Pure Water for LC-MS: Ultrapure grade，laboratory use，Ultra-low ion content. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ultra-Pure Water for LC-MS",
-      "LC-MSgradeUltrapure water",
-      "LC-MSgradelaboratory use",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ultra-Pure Water for LC-MS"]
   },
   {
     "_id": "excel-lcms-solvents-formic-acid-0-1percent-for-lc-ms",
@@ -2879,12 +2629,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Formic Acid 0.1% for LC-MS | LC-MSgradelaboratory use | LANCHROM™",
     "seoDescription": "LANCHROM™ Formic Acid 0.1% for LC-MS: Ultrapure grade，Ultra-low metal ions，Low UV absorbance. Packaging: 500mL, 1L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Formic Acid 0.1% for LC-MS",
-      "LC-MSgradeFormic acid(0.1%)",
-      "LC-MSgradelaboratory use",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Formic Acid 0.1% for LC-MS"]
   },
   {
     "_id": "excel-lcms-solvents-ammonium-acetate-solution-for-lc-ms",
@@ -2933,12 +2678,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Ammonium Acetate Solution for LC-MS | LC-MSgradelaboratory use | LANCHROM™",
     "seoDescription": "LANCHROM™ Ammonium Acetate Solution for LC-MS: Ultrapure grade，Ultra-low metal ions，pHStable. Packaging: 500mL, 1L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ammonium Acetate Solution for LC-MS",
-      "LC-MSgradeAcetic acidlaboratory use",
-      "LC-MSgradelaboratory use",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ammonium Acetate Solution for LC-MS"]
   },
   {
     "_id": "excel-lcms-solvents-ammonium-formate-solution-for-lc-ms",
@@ -2987,12 +2727,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Ammonium Formate Solution for LC-MS | LC-MSgradelaboratory use | LANCHROM™",
     "seoDescription": "LANCHROM™ Ammonium Formate Solution for LC-MS: Ultrapure grade，Ultra-low metal ions，pHStable. Packaging: 500mL, 1L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ammonium Formate Solution for LC-MS",
-      "LC-MSgradeFormic acidlaboratory use",
-      "LC-MSgradelaboratory use",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ammonium Formate Solution for LC-MS"]
   },
   {
     "_id": "excel-lcms-solvents-ethanol-for-lc-ms",
@@ -3042,12 +2777,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Ethanol for LC-MS | LC-MSgradelaboratory use | LANCHROM™",
     "seoDescription": "LANCHROM™ Ethanol for LC-MS: Ultrapure grade，Ultra-low metal ions，Low residue. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ethanol for LC-MS",
-      "LC-MSgradeEthanol",
-      "LC-MSgradelaboratory use",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ethanol for LC-MS"]
   },
   {
     "_id": "excel-lcms-solvents-acetone-for-lc-ms",
@@ -3097,12 +2827,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetone for LC-MS | LC-MSgradelaboratory use | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetone for LC-MS: Ultrapure grade，Ultra-low metal ions，Low residue. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Acetone for LC-MS",
-      "LC-MSgradeAcetone",
-      "LC-MSgradelaboratory use",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Acetone for LC-MS"]
   },
   {
     "_id": "excel-trace-analysis-grade-nitric-acid-65percent-for-trace-analysis",
@@ -3152,12 +2877,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Nitric Acid 65% for Trace Analysis | Trace Analysis Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Nitric Acid 65% for Trace Analysis: Ultrapure grade，Ultra-low metal ions，Low residue. Packaging: 500mL, 1L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Nitric Acid 65% for Trace Analysis",
-      "Trace analysisgradelaboratory use(65%)",
-      "Trace Analysis Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Nitric Acid 65% for Trace Analysis"]
   },
   {
     "_id": "excel-trace-analysis-grade-hydrochloric-acid-37percent-for-trace-analysis",
@@ -3207,12 +2927,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Hydrochloric Acid 37% for Trace Analysis | Trace Analysis Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Hydrochloric Acid 37% for Trace Analysis: Ultrapure grade，Ultra-low metal ions，Low residue. Packaging: 500mL, 1L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Hydrochloric Acid 37% for Trace Analysis",
-      "Trace analysisgradelaboratory use(37%)",
-      "Trace Analysis Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Hydrochloric Acid 37% for Trace Analysis"]
   },
   {
     "_id": "excel-trace-analysis-grade-hydrofluoric-acid-for-trace-analysis",
@@ -3261,12 +2976,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Hydrofluoric Acid for Trace Analysis | Trace Analysis Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Hydrofluoric Acid for Trace Analysis: Ultrapure grade，Ultra-low metal ions，Low residue. Packaging: 500mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Hydrofluoric Acid for Trace Analysis",
-      "Trace analysisgradelaboratory use",
-      "Trace Analysis Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Hydrofluoric Acid for Trace Analysis"]
   },
   {
     "_id": "excel-trace-analysis-grade-hydrogen-peroxide-30percent-for-trace-analysis",
@@ -3316,12 +3026,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Hydrogen Peroxide 30% for Trace Analysis | Trace Analysis Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Hydrogen Peroxide 30% for Trace Analysis: Ultrapure grade，Ultra-low metal ions，Low residue. Packaging: 500mL, 1L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Hydrogen Peroxide 30% for Trace Analysis",
-      "Trace analysisgradelaboratory use(30%)",
-      "Trace Analysis Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Hydrogen Peroxide 30% for Trace Analysis"]
   },
   {
     "_id": "excel-trace-analysis-grade-acetonitrile-for-trace-analysis",
@@ -3372,12 +3077,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetonitrile for Trace Analysis | Trace Analysis Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetonitrile for Trace Analysis: Ultrapure grade，Ultra-low metal ions，Low residue. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Acetonitrile for Trace Analysis",
-      "Trace analysisgradeAcetonitrile",
-      "Trace Analysis Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Acetonitrile for Trace Analysis"]
   },
   {
     "_id": "excel-trace-analysis-grade-ultra-pure-water-for-trace-analysis",
@@ -3427,12 +3127,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Ultra-Pure Water for Trace Analysis | Trace Analysis Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Ultra-Pure Water for Trace Analysis: Ultrapure grade，laboratory use，Ultra-low ion content. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ultra-Pure Water for Trace Analysis",
-      "Trace analysisgradeUltrapure water",
-      "Trace Analysis Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ultra-Pure Water for Trace Analysis"]
   },
   {
     "_id": "excel-trace-analysis-grade-methanol-for-trace-analysis",
@@ -3483,12 +3178,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Methanol for Trace Analysis | Trace Analysis Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Methanol for Trace Analysis: Ultrapure grade，Ultra-low metal ions，Low residue. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Methanol for Trace Analysis",
-      "Trace analysisgradeMethanol",
-      "Trace Analysis Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Methanol for Trace Analysis"]
   },
   {
     "_id": "excel-trace-analysis-grade-ipa-for-trace-analysis",
@@ -3539,12 +3229,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "IPA for Trace Analysis | Trace Analysis Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ IPA for Trace Analysis: Ultrapure grade，Ultra-low metal ions，Low residue. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "IPA for Trace Analysis",
-      "Trace analysisgradeIsopropyl Alcohol(IPA)",
-      "Trace Analysis Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["IPA for Trace Analysis"]
   },
   {
     "_id": "excel-spectroscopic-solvents-acetonitrile-for-spectroscopy",
@@ -3594,12 +3279,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetonitrile for Spectroscopy | Spectroscopy Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetonitrile for Spectroscopy: Ultrapure grade，Extremely low UV absorbance，High transmittance. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Acetonitrile for Spectroscopy",
-      "laboratory useAcetonitrile",
-      "Spectroscopy Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Acetonitrile for Spectroscopy"]
   },
   {
     "_id": "excel-spectroscopic-solvents-methanol-for-spectroscopy",
@@ -3649,12 +3329,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Methanol for Spectroscopy | Spectroscopy Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Methanol for Spectroscopy: Ultrapure grade，Extremely low UV absorbance，High transmittance. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Methanol for Spectroscopy",
-      "laboratory useMethanol",
-      "Spectroscopy Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Methanol for Spectroscopy"]
   },
   {
     "_id": "excel-spectroscopic-solvents-n-hexane-for-spectroscopy",
@@ -3704,12 +3379,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "n-Hexane for Spectroscopy | Spectroscopy Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ n-Hexane for Spectroscopy: Ultrapure grade，Extremely low UV absorbance，High transmittance. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "n-Hexane for Spectroscopy",
-      "laboratory usen-Hexane",
-      "Spectroscopy Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["n-Hexane for Spectroscopy"]
   },
   {
     "_id": "excel-spectroscopic-solvents-dcm-for-spectroscopy",
@@ -3759,12 +3429,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "DCM for Spectroscopy | Spectroscopy Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ DCM for Spectroscopy: Ultrapure grade，Extremely low UV absorbance，High transmittance. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "DCM for Spectroscopy",
-      "laboratory useDichloromethane",
-      "Spectroscopy Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["DCM for Spectroscopy"]
   },
   {
     "_id": "excel-spectroscopic-solvents-chloroform-for-spectroscopy",
@@ -3814,12 +3479,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Chloroform for Spectroscopy | Spectroscopy Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Chloroform for Spectroscopy: Ultrapure grade，Extremely low UV absorbance，High transmittance. Packaging: 1L, 2.5L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Chloroform for Spectroscopy",
-      "laboratory useChloroform(Chloroform)",
-      "Spectroscopy Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Chloroform for Spectroscopy"]
   },
   {
     "_id": "excel-spectroscopic-solvents-ipa-for-spectroscopy",
@@ -3869,12 +3529,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "IPA for Spectroscopy | Spectroscopy Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ IPA for Spectroscopy: Ultrapure grade，Extremely low UV absorbance，High transmittance. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "IPA for Spectroscopy",
-      "laboratory useIsopropyl Alcohol(IPA)",
-      "Spectroscopy Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["IPA for Spectroscopy"]
   },
   {
     "_id": "excel-spectroscopic-solvents-ethanol-for-spectroscopy",
@@ -3924,12 +3579,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Ethanol for Spectroscopy | Spectroscopy Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Ethanol for Spectroscopy: Ultrapure grade，Extremely low UV absorbance，High transmittance. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ethanol for Spectroscopy",
-      "laboratory useEthanol",
-      "Spectroscopy Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ethanol for Spectroscopy"]
   },
   {
     "_id": "excel-spectroscopic-solvents-acetone-for-spectroscopy",
@@ -3979,12 +3629,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetone for Spectroscopy | Spectroscopy Grade Solvent | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetone for Spectroscopy: Ultrapure grade，Extremely low UV absorbance，High transmittance. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Acetone for Spectroscopy",
-      "laboratory useAcetone",
-      "Spectroscopy Grade Solvent",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Acetone for Spectroscopy"]
   },
   {
     "_id": "excel-mobile-phase-bags-0-1percent-formic-acid-aqueous-solution",
@@ -4035,12 +3680,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "0.1% Formic Acid Aqueous Solution | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ 0.1% Formic Acid Aqueous Solution: Ready to use，Sterile filtered，pHStable，laboratory use. Packaging: 5L, 7L, 10L, 20LAluminum composite bag(Nitrogen filled). Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "0.1% Formic Acid Aqueous Solution",
-      "0.1%Formic acidWaterlaboratory use",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["0.1% Formic Acid Aqueous Solution"]
   },
   {
     "_id": "excel-mobile-phase-bags-0-1percent-formic-acid-acetonitrile-solution",
@@ -4091,12 +3731,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "0.1% Formic Acid Acetonitrile Solution | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ 0.1% Formic Acid Acetonitrile Solution: Ready to use，Sterile filtered，Low impurities，laboratory use. Packaging: 5L, 7L, 10L, 20LAluminum composite bag(Nitrogen filled). Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "0.1% Formic Acid Acetonitrile Solution",
-      "0.1%Formic acidAcetonitrilelaboratory use",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["0.1% Formic Acid Acetonitrile Solution"]
   },
   {
     "_id": "excel-mobile-phase-bags-0-1percent-formic-acid-methanol-solution",
@@ -4147,12 +3782,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "0.1% Formic Acid Methanol Solution | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ 0.1% Formic Acid Methanol Solution: Ready to use，Sterile filtered，Low impurities，laboratory use. Packaging: 5L, 7L, 10L, 20LAluminum composite bag(Nitrogen filled). Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "0.1% Formic Acid Methanol Solution",
-      "0.1%Formic acidMethanollaboratory use",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["0.1% Formic Acid Methanol Solution"]
   },
   {
     "_id": "excel-mobile-phase-bags-0-1percent-acetic-acid-aqueous-solution",
@@ -4203,12 +3833,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "0.1% Acetic Acid Aqueous Solution | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ 0.1% Acetic Acid Aqueous Solution: Ready to use，Sterile filtered，pHStable，laboratory use. Packaging: 5L, 7L, 10L, 20LAluminum composite bag(Nitrogen filled). Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "0.1% Acetic Acid Aqueous Solution",
-      "0.1%Acetic acidWaterlaboratory use",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["0.1% Acetic Acid Aqueous Solution"]
   },
   {
     "_id": "excel-mobile-phase-bags-10mm-ammonium-acetate-aqueous-solution",
@@ -4260,12 +3885,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "10mM Ammonium Acetate Aqueous Solution | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ 10mM Ammonium Acetate Aqueous Solution: Ready to use，Sterile filtered，pHStable，Low ion content. Packaging: 5L, 7L, 10L, 20LAluminum composite bag(Nitrogen filled). Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "10mM Ammonium Acetate Aqueous Solution",
-      "10mMAcetic acidlaboratory useWaterlaboratory use",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["10mM Ammonium Acetate Aqueous Solution"]
   },
   {
     "_id": "excel-mobile-phase-bags-10mm-ammonium-formate-aqueous-solution",
@@ -4316,12 +3936,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "10mM Ammonium Formate Aqueous Solution | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ 10mM Ammonium Formate Aqueous Solution: Ready to use，Sterile filtered，pHStable，Low ion content. Packaging: 5L, 7L, 10L, 20LAluminum composite bag(Nitrogen filled). Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "10mM Ammonium Formate Aqueous Solution",
-      "10mMFormic acidlaboratory useWaterlaboratory use",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["10mM Ammonium Formate Aqueous Solution"]
   },
   {
     "_id": "excel-mobile-phase-bags-20mm-potassium-dihydrogen-phosphate-buffer",
@@ -4372,12 +3987,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "20mM Potassium Dihydrogen Phosphate Buffer | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ 20mM Potassium Dihydrogen Phosphate Buffer: Ready to use，Sterile filtered，pHStable，Low impurities. Packaging: 5L, 7L, 10L, 20LAluminum composite bag(Nitrogen filled). Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "20mM Potassium Dihydrogen Phosphate Buffer",
-      "20mMlaboratory use",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["20mM Potassium Dihydrogen Phosphate Buffer"]
   },
   {
     "_id": "excel-mobile-phase-bags-20mm-dipotassium-hydrogen-phosphate-buffer",
@@ -4428,12 +4038,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "20mM Dipotassium Hydrogen Phosphate Buffer | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ 20mM Dipotassium Hydrogen Phosphate Buffer: Ready to use，Sterile filtered，pHStable，Low impurities. Packaging: 5L, 7L, 10L, 20LAluminum composite bag(Nitrogen filled). Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "20mM Dipotassium Hydrogen Phosphate Buffer",
-      "20mMlaboratory use",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["20mM Dipotassium Hydrogen Phosphate Buffer"]
   },
   {
     "_id": "excel-mobile-phase-bags-0-005n-sulfuric-acid-aqueous-solution",
@@ -4484,12 +4089,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "0.005N Sulfuric Acid Aqueous Solution | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ 0.005N Sulfuric Acid Aqueous Solution: Ready to use，Sterile filtered，pHStable，Low impurities. Packaging: 5L, 7L, 10L, 20LAluminum composite bag(Nitrogen filled). Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "0.005N Sulfuric Acid Aqueous Solution",
-      "0.005Nlaboratory useWaterlaboratory use",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["0.005N Sulfuric Acid Aqueous Solution"]
   },
   {
     "_id": "excel-mobile-phase-bags-0-01n-sulfuric-acid-aqueous-solution",
@@ -4540,12 +4140,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "0.01N Sulfuric Acid Aqueous Solution | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ 0.01N Sulfuric Acid Aqueous Solution: Ready to use，Sterile filtered，pHStable，Low impurities. Packaging: 5L, 7L, 10L, 20LAluminum composite bag(Nitrogen filled). Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "0.01N Sulfuric Acid Aqueous Solution",
-      "0.01Nlaboratory useWaterlaboratory use",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["0.01N Sulfuric Acid Aqueous Solution"]
   },
   {
     "_id": "excel-mobile-phase-bags-0-1n-sulfuric-acid-aqueous-solution",
@@ -4596,12 +4191,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "0.1N Sulfuric Acid Aqueous Solution | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ 0.1N Sulfuric Acid Aqueous Solution: Ready to use，Sterile filtered，pHStable，Low impurities. Packaging: 5L, 7L, 10L, 20LAluminum composite bag(Nitrogen filled). Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "0.1N Sulfuric Acid Aqueous Solution",
-      "0.1Nlaboratory useWaterlaboratory use",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["0.1N Sulfuric Acid Aqueous Solution"]
   },
   {
     "_id": "excel-mobile-phase-bags-5mm-sulfuric-acid-aqueous-solution",
@@ -4653,12 +4243,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "5mM Sulfuric Acid Aqueous Solution | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ 5mM Sulfuric Acid Aqueous Solution: Ready to use，Sterile filtered，pHStable，Low impurities. Packaging: 5L, 7L, 10L, 20LAluminum composite bag(Nitrogen filled). Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "5mM Sulfuric Acid Aqueous Solution",
-      "5mMlaboratory useWaterlaboratory use",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["5mM Sulfuric Acid Aqueous Solution"]
   },
   {
     "_id": "excel-mobile-phase-bags-organic-acid-analysis-mobile-phase-kit",
@@ -4709,12 +4294,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Organic Acid Analysis Mobile Phase Kit | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ Organic Acid Analysis Mobile Phase Kit: Matched setAminex HPX-87HChromatography column，Ready to use，Includes method instructions. Packaging: 5L, 7L, 10L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Organic Acid Analysis Mobile Phase Kit",
-      "Organic acid analysisMobile phase kit",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Organic Acid Analysis Mobile Phase Kit"]
   },
   {
     "_id": "excel-mobile-phase-bags-sugar-analysis-mobile-phase-kit",
@@ -4765,12 +4345,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Sugar Analysis Mobile Phase Kit | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ Sugar Analysis Mobile Phase Kit: Matched setAminex HPX-87P/Ca²⁺laboratory use，Ready to use，Includes method instructions. Packaging: 5L, 7L, 10L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Sugar Analysis Mobile Phase Kit",
-      "SugarsAnalysisMobile phase kit",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Sugar Analysis Mobile Phase Kit"]
   },
   {
     "_id": "excel-mobile-phase-bags-acetonitrile-water-50-50-pharmacopeia-grade",
@@ -4819,12 +4394,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetonitrile/Water 50:50 Pharmacopeia Grade | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetonitrile/Water 50:50 Pharmacopeia Grade: Pharmacopeia grade，Sterile filtered，Low impurities，Compliant withUSP/EPStandard. Packaging: 5L, 10L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Acetonitrile/Water 50:50 Pharmacopeia Grade",
-      "Acetonitrile/Water(50:50)Pharmacopeia grade",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Acetonitrile/Water 50:50 Pharmacopeia Grade"]
   },
   {
     "_id": "excel-mobile-phase-bags-methanol-water-70-30-pharmacopeia-grade",
@@ -4873,12 +4443,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Methanol/Water 70:30 Pharmacopeia Grade | Ready-to-Use Mobile Phase Bags | LANCHROM™",
     "seoDescription": "LANCHROM™ Methanol/Water 70:30 Pharmacopeia Grade: Pharmacopeia grade，Sterile filtered，Low impurities，Compliant withUSP/EPStandard. Packaging: 5L, 10L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Methanol/Water 70:30 Pharmacopeia Grade",
-      "Methanol/Water(70:30)Pharmacopeia grade",
-      "Ready-to-Use Mobile Phase Bags",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Methanol/Water 70:30 Pharmacopeia Grade"]
   },
   {
     "_id": "excel-standard-solutions-icp-multi-element-mixed-standard-solution-23-elements",
@@ -4929,12 +4494,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "ICP Multi-Element Mixed Standard Solution (23 Elements) | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ ICP Multi-Element Mixed Standard Solution (23 Elements): Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 100mL, 500mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "ICP Multi-Element Mixed Standard Solution (23 Elements)",
-      "ICPlaboratory useStandardlaboratory use(23laboratory use)",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["ICP Multi-Element Mixed Standard Solution (23 Elements)"]
   },
   {
     "_id": "excel-standard-solutions-icp-single-element-standard-solution-full-series-70-elements",
@@ -4982,12 +4542,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "ICP Single Element Standard Solution (Full Series 70 Elements) | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ ICP Single Element Standard Solution (Full Series 70 Elements): Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 100mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "ICP Single Element Standard Solution (Full Series 70 Elements)",
-      "ICPlaboratory useStandardlaboratory use(Full range70laboratory use)",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["ICP Single Element Standard Solution (Full Series 70 Elements)"]
   },
   {
     "_id": "excel-standard-solutions-aas-standard-solution-full-series",
@@ -5035,12 +4590,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "AAS Standard Solution (Full Series) | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ AAS Standard Solution (Full Series): Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 100mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "AAS Standard Solution (Full Series)",
-      "AASlaboratory useStandardlaboratory use(Full range)",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["AAS Standard Solution (Full Series)"]
   },
   {
     "_id": "excel-standard-solutions-aas-concentrated-standard-solution",
@@ -5088,12 +4638,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "AAS Concentrated Standard Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ AAS Concentrated Standard Solution: High concentration，Good stability，Can be diluted for use. Packaging: 50mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "AAS Concentrated Standard Solution",
-      "laboratory useStandardlaboratory use",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["AAS Concentrated Standard Solution"]
   },
   {
     "_id": "excel-standard-solutions-anion-and-cation-standard-solution",
@@ -5141,12 +4686,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Anion and Cation Standard Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ Anion and Cation Standard Solution: Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 100mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Anion and Cation Standard Solution",
-      "laboratory useStandard solution",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Anion and Cation Standard Solution"]
   },
   {
     "_id": "excel-standard-solutions-ph-4-00-standard-buffer-solution",
@@ -5195,12 +4735,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "pH 4.00 Standard Buffer Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ pH 4.00 Standard Buffer Solution: Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 250mL, 500mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "pH 4.00 Standard Buffer Solution",
-      "pH 4.00Standard buffer solution",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["pH 4.00 Standard Buffer Solution"]
   },
   {
     "_id": "excel-standard-solutions-ph-6-86-standard-buffer-solution",
@@ -5249,12 +4784,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "pH 6.86 Standard Buffer Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ pH 6.86 Standard Buffer Solution: Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 250mL, 500mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "pH 6.86 Standard Buffer Solution",
-      "pH 6.86Standard buffer solution",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["pH 6.86 Standard Buffer Solution"]
   },
   {
     "_id": "excel-standard-solutions-ph-7-00-standard-buffer-solution",
@@ -5303,12 +4833,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "pH 7.00 Standard Buffer Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ pH 7.00 Standard Buffer Solution: Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 250mL, 500mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "pH 7.00 Standard Buffer Solution",
-      "pH 7.00Standard buffer solution",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["pH 7.00 Standard Buffer Solution"]
   },
   {
     "_id": "excel-standard-solutions-ph-9-18-standard-buffer-solution",
@@ -5357,12 +4882,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "pH 9.18 Standard Buffer Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ pH 9.18 Standard Buffer Solution: Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 250mL, 500mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "pH 9.18 Standard Buffer Solution",
-      "pH 9.18Standard buffer solution",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["pH 9.18 Standard Buffer Solution"]
   },
   {
     "_id": "excel-standard-solutions-ph-10-01-standard-buffer-solution",
@@ -5411,12 +4931,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "pH 10.01 Standard Buffer Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ pH 10.01 Standard Buffer Solution: Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 250mL, 500mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "pH 10.01 Standard Buffer Solution",
-      "pH 10.01Standard buffer solution",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["pH 10.01 Standard Buffer Solution"]
   },
   {
     "_id": "excel-standard-solutions-conductivity-standard-solution",
@@ -5464,12 +4979,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Conductivity Standard Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ Conductivity Standard Solution: Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 250mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Conductivity Standard Solution",
-      "laboratory useStandard solution",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Conductivity Standard Solution"]
   },
   {
     "_id": "excel-standard-solutions-naoh-standard-solution",
@@ -5518,12 +5028,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "NaOH Standard Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ NaOH Standard Solution: Traceable to primary reference material，Accurate certified value，Good stability. Packaging: 500mL, 1L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "NaOH Standard Solution",
-      "NaOHStandard solution",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["NaOH Standard Solution"]
   },
   {
     "_id": "excel-standard-solutions-hcl-standard-solution",
@@ -5572,12 +5077,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "HCl Standard Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ HCl Standard Solution: Traceable to primary reference material，Accurate certified value，Good stability. Packaging: 500mL, 1L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "HCl Standard Solution",
-      "HClStandard solution",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["HCl Standard Solution"]
   },
   {
     "_id": "excel-standard-solutions-h2so4-standard-solution",
@@ -5626,12 +5126,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "H₂SO₄ Standard Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ H₂SO₄ Standard Solution: Traceable to primary reference material，Accurate certified value，Good stability. Packaging: 500mL, 1L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "H₂SO₄ Standard Solution",
-      "H₂SO₄Standard solution",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["H₂SO₄ Standard Solution"]
   },
   {
     "_id": "excel-standard-solutions-edta-standard-solution",
@@ -5679,12 +5174,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "EDTA Standard Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ EDTA Standard Solution: Traceable to primary reference material，Accurate certified value，Good stability. Packaging: 500mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "EDTA Standard Solution",
-      "EDTAStandard solution",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["EDTA Standard Solution"]
   },
   {
     "_id": "excel-standard-solutions-kmno4-standard-solution",
@@ -5732,12 +5222,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "KMnO₄ Standard Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ KMnO₄ Standard Solution: Traceable to primary reference material，Accurate certified value，Good stability. Packaging: 500mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "KMnO₄ Standard Solution",
-      "KMnO₄Standard solution",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["KMnO₄ Standard Solution"]
   },
   {
     "_id": "excel-standard-solutions-agno3-standard-solution",
@@ -5786,12 +5271,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "AgNO₃ Standard Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ AgNO₃ Standard Solution: Traceable to primary reference material，Accurate certified value，Good stability. Packaging: 250mL, 500mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "AgNO₃ Standard Solution",
-      "AgNO₃Standard solution",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["AgNO₃ Standard Solution"]
   },
   {
     "_id": "excel-standard-solutions-potassium-dichromate-primary-standard",
@@ -5841,12 +5321,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Potassium Dichromate Primary Standard | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ Potassium Dichromate Primary Standard: Primary reference material，Purity≥99.95%，Traceable toNIST. Packaging: 25g, 100g. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Potassium Dichromate Primary Standard",
-      "laboratory use",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Potassium Dichromate Primary Standard"]
   },
   {
     "_id": "excel-standard-solutions-sodium-oxalate-primary-standard",
@@ -5896,12 +5371,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Sodium Oxalate Primary Standard | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ Sodium Oxalate Primary Standard: Primary reference material，Purity≥99.95%，Traceable toNIST. Packaging: 25g, 100g. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Sodium Oxalate Primary Standard",
-      "laboratory use",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Sodium Oxalate Primary Standard"]
   },
   {
     "_id": "excel-standard-solutions-sodium-carbonate-primary-standard",
@@ -5951,12 +5421,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Sodium Carbonate Primary Standard | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ Sodium Carbonate Primary Standard: Primary reference material，Purity≥99.95%，Traceable toNIST. Packaging: 25g, 100g. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Sodium Carbonate Primary Standard",
-      "laboratory use",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Sodium Carbonate Primary Standard"]
   },
   {
     "_id": "excel-standard-solutions-uv-vis-wavelength-calibration-solution",
@@ -6004,12 +5469,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "UV-VIS Wavelength Calibration Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ UV-VIS Wavelength Calibration Solution: Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 100mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "UV-VIS Wavelength Calibration Solution",
-      "UV-VISlaboratory use",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["UV-VIS Wavelength Calibration Solution"]
   },
   {
     "_id": "excel-standard-solutions-uv-vis-absorbance-standard-solution",
@@ -6057,12 +5517,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "UV-VIS Absorbance Standard Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ UV-VIS Absorbance Standard Solution: Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 100mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "UV-VIS Absorbance Standard Solution",
-      "UV-VISlaboratory useStandardlaboratory use",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["UV-VIS Absorbance Standard Solution"]
   },
   {
     "_id": "excel-standard-solutions-color-standard-solution-platinum-cobalt-series",
@@ -6110,12 +5565,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Color Standard Solution (Platinum-Cobalt Series) | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ Color Standard Solution (Platinum-Cobalt Series): Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 100mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Color Standard Solution (Platinum-Cobalt Series)",
-      "laboratory useStandard solution(laboratory use-laboratory use)",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Color Standard Solution (Platinum-Cobalt Series)"]
   },
   {
     "_id": "excel-standard-solutions-turbidity-standard-solution",
@@ -6163,12 +5613,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Turbidity Standard Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ Turbidity Standard Solution: Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 100mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Turbidity Standard Solution",
-      "laboratory useStandardlaboratory use",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Turbidity Standard Solution"]
   },
   {
     "_id": "excel-standard-solutions-toc-standard-solution",
@@ -6218,12 +5663,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "TOC Standard Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ TOC Standard Solution: Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 100mL, 500mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "TOC Standard Solution",
-      "TOCStandard solution",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["TOC Standard Solution"]
   },
   {
     "_id": "excel-standard-solutions-refractive-index-standard-solution",
@@ -6271,12 +5711,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Refractive Index Standard Solution | Standard Solutions and Reference Materials | LANCHROM™",
     "seoDescription": "LANCHROM™ Refractive Index Standard Solution: Traceable toNISTStandard，Accurate certified value，Good stability. Packaging: 50mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Refractive Index Standard Solution",
-      "laboratory useStandardlaboratory use",
-      "Standard Solutions and Reference Materials",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Refractive Index Standard Solution"]
   },
   {
     "_id": "excel-reagent-kits-hplc",
@@ -6324,12 +5759,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "HPLCMobile phase starter kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ HPLCMobile phase starter kit: One-stopHPLCMobile phase starter kit，Includes commonly used reagents. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "HPLCMobile phase starter kit",
-      "HPLC Mobile Phase Starter Kit",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["HPLCMobile phase starter kit"]
   },
   {
     "_id": "excel-reagent-kits-lc-ms",
@@ -6378,12 +5808,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "LC-MSMobile phase kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ LC-MSMobile phase kit: One-stopLC-MSMobile phase kit，Includes commonly used reagents. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "LC-MSMobile phase kit",
-      "LC-MS Mobile Phase Kit",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["LC-MSMobile phase kit"]
   },
   {
     "_id": "excel-reagent-kits-organic-acid-detection-7l-bag-kit",
@@ -6432,12 +5857,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Organic Acid Detection 7L Bag Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Organic Acid Detection 7L Bag Kit: Ready to useOrganic acidslaboratory usesetlaboratory use，Matched setChromatography columnlaboratory use. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Organic Acid Detection 7L Bag Kit",
-      "Organic acidslaboratory use7Llaboratory usepacksetlaboratory use",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Organic Acid Detection 7L Bag Kit"]
   },
   {
     "_id": "excel-reagent-kits-sugar-plus-organic-acid-full-analysis-kit",
@@ -6485,12 +5905,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Sugar + Organic Acid Full Analysis Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Sugar + Organic Acid Full Analysis Kit: One-stopSugarslaboratory useOrganic acidslaboratory useAnalysis kit，ContainsStandardlaboratory use. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Sugar + Organic Acid Full Analysis Kit",
-      "Sugars+Organic acidslaboratory useAnalysis kit",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Sugar + Organic Acid Full Analysis Kit"]
   },
   {
     "_id": "excel-reagent-kits-pesticide-residue-detection-solvent-kit",
@@ -6538,12 +5953,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Pesticide Residue Detection Solvent Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Pesticide Residue Detection Solvent Kit: One-stopPesticide residue testinglaboratory usesetlaboratory use，Containslaboratory use. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Pesticide Residue Detection Solvent Kit",
-      "Pesticide residue testinglaboratory usesetlaboratory use",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Pesticide Residue Detection Solvent Kit"]
   },
   {
     "_id": "excel-reagent-kits-tlc-analysis-kit",
@@ -6592,12 +6002,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "TLC Analysis Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ TLC Analysis Kit: One-stopTLCAnalysis kit，Containslaboratory use. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "TLC Analysis Kit",
-      "TLCAnalysis kit",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["TLC Analysis Kit"]
   },
   {
     "_id": "excel-reagent-kits-trace-metal-analysis-kit",
@@ -6646,12 +6051,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Trace Metal Analysis Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Trace Metal Analysis Kit: One-stoplaboratory useAnalysis kit，Containslaboratory use. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Trace Metal Analysis Kit",
-      "laboratory useAnalysis kit",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Trace Metal Analysis Kit"]
   },
   {
     "_id": "excel-reagent-kits-karl-fischer-moisture-determination-kit",
@@ -6699,12 +6099,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Karl Fischer Moisture Determination Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Karl Fischer Moisture Determination Kit: One-stopMoisture determinationsetlaboratory use，Containslaboratory useStandardlaboratory use. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Karl Fischer Moisture Determination Kit",
-      "Karl FischerMoisture determinationsetlaboratory use",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Karl Fischer Moisture Determination Kit"]
   },
   {
     "_id": "excel-reagent-kits-dmso",
@@ -6753,12 +6148,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Cell cryopreservation kit (DMSO) | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Cell cryopreservation kit (DMSO): GMPgradeCell cryopreservation kit，Sterile and endotoxin-controlled. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Cell cryopreservation kit (DMSO)",
-      "Cell Cryopreservation Kit (DMSO)",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Cell cryopreservation kit (DMSO)"]
   },
   {
     "_id": "excel-reagent-kits-car-t-process-grade-cryopreservation-kit",
@@ -6806,12 +6196,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "CAR-T Process Grade Cryopreservation Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ CAR-T Process Grade Cryopreservation Kit: cGMPgradeCAR-TCell cryopreservation kit，Sterile and endotoxin-controlled. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "CAR-T Process Grade Cryopreservation Kit",
-      "CAR-Tlaboratory usegradelaboratory usesetlaboratory use",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["CAR-T Process Grade Cryopreservation Kit"]
   },
   {
     "_id": "excel-reagent-kits-pbmc-cryopreservation-kit",
@@ -6860,12 +6245,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "PBMC Cryopreservation Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ PBMC Cryopreservation Kit: One-stopPBMCCell cryopreservation kit，Sterile and endotoxin-controlled. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "PBMC Cryopreservation Kit",
-      "PBMClaboratory usebox",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["PBMC Cryopreservation Kit"]
   },
   {
     "_id": "excel-reagent-kits-product",
@@ -6913,12 +6293,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Cell washing solvent kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Cell washing solvent kit: One-stoplaboratory useDisinfectionsetlaboratory use，Sterile and endotoxin-controlled. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Cell washing solvent kit",
-      "Cell Washing Solvent Kit",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Cell washing solvent kit"]
   },
   {
     "_id": "excel-reagent-kits-pcr-pathogen-rapid-detection-kit",
@@ -6968,12 +6343,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "PCR Pathogen Rapid Detection Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ PCR Pathogen Rapid Detection Kit: laboratory usePCRlaboratory use，laboratory use，laboratory use. Packaging: 48T/96T. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "PCR Pathogen Rapid Detection Kit",
-      "PCRlaboratory usebox",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["PCR Pathogen Rapid Detection Kit"]
   },
   {
     "_id": "excel-reagent-kits-food-microbiology-comprehensive-detection-kit",
@@ -7021,12 +6391,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Food Microbiology Comprehensive Detection Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Food Microbiology Comprehensive Detection Kit: One-stopFoodlaboratory useBiologylaboratory use，Easy to use. Packaging: 48T. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Food Microbiology Comprehensive Detection Kit",
-      "Foodlaboratory useBiologylaboratory usebox",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Food Microbiology Comprehensive Detection Kit"]
   },
   {
     "_id": "excel-reagent-kits-gmp-clean-room-environmental-monitoring-kit",
@@ -7075,12 +6440,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "GMP Clean Room Environmental Monitoring Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ GMP Clean Room Environmental Monitoring Kit: Compliant withGMPrequirementslaboratory useEnvironmentallaboratory usesetlaboratory use. Packaging: 30dish/set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "GMP Clean Room Environmental Monitoring Kit",
-      "GMPlaboratory useEnvironmentallaboratory usesetlaboratory use",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["GMP Clean Room Environmental Monitoring Kit"]
   },
   {
     "_id": "excel-reagent-kits-atp-fluorescence-hygiene-rapid-detection-kit",
@@ -7130,12 +6490,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "ATP Fluorescence Hygiene Rapid Detection Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ ATP Fluorescence Hygiene Rapid Detection Kit: Rapid hygiene testing，10minute results. Packaging: 50piece/box. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "ATP Fluorescence Hygiene Rapid Detection Kit",
-      "ATPlaboratory usebox",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["ATP Fluorescence Hygiene Rapid Detection Kit"]
   },
   {
     "_id": "excel-reagent-kits-water-microbiology-detection-kit",
@@ -7183,12 +6538,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Water Microbiology Detection Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Water Microbiology Detection Kit: One-stopWaterlaboratory useBiologylaboratory use，Easy to use. Packaging: 24T. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Water Microbiology Detection Kit",
-      "Waterlaboratory useBiologylaboratory usesetlaboratory use",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Water Microbiology Detection Kit"]
   },
   {
     "_id": "excel-reagent-kits-lactic-acid-fermentation-process-monitoring-kit",
@@ -7236,12 +6586,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Lactic Acid Fermentation Process Monitoring Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Lactic Acid Fermentation Process Monitoring Kit: One-stoplaboratory use，Includes test method and reagents. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Lactic Acid Fermentation Process Monitoring Kit",
-      "laboratory usesetlaboratory use",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Lactic Acid Fermentation Process Monitoring Kit"]
   },
   {
     "_id": "excel-reagent-kits-liquor-fermentation-analysis-kit",
@@ -7289,12 +6634,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Liquor Fermentation Analysis Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Liquor Fermentation Analysis Kit: One-stoplaboratory useAnalysis，Includes test method and reagents. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Liquor Fermentation Analysis Kit",
-      "laboratory use/laboratory useAnalysis kit",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Liquor Fermentation Analysis Kit"]
   },
   {
     "_id": "excel-reagent-kits-wine-analysis-full-kit",
@@ -7342,12 +6682,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Wine Analysis Full Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Wine Analysis Full Kit: One-stoplaboratory useAnalysis，Includes test method and reagents. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Wine Analysis Full Kit",
-      "laboratory useAnalysislaboratory usesetlaboratory usebox",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Wine Analysis Full Kit"]
   },
   {
     "_id": "excel-reagent-kits-dairy-fermentation-quality-control-kit",
@@ -7395,12 +6730,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Dairy Fermentation Quality Control Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Dairy Fermentation Quality Control Kit: One-stoplaboratory use，Includes test method and reagents. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Dairy Fermentation Quality Control Kit",
-      "laboratory usesetlaboratory use",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Dairy Fermentation Quality Control Kit"]
   },
   {
     "_id": "excel-reagent-kits-bioethanol-fermentation-kit",
@@ -7448,12 +6778,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Bioethanol Fermentation Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Bioethanol Fermentation Kit: One-stopBiologyEthanollaboratory useAnalysis，Includes test method and reagents. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Bioethanol Fermentation Kit",
-      "BiologyEthanollaboratory usesetlaboratory use",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Bioethanol Fermentation Kit"]
   },
   {
     "_id": "excel-reagent-kits-amino-acid-fermentation-analysis-kit",
@@ -7501,12 +6826,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Amino Acid Fermentation Analysis Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Amino Acid Fermentation Analysis Kit: One-stoplaboratory useAnalysis，Includes test method and reagents. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Amino Acid Fermentation Analysis Kit",
-      "laboratory useAnalysis kit",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Amino Acid Fermentation Analysis Kit"]
   },
   {
     "_id": "excel-reagent-kits-pha-phb-biomaterial-detection-kit",
@@ -7554,12 +6874,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "PHA/PHB Biomaterial Detection Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ PHA/PHB Biomaterial Detection Kit: One-stopBiologylaboratory use，Includes test method and reagents. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "PHA/PHB Biomaterial Detection Kit",
-      "PHA/PHBBiologylaboratory usesetlaboratory use",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["PHA/PHB Biomaterial Detection Kit"]
   },
   {
     "_id": "excel-reagent-kits-gmp",
@@ -7607,12 +6922,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "GMPDisinfection solvent kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ GMPDisinfection solvent kit: Compliant withGMPrequirementslaboratory useDisinfection solvent kit，Sterile and endotoxin-controlled. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "GMPDisinfection solvent kit",
-      "GMP Disinfection Solvent Kit",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["GMPDisinfection solvent kit"]
   },
   {
     "_id": "excel-reagent-kits-injection-solvent-kit",
@@ -7660,12 +6970,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Injection Solvent Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Injection Solvent Kit: USPgradelaboratory usesetlaboratory use，Sterile and endotoxin-controlled. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Injection Solvent Kit",
-      "laboratory usesetlaboratory use",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Injection Solvent Kit"]
   },
   {
     "_id": "excel-reagent-kits-plant-extraction-solvent-kit",
@@ -7714,12 +7019,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Plant Extraction Solvent Kit | Reagent Kits and Custom Sets | LANCHROM™",
     "seoDescription": "LANCHROM™ Plant Extraction Solvent Kit: One-stoplaboratory usesetlaboratory use，High purity. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Plant Extraction Solvent Kit",
-      "laboratory usesetlaboratory use",
-      "Reagent Kits and Custom Sets",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Plant Extraction Solvent Kit"]
   },
   {
     "_id": "excel-tlc-products-silica-g-tlc-plate-general",
@@ -7768,12 +7068,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Silica G TLC Plate (General) | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Silica G TLC Plate (General): laboratory useGplate，laboratory use，laboratory use. Packaging: 10piece/pack. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Silica G TLC Plate (General)",
-      "laboratory useG TLCplate(laboratory use)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Silica G TLC Plate (General)"]
   },
   {
     "_id": "excel-tlc-products-high-performance-hptlc-plate",
@@ -7822,12 +7117,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "High Performance HPTLC Plate | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ High Performance HPTLC Plate: laboratory useplate，laboratory use，laboratory use. Packaging: 10piece/pack. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "High Performance HPTLC Plate",
-      "laboratory useHPTLCplate",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["High Performance HPTLC Plate"]
   },
   {
     "_id": "excel-tlc-products-reversed-phase-c18-tlc-plate",
@@ -7876,12 +7166,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Reversed Phase C18 TLC Plate | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Reversed Phase C18 TLC Plate: Reversed phaseC18plate，laboratory use. Packaging: 10piece/pack. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Reversed Phase C18 TLC Plate",
-      "Reversed phaseC18 TLCplate",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Reversed Phase C18 TLC Plate"]
   },
   {
     "_id": "excel-tlc-products-cellulose-tlc-plate",
@@ -7931,12 +7216,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Cellulose TLC Plate | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Cellulose TLC Plate: laboratory useplate，laboratory useSugarslaboratory use. Packaging: 10piece/pack. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Cellulose TLC Plate",
-      "laboratory useTLCplate",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Cellulose TLC Plate"]
   },
   {
     "_id": "excel-tlc-products-alumina-tlc-plate",
@@ -7985,12 +7265,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Alumina TLC Plate | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Alumina TLC Plate: laboratory useplate，laboratory use. Packaging: 10piece/pack. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Alumina TLC Plate",
-      "laboratory useTLCplate",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Alumina TLC Plate"]
   },
   {
     "_id": "excel-tlc-products-preparative-plc-plate-thick-plate",
@@ -8039,12 +7314,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Preparative PLC Plate (Thick Plate) | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Preparative PLC Plate (Thick Plate): laboratory useplate，laboratory use. Packaging: 5piece/pack. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Preparative PLC Plate (Thick Plate)",
-      "laboratory usePLCplate(laboratory useplate)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Preparative PLC Plate (Thick Plate)"]
   },
   {
     "_id": "excel-tlc-products-tlc-developing-chamber-glass-double-tank",
@@ -8092,12 +7362,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "TLC Developing Chamber (Glass) Double Tank | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ TLC Developing Chamber (Glass) Double Tank: laboratory use，laboratory use20×20cm TLCplate. Packaging: 1laboratory use. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "TLC Developing Chamber (Glass) Double Tank",
-      "TLClaboratory use(laboratory use)laboratory use",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["TLC Developing Chamber (Glass) Double Tank"]
   },
   {
     "_id": "excel-tlc-products-tlc-visualization-reagent-kit",
@@ -8145,12 +7410,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "TLC Visualization Reagent Kit | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ TLC Visualization Reagent Kit: One-stoplaboratory usesetlaboratory use，Containslaboratory use. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "TLC Visualization Reagent Kit",
-      "TLClaboratory usesetlaboratory use",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["TLC Visualization Reagent Kit"]
   },
   {
     "_id": "excel-tlc-products-c18-spe-cartridge",
@@ -8200,12 +7460,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "C18 SPE Cartridge | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ C18 SPE Cartridge: Reversed phaseC18SPE cartridge，laboratory use. Packaging: 50piece/box. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "C18 SPE Cartridge",
-      "C18 SPESPE cartridge",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["C18 SPE Cartridge"]
   },
   {
     "_id": "excel-tlc-products-c8-spe-cartridge",
@@ -8254,12 +7509,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "C8 SPE Cartridge | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ C8 SPE Cartridge: C8SPE cartridge，laboratory use. Packaging: 50piece/box. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "C8 SPE Cartridge",
-      "C8 SPESPE cartridge",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["C8 SPE Cartridge"]
   },
   {
     "_id": "excel-tlc-products-nh2-spe-cartridge",
@@ -8309,12 +7559,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "NH₂ SPE Cartridge | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ NH₂ SPE Cartridge: laboratory useSPE cartridge，laboratory useOrganic acidslaboratory useSugarslaboratory use. Packaging: 50piece/box. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "NH₂ SPE Cartridge",
-      "NH₂ SPESPE cartridge",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["NH₂ SPE Cartridge"]
   },
   {
     "_id": "excel-tlc-products-sax-strong-anion-spe",
@@ -8363,12 +7608,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "SAX Strong Anion SPE | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ SAX Strong Anion SPE: laboratory useSPE cartridge，laboratory use. Packaging: 50piece/box. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "SAX Strong Anion SPE",
-      "SAXlaboratory useSPE",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["SAX Strong Anion SPE"]
   },
   {
     "_id": "excel-tlc-products-scx-strong-cation-spe",
@@ -8417,12 +7657,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "SCX Strong Cation SPE | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ SCX Strong Cation SPE: laboratory useSPE cartridge，laboratory use. Packaging: 50piece/box. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "SCX Strong Cation SPE",
-      "SCXlaboratory useSPE",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["SCX Strong Cation SPE"]
   },
   {
     "_id": "excel-tlc-products-hlb-hydrophilic-lipophilic-balance-spe",
@@ -8471,12 +7706,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "HLB Hydrophilic-Lipophilic Balance SPE | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ HLB Hydrophilic-Lipophilic Balance SPE: HLBSPE cartridge，laboratory use，laboratory use. Packaging: 50piece/box. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "HLB Hydrophilic-Lipophilic Balance SPE",
-      "HLBlaboratory useWaterlaboratory useSPE",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["HLB Hydrophilic-Lipophilic Balance SPE"]
   },
   {
     "_id": "excel-tlc-products-max-mixed-anion-spe",
@@ -8525,12 +7755,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "MAX Mixed Anion SPE | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ MAX Mixed Anion SPE: laboratory useSPE cartridge，laboratory use. Packaging: 50piece/box. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "MAX Mixed Anion SPE",
-      "MAXlaboratory useSPE",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["MAX Mixed Anion SPE"]
   },
   {
     "_id": "excel-tlc-products-mcx-mixed-cation-spe",
@@ -8579,12 +7804,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "MCX Mixed Cation SPE | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ MCX Mixed Cation SPE: laboratory useSPE cartridge，laboratory use. Packaging: 50piece/box. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "MCX Mixed Cation SPE",
-      "MCXlaboratory useSPE",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["MCX Mixed Cation SPE"]
   },
   {
     "_id": "excel-tlc-products-quechers-cleanup-salt-packet",
@@ -8633,12 +7853,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "QuEChERS Cleanup Salt Packet | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ QuEChERS Cleanup Salt Packet: QuEChERSCleanup salt packet，laboratory usePesticide residue testinglaboratory use. Packaging: 50piece/box. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "QuEChERS Cleanup Salt Packet",
-      "QuEChERSCleanup salt packet",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["QuEChERS Cleanup Salt Packet"]
   },
   {
     "_id": "excel-tlc-products-immunoaffinity-column-aflatoxin",
@@ -8687,12 +7902,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Immunoaffinity Column (Aflatoxin) | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Immunoaffinity Column (Aflatoxin): Immunoaffinity column，laboratory use. Packaging: 20piece/box. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Immunoaffinity Column (Aflatoxin)",
-      "Immunoaffinity column(laboratory use)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Immunoaffinity Column (Aflatoxin)"]
   },
   {
     "_id": "excel-tlc-products-volumetric-karl-fischer-reagent-single-component",
@@ -8741,12 +7951,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Volumetric Karl Fischer Reagent (Single Component) | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Volumetric Karl Fischer Reagent (Single Component): laboratory use，Stablelaboratory use. Packaging: 500mL, 1L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Volumetric Karl Fischer Reagent (Single Component)",
-      "laboratory use(laboratory use)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Volumetric Karl Fischer Reagent (Single Component)"]
   },
   {
     "_id": "excel-tlc-products-volumetric-karl-fischer-reagent-two-component",
@@ -8794,12 +7999,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Volumetric Karl Fischer Reagent (Two Component) | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Volumetric Karl Fischer Reagent (Two Component): laboratory use，laboratory use. Packaging: 500mL × 2. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Volumetric Karl Fischer Reagent (Two Component)",
-      "laboratory use(laboratory use)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Volumetric Karl Fischer Reagent (Two Component)"]
   },
   {
     "_id": "excel-tlc-products-coulometric-karl-fischer-anolyte",
@@ -8847,12 +8047,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Coulometric Karl Fischer Anolyte | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Coulometric Karl Fischer Anolyte: laboratory use，Suitable for trace moisture determination. Packaging: 500mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Coulometric Karl Fischer Anolyte",
-      "laboratory use",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Coulometric Karl Fischer Anolyte"]
   },
   {
     "_id": "excel-tlc-products-coulometric-karl-fischer-catholyte",
@@ -8900,12 +8095,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Coulometric Karl Fischer Catholyte | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Coulometric Karl Fischer Catholyte: laboratory use，Suitable for trace moisture determination. Packaging: 250mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Coulometric Karl Fischer Catholyte",
-      "laboratory use",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Coulometric Karl Fischer Catholyte"]
   },
   {
     "_id": "excel-tlc-products-water-standard-solution-1-0mg-g",
@@ -8953,12 +8143,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Water Standard Solution (1.0mg/g) | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Water Standard Solution (1.0mg/g): Traceable toNISTStandard，Accurate certified value. Packaging: 10mL × 5piece. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Water Standard Solution (1.0mg/g)",
-      "WaterStandard solution(1.0mg/g)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Water Standard Solution (1.0mg/g)"]
   },
   {
     "_id": "excel-tlc-products-methanol-kf-grade-anhydrous",
@@ -9007,12 +8192,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Methanol (KF Grade, Anhydrous) | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Methanol (KF Grade, Anhydrous): KFgradeAnhydrousMethanol，Low water content，laboratory useSample dissolution. Packaging: 1L, 4L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Methanol (KF Grade, Anhydrous)",
-      "Methanol(KFgrade，Anhydrous)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Methanol (KF Grade, Anhydrous)"]
   },
   {
     "_id": "excel-tlc-products-chloroform-d-cdcl3",
@@ -9062,12 +8242,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Chloroform-d (CDCl₃) | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Chloroform-d (CDCl₃): High deuteration，laboratory useNMRlaboratory use，ContainsTMSlaboratory use. Packaging: 0.75mL × 10piece, 25mL, 100mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Chloroform-d (CDCl₃)",
-      "laboratory useChloroform(CDCl₃)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Chloroform-d (CDCl₃)"]
   },
   {
     "_id": "excel-tlc-products-dmso-d6",
@@ -9116,12 +8291,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "DMSO-d6 | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ DMSO-d6: High deuteration，laboratory useAnalysis. Packaging: 0.75mL × 10piece, 25mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "DMSO-d6",
-      "laboratory useDMSO(DMSO-d6)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["DMSO-d6"]
   },
   {
     "_id": "excel-tlc-products-deuterium-oxide-d2o",
@@ -9171,12 +8341,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Deuterium Oxide (D₂O) | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Deuterium Oxide (D₂O): High deuteration，laboratory useWaterlaboratory useAnalysis. Packaging: 5mL, 25mL, 100mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Deuterium Oxide (D₂O)",
-      "laboratory useWater(D₂O)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Deuterium Oxide (D₂O)"]
   },
   {
     "_id": "excel-tlc-products-methanol-d4-cd3od",
@@ -9225,12 +8390,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Methanol-d4 (CD₃OD) | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Methanol-d4 (CD₃OD): High deuteration，laboratory useAnalysis. Packaging: 0.75mL × 10piece, 25mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Methanol-d4 (CD₃OD)",
-      "laboratory useMethanol(CD₃OD)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Methanol-d4 (CD₃OD)"]
   },
   {
     "_id": "excel-tlc-products-acetone-d6-cd3cocd3",
@@ -9279,12 +8439,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetone-d6 (CD₃COCD₃) | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetone-d6 (CD₃COCD₃): High deuteration，Suitable for multi-compound analysis. Packaging: 0.75mL × 10piece, 25mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Acetone-d6 (CD₃COCD₃)",
-      "laboratory useAcetone(CD₃COCD₃)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Acetone-d6 (CD₃COCD₃)"]
   },
   {
     "_id": "excel-tlc-products-benzene-d6-c6d6",
@@ -9333,12 +8488,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Benzene-d6 (C₆D₆) | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Benzene-d6 (C₆D₆): High deuteration，laboratory useAnalysis. Packaging: 0.75mL × 10piece, 10mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Benzene-d6 (C₆D₆)",
-      "laboratory use(C₆D₆)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Benzene-d6 (C₆D₆)"]
   },
   {
     "_id": "excel-tlc-products-acetonitrile-d3-cd3cn",
@@ -9387,12 +8537,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetonitrile-d3 (CD₃CN) | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetonitrile-d3 (CD₃CN): High deuteration，Suitable for multi-compound analysis. Packaging: 0.75mL × 10piece, 25mL. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Acetonitrile-d3 (CD₃CN)",
-      "laboratory useAcetonitrile(CD₃CN)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Acetonitrile-d3 (CD₃CN)"]
   },
   {
     "_id": "excel-tlc-products-dichloromethane-d2-cd2cl2",
@@ -9440,12 +8585,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Dichloromethane-d2 (CD₂Cl₂) | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ Dichloromethane-d2 (CD₂Cl₂): High deuteration，laboratory useAnalysis. Packaging: 0.75mL × 10piece. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Dichloromethane-d2 (CD₂Cl₂)",
-      "laboratory useDichloromethane(CD₂Cl₂)",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Dichloromethane-d2 (CD₂Cl₂)"]
   },
   {
     "_id": "excel-tlc-products-nmr-standard-tube-solution-kit",
@@ -9493,12 +8633,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "NMR Standard Tube Solution Kit | Chromatography consumables | LANCHROM™",
     "seoDescription": "LANCHROM™ NMR Standard Tube Solution Kit: One-stopNMRlaboratory usesetlaboratory use，Containslaboratory use. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "NMR Standard Tube Solution Kit",
-      "NMRlaboratory useStandardlaboratory usesetlaboratory use",
-      "Chromatography consumables",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["NMR Standard Tube Solution Kit"]
   },
   {
     "_id": "excel-life-science-reagents-granular-dehydrated-culture-medium-general-series",
@@ -9548,12 +8683,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Granular Dehydrated Culture Medium (General Series) | Life Science Reagents | LANCHROM™",
     "seoDescription": "LANCHROM™ Granular Dehydrated Culture Medium (General Series): laboratory use，laboratory use，laboratory use，laboratory useBiologylaboratory use. Packaging: 500g, 5kg. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Granular Dehydrated Culture Medium (General Series)",
-      "laboratory useWaterlaboratory use(laboratory use)",
-      "Life Science Reagents",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Granular Dehydrated Culture Medium (General Series)"]
   },
   {
     "_id": "excel-life-science-reagents-clean-room-environmental-monitoring-medium",
@@ -9602,12 +8732,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Clean Room Environmental Monitoring Medium | Life Science Reagents | LANCHROM™",
     "seoDescription": "LANCHROM™ Clean Room Environmental Monitoring Medium: Compliant withGMPrequirements，laboratory usedish，Ready to use. Packaging: 10dish/pack. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Clean Room Environmental Monitoring Medium",
-      "laboratory useEnvironmentallaboratory use",
-      "Life Science Reagents",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Clean Room Environmental Monitoring Medium"]
   },
   {
     "_id": "excel-life-science-reagents-air-sampling-culture-medium",
@@ -9657,12 +8782,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Air Sampling Culture Medium | Life Science Reagents | LANCHROM™",
     "seoDescription": "LANCHROM™ Air Sampling Culture Medium: Compliant withGMPrequirements，laboratory use，Ready to use. Packaging: 10dish/pack. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Air Sampling Culture Medium",
-      "laboratory use",
-      "Life Science Reagents",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Air Sampling Culture Medium"]
   },
   {
     "_id": "excel-life-science-reagents-pre-prepared-plate-culture-medium-ready-to-use",
@@ -9711,12 +8831,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Pre-Prepared Plate Culture Medium (Ready-to-Use) | Life Science Reagents | LANCHROM™",
     "seoDescription": "LANCHROM™ Pre-Prepared Plate Culture Medium (Ready-to-Use): Ready to uselaboratory useplate，laboratory use，Easy to use. Packaging: 10dish/pack. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Pre-Prepared Plate Culture Medium (Ready-to-Use)",
-      "laboratory useplatelaboratory use(Ready to use)",
-      "Life Science Reagents",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Pre-Prepared Plate Culture Medium (Ready-to-Use)"]
   },
   {
     "_id": "excel-life-science-reagents-chromogenic-culture-medium-pathogen-identification",
@@ -9765,12 +8880,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Chromogenic Culture Medium (Pathogen Identification) | Life Science Reagents | LANCHROM™",
     "seoDescription": "LANCHROM™ Chromogenic Culture Medium (Pathogen Identification): Chromogenic medium，laboratory use，laboratory use. Packaging: 500g/bottle. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Chromogenic Culture Medium (Pathogen Identification)",
-      "Chromogenic medium(laboratory use)",
-      "Life Science Reagents",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Chromogenic Culture Medium (Pathogen Identification)"]
   },
   {
     "_id": "excel-life-science-reagents-pcr-pathogen-detection-kit",
@@ -9820,12 +8930,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "PCR Pathogen Detection Kit | Life Science Reagents | LANCHROM™",
     "seoDescription": "LANCHROM™ PCR Pathogen Detection Kit: laboratory usePCRlaboratory use，laboratory use，laboratory use. Packaging: 48T/box. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "PCR Pathogen Detection Kit",
-      "PCRlaboratory usebox",
-      "Life Science Reagents",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["PCR Pathogen Detection Kit"]
   },
   {
     "_id": "excel-life-science-reagents-atp-hygiene-detection-system",
@@ -9875,12 +8980,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "ATP Hygiene Detection System | Life Science Reagents | LANCHROM™",
     "seoDescription": "LANCHROM™ ATP Hygiene Detection System: Rapid hygiene testing，10minute results，Easy to use. Packaging: 50piece/box. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "ATP Hygiene Detection System",
-      "ATPlaboratory use",
-      "Life Science Reagents",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["ATP Hygiene Detection System"]
   },
   {
     "_id": "excel-life-science-reagents-microorganism-rapid-staining-reagent-kit",
@@ -9928,12 +9028,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Microorganism Rapid Staining Reagent Kit | Life Science Reagents | LANCHROM™",
     "seoDescription": "LANCHROM™ Microorganism Rapid Staining Reagent Kit: One-stoplaboratory usesetlaboratory use，Containslaboratory use. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Microorganism Rapid Staining Reagent Kit",
-      "laboratory useBiologylaboratory usesetlaboratory use",
-      "Life Science Reagents",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Microorganism Rapid Staining Reagent Kit"]
   },
   {
     "_id": "excel-excipients-toluene",
@@ -9985,12 +9080,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Toluene | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Toluene: High purity，Low sulfur，Compliant withIndustrial grade/Reagent gradeStandard. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Toluene",
-      "Toluene(Toluene)",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Toluene"]
   },
   {
     "_id": "excel-excipients-2-butanone-mek",
@@ -10042,12 +9132,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "2-Butanone (MEK) | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ 2-Butanone (MEK): High purity，Low residue，Compliant withReagent gradeStandard. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "2-Butanone (MEK)",
-      "2-Butanone(MEK)",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["2-Butanone (MEK)"]
   },
   {
     "_id": "excel-excipients-cyclohexanone",
@@ -10099,12 +9184,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Cyclohexanone | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Cyclohexanone: High purity，Low water content，Compliant withReagent gradeStandard. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Cyclohexanone",
-      "Cyclohexanone",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Cyclohexanone"]
   },
   {
     "_id": "excel-excipients-n-butanol",
@@ -10156,12 +9236,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "n-Butanol | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ n-Butanol: Pharmacopeia-compliant，Pharmaceutical grade/Reagent gradelaboratory use. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "n-Butanol",
-      "n-Butanol",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["n-Butanol"]
   },
   {
     "_id": "excel-excipients-ethylene-glycol-ethyl-ether",
@@ -10213,12 +9288,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Ethylene Glycol Ethyl Ether | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Ethylene Glycol Ethyl Ether: High purity，Low volatility，Compliant withIndustrial grade/Reagent gradeStandard. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ethylene Glycol Ethyl Ether",
-      "Ethylene Glycol Ethyl Ether",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ethylene Glycol Ethyl Ether"]
   },
   {
     "_id": "excel-excipients-nitrocellulose",
@@ -10270,12 +9340,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Nitrocellulose | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Nitrocellulose: Industrial grade，High purity，Low impurities. Packaging: 500g, 1kg. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Nitrocellulose",
-      "laboratory use",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Nitrocellulose"]
   },
   {
     "_id": "excel-excipients-ion-exchange-resin",
@@ -10327,12 +9392,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Ion Exchange Resin | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Ion Exchange Resin: Pharmaceutical or industrial grade available，laboratory use. Packaging: 1L, 5L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ion Exchange Resin",
-      "laboratory use",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ion Exchange Resin"]
   },
   {
     "_id": "excel-excipients-molecular-sieve-3a-4a-5a",
@@ -10383,12 +9443,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Molecular Sieve (3A/4A/5A) | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Molecular Sieve (3A/4A/5A): Laboratory grade，laboratory use，laboratory use. Packaging: 500g, 1kg. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Molecular Sieve (3A/4A/5A)",
-      "laboratory use(3A/4A/5A)",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Molecular Sieve (3A/4A/5A)"]
   },
   {
     "_id": "excel-excipients-diatomaceous-earth",
@@ -10438,12 +9493,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Diatomaceous Earth | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Diatomaceous Earth: Laboratory grade，High purity，Low impurities，laboratory use. Packaging: 500g, 1kg. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Diatomaceous Earth",
-      "laboratory use",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Diatomaceous Earth"]
   },
   {
     "_id": "excel-excipients-kjeldahl-nitrogen-determination-tablet",
@@ -10493,12 +9543,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": false,
     "seoTitle": "Kjeldahl Nitrogen Determination Tablet | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Kjeldahl Nitrogen Determination Tablet: laboratory use，Containslaboratory use. Packaging: 100piece/bottle. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Kjeldahl Nitrogen Determination Tablet",
-      "laboratory usepiece",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Kjeldahl Nitrogen Determination Tablet"]
   },
   {
     "_id": "excel-excipients-propylene-glycol-methyl-ether-pgme",
@@ -10550,12 +9595,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Propylene Glycol Methyl Ether (PGME) | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Propylene Glycol Methyl Ether (PGME): Pharmaceutical or industrial grade available, high purity, low volatility. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Propylene Glycol Methyl Ether (PGME)",
-      "Propylene Glycol Methyl Ether(PGME)",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Propylene Glycol Methyl Ether (PGME)"]
   },
   {
     "_id": "excel-excipients-propylene-glycol-methyl-ether-acetate-pgmea",
@@ -10607,12 +9647,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Propylene Glycol Methyl Ether Acetate (PGMEA) | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Propylene Glycol Methyl Ether Acetate (PGMEA): Pharmaceutical grade/Electronic grade available，Low metal ions，High purity. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Propylene Glycol Methyl Ether Acetate (PGMEA)",
-      "Propylene Glycol Methyl Ether Acetate(PGMEA)",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Propylene Glycol Methyl Ether Acetate (PGMEA)"]
   },
   {
     "_id": "excel-excipients-dimethyl-carbonate-dmc",
@@ -10664,12 +9699,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Dimethyl Carbonate (DMC) | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Dimethyl Carbonate (DMC): Pharmaceutical or industrial grade available，Low toxicity，High purity. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Dimethyl Carbonate (DMC)",
-      "Dimethyl Carbonate(DMC)",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Dimethyl Carbonate (DMC)"]
   },
   {
     "_id": "excel-excipients-dimethyl-sulfoxide-dmso",
@@ -10721,12 +9751,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Dimethyl Sulfoxide (DMSO) | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Dimethyl Sulfoxide (DMSO): Pharmaceutical or industrial grade available, pharmacopeia-compliant, low endotoxin. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Dimethyl Sulfoxide (DMSO)",
-      "Dimethyl Sulfoxide(DMSO)",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Dimethyl Sulfoxide (DMSO)"]
   },
   {
     "_id": "excel-excipients-ethyl-acetate",
@@ -10778,12 +9803,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Ethyl Acetate | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Ethyl Acetate: Pharmaceutical or food grade available, pharmacopeia-compliant, low residue. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ethyl Acetate",
-      "Ethyl Acetate",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ethyl Acetate"]
   },
   {
     "_id": "excel-excipients-n-hexane-n-heptane",
@@ -10835,12 +9855,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "n-Hexane/n-Heptane | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ n-Hexane/n-Heptane: Pharmaceutical or industrial grade available，Low aromatic content，High purity. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "n-Hexane/n-Heptane",
-      "n-Hexane/n-Heptane",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["n-Hexane/n-Heptane"]
   },
   {
     "_id": "excel-excipients-acetone",
@@ -10892,12 +9907,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetone | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetone: Pharmaceutical or industrial grade available, pharmacopeia-compliant, low residue. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Acetone",
-      "Acetone",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Acetone"]
   },
   {
     "_id": "excel-excipients-dichloromethane-dcm",
@@ -10949,12 +9959,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Dichloromethane (DCM) | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Dichloromethane (DCM): Pharmaceutical or industrial grade available, pharmacopeia-compliant, low water content. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Dichloromethane (DCM)",
-      "Dichloromethane(DCM)",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Dichloromethane (DCM)"]
   },
   {
     "_id": "excel-excipients-chloroform",
@@ -11006,12 +10011,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Chloroform | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Chloroform: Pharmaceutical or industrial grade available, pharmacopeia-compliant, low residue. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Chloroform",
-      "Chloroform(Chloroform)",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Chloroform"]
   },
   {
     "_id": "excel-excipients-ethanol",
@@ -11063,12 +10063,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Ethanol | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Ethanol: Pharmaceutical or food grade available, pharmacopeia-compliant, methanol-residue controlled. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Ethanol",
-      "Ethanol",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Ethanol"]
   },
   {
     "_id": "excel-excipients-methanol",
@@ -11120,12 +10115,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Methanol | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Methanol: Pharmaceutical or industrial grade available, high purity, low residue. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Methanol",
-      "Methanol",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Methanol"]
   },
   {
     "_id": "excel-excipients-isopropyl-alcohol-ipa",
@@ -11177,12 +10167,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Isopropyl Alcohol (IPA) | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Isopropyl Alcohol (IPA): Pharmaceutical or industrial grade available, pharmacopeia-compliant, low residue. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Isopropyl Alcohol (IPA)",
-      "Isopropyl Alcohol(IPA)",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Isopropyl Alcohol (IPA)"]
   },
   {
     "_id": "excel-excipients-acetonitrile",
@@ -11234,12 +10219,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetonitrile | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetonitrile: Pharmaceutical or industrial grade available, high purity, low residue. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Acetonitrile",
-      "Acetonitrile",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Acetonitrile"]
   },
   {
     "_id": "excel-excipients-tetrahydrofuran-thf",
@@ -11291,12 +10271,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Tetrahydrofuran (THF) | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Tetrahydrofuran (THF): Pharmaceutical or industrial grade available, high purity, low water content. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Tetrahydrofuran (THF)",
-      "Tetrahydrofuran(THF)",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Tetrahydrofuran (THF)"]
   },
   {
     "_id": "excel-excipients-cyclohexane",
@@ -11348,12 +10323,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Cyclohexane | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Cyclohexane: Pharmaceutical or industrial grade available, high purity, low aromatics. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Cyclohexane",
-      "Cyclohexane",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Cyclohexane"]
   },
   {
     "_id": "excel-excipients-n-methyl-pyrrolidone-nmp",
@@ -11405,12 +10375,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "N-Methyl Pyrrolidone (NMP) | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ N-Methyl Pyrrolidone (NMP): Pharmaceutical or industrial grade available, high purity, low volatility. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "N-Methyl Pyrrolidone (NMP)",
-      "N-Methyl-2-pyrrolidone(NMP)",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["N-Methyl Pyrrolidone (NMP)"]
   },
   {
     "_id": "excel-excipients-diethanolamine-dea",
@@ -11462,12 +10427,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Diethanolamine (DEA) | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Diethanolamine (DEA): Pharmaceutical or industrial grade available, high purity, low impurities. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Diethanolamine (DEA)",
-      "Diethanolamine(DEA)",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Diethanolamine (DEA)"]
   },
   {
     "_id": "excel-excipients-petroleum-ether",
@@ -11519,12 +10479,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Petroleum Ether | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Petroleum Ether: Industrial grade, low boiling range, low aromatics, high purity. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "Petroleum Ether",
-      "Petroleum Ether",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["Petroleum Ether"]
   },
   {
     "_id": "excel-excipients-n-propyl-acetate-n-butyl-acetate",
@@ -11576,11 +10531,6 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "n-Propyl Acetate/n-Butyl Acetate | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ n-Propyl Acetate/n-Butyl Acetate: Pharmaceutical or industrial grade available, high purity, low residue. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": [
-      "n-Propyl Acetate/n-Butyl Acetate",
-      "n-Propyl Acetate/n-Butyl Acetate",
-      "Pharmaceutical Excipients and Food-Grade Chemicals",
-      "LANCHROM reagent supplier"
-    ]
+    "keywords": ["n-Propyl Acetate/n-Butyl Acetate"]
   }
 ];

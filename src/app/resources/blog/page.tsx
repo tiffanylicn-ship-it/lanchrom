@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Technical Blog | LANCHROM",
-  description: "Technical articles and original QC data on HPLC and LC-MS solvent selection, method development, compliance, and laboratory workflows.",
+  title: "Analytical Solvent Blog | LANCHROM",
+  description: "Read LANCHROM analytical solvent articles with practical laboratory guidance and original quality-control data.",
   alternates: { canonical: "https://www.lanchrom.com/resources/blog" },
 };
 
@@ -16,11 +16,18 @@ const POSTS = [
     href: "/resources/blog/lcms-solvent-background-comparison",
   },
   {
-    title: "HPLC Grade vs LC-MS Grade: When the Difference Actually Matters",
-    excerpt: "UV transparency gets you through routine HPLC. Mass spec detection asks a different question entirely — here's where the line actually falls.",
-    tag: "Method Development",
-    date: "Coming soon",
-    href: "",
+    title: "How to Choose an LC-MS Grade Solvent for Sensitive Methods",
+    excerpt: "Turn blank performance, residue, metal control, packaging and lot documentation into a method-specific solvent qualification plan.",
+    tag: "Solvent Selection",
+    date: "9 minute read",
+    href: "/resources/blog/lcms-grade-solvent-selection-guide",
+  },
+  {
+    title: "HPLC Solvent Storage and Handling: A Practical Laboratory Guide",
+    excerpt: "Protect chromatography baselines with consistent receiving, storage, opened-container handling, moisture control and dispensing practices.",
+    tag: "Laboratory Practice",
+    date: "8 minute read",
+    href: "/resources/blog/hplc-solvent-storage-handling",
   },
   {
     title: "Reading an ICH Q3C Class 2 Solvent Limit Correctly",
@@ -73,7 +80,7 @@ export default function BlogIndexPage() {
             return post.href ? (
               <Link key={post.title} href={post.href} className="group block border-b border-[#EFEDE8] pb-6 last:border-0">
                 {content}
-                <span className="mt-3 inline-block text-xs font-bold uppercase tracking-wide text-[#0A514C]">Read the comparison</span>
+                <span className="mt-3 inline-block text-xs font-bold uppercase tracking-wide text-[#0A514C]">Read article</span>
               </Link>
             ) : (
               <div key={post.title} className="group border-b border-[#EFEDE8] pb-6 last:border-0">

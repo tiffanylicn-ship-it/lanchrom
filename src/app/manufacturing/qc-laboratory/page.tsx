@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "QC Laboratory & Analytical Testing | LANCHROM™",
-  description: "Full-spectrum analytical QC lab with HPLC, GC, ICP-MS, Karl Fischer, particle counting — every batch tested across multiple independent methods before release.",
+  title: "Solvent Quality Control Laboratory | LANCHROM™",
+  description: "See how the LANCHROM quality control laboratory verifies each solvent batch before release.",
   alternates: { canonical: "https://www.lanchrom.com/manufacturing/qc-laboratory" },
 };
 

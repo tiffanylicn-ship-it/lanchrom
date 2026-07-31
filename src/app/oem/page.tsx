@@ -3,8 +3,8 @@ import Link from "next/link";
 import EditorialPageHero from "@/components/layout/EditorialPageHero";
 
 export const metadata: Metadata = {
-  title: "OEM & Private Label Solvents | LANCHROM",
-  description: "Private label, contract manufacturing, and custom formulation services. Configure your own brand packaging from 50 units.",
+  title: "Private-Label Solvents | LANCHROM",
+  description: "Configure LANCHROM private-label solvents with your preferred packaging, branding and documentation.",
   alternates: { canonical: "https://www.lanchrom.com/oem" },
 };
 

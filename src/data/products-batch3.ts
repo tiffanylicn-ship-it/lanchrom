@@ -30,7 +30,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "ICP Multi-Element Standard Solution 23 Elements | LANCHROM™",
     seoDescription: "Certified 23-element ICP standard solution for ICP-OES/MS calibration. Environmental and food safety testing.",
-    keywords: ["ICP standard solution", "multi-element calibration standard", "ICP-MS standard"],
+    keywords: ["ICP standard solution"],
   },
 
   // ── AAS Standard Series ───────────────────────────────────
@@ -54,7 +54,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "AAS Standard Solutions Full Element Series | LANCHROM™",
     seoDescription: "Atomic absorption single-element standard solutions, 1000mg/L, full periodic series. For AAS calibration.",
-    keywords: ["AAS standard solution", "atomic absorption standard", "1000mg/L element standard"],
+    keywords: ["AAS standard solution"],
   },
 
   // ── Conductivity Standard ─────────────────────────────────
@@ -76,7 +76,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "Conductivity Standard Solutions | LANCHROM™",
     seoDescription: "Certified conductivity standards 84/1413/12880 µS/cm for meter calibration and water system QC.",
-    keywords: ["conductivity standard solution", "conductivity calibration"],
+    keywords: ["conductivity standard solution"],
   },
 
   // ── Titration Standards bundle ────────────────────────────
@@ -101,7 +101,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "NaOH Volumetric Standard Solution | LANCHROM™",
     seoDescription: "Standardized NaOH titrant 0.1mol/L and 1mol/L for acid-base titration and method validation.",
-    keywords: ["NaOH standard solution", "sodium hydroxide titrant"],
+    keywords: ["NaOH standard solution"],
   },
 
   // ── pH Buffer Standards (already exists as ph-buffer-standards, leaving as is) ──
@@ -124,7 +124,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: true, unNumber: "UN 1170", hazmatClass: "Class 3 · PG II",
     seoTitle: "Karl Fischer Single-Component Reagent | LANCHROM™",
     seoDescription: "Single-component composite Karl Fischer titrant for simplified volumetric water determination.",
-    keywords: ["Karl Fischer single component", "composite KF reagent"],
+    keywords: ["Karl Fischer single component"],
   },
 
   // ── Karl Fischer Coulometric ───────────────────────────────
@@ -146,7 +146,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: true, unNumber: "UN 1170", hazmatClass: "Class 3 · PG II",
     seoTitle: "Karl Fischer Coulometric Reagent Anode Cathode | LANCHROM™",
     seoDescription: "Coulometric Karl Fischer anode/cathode reagent set for trace water determination 10ppm-5%.",
-    keywords: ["coulometric Karl Fischer", "KF anode cathode reagent"],
+    keywords: ["coulometric Karl Fischer"],
   },
 
   // ── Mobile Phase: Sulfuric Acid 0.005N (already have organic-acid-mobile-phase, add 0.01N variant) ──
@@ -173,7 +173,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "0.01N Sulfuric Acid Mobile Phase | LANCHROM™",
     seoDescription: "Ready-to-use 0.01N sulfuric acid mobile phase for organic acid HPLC. Nitrogen-sealed flex bags.",
-    keywords: ["0.01N sulfuric acid mobile phase", "organic acid HPLC mobile phase"],
+    keywords: ["0.01N sulfuric acid mobile phase"],
   },
 
   // ── Mobile Phase: Sugar Analysis ──────────────────────────
@@ -200,7 +200,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "Sugar Analysis Mobile Phase HPLC | Glucose Fructose | LANCHROM™",
     seoDescription: "Ready-to-use HPLC mobile phase for sugar analysis — glucose, fructose, sucrose, lactose. Aminex HPX-87P compatible.",
-    keywords: ["sugar analysis mobile phase", "glucose fructose HPLC", "Aminex HPX-87P mobile phase"],
+    keywords: ["sugar analysis mobile phase"],
   },
 
   // ── Wine Analysis Mobile Phase Kit ────────────────────────
@@ -222,7 +222,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "Wine Analysis HPLC Mobile Phase Kit | LANCHROM™",
     seoDescription: "Two-bag mobile phase system for wine organic acid and sugar/ethanol HPLC analysis. Aminex HPX-87H compatible.",
-    keywords: ["wine analysis mobile phase", "malolactic fermentation HPLC", "tartaric malic acid HPLC"],
+    keywords: ["wine analysis mobile phase"],
   },
 
   // ── Baijiu / Chinese Liquor Analysis Kit ──────────────────
@@ -247,7 +247,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "Baijiu Organic Acid Mobile Phase HPLC | LANCHROM™",
     seoDescription: "Ready-to-use mobile phase for baijiu/huangjiu organic acid HPLC QC. Acetic, lactic, citric, succinic acid detection.",
-    keywords: ["baijiu HPLC mobile phase", "Chinese liquor organic acid analysis", "huangjiu QC mobile phase"],
+    keywords: ["baijiu HPLC mobile phase"],
   },
 
   // ── NMR Deuterated — CDCl3 ─────────────────────────────────
@@ -274,7 +274,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: true, unNumber: "UN 1888", hazmatClass: "Class 6.1 · PG III",
     seoTitle: "Deuterated Chloroform CDCl3 NMR Solvent | LANCHROM™",
     seoDescription: "High isotopic purity CDCl3 ≥99.8 atom%D for NMR spectroscopy. Ampoule and bulk packaging with TMS reference.",
-    keywords: ["CDCl3 NMR solvent", "deuterated chloroform", "NMR solvent supplier"],
+    keywords: ["CDCl3 NMR solvent"],
   },
 
   // ── NMR Deuterated — DMSO-d6 ───────────────────────────────
@@ -299,7 +299,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "Deuterated DMSO-d6 NMR Solvent | LANCHROM™",
     seoDescription: "High isotopic purity DMSO-d6 for NMR of polar compounds, pharmaceutical salts, and peptides.",
-    keywords: ["DMSO-d6 NMR", "deuterated DMSO", "NMR solvent polar compounds"],
+    keywords: ["DMSO-d6 NMR"],
   },
 
   // ── NMR Deuterated — D2O ───────────────────────────────────
@@ -325,7 +325,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "Deuterium Oxide D2O NMR Grade | LANCHROM™",
     seoDescription: "High purity D2O ≥99.9 atom%D for NMR of water-soluble compounds and biomolecules.",
-    keywords: ["D2O NMR grade", "deuterium oxide", "heavy water NMR"],
+    keywords: ["D2O NMR grade"],
   },
 
   // ── TLC HPTLC Plates ──────────────────────────────────────
@@ -347,7 +347,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "HPTLC Plates High Performance TLC | LANCHROM™",
     seoDescription: "High-performance TLC plates for sharper resolution. Pharmaceutical and botanical fingerprint analysis.",
-    keywords: ["HPTLC plates", "high performance TLC", "TLC plates fine particle"],
+    keywords: ["HPTLC plates"],
   },
 
   // ── SPE HLB ────────────────────────────────────────────────
@@ -368,7 +368,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "SPE HLB Cartridges Pesticide Residue | LANCHROM™",
     seoDescription: "HLB solid-phase extraction cartridges for broad-spectrum pesticide residue and multi-class extraction.",
-    keywords: ["SPE HLB cartridge", "pesticide residue extraction", "polymeric SPE sorbent"],
+    keywords: ["SPE HLB cartridge"],
   },
 
   // ── QuEChERS Kit ──────────────────────────────────────────
@@ -390,7 +390,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "QuEChERS Extraction Cleanup Kit | LANCHROM™",
     seoDescription: "QuEChERS pesticide residue extraction and dispersive cleanup kit. AOAC/EN method compatible, pre-weighed tubes.",
-    keywords: ["QuEChERS kit", "pesticide residue extraction kit", "dispersive SPE cleanup"],
+    keywords: ["QuEChERS kit"],
   },
 
   // ── Life Science — Dehydrated Culture Medium ──────────────
@@ -415,7 +415,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "Dehydrated Culture Medium Granular | LANCHROM™",
     seoDescription: "Granular dehydrated culture media for routine microbiology testing. Food, water, pharma QC applications.",
-    keywords: ["dehydrated culture medium", "granular culture media", "microbiology testing media"],
+    keywords: ["dehydrated culture medium"],
   },
 
   // ── Life Science — GMP Environmental Monitoring ───────────
@@ -436,7 +436,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "GMP Cleanroom Environmental Monitoring Kit | LANCHROM™",
     seoDescription: "Contact plates and air sampling media for GMP A/B/C/D cleanroom environmental monitoring.",
-    keywords: ["GMP environmental monitoring", "cleanroom contact plates", "RODAC plates"],
+    keywords: ["GMP environmental monitoring"],
   },
 
   // ── Life Science — PCR Pathogen Detection ─────────────────
@@ -461,7 +461,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "PCR Pathogen Detection Kit Food Safety | LANCHROM™",
     seoDescription: "PCR rapid detection kit for Salmonella, E. coli O157, Listeria. Food safety pathogen screening, same-day results.",
-    keywords: ["PCR pathogen detection kit", "Salmonella PCR test", "food safety pathogen testing"],
+    keywords: ["PCR pathogen detection kit"],
   },
 
   // ── Reagent Kit Product — HPLC Starter Kit ────────────────
@@ -482,7 +482,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: true, unNumber: "Mixed — see SDS", hazmatClass: "Class 3",
     seoTitle: "HPLC Mobile Phase Starter Kit | LANCHROM™",
     seoDescription: "Acetonitrile, methanol, IPA, formic acid bundled for HPLC method development. Minimum 10 kits.",
-    keywords: ["HPLC starter kit", "HPLC mobile phase kit", "HPLC method development kit"],
+    keywords: ["HPLC starter kit"],
   },
 
   // ── Reagent Kit Product — Cell Cryopreservation Kit ───────
@@ -503,7 +503,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "Cell Cryopreservation Kit DMSO | LANCHROM™",
     seoDescription: "Cell therapy grade DMSO and cryovial tubes for CAR-T, stem cell, PBMC cryopreservation. Minimum 10 kits.",
-    keywords: ["cell cryopreservation kit", "DMSO cryopreservation kit", "CAR-T cryo kit"],
+    keywords: ["cell cryopreservation kit"],
   },
 
   // ── Reagent Kit Product — Karl Fischer Kit ────────────────
@@ -523,7 +523,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: true, unNumber: "Mixed — see SDS", hazmatClass: "Class 3",
     seoTitle: "Karl Fischer Water Determination Kit | LANCHROM™",
     seoDescription: "Complete KF titration kit: reagent, anhydrous methanol, water standard. For solvent moisture QC.",
-    keywords: ["Karl Fischer kit", "water determination kit", "KF titration starter kit"],
+    keywords: ["Karl Fischer kit"],
   },
 
   // ── Reagent Kit Product — Fermentation QC Starter Kit ─────
@@ -543,7 +543,7 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: false,
     seoTitle: "Fermentation QC Starter Kit | LANCHROM™",
     seoDescription: "Drop-in fermentation QC kit: mobile phase, pH standards, sample vials. For new fermentation line setup.",
-    keywords: ["fermentation QC kit", "fermentation starter kit", "organic acid HPLC starter kit"],
+    keywords: ["fermentation QC kit"],
   },
 
   // ── GMP Disinfection Kit ──────────────────────────────────
@@ -563,6 +563,6 @@ export const PRODUCTS_BATCH3: Product[] = [
     isHazmat: true, unNumber: "Mixed — see SDS", hazmatClass: "Class 3",
     seoTitle: "GMP Disinfection Solvent Kit | LANCHROM™",
     seoDescription: "75% ethanol and 70% IPA disinfection kit for GMP cleanroom and equipment sanitization.",
-    keywords: ["GMP disinfection kit", "cleanroom disinfection ethanol IPA"],
+    keywords: ["GMP disinfection kit"],
   },
 ];

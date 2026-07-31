@@ -3,8 +3,8 @@ import Link from "next/link";
 import { MARKETS } from "@/data/markets";
 
 export const metadata: Metadata = {
-  title: "Export Markets | LANCHROM™ — Global Solvent Supply",
-  description: "Factory-direct HPLC, LC-MS, OEM, and pharmaceutical grade solvent export to North America, Europe, Asia, Middle East, Africa, and Latin America.",
+  title: "Solvent Export Markets | LANCHROM™",
+  description: "Explore LANCHROM solvent export coverage and local supply opportunities by country and region.",
   alternates: { canonical: "https://www.lanchrom.com/markets" },
 };
 

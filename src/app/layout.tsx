@@ -9,12 +9,12 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: { default: "LANCHROM™ | Precision Solvents for Analytical Science", template: "%s | LANCHROM™" },
-  description: "Factory-direct HPLC, LC-MS, GC grade solvents, mobile phase solutions, reagent kits, and custom packaging. GMP certified. Free samples available.",
+  description: "LANCHROM manufactures high-purity solvents with documented quality, flexible packaging and global export support.",
   metadataBase: new URL("https://www.lanchrom.com"),
   openGraph: {
     type: "website", locale: "en_US", url: "https://www.lanchrom.com", siteName: "LANCHROM™",
     title: "LANCHROM™ | Precision Solvents for Analytical Science",
-    description: "Factory-direct HPLC, LC-MS, GC solvents. Free samples. Custom packaging. OEM services.",
+    description: "High-purity solvents with documented quality, flexible packaging and global export support.",
   },
   twitter: { card: "summary_large_image", title: "LANCHROM™", description: "Precision Solvents for Analytical Science" },
   robots: { index: true, follow: true },
@@ -39,8 +39,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org", "@type": "Organization",
             "name": "LANCHROM™", "url": "https://www.lanchrom.com",
-            "description": "Factory-direct manufacturer of HPLC, LC-MS, GC grade solvents.",
-            "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "info@lanchrom.com" },
+            "description": "Manufacturer of high-purity solvents for analytical science.",
+            "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "sales@lanchrom.com" },
             "areaServed": ["US","EU","IN","VN","TH","MY","ID","AE"],
           })}}
         />

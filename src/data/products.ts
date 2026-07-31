@@ -74,7 +74,7 @@ export const PRODUCTS_CORE: Product[] = [
     },
     seoTitle: "HPLC Grade Acetonitrile Manufacturer | LC-MS Grade MeCN | LANCHROM™",
     seoDescription: "Factory-direct HPLC and LC-MS grade acetonitrile. UV cutoff 190nm, gradient grade, sub-ppb metals. Free samples. Request quote.",
-    keywords: ["HPLC grade acetonitrile", "LC-MS acetonitrile", "MeCN HPLC", "acetonitrile manufacturer", "UPLC acetonitrile"],
+    keywords: ["HPLC grade acetonitrile"],
   },
 
   // ── HPLC Grade Methanol ───────────────────────────────────
@@ -117,7 +117,7 @@ export const PRODUCTS_CORE: Product[] = [
     ichClass: "2", pde: "30 mg/day",
     seoTitle: "HPLC Grade Methanol Manufacturer | LC-MS Methanol | LANCHROM™",
     seoDescription: "High-purity HPLC and LC-MS grade methanol. UV cutoff 205nm. Factory-direct supply. Free samples available.",
-    keywords: ["HPLC methanol", "LC-MS grade methanol", "methanol HPLC grade", "methanol manufacturer"],
+    keywords: ["HPLC methanol"],
   },
 
   // ── HPLC Grade IPA ────────────────────────────────────────
@@ -162,7 +162,7 @@ export const PRODUCTS_CORE: Product[] = [
     ichClass: "3",
     seoTitle: "HPLC Grade IPA Manufacturer | Pharmaceutical & Electronic Grade Isopropanol",
     seoDescription: "Factory-direct HPLC, pharma USP/EP, and electronic grade IPA. Chiral HPLC to GMP disinfection. Free samples.",
-    keywords: ["HPLC IPA", "isopropanol pharmaceutical grade", "IPA electronic grade", "IPA manufacturer"],
+    keywords: ["HPLC IPA"],
   },
 
   // ── DMSO ──────────────────────────────────────────────────
@@ -206,7 +206,7 @@ export const PRODUCTS_CORE: Product[] = [
     ichClass: "not-applicable",
     seoTitle: "DMSO Cell Therapy Grade USP | Cryopreservation DMSO Manufacturer | LANCHROM™",
     seoDescription: "Cell therapy and USP grade DMSO. Endotoxin <0.25 EU/mL. CAR-T, stem cell, PBMC cryopreservation standard. Non-hazmat. Free samples.",
-    keywords: ["DMSO cell therapy grade", "cryopreservation DMSO", "DMSO USP manufacturer", "DMSO CAR-T"],
+    keywords: ["DMSO cell therapy grade"],
   },
 
   // ── Organic Acid Mobile Phase Bag ─────────────────────────
@@ -248,7 +248,7 @@ export const PRODUCTS_CORE: Product[] = [
     isHazmat: false,
     seoTitle: "Organic Acid HPLC Mobile Phase | 0.005N H₂SO₄ | Fermentation Analysis | LANCHROM™",
     seoDescription: "Ready-to-use 0.005N sulfuric acid mobile phase for organic acid HPLC analysis. Detects lactic, citric, acetic, malic, succinic acids, glucose and fructose. 5L–20L flex bags.",
-    keywords: ["organic acid mobile phase", "0.005N sulfuric acid HPLC", "lactic acid HPLC detection", "fermentation analysis mobile phase", "Aminex HPX-87H mobile phase"],
+    keywords: ["organic acid mobile phase"],
   },
 ];
 
@@ -258,6 +258,19 @@ function autoSlug(name: string): string {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "")
     .replace(/--+/g, "-");
+}
+
+function dedupeSpecifications(
+  specifications: NonNullable<Product["specifications"]> = [],
+) {
+  const seenParameters = new Set<string>();
+
+  return specifications.filter((specification) => {
+    const parameterKey = specification.parameter.trim().toLowerCase();
+    if (seenParameters.has(parameterKey)) return false;
+    seenParameters.add(parameterKey);
+    return true;
+  });
 }
 
 const RAW_PRODUCTS: Product[] = [
@@ -280,15 +293,13 @@ const RAW_PRODUCTS_DEDUPED: Product[] = Array.from(
         ...product,
         ...existing,
         slug,
-        specifications: [
+        specifications: dedupeSpecifications([
           ...(existing.specifications || []),
-          ...(product.specifications || []).filter(spec =>
-            !(existing.specifications || []).some(item => item.parameter === spec.parameter && item.value === spec.value)
-          ),
-        ],
+          ...(product.specifications || []),
+        ]),
         applications: Array.from(new Set([...(existing.applications || []), ...(product.applications || [])])),
         packSizes: Array.from(new Set([...(existing.packSizes || []), ...(product.packSizes || [])])),
-        keywords: Array.from(new Set([...(existing.keywords || []), ...(product.keywords || [])])),
+        keywords: existing.keywords?.length ? [existing.keywords[0]] : product.keywords?.slice(0, 1),
       });
     }
     return map;
@@ -317,7 +328,7 @@ export const PRODUCTS: Product[] = RAW_PRODUCTS_DEDUPED.map(p => {
     slug,
     _id: p._id || slug,
     shortDescription: enrichment.shortDescription || p.shortDescription || p.name,
-    specifications: enrichment.specifications || p.specifications,
+    specifications: dedupeSpecifications(enrichment.specifications || p.specifications),
     applications: enrichment.applications || p.applications,
     cas: enrichment.cas || p.cas,
     formula: enrichment.formula || p.formula,

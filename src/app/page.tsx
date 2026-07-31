@@ -5,9 +5,10 @@ import HomeHeroSlideshow from "@/components/home/HomeHeroSlideshow";
 import IntegratedSolutions from "@/components/home/IntegratedSolutions";
 
 export const metadata: Metadata = {
-  title: "LANCHROM | HPLC, LC-MS & OEM Solvents Manufacturer",
+  title: "High-Purity Solvents | LANCHROM",
   description:
-    "Factory-direct HPLC, LC-MS, spectroscopy and OEM solvents for laboratory and industrial use.",
+    "Factory-direct high-purity solvents with documented quality, flexible packaging and global export support.",
+  keywords: ["high-purity solvents"],
   alternates: { canonical: "https://www.lanchrom.com" },
 };
 
@@ -106,18 +107,18 @@ export default function HomePage() {
                   </Link>
 
                   {/* Hover-reveal: key products for this category, each its own link */}
-                  <div className="absolute inset-0 z-20 flex flex-col justify-end bg-[#0A514C]/90 p-5 opacity-0 pointer-events-none transition-opacity duration-200 group-hover:opacity-100 group-hover:pointer-events-auto">
-                    <h3 className="mb-3 text-lg font-extrabold text-white" style={{ fontFamily: M }}>{category.name}</h3>
+                  <div className="absolute inset-0 z-20 flex flex-col justify-end bg-[#DDEDE6]/95 p-5 opacity-0 pointer-events-none backdrop-blur-[1px] transition-opacity duration-200 group-hover:opacity-100 group-hover:pointer-events-auto">
+                    <h3 className="mb-3 text-lg font-extrabold text-[#0A302E]" style={{ fontFamily: M }}>{category.name}</h3>
                     <ul className="space-y-1.5">
                       {category.products.map((p) => (
                         <li key={p.href}>
-                          <Link href={p.href} className="block text-sm font-semibold text-white/90 hover:text-[#5FD4DC] hover:underline underline-offset-2">
+                          <Link href={p.href} className="block text-sm font-semibold text-[#294842] hover:text-[#0E918C] hover:underline underline-offset-2">
                             {p.name}
                           </Link>
                         </li>
                       ))}
                     </ul>
-                    <Link href={category.href} className="mt-4 text-xs font-bold uppercase tracking-wide text-[#5FD4DC] hover:text-white">View all →</Link>
+                    <Link href={category.href} className="mt-4 text-xs font-bold uppercase tracking-wide text-[#0A514C] hover:text-[#0E918C]">View all →</Link>
                   </div>
                 </div>
               ))}
@@ -148,16 +149,16 @@ export default function HomePage() {
               <h2 className="home-section-title" style={{ fontFamily: M }}>Six controlled stages, one dependable batch</h2>
               <p className="home-section-copy">Every lot moves through a documented path from incoming material to export-ready shipment.</p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {QC_STEPS.map((step) => (
                 <div key={step.n} className="overflow-hidden rounded-md border border-[#DCE4DF] bg-white/90 shadow-sm">
                   <div className="relative aspect-[4/3]">
-                    <Image src={step.img} alt={step.title} fill sizes="(min-width: 1280px) 17vw, 33vw" className="object-cover" />
-                    <span className="absolute left-3 top-3 bg-[#0A514C] px-2 py-1 text-xs font-bold text-white">{step.n}</span>
+                    <Image src={step.img} alt={step.title} fill sizes="(min-width: 1024px) 33vw, 50vw" className="object-cover" />
+                    <span className="absolute left-4 top-4 bg-[#0A514C] px-3 py-1.5 text-sm font-bold text-white">{step.n}</span>
                   </div>
-                  <div className="p-4">
-                    <h3 className="text-sm font-bold text-[#193A35]" style={{ fontFamily: M }}>{step.title}</h3>
-                    <p className="mt-2 text-xs leading-relaxed text-[#697872]">{step.note}</p>
+                  <div className="p-6 md:p-7">
+                    <h3 className="text-xl font-bold text-[#193A35] md:text-2xl" style={{ fontFamily: M }}>{step.title}</h3>
+                    <p className="mt-3 text-base leading-relaxed text-[#5C6F68] md:text-lg">{step.note}</p>
                   </div>
                 </div>
               ))}
@@ -202,7 +203,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-3 md:justify-end">
                 <Link href="/contact?type=sample" className="rounded-md bg-[#0A514C] px-5 py-3 text-sm font-bold text-white hover:bg-[#083E3B]">Get A Free Sample</Link>
                 <Link href="/contact?type=quote" className="rounded-md border border-[#0A514C]/45 bg-white/55 px-5 py-3 text-sm font-bold text-[#0A514C] hover:bg-white">Request Quotation</Link>
-                <Link href="/downloads" className="rounded-md border border-[#0A514C]/45 bg-white/55 px-5 py-3 text-sm font-bold text-[#0A514C] hover:bg-white">CoA / SDS</Link>
+                <Link href="/contact?type=documents" className="rounded-md border border-[#0A514C]/45 bg-white/55 px-5 py-3 text-sm font-bold text-[#0A514C] hover:bg-white">CoA / SDS</Link>
               </div>
             </div>
           </div>

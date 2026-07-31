@@ -14,6 +14,7 @@ export type InquiryClassification = {
   productCategory: string;
   region: string;
   tags: string[];
+  searchKeywords: string[];
 };
 
 function normalize(input: InquiryInput) {
@@ -58,6 +59,32 @@ function detectRegion(country = "") {
   return value ? value.toUpperCase().replace(/\s+/g, "-") : "GLOBAL";
 }
 
+function extractSearchKeywords(input: InquiryInput, productCategory: string) {
+  const productTerms = (input.productOfInterest || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9+\-\s]/g, " ")
+    .split(/\s+/)
+    .filter(term => term.length >= 3 && !["grade", "solvent", "solution", "product"].includes(term))
+    .slice(0, 5);
+  const intentTerms: string[] = [];
+  const text = normalize(input);
+
+  if (/sample/.test(text)) intentTerms.push("sample-request");
+  if (/quote|price|pricing|quotation/.test(text)) intentTerms.push("quote-request");
+  if (/coa|certificate of analysis/.test(text)) intentTerms.push("coa-request");
+  if (/tds|technical data sheet/.test(text)) intentTerms.push("tds-request");
+  if (/sds|safety data sheet/.test(text)) intentTerms.push("sds-request");
+  if (/oem|private label|custom label/.test(text)) intentTerms.push("oem-inquiry");
+
+  return Array.from(
+    new Set([
+      productCategory.toLowerCase(),
+      ...productTerms,
+      ...intentTerms,
+    ]),
+  );
+}
+
 export function classifyInquiry(input: InquiryInput): InquiryClassification {
   const text = normalize(input);
   const annualVolume = input.annualVolume || "";
@@ -70,6 +97,11 @@ export function classifyInquiry(input: InquiryInput): InquiryClassification {
   const region = detectRegion(input.country);
   const tags = [productCategory, region];
 
+  if (/sample/.test(text)) tags.push("SAMPLE");
+  if (/quote|price|pricing|quotation/.test(text)) tags.push("QUOTE");
+  if (/coa|certificate of analysis/.test(text)) tags.push("COA");
+  if (/tds|technical data sheet/.test(text)) tags.push("TDS");
+  if (/sds|safety data sheet/.test(text)) tags.push("SDS");
   if (/oem|private label|custom label/.test(text)) tags.push("OEM");
   if (/distributor|agent|distribution/.test(text)) tags.push("DISTRIBUTOR");
   if (highValue) tags.push("HIGH-VALUE");
@@ -79,5 +111,6 @@ export function classifyInquiry(input: InquiryInput): InquiryClassification {
     productCategory,
     region,
     tags: Array.from(new Set(tags)),
+    searchKeywords: extractSearchKeywords(input, productCategory),
   };
 }

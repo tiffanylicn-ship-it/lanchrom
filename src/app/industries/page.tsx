@@ -5,8 +5,8 @@ import SectionSidebar from "@/components/layout/SectionSidebar";
 import EditorialPageHero from "@/components/layout/EditorialPageHero";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve | LANCHROM",
-  description: "Pharmaceutical, biotechnology, fermentation, food testing, environmental, CRO, forensic, semiconductor, and 12+ more industries served with factory-direct solvents.",
+  title: "Industrial Solvent Applications | LANCHROM",
+  description: "Explore industry-specific solvent applications supported by LANCHROM manufacturing and quality systems.",
   alternates: { canonical: "https://www.lanchrom.com/industries" },
 };
 

@@ -5,8 +5,9 @@ import EditorialPageHero from "@/components/layout/EditorialPageHero";
 import { SOLUTION_NAV_GROUPS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
-  title: "Solutions | Fermentation Analysis, Reagent Kits, Custom Packaging | LANCHROM",
-  description: "Mobile phase solutions, custom reagent kits, custom packaging, and OEM services for analytical laboratories.",
+  title: "Laboratory Solvent Solutions | LANCHROM",
+  description: "Configure LANCHROM laboratory solvent solutions around your analytical workflow, packaging and documentation needs.",
+  keywords: ["laboratory solvent solutions"],
   alternates: { canonical: "https://www.lanchrom.com/solutions" },
 };
 
@@ -86,8 +87,8 @@ export default function SolutionsIndexPage() {
         eyebrow="Solutions"
         title="Beyond the Catalog"
         description="Ready-to-use mobile phase, custom reagent kits, and packaging configured around how your lab actually works."
-        image="/images/backgrounds/solutions-aseptic-filling.jpg"
-        imageAlt="Aseptic filling production line for custom analytical solutions"
+        image="/images/hero/lanchrom-products-section.png"
+        imageAlt="LANCHROM HPLC and LC-MS solvent product range"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8">

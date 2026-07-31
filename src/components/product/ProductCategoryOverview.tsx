@@ -35,6 +35,7 @@ export default function ProductCategoryOverview({ info }: ProductCategoryOvervie
         description={info.description}
         image={info.bannerImage || line?.image}
         imageAlt={info.name}
+        imageFit="contain"
       />
 
       <div className="mx-auto flex max-w-7xl gap-8 px-4 py-16 sm:px-6 md:py-20 lg:px-8">

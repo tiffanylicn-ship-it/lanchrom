@@ -10,15 +10,40 @@ interface Props { isOpen: boolean; onClose: () => void; product: Product; fileTy
 export default function DownloadModal({ isOpen, onClose, product, fileType }: Props) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const { register, handleSubmit } = useForm<{ email: string; company: string }>();
 
   const onSubmit = async (data: { email: string; company: string }) => {
     setLoading(true);
+    setError("");
     try {
       const token = await getRecaptchaToken("download");
-      await fetch(`/api/download-${fileType}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...data, productSlug: product.slug, productName: product.name, recaptchaToken: token }) });
+      const response = await fetch("/api/documents", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...data,
+          productSlug: product.slug || product.name,
+          productName: product.name,
+          fileType,
+          recaptchaToken: token,
+          sourceUrl: window.location.href,
+        }),
+      });
+      const result = await response.json().catch(() => null);
+      if (!response.ok || !result?.success) {
+        throw new Error(result?.message || "Unable to submit this document request.");
+      }
       setSubmitted(true);
-    } finally { setLoading(false); }
+    } catch (submitError) {
+      setError(
+        submitError instanceof Error
+          ? submitError.message
+          : "Submission failed. Please email info@lanchrom.com.",
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (!isOpen) return null;
@@ -39,6 +64,7 @@ export default function DownloadModal({ isOpen, onClose, product, fileType }: Pr
             <p className="text-slate-500 text-xs">Enter your business email to receive the {fileType === "coa" ? "Certificate of Analysis" : "Technical Data Sheet"}.</p>
             <div><label className="block text-xs font-semibold text-slate-700 mb-1">Business Email *</label><input {...register("email",{required:true})} type="email" className={inp} placeholder="you@company.com" /></div>
             <div><label className="block text-xs font-semibold text-slate-700 mb-1">Company *</label><input {...register("company",{required:true})} className={inp} placeholder="Your Company Name" /></div>
+            {error && <div className="rounded-md border border-red-200 bg-red-50 p-2.5 text-xs text-red-600">{error}</div>}
             <button type="submit" disabled={loading} className="btn-primary w-full justify-center text-sm py-2">
               {loading ? <><Loader2 className="w-4 h-4 animate-spin" /> Sending...</> : `Request ${fileType.toUpperCase()} →`}
             </button>

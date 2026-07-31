@@ -44,6 +44,18 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   background: #FFFFFF;
   color: var(--ink-soft);
+  top: 0 !important;
+}
+
+.google-translate-mount,
+.goog-te-banner-frame,
+.skiptranslate iframe {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 @keyframes homeHeroSlide {
@@ -239,8 +251,8 @@ body {
 
 .home-service-copy {
   isolation: isolate;
-  width: 74%;
-  max-width: 74%;
+  width: 88%;
+  max-width: 88%;
 }
 
 .home-service-copy::before {
@@ -252,10 +264,14 @@ body {
 }
 
 .home-service-mask {
-  background: #34e3d4;
-  clip-path: polygon(0 0, 25% 0, 46% 100%, 0 100%);
-  opacity: 0.62;
+  background: #ddeDE6;
+  clip-path: polygon(0 0, 58% 0, 58% 46%, 43% 100%, 0 100%);
+  opacity: 0.9;
   pointer-events: none;
+}
+
+.home-service-mask--packaging {
+  clip-path: polygon(0 0, 52% 0, 52% 46%, 39% 100%, 0 100%);
 }
 
 .editorial-page-mask {
@@ -278,8 +294,13 @@ body {
   }
 
   .home-service-copy {
-    width: 28%;
-    max-width: 28%;
+    width: 44%;
+    max-width: 44%;
+  }
+
+  .home-service-copy--packaging {
+    width: 40%;
+    max-width: 40%;
   }
 }
 
@@ -295,8 +316,12 @@ body {
 
 @media (max-width: 767px) {
   .home-service-mask {
-    clip-path: polygon(0 0, 82% 0, 90% 100%, 0 100%);
-    opacity: 0.52;
+    clip-path: polygon(0 0, 96% 0, 96% 56%, 88% 100%, 0 100%);
+    opacity: 0.92;
+  }
+
+  .home-service-mask--packaging {
+    clip-path: polygon(0 0, 92% 0, 92% 56%, 82% 100%, 0 100%);
   }
 }
 

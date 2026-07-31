@@ -4,8 +4,8 @@ import { GUIDES } from "@/data/guides";
 import EditorialPageHero from "@/components/layout/EditorialPageHero";
 
 export const metadata: Metadata = {
-  title: "Guides | LANCHROM",
-  description: "In-depth guides on HPLC and LC-MS solvents, mobile phase chemistry, solvent buying, and OEM laboratory supply.",
+  title: "Technical Solvent Guides | LANCHROM",
+  description: "Read practical LANCHROM technical solvent guides for selection, preparation and purchasing decisions.",
   alternates: { canonical: "https://www.lanchrom.com/guides" },
 };
 

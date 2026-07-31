@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Distillation & Purification System | LANCHROM™",
-  description: "CFD-optimized distillation columns with custom tray geometry and structured packing — the engineering behind consistent analytical and electronic grade purity.",
+  title: "Solvent Purification System | LANCHROM™",
+  description: "See the engineered purification system behind LANCHROM solvent consistency and impurity control.",
   alternates: { canonical: "https://www.lanchrom.com/manufacturing/distillation-system" },
 };
 

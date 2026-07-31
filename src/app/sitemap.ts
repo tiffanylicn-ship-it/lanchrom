@@ -44,6 +44,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/guides", "weekly", 0.7),
     entry("/resources/blog", "weekly", 0.6),
     entry("/resources/blog/lcms-solvent-background-comparison", "monthly", 0.7),
+    entry("/resources/blog/hplc-solvent-storage-handling", "monthly", 0.7),
+    entry("/resources/blog/lcms-grade-solvent-selection-guide", "monthly", 0.7),
     entry("/resources/faq", "monthly", 0.6),
     entry("/resources/knowledge-center", "weekly", 0.7),
     entry("/downloads", "monthly", 0.5),

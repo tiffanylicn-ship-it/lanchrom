@@ -4,8 +4,9 @@ import Link from "next/link";
 import { DISTRIBUTOR_MARKETS } from "@/data/distributor-program";
 
 export const metadata: Metadata = {
-  title: "Global Distributor Program | HPLC Solvents | LANCHROM",
-  description: "Become a LANCHROM distributor for HPLC, LC-MS and analytical solvents in India, Vietnam, Thailand, Malaysia or Indonesia.",
+  title: "HPLC Solvent Distributor Program | LANCHROM",
+  description: "Join the LANCHROM HPLC solvent distributor program and build your local laboratory supply business with factory-direct support.",
+  keywords: ["HPLC solvent distributor"],
   alternates: { canonical: "https://www.lanchrom.com/distributor-program" },
 };
 
@@ -20,7 +21,7 @@ export default function DistributorProgramPage() {
   return (
     <main className="bg-white text-[#183A35]">
       <section className="relative min-h-[500px] overflow-hidden border-b border-[#C9DBD3] bg-[#EAF4EF]">
-        <Image src="/images/hero/lcms-solvent-factory-manufacturer.png" alt="LANCHROM solvent manufacturing facility" fill priority sizes="100vw" className="object-cover object-right" />
+        <Image src="/images/hero/lanchrom-global-logistics.png" alt="Global logistics for LANCHROM distributor partners" fill priority sizes="100vw" className="object-cover object-center" />
         <div className="absolute inset-y-0 left-0 w-full bg-[#EAF4EF] [clip-path:polygon(0_0,66%_0,52%_100%,0_100%)] md:w-[76%]" />
         <div className="relative mx-auto flex min-h-[500px] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-2xl">

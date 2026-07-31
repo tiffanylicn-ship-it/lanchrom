@@ -20,8 +20,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!line) return { title: "Product Line Not Found | LANCHROM" };
   const info = GROUP_LABELS[line.group];
   return {
-    title: `${info.label} | LANCHROM Product Catalog`,
+    title: `${info.label} | LANCHROM`,
     description: info.tagline,
+    keywords: [info.label],
     alternates: { canonical: `https://www.lanchrom.com/products/${line.slug}` },
   };
 }

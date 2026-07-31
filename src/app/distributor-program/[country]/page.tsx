@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: market.seoTitle,
     description: market.metaDescription,
-    keywords: [market.primaryKeyword, ...market.secondaryKeywords],
+    keywords: [market.primaryKeyword],
     alternates: { canonical: `https://www.lanchrom.com${market.url}` },
     other: { "page-type": market.pageType, "primary-keyword": market.primaryKeyword },
   };
@@ -72,14 +72,21 @@ export default async function DistributorMarketPage({ params }: Props) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
-              <h2 className="text-2xl font-extrabold text-[#0A302E]">SEO page specification</h2>
-              <dl className="mt-6 divide-y divide-[#D7E5DF] border-y border-[#D7E5DF] text-sm">
-                {[ ["URL", market.url], ["SEO Title", market.seoTitle], ["Meta Description", market.metaDescription], ["H1", market.h1], ["Page Type", market.pageType], ["Primary Keyword", market.primaryKeyword], ["Secondary Keywords", market.secondaryKeywords.join(", ")] ].map(([label, value]) => (
-                  <div key={label} className="grid gap-1 py-3 sm:grid-cols-[150px_1fr]">
-                    <dt className="font-bold text-[#3C5952]">{label}</dt><dd className="text-[#61736D]">{value}</dd>
-                  </div>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#0E918C]">Partner profile</p>
+              <h2 className="mt-3 text-2xl font-extrabold text-[#0A302E]">What makes a strong local partner</h2>
+              <ul className="mt-6 space-y-4 text-sm leading-relaxed text-[#61736D]">
+                {[
+                  "Established relationships with analytical, pharmaceutical or industrial laboratories",
+                  "Capability to manage compliant local storage, documentation and delivery",
+                  "Technical sales coverage for product selection and sample follow-up",
+                  "A long-term plan for local inventory, account development and customer support",
+                ].map((item) => (
+                  <li key={item} className="flex gap-3 border-b border-[#D7E5DF] pb-4">
+                    <span className="font-bold text-[#0E918C]">✓</span>
+                    {item}
+                  </li>
                 ))}
-              </dl>
+              </ul>
             </div>
             <div>
               <h2 className="text-2xl font-extrabold text-[#0A302E]">Related products and pages</h2>

@@ -35,7 +35,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: true, unNumber: "UN 1208", hazmatClass: "Class 3 · PG II", ichClass: "2", pde: "2.9 mg/day",
     seoTitle: "HPLC Grade n-Hexane Manufacturer | LANCHROM™",
     seoDescription: "HPLC and GC grade n-hexane. Low UV background, normal-phase and chiral separations. Free samples.",
-    keywords: ["HPLC hexane", "n-hexane chiral HPLC", "hexane manufacturer"],
+    keywords: ["HPLC hexane"],
   },
 
   // ── n-Heptane (HPLC, chiral) ──────────────────────────────
@@ -65,7 +65,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: true, unNumber: "UN 1206", hazmatClass: "Class 3 · PG II",
     seoTitle: "HPLC Grade n-Heptane | Chiral HPLC Solvent | LANCHROM™",
     seoDescription: "HPLC grade n-heptane for chiral and normal-phase separations. Lower toxicity than hexane. Free samples.",
-    keywords: ["HPLC heptane", "chiral HPLC solvent", "heptane manufacturer"],
+    keywords: ["HPLC heptane"],
   },
 
   // ── Ethyl Acetate (GC/HPLC) ───────────────────────────────
@@ -95,7 +95,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: true, unNumber: "UN 1173", hazmatClass: "Class 3 · PG II", ichClass: "3",
     seoTitle: "HPLC Grade Ethyl Acetate Manufacturer | LANCHROM™",
     seoDescription: "HPLC and GC grade ethyl acetate. Low toxicity, ICH Q3C Class 3. For extraction and chromatography.",
-    keywords: ["ethyl acetate HPLC", "ethyl acetate manufacturer", "TLC solvent"],
+    keywords: ["ethyl acetate HPLC"],
   },
 
   // ── DCM (HPLC/GC) ─────────────────────────────────────────
@@ -124,7 +124,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: true, unNumber: "UN 1593", hazmatClass: "Class 6.1 · PG III", ichClass: "2", pde: "6.0 mg/day",
     seoTitle: "GC & HPLC Grade Dichloromethane (DCM) | LANCHROM™",
     seoDescription: "High-purity DCM for PLGA microsphere manufacturing, chromatography, and extraction. ICH Q3C Class 2 documented.",
-    keywords: ["DCM manufacturer", "dichloromethane HPLC", "PLGA microsphere solvent"],
+    keywords: ["DCM manufacturer"],
   },
 
   // ── Ethanol (Anhydrous) ───────────────────────────────────
@@ -154,7 +154,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: true, unNumber: "UN 1170", hazmatClass: "Class 3 · PG II", ichClass: "3",
     seoTitle: "Anhydrous Ethanol Manufacturer | mRNA-LNP Grade | LANCHROM™",
     seoDescription: "Anhydrous ethanol ≥99.5%, water <0.2%. For mRNA-LNP, synthesis, GMP disinfection. Nitrogen-sealed packaging.",
-    keywords: ["anhydrous ethanol", "mRNA-LNP ethanol", "ethanol manufacturer pharma grade"],
+    keywords: ["anhydrous ethanol"],
   },
 
   // ── THF Anhydrous ─────────────────────────────────────────
@@ -184,7 +184,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: true, unNumber: "UN 2056", hazmatClass: "Class 3 · PG II", ichClass: "2", pde: "7.2 mg/day",
     seoTitle: "Anhydrous THF Manufacturer | Nitrogen-Sealed | LANCHROM™",
     seoDescription: "Anhydrous THF <50ppm water, BHT-stabilized, nitrogen-sealed. For Grignard reactions and mRNA-LNP applications.",
-    keywords: ["anhydrous THF", "THF Grignard grade", "tetrahydrofuran manufacturer"],
+    keywords: ["anhydrous THF"],
   },
 
   // ── Acetone (Pharma) ──────────────────────────────────────
@@ -213,7 +213,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: true, unNumber: "UN 1090", hazmatClass: "Class 3 · PG II", ichClass: "3",
     seoTitle: "Pharmaceutical Grade Acetone USP | LANCHROM™",
     seoDescription: "USP grade acetone for API synthesis, extraction, recrystallization. ICH Q3C Class 3 documented.",
-    keywords: ["pharma grade acetone", "acetone USP", "acetone manufacturer"],
+    keywords: ["pharma grade acetone"],
   },
 
   // ── IPA Pharma/HPLC/Electronic (multi-grade) ──────────────
@@ -244,7 +244,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: true, unNumber: "UN 1219", hazmatClass: "Class 3 · PG II", ichClass: "3",
     seoTitle: "Isopropanol Manufacturer | Pharma, HPLC & Electronic Grade | LANCHROM™",
     seoDescription: "Multi-grade IPA — HPLC, pharma USP/EP, electronic grade. Chiral HPLC to wafer cleaning. Factory-direct.",
-    keywords: ["IPA manufacturer", "isopropanol pharmaceutical grade", "electronic grade IPA"],
+    keywords: ["IPA manufacturer"],
   },
 
   // ── Electronic Grade Ethanol ──────────────────────────────
@@ -274,7 +274,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: true, unNumber: "UN 1170", hazmatClass: "Class 3 · PG II",
     seoTitle: "Electronic Grade Ethanol | Semiconductor | LANCHROM™",
     seoDescription: "Electronic grade ethanol, sub-ppb metal ions. For advanced packaging and semiconductor cleaning.",
-    keywords: ["electronic grade ethanol", "semiconductor ethanol"],
+    keywords: ["electronic grade ethanol"],
   },
 
   // ── Glycerol ──────────────────────────────────────────────
@@ -302,7 +302,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: false,
     seoTitle: "Glycerol (Glycerin) USP Food Grade Manufacturer | LANCHROM™",
     seoDescription: "USP/EP and food grade glycerol. Non-hazmat shipping. Kosher/halal certified. Factory-direct from China.",
-    keywords: ["glycerol manufacturer", "glycerin USP", "food grade glycerin"],
+    keywords: ["glycerol manufacturer"],
   },
 
   // ── Propylene Glycol ──────────────────────────────────────
@@ -330,7 +330,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: false,
     seoTitle: "Propylene Glycol USP Manufacturer | LANCHROM™",
     seoDescription: "USP grade propylene glycol. FDA GRAS, non-hazmat shipping. Injectable, oral, and food applications.",
-    keywords: ["propylene glycol USP", "PG manufacturer", "food grade propylene glycol"],
+    keywords: ["propylene glycol USP"],
   },
 
   // ── PEG 400 ───────────────────────────────────────────────
@@ -357,7 +357,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: false,
     seoTitle: "PEG 400 Pharmaceutical Grade Manufacturer | LANCHROM™",
     seoDescription: "USP/EP PEG 400. Injectable, topical, suppository grade. Non-hazmat shipping. 1,4-dioxane controlled.",
-    keywords: ["PEG 400 manufacturer", "polyethylene glycol pharma grade"],
+    keywords: ["PEG 400 manufacturer"],
   },
 
   // ── Mannitol ──────────────────────────────────────────────
@@ -385,7 +385,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: false,
     seoTitle: "D-Mannitol Injection Grade Manufacturer | LANCHROM™",
     seoDescription: "Injection, spray-dried, and lyophilization grade mannitol. For IV solutions, tablets, biologics cryoprotection.",
-    keywords: ["mannitol injection grade", "mannitol manufacturer", "lyophilization mannitol"],
+    keywords: ["mannitol injection grade"],
   },
 
   // ── Polysorbate 80 ────────────────────────────────────────
@@ -411,7 +411,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: false,
     seoTitle: "Polysorbate 80 Tween 80 Parenteral Grade | LANCHROM™",
     seoDescription: "Parenteral grade Polysorbate 80. For chemotherapy injections, vaccines, biologics. Peroxide-controlled. Non-hazmat.",
-    keywords: ["polysorbate 80 parenteral grade", "Tween 80 manufacturer", "vaccine adjuvant emulsifier"],
+    keywords: ["polysorbate 80 parenteral grade"],
   },
 
   // ── Citric Acid ───────────────────────────────────────────
@@ -438,7 +438,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: false,
     seoTitle: "Citric Acid Monohydrate USP Food Grade | LANCHROM™",
     seoDescription: "USP and food grade citric acid monohydrate. mRNA vaccine buffer, effervescent, beverage acidulant. Non-hazmat.",
-    keywords: ["citric acid manufacturer", "citric acid USP", "food grade citric acid"],
+    keywords: ["citric acid manufacturer"],
   },
 
   // ── Acetonitrile (LC-MS) duplicate-but-different-id for LC-MS category ──
@@ -468,7 +468,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: true, unNumber: "UN 1648", hazmatClass: "Class 3 · PG II", ichClass: "2", pde: "4.1 mg/day",
     seoTitle: "LC-MS Grade Acetonitrile | Sub-ppb Metals | LANCHROM™",
     seoDescription: "LC-MS grade acetonitrile, metal ions <1ppb, MS blank certified. For bioanalytical and GLP-1 peptide methods.",
-    keywords: ["LC-MS acetonitrile", "MeCN LC-MS grade", "bioanalytical acetonitrile"],
+    keywords: ["LC-MS acetonitrile"],
   },
 
   // ── DMSO duplicate for excipients ────────────────────────
@@ -497,7 +497,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: false,
     seoTitle: "DMSO Cell Therapy Grade USP | LANCHROM™",
     seoDescription: "Cell therapy and USP grade DMSO. CAR-T cryopreservation standard. Endotoxin <0.25 EU/mL. Non-hazmat.",
-    keywords: ["DMSO cell therapy", "DMSO USP grade", "cryopreservation DMSO"],
+    keywords: ["DMSO cell therapy"],
   },
 
   // ── pH Buffer Standard ────────────────────────────────────
@@ -523,7 +523,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: false,
     seoTitle: "pH Buffer Standard Solutions | NIST Traceable | LANCHROM™",
     seoDescription: "Certified pH buffer standards 4.00, 7.00, 10.01. NIST-traceable, batch-documented. For pH meter calibration.",
-    keywords: ["pH buffer standard", "pH calibration solution", "NIST traceable pH buffer"],
+    keywords: ["pH buffer standard"],
   },
 
   // ── Karl Fischer Reagent ──────────────────────────────────
@@ -547,7 +547,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: true, unNumber: "UN 1170", hazmatClass: "Class 3 · PG II",
     seoTitle: "Karl Fischer Reagent Volumetric | Water Determination | LANCHROM™",
     seoDescription: "Two-component volumetric Karl Fischer reagent for water content titration. Solvent QC and raw material testing.",
-    keywords: ["Karl Fischer reagent", "water content titration", "KF titrant"],
+    keywords: ["Karl Fischer reagent"],
   },
 
   // ── TLC Silica Plate ──────────────────────────────────────
@@ -572,7 +572,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: false,
     seoTitle: "TLC Silica Gel Plates Manufacturer | LANCHROM™",
     seoDescription: "Silica gel 60 TLC plates, F254 fluorescent indicator available. For pharmaceutical and natural product analysis.",
-    keywords: ["TLC plates", "silica gel TLC", "thin layer chromatography plates"],
+    keywords: ["TLC plates"],
   },
 
   // ── SPE C18 Cartridge ─────────────────────────────────────
@@ -596,7 +596,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: false,
     seoTitle: "SPE C18 Cartridges Manufacturer | LANCHROM™",
     seoDescription: "C18 solid-phase extraction cartridges for sample cleanup. Pesticide residue, pharma, bioanalytical applications.",
-    keywords: ["SPE C18 cartridge", "solid phase extraction", "sample cleanup cartridge"],
+    keywords: ["SPE C18 cartridge"],
   },
 
   // ── Mobile Phase Bag — Formic Acid Water ─────────────────
@@ -624,7 +624,7 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: false,
     seoTitle: "0.1% Formic Acid Mobile Phase Bag | Ready-to-Use | LANCHROM™",
     seoDescription: "Pre-made 0.1% formic acid in water mobile phase. Nitrogen-sealed flex bags, 5L-20L. For LC-MS/MS methods.",
-    keywords: ["formic acid mobile phase", "0.1% formic acid water", "ready-to-use mobile phase"],
+    keywords: ["formic acid mobile phase"],
   },
 
   // ── Mobile Phase Bag — Ammonium Formate ──────────────────
@@ -650,6 +650,6 @@ export const PRODUCTS_EXTRA: Product[] = [
     isHazmat: false,
     seoTitle: "Ammonium Formate Mobile Phase Buffer | LANCHROM™",
     seoDescription: "Pre-made ammonium formate buffer mobile phase, 10-50mM. Nitrogen-sealed flex bags. For LC-MS methods.",
-    keywords: ["ammonium formate mobile phase", "LC-MS buffer ready-to-use"],
+    keywords: ["ammonium formate mobile phase"],
   },
 ];

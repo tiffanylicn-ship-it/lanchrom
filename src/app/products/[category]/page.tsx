@@ -27,8 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (line) {
     const info = GROUP_LABELS[line.group];
     return {
-      title: `${info.label} | LANCHROM Product Catalog`,
+      title: `${info.label} | LANCHROM`,
       description: info.tagline,
+      keywords: [info.label],
       alternates: { canonical: `https://www.lanchrom.com/products/${line.slug}` },
     };
   }
@@ -36,8 +37,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const info = getCategoryInfo(category);
   if (!info) return { title: "Category Not Found | LANCHROM" };
   return {
-    title: info.seoTitle,
+    title: `${info.name} | LANCHROM`,
     description: info.seoDescription,
+    keywords: [info.name],
     alternates: { canonical: `https://www.lanchrom.com${getCategoryPath(info)}` },
   };
 }

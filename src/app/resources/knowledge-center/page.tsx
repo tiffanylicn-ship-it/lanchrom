@@ -5,8 +5,8 @@ import { KNOWLEDGE_BATCH3 } from "@/data/knowledge-articles-batch3";
 import { KNOWLEDGE_BATCH4 } from "@/data/knowledge-articles-batch4";
 
 export const metadata: Metadata = {
-  title: "Knowledge Center | LANCHROM™",
-  description: "Short-form explainers and reference articles on HPLC, LC-MS, and mobile phase fundamentals — what terms mean and how to apply them.",
+  title: "Solvent Knowledge Center | LANCHROM™",
+  description: "Short reference articles that explain analytical solvent terminology, selection and laboratory use.",
   alternates: { canonical: "https://www.lanchrom.com/resources/knowledge-center" },
 };
 

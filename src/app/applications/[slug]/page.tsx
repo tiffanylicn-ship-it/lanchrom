@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${info.title} | LANCHROM`,
     description: info.seoDescription,
+    keywords: [info.title],
     alternates: { canonical: `https://www.lanchrom.com/applications/${slug}` },
   };
 }

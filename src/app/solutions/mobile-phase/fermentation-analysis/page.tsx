@@ -6,8 +6,8 @@ import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
 import { SOLUTION_NAV_GROUPS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
-  title: "Fermentation Analysis Mobile Phase | Organic Acid & Sugar HPLC | LANCHROM™",
-  description: "Ready-to-use HPLC mobile phase for fermentation QC: lactic acid, citric acid, acetic acid, malic acid, succinic acid, glucose, fructose. 5L-20L flex bags, nitrogen-sealed.",
+  title: "Fermentation Analysis Mobile Phase | LANCHROM™",
+  description: "Ready-to-use HPLC mobile phase configured for repeatable fermentation analysis in nitrogen-sealed flex bags.",
   alternates: { canonical: "https://www.lanchrom.com/solutions/mobile-phase/fermentation-analysis" },
 };
 

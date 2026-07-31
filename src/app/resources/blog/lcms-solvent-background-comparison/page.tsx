@@ -5,7 +5,7 @@ import Link from "next/link";
 const URL = "https://www.lanchrom.com/resources/blog/lcms-solvent-background-comparison";
 
 export const metadata: Metadata = {
-  title: "HPLC Methanol LC-MS Background Comparison | LANCHROM",
+  title: "LC-MS Solvent Background Comparison | LANCHROM",
   description:
     "Compare LC-MS Q1 scans of HPLC-grade methanol and acetonitrile, learn how solvent background affects sensitivity, and see what to verify before qualification.",
   alternates: { canonical: URL },
@@ -228,4 +228,3 @@ export default function LcmsSolventBackgroundComparisonPage() {
     </div>
   );
 }
-

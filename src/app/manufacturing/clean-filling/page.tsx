@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Clean Filling & Packaging | LANCHROM™",
-  description: "Controlled-environment filling lines with HEPA-filtered air, inline filtration, and grade-dedicated equipment — protecting purity from column to customer.",
+  title: "Clean Solvent Filling | LANCHROM™",
+  description: "See how controlled clean solvent filling protects product purity from the purification system to the sealed package.",
   alternates: { canonical: "https://www.lanchrom.com/manufacturing/clean-filling" },
 };
 

@@ -115,15 +115,15 @@ export default function HomeHeroSlideshow() {
               HPLC / LC-MS / GC / Electronic Grade Solvents
             </p>
             <h1 className="mb-6 break-words text-[2rem] font-extrabold leading-[1.08] text-white sm:text-5xl lg:text-6xl" style={{ fontFamily: M }}>
-              <span className="text-[#F28C28] [text-shadow:0_2px_12px_rgba(77,35,5,0.38)]">High-Purity Solvents</span>{" "}for Analytical Labs &amp; Electronic Manufacturing
+              <span className="text-[#CFEDE6] [text-shadow:0_2px_12px_rgba(5,53,49,0.32)]">High-Purity Solvents</span>{" "}for Analytical Labs &amp; Electronic Manufacturing
             </h1>
             <p className="mb-8 max-w-lg break-words text-base leading-relaxed text-[#F3FFFC] sm:text-lg">
               Factory-direct solvent solutions with dependable documentation, flexible packaging and global export support.
             </p>
-            <div className="mb-9 grid max-w-xl grid-cols-1 gap-x-8 gap-y-3 text-base font-extrabold uppercase text-[#FFAA45] sm:grid-cols-2 sm:text-lg">
+            <div className="mb-9 grid max-w-xl grid-cols-1 gap-x-8 gap-y-3 text-base font-extrabold uppercase text-[#C5E7DF] sm:grid-cols-2 sm:text-lg">
               {["HPLC & LC-MS grades", "UV cutoff qualified", "Low residue control", "CoA / SDS available"].map((item) => (
                 <span key={item} className="flex items-center gap-2">
-                  <span className="h-2.5 w-2.5 flex-none bg-[#F28C28]" />
+                  <span className="h-2.5 w-2.5 flex-none bg-[#72B9AF]" />
                   {item}
                 </span>
               ))}

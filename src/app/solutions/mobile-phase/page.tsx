@@ -6,8 +6,8 @@ import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
 import { SOLUTION_NAV_GROUPS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
-  title: "Mobile Phase Solutions | Ready-to-Use HPLC Buffers | LANCHROM™",
-  description: "Pre-made, nitrogen-sealed HPLC mobile phase in 5L-20L flex bags for pharmaceutical QC, food safety, and fermentation analysis.",
+  title: "Ready-to-Use HPLC Mobile Phase | LANCHROM™",
+  description: "Ready-to-use HPLC mobile phase supplied in nitrogen-sealed flex bags for repeatable laboratory workflows.",
   alternates: { canonical: "https://www.lanchrom.com/solutions/mobile-phase" },
 };
 

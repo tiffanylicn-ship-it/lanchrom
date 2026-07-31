@@ -18,8 +18,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const info = getIndustryInfo(slug);
   if (!info) return { title: "Not Found | LANCHROM" };
   return {
-    title: info.seoTitle,
+    title: `${info.name} | LANCHROM`,
     description: info.seoDescription,
+    keywords: [info.name],
     alternates: { canonical: `https://www.lanchrom.com/industries/${slug}` },
   };
 }

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Factory & Production Facility | LANCHROM™",
-  description: "Inside LANCHROM's solvent manufacturing facility — production capacity, environmental controls, hazmat infrastructure, and quality certifications.",
+  title: "Solvent Manufacturing Facility | LANCHROM™",
+  description: "Explore LANCHROM's solvent manufacturing facility, production capacity and controlled operating environment.",
   alternates: { canonical: "https://www.lanchrom.com/manufacturing/factory" },
 };
 

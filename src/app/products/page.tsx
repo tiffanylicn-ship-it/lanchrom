@@ -8,8 +8,9 @@ import ProductSidebar from "@/components/product/ProductSidebar";
 import EditorialPageHero from "@/components/layout/EditorialPageHero";
 
 export const metadata: Metadata = {
-  title: "Product Catalog | HPLC, LC-MS, GC Solvents & Reagents | LANCHROM",
-  description: "Full catalog organized into 8 product lines — pharmaceutical solvents, analytical solvents, mobile phase bags, standards, reagent kits, consumables, life science, and excipients.",
+  title: "Analytical Solvent Catalog | LANCHROM",
+  description: "Explore LANCHROM analytical solvents organized by product line, grade and laboratory workflow.",
+  keywords: ["analytical solvent catalog"],
   alternates: { canonical: "https://www.lanchrom.com/products" },
 };
 
@@ -35,8 +36,9 @@ export default function ProductsIndexPage() {
         eyebrow="Product Catalog"
         title={`8 Product Lines - ${totalCategories} Categories - ${totalProducts}+ SKUs`}
         description="From pharmaceutical-grade solvents to ready-to-use mobile phase bags, certified reference standards, and chromatography consumables - organized into 8 focused product lines."
-        image="/images/product-lines/factory2.png"
-        imageAlt="LANCHROM solvent production and dispatch facility"
+        image="/images/hero/oem-product-design-hplc-lcms.png"
+        imageAlt="OEM product design, HPLC and LC-MS laboratory capabilities"
+        imageFit="contain"
       />
 
       {/* Main content with sidebar */}

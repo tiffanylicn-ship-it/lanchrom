@@ -3,6 +3,7 @@ import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 interface NavGroupItem { label: string; href: string; badge?: string; }
 interface NavGroup { heading: string; href: string; items: NavGroupItem[]; }
@@ -131,15 +132,27 @@ export default function Navbar() {
 
   return (
     <header className={`${isHome ? "home-page-header" : "sticky top-0 bg-[#EAF4EF]/95 backdrop-blur-md"} z-50 border-b border-[#C9DBD3] shadow-[0_1px_0_rgba(10,81,76,0.04)]`}>
-      <div className="border-b border-[#EFEDE8] hidden md:block">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-end items-center h-8 text-xs text-[#8A8782]">
-          <a href="mailto:info@lanchrom.com" className="hover:text-[#003D91] transition-colors">info@lanchrom.com</a>
+      <div
+        className="relative z-[200] overflow-visible border-b border-[#D8E5DF] bg-white/45"
+        style={{ zIndex: 200 }}
+      >
+        <div className="max-w-7xl mx-auto flex min-h-9 items-center justify-end gap-3 overflow-visible px-4 py-1 text-xs text-[#71817C] sm:px-6 lg:px-8">
+          <a href="mailto:info@lanchrom.com" className="hidden hover:text-[#003D91] transition-colors sm:inline">info@lanchrom.com</a>
+          <span className="hidden h-3 w-px bg-[#C8D8D1] sm:block" aria-hidden="true" />
+          <Link href="/contact" className="rounded px-2 py-1 font-normal uppercase tracking-[0.08em] text-[#0A514C] hover:bg-white hover:text-[#003D91]">
+            Contact
+          </Link>
+          <span className="h-3 w-px bg-[#C8D8D1]" aria-hidden="true" />
+          <LanguageSwitcher />
         </div>
       </div>
 
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        style={{ zIndex: 10 }}
+      >
         <div className="flex items-center h-20 gap-6">
-          <Link href="/" className="flex items-center flex-shrink-0">
+          <Link href="/" className="notranslate flex items-center flex-shrink-0" translate="no">
             <div className="leading-tight">
               <Image src="/images/brand/lanchrom-logo.png" alt="LANCHROM™" width={944} height={181} className="h-11 sm:h-12 w-auto" priority />
               <span className="text-[#8A8782] text-[11px] block text-center font-medium tracking-wide mt-0.5">ANALYTICAL SCIENCE</span>
@@ -207,7 +220,9 @@ export default function Navbar() {
                 className="w-44 xl:w-56 border border-[#D8E2EA] rounded-lg px-3 py-2 text-xs text-[#334155] focus:outline-none focus:border-[#0E918C]"
               />
             </form>
-            <Link href="/contact?type=sample" className="bg-[#003D91] text-white text-sm font-bold px-5 py-2.5 rounded-lg hover:bg-[#002D6B] transition-colors whitespace-nowrap">Get Free Sample</Link>
+            {!isHome && (
+              <Link href="/contact?type=sample" className="bg-[#003D91] text-white text-sm font-bold px-5 py-2.5 rounded-lg hover:bg-[#002D6B] transition-colors whitespace-nowrap">Get Free Sample</Link>
+            )}
           </div>
 
           <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden ml-auto text-[#2B2A28] p-2">
@@ -236,7 +251,9 @@ export default function Navbar() {
           ].map(item => (
             <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="block text-[#5C5A55] hover:text-[#003D91] text-[16px] py-3 border-b border-[#EFEDE8]">{item.label}</Link>
           ))}
-          <Link href="/contact?type=sample" onClick={() => setMobileOpen(false)} className="block bg-[#3C6E71] text-white text-[16px] font-bold px-4 py-3.5 rounded-lg text-center mt-4">Get Free Sample</Link>
+          {!isHome && (
+            <Link href="/contact?type=sample" onClick={() => setMobileOpen(false)} className="block bg-[#3C6E71] text-white text-[16px] font-bold px-4 py-3.5 rounded-lg text-center mt-4">Get Free Sample</Link>
+          )}
         </div>
       )}
     </header>

@@ -7,8 +7,8 @@ import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
 import { SOLUTION_NAV_GROUPS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
-  title: "Custom Packaging & Private Label | LANCHROM™",
-  description: "Small-pack lab sizes from 100mL, private label from 50 units. Custom bottle types, label languages, and CoA branding.",
+  title: "Custom Solvent Packaging | LANCHROM™",
+  description: "Configure custom solvent packaging by bottle type, pack size, label language and documentation requirements.",
   alternates: { canonical: "https://www.lanchrom.com/solutions/custom-packaging" },
 };
 

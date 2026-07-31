@@ -7,6 +7,7 @@ interface EditorialPageHeroProps {
   description: string;
   image?: string;
   imageAlt?: string;
+  imageFit?: "cover" | "contain";
   children?: ReactNode;
 }
 
@@ -16,6 +17,7 @@ export default function EditorialPageHero({
   description,
   image,
   imageAlt,
+  imageFit = "cover",
   children,
 }: EditorialPageHeroProps) {
   return (
@@ -27,7 +29,11 @@ export default function EditorialPageHero({
           fill
           priority
           sizes="100vw"
-          className="object-cover object-right"
+          className={
+            imageFit === "contain"
+              ? "object-contain object-right bg-[#DCE9E3] p-3 md:p-6"
+              : "object-cover object-right"
+          }
         />
       )}
       <div className="editorial-page-mask absolute inset-0 bg-[#EAF4EF]" />

@@ -6,7 +6,19 @@ import Link from "next/link";
 
 const M = "var(--font-montserrat), sans-serif";
 
-const PANELS = [
+type SolutionPanel = {
+  title: string;
+  eyebrow: string;
+  href: string;
+  image: string;
+  alt: string;
+  description: string;
+  items: string[];
+  maskClassName?: string;
+  copyClassName?: string;
+};
+
+const PANELS: SolutionPanel[] = [
   {
     title: "Applications",
     eyebrow: "Solvents by analytical method",
@@ -29,10 +41,12 @@ const PANELS = [
     title: "Packaging",
     eyebrow: "From lab pack to industrial scale",
     href: "/solutions/custom-packaging",
-    image: "/images/backgrounds/oem-bottle-pic.png",
+    image: "/images/product-lines/lanchrom-packaging.jpg",
     alt: "Custom solvent packaging formats",
     description: "Select the container, closure and filling format that fits laboratory, production or distribution workflows.",
     items: ["500 mL to 200 L", "Amber glass, HDPE and drums", "Nitrogen purging and clean filling"],
+    maskClassName: "home-service-mask--packaging",
+    copyClassName: "home-service-copy--packaging",
   },
 ];
 
@@ -84,20 +98,20 @@ export default function IntegratedSolutions() {
                 className="object-cover object-right"
                 priority={index === 0}
               />
-              <div className="home-service-mask absolute inset-0 z-[1]" aria-hidden="true" />
-              <div className="home-service-copy relative z-10 flex min-h-[650px] flex-col justify-center px-6 py-12 sm:px-8 md:min-h-[560px] md:px-8 lg:px-10">
-                <p className="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-[#0E918C]">{panel.eyebrow}</p>
-                <h3 className="text-3xl font-extrabold text-[#0A302E] md:text-[2.15rem]" style={{ fontFamily: M }}>{panel.title}</h3>
-                <p className="mt-5 text-[15px] leading-relaxed text-[#284D46]">{panel.description}</p>
+              <div className={`home-service-mask ${panel.maskClassName ?? ""} absolute inset-0 z-[1]`} aria-hidden="true" />
+              <div className={`home-service-copy ${panel.copyClassName ?? ""} relative z-10 flex min-h-[650px] flex-col justify-center px-6 py-12 sm:px-8 md:min-h-[560px] md:px-10 lg:px-12`}>
+                <p className="mb-3 text-sm font-bold uppercase tracking-[0.12em] text-[#0E918C] md:text-base">{panel.eyebrow}</p>
+                <h3 className="text-3xl font-extrabold leading-tight text-[#0A302E] md:text-4xl" style={{ fontFamily: M }}>{panel.title}</h3>
+                <p className="mt-5 text-base leading-7 text-[#284D46] md:text-lg">{panel.description}</p>
                 <ul className="mt-6 space-y-3">
                   {panel.items.map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-sm font-semibold text-[#294842]">
-                      <span className="h-2 w-2 bg-[#0E918C]" />
+                    <li key={item} className="flex items-center gap-3 text-sm font-semibold leading-6 text-[#294842] md:text-base">
+                      <span className="h-2 w-2 flex-none bg-[#0E918C]" />
                       {item}
                     </li>
                   ))}
                 </ul>
-                <Link href={panel.href} className="mt-8 w-fit border-b border-[#0E918C] pb-1 text-base font-bold text-[#0A514C] hover:text-[#0E918C]">
+                <Link href={panel.href} className="mt-7 w-fit border-b border-[#0E918C] pb-1 text-base font-bold text-[#0A514C] hover:text-[#0E918C]">
                   Explore {panel.title}
                 </Link>
               </div>

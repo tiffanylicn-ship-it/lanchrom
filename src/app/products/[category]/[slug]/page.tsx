@@ -12,7 +12,6 @@ import {
 } from "@/data/product-line-pages";
 import ProductStickyPanel from "@/components/product/ProductStickyPanel";
 import ProductCategoryOverview from "@/components/product/ProductCategoryOverview";
-import EditorialPageHero from "@/components/layout/EditorialPageHero";
 import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
 
 interface Props {
@@ -33,8 +32,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (line && nestedCategory?.group === line.group) {
     return {
-      title: nestedCategory.seoTitle,
+      title: `${nestedCategory.name} | LANCHROM`,
       description: nestedCategory.seoDescription,
+      keywords: [nestedCategory.name],
       alternates: { canonical: `https://www.lanchrom.com/products/${line.slug}/${nestedCategory.slug}` },
     };
   }
@@ -42,8 +42,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProductBySlug(slug, category);
   if (!product) return { title: "Product Not Found | LANCHROM™" };
   return {
-    title: product.seoTitle || `${product.name} | LANCHROM™`,
+    title: `${product.keywords?.[0] || product.name} | LANCHROM™`,
     description: product.seoDescription || product.shortDescription,
+    keywords: product.keywords?.slice(0, 1),
     alternates: { canonical: `https://www.lanchrom.com/products/${category}/${slug}` },
   };
 }
@@ -92,22 +93,27 @@ export default async function ProductDetailPage({ params }: Props) {
         { label: product.name },
       ]} />
 
-      <EditorialPageHero
-        eyebrow={categoryInfo?.shortName || "Product"}
-        title={product.name}
-        description={product.shortDescription || `Technical specifications, documentation, and packaging options for ${product.name}.`}
-        image={categoryInfo?.bannerImage}
-        imageAlt={categoryInfo?.name || product.name}
-      >
-        <div className="flex flex-wrap items-center gap-2 text-sm text-[#42615A]">
-          {(product.grades ?? []).map(g => (
-            <span key={g} className="rounded-full bg-white/75 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-[#0A514C]">
-              {GRADE_LABELS[g] || g}
-            </span>
-          ))}
-          {product.cas && <span className="ml-1 font-mono">CAS: {product.cas}</span>}
+      <section className="border-b border-[#DCE8E3] bg-[#F4F9F7]">
+        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 md:py-12 lg:px-8">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#0E918C]">
+            {categoryInfo?.shortName || "Product"}
+          </p>
+          <h1 className="mt-3 text-3xl font-extrabold leading-tight text-[#0A302E] md:text-4xl">
+            {product.name}
+          </h1>
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#526660]">
+            {product.shortDescription || `Technical specifications, documentation, and packaging options for ${product.name}.`}
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-2 text-sm text-[#42615A]">
+            {(product.grades ?? []).map((grade) => (
+              <span key={grade} className="rounded-full bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-[#0A514C] shadow-sm">
+                {GRADE_LABELS[grade] || grade}
+              </span>
+            ))}
+            {product.cas && <span className="ml-1 font-mono">CAS: {product.cas}</span>}
+          </div>
         </div>
-      </EditorialPageHero>
+      </section>
 
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,7 +167,7 @@ export default async function ProductDetailPage({ params }: Props) {
                 <table className="w-full border-collapse">
                   <tbody>
                     {(product.specifications ?? []).map((spec, i) => (
-                      <tr key={spec.parameter} className={i % 2 === 0 ? "bg-[#FBFAF8]" : ""}>
+                      <tr key={`${spec.parameter}-${i}`} className={i % 2 === 0 ? "bg-[#FBFAF8]" : ""}>
                         <td className="py-3 px-4 text-sm font-semibold text-[#2B2A28] border-b border-[#EFEDE8] w-1/2">{spec.parameter}</td>
                         <td className="py-3 px-4 text-sm text-[#5C5A55] border-b border-[#EFEDE8]">
                           {spec.value}

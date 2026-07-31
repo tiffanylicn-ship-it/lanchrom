@@ -4,8 +4,8 @@ import Image from "next/image";
 import { PRODUCTS } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "Downloads | TDS, SDS, CoA, Certificates | LANCHROM™",
-  description: "Download technical data sheets, safety data sheets, certificates of analysis, and quality certificates for LANCHROM™ products.",
+  title: "Product Documents | LANCHROM™",
+  description: "Find LANCHROM product documents, organized by document type and product.",
   alternates: { canonical: "https://www.lanchrom.com/downloads" },
 };
 
