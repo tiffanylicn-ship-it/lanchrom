@@ -53,13 +53,13 @@ export async function POST(request: NextRequest) {
     }
 
     let emailDelivered = false;
-    let confirmationDelivered = false;
     try {
       const notification = await sendQuoteLeadNotification(body);
       emailDelivered = notification.delivered;
-      if (emailDelivered || crmSynced) {
-        const confirmation = await sendQuoteAutoReply(body);
-        confirmationDelivered = confirmation.delivered;
+      if (emailDelivered) {
+        sendQuoteAutoReply(body).catch(error => {
+          console.warn("Quote auto-reply failed:", error);
+        });
       }
     } catch (error) {
       console.error("Quote lead notification failed:", error);
@@ -83,7 +83,6 @@ export async function POST(request: NextRequest) {
         ...crmData,
         delivery: {
           email: emailDelivered,
-          confirmation: confirmationDelivered,
           hubspot: crmSynced,
         },
       },

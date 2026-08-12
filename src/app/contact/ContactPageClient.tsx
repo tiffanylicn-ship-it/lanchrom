@@ -6,10 +6,6 @@ import Link from "next/link";
 
 const SampleModal = dynamic(() => import("@/components/forms/SampleModal"), { ssr: false });
 const QuoteModal = dynamic(() => import("@/components/forms/QuoteModal"), { ssr: false });
-const DocumentRequestModal = dynamic(
-  () => import("@/components/forms/DocumentRequestModal"),
-  { ssr: false },
-);
 
 function ContactContent() {
   const searchParams = useSearchParams();
@@ -17,33 +13,22 @@ function ContactContent() {
   const product = searchParams.get("product") || "";
   const [sampleOpen, setSampleOpen] = useState(type === "sample");
   const [quoteOpen, setQuoteOpen] = useState(type === "quote");
-  const [documentOpen, setDocumentOpen] = useState(
-    type === "coa" || type === "tds" || type === "sds" || type === "documents",
-  );
-  const initialFileType =
-    type === "tds" || type === "sds" ? type : "coa";
 
   return (
     <div className="bg-white">
       <section className="py-14">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <button onClick={() => setSampleOpen(true)} className="cursor-pointer text-left card-flat p-6 hover:border-[#C9DBD9] transition-colors">
+          <div className="grid lg:grid-cols-3 gap-6">
+            <button onClick={() => setSampleOpen(true)} className="text-left card-flat p-6 hover:border-[#C9DBD9] transition-colors">
               <h3 className="font-bold text-[#2B2A28] mb-2">Get a Free Sample</h3>
               <p className="text-[#8A8782] text-sm mb-4">Qualify our product for your application before committing to a bulk order.</p>
               <span className="text-[#3C6E71] font-semibold text-sm">Request sample →</span>
             </button>
 
-            <button onClick={() => setQuoteOpen(true)} className="cursor-pointer text-left card-flat p-6 hover:border-[#C9DBD9] transition-colors">
+            <button onClick={() => setQuoteOpen(true)} className="text-left card-flat p-6 hover:border-[#C9DBD9] transition-colors">
               <h3 className="font-bold text-[#2B2A28] mb-2">Request a Quote</h3>
               <p className="text-[#8A8782] text-sm mb-4">Get pricing for your specific product, packaging, and volume requirements.</p>
               <span className="text-[#3C6E71] font-semibold text-sm">Request quote →</span>
-            </button>
-
-            <button onClick={() => setDocumentOpen(true)} className="cursor-pointer text-left card-flat p-6 hover:border-[#C9DBD9] transition-colors">
-              <h3 className="font-bold text-[#2B2A28] mb-2">CoA / TDS / SDS</h3>
-              <p className="text-[#8A8782] text-sm mb-4">Request the current quality or safety document for a LANCHROM product.</p>
-              <span className="text-[#3C6E71] font-semibold text-sm">Request document →</span>
             </button>
 
             <Link href="/oem/quote-calculator" className="card-flat p-6 hover:border-[#C9DBD9] transition-colors">
@@ -89,12 +74,6 @@ function ContactContent() {
 
       <SampleModal isOpen={sampleOpen} onClose={() => setSampleOpen(false)} prefilledProduct={product} />
       <QuoteModal isOpen={quoteOpen} onClose={() => setQuoteOpen(false)} prefilledProduct={product} />
-      <DocumentRequestModal
-        isOpen={documentOpen}
-        onClose={() => setDocumentOpen(false)}
-        initialFileType={initialFileType}
-        prefilledProduct={product}
-      />
     </div>
   );
 }

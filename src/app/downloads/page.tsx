@@ -2,14 +2,33 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { PRODUCTS } from "@/data/products";
+import { getCategoryInfo, GROUP_LABELS } from "@/data/categories";
+import { getProductDocumentLinks } from "@/lib/product-documents";
+import ProductDocumentLibrary from "./ProductDocumentLibrary";
 
 export const metadata: Metadata = {
   title: "Product Documents | LANCHROM™",
-  description: "Find LANCHROM product documents, organized by document type and product.",
+  description: "Search and download LANCHROM product TDS and specification summaries, organized by product line, category, product name, and CAS number.",
   alternates: { canonical: "https://www.lanchrom.com/downloads" },
 };
 
 export default function DownloadsPage() {
+  const rows = PRODUCTS.map((product) => {
+    const category = getCategoryInfo(product.category);
+    const documents = getProductDocumentLinks(product);
+    return {
+      id: product._id || `${product.category}-${product.slug}`,
+      name: product.name,
+      cas: product.cas,
+      category: product.category,
+      categoryName: category?.name || product.category,
+      productLine: category ? GROUP_LABELS[category.group].label : "High-Purity Chemicals",
+      productHref: product._id === "electronic-ipa" ? "/products/electronic-grade-ipa" : `/products/${product.category}/${product.slug}`,
+      tdsHref: documents.tds,
+      specificationHref: documents.specification,
+    };
+  }).sort((a, b) => a.productLine.localeCompare(b.productLine) || a.categoryName.localeCompare(b.categoryName) || a.name.localeCompare(b.name));
+
   return (
     <div className="bg-white">
       <section className="relative overflow-hidden py-20 border-b border-[#E6E3DD] bg-[#FBFAF8]">
@@ -21,19 +40,19 @@ export default function DownloadsPage() {
           <p className="tag-line mb-3">Documentation</p>
           <h1 className="text-3xl md:text-4xl font-bold text-[#102A43] mb-3">Downloads</h1>
           <p className="text-[#334155] text-lg max-w-2xl">
-            Technical data sheets, safety data sheets, and certificates of analysis for any product.
-            Documents are sent by email — visit a product page and use the Download CoA or Download TDS buttons.
+            Search the complete product catalog and directly download product-level TDS and specification summaries.
+            Market-specific SDS files and batch-specific COA documents remain available on request.
           </p>
         </div>
       </section>
 
       <section className="py-14">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-6 mb-14">
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
-              { t: "Certificates of Analysis", d: "Batch-specific test results for any product. Request from the product page." },
-              { t: "Technical Data Sheets", d: "Full specification sheets including storage, handling, and shelf life." },
-              { t: "Quality Certificates", d: "GMP statements, ISO 9001, kosher and halal certificates available on request." },
+              { t: `${PRODUCTS.length} Product TDS Files`, d: "Product identity, available grades, applications, handling guidance, and all available package sizes in one PDF." },
+              { t: `${PRODUCTS.length} Specification Summaries`, d: "Representative test items, grade scope, packaging, and release-document guidance for supplier qualification." },
+              { t: "Controlled Documents", d: "Request the current destination-specific SDS, batch COA, or controlled grade specification from the product page." },
             ].map(item => (
               <div key={item.t} className="card-flat p-6">
                 <h3 className="font-bold text-[#2B2A28] mb-2">{item.t}</h3>
@@ -42,18 +61,11 @@ export default function DownloadsPage() {
             ))}
           </div>
 
-          <h2 className="text-xl font-bold text-[#2B2A28] mb-5">Browse by product</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {PRODUCTS.slice(0, 12).map(p => (
-              <Link key={p._id} href={`/products/${p.category}/${p.slug}`} className="flex items-center justify-between px-4 py-3 border border-[#EFEDE8] rounded-lg hover:border-[#C9DBD9] transition-colors text-sm">
-                <span className="text-[#2B2A28] font-medium">{p.name}</span>
-                <span className="text-[#8A8782] text-xs">→</span>
-              </Link>
-            ))}
+          <div className="flex flex-wrap items-end justify-between gap-4 mb-6">
+            <div><p className="tag-line mb-2">Document library</p><h2 className="text-2xl md:text-3xl font-bold text-[#102A43]">Browse by product</h2></div>
+            <Link href="/products" className="btn-line inline-flex">View product catalog</Link>
           </div>
-          <div className="text-center mt-8">
-            <Link href="/products" className="btn-line inline-flex">View full catalog</Link>
-          </div>
+          <ProductDocumentLibrary rows={rows} />
         </div>
       </section>
     </div>

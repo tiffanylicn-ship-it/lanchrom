@@ -1,6 +1,12 @@
-import { CATEGORIES, GROUP_LABELS, type CategoryInfo } from "./categories";
+import { getCategoryInfo, type CategoryInfo } from "./categories";
+import {
+  PRODUCT_CATEGORY_DEFINITIONS,
+  PRODUCT_GROUP_ORDER,
+  PRODUCT_GROUPS,
+  type ProductGroupKey,
+} from "./product-taxonomy";
 
-export type ProductGroup = keyof typeof GROUP_LABELS;
+export type ProductGroup = ProductGroupKey;
 
 export interface ProductLinePageInfo {
   group: ProductGroup;
@@ -9,55 +15,27 @@ export interface ProductLinePageInfo {
   imageAlt: string;
 }
 
-export const PRODUCT_LINE_PAGES: Record<ProductGroup, ProductLinePageInfo> = {
-  "pharma-solvents": {
-    group: "pharma-solvents",
-    slug: "pharmaceutical-grade-solvents",
-    image: "/images/product-lines/pharmaceutical-grade.jpg",
-    imageAlt: "Pharmaceutical grade solvent quality control",
-  },
-  "analytical-solvents": {
-    group: "analytical-solvents",
-    slug: "analytical-solvents",
-    image: "/images/product-lines/lanchrom-hplc-lcms.jpg",
-    imageAlt: "HPLC and LC-MS analytical laboratory",
-  },
-  "mobile-phase": {
-    group: "mobile-phase",
-    slug: "ready-to-use-mobile-phase-bags",
-    image: "/images/product-lines/mobile-phase-bags.jpg",
-    imageAlt: "Ready-to-use mobile phase bags",
-  },
-  standards: {
-    group: "standards",
-    slug: "standard-solutions-reference-materials",
-    image: "/images/product-lines/standard-solutions.jpg",
-    imageAlt: "Standard solutions and reference materials laboratory",
-  },
-  "reagent-kits": {
-    group: "reagent-kits",
-    slug: "reagent-kits-custom-sets",
-    image: "/images/product-lines/reagent-kits.jpg",
-    imageAlt: "Laboratory reagent kits and custom sets",
-  },
-  consumables: {
-    group: "consumables",
-    slug: "chromatography-consumables",
-    image: "/images/product-lines/spectroscopic-nmr-solvents.jpg",
-    imageAlt: "Chromatography consumables and NMR solvents",
-  },
-  "life-science": {
-    group: "life-science",
-    slug: "life-science-products",
-    image: "/images/product-lines/life-science-reagents-v2.jpg",
-    imageAlt: "Life science reagent laboratory",
-  },
-  excipients: {
-    group: "excipients",
-    slug: "pharmaceutical-excipients-food-grade",
-    image: "/images/product-lines/pharmaceutical-excipients.jpg",
-    imageAlt: "Pharmaceutical excipients laboratory",
-  },
+export const PRODUCT_LINE_PAGES: Record<ProductGroup, ProductLinePageInfo> = Object.fromEntries(
+  PRODUCT_GROUP_ORDER.map((group) => [
+    group,
+    {
+      group,
+      slug: PRODUCT_GROUPS[group].slug,
+      image: PRODUCT_GROUPS[group].image,
+      imageAlt: PRODUCT_GROUPS[group].imageAlt,
+    },
+  ]),
+) as Record<ProductGroup, ProductLinePageInfo>;
+
+const LEGACY_PRODUCT_LINE_ALIASES: Record<string, ProductGroup> = {
+  "pharmaceutical-grade-solvents": "high-purity-solvents",
+  "analytical-solvents": "high-purity-solvents",
+  "ready-to-use-mobile-phase-bags": "ready-to-use-solutions",
+  "standard-solutions-reference-materials": "standards-reagents",
+  "reagent-kits-custom-sets": "life-science-workflow",
+  "chromatography-consumables": "chromatography-sample-prep",
+  "life-science-products": "life-science-workflow",
+  "pharmaceutical-excipients-food-grade": "pharma-food-materials",
 };
 
 export function getProductLineByGroup(group: string): ProductLinePageInfo | undefined {
@@ -65,11 +43,14 @@ export function getProductLineByGroup(group: string): ProductLinePageInfo | unde
 }
 
 export function getProductLineBySlug(slug: string): ProductLinePageInfo | undefined {
-  return Object.values(PRODUCT_LINE_PAGES).find((line) => line.slug === slug);
+  const canonical = Object.values(PRODUCT_LINE_PAGES).find((line) => line.slug === slug);
+  if (canonical) return canonical;
+  const group = LEGACY_PRODUCT_LINE_ALIASES[slug];
+  return group ? PRODUCT_LINE_PAGES[group] : undefined;
 }
 
 export function getProductLineForCategory(categorySlug: string): ProductLinePageInfo | undefined {
-  const category = CATEGORIES[categorySlug];
+  const category = getCategoryInfo(categorySlug);
   return category ? PRODUCT_LINE_PAGES[category.group] : undefined;
 }
 
@@ -78,7 +59,7 @@ export function getProductLinePath(group: ProductGroup): string {
 }
 
 export function getCategoryPath(category: Pick<CategoryInfo, "slug" | "group"> | string): string {
-  const info = typeof category === "string" ? CATEGORIES[category] : category;
+  const info = typeof category === "string" ? getCategoryInfo(category) : category;
   if (!info) return `/products/${typeof category === "string" ? category : category.slug}`;
   return `${getProductLinePath(info.group)}/${info.slug}`;
 }
@@ -88,7 +69,7 @@ export function getProductLineStaticParams() {
 }
 
 export function getNestedCategoryStaticParams() {
-  return Object.values(CATEGORIES).map((category) => ({
+  return PRODUCT_CATEGORY_DEFINITIONS.map((category) => ({
     category: PRODUCT_LINE_PAGES[category.group].slug,
     slug: category.slug,
   }));

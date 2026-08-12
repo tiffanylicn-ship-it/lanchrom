@@ -5,7 +5,6 @@ import type {
   QuoteRequestForm,
   SampleRequestForm,
 } from "@/types";
-import { classifyInquiry } from "@/lib/inquiries/classify";
 
 const API_BASE = "https://api.hubapi.com";
 
@@ -108,11 +107,6 @@ function buildContactProperties(contact: HubSpotContact) {
     ...(contact.source_product && { source_product: contact.source_product }),
     ...(contact.source_url && { source_url: contact.source_url }),
     ...(contact.current_supplier && { current_supplier: contact.current_supplier }),
-    ...(contact.inquiry_tags && { inquiry_tags: contact.inquiry_tags }),
-    ...(contact.search_keywords && { search_keywords: contact.search_keywords }),
-    ...(contact.inquiry_priority && { inquiry_priority: contact.inquiry_priority }),
-    ...(contact.product_category && { product_category: contact.product_category }),
-    ...(contact.inquiry_region && { inquiry_region: contact.inquiry_region }),
   };
 
   return { standard, custom };
@@ -228,10 +222,6 @@ export async function createDeal(
 
 export async function processSampleRequest(form: SampleRequestForm) {
   const isPriority = isPriorityVolume(form.annualVolume);
-  const classification = classifyInquiry({
-    ...form,
-    notes: `Sample request ${form.notes || ""}`,
-  });
   const contactId = await upsertContact({
     email: form.email,
     firstname: form.firstName,
@@ -246,11 +236,6 @@ export async function processSampleRequest(form: SampleRequestForm) {
     source_product: form.sourceProduct,
     source_url: form.sourceUrl,
     current_supplier: form.currentSupplier,
-    inquiry_tags: classification.tags.join(","),
-    search_keywords: classification.searchKeywords.join(","),
-    inquiry_priority: classification.priority,
-    product_category: classification.productCategory,
-    inquiry_region: classification.region,
   });
 
   let dealId: string | undefined;
@@ -280,10 +265,6 @@ Notes: ${form.notes || "None"}`,
 
 export async function processQuoteRequest(form: QuoteRequestForm) {
   const isPriority = isPriorityVolume(form.annualVolume);
-  const classification = classifyInquiry({
-    ...form,
-    notes: `Quote request ${form.notes || ""}`,
-  });
   const contactId = await upsertContact({
     email: form.email,
     firstname: form.firstName,
@@ -296,11 +277,6 @@ export async function processQuoteRequest(form: QuoteRequestForm) {
     inquiry_type: "Quote Request",
     source_product: form.sourceProduct,
     source_url: form.sourceUrl,
-    inquiry_tags: classification.tags.join(","),
-    search_keywords: classification.searchKeywords.join(","),
-    inquiry_priority: classification.priority,
-    product_category: classification.productCategory,
-    inquiry_region: classification.region,
   });
 
   let dealId: string | undefined;
@@ -331,14 +307,6 @@ Notes: ${form.notes || "None"}`,
 
 export async function processOEMQuote(form: OEMQuoteForm) {
   const isPriority = form.unitsPerOrder >= 500;
-  const classification = classifyInquiry({
-    productOfInterest: form.product,
-    gradeRequired: form.grade,
-    packagingSize: `${form.bottleType} ${form.volumePerUnit}`,
-    quantity: String(form.unitsPerOrder),
-    country: form.destinationCountry,
-    notes: `OEM private label ${form.labelType} ${form.additionalDocs.join(" ")}`,
-  });
   const contactId = await upsertContact({
     email: form.email,
     firstname: form.firstName,
@@ -347,11 +315,6 @@ export async function processOEMQuote(form: OEMQuoteForm) {
     country: form.destinationCountry,
     product_interest: form.product,
     inquiry_type: "OEM Inquiry",
-    inquiry_tags: classification.tags.join(","),
-    search_keywords: classification.searchKeywords.join(","),
-    inquiry_priority: isPriority ? "HIGH" : classification.priority,
-    product_category: classification.productCategory,
-    inquiry_region: classification.region,
   });
 
   let dealId: string | undefined;
@@ -393,10 +356,6 @@ export async function processDownloadRequest(
   fileType: "coa" | "tds" | "sds"
 ) {
   try {
-    const classification = classifyInquiry({
-      productOfInterest: productSlug,
-      notes: `${fileType.toUpperCase()} document request`,
-    });
     await upsertContact({
       email,
       firstname: "",
@@ -405,11 +364,6 @@ export async function processDownloadRequest(
       country: "",
       product_interest: productSlug,
       inquiry_type: `Download ${fileType.toUpperCase()}`,
-      inquiry_tags: classification.tags.join(","),
-      search_keywords: classification.searchKeywords.join(","),
-      inquiry_priority: classification.priority,
-      product_category: classification.productCategory,
-      inquiry_region: classification.region,
     });
   } catch {
     console.warn("HubSpot contact update failed for download request");

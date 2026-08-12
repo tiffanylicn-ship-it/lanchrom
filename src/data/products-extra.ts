@@ -247,6 +247,40 @@ export const PRODUCTS_EXTRA: Product[] = [
     keywords: ["IPA manufacturer"],
   },
 
+  // ── Electronic Grade IPA ──────────────────────────────────
+  {
+    _id: "electronic-ipa",
+    name: "Isopropanol (IPA) — Electronic Grade",
+    slug: "ipa",
+    cas: "67-63-0",
+    formula: "C₃H₈O",
+    mw: "60.10",
+    category: "electronic-grade",
+    grades: ["electronic"],
+    shortDescription: "Ultra-high-purity isopropanol for semiconductor wafer cleaning, CMP, advanced packaging, and precision electronics manufacturing.",
+    specifications: [
+      { parameter: "Purity", value: "≥ 99.99%", testMethod: "GC" },
+      { parameter: "Water", value: "Controlled", testMethod: "Karl Fischer" },
+      { parameter: "Metal ions", value: "ppb-level control", testMethod: "ICP-MS" },
+      { parameter: "Residue after evaporation", value: "Controlled", testMethod: "Gravimetric" },
+      { parameter: "Particles", value: "Advanced particle control", testMethod: "Particle counter" },
+    ],
+    applications: ["Semiconductor wafer cleaning", "CMP process support", "Advanced packaging", "Precision electronics cleaning"],
+    packaging: [
+      { volume: "500mL", volumeMl: 500, container: "hdpe", minQty: 1, available: true },
+      { volume: "1L", volumeMl: 1000, container: "hdpe", minQty: 1, available: true },
+      { volume: "2.5L", volumeMl: 2500, container: "hdpe", minQty: 1, available: true },
+      { volume: "5L", volumeMl: 5000, container: "hdpe", minQty: 1, available: true },
+      { volume: "20L", volumeMl: 20000, container: "hdpe", minQty: 1, available: true },
+      { volume: "1000L", volumeMl: 1000000, container: "hdpe", minQty: 1, available: true },
+    ],
+    featured: true, coaAvailable: false, tdsAvailable: true, sdsAvailable: true, coaStatus: "request-only",
+    isHazmat: true, unNumber: "UN 1219", hazmatClass: "Class 3 · PG II", ichClass: "3",
+    seoTitle: "Electronic Grade IPA | High Purity Isopropanol | LANCHROM™",
+    seoDescription: "Electronic Grade IPA with high purity and ppb-level metal control for semiconductor cleaning, CMP, and advanced packaging.",
+    keywords: ["Electronic Grade IPA"],
+  },
+
   // ── Electronic Grade Ethanol ──────────────────────────────
   {
     _id: "electronic-ethanol",

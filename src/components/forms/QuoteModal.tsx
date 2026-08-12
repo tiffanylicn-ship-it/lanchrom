@@ -20,7 +20,6 @@ export default function QuoteModal({ isOpen, onClose, prefilledProduct = "", sel
 
   const onSubmit = async (data: QuoteRequestForm) => {
     setLoading(true);
-    setError("");
     try {
       const token = await getRecaptchaToken("quote");
       const res = await fetch("/api/quote", {

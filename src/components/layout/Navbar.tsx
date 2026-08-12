@@ -10,48 +10,39 @@ interface NavGroup { heading: string; href: string; items: NavGroupItem[]; }
 
 const PRODUCTS_NAV: { col1: NavGroup[]; col2: NavGroup[]; col3: NavGroup[] } = {
   col1: [
-    { heading: "Pharmaceutical Grade Solvents", href: "/products/pharmaceutical-grade-solvents", items: [
-      { label: "Pharma Grade (USP/EP)", href: "/products/pharmaceutical-grade-solvents/pharma-grade" },
-      { label: "Anhydrous Solvents", href: "/products/pharmaceutical-grade-solvents/anhydrous-solvents" },
-      { label: "Prep / Bulk Grade", href: "/products/pharmaceutical-grade-solvents/prep-solvents" },
-      { label: "Electronic Grade", href: "/products/pharmaceutical-grade-solvents/electronic-grade" },
+    { heading: "High-Purity Solvents & Chemicals", href: "/products/high-purity-solvents", items: [
+      { label: "Analytical & Chromatography Grades", href: "/products/high-purity-solvents#analytical-and-chromatography-grades" },
+      { label: "Spectroscopy & NMR", href: "/products/high-purity-solvents#spectroscopy-and-nmr" },
+      { label: "Manufacturing & Regulated Grades", href: "/products/high-purity-solvents#manufacturing-and-regulated-grades" },
+      { label: "Trace Analysis Chemicals", href: "/products/high-purity-solvents#trace-analysis-chemicals" },
+      { label: "AR & GR Laboratory Reagents", href: "/products/high-purity-solvents#laboratory-reagent-grades", badge: "NEW" },
     ]},
-    { heading: "HPLC / GC Analytical Solvents", href: "/products/analytical-solvents", items: [
-      { label: "HPLC Solvents", href: "/products/analytical-solvents/hplc-solvents" },
-      { label: "LC-MS Solvents", href: "/products/analytical-solvents/lcms-solvents" },
-      { label: "UPLC Solvents", href: "/products/analytical-solvents/uplc-solvents" },
-      { label: "GC Solvents", href: "/products/analytical-solvents/gc-solvents" },
-      { label: "Spectroscopic / NMR", href: "/products/analytical-solvents/spectroscopic-solvents" },
-      { label: "Trace Analysis Grade", href: "/products/analytical-solvents/trace-analysis-grade", badge: "NEW" },
+    { heading: "Ready-to-Use Solutions", href: "/products/ready-to-use-solutions", items: [
+      { label: "Prepared LC / LC-MS Mobile Phases", href: "/products/ready-to-use-solutions#prepared-lc-lc-ms-mobile-phases" },
+      { label: "Application-Specific Solutions", href: "/products/ready-to-use-solutions#application-specific-solutions" },
     ]},
   ],
   col2: [
-    { heading: "Ready-to-Use Mobile Phase Bags", href: "/products/ready-to-use-mobile-phase-bags", items: [
-      { label: "Mobile Phase Bags", href: "/products/ready-to-use-mobile-phase-bags/mobile-phase-bags" },
+    { heading: "Reference Standards & Reagents", href: "/products/reference-standards-analytical-reagents", items: [
+      { label: "Reference Standards & Calibration", href: "/products/reference-standards-analytical-reagents#reference-standards-and-calibration" },
+      { label: "Pharmaceutical Compliance Standards", href: "/products/reference-standards-analytical-reagents#pharmaceutical-compliance-standards" },
+      { label: "Water Determination Reagents", href: "/products/reference-standards-analytical-reagents#water-determination-reagents" },
     ]},
-    { heading: "Standards & Reference Materials", href: "/products/standard-solutions-reference-materials", items: [
-      { label: "Standard Solutions", href: "/products/standard-solutions-reference-materials/standard-solutions" },
-      { label: "Elemental Impurities", href: "/products/standard-solutions-reference-materials/elemental-impurities" },
-    ]},
-    { heading: "Reagent Kits & Custom Sets", href: "/products/reagent-kits-custom-sets", items: [
-      { label: "Reagent Kits", href: "/products/reagent-kits-custom-sets/reagent-kits" },
+    { heading: "Chromatography & Sample Preparation", href: "/products/chromatography-sample-preparation", items: [
+      { label: "Planar Chromatography", href: "/products/chromatography-sample-preparation#planar-chromatography" },
+      { label: "Sample Preparation & Cleanup", href: "/products/chromatography-sample-preparation#sample-preparation-and-cleanup" },
     ]},
   ],
   col3: [
-    { heading: "Chromatography Consumables", href: "/products/chromatography-consumables", items: [
-      { label: "Karl Fischer Reagents", href: "/products/chromatography-consumables/karl-fischer" },
-      { label: "TLC Products", href: "/products/chromatography-consumables/tlc-products" },
-      { label: "SPE Products", href: "/products/chromatography-consumables/spe-products" },
-      { label: "Deuterated NMR Solvents", href: "/products/chromatography-consumables/nmr-deuterated" },
+    { heading: "Life Science & Workflow Kits", href: "/products/life-science-workflow-kits", items: [
+      { label: "Microbiology & Monitoring", href: "/products/life-science-workflow-kits#microbiology-and-monitoring" },
+      { label: "Cell Processing & Cryopreservation", href: "/products/life-science-workflow-kits#cell-processing-and-cryopreservation" },
+      { label: "Configured Workflow Kits", href: "/products/life-science-workflow-kits#configured-workflow-kits" },
     ]},
-    { heading: "Life Science Reagents", href: "/products/life-science-products", items: [
-      { label: "Cell Culture & Cryopreservation", href: "/products/life-science-products/cell-culture-reagents", badge: "NEW" },
-      { label: "Life Science Reagents", href: "/products/life-science-products/life-science-reagents" },
-    ]},
-    { heading: "Pharmaceutical Excipients", href: "/products/pharmaceutical-excipients-food-grade", items: [
-      { label: "Pharmaceutical Excipients", href: "/products/pharmaceutical-excipients-food-grade/excipients" },
-      { label: "Food Grade Chemicals", href: "/products/pharmaceutical-excipients-food-grade/food-grade" },
-      { label: "Lab Consumable Chemicals", href: "/products/pharmaceutical-excipients-food-grade/lab-consumable-chemicals", badge: "NEW" },
+    { heading: "Pharmaceutical, Food & Lab Materials", href: "/products/pharmaceutical-food-laboratory-materials", items: [
+      { label: "Pharmaceutical Ingredients", href: "/products/pharmaceutical-food-laboratory-materials#pharmaceutical-ingredients" },
+      { label: "Food Ingredients", href: "/products/pharmaceutical-food-laboratory-materials#food-ingredients" },
+      { label: "Laboratory & Process Materials", href: "/products/pharmaceutical-food-laboratory-materials#laboratory-and-process-materials" },
     ]},
   ],
 };
@@ -132,14 +123,11 @@ export default function Navbar() {
 
   return (
     <header className={`${isHome ? "home-page-header" : "sticky top-0 bg-[#EAF4EF]/95 backdrop-blur-md"} z-50 border-b border-[#C9DBD3] shadow-[0_1px_0_rgba(10,81,76,0.04)]`}>
-      <div
-        className="relative z-[200] overflow-visible border-b border-[#D8E5DF] bg-white/45"
-        style={{ zIndex: 200 }}
-      >
-        <div className="max-w-7xl mx-auto flex min-h-9 items-center justify-end gap-3 overflow-visible px-4 py-1 text-xs text-[#71817C] sm:px-6 lg:px-8">
+      <div className="border-b border-[#D8E5DF] bg-white/45">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-end items-center gap-3 min-h-9 py-1 text-xs text-[#71817C]">
           <a href="mailto:info@lanchrom.com" className="hidden hover:text-[#003D91] transition-colors sm:inline">info@lanchrom.com</a>
           <span className="hidden h-3 w-px bg-[#C8D8D1] sm:block" aria-hidden="true" />
-          <Link href="/contact" className="rounded px-2 py-1 font-normal uppercase tracking-[0.08em] text-[#0A514C] hover:bg-white hover:text-[#003D91]">
+          <Link href="/contact" className="rounded px-2 py-1 font-bold uppercase tracking-[0.08em] text-[#0A514C] hover:bg-white hover:text-[#003D91]">
             Contact
           </Link>
           <span className="h-3 w-px bg-[#C8D8D1]" aria-hidden="true" />
@@ -147,10 +135,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <nav
-        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-        style={{ zIndex: 10 }}
-      >
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-20 gap-6">
           <Link href="/" className="notranslate flex items-center flex-shrink-0" translate="no">
             <div className="leading-tight">
@@ -164,7 +149,7 @@ export default function Navbar() {
             <div className="relative" onMouseEnter={() => openNow("products")} onMouseLeave={scheduleClose}>
               <Link href="/products" className={navLinkClass + " flex items-center gap-1"}>Products <span className="text-[10px] mt-0.5">▾</span></Link>
               {openMenu === "products" && (
-                <div onMouseEnter={cancelClose} onMouseLeave={scheduleClose} className="absolute z-50 top-full left-0 w-[820px] bg-white rounded-xl shadow-xl border border-[#E6E3DD] p-6 grid grid-cols-3 gap-6 mt-1">
+                <div onMouseEnter={cancelClose} onMouseLeave={scheduleClose} className="absolute z-50 top-full left-0 w-[900px] bg-white rounded-xl shadow-xl border border-[#E6E3DD] p-6 grid grid-cols-3 gap-6 mt-1">
                   {[PRODUCTS_NAV.col1, PRODUCTS_NAV.col2, PRODUCTS_NAV.col3].map((col, ci) => (
                     <div key={ci} className="space-y-5">
                       {col.map(group => (
@@ -235,8 +220,12 @@ export default function Navbar() {
         <div className="lg:hidden bg-[#F3F8F5] border-t border-[#C9DBD3] px-4 pb-6 space-y-1 max-h-[calc(100vh-5rem)] overflow-y-auto">
           {[
             { label: "All Products", href: "/products" },
-            { label: "HPLC Solvents", href: "/products/hplc-solvents" },
-            { label: "LC-MS Solvents", href: "/products/lcms-solvents" },
+            { label: "High-Purity Solvents & Chemicals", href: "/products/high-purity-solvents" },
+            { label: "Ready-to-Use Solutions", href: "/products/ready-to-use-solutions" },
+            { label: "Reference Standards & Reagents", href: "/products/reference-standards-analytical-reagents" },
+            { label: "Chromatography & Sample Preparation", href: "/products/chromatography-sample-preparation" },
+            { label: "Life Science & Workflow Kits", href: "/products/life-science-workflow-kits" },
+            { label: "Pharmaceutical, Food & Lab Materials", href: "/products/pharmaceutical-food-laboratory-materials" },
             { label: "Solutions", href: "/solutions" },
             { label: "Applications", href: "/applications" },
             { label: "OEM & Custom Packaging", href: "/oem" },

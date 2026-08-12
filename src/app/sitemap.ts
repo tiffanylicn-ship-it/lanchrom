@@ -8,6 +8,7 @@ import { getAllGuideSlugs } from "@/data/guides";
 import { getAllKnowledgeArticleSlugs } from "@/data/knowledge-articles";
 import { getDistributorMarketSlugs } from "@/data/distributor-program";
 import { getCategoryPath, PRODUCT_LINE_PAGES } from "@/data/product-line-pages";
+import { EUROPE_HPLC_ARTICLES } from "@/data/technical-blog-europe";
 
 const BASE_URL = "https://www.lanchrom.com";
 
@@ -44,8 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/guides", "weekly", 0.7),
     entry("/resources/blog", "weekly", 0.6),
     entry("/resources/blog/lcms-solvent-background-comparison", "monthly", 0.7),
-    entry("/resources/blog/hplc-solvent-storage-handling", "monthly", 0.7),
-    entry("/resources/blog/lcms-grade-solvent-selection-guide", "monthly", 0.7),
     entry("/resources/faq", "monthly", 0.6),
     entry("/resources/knowledge-center", "weekly", 0.7),
     entry("/downloads", "monthly", 0.5),
@@ -53,7 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/downloads/sds", "monthly", 0.5),
     entry("/downloads/tds", "monthly", 0.5),
     entry("/downloads/certificates", "monthly", 0.5),
-    entry("/products/electronic-grade/ipa-polished", "monthly", 0.6),
+    entry("/products/electronic-grade-ipa", "monthly", 0.8),
     entry("/search", "yearly", 0.3),
     entry("/privacy", "yearly", 0.2),
   ];
@@ -94,6 +93,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry(`/resources/knowledge-center/${slug}`, "monthly", 0.5)
   );
 
+  const europeHplcArticles: Entry[] = EUROPE_HPLC_ARTICLES.map(article =>
+    entry(`/resources/blog/${article.slug}`, "monthly", 0.7)
+  );
+
   return [
     ...staticPages,
     ...productLines,
@@ -105,5 +108,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...distributorMarkets,
     ...guides,
     ...knowledgeArticles,
+    ...europeHplcArticles,
   ];
 }

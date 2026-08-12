@@ -8,15 +8,7 @@ export type ProductGrade =
   | "spectroscopic" | "anhydrous" | "prep" | "pharma-usp"
   | "pharma-ep" | "electronic" | "food-grade" | "kosher-halal";
 
-export type ProductCategory =
-  | "hplc-solvents" | "lcms-solvents" | "uplc-solvents" | "gc-solvents"
-  | "spectroscopic-solvents" | "anhydrous-solvents" | "prep-solvents"
-  | "pharma-grade" | "electronic-grade" | "excipients" | "food-grade"
-  | "standard-solutions" | "karl-fischer" | "tlc-products"
-  | "spe-products" | "mobile-phase-bags" | "deuterated-nmr"
-  | "nmr-deuterated" | "life-science-reagents" | "reagent-kits"
-  | "elemental-impurities" | "trace-analysis-grade"
-  | "cell-culture-reagents" | "lab-consumable-chemicals";
+export type ProductCategory = string;
 
 export interface ProductSpec {
   parameter: string;
@@ -40,6 +32,14 @@ export interface Product {
   formula?: string;
   mw?: string;
   category: ProductCategory;
+  /** Original category retained so previously published URLs keep resolving. */
+  legacyCategory?: string;
+  legacyCategories?: string[];
+  legacySlugs?: string[];
+  /** Additional catalog views in which this multi-grade product is listed. */
+  catalogCategories?: string[];
+  /** Customer-facing grade names shown on the consolidated product page. */
+  availableGrades?: string[];
   grades?: ProductGrade[];
   shortDescription?: string;
   description?: string;
@@ -157,11 +157,6 @@ export interface HubSpotContact {
   source_product?: string;
   source_url?: string;
   current_supplier?: string;
-  inquiry_tags?: string;
-  search_keywords?: string;
-  inquiry_priority?: string;
-  product_category?: string;
-  inquiry_region?: string;
 }
 
 export interface HubSpotDeal {

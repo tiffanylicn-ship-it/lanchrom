@@ -10,6 +10,12 @@ import { PRODUCTS_ELEMENTAL_IMPURITIES } from "./products-elemental-impurities";
 import { PRODUCTS_CATALOG_V2 } from "./products-catalog-v2";
 import { PRODUCT_ENRICHMENTS } from "./products-enrichment";
 import { PRODUCTS_EXCEL_IMPORT } from "./products-excel-import";
+import { classifyProductTaxonomy, normalizeCatalogProductName } from "./product-taxonomy";
+import { getCanonicalCategorySlug } from "./categories";
+import {
+  getSupplyCatalogEntry,
+  PRODUCTS_SUPPLY_CATALOG,
+} from "./products-supply-catalog";
 
 export const PRODUCTS_CORE: Product[] = [
   // ── HPLC Grade Acetonitrile ──────────────────────────────
@@ -260,20 +266,8 @@ function autoSlug(name: string): string {
     .replace(/--+/g, "-");
 }
 
-function dedupeSpecifications(
-  specifications: NonNullable<Product["specifications"]> = [],
-) {
-  const seenParameters = new Set<string>();
-
-  return specifications.filter((specification) => {
-    const parameterKey = specification.parameter.trim().toLowerCase();
-    if (seenParameters.has(parameterKey)) return false;
-    seenParameters.add(parameterKey);
-    return true;
-  });
-}
-
 const RAW_PRODUCTS: Product[] = [
+  ...PRODUCTS_SUPPLY_CATALOG,
   ...PRODUCTS_CORE,
   ...PRODUCTS_EXTRA,
   ...PRODUCTS_BATCH3,
@@ -293,10 +287,12 @@ const RAW_PRODUCTS_DEDUPED: Product[] = Array.from(
         ...product,
         ...existing,
         slug,
-        specifications: dedupeSpecifications([
+        specifications: [
           ...(existing.specifications || []),
-          ...(product.specifications || []),
-        ]),
+          ...(product.specifications || []).filter(spec =>
+            !(existing.specifications || []).some(item => item.parameter === spec.parameter && item.value === spec.value)
+          ),
+        ],
         applications: Array.from(new Set([...(existing.applications || []), ...(product.applications || [])])),
         packSizes: Array.from(new Set([...(existing.packSizes || []), ...(product.packSizes || [])])),
         keywords: existing.keywords?.length ? [existing.keywords[0]] : product.keywords?.slice(0, 1),
@@ -306,7 +302,7 @@ const RAW_PRODUCTS_DEDUPED: Product[] = Array.from(
   }, new Map<string, Product>()).values()
 );
 
-export const PRODUCTS: Product[] = RAW_PRODUCTS_DEDUPED.map(p => {
+const NORMALIZED_PRODUCTS: Product[] = RAW_PRODUCTS_DEDUPED.map(p => {
   const slug = p.slug || autoSlug(p.name);
   const enrichment = PRODUCT_ENRICHMENTS[slug] || {};
   const productIdentity = `${p.name} ${slug}`.toLowerCase();
@@ -328,7 +324,7 @@ export const PRODUCTS: Product[] = RAW_PRODUCTS_DEDUPED.map(p => {
     slug,
     _id: p._id || slug,
     shortDescription: enrichment.shortDescription || p.shortDescription || p.name,
-    specifications: dedupeSpecifications(enrichment.specifications || p.specifications),
+    specifications: enrichment.specifications || p.specifications,
     applications: enrichment.applications || p.applications,
     cas: enrichment.cas || p.cas,
     formula: enrichment.formula || p.formula,
@@ -346,13 +342,161 @@ export const PRODUCTS: Product[] = RAW_PRODUCTS_DEDUPED.map(p => {
     seoDescription: enrichment.seoDescription || p.seoDescription,
   };
 });
+
+function mergeSpecifications(a: Product["specifications"], b: Product["specifications"]) {
+  return [...(a || []), ...(b || [])].filter((spec, index, all) =>
+    all.findIndex((item) => item.parameter === spec.parameter && item.value === spec.value) === index
+  );
+}
+
+const CONSOLIDATED_PRODUCTS = Array.from(
+  NORMALIZED_PRODUCTS.reduce((map, product) => {
+    const supplyEntry = getSupplyCatalogEntry(product);
+    const key = supplyEntry
+      ? `supply/${supplyEntry.slug}`
+      : `product/${product.category}/${product.slug}`;
+    const existing = map.get(key);
+
+    if (!existing) {
+      map.set(key, {
+        ...product,
+        legacyCategory: product.category,
+        legacyCategories: [product.category],
+        legacySlugs: product.slug ? [product.slug] : [],
+      });
+      return map;
+    }
+
+    const legacyCategories = Array.from(new Set([
+      ...(existing.legacyCategories || []),
+      existing.legacyCategory,
+      product.category,
+      product.legacyCategory,
+    ].filter(Boolean) as string[]));
+    const legacySlugs = Array.from(new Set([
+      ...(existing.legacySlugs || []),
+      existing.slug,
+      product.slug,
+    ].filter(Boolean) as string[]));
+
+    map.set(key, {
+      ...product,
+      ...existing,
+      name: supplyEntry?.name || existing.name,
+      slug: supplyEntry?.slug || existing.slug,
+      cas: supplyEntry?.cas || existing.cas || product.cas,
+      formula: supplyEntry?.formula || existing.formula || product.formula,
+      category: supplyEntry?.category || existing.category,
+      availableGrades: supplyEntry?.availableGrades || existing.availableGrades || product.availableGrades,
+      grades: Array.from(new Set([
+        ...(supplyEntry?.grades || []),
+        ...(existing.grades || []),
+        ...(product.grades || []),
+      ])),
+      specifications: mergeSpecifications(existing.specifications, product.specifications),
+      applications: Array.from(new Set([
+        ...(supplyEntry?.applications || []),
+        ...(existing.applications || []),
+        ...(product.applications || []),
+      ])),
+      packSizes: Array.from(new Set([...(existing.packSizes || []), ...(product.packSizes || [])])),
+      packaging: existing.packaging?.length ? existing.packaging : product.packaging,
+      image: existing.image || product.image,
+      images: existing.images?.length ? existing.images : product.images,
+      legacyCategory: legacyCategories[0],
+      legacyCategories,
+      legacySlugs,
+    });
+    return map;
+  }, new Map<string, Product>()).values(),
+);
+
+const CLASSIFIED_PRODUCTS: Product[] = CONSOLIDATED_PRODUCTS.map((product) => {
+  const placement = classifyProductTaxonomy(product);
+  return {
+    ...product,
+    category: placement.primaryCategory,
+    catalogCategories: placement.catalogCategories,
+  };
+});
+
+// Classification can bring legacy imports from different source categories onto
+// the same canonical product route. Merge them again here so every final route,
+// product page, and downloadable document set represents one product only.
+export const PRODUCTS: Product[] = Array.from(
+  CLASSIFIED_PRODUCTS.reduce((map, product) => {
+    const key = `${product.category}/${product.slug}`;
+    const existing = map.get(key);
+    if (!existing) {
+      map.set(key, product);
+      return map;
+    }
+
+    map.set(key, {
+      ...product,
+      ...existing,
+      name: existing.name || product.name,
+      cas: existing.cas || product.cas,
+      formula: existing.formula || product.formula,
+      mw: existing.mw || product.mw,
+      shortDescription: existing.shortDescription || product.shortDescription,
+      availableGrades: Array.from(new Set([
+        ...(existing.availableGrades || []),
+        ...(product.availableGrades || []),
+      ])),
+      grades: Array.from(new Set([
+        ...(existing.grades || []),
+        ...(product.grades || []),
+      ])),
+      specifications: mergeSpecifications(existing.specifications, product.specifications),
+      applications: Array.from(new Set([
+        ...(existing.applications || []),
+        ...(product.applications || []),
+      ])),
+      packSizes: Array.from(new Set([
+        ...(existing.packSizes || []),
+        ...(product.packSizes || []),
+      ])),
+      packaging: existing.packaging?.length ? existing.packaging : product.packaging,
+      catalogCategories: Array.from(new Set([
+        ...(existing.catalogCategories || []),
+        ...(product.catalogCategories || []),
+      ])),
+      legacyCategories: Array.from(new Set([
+        ...(existing.legacyCategories || []),
+        ...(product.legacyCategories || []),
+      ])),
+      legacySlugs: Array.from(new Set([
+        ...(existing.legacySlugs || []),
+        ...(product.legacySlugs || []),
+      ])),
+    });
+    return map;
+  }, new Map<string, Product>()).values(),
+);
+
 export function getProductBySlug(slug: string, category?: string) {
-  if (category) return PRODUCTS.find(p => p.slug === slug && p.category === category);
-  return PRODUCTS.find(p => p.slug === slug);
+  const canonicalCategory = category ? getCanonicalCategorySlug(category) : undefined;
+  return PRODUCTS.find((product) => {
+    const slugMatches = product.slug === slug || product.legacySlugs?.includes(slug);
+    if (!slugMatches) return false;
+    if (!canonicalCategory) return true;
+    return product.category === canonicalCategory
+      || product.catalogCategories?.includes(canonicalCategory)
+      || product.legacyCategories?.includes(category || "");
+  });
 }
 
 export function getProductsByCategory(category: string) {
-  return PRODUCTS.filter(p => p.category === category);
+  const canonicalCategory = getCanonicalCategorySlug(category);
+  const products = PRODUCTS.filter((product) =>
+    product.category === canonicalCategory || product.catalogCategories?.includes(canonicalCategory)
+  );
+  return Array.from(products.reduce((map, product) => {
+    const key = normalizeCatalogProductName(product.name);
+    if (!map.has(key)) map.set(key, product);
+    return map;
+  }, new Map<string, Product>()).values());
 }
 
 export function getFeaturedProducts() {
@@ -361,6 +505,10 @@ export function getFeaturedProducts() {
 
 export function getRelatedProducts(product: Product, limit = 4) {
   return PRODUCTS
-    .filter(p => p._id !== product._id && (p.category === product.category || (p.grades ?? []).some(g => (product.grades ?? []).includes(g))))
+    .filter(p => p._id !== product._id && (
+      p.category === product.category
+      || p.catalogCategories?.some((category) => product.catalogCategories?.includes(category))
+      || (p.grades ?? []).some(g => (product.grades ?? []).includes(g))
+    ))
     .slice(0, limit);
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { EUROPE_HPLC_ARTICLES } from "@/data/technical-blog-europe";
 
 export const metadata: Metadata = {
   title: "Analytical Solvent Blog | LANCHROM",
@@ -15,41 +16,13 @@ const POSTS = [
     date: "Laboratory comparison",
     href: "/resources/blog/lcms-solvent-background-comparison",
   },
-  {
-    title: "How to Choose an LC-MS Grade Solvent for Sensitive Methods",
-    excerpt: "Turn blank performance, residue, metal control, packaging and lot documentation into a method-specific solvent qualification plan.",
-    tag: "Solvent Selection",
-    date: "9 minute read",
-    href: "/resources/blog/lcms-grade-solvent-selection-guide",
-  },
-  {
-    title: "HPLC Solvent Storage and Handling: A Practical Laboratory Guide",
-    excerpt: "Protect chromatography baselines with consistent receiving, storage, opened-container handling, moisture control and dispensing practices.",
-    tag: "Laboratory Practice",
-    date: "8 minute read",
-    href: "/resources/blog/hplc-solvent-storage-handling",
-  },
-  {
-    title: "Reading an ICH Q3C Class 2 Solvent Limit Correctly",
-    excerpt: "PDE numbers look simple until you're trying to map them to your actual synthetic route. A practical walkthrough.",
-    tag: "Regulatory",
-    date: "Coming soon",
-    href: "",
-  },
-  {
-    title: "Why Pre-Made Mobile Phase Outperforms In-House Prep for Fermentation QC",
-    excerpt: "The variability that comes from manual mobile phase preparation, and what it actually costs you in retention time drift.",
-    tag: "Fermentation",
-    date: "Coming soon",
-    href: "",
-  },
-  {
-    title: "What CFD Modeling Actually Changes in Distillation Tray Design",
-    excerpt: "A look at the engineering behind eliminating inactive zones and vapor channeling — and why it matters for batch consistency.",
-    tag: "Manufacturing",
-    date: "Coming soon",
-    href: "",
-  },
+  ...EUROPE_HPLC_ARTICLES.map((article) => ({
+    title: article.title,
+    excerpt: article.description,
+    tag: article.tag,
+    date: article.readingTime,
+    href: `/resources/blog/${article.slug}`,
+  })),
 ];
 
 export default function BlogIndexPage() {
@@ -80,7 +53,7 @@ export default function BlogIndexPage() {
             return post.href ? (
               <Link key={post.title} href={post.href} className="group block border-b border-[#EFEDE8] pb-6 last:border-0">
                 {content}
-                <span className="mt-3 inline-block text-xs font-bold uppercase tracking-wide text-[#0A514C]">Read article</span>
+                <span className="mt-3 inline-block text-xs font-bold uppercase tracking-wide text-[#0A514C]">Read technical article</span>
               </Link>
             ) : (
               <div key={post.title} className="group border-b border-[#EFEDE8] pb-6 last:border-0">

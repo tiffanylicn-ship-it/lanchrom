@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
+import { getProductThemeStyle, type ProductThemeName } from "@/data/product-themes";
 
 interface EditorialPageHeroProps {
   eyebrow: string;
@@ -7,8 +8,9 @@ interface EditorialPageHeroProps {
   description: string;
   image?: string;
   imageAlt?: string;
-  imageFit?: "cover" | "contain";
   children?: ReactNode;
+  theme?: ProductThemeName;
+  productLayout?: boolean;
 }
 
 export default function EditorialPageHero({
@@ -17,11 +19,12 @@ export default function EditorialPageHero({
   description,
   image,
   imageAlt,
-  imageFit = "cover",
   children,
+  theme = "pharma",
+  productLayout = false,
 }: EditorialPageHeroProps) {
   return (
-    <section className="editorial-page-hero relative min-h-[520px] overflow-hidden border-b border-[#C9DBD3] bg-[#EAF4EF] md:min-h-[560px]">
+    <section className={`editorial-page-hero product-themed-hero relative min-h-[520px] overflow-hidden border-b md:min-h-[560px] ${productLayout ? "product-catalog-hero" : ""}`} style={getProductThemeStyle(theme)}>
       {image && (
         <Image
           src={image}
@@ -29,19 +32,15 @@ export default function EditorialPageHero({
           fill
           priority
           sizes="100vw"
-          className={
-            imageFit === "contain"
-              ? "object-contain object-right bg-[#DCE9E3] p-3 md:p-6"
-              : "object-cover object-right"
-          }
+          className="object-cover object-right"
         />
       )}
-      <div className="editorial-page-mask absolute inset-0 bg-[#EAF4EF]" />
+      <div className="editorial-page-mask product-themed-mask absolute inset-0" />
       <div className="relative mx-auto flex min-h-[520px] max-w-7xl items-center px-4 py-16 sm:px-6 md:min-h-[560px] lg:px-8">
-        <div className="editorial-page-copy">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#0E918C]">{eyebrow}</p>
-          <h1 className="mt-4 text-3xl font-extrabold leading-tight text-[#0A302E] md:text-[2.15rem] lg:text-4xl">{title}</h1>
-          <p className="mt-5 text-[15px] leading-relaxed text-[#42615A] md:text-base">{description}</p>
+        <div className={`editorial-page-copy ${productLayout ? "product-catalog-copy" : ""}`}>
+          <p className="product-themed-eyebrow text-sm font-bold uppercase tracking-[0.18em]">{eyebrow}</p>
+          <h1 className="product-themed-title mt-4 text-4xl font-extrabold leading-[1.08] md:text-5xl lg:text-[3.4rem]">{title}</h1>
+          <p className="product-themed-description mt-5 text-[17px] leading-8 md:text-lg">{description}</p>
           {children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
         </div>
       </div>

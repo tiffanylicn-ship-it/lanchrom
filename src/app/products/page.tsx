@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CATEGORIES, getCategoriesByGroup, GROUP_LABELS } from "@/data/categories";
-import { PRODUCTS } from "@/data/products";
+import { CATEGORIES, getCategorySectionsByGroup, GROUP_LABELS, PRODUCT_GROUP_ORDER } from "@/data/categories";
+import { getProductsByCategory, PRODUCTS } from "@/data/products";
 import { getCategoryPath, getProductLinePath } from "@/data/product-line-pages";
 import ProductSidebar from "@/components/product/ProductSidebar";
 import EditorialPageHero from "@/components/layout/EditorialPageHero";
+import { getProductTheme, getProductThemeStyle } from "@/data/product-themes";
 
 export const metadata: Metadata = {
   title: "Analytical Solvent Catalog | LANCHROM",
@@ -14,69 +15,90 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.lanchrom.com/products" },
 };
 
-const GROUP_ORDER: (keyof typeof GROUP_LABELS)[] = [
-  "pharma-solvents", "analytical-solvents", "mobile-phase", "standards",
-  "reagent-kits", "consumables", "life-science", "excipients",
-];
-
-const LINE_COLORS: Record<string, string> = {
-  "pharma-solvents": "#3C6E71", "analytical-solvents": "#2C7A7B",
-  "mobile-phase": "#B5654A", "standards": "#4A7EAA",
-  "reagent-kits": "#7B5EA7", "consumables": "#4A8B5C",
-  "life-science": "#C4845F", "excipients": "#6B7280",
-};
-
 export default function ProductsIndexPage() {
   const totalProducts = PRODUCTS.length;
   const totalCategories = Object.keys(CATEGORIES).length;
 
   return (
-    <div className="bg-white">
+    <div className="product-theme-page bg-white" style={getProductThemeStyle("analytical")}>
       <EditorialPageHero
         eyebrow="Product Catalog"
-        title={`8 Product Lines - ${totalCategories} Categories - ${totalProducts}+ SKUs`}
-        description="From pharmaceutical-grade solvents to ready-to-use mobile phase bags, certified reference standards, and chromatography consumables - organized into 8 focused product lines."
+        title={`6 Product Lines - ${totalCategories} Categories - ${totalProducts}+ Products`}
+        description="Find products by workflow, grade, or application across six clear product lines, with multi-grade chemicals consolidated into one technical page."
         image="/images/hero/oem-product-design-hplc-lcms.png"
         imageAlt="OEM product design, HPLC and LC-MS laboratory capabilities"
-        imageFit="contain"
+        theme="analytical"
+        productLayout
       />
 
       {/* Main content with sidebar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8">
+      <div className="products-index-layout max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8">
         <ProductSidebar />
-        <div className="flex-1 min-w-0 py-16 md:py-20">
-          {GROUP_ORDER.map((groupKey, idx) => {
-            const categories = getCategoriesByGroup(groupKey);
-            if (categories.length === 0) return null;
+        <main className="products-index-content flex-1 min-w-0 py-16 md:py-20">
+          {PRODUCT_GROUP_ORDER.map((groupKey) => {
+            const sections = getCategorySectionsByGroup(groupKey);
+            if (sections.length === 0) return null;
             const info = GROUP_LABELS[groupKey];
-            const color = LINE_COLORS[groupKey] || "#3C6E71";
+            const groupTheme = getProductTheme(groupKey);
 
             return (
-              <div key={groupKey} className={`${idx > 0 ? "mt-10 pt-8 border-t border-[#E6E3DD]" : ""}`} id={groupKey}>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
-                  <Link href={getProductLinePath(groupKey)} className="group">
-                    <h2 className="text-lg font-bold transition-colors group-hover:opacity-80" style={{ color }}>{info.label}</h2>
-                  </Link>
+              <section key={groupKey} className="products-index-group" id={groupKey} style={getProductThemeStyle(groupTheme)}>
+                <div className="products-index-group-header">
+                  <div>
+                    <p>Product line</p>
+                    <Link href={getProductLinePath(groupKey)}><h2>{info.label}</h2></Link>
+                  </div>
+                  <Link href={getProductLinePath(groupKey)} className="products-index-view-line">View product line <span aria-hidden="true">→</span></Link>
                 </div>
-                <p className="text-[#5C5A55] text-sm mb-5 ml-[18px]">{info.tagline}</p>
+                <p className="products-index-tagline">{info.tagline}</p>
 
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                  {categories.map(cat => (
-                    <Link
-                      key={cat.slug}
-                      href={getCategoryPath(cat)}
-                      className="group block p-5 rounded-xl border border-[#EFEDE8] hover:border-[#C9DBD9] hover:bg-[#FBFAF8] transition-all"
-                    >
-                      <h3 className="font-bold text-[#2B2A28] group-hover:text-[#3C6E71] transition-colors mb-1">{cat.name}</h3>
-                      <p className="text-[#8A8782] text-xs leading-relaxed">{cat.tagline}</p>
-                    </Link>
-                  ))}
-                </div>
-              </div>
+                {sections.map((section) => (
+                  <div key={section.slug} id={`${groupKey}-${section.slug}`} className="products-index-section">
+                    <div className="products-index-section-heading">
+                      <span>{section.name}</span>
+                    </div>
+                    <div className="products-index-category-grid">
+                  {section.categories.map(cat => {
+                    const isElectronicGrade = cat.slug === "electronic-semiconductor-grade-chemicals";
+                    const categoryTheme = getProductTheme(groupKey, cat.slug);
+                    const productCount = getProductsByCategory(cat.slug).length;
+                    return (
+                      <article
+                        key={cat.slug}
+                        className="products-index-category-card"
+                        style={getProductThemeStyle(categoryTheme)}
+                      >
+                        <Link href={getCategoryPath(cat)} className="products-index-category-main">
+                          <div className="products-index-category-meta">
+                            <span>{cat.shortName}</span>
+                            <small>{productCount} {productCount === 1 ? "product" : "products"}</small>
+                          </div>
+                          <h3>{cat.name}</h3>
+                          <p>{cat.tagline}</p>
+                          <span className="products-index-category-arrow" aria-hidden="true">→</span>
+                        </Link>
+                        {isElectronicGrade && (
+                          <Link
+                            href="/products/electronic-grade-ipa"
+                            className="products-index-featured-product"
+                          >
+                            <span>
+                              <small>Featured product</small>
+                              <strong>Electronic Grade IPA</strong>
+                            </span>
+                            <span aria-hidden="true">→</span>
+                          </Link>
+                        )}
+                      </article>
+                    );
+                  })}
+                    </div>
+                  </div>
+                ))}
+              </section>
             );
           })}
-        </div>
+        </main>
       </div>
 
       <section className="border-t border-[#DCE7E2] bg-[#F5FAF8]">

@@ -36,8 +36,6 @@ Google does not use the historical `meta keywords` tag as a ranking signal. The 
 | `/oem` | private-label solvents |
 | `/guides` and `/guides/[slug]` | the selected technical guide subject |
 | `/resources/blog` and article pages | the selected technical article subject |
-| `/resources/blog/hplc-solvent-storage-handling` | HPLC solvent storage |
-| `/resources/blog/lcms-grade-solvent-selection-guide` | LC-MS grade solvent |
 | `/resources/faq` | laboratory solvent FAQ |
 | `/resources/knowledge-center` and article pages | the selected knowledge subject |
 | `/downloads` and document pages | the selected product document type |

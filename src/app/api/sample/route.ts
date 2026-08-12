@@ -64,13 +64,13 @@ export async function POST(request: NextRequest) {
     }
 
     let emailDelivered = false;
-    let confirmationDelivered = false;
     try {
       const notification = await sendSampleLeadNotification(body);
       emailDelivered = notification.delivered;
-      if (emailDelivered || crmSynced) {
-        const confirmation = await sendSampleAutoReply(body);
-        confirmationDelivered = confirmation.delivered;
+      if (emailDelivered) {
+        sendSampleAutoReply(body).catch(error => {
+          console.warn("Sample auto-reply failed:", error);
+        });
       }
     } catch (error) {
       console.error("Sample lead notification failed:", error);
@@ -96,7 +96,6 @@ export async function POST(request: NextRequest) {
         isPriority,
         delivery: {
           email: emailDelivered,
-          confirmation: confirmationDelivered,
           hubspot: crmSynced,
         },
       },

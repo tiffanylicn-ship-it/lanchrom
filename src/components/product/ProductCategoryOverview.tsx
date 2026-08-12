@@ -9,6 +9,7 @@ import {
 import EditorialPageHero from "@/components/layout/EditorialPageHero";
 import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
 import ProductSidebar from "./ProductSidebar";
+import { getProductTheme, getProductThemeStyle } from "@/data/product-themes";
 
 interface ProductCategoryOverviewProps {
   info: CategoryInfo;
@@ -18,10 +19,12 @@ export default function ProductCategoryOverview({ info }: ProductCategoryOvervie
   const products = getProductsByCategory(info.slug);
   const line = getProductLineForCategory(info.slug);
   const groupInfo = GROUP_LABELS[info.group];
+  const theme = getProductTheme(info.group, info.slug);
 
   return (
-    <div className="bg-white">
+    <div className="product-theme-page bg-white" style={getProductThemeStyle(theme)}>
       <SectionBreadcrumb
+        theme={theme}
         items={[
           { label: "Products", href: "/products" },
           { label: groupInfo.label, href: getProductLinePath(info.group) },
@@ -35,7 +38,8 @@ export default function ProductCategoryOverview({ info }: ProductCategoryOvervie
         description={info.description}
         image={info.bannerImage || line?.image}
         imageAlt={info.name}
-        imageFit="contain"
+        theme={theme}
+        productLayout
       />
 
       <div className="mx-auto flex max-w-7xl gap-8 px-4 py-16 sm:px-6 md:py-20 lg:px-8">
@@ -71,19 +75,22 @@ export default function ProductCategoryOverview({ info }: ProductCategoryOvervie
               {products.map((product) => (
                 <Link
                   key={`${product.category}-${product.slug}`}
-                  href={`/products/${product.category}/${product.slug}`}
-                  className="card-flat p-5 transition-colors hover:border-[#C9DBD9]"
+                  href={product._id === "electronic-ipa" ? "/products/electronic-grade-ipa" : `/products/${product.category}/${product.slug}`}
+                  className="product-theme-card card-flat p-5 transition-all"
                 >
                   <div className="mb-3 flex flex-wrap gap-1.5">
-                    {(product.grades ?? []).slice(0, 2).map((grade) => (
-                      <span key={grade} className="rounded-full bg-[#E8F0EF] px-2 py-0.5 text-[10px] font-bold uppercase text-[#2C5154]">
+                    {product._id === "electronic-ipa" && (
+                      <span className="rounded-full bg-[#082F55] px-2 py-0.5 text-[10px] font-bold uppercase text-white">New product page</span>
+                    )}
+                    {(product.availableGrades ?? product.grades ?? []).slice(0, 3).map((grade) => (
+                      <span key={grade} className="product-theme-chip rounded-full px-2.5 py-1 text-xs font-bold uppercase">
                         {grade}
                       </span>
                     ))}
                   </div>
-                  <h2 className="mb-1 font-bold text-[#2B2A28]">{product.name}</h2>
-                  {product.cas && <p className="mb-2 font-mono text-xs text-[#8A8782]">CAS: {product.cas}</p>}
-                  <p className="line-clamp-2 text-sm text-[#5C5A55]">{product.shortDescription}</p>
+                  <h2 className="mb-1 text-lg font-bold text-[#2B2A28]">{product.name}</h2>
+                  {product.cas && <p className="mb-2 font-mono text-sm text-[#8A8782]">CAS: {product.cas}</p>}
+                  <p className="line-clamp-3 text-base leading-7 text-[#5C5A55]">{product.shortDescription}</p>
                 </Link>
               ))}
             </div>
