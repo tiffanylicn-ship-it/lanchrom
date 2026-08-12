@@ -171,3 +171,70 @@ ${DEFAULT_INQUIRY_EMAIL}`,
     replyTo: getInquiryRecipient(),
   });
 }
+
+export type DocumentRequest = {
+  email: string;
+  company: string;
+  productName: string;
+  productSlug?: string;
+  fileType: "coa" | "tds" | "sds";
+  sourceUrl?: string;
+};
+
+function documentLabel(fileType: DocumentRequest["fileType"]) {
+  if (fileType === "coa") return "Certificate of Analysis (CoA)";
+  if (fileType === "tds") return "Technical Data Sheet (TDS)";
+  return "Safety Data Sheet (SDS)";
+}
+
+export async function sendDocumentLeadNotification(form: DocumentRequest) {
+  const label = documentLabel(form.fileType);
+  const classification = classifyInquiry({
+    productOfInterest: form.productName,
+    notes: `${label} document request`,
+  });
+
+  return sendViaSmtp({
+    to: getInquiryRecipient(),
+    subject: `[LANCHROM][DOCUMENT][${form.fileType.toUpperCase()}][${classification.productCategory}] ${form.company} | ${form.productName}`,
+    text: `New document request from the LANCHROM website
+
+Document: ${label}
+Category: ${classification.productCategory}
+Tags: ${classification.tags.join(", ")}
+Product: ${form.productName}
+Product slug: ${form.productSlug || "-"}
+Company: ${form.company}
+Email: ${form.email}
+Source URL: ${form.sourceUrl || "-"}`,
+    html: `<div style="font-family:Arial,sans-serif;max-width:680px;margin:0 auto;color:#0f172a">
+      <div style="background:#0A514C;color:white;padding:20px 24px;border-radius:12px 12px 0 0"><h2 style="margin:0;font-size:20px">New Document Request</h2></div>
+      <table style="width:100%;border-collapse:collapse;font-size:14px">${row("Document", label)}${row("Category", classification.productCategory)}${row("Tags", classification.tags.join(", "))}${row("Product", form.productName)}${row("Product slug", form.productSlug)}${row("Company", form.company)}${row("Email", form.email)}${row("Source URL", form.sourceUrl)}</table>
+      <div style="background:#f8fafc;padding:14px 18px;border-radius:0 0 12px 12px;color:#64748b;font-size:12px">Reply directly to this email to contact the requester.</div>
+    </div>`,
+    replyTo: form.email,
+    headers: {
+      "X-LANCHROM-Inquiry-Type": "DOCUMENT",
+      "X-LANCHROM-Document-Type": form.fileType.toUpperCase(),
+      "X-LANCHROM-Product-Category": classification.productCategory,
+      "X-LANCHROM-Tags": classification.tags.join(","),
+    },
+  });
+}
+
+export async function sendDocumentAutoReply(form: DocumentRequest) {
+  const label = documentLabel(form.fileType);
+  return sendViaSmtp({
+    to: form.email,
+    subject: `LANCHROM ${form.fileType.toUpperCase()} request received | ${form.productName}`,
+    text: `Thank you for requesting the ${label} for ${form.productName}.
+
+Our team has received your request and will send the document within 1 business day.
+
+Best regards,
+LANCHROM Team
+${DEFAULT_INQUIRY_EMAIL}`,
+    html: `<div style="font-family:Arial,sans-serif;max-width:620px;margin:0 auto;color:#0f172a"><h2 style="color:#0A514C">Document request received</h2><p>Thank you for requesting the <strong>${escapeHtml(label)}</strong> for <strong>${escapeHtml(form.productName)}</strong>.</p><p>Our team has received your request and will send the document within <strong>1 business day</strong>.</p><p>Best regards,<br/>LANCHROM Team<br/>${DEFAULT_INQUIRY_EMAIL}</p></div>`,
+    replyTo: getInquiryRecipient(),
+  });
+}

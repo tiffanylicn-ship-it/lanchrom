@@ -13,10 +13,11 @@ export const metadata: Metadata = {
 };
 
 export default function DownloadsPage() {
-  const rows = PRODUCTS.map((product) => {
+  const rows = PRODUCTS.flatMap((product) => {
     const category = getCategoryInfo(product.category);
     const documents = getProductDocumentLinks(product);
-    return {
+    if (!documents) return [];
+    return [{
       id: product._id || `${product.category}-${product.slug}`,
       name: product.name,
       cas: product.cas,
@@ -26,7 +27,7 @@ export default function DownloadsPage() {
       productHref: product._id === "electronic-ipa" ? "/products/electronic-grade-ipa" : `/products/${product.category}/${product.slug}`,
       tdsHref: documents.tds,
       specificationHref: documents.specification,
-    };
+    }];
   }).sort((a, b) => a.productLine.localeCompare(b.productLine) || a.categoryName.localeCompare(b.categoryName) || a.name.localeCompare(b.name));
 
   return (
@@ -40,7 +41,7 @@ export default function DownloadsPage() {
           <p className="tag-line mb-3">Documentation</p>
           <h1 className="text-3xl md:text-4xl font-bold text-[#102A43] mb-3">Downloads</h1>
           <p className="text-[#334155] text-lg max-w-2xl">
-            Search the complete product catalog and directly download product-level TDS and specification summaries.
+            Search the priority product portfolio and directly download product-level TDS and specification summaries.
             Market-specific SDS files and batch-specific COA documents remain available on request.
           </p>
         </div>
@@ -50,8 +51,8 @@ export default function DownloadsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
-              { t: `${PRODUCTS.length} Product TDS Files`, d: "Product identity, available grades, applications, handling guidance, and all available package sizes in one PDF." },
-              { t: `${PRODUCTS.length} Specification Summaries`, d: "Representative test items, grade scope, packaging, and release-document guidance for supplier qualification." },
+              { t: `${rows.length} Product TDS Files`, d: "Priority downloads for pharmaceutical-grade solvents, HPLC analytical solvents, and ready-to-use mobile phase bags." },
+              { t: `${rows.length} Specification Summaries`, d: "Representative test items, grade scope, packaging, and release-document guidance for supplier qualification." },
               { t: "Controlled Documents", d: "Request the current destination-specific SDS, batch COA, or controlled grade specification from the product page." },
             ].map(item => (
               <div key={item.t} className="card-flat p-6">

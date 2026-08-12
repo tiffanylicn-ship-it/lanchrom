@@ -37,7 +37,7 @@ export default function TDSPage() {
               </div>
             ))}
           </div>
-          <p className="text-[#5C5A55] text-sm mb-6">Product-level TDS documents are available for the complete catalog. Each PDF consolidates the product's available package sizes and grade scope. Request the current controlled grade specification when qualifying a supply.</p>
+          <p className="text-[#5C5A55] text-sm mb-6">Direct product-level TDS downloads currently cover pharmaceutical-grade solvents, HPLC analytical solvents, and ready-to-use mobile phase bags. Each PDF consolidates the product's available package sizes and grade scope. Other product documents remain available on request.</p>
           <Link href="/downloads#document-library" className="btn-fill">Browse all TDS files</Link>
         </div>
       </section>

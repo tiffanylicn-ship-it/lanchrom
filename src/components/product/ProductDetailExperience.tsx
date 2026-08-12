@@ -265,10 +265,10 @@ export default function ProductDetailExperience({
         <div className={styles.shell}>
           <div className={styles.splitHeading}><div><p className={styles.eyebrow}>Product documentation</p><h2>Technical documents</h2></div><p>Download product-level reference files. Request the current market-specific SDS and batch-specific COA when qualifying or purchasing.</p></div>
           <div className={styles.documentGrid}>
-            <article><FileText aria-hidden="true" /><p>Product information</p><h3>Technical Datasheet</h3><a href={documentLinks.tds} download>Download TDS <Download aria-hidden="true" /></a></article>
+            <article><FileText aria-hidden="true" /><p>Product information</p><h3>Technical Datasheet</h3>{documentLinks ? <a href={documentLinks.tds} download>Download TDS <Download aria-hidden="true" /></a> : <Link href={`/contact?type=tds&product=${encodeURIComponent(product.name)}`}>Request TDS <ArrowRight aria-hidden="true" /></Link>}</article>
             <article><FileCheck2 aria-hidden="true" /><p>Batch release</p><h3>Certificate of Analysis</h3><Link href={`/downloads/coa?product=${encodeURIComponent(product.name)}`}>Request COA <ArrowRight aria-hidden="true" /></Link></article>
             <article><ShieldCheck aria-hidden="true" /><p>Safety information</p><h3>Safety Data Sheet</h3><Link href={`/downloads/sds?product=${encodeURIComponent(product.name)}`}>Request SDS <ArrowRight aria-hidden="true" /></Link></article>
-            <article className={styles.controlledDocument}><FileCheck2 aria-hidden="true" /><p>Grade scope and test items</p><h3>Product Specification</h3><a href={documentLinks.specification} download>Download summary <Download aria-hidden="true" /></a></article>
+            <article className={styles.controlledDocument}><FileCheck2 aria-hidden="true" /><p>Grade scope and test items</p><h3>Product Specification</h3>{documentLinks ? <a href={documentLinks.specification} download>Download summary <Download aria-hidden="true" /></a> : <Link href={`/contact?type=specification&product=${encodeURIComponent(product.name)}`}>Request specification <ArrowRight aria-hidden="true" /></Link>}</article>
           </div>
         </div>
       </section>
