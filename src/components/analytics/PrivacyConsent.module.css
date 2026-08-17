@@ -1,0 +1,131 @@
+.panel {
+  position: fixed;
+  z-index: 120;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  color: #e8f5f2;
+  background: #0a1628;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 20px 55px rgba(10, 22, 40, 0.28);
+}
+
+.copy {
+  min-width: 0;
+}
+
+.copy strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.copy p {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.copy a {
+  color: #63d6d2;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+}
+
+.primaryButton,
+.secondaryButton,
+.settingsButton {
+  min-height: 42px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.primaryButton {
+  color: #041f25;
+  background: #63d6d2;
+  border: 1px solid #63d6d2;
+}
+
+.secondaryButton {
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover,
+.settingsButton:hover {
+  transform: translateY(-1px);
+}
+
+.settingsButton {
+  position: fixed;
+  z-index: 110;
+  bottom: 14px;
+  left: 14px;
+  min-height: 36px;
+  padding: 7px 12px;
+  color: #0a1628;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #cde5df;
+  box-shadow: 0 8px 24px rgba(10, 22, 40, 0.14);
+}
+
+@media (max-width: 720px) {
+  .panel {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    padding-inline: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryButton,
+  .secondaryButton,
+  .settingsButton {
+    transition: none;
+  }
+}
+

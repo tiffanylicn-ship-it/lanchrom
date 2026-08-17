@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
 import SiteChatWidget from "@/components/layout/SiteChatWidget";
+import PrivacyConsent from "@/components/analytics/PrivacyConsent";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -34,6 +35,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <Script id="google-consent-defaults" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+            window.gtag('consent', 'default', {
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              analytics_storage: 'denied',
+              wait_for_update: 500
+            });
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -46,20 +60,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body style={{ margin: 0, fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
-        <Script id="hs-script" src="//js.hs-scripts.com/246539586.js" strategy="afterInteractive" />
-        {process.env.NEXT_PUBLIC_GA4_ID && (
-          <>
-            <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA4_ID}`} strategy="afterInteractive" />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){window.dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${process.env.NEXT_PUBLIC_GA4_ID}');
-              `}
-            </Script>
-          </>
-        )}
         {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
           <Script
             src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
@@ -71,6 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <FloatingCTA />
         <SiteChatWidget />
+        <PrivacyConsent />
       </body>
     </html>
   );
