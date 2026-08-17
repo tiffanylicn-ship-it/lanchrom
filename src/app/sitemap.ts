@@ -9,6 +9,7 @@ import { getAllKnowledgeArticleSlugs } from "@/data/knowledge-articles";
 import { getDistributorMarketSlugs } from "@/data/distributor-program";
 import { getCategoryPath, PRODUCT_LINE_PAGES } from "@/data/product-line-pages";
 import { EUROPE_HPLC_ARTICLES } from "@/data/technical-blog-europe";
+import { isProductRedirectSource } from "@/data/product-redirects";
 
 const BASE_URL = "https://www.lanchrom.com";
 
@@ -76,9 +77,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry(getCategoryPath(slug), "weekly", 0.8)
   );
 
-  const productDetails: Entry[] = PRODUCTS.map(p =>
-    entry(`/products/${p.category}/${p.slug}`, "monthly", 0.7)
-  );
+  const productDetails: Entry[] = PRODUCTS
+    .map(p => `/products/${p.category}/${p.slug}`)
+    .filter(path => !isProductRedirectSource(path))
+    .map(path => entry(path, "monthly", 0.7));
 
   const industries: Entry[] = getAllIndustrySlugs().map(slug =>
     entry(`/industries/${slug}`, "monthly", 0.6)

@@ -8,6 +8,7 @@ import {
 } from "@/data/product-line-pages";
 import ProductCategoryOverview from "@/components/product/ProductCategoryOverview";
 import ProductDetailExperience from "@/components/product/ProductDetailExperience";
+import { isProductRedirectSource } from "@/data/product-redirects";
 
 interface Props {
   params: Promise<{ category: string; slug: string }>;
@@ -15,7 +16,9 @@ interface Props {
 
 export async function generateStaticParams() {
   return [
-    ...PRODUCTS.map((product) => ({ category: product.category, slug: product.slug })),
+    ...PRODUCTS
+      .filter((product) => !isProductRedirectSource(`/products/${product.category}/${product.slug}`))
+      .map((product) => ({ category: product.category, slug: product.slug })),
     ...getNestedCategoryStaticParams(),
   ];
 }

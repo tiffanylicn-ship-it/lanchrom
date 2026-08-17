@@ -10015,15 +10015,15 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
   },
   {
     "_id": "excel-excipients-ethanol",
-    "name": "Ethanol",
+    "name": "Pharmaceutical / Food Grade Ethanol",
     "slug": "ethanol",
     "category": "excipients",
     "grades": [
       "food-grade",
       "pharma-usp"
     ],
-    "shortDescription": "Ethanol for Pharmaceuticals, Disinfection, Food. Pharmaceutical or food grade available, pharmacopeia-compliant, methanol-residue controlled.",
-    "description": "LANCHROM™ Ethanol (Ethanol) is supplied for Pharmaceuticals, Disinfection, Food. Pharmaceutical or food grade available, pharmacopeia-compliant, methanol-residue controlled. Packaging options: 25L, 200L.",
+    "shortDescription": "Pharmaceutical or food grade ethanol for pharmaceutical processing, disinfection, and food applications, with pharmacopeia-compliant specifications and controlled methanol residue.",
+    "description": "LANCHROM™ Pharmaceutical / Food Grade Ethanol is supplied for pharmaceutical processing, disinfection, and food applications. Available specifications include pharmaceutical or food grade with controlled methanol residue. Packaging options: 25L and 200L.",
     "specifications": [
       {
         "parameter": "Grade/Performance",
@@ -10061,9 +10061,9 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "sdsAvailable": false,
     "coaStatus": "request-only",
     "isHazmat": true,
-    "seoTitle": "Ethanol | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
-    "seoDescription": "LANCHROM™ Ethanol: Pharmaceutical or food grade available, pharmacopeia-compliant, methanol-residue controlled. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": ["Ethanol"]
+    "seoTitle": "Pharmaceutical Grade Ethanol | Food Grade Ethanol | LANCHROM™",
+    "seoDescription": "Pharmaceutical or food grade ethanol with controlled methanol residue. 25L and 200L packaging; request specifications, CoA, SDS, sample, and quotation.",
+    "keywords": ["pharmaceutical grade ethanol"]
   },
   {
     "_id": "excel-excipients-methanol",

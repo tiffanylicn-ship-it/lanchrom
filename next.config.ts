@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { PRODUCT_REDIRECTS } from "./src/data/product-redirects";
 
 const nextConfig: NextConfig = {
   turbopack: { root: process.cwd() },
@@ -9,6 +10,13 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "cdn.sanity.io", pathname: "/images/**" },
       { protocol: "https", hostname: "images.unsplash.com" },
     ],
+  },
+  async redirects() {
+    return PRODUCT_REDIRECTS.map(({ source, destination }) => ({
+      source,
+      destination,
+      permanent: true,
+    }));
   },
   async headers() {
     return [

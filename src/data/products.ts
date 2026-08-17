@@ -16,6 +16,7 @@ import {
   getSupplyCatalogEntry,
   PRODUCTS_SUPPLY_CATALOG,
 } from "./products-supply-catalog";
+import { PRODUCT_ROUTE_ALIASES } from "./product-redirects";
 
 export const PRODUCTS_CORE: Product[] = [
   // ── HPLC Grade Acetonitrile ──────────────────────────────
@@ -423,7 +424,7 @@ const CLASSIFIED_PRODUCTS: Product[] = CONSOLIDATED_PRODUCTS.map((product) => {
 // Classification can bring legacy imports from different source categories onto
 // the same canonical product route. Merge them again here so every final route,
 // product page, and downloadable document set represents one product only.
-export const PRODUCTS: Product[] = Array.from(
+const ROUTE_DEDUPED_PRODUCTS: Product[] = Array.from(
   CLASSIFIED_PRODUCTS.reduce((map, product) => {
     const key = `${product.category}/${product.slug}`;
     const existing = map.get(key);
@@ -474,6 +475,43 @@ export const PRODUCTS: Product[] = Array.from(
     return map;
   }, new Map<string, Product>()).values(),
 );
+
+function mergeAliasIntoCanonical(canonical: Product, alias: Product): Product {
+  return {
+    ...canonical,
+    legacyCategories: Array.from(new Set([
+      ...(canonical.legacyCategories || []),
+      ...(alias.legacyCategories || []),
+      alias.category,
+    ])),
+    legacySlugs: Array.from(new Set([
+      ...(canonical.legacySlugs || []),
+      ...(alias.legacySlugs || []),
+      alias.slug,
+    ].filter((slug): slug is string => Boolean(slug)))),
+  };
+}
+
+const PRODUCTS_BY_ROUTE = new Map(
+  ROUTE_DEDUPED_PRODUCTS.map((product) => [
+    `${product.category}/${product.slug}`,
+    product,
+  ]),
+);
+
+for (const [source, destination] of Object.entries(PRODUCT_ROUTE_ALIASES)) {
+  const alias = PRODUCTS_BY_ROUTE.get(source);
+  const canonical = PRODUCTS_BY_ROUTE.get(destination);
+
+  if (!alias || !canonical) {
+    throw new Error(`Invalid product route alias: ${source} -> ${destination}`);
+  }
+
+  PRODUCTS_BY_ROUTE.set(destination, mergeAliasIntoCanonical(canonical, alias));
+  PRODUCTS_BY_ROUTE.delete(source);
+}
+
+export const PRODUCTS: Product[] = Array.from(PRODUCTS_BY_ROUTE.values());
 
 export function getProductBySlug(slug: string, category?: string) {
   const canonicalCategory = category ? getCanonicalCategorySlug(category) : undefined;
