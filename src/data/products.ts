@@ -477,14 +477,15 @@ export const PRODUCTS: Product[] = Array.from(
 
 export function getProductBySlug(slug: string, category?: string) {
   const canonicalCategory = category ? getCanonicalCategorySlug(category) : undefined;
-  return PRODUCTS.find((product) => {
-    const slugMatches = product.slug === slug || product.legacySlugs?.includes(slug);
-    if (!slugMatches) return false;
-    if (!canonicalCategory) return true;
-    return product.category === canonicalCategory
-      || product.catalogCategories?.includes(canonicalCategory)
-      || product.legacyCategories?.includes(category || "");
-  });
+  const candidates = PRODUCTS.filter((product) =>
+    product.slug === slug || product.legacySlugs?.includes(slug)
+  );
+
+  if (!canonicalCategory) return candidates[0];
+
+  return candidates.find((product) => product.category === canonicalCategory)
+    || candidates.find((product) => product.catalogCategories?.includes(canonicalCategory))
+    || candidates.find((product) => product.legacyCategories?.includes(category || ""));
 }
 
 export function getProductsByCategory(category: string) {
@@ -494,7 +495,13 @@ export function getProductsByCategory(category: string) {
   );
   return Array.from(products.reduce((map, product) => {
     const key = normalizeCatalogProductName(product.name);
-    if (!map.has(key)) map.set(key, product);
+    const existing = map.get(key);
+    if (!existing || (
+      product.category === canonicalCategory
+      && existing.category !== canonicalCategory
+    )) {
+      map.set(key, product);
+    }
     return map;
   }, new Map<string, Product>()).values());
 }

@@ -14,8 +14,18 @@ const BASE_URL = "https://www.lanchrom.com";
 
 type Entry = MetadataRoute.Sitemap[number];
 
-function entry(path: string, changeFrequency: Entry["changeFrequency"], priority: number): Entry {
-  return { url: `${BASE_URL}${path}`, lastModified: new Date(), changeFrequency, priority };
+function entry(
+  path: string,
+  changeFrequency: Entry["changeFrequency"],
+  priority: number,
+  lastModified?: string,
+): Entry {
+  return {
+    url: `${BASE_URL}${path}`,
+    changeFrequency,
+    priority,
+    ...(lastModified ? { lastModified } : {}),
+  };
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -45,6 +55,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/guides", "weekly", 0.7),
     entry("/resources/blog", "weekly", 0.6),
     entry("/resources/blog/lcms-solvent-background-comparison", "monthly", 0.7),
+    entry("/resources/blog/hplc-solvent-storage-handling", "monthly", 0.7, "2026-07-31"),
+    entry("/resources/blog/lcms-grade-solvent-selection-guide", "monthly", 0.7, "2026-07-31"),
     entry("/resources/faq", "monthly", 0.6),
     entry("/resources/knowledge-center", "weekly", 0.7),
     entry("/downloads", "monthly", 0.5),
@@ -53,7 +65,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/downloads/tds", "monthly", 0.5),
     entry("/downloads/certificates", "monthly", 0.5),
     entry("/products/electronic-grade-ipa", "monthly", 0.8),
-    entry("/search", "yearly", 0.3),
     entry("/privacy", "yearly", 0.2),
   ];
 

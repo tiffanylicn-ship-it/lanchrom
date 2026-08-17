@@ -44,6 +44,12 @@ export default function DownloadsPage() {
             Search the priority product portfolio and directly download product-level TDS and specification summaries.
             Market-specific SDS files and batch-specific COA documents remain available on request.
           </p>
+          <nav aria-label="Document type shortcuts" className="mt-6 flex flex-wrap gap-3">
+            <Link href="/downloads/tds" className="btn-line inline-flex">TDS Library</Link>
+            <Link href="/downloads/sds" className="btn-line inline-flex">SDS Library</Link>
+            <Link href="/downloads/coa" className="btn-line inline-flex">COA Requests</Link>
+            <Link href="/downloads/certificates" className="btn-line inline-flex">Quality Certificates</Link>
+          </nav>
         </div>
       </section>
 

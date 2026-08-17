@@ -7,7 +7,7 @@ import ProductInquiryForm from "./ProductInquiryForm";
 import styles from "./product-page.module.css";
 
 export const metadata: Metadata = {
-  title: "Electronic Grade IPA | High Purity Isopropanol Manufacturer",
+  title: "Electronic Grade IPA | High Purity Isopropanol Manufacturer | LANCHROM™",
   description: "LANCHROM Electronic Grade IPA provides high-purity isopropanol for semiconductor cleaning, CMP, advanced packaging, and precision electronics manufacturing.",
   keywords: ["Electronic Grade IPA"],
   alternates: { canonical: "https://www.lanchrom.com/products/electronic-grade-ipa" },

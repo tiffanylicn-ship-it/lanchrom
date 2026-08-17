@@ -9,7 +9,7 @@ import PrivacyConsent from "@/components/analytics/PrivacyConsent";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: { default: "LANCHROM™ | Precision Solvents for Analytical Science", template: "%s | LANCHROM™" },
+  title: "LANCHROM™ | Precision Solvents for Analytical Science",
   description: "LANCHROM manufactures high-purity solvents with documented quality, flexible packaging and global export support.",
   metadataBase: new URL("https://www.lanchrom.com"),
   openGraph: {

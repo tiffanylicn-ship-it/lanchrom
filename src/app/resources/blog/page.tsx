@@ -16,6 +16,20 @@ const POSTS = [
     date: "Laboratory comparison",
     href: "/resources/blog/lcms-solvent-background-comparison",
   },
+  {
+    title: "HPLC Solvent Storage and Handling: A Practical Laboratory Guide",
+    excerpt: "Protect chromatography performance with a consistent workflow for receiving, storing, opening, and dispensing analytical solvents.",
+    tag: "Laboratory Practice",
+    date: "8 min technical guide",
+    href: "/resources/blog/hplc-solvent-storage-handling",
+  },
+  {
+    title: "How to Choose an LC-MS Grade Solvent for Sensitive Methods",
+    excerpt: "Evaluate LC-MS solvents using blank performance, residue, water, metal control, packaging, lot documents, and method-specific qualification.",
+    tag: "Solvent Selection",
+    date: "9 min technical guide",
+    href: "/resources/blog/lcms-grade-solvent-selection-guide",
+  },
   ...EUROPE_HPLC_ARTICLES.map((article) => ({
     title: article.title,
     excerpt: article.description,

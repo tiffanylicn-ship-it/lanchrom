@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!article) return { title: "Article Not Found | LANCHROM" };
   const url = `https://www.lanchrom.com/resources/blog/${article.slug}`;
   return {
-    title: article.title,
+    title: `${article.title} | LANCHROM™`,
     description: article.description,
     keywords: [article.primaryKeyword],
     alternates: { canonical: url },

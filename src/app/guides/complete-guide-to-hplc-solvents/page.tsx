@@ -543,6 +543,7 @@ export default function Page() {
           <div className="mt-12 pt-8 border-t border-[#E6E3DD] flex gap-3 flex-wrap">
             <Link href="/contact?type=sample" className="btn-fill">Get Free Sample</Link>
             <Link href="/products/hplc-solvents" className="btn-line">Browse HPLC Solvents</Link>
+            <Link href="/resources/blog/hplc-solvent-storage-handling" className="btn-line">Storage &amp; Handling Guide</Link>
           </div>
         </article>
       </div>

@@ -22,7 +22,7 @@ export interface ApplicationInfo {
 export const APPLICATIONS: Record<string, ApplicationInfo> = {
   "hplc-analysis": {
     slug: "hplc-analysis",
-    title: "HPLC Solvents For Method Development &amp; Routine Analysis",
+    title: "HPLC Solvents For Method Development & Routine Analysis",
     h1: "HPLC Analysis Solvents",
     tagline: "Gradient and isocratic grade solvents for reliable retention time and peak shape",
     description: "HPLC method development and routine QC both depend on solvent consistency batch to batch — drift in water content, UV cutoff, or trace impurities shows up as retention time shift or ghost peaks long before anyone suspects the mobile phase.",
@@ -32,7 +32,7 @@ export const APPLICATIONS: Record<string, ApplicationInfo> = {
   },
   "lcms-analysis": {
     slug: "lcms-analysis",
-    title: "LC-MS Grade Solvents For Bioanalytical &amp; Trace Analysis",
+    title: "LC-MS Grade Solvents For Bioanalytical & Trace Analysis",
     h1: "LC-MS Analysis Solvents",
     tagline: "Sub-ppb metal, MS-blank certified solvents for sensitive mass spec methods",
     description: "LC-MS sensitivity lives or dies on background noise — sodium and potassium adducts, polymer leachates, and trace metal contamination from an ordinary HPLC-grade solvent can bury a low-abundance analyte peak entirely.",
@@ -52,7 +52,7 @@ export const APPLICATIONS: Record<string, ApplicationInfo> = {
   },
   "food-safety-testing": {
     slug: "food-safety-testing",
-    title: "Solvents For Food Safety &amp; Contaminant Testing",
+    title: "Solvents For Food Safety & Contaminant Testing",
     h1: "Food Safety Testing Solvents",
     tagline: "GC and HPLC solvents for pesticide, mycotoxin, and additive screening",
     description: "Food safety labs run multi-residue pesticide screens, mycotoxin panels, and additive quantitation back to back on the same instrument — clean baselines and low solvent blank values keep false positives out of a result that could trigger a recall.",
@@ -62,8 +62,8 @@ export const APPLICATIONS: Record<string, ApplicationInfo> = {
   },
   "environmental-analysis": {
     slug: "environmental-analysis",
-    title: "Solvents &amp; Standards For Environmental Analysis",
-    h1: "Environmental Analysis Solvents &amp; Standards",
+    title: "Solvents & Standards For Environmental Analysis",
+    h1: "Environmental Analysis Solvents & Standards",
     tagline: "ICP/AAS standards and trace-grade solvents for soil, air, and water methods",
     description: "Environmental methods (EPA, ISO, GB) span ICP-MS metals panels, GC volatile organics, and HPLC semi-volatiles in the same lab — standardizing on one solvent and standard-solution supplier simplifies method validation across all three.",
     seoDescription: "ICP/AAS standard solutions and trace-grade solvents for environmental soil, air, and water analysis. EPA/ISO method compatible.",
@@ -72,7 +72,7 @@ export const APPLICATIONS: Record<string, ApplicationInfo> = {
   },
   "water-testing": {
     slug: "water-testing",
-    title: "Standard Solutions For Drinking Water &amp; Wastewater Testing",
+    title: "Standard Solutions For Drinking Water & Wastewater Testing",
     h1: "Water Testing Standard Solutions",
     tagline: "ICP, AAS, and titration standards for routine water quality compliance",
     description: "Routine water testing runs the same compliance panel — metals, hardness, chlorine demand, organic carbon — week after week, which means standard solution consistency matters more than novelty; the same calibration curve needs to hold for years.",
@@ -102,7 +102,7 @@ export const APPLICATIONS: Record<string, ApplicationInfo> = {
   },
   "gc-sample-preparation": {
     slug: "gc-sample-preparation",
-    title: "GC Solvents For Sample Preparation &amp; Extraction",
+    title: "GC Solvents For Sample Preparation & Extraction",
     h1: "GC Sample Preparation Solvents",
     tagline: "Low-residue extraction solvents that won't show up as ghost peaks",
     description: "Liquid-liquid extraction and solvent-based cleanup ahead of GC analysis only works if the extraction solvent itself doesn't contribute peaks — residue grade matters as much for sample prep as it does for the final injection solvent.",
@@ -112,7 +112,7 @@ export const APPLICATIONS: Record<string, ApplicationInfo> = {
   },
   "cannabis-analysis": {
     slug: "cannabis-analysis",
-    title: "HPLC &amp; GC Solvents For Cannabis Potency &amp; Residual Testing",
+    title: "HPLC & GC Solvents For Cannabis Potency & Residual Testing",
     h1: "Cannabis Analysis Solvents",
     tagline: "Potency, terpene, pesticide, and residual solvent testing reagents",
     description: "Cannabis testing labs run cannabinoid potency on HPLC, terpene and residual solvent panels on GC-headspace, and pesticide multi-residue screens — three different method types that all depend on the same underlying solvent purity discipline.",
@@ -122,7 +122,7 @@ export const APPLICATIONS: Record<string, ApplicationInfo> = {
   },
   "icp-ms-elemental-analysis": {
     slug: "icp-ms-elemental-analysis",
-    title: "Trace Acids &amp; Standards For ICP-MS Elemental Analysis",
+    title: "Trace Acids & Standards For ICP-MS Elemental Analysis",
     h1: "ICP-MS Elemental Analysis Reagents",
     tagline: "Trace-metal grade acids and certified element standards for ppb-level detection",
     description: "ICP-MS detection limits in the low-ppt range are only as clean as the digestion acid and calibration standard behind them — trace-metal grade nitric and hydrochloric acid keep the instrument blank from becoming the limiting factor.",
@@ -202,7 +202,7 @@ export const APPLICATIONS: Record<string, ApplicationInfo> = {
   },
   "tlc-method-development": {
     slug: "tlc-method-development",
-    title: "TLC Plates &amp; Developing Solvents For Method Development",
+    title: "TLC Plates & Developing Solvents For Method Development",
     h1: "TLC Method Development",
     tagline: "Silica gel and reverse-phase TLC plates with matched developing solvent systems",
     description: "Thin-layer chromatography remains the fastest way to scout a separation before committing to HPLC method development — plate uniformity and developing solvent purity determine whether Rf values reproduce from one run to the next.",
@@ -212,7 +212,7 @@ export const APPLICATIONS: Record<string, ApplicationInfo> = {
   },
   "spe-sample-cleanup": {
     slug: "spe-sample-cleanup",
-    title: "SPE Cartridges For Sample Cleanup &amp; Extraction",
+    title: "SPE Cartridges For Sample Cleanup & Extraction",
     h1: "SPE Sample Cleanup",
     tagline: "C18, HLB, and mixed-mode SPE cartridges for matrix cleanup ahead of LC or GC",
     description: "Solid-phase extraction cleanup removes matrix interferences before they reach the column — choosing the right sorbent chemistry (C18 for reversed-phase, HLB for broad-spectrum, mixed-mode for ionizable analytes) is most of what determines recovery.",
@@ -232,7 +232,7 @@ export const APPLICATIONS: Record<string, ApplicationInfo> = {
   },
   "mycotoxin-analysis": {
     slug: "mycotoxin-analysis",
-    title: "HPLC &amp; LC-MS Solvents For Mycotoxin Analysis",
+    title: "HPLC & LC-MS Solvents For Mycotoxin Analysis",
     h1: "Mycotoxin Analysis Solvents",
     tagline: "Immunoaffinity SPE and LC-MS solvents for aflatoxin and mycotoxin panels",
     description: "Mycotoxin screening — aflatoxins, ochratoxin A, zearalenone — runs on immunoaffinity column cleanup followed by HPLC-fluorescence or LC-MS/MS, both of which depend on solvent purity to keep detection limits at the low-ppb levels regulations require.",
@@ -242,7 +242,7 @@ export const APPLICATIONS: Record<string, ApplicationInfo> = {
   },
   "forensic-drug-screening": {
     slug: "forensic-drug-screening",
-    title: "LC-MS Solvents For Forensic Drug &amp; Toxicology Screening",
+    title: "LC-MS Solvents For Forensic Drug & Toxicology Screening",
     h1: "Forensic Drug Screening Solvents",
     tagline: "Chain-of-custody documented LC-MS solvents for forensic toxicology",
     description: "Forensic drug screening results may face courtroom scrutiny years after the test is run — full batch traceability and documentation on every solvent and standard solution matters as much as the analytical result itself.",
@@ -282,7 +282,7 @@ export const APPLICATIONS: Record<string, ApplicationInfo> = {
   },
   "cosmetic-formulation-qc": {
     slug: "cosmetic-formulation-qc",
-    title: "HPLC Solvents For Cosmetic Preservative &amp; Active QC",
+    title: "HPLC Solvents For Cosmetic Preservative & Active QC",
     h1: "Cosmetic Formulation QC",
     tagline: "HPLC solvents for preservative, active-ingredient, and stability testing",
     description: "Cosmetic preservative efficacy and active-ingredient quantitation both run on routine HPLC methods — the same solvent-grade discipline as pharmaceutical QC, applied to a faster-moving product category.",
@@ -302,8 +302,8 @@ export const APPLICATIONS: Record<string, ApplicationInfo> = {
   },
   "titration-volumetric-analysis": {
     slug: "titration-volumetric-analysis",
-    title: "Standard Solutions For Titration &amp; Volumetric Analysis",
-    h1: "Titration &amp; Volumetric Analysis",
+    title: "Standard Solutions For Titration & Volumetric Analysis",
+    h1: "Titration & Volumetric Analysis",
     tagline: "NaOH, HCl, EDTA, and KMnO4 standard solutions for classical wet chemistry",
     description: "Classical titration methods — acid-base, complexometric, redox — remain the backbone of routine QC in labs that don't need (or can't afford) instrumental methods for every test; standard solution titer accuracy is the whole method.",
     seoDescription: "NaOH, HCl, EDTA, KMnO4 standard solutions for titration and volumetric analysis. Certified titer, batch-traceable.",
