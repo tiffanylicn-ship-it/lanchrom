@@ -451,6 +451,112 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "View 0.005N Sulfuric Acid Mobile Phase", href: "/products/acidified-mobile-phases/organic-acid-mobile-phase" },
     ],
   },
+  {
+    slug: "hplc-cad-mobile-phase-solvent-selection",
+    title: "HPLC-CAD Mobile Phase Solvent Selection: A Background-Control Workflow",
+    shortTitle: "HPLC-CAD Mobile Phase Solvent Selection",
+    description: "A practical HPLC-CAD mobile phase solvent selection workflow for controlling volatility, evaporation residue, additives, background current and lot changes.",
+    primaryKeyword: "HPLC-CAD mobile phase solvent selection",
+    tag: "CAD Method Development",
+    readingTime: "11 min technical guide",
+    intro: "A mobile phase can look clean by UV detection and still create an unstable charged aerosol detector baseline. CAD responds to particles that remain after nebulisation and evaporation, so trace non-volatile material from a solvent, additive, water source, vessel or previously used flow path can appear as background current, noise, drift or gradient artefacts. The practical task is therefore not to choose a grade name in isolation. It is to connect solvent and additive evidence to the detector, method and lot-release test that will actually be used.",
+    painPoints: [
+      { title: "A grade label is treated as a CAD specification", detail: "The laboratory buys an HPLC or LC-MS grade without checking evaporation residue, additive purity or performance in the intended detector method." },
+      { title: "High background is blamed on one bottle", detail: "Water, glassware, pH electrodes, columns, vials and flow-path memory are not separated from solvent-lot effects before a complaint is raised." },
+      { title: "A volatile additive is assumed to be clean", detail: "The additive may evaporate in principle while its impurities, degradation products or concentration still increase background current and drift." },
+      { title: "Lot changes have no controlled comparison", detail: "A replacement lot enters routine use without a reference blank, fixed detector settings or predefined acceptance criteria." },
+    ],
+    sections: [
+      {
+        heading: "Translate the CAD measurement into a mobile-phase requirement",
+        paragraphs: [
+          "A charged aerosol detector nebulises the column effluent, evaporates the mobile phase and measures charge carried by the remaining aerosol particles. That mechanism explains why the solvent and analyte have opposite design requirements: the target analyte should survive evaporation sufficiently to form measurable particles, while the mobile phase should leave as little particle-forming material as practical. A constituent that is harmless to a UV baseline can become visible after evaporation if it is semi-volatile or non-volatile.",
+          "Thermo Fisher's current CAD guidance instructs users to use volatile mobile phases and minimise non-volatile solutes because even trace amounts can produce background current, noise and drift. Its technical guide further describes background current as a useful troubleshooting signal for the total semi-volatile and non-volatile load reaching the detector. This does not create one universal numerical limit. Background depends on composition, detector settings, flow, evaporation temperature and instrument condition, so the laboratory must establish method-specific expectations.",
+        ],
+        points: [
+          "Define the analyte volatility and whether CAD is suitable before optimising the eluent.",
+          "Treat background current, noise, drift and gradient artefacts as related but distinct observations.",
+          "Record detector settings and flow conditions whenever candidate mobile phases are compared.",
+        ],
+      },
+      {
+        heading: "HPLC-CAD mobile phase solvent selection starts with evidence, not grade names",
+        paragraphs: [
+          "Begin with solvents that are sufficiently volatile under the intended operating conditions, then review the evidence most relevant to particle-forming residue. Supplier documents may report purity, water and residue after evaporation, but the same commercial grade can carry different specifications across suppliers and different results across lots. A low UV absorbance claim answers an optical question; it does not by itself demonstrate a low CAD background. Likewise, LC-MS grade is a sensible candidate class because it is designed around sensitive detection, yet it remains a starting point rather than an automatic release decision.",
+          "Build a short candidate table for each solvent and water source. Record the exact product, grade, manufacturing or release specification, residue-after-evaporation limit when available, water control, filtration statement, lot number, package and opening date. Note stabilisers explicitly: an organic solvent can be volatile while a stabiliser is not. For bottled water, compare it with freshly produced high-purity water under the same method because dissolved ions and organic material may contribute to background.",
+          "Connect the table to the analytical procedure. An isocratic assay can use a stable blank at one composition, whereas a gradient exposes changing organic content, nebulisation efficiency and accumulated impurities. A reproducible gradient rise is not automatically a bad lot; the useful comparison is whether a candidate produces an acceptable and repeatable profile relative to the qualified reference under matched conditions.",
+        ],
+      },
+      {
+        heading: "Choose additives by volatility, purity, concentration and method need",
+        paragraphs: [
+          "Every component must be assessed. The manufacturer guidance warns against non-volatile buffers, and the technical guide identifies phosphate buffers and some ion-pairing reagents as incompatible examples. Volatile acids and ammonium salts may be workable, but their type, concentration, purity and ageing still matter. Use the lowest concentration that achieves the required chromatographic selectivity, not the highest concentration that the instrument can tolerate. A manufacturer-specific operating ceiling is not a recommended method concentration and should not be transferred to another detector without checking its manual.",
+          "Additive quality can dominate an otherwise suitable solvent system. Thermo Fisher's controlled example compared a contaminated additive with a fresh one and showed substantial changes in background, noise, drift and analyte response. The lesson is a diagnostic sequence, not a universal performance claim: retain the solvent and water, substitute only the additive, and compare matched blanks before replacing every component at once.",
+          "Preparation practice can introduce the same material the purchasing specification tries to exclude. Potassium chloride carried from a pH electrode, detergent residue in glassware, vial or cap leachables and a column previously exposed to non-volatile mobile phases can all reach the CAD. Use dedicated, thoroughly rinsed vessels where justified; measure pH in a disposable aliquot rather than placing a storage-solution-wetted electrode directly into the final reservoir; and review system history before assigning a problem to a solvent supplier.",
+        ],
+        points: [
+          "Confirm every solvent and additive is compatible with the current detector manual.",
+          "Document additive grade, lot, concentration, preparation date and storage condition.",
+          "Do not substitute phosphate or another non-volatile buffer without a controlled method-development decision.",
+          "Keep safety, column compatibility and analyte chemistry in the decision alongside detector background.",
+        ],
+      },
+      {
+        heading: "Qualify a candidate lot with a controlled substitution ladder",
+        paragraphs: [
+          "A useful lot study begins with a working reference: the currently accepted solvent system, a stable instrument and a blank sequence that represents the routine method. Predefine the attributes that will decide acceptance, such as initial background current after equilibration, short-term noise, drift over the relevant interval, gradient-blank features, carryover into a following blank and system-suitability performance. Use limits justified from the method and detector history rather than copying a value from an unrelated application note.",
+          "Change one input at a time. Compare reference and candidate organic solvent while holding water, additive, vessels and preparation constant. Then compare the water source, followed by the additive lot. If the background remains elevated in every condition, bypass or substitute downstream components only through the instrument owner's approved troubleshooting procedure. This ladder prevents a clean solvent from being rejected because a contaminated reservoir, column or degasser channel released retained non-volatiles.",
+          "Run enough blanks to separate equilibration from persistent contamination and include the actual gradient when the method uses one. Record raw traces, detector settings, preparation records and package details. A pass decision should release a specific lot and package configuration for a defined use. It should not be written as evidence that every lot from the grade, or every detector using the same chemistry, will behave identically.",
+        ],
+      },
+      {
+        heading: "Keep the qualified phase under control after release",
+        paragraphs: [
+          "Qualification can be undone at the bench. Water and mixed mobile phases can change through microbial growth, airborne contamination or interaction with the container; organic solvents can take up water or accumulate contamination through repeated opening. Establish preparation and in-use periods from local evidence, method sensitivity and manufacturer instructions. Avoid turning a supplier's general preparation frequency into a universal shelf life for the laboratory's formulation.",
+          "Trend the observations that matter: lot, bottle opening date, preparation time, reservoir, additive lot, background current, blank profile and any corrective flush. When a signal changes, the history shows whether the event follows a new solvent lot, an ageing mobile phase, a column change or maintenance. It also supports a precise supplier investigation with chromatograms and matched comparisons instead of a broad statement that the solvent is noisy.",
+          "Procurement should preserve this control strategy. Require current product specifications and batch documents, agree how material changes will be communicated, and qualify the package size actually used. LANCHROM product categories can help a laboratory identify candidate solvent and additive families, but suitability for a CAD method must be confirmed against the current product specification, delivered lot and laboratory acceptance study.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative qualification scenario",
+      title: "A pharmaceutical laboratory isolates a rising CAD gradient background",
+      context: "An illustrative analytical-development team sees a higher gradient background after opening new solvent and additive lots. The UV trace remains acceptable, and the team needs to decide whether to reject the organic solvent or investigate the preparation system.",
+      actions: [
+        "The team freezes detector settings, gradient, vessels and water source, then runs the accepted solvent and additive as its reference blank.",
+        "It substitutes only the candidate organic-solvent lot, followed by only the candidate additive lot, with matched preparation and equilibration.",
+        "The additive comparison reproduces the elevated background, while the organic-solvent comparison remains within the laboratory's predefined reference range.",
+        "The laboratory quarantines the additive lot, documents the paired traces and reviews the additive specification and storage history before contacting the supplier.",
+      ],
+      result: "The framework assigns the investigation to the component supported by controlled evidence and avoids rejecting an unrelated solvent lot. It is an illustrative workflow, not a named customer result or a guaranteed diagnostic outcome.",
+    },
+    checklist: [
+      "Analyte and mobile-phase volatility assessed for the intended CAD conditions",
+      "Current detector manual checked for solvent, additive and concentration restrictions",
+      "Solvent grade supported by a current specification rather than label wording alone",
+      "Residue after evaporation, water and stabiliser information reviewed where available",
+      "Water source and additive grade included in the qualification plan",
+      "Reference and candidate lots compared with fixed detector settings and flow",
+      "Isocratic or gradient blank matches the routine analytical procedure",
+      "Background current, noise, drift and relevant artefacts assessed separately",
+      "Glassware, pH electrode, vial, column and flow-path history considered",
+      "Lot, package, opening and preparation records linked to each sequence",
+      "Acceptance criteria approved before the candidate result is reviewed",
+      "Change notification and supplier-investigation evidence defined",
+    ],
+    sources: [
+      { label: "Thermo Fisher Scientific - HPLC-CAD response factors and mobile-phase performance tips", href: "https://www.thermofisher.com/us/en/home/industrial/chromatography/chromatography-learning-center/liquid-chromatography-information/hplc-system-components/how-hplc-detectors-work/charged-aerosol-detection/charged-aerosol-detection-cad-performance-tips.html" },
+      { label: "Thermo Fisher Scientific - Technical Guide 73914: factors influencing CAD performance", href: "https://assets.thermofisher.com/TFS-Assets/CMD/brochures/tg-73914-hplc-cad-factors-influencing-performance-tg73914-en.pdf" },
+      { label: "Thermo Fisher Scientific - Technical Note 140: optimizing and monitoring solvent quality", href: "https://assets.thermofisher.com/TFS-Assets/CMD/Technical-Notes/TN-140-LC-Solvent-Quality-UV-FD-CAD-TN70818-EN.pdf" },
+      { label: "Thermo Fisher Scientific - Technical Note 159: effect of mobile-phase quality on CAD performance", href: "https://assets.thermofisher.com/TFS-Assets/CMD/Application-Notes/TN-159-LC-CAD-Mobile-Phase-TN71390-EN.pdf" },
+    ],
+    productLinks: [
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Browse LC-MS Mobile Phase Additives", href: "/products/high-purity-solvents/lcms-mobile-phase-additives" },
+      { label: "Browse Acidified Mobile Phases", href: "/products/ready-to-use-solutions/acidified-mobile-phases" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
