@@ -557,6 +557,119 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "hplc-dwell-volume-method-transfer",
+    title: "HPLC Dwell Volume Method Transfer: A Gradient-Delay and Retention-Time Workflow",
+    shortTitle: "HPLC Dwell Volume Method Transfer",
+    description: "A practical HPLC dwell volume method transfer workflow for measuring gradient delay, comparing instruments and planning controlled retention-time bridging.",
+    primaryKeyword: "HPLC dwell volume method transfer",
+    tag: "Method Transfer",
+    readingTime: "11 min technical guide",
+    intro: "An HPLC dwell volume method transfer can reproduce the same column, flow rate and programmed gradient yet deliver different retention times or selectivity on the receiving instrument. The reason may be the time taken for a programmed composition change to travel from the mixing point to the column inlet. The useful response is not to edit the gradient immediately. It is to measure both configured systems, separate gradient delay from other transfer variables and build a controlled bridge that preserves the analytical procedure's intended performance.",
+    painPoints: [
+      { title: "The programmed gradient is mistaken for the column gradient", detail: "The method table is identical on both systems, but different flow paths make the composition change reach each column at a different time." },
+      { title: "Dwell volume is confused with every system volume", detail: "Teams use dead volume, extra-column volume and gradient delay interchangeably, so the investigation targets the wrong hardware or chromatographic symptom." },
+      { title: "A catalogue value replaces a configured measurement", detail: "Mixer, tubing, autosampler path and optional hardware can change the actual dwell volume from a nominal instrument specification." },
+      { title: "The gradient is adjusted before the cause is isolated", detail: "A timing change can hide differences in solvent preparation, mixing accuracy, temperature, column condition or detector settings instead of demonstrating a controlled transfer." },
+    ],
+    sections: [
+      {
+        heading: "Define the gradient delay before changing the analytical procedure",
+        paragraphs: [
+          "Waters and Thermo Fisher define dwell volume, also called gradient delay volume, as the volume between the point where mobile-phase components are mixed and the column inlet. At a fixed flow rate, it delays the programmed composition reaching the column, which initially experiences the starting composition. For an isocratic method, the composition does not change, so the same gradient-arrival effect is not present.",
+          "Keep this concept separate from extra-column volume. Extra-column volume includes the sample flow path outside the column and can broaden peaks before and after separation; unswept spaces are more precisely described as dead volume. Dwell volume can include mixers, valves, tubing, pump components and an autosampler path depending on where mixing occurs. Low-pressure and high-pressure mixing architectures therefore need not produce the same delay, even when the method file and flow rate match.",
+          "The chromatographic symptom is not limited to a uniform retention-time offset. Thermo Fisher notes that gradient delay can influence selectivity, peak shape and the gradient profile, particularly in multistep programmes. A later gradient arrival may extend the effective initial hold, while differences in mixing and dispersion can change how sharply the programmed composition reaches the column. Treat dwell volume as one transfer variable with a plausible mechanism, not as a universal explanation for every shifted peak.",
+        ],
+        points: [
+          "Record the point of gradient formation and the configured flow path on each system.",
+          "Distinguish gradient-arrival effects from injection-to-detector extra-column dispersion.",
+          "Confirm that the method is gradient-based before assigning a retention shift to dwell volume.",
+        ],
+      },
+      {
+        heading: "Measure source and target systems with the same marker approach",
+        paragraphs: [
+          "A defensible comparison uses a measured value for each instrument in the configuration used for transfer. Waters' current procedure removes the analytical column, installs an appropriate low-volume restrictor, runs two otherwise identical mobile phases with a UV-active marker in the B channel and compares the programmed gradient midpoint with the observed detector response midpoint. Dwell time is the observed midpoint time minus the programmed midpoint time; dwell volume is that time multiplied by the test flow rate.",
+          "The marker, wavelength, gradient shape, flow rate and required backpressure must follow the relevant instrument instructions and laboratory safety assessment. Waters publishes a water-and-caffeine example, while Agilent describes a water-and-acetone example. Check solvent compatibility, detector response, compressibility settings and waste handling before adapting either procedure.",
+          "Freeze configuration before measurement. Record pump and mixer type, mixer volume, tubing dimensions, autosampler flow-path mode, valves, detector cell and restrictor. Purge and equilibrate both channels to stable endpoints, then repeat the marker gradient to assess measurement repeatability.",
+        ],
+        points: [
+          "Use the same measurement principle on the source and receiving systems.",
+          "Retain the programmed composition trace and observed UV trace with the calculation.",
+          "Document configuration and repeatability, not only the final volume in microlitres.",
+          "Restore and verify the normal flow path before analytical samples are run.",
+        ],
+      },
+      {
+        heading: "Convert volume difference into a testable transfer hypothesis",
+        paragraphs: [
+          "Translate the measured volume into time at the analytical method's flow rate using dwell time equals dwell volume divided by flow rate. If the source system has a 0.40 mL larger measured dwell volume and the method runs at 1.00 mL/min, the gradient would reach its column about 0.40 minutes later, assuming the relevant configuration is unchanged. This arithmetic is an illustrative hypothesis, not an instruction to add or subtract 0.40 minutes from a controlled method.",
+          "Compare the predicted direction and approximate size of the delay with observed chromatograms. If all affected peaks shift in a way consistent with later gradient arrival, dwell volume remains a credible contributor. If only one compound moves, peak order changes unpredictably or peak width deteriorates without a matching timing pattern, investigate column chemistry, temperature, injection solvent, extra-column dispersion, gradient proportioning accuracy and mobile-phase preparation as well.",
+          "Do not infer equivalence from retention time alone. Review critical pairs, resolution, relative retention, peak symmetry, area precision, pressure and the complete system-suitability set. A small timing difference can matter near a steep or segmented part of the gradient, while a larger difference may have little effect in a method with a long initial hold. The analytical procedure's established performance criteria decide whether bridging is needed and whether the result is acceptable.",
+        ],
+      },
+      {
+        heading: "Build the HPLC dwell volume method transfer bridge",
+        paragraphs: [
+          "Begin with a faithful transfer run. Use the same approved mobile-phase composition, preparation sequence, solvent and additive lots where practical, column chemistry and dimensions, column temperature, injection volume, sample diluent, gradient table, flow rate and detector settings. Record source-system results close enough in time to provide a useful comparator. This baseline shows the combined transfer effect before a single factor is deliberately changed.",
+          "If measured dwell-volume difference is supported by the chromatographic pattern, define the available compensation options with the method owner and instrument guidance. Depending on the platform and procedure, options may include a controlled gradient-start adjustment, an initial hold, instrument software designed to emulate gradient delay or a qualified hardware volume. Agilent describes timing approaches and emphasises documenting the development-system dwell volume and its effect. The correct option depends on whether the receiving system needs more or less delay, what the instrument supports and what changes the controlled procedure permits.",
+          "Run the proposed bridge against predefined acceptance criteria and include challenging samples or standards that expose critical selectivity. Compare more than a visually similar overlay. Document the rationale, configured volumes, calculation, changed parameter, system-suitability outcome and any impact on reporting. A dwell-volume adjustment does not by itself establish regulatory acceptability, eliminate local change control or guarantee equivalent selectivity; those decisions belong to the applicable procedure owner and quality system.",
+        ],
+        points: [
+          "Establish a faithful source-versus-target baseline before compensation.",
+          "Change one justified transfer parameter at a time.",
+          "Use method-specific acceptance criteria and critical-pair evidence.",
+          "Approve the final instrument configuration and method record through local controls.",
+        ],
+      },
+      {
+        heading: "Keep mobile-phase inputs from confounding the instrument comparison",
+        paragraphs: [
+          "A dwell-volume study is still a mobile-phase experiment. The marker response depends on correct preparation and proportioning, while the analytical bridge depends on both systems receiving equivalent solvent composition. Use documented solvent identities, grades, lots and water sources; prepare channels through the same controlled sequence; and check for miscibility, degassing and additive constraints relevant to the current instrument manuals. A composition error can resemble an arrival-time problem or alter selectivity independently of dwell volume.",
+          "Gradient-grade solvents can be suitable candidates when a method needs low background across changing organic composition, but a category name is not a transfer result. Review the current product specification and batch documentation, then qualify the delivered lot against the method's detector and sensitivity. Ready-to-use blends may reduce a preparation variable for suitable fixed-composition inputs, but they do not replace measurement of online gradient formation or demonstrate that two instruments have equivalent flow paths.",
+          "Preserve the transfer knowledge for future maintenance. A mixer replacement, tubing change, autosampler-mode change or instrument relocation can alter the configured volume. Link the measured dwell-volume record to the instrument configuration, analytical procedure version and date. Reassess when a material flow-path change occurs or when retention behaviour departs from the established trend, rather than repeating a full investigation on an arbitrary calendar schedule.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative method-transfer scenario",
+      title: "A receiving laboratory isolates a gradient-arrival offset",
+      context: "An illustrative pharmaceutical QC team transfers an impurity gradient to a second HPLC platform. The receiving system gives later retention for several gradient-eluted peaks, although the column, programmed method and system-suitability solution are nominally the same.",
+      actions: [
+        "The team confirms mobile-phase preparation, column temperature, injection settings and detector parameters, then captures an uncompensated source-versus-target comparison.",
+        "Using the instrument-appropriate marker procedure, it measures both systems in their routine flow-path configurations and calculates the dwell time at the analytical flow rate.",
+        "The predicted later gradient arrival agrees with the direction and approximate timing of the receiving-system shift, so the method owner defines one supported compensation trial.",
+        "The receiving laboratory repeats the full system-suitability set and critical-pair comparison, records the configuration and routes the change through its local approval process.",
+      ],
+      result: "The framework turns an apparent instrument mismatch into a documented, testable transfer decision while keeping solvent preparation and other system variables visible. It is an illustrative workflow, not a named customer result or a promise that dwell-volume compensation will resolve every transfer difference.",
+    },
+    checklist: [
+      "Gradient method and transfer symptom clearly defined",
+      "Source and target pump architecture and mixing point recorded",
+      "Routine mixer, tubing, valves and autosampler path documented",
+      "Instrument-specific marker procedure and safety controls approved",
+      "Column replaced with the appropriate restrictor for measurement",
+      "Programmed and observed midpoint traces retained",
+      "Repeatability checked on both configured systems",
+      "Dwell volume converted to time at the analytical flow rate",
+      "Mobile-phase lots, preparation and water source controlled",
+      "Faithful uncompensated transfer run completed first",
+      "Critical pairs and full system suitability assessed",
+      "Adjustment rationale, configuration and approval record retained",
+    ],
+    sources: [
+      { label: "Waters - What is system dwell volume?", href: "https://support.waters.com/KB_Chem/Other/WKB50711_What_is_system_dwell_volume" },
+      { label: "Waters - How to determine system dwell volume", href: "https://support.waters.com/KB_Chem/Other/WKB50707_How_do_I_determine_system_dwell_volume" },
+      { label: "Thermo Fisher Scientific - HPLC and UHPLC method transfer compendium", href: "https://documents.thermofisher.com/TFS-Assets/CMD/brochures/eb-73812-hplc-method-transfer-compendium-eb73812-en.pdf" },
+      { label: "Agilent - LC method translation and dwell volume", href: "https://community.agilent.com/technical/consumables/w/wiki/2897/lc-method-translation---the-dwell-volume" },
+    ],
+    productLinks: [
+      { label: "Browse HPLC Grade Solvents", href: "/products/high-purity-solvents/hplc-grade-solvents" },
+      { label: "Browse Gradient Grade Solvents", href: "/products/high-purity-solvents/gradient-grade-solvents" },
+      { label: "Read the Complete Guide to HPLC Solvents", href: "/guides/complete-guide-to-hplc-solvents" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
