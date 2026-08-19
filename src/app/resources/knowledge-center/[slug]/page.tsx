@@ -5,6 +5,7 @@ import { getKnowledgeArticle, getAllKnowledgeArticleSlugs, KNOWLEDGE_ARTICLES } 
 import { KNOWLEDGE_BATCH3 } from "@/data/knowledge-articles-batch3";
 import { KNOWLEDGE_BATCH4 } from "@/data/knowledge-articles-batch4";
 import { getCategoryInfo } from "@/data/categories";
+import { getCategoryPath } from "@/data/product-line-pages";
 import type { ContentBlock } from "@/data/knowledge-articles";
 
 interface Props { params: Promise<{ slug: string }>; }
@@ -58,7 +59,7 @@ function Block({ block }: { block: ContentBlock }) {
             return (
               <Link
                 key={slug}
-                href={`/products/${slug}`}
+                href={getCategoryPath(cat)}
                 className="px-4 py-2 rounded-full text-sm font-medium border border-[#E6E3DD] text-[#3C6E71] hover:border-[#3C6E71] hover:bg-[#FBFAF8] transition-colors"
               >
                 {cat.name} →

@@ -47,9 +47,17 @@ export default function ApplicationsIndexPage() {
                 </div>
               ))}
             </div>
-            <Link href="/resources/blog/lcms-solvent-background-comparison" className="mt-7 inline-block border-b border-[#0A514C] pb-1 text-sm font-bold text-[#0A514C]">
-              See the LC-MS solvent background comparison
-            </Link>
+            <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3">
+              <Link href="/products/high-purity-solvents/hplc-grade-solvents" className="border-b border-[#0A514C] pb-1 text-sm font-bold text-[#0A514C]">
+                Browse HPLC grade solvents
+              </Link>
+              <Link href="/products/high-purity-solvents/lcms-grade-solvents" className="border-b border-[#0A514C] pb-1 text-sm font-bold text-[#0A514C]">
+                Browse LC-MS grade solvents
+              </Link>
+              <Link href="/resources/blog/lcms-solvent-background-comparison" className="border-b border-[#0A514C] pb-1 text-sm font-bold text-[#0A514C]">
+                See the LC-MS solvent background comparison
+              </Link>
+            </div>
           </section>
 
           <h2 className="mb-5 text-xl font-bold text-[#203D38]">Browse all analytical applications</h2>

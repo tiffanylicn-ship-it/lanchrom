@@ -103,20 +103,8 @@ export default function ProductDetailExperience({
   const heroImage = categoryInfo?.bannerImage || "/images/products-hero.jpg";
   const documentLinks = getProductDocumentLinks(product);
 
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: `LANCHROM ${product.name}`,
-    description: product.shortDescription,
-    brand: { "@type": "Brand", name: "LANCHROM" },
-    manufacturer: { "@type": "Organization", name: "Zhejiang LANJING Chemical Materials Co., Ltd." },
-    category: categoryInfo?.name || product.category,
-    url: `https://www.lanchrom.com/products/${product.category}/${product.slug}`,
-  };
-
   return (
     <div className={styles.page} style={themeStyle}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <SectionBreadcrumb
         theme={theme}
         items={[

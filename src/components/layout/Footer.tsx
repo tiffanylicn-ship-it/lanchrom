@@ -3,14 +3,14 @@ import Image from "next/image";
 
 const FOOTER_LINKS = {
   "Products by Grade": [
-    { label: "HPLC Solvents", href: "/products/hplc-solvents" },
-    { label: "LC-MS Solvents", href: "/products/lcms-solvents" },
-    { label: "UPLC Solvents", href: "/products/uplc-solvents" },
-    { label: "GC Solvents", href: "/products/gc-solvents" },
-    { label: "Pharma Grade USP/EP", href: "/products/pharma-grade" },
-    { label: "Electronic Grade", href: "/products/electronic-grade" },
-    { label: "Mobile Phase Bags", href: "/products/mobile-phase-bags" },
-    { label: "Standard Solutions", href: "/products/standard-solutions" },
+    { label: "HPLC Solvents", href: "/products/high-purity-solvents/hplc-grade-solvents" },
+    { label: "LC-MS Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+    { label: "UPLC Solvents", href: "/products/high-purity-solvents/uplc-grade-solvents" },
+    { label: "GC Solvents", href: "/products/high-purity-solvents/gc-grade-solvents" },
+    { label: "Pharma Grade USP/EP", href: "/products/high-purity-solvents/pharmaceutical-grade-solvents" },
+    { label: "Electronic Grade", href: "/products/high-purity-solvents/electronic-semiconductor-grade-chemicals" },
+    { label: "Mobile Phase Bags", href: "/products/ready-to-use-solutions/application-specific-mobile-phase-kits" },
+    { label: "Standard Solutions", href: "/products/reference-standards-analytical-reagents/elemental-ionic-standards" },
   ],
   "Solutions": [
     { label: "Fermentation Analysis", href: "/solutions/mobile-phase/fermentation-analysis" },
@@ -18,8 +18,8 @@ const FOOTER_LINKS = {
     { label: "Custom Packaging", href: "/solutions/custom-packaging" },
     { label: "OEM & Private Label", href: "/oem" },
     { label: "OEM Quote Calculator", href: "/oem/quote-calculator" },
-    { label: "SPE Products", href: "/products/spe-products" },
-    { label: "TLC Products", href: "/products/tlc-products" },
+    { label: "SPE Products", href: "/products/chromatography-sample-preparation/spe-sample-cleanup" },
+    { label: "TLC Products", href: "/products/chromatography-sample-preparation/tlc-hptlc-products" },
   ],
   "Industries": [
     { label: "Pharmaceutical", href: "/industries/pharmaceutical" },

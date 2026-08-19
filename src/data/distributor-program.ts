@@ -14,8 +14,8 @@ export interface DistributorMarket {
 }
 
 const sharedLinks = [
-  { label: "HPLC Solvents", href: "/products/hplc-solvents" },
-  { label: "LC-MS Solvents", href: "/products/lcms-solvents" },
+  { label: "HPLC Solvents", href: "/products/high-purity-solvents/hplc-grade-solvents" },
+  { label: "LC-MS Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
   { label: "Mobile Phase Solutions", href: "/solutions/mobile-phase" },
   { label: "OEM & Private Label", href: "/oem" },
 ];

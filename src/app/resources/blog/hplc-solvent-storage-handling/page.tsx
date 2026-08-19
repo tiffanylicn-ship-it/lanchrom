@@ -29,7 +29,7 @@ export default function HplcSolventStorageHandlingPage() {
       datePublished="2026-07-31"
       readingTime="8 minute read"
       relatedLinks={[
-        { href: "/products/hplc-solvents", label: "Browse HPLC Solvents" },
+        { href: "/products/high-purity-solvents/hplc-grade-solvents", label: "Browse HPLC Solvents" },
         { href: "/downloads/coa", label: "Request a CoA" },
         { href: "/contact?type=sample", label: "Request a Sample" },
       ]}

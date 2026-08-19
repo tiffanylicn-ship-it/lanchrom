@@ -129,7 +129,7 @@ export default function FermentationAnalysisPage() {
             <p className="text-[#5C5A55] mb-7 max-w-lg mx-auto">Request a sample and run it on your method this week.</p>
             <div className="flex gap-3 justify-center flex-wrap">
               <Link href="/contact?type=sample&product=organic-acid-mobile-phase" className="btn-fill">Get free sample</Link>
-              <Link href="/products/mobile-phase-bags" className="btn-line">See all mobile phase products</Link>
+              <Link href="/products/ready-to-use-solutions/application-specific-mobile-phase-kits" className="btn-line">See all mobile phase products</Link>
             </div>
           </section>
 

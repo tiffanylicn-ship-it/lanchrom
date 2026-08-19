@@ -49,7 +49,7 @@ export default function PharmaQCMobilePhasePage() {
           <p className="text-[#5C5A55] text-sm mt-8">Need a configuration not listed here? Tell us your monograph or in-house method and we'll formulate it.</p>
           <div className="flex gap-3 mt-6 flex-wrap">
             <Link href="/contact?type=quote" className="btn-fill">Request a quote</Link>
-            <Link href="/products/mobile-phase-bags" className="btn-line">See all mobile phase products</Link>
+            <Link href="/products/ready-to-use-solutions/application-specific-mobile-phase-kits" className="btn-line">See all mobile phase products</Link>
           </div>
         </div>
       </div>

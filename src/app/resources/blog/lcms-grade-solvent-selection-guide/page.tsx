@@ -29,7 +29,7 @@ export default function LcmsGradeSolventSelectionGuidePage() {
       datePublished="2026-07-31"
       readingTime="9 minute read"
       relatedLinks={[
-        { href: "/products/lcms-solvents", label: "Browse LC-MS Solvents" },
+        { href: "/products/high-purity-solvents/lcms-grade-solvents", label: "Browse LC-MS Solvents" },
         { href: "/applications/lcms-analysis", label: "Explore LC-MS Analysis" },
         { href: "/contact?type=sample", label: "Request a Qualification Sample" },
       ]}

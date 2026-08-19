@@ -219,8 +219,8 @@ export default function LcmsSolventBackgroundComparisonPage() {
           </aside>
 
           <div className="mt-10 flex flex-wrap gap-3">
-            <Link href="/products/hplc-solvents/methanol" className="btn-fill">View HPLC Methanol</Link>
-            <Link href="/products/hplc-solvents/acetonitrile" className="btn-line">View HPLC Acetonitrile</Link>
+            <Link href="/products/hplc-grade-solvents/methanol" className="btn-fill">View HPLC Methanol</Link>
+            <Link href="/products/hplc-grade-solvents/acetonitrile" className="btn-line">View HPLC Acetonitrile</Link>
             <Link href="/applications/lcms-analysis" className="btn-line">Explore LC-MS Analysis</Link>
           </div>
         </div>

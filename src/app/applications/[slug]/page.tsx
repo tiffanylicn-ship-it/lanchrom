@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getApplicationInfo, getAllApplicationSlugs, getApplicationNavItems } from "@/data/applications";
 import { getCategoryInfo } from "@/data/categories";
+import { getCategoryPath } from "@/data/product-line-pages";
 import { getIndustryInfo } from "@/data/industries";
 import { PAGE_BACKGROUNDS } from "@/data/backgrounds";
 import SectionSidebar from "@/components/layout/SectionSidebar";
@@ -64,7 +65,7 @@ export default async function ApplicationPage({ params }: Props) {
               return (
                 <Link
                   key={slug}
-                  href={`/products/${slug}`}
+                  href={getCategoryPath(cat)}
                   className="px-4 py-2 rounded-full text-sm font-medium border border-[#E6E3DD] text-[#5C5A55] hover:border-[#3C6E71] hover:text-[#3C6E71] transition-colors"
                 >
                   {cat.name}

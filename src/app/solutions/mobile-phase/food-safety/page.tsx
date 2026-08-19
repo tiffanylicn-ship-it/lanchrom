@@ -47,7 +47,7 @@ export default function FoodSafetyMobilePhasePage() {
           </div>
           <div className="flex gap-3 mt-8 flex-wrap">
             <Link href="/contact?type=quote" className="btn-fill">Request a quote</Link>
-            <Link href="/products/spe-products" className="btn-line">See SPE cleanup products</Link>
+            <Link href="/products/chromatography-sample-preparation/spe-sample-cleanup" className="btn-line">See SPE cleanup products</Link>
           </div>
         </div>
       </div>

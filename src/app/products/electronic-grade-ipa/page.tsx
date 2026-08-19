@@ -52,32 +52,18 @@ const qualitySteps = ["Raw materials", "Purification", "Filtration", "Sampling",
 
 const relatedProducts = [
   { name: "Electronic Grade Ethanol", description: "Precision cleaning solvent", href: "/contact?type=quote&product=electronic-grade-ethanol" },
-  { name: "PGMEA", description: "Photoresist process solvent", href: "/products/pharma-grade/pgmea-propylene-glycol-methyl-ether-acetate" },
-  { name: "NMP", description: "Materials processing solvent", href: "/products/pharma-grade/nmp-n-methyl-2-pyrrolidone" },
-  { name: "HPLC Grade IPA", description: "Chromatography solvent", href: "/products/hplc-solvents/ipa" },
-  { name: "High Purity Acetone", description: "Cleaning and laboratory use", href: "/products/gc-solvents/gc-grade-acetone" },
+  { name: "PGMEA", description: "Photoresist process solvent", href: "/products/pharmaceutical-grade-solvents/pgmea" },
+  { name: "NMP", description: "Materials processing solvent", href: "/products/pharmaceutical-grade-solvents/nmp" },
+  { name: "HPLC Grade IPA", description: "Chromatography solvent", href: "/products/hplc-grade-solvents/ipa" },
+  { name: "High Purity Acetone", description: "Cleaning and laboratory use", href: "/products/hplc-grade-solvents/acetone" },
 ];
-
-const productSchema = {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  name: "LANCHROM Electronic Grade IPA",
-  description: "High-purity isopropanol for semiconductor cleaning, CMP, advanced packaging, and precision electronics manufacturing.",
-  brand: { "@type": "Brand", name: "LANCHROM" },
-  manufacturer: { "@type": "Organization", name: "Zhejiang LANJING Chemical Materials Co., Ltd." },
-  category: "Electronic Grade Solvent",
-  material: "Isopropanol",
-  image: "https://www.lanchrom.com/images/product-pages/electronic-grade-ipa/hero.jpg",
-  url: "https://www.lanchrom.com/products/electronic-grade-ipa",
-};
 
 export default function ElectronicGradeIPAPage() {
   return (
     <div className={styles.page}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <SectionBreadcrumb theme="electronic" items={[
         { label: "Products", href: "/products" },
-        { label: "Electronic Chemicals", href: "/products/pharmaceutical-grade-solvents/electronic-grade" },
+        { label: "Electronic Chemicals", href: "/products/high-purity-solvents/electronic-semiconductor-grade-chemicals" },
         { label: "Electronic Grade IPA" },
       ]} />
 

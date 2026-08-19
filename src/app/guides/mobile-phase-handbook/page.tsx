@@ -514,7 +514,7 @@ export default function Page() {
 
           <div className="mt-12 pt-8 border-t border-[#E6E3DD] flex gap-3 flex-wrap">
             <Link href="/contact?type=sample" className="btn-fill">Get Free Sample</Link>
-            <Link href="/products/mobile-phase-bags" className="btn-line">Browse Mobile Phase Bags</Link>
+            <Link href="/products/ready-to-use-solutions/application-specific-mobile-phase-kits" className="btn-line">Browse Mobile Phase Bags</Link>
             <Link href="/guides/complete-guide-to-hplc-solvents" className="btn-line">Read the HPLC Solvent Guide</Link>
           </div>
         </article>

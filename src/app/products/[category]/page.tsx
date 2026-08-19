@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllCategorySlugs, getCategoryInfo, GROUP_LABELS } from "@/data/categories";
+import { getCategoryInfo, GROUP_LABELS } from "@/data/categories";
 import {
   getCategoryPath,
   getProductLineBySlug,
@@ -14,10 +14,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return [
-    ...getAllCategorySlugs().map((category) => ({ category })),
-    ...getProductLineStaticParams(),
-  ];
+  return getProductLineStaticParams();
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

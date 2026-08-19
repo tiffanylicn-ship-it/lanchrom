@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { CATEGORY_REDIRECTS } from "./src/data/category-redirects";
 import { PRODUCT_REDIRECTS } from "./src/data/product-redirects";
 
 const nextConfig: NextConfig = {
@@ -12,7 +13,7 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
-    return PRODUCT_REDIRECTS.map(({ source, destination }) => ({
+    return [...CATEGORY_REDIRECTS, ...PRODUCT_REDIRECTS].map(({ source, destination }) => ({
       source,
       destination,
       permanent: true,

@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const GRADES = [
-  { image: "/images/categories/hplc-solvents.jpg", label: "HPLC Solvents", sub: "Gradient · isocratic · UV-grade", href: "/products/hplc-solvents", accent: true },
-  { image: "/images/categories/lcms-solvents.jpg", label: "LC-MS Solvents", sub: "Sub-ppb metals, MS-blank certified", href: "/products/lcms-solvents" },
-  { image: "/images/categories/spectroscopic-solvents.jpg", label: "Spectroscopy", sub: "Low UV absorbance, NMR grade", href: "/products/spectroscopic-solvents" },
-  { image: "/images/categories/applications.jpg", label: "GC Solvents", sub: "Low residue, capillary-grade", href: "/products/gc-solvents" },
-  { image: "/images/categories/pharma-grade.jpg", label: "Pharma Grade", sub: "USP/EP monograph tested", href: "/products/pharma-grade" },
+  { image: "/images/categories/hplc-solvents.jpg", label: "HPLC Solvents", sub: "Gradient · isocratic · UV-grade", href: "/products/high-purity-solvents/hplc-grade-solvents", accent: true },
+  { image: "/images/categories/lcms-solvents.jpg", label: "LC-MS Solvents", sub: "Sub-ppb metals, MS-blank certified", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+  { image: "/images/categories/spectroscopic-solvents.jpg", label: "Spectroscopy", sub: "Low UV absorbance, NMR grade", href: "/products/high-purity-solvents/spectroscopic-grade-solvents" },
+  { image: "/images/categories/applications.jpg", label: "GC Solvents", sub: "Low residue, capillary-grade", href: "/products/high-purity-solvents/gc-grade-solvents" },
+  { image: "/images/categories/pharma-grade.jpg", label: "Pharma Grade", sub: "USP/EP monograph tested", href: "/products/high-purity-solvents/pharmaceutical-grade-solvents" },
 ];
 
 export default function CategoryShowcase() {
