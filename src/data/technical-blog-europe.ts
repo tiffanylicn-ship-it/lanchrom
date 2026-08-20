@@ -670,6 +670,115 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "pharmaceutical-recovered-solvent-qualification",
+    title: "Pharmaceutical Recovered Solvent Qualification: An ICH Q7 Risk and Traceability Framework",
+    shortTitle: "Pharmaceutical Recovered Solvent Qualification",
+    description: "A pharmaceutical recovered solvent qualification framework for intended use, impurity risk, testing, co-mingling, traceability and controlled reuse under ICH Q7.",
+    primaryKeyword: "pharmaceutical recovered solvent qualification",
+    tag: "API Manufacturing",
+    readingTime: "11 min technical guide",
+    intro: "A solvent-recovery unit can reduce fresh-solvent demand, but recovery alone does not make the output suitable for reuse in an API process. Pharmaceutical recovered solvent qualification must connect each recovery stream to an intended manufacturing use, an impurity-risk assessment, suitable specifications, representative testing and traceable approval. The objective is not to issue one generic recovered-solvent grade. It is to show, within the applicable quality system, that a defined stream can be used in a defined process without losing control of material quality or the active substance impurity profile.",
+    painPoints: [
+      { title: "A distillation result is treated as qualification", detail: "Assay or purity passes, but process-derived impurities, cross-stream contamination, water, residue and repeated-cycle accumulation are not evaluated for the intended use." },
+      { title: "One specification covers every return point", detail: "Solvent recovered from different products, steps or equipment trains is pooled even though the contaminant sources and effect of reuse can differ materially." },
+      { title: "Fresh and recovered solvent are co-mingled by habit", detail: "The mixing ratio, approved uses, testing basis and traceability are not established before recovered material enters the fresh-solvent inventory." },
+      { title: "Recovery changes sit outside change control", detail: "A new feed stream, contractor, still configuration, recovery cycle or return point is introduced without assessing the established impurity and process evidence." },
+    ],
+    sections: [
+      {
+        heading: "Start with what ICH Q7 permits - and what it does not",
+        paragraphs: [
+          "ICH Q7 sections 14.40 to 14.43 provide the core GMP conditions for recovery of materials and solvents in API manufacture. Recovery procedures must be controlled and monitored so the solvent meets appropriate standards before reuse or co-mingling with other approved materials. Combining fresh and recovered solvent requires adequate testing that shows suitability for every manufacturing process in which the mixture may be used, and use of recovered solvent must be documented.",
+          "Those statements are conditional, not a general authorisation. ICH Q7 does not prescribe a universal purity limit, test panel, maximum recovered fraction, number of recovery cycles or list of acceptable processes. The manufacturer must define appropriate standards from the actual stream and intended use. A pharmacopeial name, supplier COA for the original fresh solvent or one successful assay cannot replace that site- and process-specific decision.",
+          "The European Commission's EudraLex Volume 4 identifies Part II as the basic GMP requirements for active substances used as starting materials. Sites should apply the current controlled text, their marketing-authorisation commitments and local procedures. This article is an operational framework, not legal advice or permission to alter a registered process without the required assessment and approval.",
+        ],
+      },
+      {
+        heading: "Map the recovery stream to one intended use",
+        paragraphs: [
+          "Begin with a stream map, not a sample bottle. Identify the source process, product or intermediate, solvent function, point of collection, equipment train, recovery operation, receivers, storage vessel, transfer path and proposed return point. Record whether equipment is dedicated or shared and whether campaigns, cleaning agents, previous products or maintenance materials can enter the stream. Separate streams until evidence supports combining them; a common solvent name does not establish a common impurity profile.",
+          "The adopted 2026 EMA guideline on active-substance chemistry, due to take effect on 1 September 2026, expects recovered materials to be visible in the reaction scheme, process description or block-flow diagram. It recommends using them in the same process and preferably the same step, and avoiding use in the final manufacturing step unless otherwise justified. Its scope is dossier information for chemical active substances, so the recommendation should be applied within that scope rather than presented as a rule for every pharmaceutical operation.",
+          "Write an intended-use statement for each qualified stream. It should name the process and step, permitted material state, return location, storage and hold conditions, any approved co-mingling range, and exclusions. A stream accepted for an early extraction should not silently migrate to a final wash, crystallisation or another product because the recovery system produced the same nominal chemical.",
+        ],
+        points: [
+          "Assign a unique identity to each source-stream and recovery-train combination.",
+          "Link tanks, transfer lines, campaigns and cleaning status to the recovered batch record.",
+          "Define where the stream may return and where its use is prohibited.",
+          "Treat contractor recovery as part of the same traceability and change-control system.",
+        ],
+      },
+      {
+        heading: "Build pharmaceutical recovered solvent qualification around impurity risk",
+        paragraphs: [
+          "List credible impurities from the feed and recovery operation. Depending on the chemistry, these may include reaction by-products, starting materials, intermediates, residual water, non-volatile residue, degradation products, cleaning-agent carryover, equipment-derived metals, cross-product residues or contaminants introduced during storage and transport. The EMA guideline specifically calls for attention to impurities of concern, including mutagenic impurities, and to possible accumulation during repeated recovery. This does not mean every stream needs every analytical technique; it means the test strategy must address the credible risks.",
+          "Use development and process knowledge to connect each risk to a control. Volatile and non-volatile impurities behave differently in distillation. Relative volatility, azeotrope formation, entrainment, fraction cuts, still bottoms, condenser performance and water content can affect what reaches the recovered fraction. Consider whether a material may build up when the recovered output is returned repeatedly, even if the first cycle looks acceptable. Where routine methods cannot see a credible impurity, the answer may be an additional method, a purge control, a cycle limit supported by data or exclusion of that use.",
+          "Set a specification suitable for the defined process step. Identity and assay may be necessary, but acceptance criteria can also require water, a chromatographic impurity profile, residue or selected process-specific markers. Use a fresh, approved solvent lot as a technical benchmark where useful, while recognising that the recovered stream has its own risk profile. Predefine sampling points and ensure the sample represents the released tank or lot rather than a favourable fraction collected during the run.",
+          "Qualification should include representative feed variability and recovery conditions, not only a best-case engineering batch. Compare recovered-solvent results, process performance and relevant intermediate or API quality attributes against predefined criteria. The number of batches, cycles and challenge conditions should follow risk and process knowledge. Avoid inventing a standard three-batch rule where the governing procedure or evidence requires a different design.",
+        ],
+      },
+      {
+        heading: "Control co-mingling, release and material status",
+        paragraphs: [
+          "Fresh and recovered solvent should remain distinguishable until an approved decision allows combination. Define who can release the recovered lot, what status labels or electronic controls apply, and how rejected, quarantined and approved material are physically or procedurally separated. Reconciliation should connect feed quantity, recovered fractions, residues, samples, losses and final disposition closely enough to expose an unexplained mix-up or diversion.",
+          "For co-mingling, qualify the proposed operating range rather than a single convenient blend. Consider the highest recovered fraction that may be used, mixing sequence, homogeneity, tank heel, minimum batch size, hold time and whether the resulting mixture remains suitable for all named processes. ICH Q7's adequate-testing condition applies to the intended manufacturing uses; approval for one step cannot be extrapolated to a broader inventory pool without evidence.",
+          "The release record should identify the recovered lot, source batches or campaigns, recovery procedure version, equipment, critical parameters, analytical results, deviations, approved use and destination. When fresh solvent is added, preserve both identities and the actual quantities. A final tank number alone is not enough if an investigation cannot reconstruct which source streams and lots entered it.",
+        ],
+        points: [
+          "Predefine fraction-cut and collection decisions in the approved procedure.",
+          "Use status control to prevent unreleased recovered solvent entering production.",
+          "Approve co-mingling ranges and uses from data, not routine operator practice.",
+          "Retain genealogy from original stream through recovery, blending and return to process.",
+        ],
+      },
+      {
+        heading: "Maintain the qualified state through trending and change control",
+        paragraphs: [
+          "Trend more than pass or fail. Review recovery yield, assay, water, selected impurity markers, non-volatile residue where relevant, deviations, rejections, cycle count and downstream quality signals by stream and equipment train. A slow shift can show condenser deterioration, feed-profile change or accumulation before a specification failure occurs. Define alert and action responses that match the risk rather than using an unqualified numerical trend limit.",
+          "Change controls should assess new products or intermediates in the feed, different source ratios, additional recovery cycles, fraction-cut changes, equipment or software modifications, new storage or transport conditions, cleaning changes, analytical-method changes, contractor changes and a different point of reuse. Decide whether the evidence supports continued approval, focused comparability work or full requalification. Significant deviations should also trigger an assessment of material already returned to process.",
+          "Fresh-solvent supply remains part of the control strategy. Current specifications, batch documentation and reliable packaging provide the make-up material, comparison lots and contingency stock needed to operate a controlled recovery programme. LANCHROM's pharmaceutical and preparative solvent categories are possible starting points for sourcing discussions, but the current specification, grade, package and delivered lot must be reviewed for the intended manufacturing use. Purchasing a pharmaceutical-grade solvent does not by itself qualify the recovered stream created on site.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative qualification scenario",
+      title: "An API site separates two nominally identical recovery streams",
+      context: "An illustrative API manufacturer recovers the same solvent from an early extraction and a later purification step. Both streams meet an assay target, and operations proposes combining them in one tank before reuse in the extraction.",
+      actions: [
+        "The team maps each source, recovery train, impurity input and proposed return point instead of treating the solvent name as the stream identity.",
+        "Risk review identifies a process impurity in the later-step stream that the routine assay does not distinguish, so a specific chromatographic marker is added to the study.",
+        "Representative cycles show that the early-step stream remains within the intended-use specification, while the combined stream needs a separate limit and controlled recovered fraction.",
+        "The site approves only the supported routes, records fresh and recovered quantities, and makes any new pooling ratio or return point a change-control trigger.",
+      ],
+      result: "The framework preserves a usable early-step recovery route without granting blanket approval to every batch or stream. It is an illustrative decision model, not a named customer result, fixed test panel or guaranteed qualification outcome.",
+    },
+    checklist: [
+      "Source process, step, equipment train and proposed return point mapped",
+      "Stream identity and batch genealogy maintained",
+      "Intended use and prohibited uses approved",
+      "Credible volatile, non-volatile and process-specific impurities assessed",
+      "Repeated-recovery accumulation risk evaluated",
+      "Representative sampling plan and test methods justified",
+      "Recovered-solvent specification linked to intended use",
+      "Fresh-solvent benchmark and make-up material defined where useful",
+      "Co-mingling range and every covered manufacturing use supported by testing",
+      "Material status, release authority and reconciliation controlled",
+      "Recovery trends and downstream quality signals reviewed",
+      "Process, equipment, contractor and reuse changes assigned requalification triggers",
+    ],
+    sources: [
+      { label: "ICH - Q7 Good Manufacturing Practice Guide for Active Pharmaceutical Ingredients", href: "https://database.ich.org/sites/default/files/Q7_Guideline.pdf" },
+      { label: "EMA - 2026 guideline on the chemistry of active substances", href: "https://www.ema.europa.eu/en/chemistry-active-substances-chemistry-new-active-substances-scientific-guideline" },
+      { label: "European Commission - EudraLex Volume 4", href: "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en" },
+      { label: "EMA - ICH Q9 quality risk management", href: "https://www.ema.europa.eu/en/ich-q9-quality-risk-management-scientific-guideline" },
+    ],
+    productLinks: [
+      { label: "Browse Pharmaceutical Grade Solvents", href: "/products/high-purity-solvents/pharmaceutical-grade-solvents" },
+      { label: "Browse Preparative and Bulk Solvents", href: "/products/high-purity-solvents/preparative-grade-solvents" },
+      { label: "Read the EU GMP Solvent Supplier Qualification Guide", href: "/resources/blog/hplc-solvent-supplier-qualification-eu-gmp" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
