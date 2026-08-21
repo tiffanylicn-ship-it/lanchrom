@@ -779,6 +779,116 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "hplc-fluorescence-detector-solvent-background",
+    title: "HPLC Fluorescence Detector Solvent Background: A Wavelength-Specific Lot-Qualification Workflow",
+    shortTitle: "HPLC Fluorescence Detector Solvent Background",
+    description: "A practical HPLC fluorescence detector solvent background workflow for wavelength-specific blank diagnosis, solvent comparison and lot qualification.",
+    primaryKeyword: "HPLC fluorescence detector solvent background",
+    tag: "Fluorescence Detection",
+    readingTime: "11 min technical guide",
+    intro: "A fluorescence detector can lose useful sensitivity even when pressure, retention time and a routine UV trace appear normal. The mobile phase may contain trace fluorescent material that is almost invisible to another detector yet produces background at the method's excitation and emission wavelengths. HPLC fluorescence detector solvent background should therefore be investigated as an application-specific signal, not as a generic judgement on solvent purity. A controlled blank ladder and lot-comparison study can separate solvent, water, reagent, preparation and flow-path contributions before the laboratory rejects a lot or changes a validated method.",
+    painPoints: [
+      { title: "Sensitivity changes after a solvent lot change", detail: "The analyte response is still present, but higher background or noise reduces the usable signal-to-noise ratio and the team cannot show whether the new organic solvent is responsible." },
+      { title: "One mobile-phase blank is asked to identify every source", detail: "Water, organic solvent, additives, filters, vessels, tubing, column history and detector settings all remain combined, so a high blank does not identify the contaminating input." },
+      { title: "A grade name is treated as universal FLD approval", detail: "Fluorescence, LC-MS, spectroscopic and HPLC labels describe different control priorities; none proves low background at every excitation and emission pair used by a method." },
+      { title: "Autozero conceals the diagnostic signal", detail: "Routine baseline subtraction can make a trace look visually acceptable while raw background, noise and dynamic-range loss are not captured in a controlled comparison." },
+    ],
+    sections: [
+      {
+        heading: "Treat fluorescence background as a wavelength-specific measurement",
+        paragraphs: [
+          "Fluorescence detection excites material at one wavelength and measures emitted light at a longer wavelength. This selectivity is valuable at trace level, but it also means that a contaminant need not affect every FLD method in the same way. A solvent lot can be quiet at one excitation/emission pair and comparatively bright at another. A UV absorbance result, total organic carbon value or general purity statement may support qualification, but it cannot predict the complete fluorescence response of the prepared mobile phase.",
+          "Thermo Fisher's solvent-quality study compared water and methanol samples at multiple wavelength pairs and found that the relative ranking changed with the detector settings. It also cautions that fluorescence- or LC-MS-grade material is not automatically qualified for every fluorescence measurement. The practical consequence is important: record the actual wavelength timetable used for the method, including any switching events, instead of qualifying a solvent at one convenient generic setting.",
+          "Background fluorescence can consume detector dynamic range and increase baseline noise. Stray light, Raman scattering and instrument optics may also contribute at certain settings. The diagnostic question is whether a solvent or prepared-phase contribution is distinguishable from configured system background and materially affects a predefined method requirement.",
+        ],
+        points: [
+          "List every excitation and emission pair used for acquisition or switching.",
+          "Distinguish raw background level, short-term noise, drift and discrete fluorescent peaks.",
+          "Keep optical-system background separate from solvent and preparation contamination.",
+          "Use method suitability and reporting needs to define the consequence of a difference.",
+        ],
+      },
+      {
+        heading: "Freeze the detector and mobile-phase conditions before comparing lots",
+        paragraphs: [
+          "A useful comparison changes one input at a time. Preserve the detector model and flow cell, lamp status, excitation and emission wavelengths, gain or photomultiplier setting, response time, acquisition rate, temperature and autozero sequence. Preserve pump channels, flow rate, mixing programme, degassing, equilibration time and column state. If the instrument provides a manufacturer-defined background or fluorescence-scan procedure, follow that procedure and document any command that exposes or subtracts the underlying signal.",
+          "Export the same signal channels and calculate the same measures over predefined time windows rather than comparing rescaled screenshots. Gain and response time can change the apparent background and measured noise. Compare incumbent and candidate lots under equivalent flushing and sequence conditions.",
+          "Start by running the configured system with a known, approved phase and confirming pressure, leak status, lamp condition, flow-cell cleanliness and baseline stability. Thermo Fisher's troubleshooting guidance places wavelength selection, photomultiplier gain, response time and mobile-phase quality together when investigating low FLD signal-to-noise. That is a reminder to establish the instrument state before assigning a detector symptom to procurement.",
+        ],
+      },
+      {
+        heading: "Build a blank ladder that locates the fluorescent contribution",
+        paragraphs: [
+          "Begin with the lowest-complexity measurement the instrument and approved procedure allow. Thermo Fisher's HPLC instrument guidance emphasises fresh, properly prepared solvent, contamination control and detector-appropriate grade selection. A manufacturer-defined background scan or offline check may be useful when the configured detector supports it, but it is not a universal procedure. Follow the current detector manual, compatible cuvette or flow-cell instructions and local safety controls rather than improvising a measurement.",
+          "For an online investigation, remove the sample contribution first, then separate the remaining layers. Compare a no-injection acquisition, a diluent blank, a mobile-phase blank and, where the method allows, a no-column or appropriate restrictor configuration. Prepare fresh phases using dedicated, well-rinsed vessels. Then substitute water, organic solvent and each additive one at a time while keeping concentration, preparation order, filtration decision, reservoir, channel and equilibration constant. This ladder can reveal whether the fluorescent material enters with a purchased component or during preparation and delivery.",
+          "Water deserves its own check. Shimadzu notes that water acceptable for routine UV work may be inadequate for fluorescence detection, and recommends confirming that the selected water does not interfere with the analysis. Organic solvent, buffer, acid, base and derivatisation reagents can contribute too. A fluorescence-grade organic solvent mixed with variable water or a fluorescent reagent impurity will not create a low-background final phase by itself.",
+          "Interpret gradients as concentration experiments. If background rises as one channel increases, repeat with the same programme and controlled substitutions rather than assuming the named solvent is the source. A contaminant retained on the column can elute during the same interval, and fluorescent material from a previous method can remain in tubing or the flow cell. Sequence a clean-system control and sufficient equilibration so that carryover is not labelled as a lot defect.",
+        ],
+        points: [
+          "No-injection and diluent blanks separate acquisition and sample-preparation effects.",
+          "Component blanks separate water, organic solvent and additive contributions.",
+          "A controlled flow-path check distinguishes mobile-phase input from column history.",
+          "Repeated runs distinguish a stable background difference from transient equilibration or carryover.",
+        ],
+      },
+      {
+        heading: "Qualify the solvent lot at the method's excitation and emission pairs",
+        paragraphs: [
+          "Compare the candidate against a retained or currently approved lot using the same water, additives, vessels, preparation operator or controlled procedure, instrument configuration and sequence design. Randomise or bracket the sequence when practical so that time-dependent drift does not always favour one lot. Include independent preparations when preparation variation is a credible source. Record supplier, product name, grade, lot, package, receipt and opening dates, and the batch documents reviewed.",
+          "Set acceptance criteria before seeing the candidate result. Suitable measures may include raw background within a defined acquisition window, peak-to-peak or statistical noise calculated by the validated method, drift, absence of interfering peaks at relevant retention windows, system-suitability performance and the effect on the method's reporting or quantitation requirement. The limit should come from method capability, historical qualified performance and laboratory procedure, not from a universal count value copied from a different detector.",
+          "If the method switches wavelengths, assess every critical pair. A candidate may rank differently across pairs, so one averaged score can hide the setting that controls sensitivity. Conversely, a measurable difference does not automatically require rejection when it has no meaningful effect on system suitability, reporting capability or controlled acceptance criteria. Document the decision and its scope: one solvent lot may be qualified for a named method without being declared suitable for all FLD applications.",
+          "Investigate an apparent failure with the same substitution ladder before sending a supplier complaint. Provide the supplier with the method-relevant wavelengths, material and lot identity, package history, preparation details, comparison-lot evidence and reproducible blank result. Avoid claiming that the solvent is generally contaminated when the evidence establishes only an application-specific background difference.",
+        ],
+      },
+      {
+        heading: "Maintain the HPLC fluorescence detector solvent background control",
+        paragraphs: [
+          "After approval, link the qualification record to the delivered lot and package format. Define how opened-container time, closure practice, dispensing, reservoir exposure and storage are controlled. Trend blank behaviour when justified, and retain representative raw data rather than only a pass statement. A meaningful supplier, specification, package or manufacturing change can justify renewed comparison.",
+          "Keep the test proportionate. Routine full fluorescence mapping of every bottle may add work without reducing risk if the lot is already represented and the package remains controlled. More useful triggers include a new lot, supplier or grade; a new water system or additive; a changed preparation vessel or filter; detector maintenance; a new excitation/emission pair; and an unexplained change in blank noise, sensitivity or interference.",
+          "Procurement should request the current product specification and batch documentation, then let the laboratory qualification establish fitness for use. LANCHROM's HPLC and spectroscopic solvent categories are starting points for product and document review, not claims of universal FLD suitability. The delivered grade, lot, package and prepared phase must be evaluated against the laboratory's own wavelengths and acceptance criteria before use in a sensitive method.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A QC laboratory isolates a wavelength-specific background change",
+      context: "An illustrative pharmaceutical QC laboratory observes higher noise after introducing a new organic-solvent lot. Retention time and pressure remain stable, and a general UV check shows no obvious change. The affected FLD method switches between two excitation/emission pairs, but only one pair appears to lose sensitivity.",
+      actions: [
+        "The analyst freezes gain, response time, wavelength timetable, flow, temperature, autozero handling and data-scaling rules before repeating the comparison.",
+        "Fresh water, organic-solvent and additive blanks are prepared in dedicated vessels, followed by controlled substitutions between the incumbent and candidate lots.",
+        "The team evaluates raw background, noise and relevant blank windows at both wavelength pairs, with independent preparations and a clean-system control.",
+        "The qualification decision is limited to the named method and lot, while the investigation record preserves package history and evidence for any supplier follow-up.",
+      ],
+      result: "The workflow distinguishes a reproducible lot-related contribution from water, preparation and instrument effects without changing the analytical method prematurely. It is an illustrative decision framework, not a named customer result, fixed numerical acceptance limit or guarantee of solvent performance.",
+    },
+    checklist: [
+      "Critical excitation and emission pairs listed",
+      "Gain, response time, acquisition rate and autozero handling fixed",
+      "Known qualified phase used to establish system condition",
+      "No-injection, diluent and prepared mobile-phase blanks defined",
+      "Water, organic solvent and additives substituted one at a time",
+      "Vessels, filters, reservoirs and preparation order controlled",
+      "Column history, flow-cell cleanliness and carryover assessed",
+      "Incumbent and candidate lots compared in a balanced sequence",
+      "Independent preparations included where justified",
+      "Background, noise, drift and interfering-peak criteria predefined",
+      "Qualification scope limited to the supported method and lot",
+      "Batch documents, package history, raw data and change triggers retained",
+    ],
+    sources: [
+      { label: "Thermo Fisher Scientific - Technical Note 140: optimizing and monitoring solvent quality", href: "https://documents.thermofisher.com/TFS-Assets/CMD/Technical-Notes/TN-140-LC-Solvent-Quality-UV-FD-CAD-TN70818-EN.pdf" },
+      { label: "Thermo Fisher Scientific - HPLC instrument introduction and solvent guidance", href: "https://www.thermofisher.com/au/en/home/industrial/chromatography/chromatography-learning-center/high-performance-liquid-chromatography-hplc-support/hplc-instrument-introduction.html" },
+      { label: "Thermo Fisher Scientific - HPLC troubleshooting", href: "https://www.thermofisher.com/us/en/home/industrial/chromatography/chromatography-learning-center/high-performance-liquid-chromatography-hplc-support/hplc-troubleshooting.html" },
+      { label: "Shimadzu Scientific Instruments - Water used for HPLC", href: "https://www.ssi.shimadzu.com/service-support/technical-support/analysis-basics/tips/water.html" },
+    ],
+    productLinks: [
+      { label: "Browse HPLC Grade Solvents", href: "/products/high-purity-solvents/hplc-grade-solvents" },
+      { label: "Browse Spectroscopic Grade Solvents", href: "/products/high-purity-solvents/spectroscopic-grade-solvents" },
+      { label: "Read the Complete Guide to HPLC Solvents", href: "/guides/complete-guide-to-hplc-solvents" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
