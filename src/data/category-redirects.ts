@@ -29,6 +29,13 @@ for (const [legacySlug, canonicalSlug] of Object.entries(LEGACY_CATEGORY_ALIASES
   );
 }
 
+for (const [group, productLine] of Object.entries(PRODUCT_GROUPS)) {
+  redirectMap.set(
+    `/products/line/${group}`,
+    `/products/${productLine.slug}`,
+  );
+}
+
 export const CATEGORY_REDIRECTS = Array.from(
   redirectMap,
   ([source, destination]) => ({ source, destination }),
