@@ -55,6 +55,28 @@ function inferLeadTags(body: LeadBody) {
 function buildAutoReply(body: LeadBody, product: string) {
   const type = clean(body.type, "inquiry");
   const normalizedType = type.toLowerCase();
+  if (normalizedType.includes("distributor")) {
+    return {
+      subject: `LANCHROM™ distributor application received — ${clean(body.company) || clean(body.country) || "Partner inquiry"}`,
+      text: `Dear ${clean(body.name) || clean(body.firstName) || "Partner"},
+
+Thank you for submitting your LANCHROM™ distributor profile.
+
+Our team has received the application for:
+Company: ${clean(body.company) || "Not specified"}
+Territory: ${clean(body.country) || "Not specified"}
+Planning range: ${clean(body.annualVolume) || "Not specified"}
+
+We will review the proposed territory, customer coverage, technical capability, import readiness and portfolio fit before discussing commercial terms.
+
+Please note that submitting an application does not create a distributor appointment, territory reservation or exclusivity commitment.
+
+Best regards,
+LANCHROM™ Sales Team
+sales@lanchrom.com`,
+    };
+  }
+
   if (normalizedType.includes("quote")) {
     return {
       subject: `LANCHROM™ quote request received — ${product || "Product inquiry"}`,
