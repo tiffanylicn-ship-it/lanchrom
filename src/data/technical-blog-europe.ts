@@ -889,6 +889,114 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "swiss-voc-tax-laboratory-solvent-imports",
+    title: "Swiss VOC Tax: Laboratory Solvent Imports, Customs Data and Refunds",
+    shortTitle: "Swiss VOC Tax for Laboratory Solvent Imports",
+    description: "A Swiss VOC tax laboratory solvent imports workflow for positive-list checks, VOC mass data, customs declarations, formal commitment and export refunds.",
+    primaryKeyword: "Swiss VOC tax laboratory solvent imports",
+    tag: "Swiss Import Compliance",
+    readingTime: "11 min technical guide",
+    intro: "A Swiss laboratory solvent order can look commercially complete while the customs file is still missing the data that determines VOC incentive-tax treatment. The product name, grade and safety data sheet do not by themselves answer whether the material appears on the Swiss positive lists, how many kilograms of taxable VOC are in the shipment, or whether an importer can use a formal-commitment authorisation. Swiss VOC tax laboratory solvent imports therefore need a transaction-level workflow joining composition, tariff review, importer status and documentary evidence before dispatch. This guide is an operational framework, not tax, customs or legal advice; current Federal Office for Customs and Border Security sources and a qualified specialist should control the declaration.",
+    painPoints: [
+      { title: "Every organic solvent is assumed to be taxed", detail: "Teams use a broad chemical description instead of checking the OVOC positive list of substances, the positive list of products and the actual imported article." },
+      { title: "The shipment file lacks pure-VOC mass", detail: "Commercial documents show bottle count and net product mass, but not the kilograms of VOC or the concentration data needed for the applicable customs row." },
+      { title: "Formal commitment is treated as a supplier option", detail: "A provisional exemption is promised before confirming that the Swiss importing party holds a current authorisation and can provide its number and issue date." },
+      { title: "Refund evidence is designed after export", detail: "The importer pays the tax, but role ownership, balance-sheet records and export declaration data are not planned early enough to support a later claim." },
+    ],
+    sections: [
+      {
+        heading: "Start Swiss VOC tax laboratory solvent imports with two positive-list checks",
+        paragraphs: [
+          "The Swiss VOC incentive tax does not attach to every substance that a laboratory informally calls an organic solvent. The FOCBS legal-foundations page points to the Ordinance on the Incentive Tax on Volatile Organic Compounds, or OVOC, and distinguishes Annex 1, the positive list of substances, from Annex 2, the positive list of products. The March 2026 customs guidance states that listed VOC substances are in scope and that an imported product is in scope when it is an Annex 2 product containing an Annex 1 VOC. The product identity and the form in which it crosses the border both matter.",
+          "Build a classification record around the exact material, concentration, package and transaction. Capture the substance name, CAS number where available, composition evidence, net mass, product form and proposed customs tariff number. Record the current Annex 1 and Annex 2 findings separately. A pure solvent and a prepared blend may require different evidence even when they share a major component. Do not convert a generic VOC statement into a Swiss tax conclusion without checking current federal sources.",
+          "The current import guidance also identifies an exemption for products with VOC content not exceeding 3 percent by weight. That threshold should be applied only to the supported composition of the imported product and the applicable official rule. It is not a reason to estimate from a product name or to assume that a trace additive changes the treatment of an otherwise pure laboratory solvent. Preserve the specification, composition statement or other controlled source used for the decision, along with its revision date.",
+        ],
+        points: [
+          "Identify the exact substance, mixture, concentration and imported product form.",
+          "Check Annex 1 substances and Annex 2 products as separate decisions.",
+          "Confirm the proposed tariff treatment in current Tares information.",
+          "Escalate ambiguous classification or exemption questions to the importer and customs specialist.",
+        ],
+      },
+      {
+        heading: "Calculate and transmit the customs data before the goods move",
+        paragraphs: [
+          "For liquid and paste-like products and expandable plastics, the March 2026 FOCBS guidance requires the VOC quantity in kilograms in the import customs declaration when the rule applies. If several VOC-containing products are grouped under one tariff row, a separate invoice, delivery note or other accompanying document must show each product's VOC quantity in kilograms, or its VOC percentage by weight together with net mass. The pure-VOC quantity is then declared for the tariff row. This makes the calculation an upstream product-data task, not a last-minute estimate by the carrier.",
+          "Use a controlled calculation with visible units and assumptions. For a mixture supported at a stated VOC mass fraction, multiply product net mass by that fraction to obtain kilograms of VOC, then aggregate only where the declaration structure permits. Retain the fraction source, calculation version, rounding rule and commercial line reference. For composition ranges or several listed VOCs, the declarant should define the accepted basis with its specialist rather than select a convenient value.",
+          "The same guidance identifies additional charge code 700. Scale 001 corresponds to the CHF 3.00 rate per kilogram of VOC, while scale 002 identifies provisional exemption under the formal-commitment procedure. The applicable tariff detail and additional-charge fields should be confirmed in the current Tares workflow for the actual goods. Product data from the exporter supports the declaration, but the party responsible for the Swiss customs declaration should approve the tariff row, code and scale.",
+        ],
+        points: [
+          "Net product mass and VOC mass fraction tied to the same shipment line.",
+          "Pure-VOC kilograms calculated with documented units and rounding.",
+          "Supporting document prepared when multiple products share one tariff row.",
+          "Declarant confirms the current Tares detail, additional-charge code and scale.",
+        ],
+      },
+      {
+        heading: "Separate ordinary payment from the formal-commitment procedure",
+        paragraphs: [
+          "The FOCBS states that the VOC tax is imposed on importation and domestic manufacture at a uniform CHF 3 per kilogram of VOC. Formal commitment is a distinct authorised procedure under Article 21 OVOC. It can allow an authorisation holder to bring VOCs into the customs territory provisionally exempt from the tax, but it is not created by a purchase order, supplier declaration or distributor preference.",
+          "Before using scale 002, confirm that the Swiss party named for the procedure holds a current authorisation and that the shipment falls within the agreed operating process. The March 2026 guidance requires the FOCBS authorisation number and issue date in the customs declaration. FOCBS publishes a register of authorisation holders; the version reviewed for this article is dated 17 July 2026. Because registrations and status can change, check the live federal register for each onboarding or material change instead of copying an old customer record.",
+          "Authorisation also creates continuing control duties. The FOCBS overview says holders prepare an annual VOC balance sheet and that tax is subsequently charged for VOC released into the environment. Commercial teams should therefore route the order through the importer's tax owner before promising provisional exemption. The supplier should provide accurate product and shipment data; the authorisation holder should own eligibility, authorisation details, inventory attribution and balance-sheet treatment.",
+        ],
+      },
+      {
+        heading: "Design refund and export evidence at the purchase stage",
+        paragraphs: [
+          "Some exempt uses can be demonstrated only after consumption, so the FOCBS explains that exemption is commonly delivered through a refund. Its overview also says that refund applicants generally prepare a VOC balance sheet, with a simplified route for specified Article 8 cases. A laboratory, distributor or contract packer should not assume that a certificate of use alone is sufficient. Define the legal entity making the claim, the inventory trail and the records connecting imported VOC to the supported exempt use.",
+          "For re-exported VOC, the March 2026 guidance states that export is exempt and that FOCBS refunds the tax on request. The required export declaration data differs between e-dec Export and Passar Export, but both workflows call for an explicit refund or exemption signal and the VOC quantity in kilograms. Where several VOC-containing products share a tariff row, the accompanying evidence again needs product-level VOC quantity or percentage and net mass. If no refund is claimed, the guidance says no special VOC information is required in the export documentation.",
+          "Create a record chain from import declaration through receipt, storage, use and export. Do not confuse analytical batch traceability with the tax balance sheet. Reconcile quantities, losses, returns and re-exports under the importer's approved method. Through a distributor, state which party carries the tax, balance-sheet and refund responsibilities before quoting landed cost.",
+        ],
+      },
+      {
+        heading: "Build a supplier-to-importer release gate for each solvent shipment",
+        paragraphs: [
+          "A practical release gate assigns each decision to the party that can evidence it. The supplier identifies the exact product, composition source, package and net mass. The Swiss importer or declarant confirms the tariff position, positive-list result, additional-charge handling and any formal-commitment authority. Finance models the VOC charge and its VAT consequence where applicable. The customs specialist approves uncertain cases. Logistics releases the shipment only when the declaration dataset and supporting documents agree.",
+          "Treat change control as part of customs readiness. Recheck when formulation, concentration, package fill, net mass, tariff classification, importer, formal-commitment authorisation or federal guidance changes. A grade name alone may not alter tax treatment, while a different concentration or importing entity can. Version the calculation and preserve the official source access date.",
+          "For procurement, the useful supplier request is specific: current specification or composition support, safety data sheet, product and package identification, net mass, batch documentation where required, and a contact for customs-data questions. LANCHROM product categories and document routes can support that information exchange, but they do not determine Swiss tax treatment. The importer must decide the current treatment for the actual transaction using FOCBS, OVOC and Tares information.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A Swiss distributor prepares a mixed laboratory-solvent shipment",
+      context: "An illustrative Swiss distributor plans to import HPLC, LC-MS and pharmaceutical-grade solvent lines on one shipment. The quotation lists package count and product net mass, but the customs broker has not received a positive-list assessment, pure-VOC quantities or confirmation of the importer's formal-commitment status.",
+      actions: [
+        "The export team maps every line to its controlled identity, composition evidence, net mass and proposed tariff row, then records Annex 1 and Annex 2 checks separately.",
+        "Pure-VOC kilograms are calculated per line with visible units and rounding, and an accompanying schedule preserves product-level data for any shared tariff row.",
+        "The importer verifies its current FOCBS authorisation and provides the authorisation number and issue date only for goods legitimately handled under the formal-commitment procedure.",
+        "Finance compares ordinary tax payment with the authorised workflow, while operations defines the balance-sheet and export-refund evidence before shipment release.",
+      ],
+      result: "The shipment reaches declaration review with named owners and reproducible data instead of a generic 'VOC applicable' note. This is an illustrative control framework, not a ruling on any named LANCHROM product, importer, tariff classification, exemption or refund entitlement.",
+    },
+    checklist: [
+      "Exact product, concentration, package and importing entity recorded",
+      "Current Annex 1 substance check completed",
+      "Current Annex 2 product check completed",
+      "Tariff row and Tares additional-charge detail reviewed",
+      "Net mass and supported VOC mass fraction linked per line",
+      "Pure-VOC kilograms calculated with controlled rounding",
+      "Shared-row accompanying schedule prepared where applicable",
+      "Formal-commitment authorisation and current register status verified",
+      "Authorisation number and issue date available when scale 002 is used",
+      "Ordinary tax, VAT and landed-cost ownership assigned",
+      "Balance-sheet, exempt-use or export-refund evidence planned",
+      "Change triggers and customs-specialist escalation route documented",
+    ],
+    sources: [
+      { label: "FOCBS - Incentive tax on volatile organic compounds", href: "https://www.bazg.admin.ch/en/incentive-fee-volatile-organic-compounds-voc" },
+      { label: "FOCBS - Legislation and OVOC positive lists", href: "https://www.bazg.admin.ch/en/legislation-voc-fee" },
+      { label: "FOCBS - Incentive Taxes customs guidance, as of 1 March 2026", href: "https://www.bazg.admin.ch/dam/en/sd-web/x4sYiHxblG6i/Lenkungsabgaben_e.pdf" },
+      { label: "FOCBS - Formal-commitment authorisation register, 17 July 2026", href: "https://www.bazg.admin.ch/dam/en/sd-web/mVRYSBzRWl6p/register-voc-bewilligungen-verpflichtungsverfahren-202607-2.pdf" },
+    ],
+    productLinks: [
+      { label: "Browse HPLC Grade Solvents", href: "/products/high-purity-solvents/hplc-grade-solvents" },
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Browse Pharmaceutical Grade Solvents", href: "/products/high-purity-solvents/pharmaceutical-grade-solvents" },
+      { label: "Request Safety Data Sheets", href: "/downloads/sds" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
