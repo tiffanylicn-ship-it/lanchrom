@@ -1315,6 +1315,118 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "pfas-lcms-solvent-blank-contamination",
+    title: "PFAS LC-MS Solvent Blank Contamination: A Lot-Qualification Workflow",
+    shortTitle: "PFAS LC-MS Solvent Blank Contamination Workflow",
+    description: "A PFAS LC-MS solvent blank contamination workflow for qualifying reagent lots and separating solvent, water, consumable, preparation and instrument background.",
+    primaryKeyword: "PFAS LC-MS solvent blank contamination",
+    tag: "PFAS Analysis",
+    readingTime: "11 min technical guide",
+    intro: "At ultra-trace PFAS levels, a peak in a blank can consume analytical capacity, delay a report and undermine confidence in an entire batch. The difficult question is not simply whether the methanol or water is clean. The laboratory needs evidence showing where background entered the workflow, whether it affects the reported analytes and whether a new reagent lot is suitable for the specific method.",
+    painPoints: [
+      { title: "A blank signal is treated as a sample result", detail: "Background from solvent, reagent water, caps, tubing or preparation hardware can create a peak that is not attributable to the field sample." },
+      { title: "New lots enter use without a bridge", detail: "A label and certificate are accepted without testing the actual lot against the laboratory's blank criteria and reporting level." },
+      { title: "The solvent is blamed before the system is isolated", detail: "Changing several reagents and consumables at once destroys the comparison needed to locate cumulative PFAS background." },
+      { title: "The investigation cannot support release", detail: "Chromatograms are reviewed without a controlled sequence, lot identities, preparation history or a predefined disposition rule." },
+    ],
+    sections: [
+      {
+        heading: "Why PFAS LC-MS solvent blank contamination is a method problem",
+        paragraphs: [
+          "PFAS monitoring places unusually high pressure on the blank because the concentrations of interest are low and potential background sources are widespread. The European Commission's technical guidelines describe LC-MS/MS as the state-of-the-art technology for targeted non-volatile PFAS and recommend EN 17892:2024 Part A, using direct injection, and Part B, using solid-phase extraction, for the Drinking Water Directive's 20-compound 'Sum of PFAS' parameter. The same guidance says users should validate limit-of-quantification performance under their own laboratory conditions.",
+          "The regulatory context makes that local demonstration operationally important. Directive (EU) 2020/2184 required Member States to ensure compliance with the PFAS drinking-water parametric values by 12 January 2026, while allowing national measures to be more stringent. This article is not a substitute for EN 17892, national accreditation rules or the laboratory's approved method. It is a framework for generating the blank evidence those controlled procedures need.",
+          "A grade designation alone cannot answer the method question. EPA Method 8327 calls for LC/MS-grade or equivalent solvents, but also requires solvent lots to be checked before use. EPA Method 533 similarly allows other reagent grades only when the laboratory demonstrates that they are free of relevant analytes and interferences and that method requirements are met. In other words, purchasing controls define the candidate material; method blanks determine fitness for use.",
+        ],
+        points: [
+          "Name the applicable method, analyte panel and reporting objective before setting blank acceptance criteria.",
+          "Keep 'Sum of PFAS', 'PFAS Total' and any extended in-house target list distinct in specifications and reports.",
+          "Treat LC-MS grade as a starting requirement, not a universal or supplier-independent PFAS-free claim.",
+        ],
+      },
+      {
+        heading: "Build a blank ladder that locates the source",
+        paragraphs: [
+          "One blank cannot identify every source. Design a ladder in which each step adds a controlled part of the workflow: instrument and mobile-phase background; reagent water and neat organic solvent; prepared reagents; extraction or dilution hardware; the full method preparation; and, where the applicable method requires it, a field blank exposed to transport and sampling. The names and exact preparation of these blanks must follow the laboratory's controlled method because a reagent blank, laboratory reagent blank and method blank are not interchangeable labels.",
+          "Start with the least manipulated material that still answers the question, then add one layer at a time. If the background appears before sample preparation, compare the mobile phases, wash solvents and LC flow path. If it appears only after the full preparation, examine SPE devices, tubes, pipette tips, filters, caps, standards and every reagent that entered that branch. EPA Method 533 explicitly identifies solvents, reagent water, sample bottles, caps, PTFE products, LC solvent lines, methanol and sample-processing hardware as possible interference sources, and requires laboratory reagent blanks to demonstrate that those items are not contributing unacceptable interference.",
+          "Run the ladder in a sequence that can reveal carryover as well as static background. A blank after a high standard or sample answers a different question from a blank at the beginning of the batch. Bracket a suspect material with an approved control under the same calibration, instrument state and preparation conditions. Do not interpret a lower peak in a later run as proof of a cleaner solvent if the system was still purging or conditioning.",
+        ],
+        points: [
+          "Record analyte identity, retention time, ion-ratio or identification evidence and integrated response for every relevant blank signal.",
+          "Map each blank to the exact solvent, water, reagent, consumable and preparation lot used.",
+          "Use the frequencies and acceptance limits in the applicable controlled method rather than importing values from a different matrix or jurisdiction.",
+        ],
+      },
+      {
+        heading: "Qualify every solvent and reagent lot before release",
+        paragraphs: [
+          "Create a lot-release protocol before samples depend on the material. Define which solvents and reagents are critical, how much material is needed for evaluation, which blank preparation represents routine use and what response triggers approval, restriction, investigation or rejection. Include organic mobile-phase solvents, reagent water, extraction and wash solvents, modifier reagents and any solution that contacts the extract. A supplier certificate can establish identity and general quality attributes, but it cannot reproduce the laboratory's target list, flow path or reporting level.",
+          "Compare a candidate lot with a currently approved lot in the same analytical sequence whenever possible. Prepare independent replicates using controlled vessels and tools, randomise or bracket injections where practical, and include a system blank to show whether the instrument background changed during the comparison. Evaluate each target rather than relying only on total ion current: a lot may be acceptable for most transitions yet unsuitable where one target or isomer is close to the laboratory's blank limit.",
+          "EPA Method 8327 states that method and reagent blanks are used to show that supplies, preparation and analysis do not introduce PFAS artifacts that prevent identification or bias quantitation near the lower limit. It also notes that background from materials can be cumulative. That is why lot qualification should challenge the combined routine preparation, not only a direct injection of neat solvent. The direct injection remains useful as an isolation experiment, but it does not by itself release the whole workflow.",
+        ],
+      },
+      {
+        heading: "Separate solvent, water, consumables and the LC flow path",
+        paragraphs: [
+          "When a candidate lot fails, resist replacing everything at once. Split the investigation into controlled branches. First, inject or infuse method-appropriate blanks that distinguish mobile-phase background from preparation background. Second, make paired preparations in which only the organic-solvent lot changes. Third, hold that solvent constant while changing reagent water or one critical reagent. Fourth, test consumable lots using the full contact time and surface-to-volume ratio expected in routine work.",
+          "The time position of a signal can help localise upstream LC contamination. EPA Method 533 describes PFAS accumulation in some transfer lines and discusses a delay column placed before the injection valve to separate PFAS originating upstream of the sample loop from injected PFAS. Such a change is an instrument configuration decision that requires method-specific evaluation; it is not a substitute for clean reagents, and the method notes that complete removal of PFAS background may not be possible.",
+          "Use the minimum effective intervention. If the signal follows one solvent lot in paired full-method blanks, quarantine that lot and retain an unopened unit for supplier investigation. If it follows a reagent-water source, review the purification system, point-of-use materials and collection practice. If it grows after high samples, investigate carryover and the wash programme. If it follows an SPE or cap lot, restrict the affected consumable rather than incorrectly rejecting every reagent used in the batch.",
+        ],
+        points: [
+          "Change one factor at a time and preserve the control preparation.",
+          "Repeat the comparison on a freshly equilibrated system when conditioning could explain the difference.",
+          "Document negative findings; they prevent the same source from being retested without cause.",
+          "Escalate changes to tubing, columns, washes or acquisition settings through the laboratory's method-control process.",
+        ],
+      },
+      {
+        heading: "Turn blank evidence into purchasing and change control",
+        paragraphs: [
+          "Translate the investigation into a maintained material specification. State the intended PFAS method, critical reagent identity, acceptable grade, packaging and closure restrictions, document requirements, lot-sample quantity and the laboratory test required before release. Ask the supplier for consistent lot traceability and notification of manufacturing-site, specification, test-method, container or closure changes. Avoid an unqualified request for 'PFAS-free solvent': the useful commercial requirement is measurable performance against a defined analyte panel and laboratory blank criterion.",
+          "Store the lot decision with raw files, integration review, preparation records, instrument configuration, candidate and control lot numbers, acceptance criteria and approval signature. Trend blank responses by analyte and material lot. A slow rise may reveal a flow-path or handling problem before a formal failure, while repeated clean bridges may support a risk-based sampling plan. Any reduced test frequency should be justified by data and remain subordinate to the applicable method and quality system.",
+          "Finally, define the response to change. A new manufacturing source, water system, solvent package, cap liner, SPE lot or LC component can reopen the blank question. The change-control record should say which parts of the ladder must be repeated and whether previously prepared samples are affected. That turns blank troubleshooting from an emergency sequence into a controlled release process.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A drinking-water laboratory investigates a new methanol lot",
+      context: "An illustrative laboratory observes a target-like response near its internal blank action level after introducing a new methanol lot. The same week also brought a new SPE-cartridge lot, so chronology alone cannot identify the source.",
+      actions: [
+        "The laboratory freezes the affected lots, reviews the approved method's blank rules and keeps the original instrument configuration unchanged.",
+        "It runs a system and mobile-phase blank, then paired full-method blanks that differ only by the approved or candidate methanol lot.",
+        "A second comparison holds methanol constant and changes only the SPE-cartridge lot, with all tubes, water, modifiers and preparation times recorded.",
+        "The team uses the resulting factor-specific evidence to release, restrict or reject each material and preserves an unopened unit for any supplier investigation.",
+      ],
+      result: "The framework produces a traceable material decision without assuming that the newest lot caused the signal. It is an illustrative workflow, not a customer result or a universal acceptance protocol.",
+    },
+    checklist: [
+      "Applicable PFAS method, matrix, analyte list and reporting objective identified",
+      "Method-specific blank types, frequencies and acceptance criteria approved",
+      "Organic solvent, reagent water, modifier and consumable lots recorded",
+      "Candidate solvent lot compared with an approved control lot",
+      "System, reagent and full-preparation background distinguished",
+      "Carryover challenged after high standards or samples where relevant",
+      "Each target signal reviewed with identification evidence and integration history",
+      "Packaging, closure and routine contact time represented in qualification",
+      "Failed material quarantined with an unopened retain where possible",
+      "Instrument changes handled through method control",
+      "Lot disposition linked to raw data and reviewer approval",
+      "Supplier and internal change triggers defined for requalification",
+    ],
+    sources: [
+      { label: "EUR-Lex - EU technical guidelines for PFAS monitoring in drinking water", href: "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A52024XC04910" },
+      { label: "EUR-Lex - Directive (EU) 2020/2184 on drinking water", href: "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32020L2184" },
+      { label: "US EPA - SW-846 Method 8327 for PFAS by LC-MS/MS", href: "https://www.epa.gov/system/files/documents/2021-07/8327.pdf" },
+      { label: "US EPA - Method 533 for PFAS in drinking water", href: "https://www.epa.gov/sites/production/files/2019-12/documents/method-533-815b19020.pdf" },
+      { label: "US EPA - PFAS drinking-water laboratory methods", href: "https://www.epa.gov/pfas/epa-pfas-drinking-water-laboratory-methods" },
+    ],
+    productLinks: [
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "View LC-MS Grade Acetonitrile", href: "/products/lcms-solvents/acetonitrile" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
