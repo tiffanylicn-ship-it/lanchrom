@@ -997,6 +997,115 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Request Safety Data Sheets", href: "/downloads/sds" },
     ],
   },
+  {
+    slug: "netherlands-zzs-chemical-inventory-screening",
+    title: "Netherlands ZZS Chemical Inventory Screening: A Supplier-Data and Bal Workflow",
+    shortTitle: "Netherlands ZZS Chemical Inventory Screening",
+    description: "A Netherlands ZZS chemical inventory screening workflow for CAS-level identification, supplier data, Bal applicability, emissions records and change control.",
+    primaryKeyword: "Netherlands ZZS chemical inventory screening",
+    tag: "Dutch Environmental Compliance",
+    readingTime: "11 min technical guide",
+    intro: "A Dutch chemical inventory can be complete for purchasing and still be unusable for Zeer Zorgwekkende Stoffen, or ZZS, review. Product names may hide substance identity, an SDS may not disclose every constituent needed for environmental screening, and a match in a search tool does not by itself establish which Besluit activiteiten leefomgeving obligations apply to a site. Netherlands ZZS chemical inventory screening therefore needs a controlled path from CAS-level identity to authoritative status, activity applicability, emission points and named data owners. This guide provides an operational framework for manufacturers, laboratories and distributors; it is not legal or permit advice, and the competent authority and current official sources should govern site decisions.",
+    painPoints: [
+      { title: "Product names replace substance identity", detail: "Inventory rows use trade names or grade descriptions without CAS or EC identifiers, so list matches, mixture components and substance groups cannot be reviewed consistently." },
+      { title: "A screening hit becomes a legal conclusion", detail: "Teams treat the RIVM list, signalling list or Navigator as interchangeable proof of status, prohibition or site applicability." },
+      { title: "Supplier files stop at the SDS", detail: "The current SDS is collected, but composition ranges, formulation changes, process-generated substances and environmental-release data have no owner or escalation route." },
+      { title: "Reporting is assumed from inventory presence", detail: "A ZZS purchase is treated as automatic proof that paragraph 5.4.3 Bal applies or that the substance is emitted to air or water." },
+    ],
+    sections: [
+      {
+        heading: "Separate ZZS status, screening signals and site applicability",
+        paragraphs: [
+          "Begin with three questions that produce different records. First, does the substance meet the Dutch ZZS identification criteria? Second, is it only under European investigation for properties that could later meet those criteria? Third, do the relevant Bal provisions apply to the site's environmentally harmful activity and release situation? A reliable review keeps those answers separate instead of compressing them into one yes-or-no inventory column.",
+          "RIVM explains that ZZS identification follows the criteria in Article 57 of REACH and the sources identified in Article 5.22a Bal. Its ZZS list is an aid, not the legal test itself. A substance meeting the criteria can be a ZZS even when it is absent from the compiled list, and some company self-classifications can meet the criteria without appearing there. A no-result screen therefore needs a dated record and a rule for unresolved classifications; it is not permanent clearance.",
+          "The Signaleringslijst stoffen in Europees onderzoek has a different role. It covers substances for which possible ZZS properties are still being investigated, and RIVM states that the list has a signalling function and no legal status. Use it to flag watch items, alternative-assessment questions and future change review. Do not label every signalling-list substance as an established ZZS, and do not describe either list as a general ban list.",
+        ],
+        points: [
+          "Record established ZZS status separately from signalling-list status.",
+          "Capture the official source, result, access date and reviewer for each decision.",
+          "Treat no-match results and confidential composition gaps as review items, not proof of absence.",
+          "Keep product eligibility, permit applicability and emissions evidence in separate fields.",
+        ],
+      },
+      {
+        heading: "Build the inventory around identities and controlled supplier evidence",
+        paragraphs: [
+          "Start with the material actually received and used. For each product, capture supplier, product code, revision-controlled name, intended use, storage and use location, annual quantity or credible range, physical form, and the current SDS revision. Add CAS and EC numbers for known substances, concentration or concentration range where supported, and whether the row represents a pure substance, mixture, reaction aid, cleaning material, laboratory reagent or waste-related input. Preserve the source of every identity field.",
+          "An SDS remains essential, but it is not designed to be a complete emissions inventory. Mixture disclosure follows safety-data rules and can leave environmental reviewers with ranges, group descriptions or legitimately undisclosed components. Request proportionate supplementary information when the ZZS review cannot be completed: a current composition statement, confirmation against named substance identities or groups, regulatory-status information, and notification of relevant formulation or manufacturing changes. A supplier response supports the operator's assessment; it does not transfer the operator's permit or emissions responsibilities to the supplier.",
+          "Expand the boundary beyond purchased products. Ask process and EHS owners whether a ZZS can form during reaction, thermal treatment, cleaning, degradation, recycling or waste handling. Link inputs and generated substances to equipment, vents, wastewater routes, abatement and off-site transfers. The inventory should trace one substance from supplier evidence to use point and possible release path while controlling confidential information.",
+        ],
+      },
+      {
+        heading: "Use Netherlands ZZS chemical inventory screening as a controlled sequence",
+        paragraphs: [
+          "Screen the normalized identity against the current RIVM substance search and ZZS lists, including relevant substance groups rather than relying only on an exact product-name match. Record why a substance is identified and retain enough information for another reviewer to reproduce the result. If the identity is incomplete, a group entry is ambiguous or a new classification appears relevant, route the row to an environmental or regulatory specialist instead of selecting the most convenient status.",
+          "Then review the signalling list in a separate field. A signalling-list hit can justify monitoring, supplier dialogue or an alternatives review, but it should not be counted as an established ZZS without supporting criteria. RIVM says the list is updated annually and replaced the former potential-ZZS list; inventory procedures should therefore name the current source and retire uncontrolled copies of the older pZZS list from active screening.",
+          "Use the ZZS Navigator to challenge completeness, not to define the site's inventory. RIVM refreshed the Navigator on 20 August 2026 using sources including the Dutch Emissions Register, REACH, SPIN and the US Toxic Release Inventory. The tool indicates substances that may be used or emitted by an activity, while RIVM cautions that results are indicative and may not be complete or correct for a practical situation. Compare its sector suggestions with site knowledge, then document why each relevant candidate is present, absent, not emitted or still under investigation.",
+        ],
+        points: [
+          "Normalize CAS, EC and substance-group identifiers before searching.",
+          "Reproduce and date the ZZS-list and signalling-list checks separately.",
+          "Use Navigator results as a challenge list alongside process knowledge.",
+          "Escalate identity gaps, group ambiguity and changing classifications.",
+        ],
+      },
+      {
+        heading: "Test Bal applicability before designing the reporting file",
+        paragraphs: [
+          "Do not jump from an inventory match to a five-year report. IPLO explains that paragraph 5.4.3 Bal is designated in Chapter 3 for permit-required environmentally harmful activities where relevant ZZS emissions are expected. The operator should identify the exact activity designation, current permit conditions, competent authority and air or water release context. A laboratory located inside a regulated installation may contribute data to the operator's assessment, but the presence of a reagent in a laboratory cupboard is not by itself the applicability test.",
+          "Where the paragraph applies and ZZS are released, Article 5.23 Bal provides for information to the competent authority once every five years, and IPLO describes a continuous avoidance-and-reduction process rather than a report assembled only at the deadline. Article 5.24 content includes possibilities to avoid use and emissions at source, possibilities to reduce them in the current process, practical validation, reliability and cost information, and cross-media effects. The competent authority evaluates whether the programme adequately addresses minimisation.",
+          "Record the applicability decision even when the reporting route does not apply or no ZZS emissions occur. State the evidence, legal entity, activity or permit reference, authority contact and review trigger. IPLO also gives database instructions for applicable activities with no ZZS use or emissions and for ZZS use without releases. Confirm the site's treatment with the competent authority rather than generalising those instructions outside the designated scope.",
+        ],
+      },
+      {
+        heading: "Connect supplier data to emission points and lifecycle controls",
+        paragraphs: [
+          "For an applicable activity, convert the screened inventory into an emissions data map. IPLO says the ZZS emissions database records, per ZZS and per emission point to air and water, the highest annual-average concentration and the highest annual load during the reporting period. The database can also carry explanations or attachments and indicate whether values were measured, calculated or estimated. Assign an owner for the calculation basis, source data, unit conversion, abatement assumptions, version control and review.",
+          "Supplier quantity and composition data can support a mass balance, but purchased mass is not automatically emitted mass. Reconcile deliveries, opening stock, use, transformation, recovery, waste transfer, closing stock and releases. Link laboratory or pilot use to the site's defined emission points instead of inventing a separate reporting boundary. Where a value is estimated, preserve the conservative assumptions and plan how a future measurement or calculation could reduce uncertainty.",
+          "Maintain the inventory through triggers. Re-screen when RIVM lists change, a signalling item advances, a supplier changes formulation or site, a new process starts, use changes materially, release routing changes, or the permit is revised. Procurement should require stable identifiers, current SDS access and risk-based change communication. LANCHROM's product and SDS routes support supplier-data review, but category, grade or document availability does not establish ZZS status, Bal applicability or emissions performance.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A Dutch high-purity chemical site rebuilds its ZZS screening file",
+      context: "An illustrative Dutch manufacturer and distributor has a purchasing list with several hundred products, but many rows contain only trade names and old SDS dates. The EHS team must prepare for a permit discussion without assuming that every inventory match creates the same reporting duty.",
+      actions: [
+        "Procurement and EHS normalize supplier codes, CAS and EC identifiers, concentration evidence, uses, annual quantities and SDS revisions, while unresolved mixture identities enter a controlled supplier-query queue.",
+        "Reviewers screen established ZZS sources and the signalling list in separate fields, then use the updated Navigator to challenge whether process-generated substances or sector-relevant release paths are missing.",
+        "The permit owner maps the relevant environmentally harmful activities and paragraph 5.4.3 designation with the competent authority before assigning reporting scope.",
+        "Applicable substances are connected to air and water emission points, calculation methods and avoidance-or-reduction actions, with change triggers shared across procurement, operations and EHS.",
+      ],
+      result: "The site obtains a reproducible inventory-to-emissions workflow and a documented applicability decision instead of a flat list of product-name matches. This is an illustrative framework, not a conclusion about any named customer, product, ZZS classification, permit or reporting obligation.",
+    },
+    checklist: [
+      "Supplier product code, revision-controlled name and intended use captured",
+      "CAS and EC identifiers normalized where supported",
+      "Mixture concentration ranges and evidence sources recorded",
+      "Current SDS revision and supplementary supplier queries controlled",
+      "Process-generated substances and waste-related inputs considered",
+      "ZZS-list and signalling-list results stored separately with access dates",
+      "Navigator challenge completed without treating it as a complete inventory",
+      "Environmentally harmful activity and paragraph 5.4.3 applicability documented",
+      "Competent authority, permit owner and review triggers named",
+      "Air and water emission points mapped per applicable ZZS",
+      "Measured, calculated or estimated data basis and units retained",
+      "Supplier, process, list, permit and abatement changes trigger re-screening",
+    ],
+    sources: [
+      { label: "RIVM - Annual update of the ZZS Navigator, 20 August 2026", href: "https://rvs.rivm.nl/nieuws/jaarlijkse-update-zzs-navigator-0" },
+      { label: "RIVM - ZZS lists and signalling list", href: "https://rvszoeksysteem.rivm.nl/Zzslijst" },
+      { label: "RIVM - Signalling List of substances under European investigation", href: "https://rvs.rivm.nl/onderwerpen/zeer-zorgwekkende-stoffen/signaleringslijst" },
+      { label: "IPLO - Rules for the ZZS avoidance and reduction programme", href: "https://iplo.nl/regelgeving/regels-voor-activiteiten/vermijdings-reductieprogramma-zzs/regels-vermijdings-reductieprogramma-zzs/" },
+      { label: "IPLO - ZZS emissions database", href: "https://iplo.nl/regelgeving/regels-voor-activiteiten/zzs-emissiedatabase/" },
+    ],
+    productLinks: [
+      { label: "Browse Electronic and Semiconductor Grade Chemicals", href: "/products/high-purity-solvents/electronic-semiconductor-grade-chemicals" },
+      { label: "Browse Pharmaceutical Grade Solvents", href: "/products/high-purity-solvents/pharmaceutical-grade-solvents" },
+      { label: "Browse Laboratory Reagent Chemicals", href: "/products/high-purity-solvents/general-laboratory-reagent-chemicals" },
+      { label: "Request Safety Data Sheets", href: "/downloads/sds" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
