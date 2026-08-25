@@ -1106,6 +1106,108 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Request Safety Data Sheets", href: "/downloads/sds" },
     ],
   },
+  {
+    slug: "lcms-ion-suppression-troubleshooting",
+    title: "LC-MS Ion Suppression Troubleshooting: A Root-Cause Workflow",
+    shortTitle: "LC-MS Ion Suppression Troubleshooting Workflow",
+    description: "A practical LC-MS ion suppression troubleshooting workflow to separate matrix effects from mobile-phase, preparation, chromatography and instrument causes.",
+    primaryKeyword: "LC-MS ion suppression troubleshooting",
+    tag: "LC-MS Troubleshooting",
+    readingTime: "11 min technical guide",
+    intro: "LC-MS ion suppression troubleshooting becomes difficult when a falling analyte response is treated as proof that the solvent is at fault. Matrix components, mobile-phase additives, sample preparation, chromatographic co-elution, contaminated flow paths and source condition can create similar symptoms. A controlled blank-and-spike workflow identifies where response is lost before the team changes a validated method or rejects a solvent lot.",
+    painPoints: [
+      { title: "Response falls only in real samples", detail: "Neat standards remain stable while extracted samples lose signal, but the laboratory has not measured the matrix contribution separately." },
+      { title: "Several variables change together", detail: "The team replaces solvent, column, additive and source parts in one intervention, so an apparent recovery cannot identify the root cause." },
+      { title: "Background and suppression are confused", detail: "A visible blank peak and a reduced analyte response are related possibilities, not interchangeable findings, and require different comparisons." },
+      { title: "A successful workaround becomes an uncontrolled method change", detail: "Dilution, a new gradient or a different additive restores response, but its effect on accuracy, selectivity and the validated procedure is not assessed." },
+    ],
+    sections: [
+      {
+        heading: "Define the LC-MS ion suppression troubleshooting question",
+        paragraphs: [
+          "Start with the observation, not a presumed cause. Record whether the change affects analyte peak area, internal-standard response, their ratio, retention time, peak shape, qualifier ratio, background ions or system pressure. Then define the scope: one analyte or many, one matrix lot or all samples, one part of the batch or the whole sequence, and one ionisation mode or both. This pattern is often more discriminating than the size of the response loss.",
+          "ICH M10 defines a matrix effect as an alteration of analyte response caused by interfering, often unidentified components in the sample matrix. That definition keeps the investigation precise. A contaminated solvent blank, unstable spray or carry-over may reduce confidence in the result, but it is not automatically a matrix effect. The first decision is therefore whether the failure follows the matrix, the prepared mobile phase, the chromatographic system or the instrument state.",
+        ],
+        points: [
+          "Freeze the current method, source settings and processing method before testing changes.",
+          "Capture product, grade and lot for each solvent and additive, plus preparation and opening dates.",
+          "Review analyte and internal-standard traces separately before interpreting their ratio.",
+          "Use predefined response or suitability criteria rather than visual improvement alone.",
+        ],
+      },
+      {
+        heading: "Use a blank ladder to locate the affected layer",
+        paragraphs: [
+          "Run a short diagnostic sequence under one stable instrument condition: injection blank, neat standard, mobile-phase blank, processed blank matrix, post-extraction spiked matrix and a representative extracted sample. The injection blank challenges carry-over and the immediate flow path. The mobile-phase blank adds solvents, water, additives and preparation vessels. The processed blank matrix reveals co-extracted background, while the two spiked comparisons separate ionisation behaviour from extraction recovery.",
+          "Interpret the sequence as a set of contrasts. If the neat standard is low before any matrix injection, inspect preparation, instrument response and source state. If the neat response is stable but a post-extraction spike is depressed, co-eluting matrix is a strong lead. If the post-extraction spike is acceptable but the pre-extraction sample is low, investigate recovery, stability and processing. A changing response after repeated matrix injections points toward accumulation, source fouling or a sequence-order effect and should be challenged with reinjections and controlled cleaning.",
+        ],
+      },
+      {
+        heading: "Map suppression in time before changing chemistry",
+        paragraphs: [
+          "Post-column infusion is a useful development experiment when the laboratory can perform it safely and reproducibly. Infuse a constant analyte or suitable probe after the column while injecting a processed blank matrix. A depression in the infused trace marks a retention-time zone where material from the sample changes ionisation. The original Bonfiglio study used this approach to examine suppression from endogenous plasma interference, and later work has used the same principle to profile effects across a chromatographic run.",
+          "Compare the analyte retention time with the suppression zone. If they overlap, first test whether chromatographic separation can move the analyte away from that zone without compromising the method. Small, deliberate changes to gradient timing, wash or injection volume can be more informative than an immediate solvent substitution. If the suppression zone moves with the matrix but the analyte does not, sample cleanup deserves priority. If the whole infused trace is unstable, confirm the infusion, spray and source before drawing a chromatographic conclusion.",
+        ],
+        points: [
+          "Use the same matrix preparation and injection volume as the investigated method.",
+          "Include a blank injection so a transient pump or spray disturbance is not labelled as matrix suppression.",
+          "Document the infused compound, concentration, flow contribution and source settings.",
+          "Treat the map as diagnostic evidence, not as a replacement for quantitative matrix-effect assessment.",
+        ],
+      },
+      {
+        heading: "Challenge matrix, mobile phase and preparation independently",
+        paragraphs: [
+          "For a quantitative comparison, the post-extraction spike approach described by Matuszewski and colleagues separates matrix effect from recovery. Compare response from an analyte added to an extracted blank matrix with the response from the same amount in a neat solution; then compare a sample spiked before extraction to the post-extraction spike when recovery also needs assessment. Use matched concentrations, dilution composition and injection conditions so that the contrast measures the intended variable.",
+          "Mobile-phase controls should also be paired. Prepare the established composition with a freshly opened, qualified lot while keeping water, additive, vessels and analyst constant. Then change one component at a time. Review whether the method uses a volatile additive appropriate for the detection mode and whether concentration, pH and preparation order match the controlled procedure. Mobile-phase additives can materially alter ion formation and adduct patterns, so an unplanned additive change is not a neutral troubleshooting step.",
+          "When biological matrices are in scope, test independent sources rather than one convenient pool. ICH M10 calls for matrix-effect evaluation across at least six sources or lots, using replicate low and high quality controls, with provisions for rare matrices. That is a validation expectation for covered bioanalytical methods, not a universal recipe for every LC-MS application. Non-bioanalytical laboratories should set a justified design that represents their actual samples and intended result quality.",
+        ],
+      },
+      {
+        heading: "Choose the smallest corrective action and control it",
+        paragraphs: [
+          "Rank corrections by the evidence found. For matrix-linked suppression, options include better cleanup, lower injection volume, justified dilution, improved chromatographic separation or a suitable stable-isotope internal standard. For mobile-phase or preparation causes, correct the component, concentration, vessel or handling practice and confirm the complete prepared blank. For accumulation, optimise the wash and maintenance sequence. For source instability, restore system suitability before judging sample or solvent quality.",
+          "Repeat the original failing condition and the proposed correction in an interleaved sequence. Confirm that improved response also preserves precision, accuracy, selectivity, carry-over control and reporting capability. ICH Q2(R2) frames validation around demonstrating that an analytical procedure is fit for its intended purpose, while ICH M10 states that the scope of partial validation should reflect the nature and extent of a change. The laboratory should use the guidance applicable to its method and quality system rather than treating a successful diagnostic injection as approval to change routine analysis.",
+          "Close the investigation with traceable evidence: raw data, sequence design, matrix identity, reagent lots, preparation records, instrument condition, tested hypotheses and the rationale for the final action. If a solvent or additive lot remains implicated after controlled comparison, retain the container and prepare a supplier report with batch details and matched chromatograms. This gives the supplier a reproducible question instead of a general statement that sensitivity declined.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A plasma assay loses internal-standard and analyte response late in the batch",
+      context: "An illustrative bioanalytical laboratory sees acceptable system suitability and early quality controls, followed by declining response after repeated plasma extracts. Neat standards recover after source cleaning, while post-extraction spikes show a retention-time-specific response depression. The pattern does not by itself prove that the mobile-phase solvent is defective.",
+      actions: [
+        "The team preserves the method and runs an interleaved ladder of neat standards, processed blanks, post-extraction spikes and extracted controls.",
+        "Post-column infusion maps a suppression zone that overlaps the analyte and becomes deeper after repeated matrix injections.",
+        "A cleanup comparison and lower injection-volume challenge are tested independently while solvent, additive and source settings remain fixed.",
+        "The selected correction is assessed against the method's predefined accuracy, precision, selectivity and sensitivity requirements before controlled implementation.",
+      ],
+      result: "The evidence distinguishes matrix loading and accumulated source contamination from a solvent-lot complaint. This scenario illustrates a decision framework; it is not a LANCHROM customer result or a guaranteed outcome for another method.",
+    },
+    checklist: [
+      "Failure pattern recorded for analyte, internal standard, ratio, retention time and sequence position",
+      "Solvent, water, additive, matrix and preparation-vessel identities traceable by lot",
+      "Injection, mobile-phase, processed-matrix and post-extraction-spike blanks compared",
+      "Matrix effect separated from extraction recovery and instrument instability",
+      "Retention-time suppression map generated when post-column infusion is appropriate",
+      "Independent matrix sources included when required by the method's validation framework",
+      "One variable changed per diagnostic comparison",
+      "Correction confirmed against intended-purpose performance and change-control requirements",
+    ],
+    sources: [
+      { label: "EMA - ICH M10 bioanalytical method validation", href: "https://www.ema.europa.eu/en/ich-m10-bioanalytical-method-validation-scientific-guideline" },
+      { label: "EMA - ICH Q2(R2) validation of analytical procedures", href: "https://www.ema.europa.eu/en/ich-q2r2-validation-analytical-procedures-scientific-guideline" },
+      { label: "Matuszewski et al. - Matrix-effect assessment strategies", href: "https://pubmed.ncbi.nlm.nih.gov/12964746/" },
+      { label: "Bonfiglio et al. - Post-column infusion and sample preparation", href: "https://pubmed.ncbi.nlm.nih.gov/10407294/" },
+      { label: "Kruve and Kaupmees - Mobile-phase additives and ESI adducts", href: "https://pubmed.ncbi.nlm.nih.gov/28299714/" },
+    ],
+    productLinks: [
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "View LC-MS Grade Acetonitrile", href: "/products/lcms-solvents/acetonitrile" },
+      { label: "Explore LC-MS Analysis", href: "/applications/lcms-analysis" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
