@@ -1208,6 +1208,113 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "preparative-hplc-solvent-selection",
+    title: "Preparative HPLC Solvent Selection: A Scale-Up Decision Framework",
+    shortTitle: "Preparative HPLC Solvent Selection Framework",
+    description: "A preparative HPLC solvent selection framework for balancing separation, loading, fraction recovery, scale-up control, safety and supply at higher flow rates.",
+    primaryKeyword: "preparative HPLC solvent selection",
+    tag: "Preparative HPLC",
+    readingTime: "11 min technical guide",
+    intro: "A mobile phase that works in an analytical scouting run may become expensive, difficult to recover or operationally awkward when purification moves to preparative flow rates. Preparative HPLC solvent selection therefore has to connect chromatographic selectivity with sample loading, detector response, fraction work-up, package size, safe handling and reliable supply before a method is scaled.",
+    painPoints: [
+      { title: "The analytical solvent is scaled without review", detail: "A suitable scouting mobile phase is treated as the automatic production choice even when fraction recovery, viscosity, volatility or consumption changes the decision." },
+      { title: "Loading is increased before selectivity is protected", detail: "A clean analytical separation loses resolution as mass on column rises, reducing fraction purity or recovery." },
+      { title: "Solvent demand is calculated after the campaign starts", detail: "Teams discover too late that purge, equilibration, failed injections and fraction handling require substantially more inventory than the gradient table suggests." },
+      { title: "Bulk handling is outside the method file", detail: "Package transfer, waste collection, current safety information and dangerous-goods logistics are managed separately from chromatographic qualification." },
+    ],
+    sections: [
+      {
+        heading: "Set the purification target before choosing the mobile phase",
+        paragraphs: [
+          "Preparative chromatography is an isolation process, so its success criteria differ from those of an analytical assay. Define the required recovered mass, fraction purity, acceptable yield, number of injections, campaign duration and final physical form. Phenomenex describes purity, yield and throughput as competing preparative objectives. The project owner should rank them rather than asking one method to maximise all three without a trade-off.",
+          "The target form matters at the beginning. A solvent system that gives excellent peak spacing can still be a poor process choice if the collected fraction is slow to concentrate, the analyte is unstable during evaporation or a non-volatile additive complicates isolation. Record whether fractions will be pooled, evaporated, lyophilised, exchanged into another solvent or carried directly into a subsequent step. That downstream route becomes part of the mobile-phase requirement.",
+          "Start with a documented analytical separation, but identify the critical impurity pair and the loading margin around the target peak. A visually attractive low-load chromatogram is evidence for selectivity, not proof of preparative capacity. A loading study is needed to show how resolution changes as sample mass and injection volume rise.",
+        ],
+        points: [
+          "Rank purity, yield and throughput for the specific campaign.",
+          "Define the target fraction form and recovery operation.",
+          "Identify the critical impurity pair before scale-up.",
+          "Separate analytical selectivity evidence from preparative loading evidence.",
+        ],
+      },
+      {
+        heading: "Use a five-factor preparative HPLC solvent selection scorecard",
+        paragraphs: [
+          "First score chromatographic behaviour: selectivity, peak shape, retention window, pressure and compatibility with the stationary phase. Second score sample behaviour: solubility of the crude feed, diluent strength, risk of precipitation during injection and stability across the run. Increasing sample concentration is useful only while the solution remains controlled and the critical peaks remain separable.",
+          "Third score detection. The solvent and additives must be compatible with the detector used to trigger fraction collection. For UV collection, evaluate transparency at the working wavelength and the effect of the gradient on baseline shape. For mass-directed or aerosol-based collection, evaluate volatility and background appropriate to that detector. Do not assume that a grade selected for one detector automatically suits another.",
+          "Fourth score recovery. Volatility can shorten evaporation, while high-boiling or non-volatile components can extend work-up or remain with the fraction. Fifth score operational fit: solvent purity, package format, lot documentation, lead time, waste route and total volume. Agilent's preparative LC primer identifies selectivity, detector compatibility, volatility, viscosity, purity, solubility and cost as connected mobile-phase considerations. The scorecard makes those trade-offs visible before scale-up.",
+        ],
+      },
+      {
+        heading: "Scale the method, not just the flow rate",
+        paragraphs: [
+          "Column diameter, length and particle size affect the proposed flow and injection volume. System dwell volume also matters because it determines when a programmed gradient reaches the column. Agilent's scale-up guidance shows that differences between analytical and preparative systems can require adjusted initial holds and gradient timing. Copying the same time table onto a larger system can shift selectivity even when solvent A and solvent B are unchanged.",
+          "Use a scaling calculation as a starting condition, then verify the actual instrument. Record the mixing point, dwell volume, column void volume, maximum flow, pressure limit, injector capacity and fraction-collector delay. Confirm composition delivery with a suitable tracer or established system procedure before attributing a shifted target peak to the solvent lot.",
+          "Run loading injections in controlled increments. Track critical-pair resolution, target recovery window, peak shape, fraction purity and pressure. Stop increasing the load when a predefined criterion is crossed. The resulting operating range is more useful than a single maximum injection because it gives the campaign a controlled margin for variation in crude-feed composition.",
+        ],
+        points: [
+          "Scale flow and injection from column geometry and particle size.",
+          "Compensate for analytical-to-preparative dwell-volume differences.",
+          "Verify gradient delivery on the actual preparative system.",
+          "Establish a loading range with predefined stopping criteria.",
+        ],
+      },
+      {
+        heading: "Qualify grade, package and supply as one solvent system",
+        paragraphs: [
+          "The required solvent grade should follow the purification risk, detector and work-up—not a generic assumption that the strictest analytical grade is always necessary or that a lower grade is automatically economical. Compare identity, assay, water, non-volatile residue, optical or detector-relevant background, acidity or alkalinity where applicable, and any method-specific limits. Then confirm the proposed material in the scaled method and recovery process.",
+          "Package format changes exposure and transfer. A bottle used during scouting may become a drum or another bulk format for a campaign. Qualify the closure, dispensing connection, transfer material, headspace management, storage location and maximum in-use period for the intended package. The delivered lot should remain linked to its certificate of analysis and current safety data sheet throughout dispensing and use.",
+          "Forecast demand from the whole cycle: initial fill, equilibration, every gradient, wash, purge, fraction displacement, repeat injections, method adjustment and a justified contingency. Agilent's scaling calculator explicitly includes mobile-phase use per gradient, injection count and total purification time. Converting those outputs into a dated inventory plan helps procurement match batch quantity and delivery timing to the technical campaign.",
+        ],
+      },
+      {
+        heading: "Control high-volume handling before the first preparative run",
+        paragraphs: [
+          "Higher flow turns a small laboratory habit into an operational control. Shimadzu notes that semi- and large-scale preparative systems use substantial solvent and require measures for leaks, drain handling and ignition risk when flammable solvents are involved. Site controls must come from the current supplier safety data sheet, the equipment instructions and the laboratory's risk assessment; the chromatography method is not a substitute for EHS approval.",
+          "Before release, confirm that the current supplier safety data sheet matches the exact solvent and destination, and that receiving, storage, transfer and waste procedures use its current information. Package size can change transfer equipment, storage quantity and waste handling without changing the chromatographic method, so EHS and logistics owners should approve those controls before the campaign starts.",
+          "Close the loop with change control. Define which changes require review: manufacturing or testing site, specification, analytical test method, container or closure, transport classification, supplier, detector, column, gradient composition or recovery process. A retained reference chromatogram and documented blank can help separate a solvent change from a system or feed change during a future investigation.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative qualification case framework",
+      title: "A process-development laboratory scales a small-molecule purification",
+      context: "An illustrative European laboratory has an analytical reversed-phase gradient that separates a target from two close impurities. It needs a multi-day preparative campaign, but the scouting record contains no loading range, solvent-volume forecast or fraction-recovery assessment.",
+      actions: [
+        "The team ranks fraction purity first, recovered mass second and throughput third, then defines the intended evaporation and solvent-exchange steps.",
+        "Candidate mobile phases are scored for selectivity, feed solubility, UV collection, pressure, volatility, lot controls and package handling.",
+        "Flow, gradient timing and injection volume are calculated from column and system data, then verified with dwell-volume checks and incremental loading injections.",
+        "Procurement reserves one qualified lot and package format using a demand forecast that includes equilibration, washes, repeats and contingency, while EHS approves transfer and waste controls.",
+      ],
+      result: "The output is a controlled operating range and a solvent qualification file that links chromatographic performance to recovery, inventory and handling. This constructed framework does not claim a customer result or guarantee a particular purity, yield or scale-up outcome.",
+    },
+    checklist: [
+      "Purity, yield, throughput and recovered-mass targets ranked",
+      "Target fraction form and recovery process defined",
+      "Critical impurity pair and analytical selectivity documented",
+      "Solubility and diluent compatibility checked at intended feed concentration",
+      "Detector compatibility and gradient baseline assessed",
+      "Dwell volume, column geometry, flow and injection scale calculated",
+      "Incremental loading range qualified with stopping criteria",
+      "Solvent specification and proposed package format reviewed together",
+      "Full-cycle consumption, contingency and delivery timing forecast",
+      "Current SDS, transfer, waste and ADR responsibilities confirmed",
+      "Supplier, package, method and system change triggers documented",
+    ],
+    sources: [
+      { label: "Agilent - Principles and Practical Aspects of Preparative Liquid Chromatography", href: "https://www.agilent.com/cs/library/primers/public/primer-preparative-liquid-chromatography-5994-1016EN-agilent.pdf" },
+      { label: "Agilent - Preparative LC Scaling Calculator", href: "https://www.agilent.com/en/product/liquid-chromatography/preparative-lc-scaling-calculator" },
+      { label: "Phenomenex - Scaling Analytical Methods to Preparative Chromatography", href: "https://www.phenomenex.com/resources/knowledge-center/hplc-knowledge-center/scaling-analytical-methods-to-prep-chromatography" },
+      { label: "Shimadzu - About Preparative HPLC", href: "https://www.ssi.shimadzu.com/service-support/technical-support/analysis-basics/hplc/prep1.html" },
+    ],
+    productLinks: [
+      { label: "Browse Preparative and Bulk Solvents", href: "/products/high-purity-solvents/preparative-grade-solvents" },
+      { label: "View Acetonitrile", href: "/products/hplc-grade-solvents/acetonitrile" },
+      { label: "View Methanol", href: "/products/hplc-grade-solvents/methanol" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
