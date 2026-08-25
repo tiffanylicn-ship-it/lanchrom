@@ -47,6 +47,63 @@ body {
   top: 0 !important;
 }
 
+/* Keep wide technical tables usable without widening or clipping the page. */
+.responsive-table {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.responsive-table__scroller {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: #8fb7af #edf4f1;
+  scrollbar-width: thin;
+}
+
+.responsive-table__scroller:focus-visible {
+  outline: 3px solid #3C6E71;
+  outline-offset: 3px;
+}
+
+.responsive-table__scroller > table {
+  width: 100%;
+  min-width: var(--responsive-table-min-width, 36rem);
+}
+
+.responsive-table__hint {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .responsive-table__hint {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 0;
+    padding: 9px 12px;
+    color: #315b57;
+    background: #edf4f1;
+    border-bottom: 1px solid #c9dbd9;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .responsive-table__hint span:last-child {
+    flex: 0 0 auto;
+    font-size: 17px;
+    line-height: 1;
+  }
+
+  .responsive-table__scroller {
+    padding-bottom: 4px;
+  }
+}
+
 .google-translate-mount,
 .goog-te-banner-frame,
 .skiptranslate iframe {

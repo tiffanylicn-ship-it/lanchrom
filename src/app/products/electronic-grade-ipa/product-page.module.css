@@ -89,8 +89,8 @@
 .applicationImage, .manufacturingImage, .qualityImage, .packagingImage { position: relative; margin: 0; overflow: hidden; }
 .applicationImage { aspect-ratio: 16 / 7; }
 .applicationImage img, .manufacturingImage img, .qualityImage img, .packagingImage img { object-fit: cover; }
-.applicationGrid { display: grid; grid-template-columns: repeat(4, 1fr); }
-.applicationGrid article { min-height: 205px; padding: 25px 23px; border: 1px solid var(--product-line); border-top: 0; border-right: 0; }
+.applicationGrid { display: grid; min-width: 0; grid-template-columns: repeat(4, 1fr); }
+.applicationGrid article { min-width: 0; min-height: 205px; padding: 25px 23px; overflow-wrap: anywhere; border: 1px solid var(--product-line); border-top: 0; border-right: 0; }
 .applicationGrid article:last-child { border-right: 1px solid var(--product-line); }
 .applicationGrid span { color: var(--product-green); font-size: 13px; font-weight: 800; }
 .applicationGrid h3 { margin: 30px 0 9px; color: var(--product-navy); font-size: 19px; }

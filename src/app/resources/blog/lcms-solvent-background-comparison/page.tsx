@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import ResponsiveTable from "@/components/tables/ResponsiveTable";
 
 const URL = "https://www.lanchrom.com/resources/blog/lcms-solvent-background-comparison";
 
@@ -113,7 +114,7 @@ export default function LcmsSolventBackgroundComparisonPage() {
 
           <section className="border-y border-[#DCE7E2] py-10">
             <h2 className="text-2xl font-bold text-[#173A35]">What the displayed data supports</h2>
-            <div className="mt-6 overflow-x-auto">
+            <ResponsiveTable label="Displayed LC-MS solvent background data" minWidth="47.5rem" className="mt-6">
               <table className="w-full min-w-[760px] border-collapse text-left text-sm">
                 <thead>
                   <tr className="border-b-2 border-[#9BCBC1] text-[#234842]">
@@ -134,7 +135,7 @@ export default function LcmsSolventBackgroundComparisonPage() {
                   ))}
                 </tbody>
               </table>
-            </div>
+            </ResponsiveTable>
           </section>
 
           <section className="grid gap-8 py-10 md:grid-cols-[1fr_1.2fr] md:items-start">

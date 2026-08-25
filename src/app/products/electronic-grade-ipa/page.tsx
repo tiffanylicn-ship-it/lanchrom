@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check, Download, FileCheck2, FileText, FlaskConical, ShieldCheck } from "lucide-react";
 import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
+import ResponsiveTable from "@/components/tables/ResponsiveTable";
 import ProductInquiryForm from "./ProductInquiryForm";
 import styles from "./product-page.module.css";
 
@@ -134,11 +135,11 @@ export default function ElectronicGradeIPAPage() {
           </div>
           <div className={styles.specificationTable}>
             <div className={styles.tableHeading}><h3>Typical specification</h3><span>Representative values</span></div>
-            <div className={styles.tableScroll}>
+            <ResponsiveTable label="Typical specification" minWidth="34rem">
               <table><thead><tr><th>Parameter</th><th>Specification</th></tr></thead><tbody>
                 {specificationRows.map(([parameter, value]) => <tr key={parameter}><td>{parameter}</td><td>{value}</td></tr>)}
               </tbody></table>
-            </div>
+            </ResponsiveTable>
             <p className={styles.controlNote}>Final values must be confirmed in the approved grade-specific specification and batch COA.</p>
           </div>
         </div>

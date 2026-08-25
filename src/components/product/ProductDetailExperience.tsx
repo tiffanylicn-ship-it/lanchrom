@@ -21,6 +21,7 @@ import {
   PRODUCT_THEME_TOKENS,
 } from "@/data/product-themes";
 import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
+import ResponsiveTable from "@/components/tables/ResponsiveTable";
 import ProductInquiryForm from "@/app/products/electronic-grade-ipa/ProductInquiryForm";
 import styles from "@/app/products/electronic-grade-ipa/product-page.module.css";
 
@@ -191,11 +192,11 @@ export default function ProductDetailExperience({
             )}
             <div className={styles.specificationTable}>
               <div className={styles.tableHeading}><h3>Typical specification</h3><span>Current approved values on request</span></div>
-              <div className={styles.tableScroll}>
+              <ResponsiveTable label="Typical specification" minWidth="42rem">
                 <table><thead><tr><th>Parameter</th><th>Specification</th><th>Method</th></tr></thead><tbody>
                   {specifications.map((spec) => <tr key={`${spec.parameter}-${spec.value}`}><td>{spec.parameter}</td><td>{spec.value}</td><td>{spec.testMethod || "—"}</td></tr>)}
                 </tbody></table>
-              </div>
+              </ResponsiveTable>
               <p className={styles.controlNote}>Final release values are confirmed in the approved grade-specific specification and batch COA.</p>
             </div>
           </div>

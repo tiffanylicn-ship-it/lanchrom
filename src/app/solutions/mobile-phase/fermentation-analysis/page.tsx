@@ -3,6 +3,7 @@ import Link from "next/link";
 import SectionSidebar from "@/components/layout/SectionSidebar";
 import EditorialPageHero from "@/components/layout/EditorialPageHero";
 import SectionBreadcrumb from "@/components/layout/SectionBreadcrumb";
+import ResponsiveTable from "@/components/tables/ResponsiveTable";
 import { SOLUTION_NAV_GROUPS } from "@/data/solutions-nav";
 
 export const metadata: Metadata = {
@@ -72,23 +73,25 @@ export default function FermentationAnalysisPage() {
           {/* Specifications */}
           <section className="bg-[#FBFAF8] border border-[#E6E3DD] rounded-2xl p-6 md:p-8">
             <h2 className="text-2xl font-bold text-[#2B2A28] mb-6">Specifications</h2>
-            <table className="w-full border-collapse max-w-2xl">
-              <tbody>
-                {[
-                  ["H₂SO₄ Concentration", "0.005N (±2%)"],
-                  ["pH", "2.2 ± 0.1"],
-                  ["Water Quality", "TOC < 50 ppb, Resistivity > 18 MΩ·cm"],
-                  ["Filtration", "0.2 µm membrane filtered"],
-                  ["Packaging Atmosphere", "Nitrogen-filled"],
-                  ["Available Sizes", "5L · 7L · 10L · 20L flex bag"],
-                ].map(([param, val]) => (
-                  <tr key={param} className="border-b border-[#EFEDE8]">
-                    <td className="py-3 text-sm font-semibold text-[#2B2A28] w-1/2">{param}</td>
-                    <td className="py-3 text-sm text-[#5C5A55]">{val}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <ResponsiveTable label="Fermentation mobile phase specifications" minWidth="32rem">
+              <table className="w-full border-collapse max-w-2xl">
+                <tbody>
+                  {[
+                    ["H₂SO₄ Concentration", "0.005N (±2%)"],
+                    ["pH", "2.2 ± 0.1"],
+                    ["Water Quality", "TOC < 50 ppb, Resistivity > 18 MΩ·cm"],
+                    ["Filtration", "0.2 µm membrane filtered"],
+                    ["Packaging Atmosphere", "Nitrogen-filled"],
+                    ["Available Sizes", "5L · 7L · 10L · 20L flex bag"],
+                  ].map(([param, val]) => (
+                    <tr key={param} className="border-b border-[#EFEDE8]">
+                      <td className="py-3 text-sm font-semibold text-[#2B2A28] w-1/2">{param}</td>
+                      <td className="py-3 text-sm text-[#5C5A55]">{val}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </ResponsiveTable>
           </section>
 
           {/* Industries */}

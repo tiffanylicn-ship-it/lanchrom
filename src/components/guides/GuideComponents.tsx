@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getCategoryInfo } from "@/data/categories";
 import { getCategoryPath } from "@/data/product-line-pages";
+import ResponsiveTable from "@/components/tables/ResponsiveTable";
 
 export function GH2({ id, children }: { id: string; children: React.ReactNode }) {
   return (
@@ -55,7 +56,11 @@ export function GCallout({ title, children }: { title: string; children: React.R
 
 export function GTable({ headers, rows }: { headers: string[]; rows: (string | React.ReactNode)[][] }) {
   return (
-    <div className="my-7 overflow-x-auto rounded-xl border border-[#E6E3DD]">
+    <ResponsiveTable
+      label={headers.join(", ")}
+      minWidth={headers.length >= 4 ? "46rem" : "38rem"}
+      className="my-7 rounded-xl border border-[#E6E3DD]"
+    >
       <table className="w-full border-collapse text-sm">
         <thead>
           <tr className="bg-[#FBFAF8]">
@@ -74,7 +79,7 @@ export function GTable({ headers, rows }: { headers: string[]; rows: (string | R
           ))}
         </tbody>
       </table>
-    </div>
+    </ResponsiveTable>
   );
 }
 

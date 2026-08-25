@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import TechnicalArticleLayout from "@/components/blog/TechnicalArticleLayout";
+import ResponsiveTable from "@/components/tables/ResponsiveTable";
 
 const URL =
   "https://www.lanchrom.com/resources/blog/lcms-grade-solvent-selection-guide";
@@ -104,7 +105,7 @@ export default function LcmsGradeSolventSelectionGuidePage() {
           trace-metal data add information relevant to stability, detection and
           system cleanliness.
         </p>
-        <div className="mt-6 overflow-x-auto">
+        <ResponsiveTable label="LC-MS solvent specification qualification" minWidth="47.5rem" className="mt-6">
           <table className="w-full min-w-[760px] border-collapse text-left text-sm">
             <thead>
               <tr className="border-b-2 border-[#9BCBC1] text-[#234842]">
@@ -149,7 +150,7 @@ export default function LcmsGradeSolventSelectionGuidePage() {
               ))}
             </tbody>
           </table>
-        </div>
+        </ResponsiveTable>
       </section>
 
       <section>

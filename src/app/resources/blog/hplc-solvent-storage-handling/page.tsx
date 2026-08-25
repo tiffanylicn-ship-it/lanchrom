@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import TechnicalArticleLayout from "@/components/blog/TechnicalArticleLayout";
+import ResponsiveTable from "@/components/tables/ResponsiveTable";
 
 const URL =
   "https://www.lanchrom.com/resources/blog/hplc-solvent-storage-handling";
@@ -169,7 +170,7 @@ export default function HplcSolventStorageHandlingPage() {
         <h2 className="text-2xl font-bold text-[#173A35]">
           Investigate symptoms before replacing the instrument
         </h2>
-        <div className="mt-6 overflow-x-auto">
+        <ResponsiveTable label="Storage and handling troubleshooting" minWidth="45rem" className="mt-6">
           <table className="w-full min-w-[720px] border-collapse text-left text-sm">
             <thead>
               <tr className="border-b-2 border-[#9BCBC1] text-[#234842]">
@@ -209,7 +210,7 @@ export default function HplcSolventStorageHandlingPage() {
               ))}
             </tbody>
           </table>
-        </div>
+        </ResponsiveTable>
       </section>
 
       <section className="border-t border-[#DCE7E2] pt-10">
