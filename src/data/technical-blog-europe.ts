@@ -1427,6 +1427,112 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "lcms-isopropanol-lipidomics-solvent-qualification",
+    title: "LC-MS Isopropanol for Lipidomics: A Solvent-Lot and Study-Continuity Qualification Framework",
+    shortTitle: "LC-MS Isopropanol for Lipidomics: Lot Qualification",
+    description: "An LC-MS isopropanol lipidomics solvent qualification framework for extraction, mobile phase, blanks, pooled QC, lot bridging and study continuity.",
+    primaryKeyword: "LC-MS isopropanol lipidomics solvent qualification",
+    tag: "Lipidomics Quality Control",
+    readingTime: "11 min technical guide",
+    intro: "In a multi-week lipidomics study, isopropanol can enter the workflow as an extraction solvent, a reconstitution component and the major organic component of mobile phase B. A new IPA lot can therefore affect more than one analytical layer at the same time. The practical question is not whether a grade name sounds suitable; it is whether the laboratory can bridge the candidate lot to its controlled method without confusing solvent background with extraction, matrix, column or ion-source effects. This framework turns that question into a documented qualification and study-continuity plan.",
+    painPoints: [
+      { title: "One lot cannot cover the study", detail: "A cohort outlasts the available IPA inventory, but no bridge has been designed before the second lot is needed." },
+      { title: "IPA has several method roles", detail: "Extraction, reconstitution and mobile-phase use are changed together, so a failed QC does not identify which role caused the shift." },
+      { title: "Background is judged from one blank", detail: "A neat-solvent injection cannot distinguish container, additive, extraction-vessel, column and source contributions." },
+      { title: "Open-life is left undefined", detail: "Repeated opening, transfer and headspace exposure can change water or contamination risk after the original receipt check." },
+    ],
+    sections: [
+      {
+        heading: "Map every IPA role before setting acceptance criteria",
+        paragraphs: [
+          "LC-MS isopropanol lipidomics solvent qualification should begin with a process map, not a generic solvent specification. Record where IPA contacts the study: protein precipitation or lipid extraction, dilution of standards, reconstitution, needle or strong wash if applicable, and the high-organic mobile phase. For each role, identify the observable that could change. Extraction may influence recovery and matrix removal; reconstitution can affect solubility and injection compatibility; mobile-phase IPA can change background, retention, peak shape, pressure and electrospray response.",
+          "Published lipidomics workflows illustrate why the map must remain method-specific. One high-throughput plasma and serum method used LC-MS-grade IPA and acetonitrile in a 1:2 extraction mixture, while a Thermo Fisher LC-MS method used a mobile phase B containing 90:10 IPA/acetonitrile. These are evidence that IPA can serve different technical functions, not universal recipes. The controlled laboratory method, instrument limits and column instructions remain authoritative for composition, additives, filtration, temperature and acceptance criteria.",
+          "Convert the map into a concise user requirement. Include identity and grade, intended role, package format, unopened shelf life, laboratory-defined open life, water and residue risks, relevant LC-MS background window, particulate-control expectations and the supplier documents required at receipt. If the website or supplier data do not provide a method-specific performance claim, qualification must demonstrate suitability for the intended workflow rather than infer it from the catalogue name.",
+        ],
+        points: [
+          "Separate extraction-grade decisions from mobile-phase performance decisions.",
+          "Use the study method's system-suitability and QC rules as the acceptance basis.",
+          "Represent the actual bottle, closure, dispensing practice and contact materials.",
+        ],
+      },
+      {
+        heading: "Use a blank ladder to locate solvent and handling background",
+        paragraphs: [
+          "A single IPA injection answers only a narrow question. A more useful ladder begins with the instrument state and adds material contacts in a controlled order: no-injection or mobile-phase background where the instrument permits it, neat IPA in a qualified vial, prepared mobile phase, an extraction blank containing every tube and transfer step, an internal-standard blank, and finally a pooled-matrix extract. The Lipidomics Minimal Reporting Checklist distinguishes solvent, extraction and internal-standard blanks because each can reveal a different source of interference.",
+          "Run approved and candidate lots in the same sequence and alternate their order where carryover could bias the comparison. Keep water, acetonitrile, additives, vials, caps, filters, pipette tips, extraction tubes, column, source settings and integration method constant. Review the full acquisition range relevant to the assay, not only a few expected ions. A difference that appears in neat IPA and persists through the prepared phase suggests a different investigation from a feature that emerges only after contact with extraction plastics or biological matrix.",
+          "Do not label every unexpected feature a solvent impurity. Background ions can arise from water, additives, containers, tubing, seals, a conditioned column, source contamination, carryover or data processing. Likewise, the absence of a conspicuous neat-solvent signal does not prove suitability if the candidate lot changes extraction recovery or ionization in matrix. Preserve raw data, lot numbers and preparation timestamps so the investigation can be repeated and communicated to the supplier if necessary.",
+        ],
+      },
+      {
+        heading: "Bridge an IPA lot with reference and pooled-QC evidence",
+        paragraphs: [
+          "Plan the bridge before the existing lot is exhausted. Reserve enough approved IPA to prepare paired blanks, pooled-QC extracts and system-suitability samples alongside the candidate lot. Where the study already uses a reference material or study-reference pool, keep that material constant. Original high-throughput lipidomics studies show the value of reference plasma, pooled QC and repeated measurements for monitoring reproducibility across large analytical batches; they do not provide universal acceptance limits for a different laboratory.",
+          "A strong bridge changes one IPA role at a time. First compare prepared mobile phases while using extracts produced with the approved lot. Then compare extraction lots while holding the mobile phase constant. If IPA is used for reconstitution or standard dilution, challenge those roles separately. This factorial approach prevents a pass in one role from hiding a failure in another and makes a failed comparison actionable.",
+          "Predefine the review outputs from the validated method: retention time, peak area or response ratio, internal-standard behaviour, pooled-QC dispersion, blank features, peak shape, carryover, system pressure and any class-specific identification checks. Evaluate trends across the complete sequence, including the transition between lots. Do not import numerical criteria from a published application note. The laboratory's established method, study protocol and quality system must define the decision limits and the authority that releases, restricts or rejects the lot.",
+        ],
+        points: [
+          "Retain an unopened unit of each compared lot where procedure and storage allow.",
+          "Record preparation operator, time, temperature and container history.",
+          "Keep a controlled bridge report with chromatograms, raw files and disposition.",
+        ],
+      },
+      {
+        heading: "Control packaging, water uptake and particulate risk after release",
+        paragraphs: [
+          "Lot qualification is incomplete if the study uses a different handling system from the test. A small freshly opened bottle can behave differently from a repeatedly accessed container or a bulk package connected through transfer tubing. Define which package sizes, closure materials and dispensing arrangements the bridge covers. If IPA will be transferred, document the wetted materials, cleaning status and whether a filter is used; do not assume filtration removes dissolved background or that an unspecified filter is compatible with the solvent and target analytes.",
+          "Water control deserves explicit attention because both IPA and the prepared mobile phase can change through exposure and mixing. Use the laboratory's approved measurement or composition-control approach where water is critical. Record opening date, number or pattern of withdrawals, storage condition and maximum open time. Avoid inventing a universal open-life period: it should be established from container design, handling practice, method sensitivity and stability evidence.",
+          "Particulate contamination can present as intermittent pressure changes, blocked inlet frits or unstable spray behaviour, but a pressure rise is not proof of a dirty solvent. Compare system pressure with a controlled sequence that respects the instrument and column manuals. Examine whether the change follows the mobile-phase bottle, transfer set, mixer, guard column, analytical column or sample load. This keeps a packaging or filling investigation separate from column fouling and instrument restriction diagnosis.",
+        ],
+      },
+      {
+        heading: "Separate a solvent-lot effect from extraction, matrix, column and source effects",
+        paragraphs: [
+          "When pooled QC shifts after a lot change, freeze further uncontrolled changes. Re-run the bridge materials with the original data-processing method and review the blank ladder. A feature present in the candidate neat-solvent and mobile-phase blanks may support a background hypothesis. A response change confined to candidate-lot extracts points instead toward extraction or matrix interaction. A drift shared by both lots may implicate sequence position, column condition, source contamination or instrument stability.",
+          "Use the smallest discriminating experiment. Swap only the mobile phase, only the extraction solvent, or only the reconstitution solvent; inject a retained pooled-QC extract; compare a suitable reference column only if the method permits; and inspect pressure and source-monitoring evidence. Do not compensate for a suspected lot effect by changing source parameters, integration rules or column temperature during the comparison, because the resulting data no longer isolate the material change.",
+          "Close the investigation with a clear disposition and future trigger. The outcome may release the candidate lot for all tested roles, restrict it to a defined role, require more evidence or reject it. Record what would reopen qualification: a new manufacturing site, specification or test-method change, different container or closure, repeated background observations, unexpected water trend, particulate event or a study extension beyond the tested open-life conditions.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A plasma lipidomics study introduces a second IPA lot",
+      context: "A multi-week plasma lipidomics study will exhaust its original IPA lot before the final plates. IPA is used in extraction and in the organic-rich mobile phase, and the laboratory needs continuity without assuming that any later signal shift must come from the solvent.",
+      actions: [
+        "The team reserves approved IPA and prepares paired neat-solvent, mobile-phase and full-extraction blanks with the candidate lot while all other materials remain constant.",
+        "It extracts the same pooled study QC with both IPA lots, then cross-injects those extracts under mobile phases prepared from each lot to separate extraction and chromatographic roles.",
+        "Reviewers compare method-defined system suitability, internal-standard response, pooled-QC behaviour, background features, pressure traces and container/open-life records.",
+        "The laboratory documents the evidence, lot disposition, covered package and role, and the trigger for reassessment before routine plates resume.",
+      ],
+      result: "The bridge produces a traceable study-continuity decision and preserves evidence for later trend review. It is a constructed qualification framework, not a LANCHROM customer result or a claim that a catalogue grade automatically meets the method's limits.",
+    },
+    checklist: [
+      "Every IPA role in extraction, reconstitution, washing and mobile phase mapped",
+      "Method-specific performance attributes and acceptance authority identified",
+      "Approved-lot retain and candidate lot available for paired testing",
+      "Solvent, mobile-phase, extraction and internal-standard blanks included",
+      "Pooled study QC or suitable reference material held constant",
+      "Extraction and mobile-phase roles challenged separately",
+      "Water, additives, containers, vials, filters and transfer materials recorded",
+      "Intended package, dispensing practice and open-life represented",
+      "Background ions, response, retention, peak shape and pressure reviewed",
+      "Raw data, preparation timestamps and sequence order retained",
+      "Lot disposition limited to the tested role and package",
+      "Supplier, packaging, process and performance change triggers documented",
+    ],
+    sources: [
+      { label: "Journal of Proteome Research - High-throughput LC-MS screening of lipids in plasma and serum", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9639203/" },
+      { label: "Nature Communications - High-throughput 4D lipidomics for clinical blood profiling", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9941096/" },
+      { label: "Thermo Fisher Scientific - Orbitrap LC/MSn lipidomics application note", href: "https://documents.thermofisher.com/TFS-Assets/CMD/Application-Notes/an-72942-lc-ms-insect-lipidome-an72942-en.pdf" },
+      { label: "Journal of Lipid Research - Lipidomics Minimal Reporting Checklist", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11417233/" },
+    ],
+    productLinks: [
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "View Isopropanol (IPA)", href: "/products/hplc-grade-solvents/ipa" },
+      { label: "Explore LC-MS Analysis", href: "/applications/lcms-analysis" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
