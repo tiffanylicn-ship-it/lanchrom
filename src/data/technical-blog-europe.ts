@@ -1533,6 +1533,113 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "acetonitrile-check-valve-fouling-hplc",
+    title: "Acetonitrile Check-Valve Fouling in HPLC: A Controlled No-Flow Investigation",
+    shortTitle: "Acetonitrile Check-Valve Fouling in HPLC",
+    description: "An acetonitrile check-valve fouling HPLC workflow for isolating no-flow or low-pressure faults, reviewing solvent history and requalifying the system.",
+    primaryKeyword: "acetonitrile check-valve fouling HPLC",
+    tag: "HPLC Troubleshooting",
+    readingTime: "10 min technical guide",
+    intro: "A pump that loses flow or pressure after an acetonitrile sequence creates an urgent but easily misdirected investigation. The symptom can be consistent with a stuck or obstructed check valve, yet it can also arise from an empty or blocked inlet line, air, a leak, a filter restriction, a purge-valve problem or worn pump components. This workflow helps a laboratory preserve the evidence, isolate the hydraulic fault and decide whether solvent handling or a specific acetonitrile lot should enter the root-cause assessment without treating timing alone as proof.",
+    painPoints: [
+      { title: "The newest solvent lot is blamed first", detail: "A fault that appears after a bottle change is assigned to the lot before inlet flow, air, leaks and pump components are isolated." },
+      { title: "Several variables change during recovery", detail: "The team replaces solvent, filters, valves and method settings together, so restored pressure does not identify the actual cause." },
+      { title: "Maintenance advice is applied across instruments", detail: "A cleaning step from one pump family is used on another without checking the model manual, compatible flow path or column limits." },
+      { title: "The recovered system returns without a bridge", detail: "Pressure comes back, but no controlled blank, retention or system-suitability comparison documents that the method is ready for samples." },
+    ],
+    sections: [
+      {
+        heading: "Treat no flow and low pressure as symptoms, not a diagnosis",
+        paragraphs: [
+          "Acetonitrile check-valve fouling in HPLC is one possible explanation for no flow, no pressure, pressure drops or retention-time movement, but those observations are not specific to a valve or solvent. Agilent's pump troubleshooting guidance also lists large pump-head leaks, degasser blockage, blocked solvent-bottle inlet filters, outlet or inlet valve problems and multichannel gradient-valve blockage. Waters documents separate no-flow cases caused by a blocked check valve, a dry inlet path or air lock. The first control is therefore to describe exactly what changed rather than naming the cause.",
+          "Freeze the sequence and preserve the evidence before maintenance. Record the method, pressure trace, flow, purge behaviour, channel composition, alarms, last acceptable injection and symptom time. Capture solvent levels, line positions, bottle identity, grade, lot, opening date, additives and transfer history. Export any channel-specific diagnostic traces with the raw data.",
+          "Classify the symptom operationally: no liquid at the purge outlet, liquid without normal pressure, unstable pressure, one affected channel, or a retention shift with normal total pressure. Note whether it began after an overnight stop, a solvent change or an empty bottle. These distinctions prevent a solvent investigation from masking a leak, air lock or mechanical failure.",
+        ],
+        points: [
+          "Stop sample analysis and retain the original pressure and chromatographic records.",
+          "Identify the affected pump, head and solvent channel before opening the flow path.",
+          "Record bottle, lot and handling history without assuming they caused the fault.",
+        ],
+      },
+      {
+        heading: "Isolate the hydraulic path from bottle to pump outlet",
+        paragraphs: [
+          "Use the instrument manufacturer's current troubleshooting procedure for the exact pump model. A controlled check usually moves from the simplest upstream conditions toward internal components: adequate solvent volume, correct line placement, visible leaks, inlet-filter condition, free flow to the pump inlet, successful purge or prime, and then valve or pump-head diagnostics. Agilent's documented sequence checks whether solvent reaches the active inlet valve before moving to downstream pump components; this separates an upstream restriction from a valve that cannot meter solvent.",
+          "Do not use pressure alone as the only observation. With the column removed or bypassed only where the manufacturer permits, compare measured discharge or purge behaviour at a defined setting and inspect the relevant diagnostic trace. If an inlet line is dry, restore prime using the approved procedure before concluding that a check valve is blocked. If solvent reaches the pump inlet but the pump cannot draw or deliver it, a valve, inlet filter, actuator, pump seal or another internal restriction remains possible.",
+          "Keep the test discriminating. Change one condition, record the result, then decide the next step. For a multichannel pump, compare the affected and unaffected channels using compatible liquids and the same approved test. For a binary pump, compare heads rather than changing both solvent paths at once. Do not send cleaning liquid through an analytical column, detector flow cell or mass spectrometer unless its instructions explicitly allow it; diverting the flow path may be required to protect downstream components.",
+        ],
+      },
+      {
+        heading: "Test the acetonitrile history with a controlled solvent comparison",
+        paragraphs: [
+          "Once the hydraulic check points to a solvent-dependent or valve-related event, review the acetonitrile as a material-and-handling system. Agilent's current high-speed pump manual states that aged acetonitrile can leave residue on internal pump surfaces and affect valve performance and retention-time precision. It recommends fresh, high-quality solvent, reduced exposure to light and air, and a bottle size suited to consumption. The same manual notes that acids can accelerate aging and that pure acetonitrile may age faster. These are equipment-care observations, not proof that every no-flow event is polymer formation.",
+          "Build a paired comparison only after the pump is in a condition where such a test is safe and meaningful. Use an approved retained or fresh control and the questioned bottle or lot, while keeping the channel, tubing, inlet filter, flow setting, restriction, temperature and preparation method constant. If the original bottle contained an additive or laboratory-prepared mixture, distinguish the supplier's sealed solvent from changes introduced during preparation, storage and use. Record whether the response follows the bottle, the channel or the hardware.",
+          "Avoid interpreting a successful switch as automatic lot failure. Fresh solvent may restore prime by displacing air, changing viscosity, wetting a component or moving debris. Conversely, a candidate lot may pass a pump-flow comparison while still needing the laboratory's normal chromatographic qualification. A supplier investigation is strongest when it includes an unopened retain where available, the exact lot and package, photographs, chronology, pressure traces, preparation records and a comparison in which only the solvent condition changed.",
+        ],
+        points: [
+          "Separate sealed-lot evidence from bottle age, additives and laboratory transfer history.",
+          "Hold hardware and test settings constant during a solvent comparison.",
+          "Preserve a questioned bottle and unopened retain according to the laboratory procedure.",
+        ],
+      },
+      {
+        heading: "Recover or replace the valve only under model-specific instructions",
+        paragraphs: [
+          "Cleaning and replacement procedures differ among pump families. Agilent describes warm-water flushing and, for specified valves and models, release or ultrasonic procedures; Waters documents cases in which a blocked check valve is replaced and other cases in which cleaning is permitted. Those instructions are not interchangeable. Confirm the exact valve type, wetted materials, temperature and pressure limits, downstream bypass arrangement, personal protective equipment and waste route before starting work.",
+          "Buffer history must be included in the recovery plan. Agilent warns that incompatible mixing of buffers and high organic content can precipitate salts and that buffers should be flushed from an idle system. Introducing a strong organic cleaning solvent before salts have been removed can move or create a blockage elsewhere. Establish a compatible transition sequence from the current mobile phase to the approved cleaning liquid and back, and never expose the analytical column to a solvent outside its allowed range.",
+          "After an approved cleaning attempt, use the manufacturer's diagnostic test to judge the valve rather than relying on the sound of the pump or a single pressure value. A leak-rate test, prime test or pump performance test may be appropriate depending on the system. If the test fails, stop repeating uncontrolled flushes and follow the replacement or service route. Record the component identity, work performed, cleaning liquids, volumes, settings, test result and technician authorization in the maintenance history.",
+        ],
+      },
+      {
+        heading: "Requalify the chromatographic method and prevent recurrence",
+        paragraphs: [
+          "Mechanical recovery is not the same as analytical release. Reintroduce the approved mobile phases through the controlled transition, purge and equilibrate the system, then compare pressure ripple, delivered composition indicators, retention, peak shape, blank response and system suitability with the laboratory's established acceptance criteria. If a retention shift was part of the original symptom, include a composition-sensitive or otherwise suitable check that can reveal unequal channel delivery. Do not resume reportable samples until the defined reviewer releases the system.",
+          "Close the root-cause record with the level of certainty supported by the evidence. A confirmed valve fault with a solvent-dependent comparison is different from a suspected acetonitrile contribution after several simultaneous maintenance changes. Use categories such as confirmed, probable, possible or not supported, and state the alternative causes tested. Link the material decision to the exact lot, bottle and handling condition; do not reject an entire supplier or grade based on one open container without supporting evidence.",
+          "Prevention should be designed around the instrument manual and actual consumption. Controls may include right-sized bottles, opening and preparation labels, limits for laboratory-defined in-use time, protection from unnecessary light and air exposure, documented buffer-to-organic transitions, inlet-filter checks and a scheduled pump-care procedure. Trend no-flow events, valve replacements and retention deviations against channels, methods and solvent lots. The trend can show whether the effective action belongs in solvent purchasing, bottle handling, method shutdown, preventive maintenance or service training.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative troubleshooting scenario",
+      title: "A UK impurity-testing laboratory finds no pressure after an overnight gradient",
+      context: "An illustrative laboratory finishes an overnight acetonitrile gradient and finds no normal pressure on one pump channel the next morning. A new solvent lot was opened the previous day, but the bottle was also transferred and the system stood at high organic composition after the sequence.",
+      actions: [
+        "The analyst stops sample work, saves the pressure trace and method, records the bottle, lot, opening and transfer history, and confirms that other channels still purge normally.",
+        "Following the exact pump manual, the team checks solvent supply, leaks, inlet-filter flow and prime before a diagnostic test narrows the fault to the affected check-valve path.",
+        "Authorized maintenance recovers or replaces the component under the manufacturer's procedure; the team then compares a fresh approved control with the questioned bottle while holding the channel and test conditions constant.",
+        "Before release, the laboratory repeats pressure, blank, retention and system-suitability checks and documents whether the evidence supports hardware failure, handling contribution, lot contribution or an unresolved combination.",
+      ],
+      result: "The outcome is a traceable system-release and material-disposition decision rather than an automatic rejection of the newest bottle. This is a constructed example, not a LANCHROM customer result and not a substitute for the instrument manufacturer's maintenance procedure.",
+    },
+    checklist: [
+      "Method, expected pressure and original symptom recorded",
+      "Affected pump head and solvent channel identified",
+      "Bottle, supplier, grade, lot, opening and preparation history captured",
+      "Leaks, solvent level, line position and inlet filter checked",
+      "Prime or purge behaviour assessed under the exact instrument procedure",
+      "Upstream restriction separated from valve and pump-head faults",
+      "Only one variable changed in any solvent comparison",
+      "Buffer history and solvent compatibility reviewed before cleaning",
+      "Column and sensitive downstream components protected or bypassed as instructed",
+      "Valve cleaning, diagnostic testing or replacement documented",
+      "Pressure, blank, retention and system suitability passed before sample release",
+      "Root-cause certainty, lot disposition and preventive action approved",
+    ],
+    sources: [
+      { label: "Agilent - No Pressure, No Flow and Retention-Time Shift: Cleaning ACN Aggregations", href: "https://community.agilent.com/knowledge/lc-portal/kmp/lc-articles/kp170.no-pressure-no-flow-rt-shift-issues-cleaning-acetonitrile-acn-aggregations-in-agilent-pumps" },
+      { label: "Agilent - Troubleshooting Low Pressure or No Flow in LC Pumps", href: "https://community.agilent.com/knowledge/lc-portal/kmp/lc-articles/kp744.how-to-troubleshoot-low-pressure-or-no-flow-solvent-coming-out-of-1100-1200-series-isocratic-quaternary-binary-pumps" },
+      { label: "Agilent - InfinityLab LC Series High-Speed Pumps User Manual", href: "https://www.agilent.com/cs/library/usermanuals/public/G7120-G7132-HighSpeedPump-UseMa-en-SD-29000230.pdf" },
+      { label: "Waters - No Flow Due to a Blocked Check Valve on an Alliance System", href: "https://support.waters.com/KB_Inst/Chromatography/WKB232110_Blocked_check_valve_Alliance_system" },
+      { label: "Waters - No Flow During Prime with an Alliance 2695", href: "https://support.waters.com/KB_Inst/Chromatography/WKB21679_2695_no_flow_during_prime" },
+    ],
+    productLinks: [
+      { label: "View HPLC Grade Acetonitrile", href: "/products/hplc-grade-solvents/acetonitrile" },
+      { label: "Browse HPLC Grade Solvents", href: "/products/high-purity-solvents/hplc-grade-solvents" },
+      { label: "Browse Gradient Grade Solvents", href: "/products/high-purity-solvents/gradient-grade-solvents" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
