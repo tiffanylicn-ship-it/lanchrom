@@ -1640,6 +1640,108 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "acetonitrile-water-ratio-hilic-retention-drift",
+    title: "Acetonitrile-Water Ratio in HILIC: A Retention-Drift and Solvent-Lot Investigation",
+    shortTitle: "HILIC Retention Drift: Acetonitrile-Water Ratio",
+    description: "A practical acetonitrile-water ratio HILIC retention drift workflow for separating composition, equilibration, mixing and solvent-lot variables before a controlled method is changed.",
+    primaryKeyword: "acetonitrile-water ratio HILIC retention drift",
+    tag: "HILIC Troubleshooting",
+    readingTime: "11 min technical guide",
+    intro: "A HILIC method that suddenly gives earlier peaks can turn a routine acetonitrile lot change into an urgent quality investigation. Yet a lot label alone cannot explain the shift. In HILIC, small changes in the aqueous-to-organic balance, buffer strength, mixing behaviour, equilibration, temperature, injection solvent and sample load can all move retention. Treating the first changed item as the root cause risks an unnecessary rejection, a changed controlled method, or both.",
+    painPoints: [
+      { title: "A new acetonitrile lot is blamed immediately", detail: "The team changes the bottle, buffer and column condition together, so the result cannot identify whether the lot, preparation or system caused the retention shift." },
+      { title: "Nominal composition is mistaken for delivered composition", detail: "On-pump proportioning, mixer volume, channel performance or an inaccurate offline preparation can change the mobile phase reaching the column." },
+      { title: "Equilibration is treated as a fixed waiting period", detail: "A short or inconsistent re-equilibration can produce drift that looks like a solvent effect, especially after a change in mobile-phase composition or column history." },
+      { title: "A passing blank closes the investigation", detail: "A neat-solvent blank can miss a composition, matrix, diluent or chromatographic effect that becomes visible only in the approved system-suitability sequence." },
+    ],
+    sections: [
+      {
+        heading: "Why an acetonitrile-water ratio can move HILIC retention",
+        paragraphs: [
+          "HILIC retention is sensitive to the balance between the aqueous component and acetonitrile because polar analytes interact with a water-enriched stationary-phase region as well as through adsorption and electrostatic mechanisms. The effect is method-specific: buffer, pH, stationary-phase chemistry and analyte charge can alter both magnitude and selectivity. Use the validated method and its system-suitability criteria as the decision standard.",
+          "In a Thermo Fisher HILIC sweetener method, one-percent mobile-phase increments changed retention and critical-pair resolution; increasing water reduced retention. That does not establish an acceptance limit for another method, but it shows why an 85:15 acetonitrile-to-buffer procedure needs controlled preparation rather than a target ratio alone.",
+          "The investigation should begin with a precise symptom statement. Record which peaks moved, whether all peaks moved in the same direction, whether resolution or peak shape changed, when the sequence began to drift, and whether the movement appears in system suitability, samples, blanks or all injections. A uniform movement across peaks points to a different hypothesis from a selective change in one ionic analyte. Avoid interpreting a retention shift as evidence of water uptake, solvent impurity or a faulty pump before the controlled comparison is complete.",
+        ],
+        points: [
+          "Use the controlled method's retention, resolution and suitability criteria rather than a generic HILIC expectation.",
+          "Record actual lot, package, opening date, buffer stock, preparation operator and preparation time.",
+          "Separate a broad retention change from a selective change in critical-pair resolution or peak shape.",
+        ],
+      },
+      {
+        heading: "Freeze the variables before comparing acetonitrile lots",
+        paragraphs: [
+          "The most useful first experiment is a bracketed comparison, not a full method redevelopment. Retain enough approved acetonitrile to prepare paired mobile phases with the candidate lot. Hold the column, guard, instrument configuration, temperature, flow, injection volume, vial type, filter, water source, buffer batch, buffer concentration, additive lot, sample diluent and data-processing method constant. Prepare both phases gravimetrically or by the laboratory's approved controlled procedure, and record the weights or volumes. If the method uses online blending, hold the same channels and mixer configuration constant.",
+          "Run the approved and candidate phases in an order that can reveal sequence effects: an equilibrated approved-lot baseline, system suitability, candidate-lot system suitability, then a return to the approved lot if the method and column instructions permit. Alternate lots only after adequate re-equilibration. The aim is to distinguish a repeatable material-associated observation from gradual column or instrument drift.",
+          "Compare the same chromatograms that normally support method release: retention time, relative retention where relevant, resolution, asymmetry, area or response, pressure and baseline behaviour. Review preparation and sequence records beside the data. If the candidate-phase result is indistinguishable from the approved phase within the laboratory's predetermined criteria, the result supports the qualified scope. If it differs, preserve the evidence and move to a smaller diagnostic experiment rather than adjusting the method settings until it appears to pass.",
+        ],
+        points: [
+          "Represent the intended package and dispensing practice in the lot bridge.",
+          "Keep a retained approved lot available until the candidate-lot disposition is complete.",
+          "Predefine the comparison criteria from the method; do not borrow numerical limits from an application note.",
+        ],
+      },
+      {
+        heading: "Check preparation, proportioning and mixing before assigning cause",
+        paragraphs: [
+          "The nominal ratio in a batch record is not necessarily the composition delivered to the column. With offline preparation, verify the calculation, equipment, addition order, buffer concentration and container identification. With low-pressure proportioning, review channel assignment, pump and mixer configuration and recent maintenance. Thermo Fisher's example found that inadequate mixing could produce baseline ripple and shorter retention, so a composition-like symptom can originate in fluidics rather than the bottle.",
+          "Use a method-appropriate controlled check to narrow the question. A pre-mixed mobile phase delivered through one channel can be an informative comparison where the approved procedure and instrument instructions allow it; it is not automatically a replacement for an online-mixed method. Likewise, a controlled proportioning or gradient verification test can help assess delivery performance, but it must be interpreted within the site's calibration and change-control system. Do not introduce a new mixer, pump setting or software adjustment into a lot study without recording that as a separate variable.",
+          "Water and acetonitrile quality should be reviewed as part of the evidence set, not treated as interchangeable explanations. Examine receiving records, container integrity, opening history, preparation timestamps and any approved water-content or incoming-test data. A mismatch between the planned and measured composition, or a problem that follows a particular channel rather than a particular bottle, may redirect the investigation. Conversely, a controlled lot effect should be documented carefully enough for supplier discussion without asserting a root cause that the data have not established.",
+        ],
+      },
+      {
+        heading: "Give HILIC equilibration a measurable role in the investigation",
+        paragraphs: [
+          "HILIC columns require deliberate equilibration when a phase is prepared, a column is started, or a composition changes. Manufacturer guidance identifies inadequate equilibration as a source of retention-time drift. The exact time or column volumes are method-specific, so follow the column instructions and demonstrate stability with repeated system-suitability injections.",
+          "For a suspected lot change, make equilibration an observed variable. Record the starting phase, composition, flow, temperature, elapsed time, calculated or observed column volumes where used locally, injection count and the retention trend. Continue only until the method's own stability expectation is met. A plot of retention or relative retention across the equilibration injections can reveal a settling pattern that would otherwise be attributed to a new lot. Keep the sequence design identical for approved and candidate phases.",
+          "Do not overlook sample diluent. A sample prepared in a substantially stronger aqueous solvent than the starting HILIC mobile phase can disturb focusing and mimic a retention or peak-shape problem. In a lot comparison, use the validated diluent, concentration and injection volume. If a diluent mismatch is suspected, investigate it separately with controlled injections; do not fold that change into the acetonitrile bridge and lose the ability to interpret the result.",
+        ],
+      },
+      {
+        heading: "Turn the result into a controlled lot disposition",
+        paragraphs: [
+          "A useful final report states what the study covered: acetonitrile lot, grade, package, storage and open-life conditions, method, column, configuration, preparation process, paired sequence, raw-data location and criteria. Link it to a disposition: release for the tested use, release with a restriction, gather evidence, or reject from that workflow. Do not extend a freshly opened bottle conclusion to an untested drum-transfer system.",
+          "The report should also preserve the alternate explanations that were tested. If approved and candidate lots performed comparably but a mixing or equilibration issue was found, route that finding through the appropriate maintenance or deviation process. If an unexplained difference remains, quarantine uncontrolled changes, retain samples where procedure permits and decide the next discriminating experiment with the method owner and quality function. This protects the controlled procedure while avoiding an unsupported claim about the material.",
+          "For procurement and supplier qualification, the repeatable output is a method-linked requirement rather than a vague request for better acetonitrile. Define the relevant grade, package, documents, change-notification expectations and laboratory bridge. Where a candidate supply source is being qualified, the site can use the same bracketed framework with its defined risk assessment. LANCHROM product information can help identify a grade and request documents; suitability for a particular HILIC method remains for the laboratory to demonstrate.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A Dutch QC laboratory investigates earlier HILIC retention after a lot change",
+      context: "A controlled 85% acetonitrile HILIC assay begins to show earlier retention after a new bottle is opened. The laboratory must decide whether to release the candidate lot without changing the approved method or incorrectly attributing the shift to the solvent.",
+      actions: [
+        "It reserves the approved acetonitrile and prepares paired mobile phases from the same water, buffer stock, glassware and gravimetric procedure.",
+        "It brackets approved and candidate phases using the same column, temperature, instrument channels, mixer, sample diluent and system-suitability solution, documenting retention, resolution, pressure and baseline traces.",
+        "It records equilibration injections and checks calculation, preparation, channel assignment and mixer history before changing any component.",
+        "It documents the lot disposition only for the tested method and package, with a separate deviation route if fluidics or equilibration evidence is found.",
+      ],
+      result: "The framework separates composition, delivery and equilibration hypotheses and produces a traceable decision. It is an illustrative qualification scenario, not a LANCHROM customer result or proof that a particular lot will meet another laboratory's method limits.",
+    },
+    checklist: [
+      "Symptom and affected peaks defined before troubleshooting begins",
+      "Water, buffer, additives, preparation method and calculations held constant",
+      "Column, temperature, pump channels, mixer and injection conditions held constant",
+      "Approved and candidate mobile phases bracketed with adequate equilibration",
+      "Retention, resolution, peak shape, response, pressure and baseline reviewed",
+      "Validated sample diluent and injection volume used in the bridge",
+      "Conclusion limited to the tested method, package and handling scope",
+      "Supplier, packaging, method and instrument changes defined as requalification triggers",
+    ],
+    sources: [
+      { label: "Thermo Fisher Scientific - HILIC mobile-phase composition and mixing", href: "https://assets.thermofisher.com/TFS-Assets/CMD/Application-Notes/AN-21674-LC-Natural-Sweeteners-AN21674-EN.pdf" },
+      { label: "Thermo Fisher Scientific - HILIC column development and care guide", href: "https://documents.thermofisher.com/TFS-Assets/CMD/Flyers/fl-000961-ccs-HILIC-LC-column-care-guide-fl000961-na-en.pdf" },
+      { label: "PMC - Hydrophilic interaction liquid chromatography retention mechanisms", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3249561/" },
+      { label: "PMC - Quantitative assessment of HILIC retention mechanisms", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10535837/" },
+    ],
+    productLinks: [
+      { label: "View Acetonitrile", href: "/products/hplc-grade-solvents/acetonitrile" },
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Browse Gradient Grade Solvents", href: "/products/high-purity-solvents/gradient-grade-solvents" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
