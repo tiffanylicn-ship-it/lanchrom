@@ -1849,6 +1849,112 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "anhydrous-methanol-titanium-corrosion-hplc",
+    title: "Anhydrous Methanol in Biocompatible HPLC: A Titanium-Corrosion and Peak-Tailing Investigation",
+    shortTitle: "Anhydrous Methanol and Titanium in Biocompatible HPLC",
+    description: "An anhydrous methanol titanium corrosion biocompatible HPLC workflow for separating solvent, wetted-path, column and chelating-analyte causes of peak tailing.",
+    primaryKeyword: "anhydrous methanol titanium corrosion biocompatible HPLC",
+    tag: "HPLC System Compatibility",
+    readingTime: "11 min technical guide",
+    intro: "A bioinert or biocompatible HPLC system is often selected to reduce unwanted metal interactions, but its wetted materials still have solvent-specific limits. Published work has linked an anhydrous methanol/acetonitrile eluent in a titanium-containing flow path with titanium release, column contamination and severe tailing for selected chelating drugs. An anhydrous methanol titanium corrosion biocompatible HPLC investigation must therefore separate material compatibility from solvent-lot quality, column history and analyte chemistry before anyone rejects a bottle, changes a method or replaces hardware.",
+    painPoints: [
+      { title: "The newest methanol lot is blamed first", detail: "Peak tailing appears after a bottle change, but the laboratory has not isolated water content, solvent composition, flow-path exposure, column history or analyte-specific metal interaction." },
+      { title: "Biocompatible is treated as universally inert", detail: "A system label is assumed to cover every solvent and composition even though titanium compatibility advice is model-specific and must be checked in the current instrument documentation." },
+      { title: "A column symptom is mistaken for a mobile-phase impurity", detail: "Titanium released upstream may become immobilised on a stationary phase, so switching bottles alone may not reverse an established peak-shape change." },
+      { title: "A workaround becomes an uncontrolled method change", detail: "Water is added, a column chemistry is replaced or the flow path is changed without assessing selectivity, retention, pressure, suitability and the controlled analytical procedure." },
+    ],
+    sections: [
+      {
+        heading: "Define the anhydrous methanol titanium corrosion question precisely",
+        paragraphs: [
+          "Start with the exact system, not the broad word biocompatible. Record every wetted material from solvent reservoir to detector or waste, including inlet frits, pump heads, mixers, valves, capillaries, injector parts and any metal-containing column hardware. Then check the current solvent-compatibility and maintenance guidance for that instrument configuration. Waters and Thermo Fisher both caution about exposing titanium surfaces to anhydrous methanol, but compatibility limits remain model-specific.",
+          "Define what anhydrous means in the controlled method and in the supplied material. Do not infer actual water content from the grade name, an opened-bottle label or a nominal mobile-phase recipe. Use the supplier document, approved incoming result or an appropriate measured value already allowed by the laboratory procedure. Record whether methanol is used alone, blended with acetonitrile, mixed online with an aqueous channel, or present only in a wash step.",
+          "Describe the chromatographic failure independently of the proposed cause. Capture which analytes tail, whether retention changes, whether a blank or non-chelating control is affected, when the change began and whether it persists after the mobile phase is replaced. Preserve pressure traces, chromatograms, column identity, column history, solvent lot and opening details, preparation records, sequence order and recent maintenance. Timing can generate a useful hypothesis, but it does not prove that the methanol lot caused corrosion or contamination.",
+        ],
+        points: [
+          "Confirm the exact instrument model, configuration and wetted materials.",
+          "Record actual mobile-phase composition and exposure time rather than the solvent name alone.",
+          "Separate the observed symptom from the suspected titanium mechanism.",
+        ],
+      },
+      {
+        heading: "Isolate the bottle, flow path and column with discriminating comparisons",
+        paragraphs: [
+          "Build the investigation in stages so each result answers one question. First compare supplier documents, bottle identity, package condition, opening history and preparation records for the approved and questioned methanol. If the site has a retained approved lot, keep water, acetonitrile, additives, vessels and preparation constant in a paired mobile-phase comparison. A result that follows the bottle supports further material investigation; it still does not identify corrosion, because composition, contamination, handling and system wetting can change together.",
+          "Next separate the upstream system from the analytical column under an approved diagnostic procedure. The Thermo Fisher study collected effluent without a column and measured titanium by ICP-MS, establishing that the metal originated in the flow path under its test conditions. Its poster reported contributions from multiple titanium fluidic parts and highlighted high-surface-area solvent frits. A laboratory does not need to copy that experiment blindly, but before-column or no-column sampling can distinguish an upstream metal signal from material already retained on a column when the instrument manual and local safety controls permit the configuration.",
+          "Finally, compare a known clean column with the suspect column only after the mobile-phase and flow-path conditions are controlled. If a fresh column develops the same selective tailing after upstream exposure, that differs from a suspect column that remains poor on another compatible system. Predefine the order, exposure, samples, acceptance observations and stopping rule, and protect the detector if the diagnostic composition is outside its permitted range.",
+        ],
+        points: [
+          "Change one variable at a time and retain the approved control condition.",
+          "Use before-column, after-column or no-column samples only under an approved setup.",
+          "Keep a clean-column comparison limited, traceable and protected from avoidable exposure.",
+        ],
+      },
+      {
+        heading: "Use analyte and stationary-phase selectivity as evidence",
+        paragraphs: [
+          "The reported effect was selective, not a general collapse of HPLC performance. In the Thermo Fisher experiments, seven fluoroquinolones were prone to tailing while thiamphenicol served as a non-tailing comparator. The proposed mechanism involved titanium becoming immobilised on a polar-embedded reversed-phase stationary phase and then forming secondary interactions with chelating fluoroquinolone structures. That evidence supports a targeted investigation of chelation and surface interaction; it does not support the claim that all drug peaks, all columns or all titanium systems respond in the same way.",
+          "Include controls that can separate broad system dispersion from selective chemistry. Review a non-chelating compound or method-owned control alongside the affected analyte. Compare peak asymmetry, retention and efficiency rather than relying on a visual chromatogram. If every compound broadens similarly, investigate extra-column volume, connections, injection solvent and column installation. Selective change in plausible metal-binding compounds makes the titanium hypothesis more relevant but still requires path or column evidence.",
+          "Stationary-phase chemistry is another boundary. The study found a persistent change on the tested polar-embedded phase and stated that conventional C18 columns were not affected in the same way. Use that observation as a hypothesis generator, not a promise that any C18 phase is immune. A controlled comparison should preserve dimensions, particle characteristics, temperature, flow, injection conditions and mobile-phase strength as far as the method allows. Any phase change that alters selectivity belongs in analytical change control rather than being treated as maintenance alone.",
+        ],
+      },
+      {
+        heading: "Confirm metal involvement without overinterpreting one measurement",
+        paragraphs: [
+          "ICP-MS measurement of collected effluent can provide direct evidence of titanium in the liquid path, but the sampling design determines what the result means. Use metal-suitable vessels, field or preparation blanks, the same collection time and flow, and samples taken at defined positions. Record whether the column is installed and whether the system has recently contacted other mobile phases or cleaning solutions. A detected concentration without a matched blank, position and exposure history cannot distinguish system release from collection contamination or background.",
+          "Interpret the metal result beside chromatography. A titanium signal upstream with no analyte or column effect may identify a compatibility concern that requires technical review but does not prove the observed tailing. Conversely, persistent selective tailing on a previously exposed column may remain after the upstream condition has changed because retained metal is part of the proposed mechanism. The strongest root-cause case aligns the exposure, path sample, column comparison and analyte selectivity in time.",
+          "If ICP-MS is unavailable, the laboratory can still create useful evidence through controlled solvent, system and column comparisons, but it should report the conclusion at the right certainty level. Terms such as confirmed, probable, possible and not supported make the gap visible. Do not convert a chromatographic response into an unsupported quantitative metal result, and do not describe the absence of an obvious pressure or blank change as proof that titanium release did not occur.",
+        ],
+      },
+      {
+        heading: "Qualify the corrective action and protect the controlled method",
+        paragraphs: [
+          "The corrective action must come from the exact system guidance and the laboratory's authorized maintenance process. A manufacturer may specify an aqueous proportion, flushing sequence, material substitution or service action for a particular configuration. Do not transfer a composition or cleaning instruction from another model, and do not send a diagnostic liquid through the analytical column or detector unless each component permits it. Route incompatible or metal-containing flushes to the approved waste path and follow the site risk assessment and safety data.",
+          "Adding water can change retention, selectivity, viscosity, pressure, UV response, ionisation or sample solubility, depending on the method. Replacing titanium parts or moving the method to stainless steel or another bioinert path can introduce different adsorption, corrosion and compatibility questions. Treat those actions as potential analytical changes. Define what needs to be bridged: blank response, pressure, retention, resolution, asymmetry, recovery, sensitivity and system suitability, plus any method-specific critical result.",
+          "Close the record with two linked decisions. The equipment decision states whether the system can return to service, which solvent compositions and procedures are permitted, and what maintenance or monitoring is required. The material decision states whether the questioned methanol lot is released, restricted, investigated further or rejected for the tested use. Limit each conclusion to the tested grade, package, open-life, method and system. A supplier discussion should include the chromatograms, batch identity, preparation and exposure chronology, controls and certainty level rather than an unsupported statement that anhydrous methanol universally damages biocompatible HPLC.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A German pharmaceutical laboratory investigates new fluoroquinolone tailing",
+      context: "An illustrative laboratory transfers a fluoroquinolone impurity method from a stainless-steel HPLC to a titanium-containing biocompatible system. After an anhydrous methanol/acetonitrile mobile phase is introduced, several fluoroquinolone peaks tail on a polar-embedded column while a non-chelating control remains acceptable.",
+      actions: [
+        "The team stops reportable analysis, preserves chromatograms and records the exact system materials, column history, solvent lots, water evidence, composition, exposure time and recent maintenance.",
+        "Under the instrument manual and local procedure, it compares approved and questioned methanol while holding acetonitrile, preparation, flow path and sequence constant, then collects defined before-column or no-column effluent for blank-controlled titanium analysis.",
+        "It compares the affected column with a limited clean-column control and reviews fluoroquinolone asymmetry beside a non-chelating compound, avoiding simultaneous changes to phase, solvent and hardware.",
+        "Engineering and the method owner select a model-compatible corrective action, then bridge pressure, blanks, retention, resolution, asymmetry and system suitability before separate equipment-release and material-disposition decisions.",
+      ],
+      result: "The evidence distinguishes a system-material and column-history mechanism from a simple new-bottle assumption. This is an illustrative scenario, not a LANCHROM customer result, a universal titanium-system prediction or a replacement for instrument-specific instructions.",
+    },
+    checklist: [
+      "Exact instrument model, configuration and wetted materials confirmed",
+      "Current manufacturer solvent-compatibility guidance reviewed",
+      "Methanol grade, lot, package, opening and preparation history recorded",
+      "Actual water evidence and methanol/acetonitrile composition documented",
+      "Affected analytes, controls, retention and peak asymmetry defined",
+      "Column chemistry, age, exposure and prior system history captured",
+      "Approved and questioned solvent conditions compared one variable at a time",
+      "Before-column, after-column or no-column sampling plan authorized",
+      "Metal-analysis vessels, blanks, positions, flow and collection time controlled",
+      "Corrective action taken only from model-specific instructions",
+      "Pressure, blank, retention, resolution, asymmetry and suitability bridged",
+      "Equipment release, lot disposition, certainty and change triggers approved",
+    ],
+    sources: [
+      { label: "Journal of Chromatography A - Metal contamination from iron-free HPLC systems and chelating-drug peak shape", href: "https://www.sciencedirect.com/science/article/abs/pii/S002196731931026X" },
+      { label: "Thermo Fisher Scientific - Effects of metal contamination caused by iron-free HPLC systems", href: "https://assets.thermofisher.com/TFS-Assets/CMD/Reference-Materials/pp-73101-hplc-metal-contamination-iron-free-systems-chelating-properties-hplc2019-pp73101-en.pdf" },
+      { label: "Waters - Alliance iS system solvent recommendations", href: "https://help.waters.com/help/en/product-support/alliance-is-system-support/715008450/0C47776.html" },
+      { label: "Thermo Fisher Scientific - HPLC instrument and solvent-compatibility guidance", href: "https://www.thermofisher.com/us/en/home/industrial/chromatography/chromatography-learning-center/high-performance-liquid-chromatography-hplc-support/hplc-instrument-introduction.html" },
+    ],
+    productLinks: [
+      { label: "View HPLC Grade Methanol", href: "/products/hplc-grade-solvents/methanol" },
+      { label: "View HPLC Grade Acetonitrile", href: "/products/hplc-grade-solvents/acetonitrile" },
+      { label: "Read the EU GMP Solvent Supplier Qualification Guide", href: "/resources/blog/hplc-solvent-supplier-qualification-eu-gmp" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
