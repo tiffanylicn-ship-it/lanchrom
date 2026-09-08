@@ -1742,6 +1742,113 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "acetonitrile-hcn-cyanohydrin-hplc-artifact",
+    title: "Acetonitrile HCN Impurity in HPLC: A Cyanohydrin-Artifact and Solvent-Lot Investigation",
+    shortTitle: "Acetonitrile HCN: Cyanohydrin-Artifact Investigation",
+    description: "An acetonitrile HCN impurity cyanohydrin HPLC artifact workflow for separating sample-preparation chemistry, solvent-lot effects and true process impurities.",
+    primaryKeyword: "acetonitrile HCN impurity cyanohydrin HPLC artifact",
+    tag: "HPLC Impurity Troubleshooting",
+    readingTime: "11 min technical guide",
+    intro: "A new impurity peak appearing after an acetonitrile lot change can trigger an urgent pharmaceutical investigation, especially when the sample contains an aldehyde or ketone. A 2024 study traced one such peak to cyanohydrin formation involving residual hydrogen cyanide found in certain acetonitrile sources. That mechanism is important, but it is not universal: the peak may still be a genuine process impurity, another sample-solution reaction, a chromatographic artifact or an unresolved combination. A controlled acetonitrile HCN impurity cyanohydrin HPLC artifact investigation must therefore prove when and where the signal forms before a laboratory changes a method or rejects a lot.",
+    painPoints: [
+      { title: "A preparation artifact is reported as a process impurity", detail: "The laboratory starts from the vial chromatogram without checking whether the peak existed in the material before contact with the acetonitrile-containing diluent." },
+      { title: "A mass shift is treated as a complete identification", detail: "An observed addition near 27 Da may support an HCN-related hypothesis in the right substrate, but accurate mass alone does not prove structure, source or formation pathway." },
+      { title: "Time, pH, temperature and diluent change together", detail: "A quick recovery after several simultaneous changes cannot show which condition controlled artifact formation or whether the original result remains reproducible." },
+      { title: "A general grade name replaces method-specific qualification", detail: "Routine purity, UV or water controls may not answer whether a particular lot and diluent system can generate a reaction product from a sensitive analyte." },
+    ],
+    sections: [
+      {
+        heading: "Define the suspected cyanohydrin artifact before testing the solvent",
+        paragraphs: [
+          "Begin with the analytical observation, not with an assumption about the bottle. Record the first affected preparation, sample identity, substrate functionality, diluent composition, preparation time, vial temperature, sonication, pH where relevant, injection order, retention time, detector response and mass-spectral evidence. Compare the questioned peak with process-stage samples, standards, blanks and previously approved preparations. The immediate question is whether the signal was already present in the material or increased only after sample preparation.",
+          "The 2024 Organic Process Research & Development study investigated an aldehyde intermediate after an apparent potency mismatch and an unknown peak. HR-MS/MS and hydrogen-deuterium exchange supported assignment as the corresponding cyanohydrin, while ion chromatography confirmed HCN in certain acetonitrile brands examined by the researchers. Experiments with a model compound then showed that acetonitrile proportion, temperature, storage time, pH and sonication could affect formation. The result supports a testable mechanism for sensitive carbonyl compounds under defined conditions; it does not establish that every acetonitrile source contains consequential HCN or that every aldehyde and ketone behaves alike.",
+        ],
+        points: [
+          "Preserve the original solutions, raw data and preparation records according to the laboratory procedure.",
+          "Record the substrate chemistry and analytical evidence without declaring a structure from mass shift alone.",
+          "Separate material origin, sample-preparation formation and on-column formation as different questions.",
+        ],
+      },
+      {
+        heading: "Build a paired preparation that isolates the acetonitrile variable",
+        paragraphs: [
+          "Use retained approved acetonitrile and the candidate lot to prepare matched solutions whenever the investigation procedure permits. Hold sample mass, material batch, water, buffer or modifier lot, acetonitrile percentage, glassware, filter, vial, sonication, temperature, analyst, instrument method and data processing constant. Include diluent blanks and, where useful, a sample prepared without acetonitrile or with an already justified alternative diluent. The purpose of an alternative is diagnostic; it is not automatic authorization to change the routine method.",
+          "Time is often decisive for a preparation reaction. Define a schedule such as immediate analysis followed by controlled later time points appropriate to the method's known solution-stability window. Keep vials under recorded temperature and light conditions, and avoid repeatedly opening or treating one vial differently from another. Plot the questioned peak against preparation age for both acetonitrile lots. A time-dependent increase that follows one lot and reverses in a fresh preparation is stronger evidence than a single late injection, but it still requires review alongside blank, substrate and system controls. Study pH, temperature, sonication or acetonitrile proportion separately when justified; do not import the paper's numerical settings into another method.",
+        ],
+        points: [
+          "Bracket candidate-lot preparations with an approved-lot control.",
+          "Use fresh and time-staged preparations from the same controlled preparation event.",
+          "Predefine the observations that would support, weaken or leave the HCN hypothesis unresolved.",
+        ],
+      },
+      {
+        heading: "Distinguish cyanohydrin formation from other acetonitrile-related artifacts",
+        paragraphs: [
+          "Acetonitrile can participate in more than one reported analytical artifact, so mechanism labels should not be borrowed across methods. A 2019 pregabalin study identified an ethylamidine solution degradant formed by reaction of pregabalin with acetonitrile, promoted by alkaline impurities during sample preparation. That involved nucleophilic attack by an amine on the nitrile and is chemically different from adding HCN to an aldehyde or ketone. It shows why substrate functionality and preparation chemistry matter, not that a pregabalin control can diagnose a cyanohydrin.",
+          "A separate 2013 study reported on-column nitrosation of primary and secondary amines when ammonium hydroxide and acetonitrile were used at high pH. The authors linked the reaction sites to stainless-steel frits and exposed metal under their studied conditions. This is again a different mechanism: it depends on mobile-phase, analyte and hardware conditions rather than simply the identity of an acetonitrile lot. A peak that grows in stored sample solution points to a different test sequence from one that appears only after passage through a particular column or flow path.",
+          "Use orthogonal evidence appropriate to the risk and available capability. Accurate mass, fragmentation, retention matching, forced or stressed preparations, standard addition, isolation and NMR can provide different levels of structural confidence. Ion chromatography may be considered for cyanide or HCN-related assessment when scientifically justified and performed under an approved method by competent personnel. Because cyanide chemistry has significant safety implications, do not improvise handling or testing outside current safety procedures. If identity cannot be established internally, preserve the samples and use a qualified external laboratory.",
+        ],
+      },
+      {
+        heading: "Turn the experiment into a method-specific solvent-lot decision",
+        paragraphs: [
+          "A solvent-lot bridge should answer whether the candidate lot is fit for the named analytical use, not whether it is universally good or bad. Define the method, analyte or substrate class, package, dispensing conditions, preparation process, maximum solution age and response criteria. Include the questioned impurity result, system suitability and any relevant assay or mass-balance observations. A candidate lot that performs comparably in this design may be released for the tested scope; a reproducible difference may justify restriction, further testing or rejection from that use.",
+          "Routine supplier documents remain important but have limits. A certificate of analysis demonstrates results against the supplier's stated release tests; it does not automatically cover every reactive impurity at every concentration relevant to every sample. Ask whether the controlled grade-specific specification addresses the risk, whether a method and reporting limit are available, and whether manufacturing-site, process or packaging changes trigger notification. Do not create an HCN numerical limit from one paper or from an unrelated method. Acceptance criteria require method performance, toxicological and quality-system evaluation by the responsible functions. This method-linked, risk-based approach is consistent with Eurachem's 2026 guidance on critical reagents and supplier records.",
+        ],
+        points: [
+          "Limit release statements to the tested method, substrate, package and handling conditions.",
+          "Retain the outgoing lot until the bridge and deviation decisions are complete where procedure permits.",
+          "Request current controlled specifications and batch documents without assuming an unlisted impurity limit.",
+        ],
+      },
+      {
+        heading: "Close the OOS or deviation without hiding an unresolved cause",
+        paragraphs: [
+          "The final record should reconstruct the original event and every diagnostic preparation. Include sample and solvent lots, raw-data references, chronology, chromatographic and mass-spectral evidence, controlled variables, deviations from the routine procedure and the reasoning used to accept or reject each hypothesis. Distinguish confirmed identity from tentative assignment and confirmed root cause from a risk-reducing workaround. If the evidence only shows that a fresh preparation lowers the peak, report exactly that rather than claiming HCN was proven.",
+          "Any mitigation that changes diluent composition, solvent identity, preparation time, pH, temperature or sonication can affect extraction, recovery, selectivity, response and other impurities. Route it through the site's method-change and validation or verification process before routine use. A short solution hold time may control one observed reaction but can introduce operational risk if samples cannot be analysed within it. Likewise, changing from acetonitrile to methanol may alter chromatography or solubility and must be evaluated as a method change.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A Swiss API laboratory investigates a new peak in an aldehyde-intermediate assay",
+      context: "An illustrative laboratory sees a new peak consistent with an approximately 27 Da addition after opening a candidate acetonitrile lot. The material is an aldehyde intermediate, but the laboratory has not established whether the peak is present in the process sample or forms in the vial.",
+      actions: [
+        "It preserves the original data and prepares matched approved-lot and candidate-lot solutions from the same material, water and controlled diluent procedure.",
+        "It compares immediate and time-staged injections while holding temperature, acetonitrile proportion, pH, sonication, vials, instrument and processing constant.",
+        "It uses orthogonal structural evidence and, if justified under approved safety and analytical procedures, qualified cyanide testing to assess the proposed source and mechanism.",
+        "Quality limits the disposition to the tested method and routes any diluent, hold-time or supplier-control change through the applicable change process.",
+      ],
+      result: "The framework can distinguish a reproducible preparation-associated signal from a pre-existing impurity and define what evidence is still missing. This is an illustrative scenario, not a LANCHROM customer result, a product specification or proof that any particular acetonitrile lot contains HCN.",
+    },
+    checklist: [
+      "Original chromatograms, preparations and raw data preserved",
+      "Sample, solvent, water, additive, filter and vial lots recorded",
+      "Substrate functionality and alternative mechanisms documented",
+      "Approved and candidate acetonitrile lots compared in matched preparations",
+      "Diluent blanks and appropriate sample or process controls included",
+      "Preparation age, temperature, pH and sonication recorded",
+      "Only one variable changed at a time or interactions formally designed",
+      "Peak identity supported at an appropriate confidence level",
+      "Cyanide-related testing performed only when justified and qualified",
+      "Acceptance criteria tied to the specific method and intended use",
+      "Method changes assessed for recovery, selectivity and validation impact",
+      "Lot disposition, supplier communication and preventive actions approved",
+    ],
+    sources: [
+      { label: "ACS - Analytical Artifact Due to Residual HCN in Acetonitrile", href: "https://pubs.acs.org/doi/10.1021/acs.oprd.4c00336" },
+      { label: "PubMed - Pregabalin-Acetonitrile Solution Degradant During HPLC Preparation", href: "https://pubmed.ncbi.nlm.nih.gov/31382116/" },
+      { label: "PubMed - On-Column Nitrosation with Ammonium Hydroxide and Acetonitrile", href: "https://pubmed.ncbi.nlm.nih.gov/24182763/" },
+      { label: "Eurachem/CITAC - Guide to Quality in Analytical Chemistry, Fourth Edition 2026", href: "https://www.eurachem.org/images/stories/Guides/pdf/Eurachem_CITAC_QAC_2026_EN.pdf" },
+    ],
+    productLinks: [
+      { label: "View HPLC Grade Acetonitrile", href: "/products/hplc-grade-solvents/acetonitrile" },
+      { label: "Read HPLC Solvent Supplier Qualification", href: "/resources/blog/hplc-solvent-supplier-qualification-eu-gmp" },
+      { label: "Read the Complete Guide to HPLC Solvents", href: "/guides/complete-guide-to-hplc-solvents" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
