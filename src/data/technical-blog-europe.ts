@@ -2061,6 +2061,113 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Request a Certificate of Analysis", href: "/downloads/coa" },
     ],
   },
+  {
+    slug: "pharmaceutical-grade-ipa-volatile-impurity-gc-qualification",
+    title: "Pharmaceutical Grade IPA Volatile Impurity GC Qualification: A Reference Standard and Lot Workflow",
+    shortTitle: "Pharmaceutical Grade IPA: Volatile Impurity GC Qualification",
+    description: "A pharmaceutical grade IPA volatile impurity GC qualification workflow for monograph control, reference-standard alignment, peak resolution and supplier-lot decisions.",
+    primaryKeyword: "pharmaceutical grade IPA volatile impurity GC qualification",
+    tag: "Pharmaceutical Solvents",
+    readingTime: "11 min technical guide",
+    intro: "A pharmaceutical-grade isopropyl alcohol result can become difficult to interpret when a candidate supplier lot, a new system-suitability reference-standard lot and a revised compendial procedure enter the laboratory at nearly the same time. An unexpected acetone, ether or neighbouring volatile peak does not by itself identify which element changed. Pharmaceutical grade IPA volatile impurity GC qualification therefore needs a controlled evidence chain that aligns the applicable monograph, reference-standard composition, instrument performance and lot comparison before Quality accepts or rejects the material.",
+    painPoints: [
+      { title: "The monograph version is not locked", detail: "A worksheet or sequence can silently reflect an older procedure while the laboratory cites a newer compendial edition, making the result difficult to defend." },
+      { title: "The reference-standard lot does not match the procedure", detail: "A system-suitability mixture with a different analyte composition can create missing or unexpected peaks even when the candidate IPA lot has not changed." },
+      { title: "Co-elution is reported as a material failure", detail: "Inlet condition, column selectivity, flow, temperature programming and integration can alter the separation of acetone, IPA and adjacent volatile components." },
+      { title: "Supplier comparison lacks a common sequence", detail: "Testing outgoing and candidate lots on different days or system states weakens the evidence needed for raw-material release and second-source approval." },
+    ],
+    sections: [
+      {
+        heading: "Lock the current monograph and reference-standard identity",
+        paragraphs: [
+          "Begin with document control, not the chromatogram. Record the exact pharmacopoeia, monograph title, official version or effective date, local controlled method number and any approved adaptation. USP's public 2026 Isopropyl Alcohol preview identifies the article and the USP 2-Propanol and 2-Propanol System Suitability reference standards, but it does not expose the full analytical procedure. The laboratory must consult its authorised current text rather than reconstructing requirements from a public preview, an application note or an older worksheet.",
+          "Reference-standard identity is equally important. A 2025 USP revision briefing explained that a replacement 2-Propanol System Suitability lot was designed to include methanol and ethyl acetate in addition to the earlier volatile-component set, with a proposed March 2026 official date. That briefing is valuable change-history evidence, but it is not a substitute for checking the current monograph, the reference-standard label and the lot-specific certificate in use on the test date. Record catalogue number, lot, expiry or valid-use information, storage history, preparation and any monograph-directed additions before opening a deviation against the solvent.",
+        ],
+        points: [
+          "Archive the controlled monograph page or licensed reference used for the test.",
+          "Link the sequence to the exact system-suitability reference-standard lot and certificate.",
+          "Confirm that working-standard preparation matches the current procedure and approved local method.",
+          "Treat a monograph, standard-lot or preparation change as a separate variable from supplier-lot change.",
+        ],
+      },
+      {
+        heading: "Define the pharmaceutical grade IPA volatile impurity GC qualification sequence",
+        paragraphs: [
+          "Design one sequence that answers distinct questions in order. A carrier or diluent blank checks the preparation and inlet background. The prescribed reference or system-suitability solution checks identification and separation capability. An outgoing approved IPA lot provides a process comparator, while the candidate lot supplies the material under qualification. Replicate preparations or injections should follow the controlled method and the decision risk; they should not be added casually after seeing the result.",
+          "Sequence order matters for volatile materials. Use the same preparation technique, vial and closure type, fill level, equilibration or injection timing, inlet mode, split conditions, column, carrier-gas control and integration method for both lots. Randomise or bracket where the approved procedure permits, and use intervening blanks when carryover could affect the decision. Record bottle opening, sample preparation time and instrument state so an evaporation or sequence-position effect is not mislabelled as lot variability.",
+          "Predefine what each observation can establish. System suitability demonstrates that the system can perform the required separation at that point in the run; it does not prove the candidate lot meets every requirement. A passing comparator does not excuse a failed reference preparation, and a single clean blank does not exclude later carryover. Keep identity, impurity quantitation, system performance and lot disposition as separate conclusions.",
+        ],
+      },
+      {
+        heading: "Separate material signals from reference, inlet and column faults",
+        paragraphs: [
+          "When an unexpected peak appears, preserve the original data and test the narrowest credible boundary first. Check whether the peak is present in the blank, the system-suitability solution, the outgoing lot and the candidate lot. A peak present before the candidate injection points toward preparation, carrier, vial, inlet or system background. A component absent from the expected suitability chromatogram can indicate standard composition, preparation, loss through handling or inadequate response rather than a clean solvent result.",
+          "Chromatographic resolution deserves its own review. PerkinElmer's application material identifies ethyl ether, acetone, diisopropyl ether, 1-propanol and 2-butanol as targets in a USP-grade IPA workflow. An original GC study of acetone and 2-propanol in a pharmaceutical API also shows why specificity must be established on the actual system: the authors evaluated resolution alongside precision, accuracy, range and other performance characteristics. Neither source transfers a ready-made operating condition or acceptance limit to another laboratory. Column dimensions, stationary phase, temperature programme, inlet loading and detector response must remain those of the applicable controlled procedure unless a change is scientifically justified and approved.",
+          "Use a one-variable-at-a-time diagnostic where practical. Re-injecting the same vial tests repeatability but not preparation. A fresh suitability preparation challenges preparation history. A fresh inlet liner or approved maintenance step challenges the inlet boundary. A verified reference column or controlled method check challenges separation. Retesting only the candidate bottle after several simultaneous maintenance actions may produce a passing chromatogram, but it cannot identify which action removed the signal.",
+        ],
+        points: [
+          "Blank-only signal: investigate preparation materials, gases, vials, inlet and carryover.",
+          "Suitability-only anomaly: investigate reference identity, lot, preparation and response.",
+          "Both IPA lots affected: investigate system state and shared preparation variables.",
+          "Candidate-lot-only repeatable signal: expand material evidence before deciding disposition.",
+        ],
+      },
+      {
+        heading: "Bridge supplier lots with predefined evidence",
+        paragraphs: [
+          "A supplier-qualification study should compare documents and analytical performance without assuming that a grade label establishes equivalence. Map the candidate specification and certificate fields to the site's current raw-material specification. Record test-method differences, reporting conventions, manufacturing site, package and closure, shelf-life basis, change-notification process and whether the supplier provides batch-specific chromatographic evidence. A missing field is a qualification question, not proof that the material fails.",
+          "Run outgoing and candidate lots within the same controlled GC sequence when feasible. Compare the required volatile-impurity results, retention identification, peak resolution, repeatability and any method-defined system criteria. If the IPA also serves a process, cleaning or formulation role, add only the intended-use tests justified by the material risk assessment. A compendial GC result alone should not be stretched into a claim about process yield, microbiological efficacy or finished-product performance.",
+          "Write acceptance criteria before data review. State which compendial and internal specification requirements apply, how results below quantitation or reporting limits are handled, how atypical but in-specification trends are escalated and what evidence triggers confirmatory testing. ICH Q2(R2), effective in the EU since June 2024, describes characteristics for validation of new or revised release and stability procedures. Use the site's validated or verified procedure and change system; do not treat a supplier switch as permission to optimise the method during the comparison.",
+        ],
+      },
+      {
+        heading: "Turn the result into controlled release and change records",
+        paragraphs: [
+          "The final report should make four decisions visible: whether the analytical run was valid, whether the peak identities and calculations were adequately supported, whether the tested lot met the applicable specification, and whether the supplier or package is approved for the named intended use. These decisions may have different owners and dates. Separating them prevents a technically valid chromatogram from automatically authorising a new supply route.",
+          "Retain the monograph version, controlled method, sequence, raw files, audit trail, standard certificates, preparation records, chromatograms, calculations, candidate COA, deviation assessment and approval record together. Define review triggers for a new pharmacopoeial revision, reference-standard lot or composition, supplier manufacturing site, specification, test method, package or recurring volatile trend. This turns a one-off investigation into a maintainable control strategy and gives procurement a precise evidence request for the next lot.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A French CDMO separates an IPA lot question from a reference-standard change",
+      context: "An illustrative raw-material laboratory receives a candidate pharmaceutical-grade IPA lot during qualification of a second supplier. In the same week, it opens a new 2-Propanol System Suitability reference-standard lot. The first sequence shows an unfamiliar peak near the acetone region and a missing expected suitability component.",
+      actions: [
+        "The analyst quarantines the result, preserves the original sequence and confirms the current controlled monograph, local method version and both reference-standard certificates.",
+        "The laboratory prepares fresh suitability solution from the new lot and runs blanks, outgoing approved IPA and candidate IPA under one unchanged method and instrument state.",
+        "It reviews resolution, response and integration before any maintenance, then performs only the approved diagnostic needed to test the reference-preparation boundary.",
+        "Quality documents run validity, lot conformance and supplier approval separately and requests additional lot evidence only where the controlled acceptance criteria require it.",
+      ],
+      result: "The workflow can show whether the unexpected pattern follows the reference preparation, the GC system or the candidate material while preserving a defensible audit trail. This is an illustrative scenario, not a LANCHROM customer result, a product specification or a statement that any candidate IPA lot is compendially compliant.",
+    },
+    checklist: [
+      "Applicable pharmacopoeia, monograph version and effective date recorded",
+      "Controlled local method and approved adaptations identified",
+      "Reference-standard catalogue number, lot, certificate and validity checked",
+      "Standard composition and preparation aligned with the current procedure",
+      "Candidate and outgoing IPA batch documents compared field by field",
+      "Blank, suitability solution, comparator lot and candidate lot included",
+      "Preparation timing, vials, inlet, column and instrument state controlled",
+      "Peak identity, resolution, integration and quantitation evidence reviewed",
+      "Run validity separated from material conformance and supplier approval",
+      "Unexpected peaks investigated across reference, system and material boundaries",
+      "Acceptance criteria and retest rules approved before data review",
+      "Monograph, standard, supplier, method and packaging change triggers defined",
+    ],
+    sources: [
+      { label: "USP - Isopropyl Alcohol Monograph Preview, 2026", href: "https://doi.usp.org/USPNF/USPNF_M43140_07_01.html" },
+      { label: "USP - Isopropyl Alcohol Reference-Standard Revision Briefing", href: "https://doi.usp.org/USPNF/USPNF_M43140_60101_01.html" },
+      { label: "PerkinElmer - Analysis of USP-Grade Isopropyl Alcohol Impurities", href: "https://www.perkinelmer.com/library/analysis-of-united-states-pharmacopeia-grade-isopropyl-alcohol-impurities.html" },
+      { label: "Pharmacia - GC Determination of Acetone and 2-Propanol in an API", href: "https://pharmacia.pensoft.net/article/52119/" },
+      { label: "EMA - ICH Q2(R2) Validation of Analytical Procedures", href: "https://www.ema.europa.eu/en/ich-q2r2-validation-analytical-procedures-scientific-guideline" },
+    ],
+    productLinks: [
+      { label: "View Isopropanol (IPA)", href: "/products/hplc-grade-solvents/ipa" },
+      { label: "Browse Pharmaceutical Grade Solvents", href: "/products/high-purity-solvents/pharmaceutical-grade-solvents" },
+      { label: "Read the Complete Guide to GC Solvents", href: "/guides/complete-guide-to-gc-solvents" },
+      { label: "Request a Certificate of Analysis", href: "/downloads/coa" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
