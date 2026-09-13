@@ -2061,6 +2061,117 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Request a Certificate of Analysis", href: "/downloads/coa" },
     ],
   },
+  {
+    slug: "isopropanol-peroxide-testing-before-evaporation",
+    title: "Isopropanol Peroxide Testing Before Evaporation: A Safe Container-Review Framework",
+    shortTitle: "Isopropanol Before Evaporation: Peroxide-Risk Review",
+    description: "An isopropanol peroxide testing before evaporation framework for reviewing container history, stopping abnormal-container work and assigning safe disposition.",
+    primaryKeyword: "isopropanol peroxide testing before evaporation",
+    tag: "Laboratory Solvent Safety",
+    readingTime: "11 min technical guide",
+    intro: "Evaporation or solvent recovery changes the risk question for stored isopropanol. Published research and institutional safety guidance identify 2-propanol as a solvent that can form peroxidation products and become especially hazardous when those less-volatile products are concentrated. Isopropanol peroxide testing before evaporation must sit inside a wider decision framework: identify the container, reconstruct its history, stop when the history or appearance is unacceptable, and let trained EHS or process-safety personnel control assessment and disposition. This article is not a testing procedure and does not replace the current SDS or site-approved SOP.",
+    painPoints: [
+      { title: "Container history disappears at handoff", detail: "Receipt, opening, transfer, light exposure and partial-container history are missing when an IPA bottle reaches the operator who plans to evaporate it." },
+      { title: "Concentration is treated as routine use", detail: "A solvent already accepted for washing or extraction enters an evaporator or still without a separate peroxide-risk gate." },
+      { title: "An abnormal bottle is sampled to learn more", detail: "Crystals, deposits, layering or discoloration can trigger handling when the safer response is to stop, avoid opening and escalate under the site emergency process." },
+      { title: "The supplier grade is expected to control ageing", detail: "A current COA may describe the released lot, but it cannot reconstruct how one opened or transferred container was stored and used at the customer site." },
+    ],
+    sections: [
+      {
+        heading: "Define the isopropanol peroxide testing before evaporation decision",
+        paragraphs: [
+          "Start by defining the intended operation. Wipe cleaning, extraction, rotary evaporation, distillation, recovery and drying to a small residual volume do not create the same conditions. The 2022 Organic Process Research & Development perspective describes 2-propanol as a Group B peroxide-forming solvent and highlights reported injuries during distillation. MIT EHS likewise addresses its hazard on concentration. Those classifications prompt site-specific control; they are not permission to copy another organisation's limits.",
+          "The pre-use question is not simply whether the chemical name is IPA. Confirm the exact material identity, CAS number, grade, supplier, lot, container and intended process. Then ask whether the operation removes solvent, adds heat, exposes residues, recycles a bottoms fraction or otherwise increases the concentration of less-volatile material. If it does, require the laboratory's approved peroxide-former review before work begins. The review owner should be named in the procedure: typically EHS, the chemical-hygiene officer, process safety, or another formally authorised role.",
+          "Keep analytical suitability and safety-to-concentrate as separate decisions. A blank chromatogram, purity result or passing assay does not demonstrate that an aged container is safe to concentrate. Record which decision is being made, the evidence required and who can release, restrict or dispose of the material.",
+        ],
+        points: [
+          "Describe the actual evaporation, distillation or recovery endpoint before selecting controls.",
+          "Assign technical-use approval and safety-to-concentrate approval to explicit owners.",
+          "Use the site's current SOP and SDS rather than importing another institution's thresholds.",
+        ],
+      },
+      {
+        heading: "Reconstruct package, age and exposure history before use",
+        paragraphs: [
+          "Build a container-level history rather than relying only on a lot-level COA. Useful fields include date received, manufacturer expiry or retest information where supplied, date opened, current fill level, original versus transferred package, closure condition, storage location, temperature excursions, light exposure and prior withdrawals. Record whether the container has been repeatedly opened, connected to a dispensing system, left partly empty or decanted into a wash bottle. Unknown is a real result; it should not be silently converted into an assumed acceptable history.",
+          "The ACS perspective examined how storage conditions influence peroxide formation in 2-propanol. MIT's current guidance similarly notes that open, partly empty or transparent containers and exposure to light or heat can increase risk. These observations support controlling package and storage history, but they do not establish that one bottle colour or storage duration guarantees safety. Supplier packaging can help preserve released quality; after receipt, local handling and the intended concentration step remain part of the user's risk assessment.",
+          "Inventory design is a preventive control. Link the physical label to a record, make receipt and opening dates visible, and flag containers whose history cannot support the planned use. Keep small working quantities traceable so repeated transfers do not create anonymous containers. Align package size with realistic consumption, without claiming that a smaller or newer container is inherently safe.",
+        ],
+      },
+      {
+        heading: "Use a stop-and-escalate gate for abnormal containers",
+        paragraphs: [
+          "Visual abnormalities change the task from routine qualification to potential emergency management. MIT EHS states that containers showing precipitation or crystals around the lid, discoloration, multiple layers or stratification should not be opened and should be treated as potentially explosive. Two 2025 studies reinforce that caution. The Forensic Chemistry team characterised solid and liquid material from one well-aged consumer 2-propanol sample and identified cyclic acetone peroxides. A separate Fire Safety Journal study analysed material recovered after an accident and found that the 2-propanol-derived TATP was highly sensitive to external stimuli.",
+          "These unusual samples do not show that ordinary laboratory IPA routinely forms visible explosive material. Their practical lesson is narrower: an abnormal container must not be manipulated to complete a local test. Do not open, move unnecessarily, shake, scrape deposits, loosen a stuck cap or sample it. Follow the site's emergency procedure and contact its EHS or hazardous-materials function; trained responders should decide isolation, assessment, transport or disposal.",
+          "A normal appearance is not a complete release criterion. It may allow the authorised site process to continue to the next review stage, but it cannot replace dates, storage history and any assessment required before concentration. Write this boundary directly into the SOP so operators do not interpret 'no crystals seen' as permission to evaporate an undocumented bottle.",
+        ],
+        points: [
+          "Abnormal appearance triggers stop, no opening and specialist escalation.",
+          "Normal appearance permits review to continue; it does not prove absence of peroxidation products.",
+          "Emergency and disposal contacts must be available before an exception is discovered.",
+        ],
+      },
+      {
+        heading: "Keep authorised testing inside the local safety system",
+        paragraphs: [
+          "For a normal-looking container with an acceptable history, the site procedure may require assessment before evaporation or distillation. The EHS or process-safety owner should select the method, sampling controls, competence requirements, protective measures, interpretation and action limits. This article does not reproduce test-strip, sample-preparation or peroxide-removal instructions because a generic procedure cannot account for the container, matrix, equipment or a false negative.",
+          "Document the decision before handling: why testing is appropriate rather than disposal, who authorised it, which approved method applies, whether the method is fit for 2-propanol, and how the result maps to the intended concentration endpoint. Include controls for expired reagents, interferences, range and recordkeeping when required by the local method. If the container history or appearance places it outside the procedure, testing is not a way to bypass that exclusion. Escalate instead.",
+          "Do not turn one institution's policy into a universal limit. MIT publishes local periods, frequencies and thresholds, while other institutions differ. European laboratories should use their applicable duties, SDS, insurer requirements and approved safety system. The transferable principle is to identify, inspect without manipulation, verify history, stop on exclusion criteria, use an authorised pathway and record disposition.",
+        ],
+      },
+      {
+        heading: "Connect supplier qualification, change control and final disposition",
+        paragraphs: [
+          "Supplier qualification supports the review but cannot prove container history. Request the controlled specification, current SDS, representative and batch-specific COA, package description, storage instructions and change-notification route. Do not infer a peroxide limit, inhibitor status, pharmacopoeial compliance or safe concentration endpoint unless controlled grade-specific documents state it and the site has assessed the use.",
+          "Create change triggers for supplier, manufacturing site, grade, package material, closure, package size, dispensing system and process endpoint. A switch from routine extraction to solvent recovery is itself a process change even if the IPA supplier and lot remain the same. Review retained residues, bottoms handling, shutdown conditions and waste routing with the process owner. If recycled solvent is contemplated, qualify that stream separately because use history and concentration can no longer be represented by the incoming COA.",
+          "Close each review with a controlled outcome: released for a named non-concentrating use, released for a defined concentration process, restricted pending specialist review, or transferred to the site's specialist disposition route. Record the container, evidence, owner, date and next trigger. This makes the next decision reproducible without presenting LANCHROM as the safety authority for the customer's process.",
+        ],
+        points: [
+          "Tie release to the named container, use and process endpoint.",
+          "Treat a new package, transfer system or recovery step as a review trigger.",
+          "Separate supplier document adequacy from local storage and handling evidence.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A German process-development laboratory pauses an undocumented IPA evaporation",
+      context: "An illustrative laboratory plans to evaporate an IPA-containing fraction. The available secondary IPA container has no opening date, is partly empty and may have spent time near daylight. It looks normal, but its history cannot support the planned concentration step under the site's peroxide-former procedure.",
+      actions: [
+        "The operator stops the evaporation setup, identifies the container and records the missing date, package, fill level, storage location and intended endpoint without opening or sampling it further.",
+        "The chemical-hygiene officer checks the current SDS, inventory record and site SOP, then routes the undocumented container to the authorised disposition process rather than improvising a peroxide test.",
+        "Procurement provides a traceable replacement lot in an appropriate package, while the process owner confirms the separate pre-concentration control required by the approved procedure.",
+        "The laboratory adds receipt, opening, transfer and expiry fields to its IPA inventory and makes evaporation or distillation a visible change-of-use trigger.",
+      ],
+      result: "The work resumes only with a container and control path accepted for the defined process. The original container is handled through the site's specialist route. This is an illustrative scenario, not a LANCHROM customer result, a universal disposal rule or evidence that an undocumented container contains explosive peroxide.",
+    },
+    checklist: [
+      "Exact chemical, CAS number, grade, supplier, lot and container identified",
+      "Evaporation, distillation, recovery or other concentration endpoint described",
+      "Current SDS and site peroxide-former SOP available to the operator",
+      "Receipt, opening, transfer, expiry and fill-level history recorded",
+      "Package, closure, storage, light and temperature history reviewed",
+      "Container inspected without opening, shaking or unnecessary movement",
+      "Crystals, deposits, layering or discoloration treated as stop criteria",
+      "EHS or process-safety decision owner and emergency contact identified",
+      "Any assessment method authorised and interpreted only under the site procedure",
+      "Supplier documents and local container history evaluated separately",
+      "Release, restriction or specialist disposition linked to the named use",
+      "Package, supplier, process and storage change triggers approved",
+    ],
+    sources: [
+      { label: "Organic Process Research & Development - Peroxide formation hazards in 2-propanol", href: "https://pubs.acs.org/doi/10.1021/acs.oprd.2c00112" },
+      { label: "Forensic Chemistry - Spontaneous acetone-peroxide formation in consumer-aged 2-propanol", href: "https://www.sciencedirect.com/science/article/pii/S2468170924000754" },
+      { label: "Fire Safety Journal - Characteristics of TATP formed in 2-propanol", href: "https://www.sciencedirect.com/science/article/pii/S0379711225000347" },
+      { label: "MIT EHS - Peroxide-Forming Chemicals guidance", href: "https://ehs.mit.edu/wp-content/uploads/EHS_0042.pdf" },
+    ],
+    productLinks: [
+      { label: "View Isopropanol (IPA)", href: "/products/hplc-grade-solvents/ipa" },
+      { label: "Browse Anhydrous Solvents", href: "/products/high-purity-solvents/anhydrous-solvents" },
+      { label: "Read HPLC Solvent Storage and Handling", href: "/resources/blog/hplc-solvent-storage-handling" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
