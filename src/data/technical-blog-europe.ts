@@ -2061,6 +2061,112 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Request a Certificate of Analysis", href: "/downloads/coa" },
     ],
   },
+  {
+    slug: "acetonitrile-salle-plasma-lcms-solvent-qualification",
+    title: "Acetonitrile SALLE for Plasma LC-MS/MS: A Solvent-Lot Qualification Workflow",
+    shortTitle: "Acetonitrile SALLE: Plasma LC-MS/MS Qualification",
+    description: "An acetonitrile SALLE plasma LC-MS solvent qualification workflow for controlling phase separation, recovery, matrix effect, transfer and lot changes.",
+    primaryKeyword: "acetonitrile SALLE plasma LC-MS solvent qualification",
+    tag: "LC-MS Bioanalysis",
+    readingTime: "11 min technical guide",
+    intro: "Acetonitrile SALLE plasma LC-MS solvent qualification is not a purity-certificate comparison. Salting-out assisted liquid-liquid extraction creates an organic-rich phase from a water-miscible solvent, so acetonitrile volume, salt system, plasma composition, pH, mixing and centrifugation act together. A candidate lot should therefore be judged inside the defined extraction and LC-MS/MS method, with the phase boundary and transfer step treated as measured process outputs rather than invisible preparation details.",
+    painPoints: [
+      { title: "The phase boundary is unstable", detail: "Incomplete separation, a diffuse interface or an emulsion changes the transferable organic volume and can introduce operator-dependent recovery." },
+      { title: "Recovery hides matrix effect", detail: "A strong extracted analyte signal can coexist with phospholipid or endogenous-component effects, so recovery alone cannot demonstrate a clean or robust extract." },
+      { title: "Plate transfer magnifies small errors", detail: "A fixed aspiration height or volume can collect different proportions of organic phase and interface when phase volume varies across plasma lots or wells." },
+      { title: "Several changes occur at once", detail: "A new acetonitrile lot is often introduced alongside a salt, plate, automation or centrifuge change, leaving the laboratory unable to assign the cause of a shift." },
+    ],
+    sections: [
+      {
+        heading: "Define what SALLE changes before choosing a recipe",
+        paragraphs: [
+          "Conventional protein precipitation and SALLE can both begin with acetonitrile, but they do not create the same sample. Protein precipitation normally removes precipitated material while much of the remaining plasma matrix stays in one liquid phase. SALLE adds enough suitable salt to reduce the miscibility of acetonitrile with the aqueous matrix, producing a distinct organic-rich phase that can preferentially contain the analyte. The attraction is a workflow that can remain plate-compatible while providing an additional cleanup mechanism. The trade-off is that phase formation and transfer become critical method operations.",
+          "The published SALLE literature does not establish one solvent-to-plasma ratio or salt concentration for every analyte. The 2022 carvedilol-enantiomer study selected acetonitrile and ammonium acetate through designed multivariable experiments. A 2026 amisulpride study likewise examined pH, acetonitrile volume, salt concentration and centrifugation time before validating its chosen conditions. Those results demonstrate how a specific method can be developed; they are not default settings for a different drug, anticoagulant, plasma population, plate format or analytical range.",
+          "Write the intended mechanism into the development plan. State whether the aim is improved recovery for a polar analyte, lower matrix effect, a smaller injection burden, better throughput or a combination of these. Record the expected phase location, minimum transferable volume and acceptable interface appearance. Without these definitions, a visually separated plate can be called successful even when the transferred extract is not consistent enough for quantitative LC-MS/MS.",
+        ],
+      },
+      {
+        heading: "Control the interacting variables that create the organic phase",
+        paragraphs: [
+          "Treat salt identity and concentration, acetonitrile volume, sample pH, mixing energy, equilibration time, centrifugation force and time, temperature, plasma volume and plate geometry as a connected system. Salt can change phase formation and analyte ionisation state; pH can change partitioning and protein binding; acetonitrile volume influences both precipitation and the final phase volume. Mixing that is too weak can leave local concentration gradients, while aggressive mixing can create an interface that is difficult to clear reproducibly. Centrifuge settings must be specified as relative centrifugal force where possible because a rotational-speed value does not transfer directly between rotor radii.",
+          "Screen these variables with a written design that can detect interactions. A small factorial or response-surface study is often more informative than changing one factor until a visually attractive phase appears. Useful responses include organic-phase volume, interface height, clarity, transfer yield, analyte and internal-standard recovery, matrix factor, variability, plate-position effects and injection suitability. Include at least one deliberately challenging condition near each proposed operating boundary so the selected range reflects robustness rather than a single optimum.",
+          "Plasma itself is a variable. Anticoagulant, haemolysis, lipaemia, protein content and donor source can affect precipitation, phase behaviour and ion suppression. Development material should represent the intended study matrix, and unusual matrices should be assessed when they are expected in the study population. Do not compensate for a weak phase boundary by aspirating closer to the interface without measuring the consequences; that merely moves the uncontrolled variable into the transfer step.",
+        ],
+        points: [
+          "Record actual plasma, salt solution and acetonitrile additions rather than nominal ratios alone.",
+          "Define mixing, rest and centrifugation conditions in transferable units.",
+          "Measure phase and interface behaviour together with quantitative assay responses.",
+        ],
+      },
+      {
+        heading: "Separate extraction recovery from LC-MS/MS matrix performance",
+        paragraphs: [
+          "Recovery asks how much analyte survives the extraction relative to an appropriate post-extraction reference. Matrix effect asks how co-extracted material changes instrument response. These questions require separate comparisons. A high recovery can still deliver variable suppression, and a lower but consistent recovery may support a reliable assay when the internal standard tracks the process. Evaluate analyte and internal-standard responses, internal-standard-normalised matrix factor, precision and accuracy across the intended concentration range rather than relying on a single neat-standard comparison.",
+          "ICH M10 describes a bioanalytical method as suitable for its intended purpose and includes selectivity, specificity, matrix effect, calibration, accuracy, precision, carry-over, dilution integrity, stability and reinjection reproducibility among the chromatographic validation elements. It also expects matrix-effect evaluation across independent sources or lots. Use the current guideline and the laboratory's approved protocol to set the required design and acceptance criteria. The guideline does not prescribe SALLE composition, an acetonitrile grade or a solvent-lot acceptance limit.",
+          "Build a sample ladder that can locate the problem. Solvent and reagent blanks reveal background from acetonitrile, salt solution, water, tubes, plates and pipette consumables. Extracted blank plasma shows the matrix and preparation contribution. Pre-extraction and post-extraction spikes distinguish recovery from ionisation effects, while neat standards establish the instrument reference. Monitor phospholipid or other relevant matrix markers when they are scientifically justified, but avoid treating one marker as a universal measure of extract cleanliness.",
+        ],
+      },
+      {
+        heading: "Run an acetonitrile SALLE plasma LC-MS solvent qualification bridge",
+        paragraphs: [
+          "A solvent-lot bridge should start while a serviceable outgoing lot remains available. Hold the analyte, internal standard, salt lot and preparation, plasma pools, labware, automation method, centrifuge, transfer settings, evaporation or dilution step, LC column and detector tune constant. Randomise or bracket outgoing and candidate acetonitrile preparations so time, source condition and plate position do not become hidden lot effects. Use sealed containers and a defined opening history because water uptake and repeated dispensing can change the material presented to the extraction.",
+          "Predefine what will be reviewed: phase formation success, organic-phase and interface measurements, transferable volume, blank signals, recovery, matrix factor, internal-standard response, calibration and QC performance, carry-over, reinjection behaviour and any relevant stability interval. Compare more than a favourable mean. Look for well position, plasma source, concentration and preparation-order patterns. When a difference appears, repeat the smallest controlled experiment that separates solvent lot from salt preparation, plasma, transfer or instrument state before assigning root cause.",
+          "Document review is necessary but does not replace the bridge. Confirm exact product and grade identity, batch and package, certificate of analysis, supplier specification, manufacture or retest information where provided, and change-notification route. Ask for parameters relevant to the defined method rather than assuming that an LC-MS grade label guarantees performance in plasma SALLE. Conversely, do not reject a conforming lot solely because one extraction plate shifted when the phase-transfer or matrix evidence remains unresolved.",
+        ],
+        points: [
+          "Use the same controlled preparation sequence for outgoing and candidate lots.",
+          "Retain raw phase observations as well as chromatographic and mass-spectrometric data.",
+          "Limit approval to the tested method, grade, package and handling conditions.",
+        ],
+      },
+      {
+        heading: "Turn the study into a maintained method control",
+        paragraphs: [
+          "Once the bridge is accepted, define the routine controls that protect the method. Receiving checks should connect container identity and condition to the batch certificate and approved grade. Preparation records should identify the acetonitrile, salt, water, plasma, plate and critical equipment used. System suitability and analytical-run criteria remain the formal decision tools, while phase observations can provide an early warning before a full run fails. Trend deviations by solvent lot, plasma source and preparation date instead of treating every event as an isolated instrument problem.",
+          "Specify change triggers. A different acetonitrile grade, manufacturing source, package or closure; revised salt identity or concentration; new anticoagulant; altered plate geometry; automation changes; different transfer volume; or centrifuge replacement may justify a targeted partial validation or broader work. ICH M10 states that the scope of partial validation should reflect the nature and extent of the change. Quality and bioanalytical owners should decide that scope from risk and evidence, not from a generic list or supplier assurance.",
+          "Close investigations with separate conclusions for method performance, material disposition and root-cause confidence. If the candidate lot passes the method-specific bridge, record exactly what was approved. If it fails, preserve the controls and decide whether the evidence identifies the solvent, a solvent-method interaction or an unresolved preparation effect. This separation keeps purchasing, laboratory and regulatory decisions aligned without turning a single assay outcome into a universal product claim.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A Swiss CRO bridges a second acetonitrile source during SALLE development",
+      context: "An illustrative bioanalytical laboratory is replacing protein precipitation with SALLE for a polar small-molecule plasma assay. A second acetonitrile source must also be qualified, but the team wants to avoid confusing solvent-lot effects with the new salt and transfer settings.",
+      actions: [
+        "The development team fixes analyte, internal standard, plasma pools and plate format, then maps acetonitrile volume, ammonium acetate concentration, pH and centrifugation as interacting variables.",
+        "It selects an operating range using phase volume, interface clarity, recovery, matrix factor and precision rather than copying a published SALLE ratio.",
+        "Outgoing and candidate acetonitrile lots are bracketed within matched plates using solvent blanks, extracted blanks, pre-extraction QCs and post-extraction spikes across representative plasma sources.",
+        "Quality limits the approval to the tested LC-MS/MS method, acetonitrile grade and package, and records triggers for partial validation when preparation or supply conditions change.",
+      ],
+      result: "The study can distinguish an acceptable method-specific lot bridge from a phase-transfer or matrix problem. This is an illustrative scenario, not a LANCHROM customer result, a universal SALLE formula or a claim that grade identity alone ensures bioanalytical suitability.",
+    },
+    checklist: [
+      "Intended SALLE mechanism and method purpose documented",
+      "Plasma type, anticoagulant and representative source strategy defined",
+      "Salt identity, concentration, pH and preparation controlled",
+      "Acetonitrile, plasma and salt volumes recorded",
+      "Mixing, rest, temperature and centrifugation conditions specified",
+      "Organic-phase volume, interface and transferable volume observed",
+      "Solvent, reagent and extracted-matrix blanks included",
+      "Recovery and matrix effect evaluated separately",
+      "Internal-standard response and normalised matrix factor reviewed",
+      "Outgoing and candidate solvent lots bracketed under matched conditions",
+      "Acceptance criteria tied to the validated analytical procedure",
+      "Approval scope, deviations and future change triggers recorded",
+    ],
+    sources: [
+      { label: "PubMed - Salting-out assisted liquid-liquid extraction for bioanalysis", href: "https://pubmed.ncbi.nlm.nih.gov/23795935/" },
+      { label: "PubMed - Chemometric SALLE optimization for carvedilol enantiomers in plasma", href: "https://pubmed.ncbi.nlm.nih.gov/35724550/" },
+      { label: "PubMed - 2026 Box-Behnken SALLE-LC-MS/MS method for amisulpride in plasma", href: "https://pubmed.ncbi.nlm.nih.gov/41616633/" },
+      { label: "EMA - ICH M10 bioanalytical method validation", href: "https://www.ema.europa.eu/en/ich-m10-bioanalytical-method-validation-scientific-guideline" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Acetonitrile", href: "/products/lcms-solvents/acetonitrile" },
+      { label: "Explore CRO Applications", href: "/industries/cro" },
+      { label: "Explore LC-MS Analysis", href: "/applications/lcms-analysis" },
+      { label: "Request a Certificate of Analysis", href: "/downloads/coa" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
