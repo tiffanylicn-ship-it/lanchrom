@@ -2167,6 +2167,107 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Request a Certificate of Analysis", href: "/downloads/coa" },
     ],
   },
+  {
+    slug: "acetonitrile-therapeutic-oligonucleotide-ip-rplc-qualification",
+    title: "Acetonitrile for Therapeutic-Oligonucleotide IP-RPLC: An Impurity-Class and Solvent-Lot Qualification Workflow",
+    shortTitle: "Acetonitrile for Oligonucleotide IP-RPLC Qualification",
+    description: "An acetonitrile therapeutic oligonucleotide impurity profiling IP-RPLC workflow for impurity-class screening, method control and solvent-lot qualification.",
+    primaryKeyword: "acetonitrile therapeutic oligonucleotide impurity profiling IP-RPLC",
+    tag: "Pharmaceutical Analysis",
+    readingTime: "11 min technical guide",
+    intro: "Acetonitrile therapeutic oligonucleotide impurity profiling IP-RPLC is not a one-solvent decision. Organic modifier, ion-pair reagent, stationary phase, gradient, temperature and oligonucleotide chemistry work as a coupled system. A useful workflow first identifies which impurity class the procedure must resolve, then separates development experiments from a controlled acetonitrile lot bridge so that a changed chromatographic fingerprint is not assigned to the solvent without evidence.",
+    painPoints: [
+      { title: "One modifier is treated as universally superior", detail: "A condition that reveals one low-purity ASO fingerprint may be less suitable for shortmers, longmers or backbone variants, so a published acetonitrile result cannot be transferred without a defined impurity target." },
+      { title: "Ion-pair chemistry changes unnoticed", detail: "Alkylamine identity, concentration, acid ratio, pH, preparation order and mobile-phase age can move retention or selectivity while the solvent lot receives the blame." },
+      { title: "Development and lot bridging are mixed", detail: "Changing modifier, column, gradient and temperature during a supplier comparison prevents the laboratory from deciding whether the candidate acetonitrile is suitable for the controlled method." },
+      { title: "A certificate substitutes for method evidence", detail: "Product identity and batch documents support traceability, but they do not demonstrate critical-pair resolution, impurity-profile comparability or blank performance in a particular IP-RPLC procedure." },
+    ],
+    sections: [
+      {
+        heading: "Define the impurity class before selecting the organic modifier",
+        paragraphs: [
+          "Begin with the analytical target, not a generic preference for acetonitrile or methanol. Therapeutic oligonucleotide impurity sets can include prematurely terminated shortmers, longmers, oxidation products, phosphodiester or phosphorothioate variants, protecting-group or synthesis-related species and other sequence- or process-dependent components. Their differences in length, charge, hydrophobicity and secondary structure do not produce one predictable selectivity order across every IP-RPLC system. The procedure therefore needs a written analytical target profile: named impurity classes, required specificity or resolution, reportable range, detector and intended decision.",
+          "A 2026 systematic screening study illustrates this boundary. Methanol with butylamine on a phenyl phase gave the best overall compromise for the studied antisense shortmer and longmer set; methanol with triethylamine on a phenyl phase distinguished the studied phosphodiester/phosphorothioate variants; acetonitrile with hexylamine on a shielded C18 phase produced the most informative fingerprint for the studied low-purity synthetic ASO set. These are condition-specific findings, not a ranking of solvents. The transferable lesson is to screen the modifier together with the reagent and stationary phase against the actual impurity class.",
+        ],
+      },
+      {
+        heading: "Screen modifier, ion-pair reagent and stationary phase as one system",
+        paragraphs: [
+          "IP-RPLC retention arises from the interaction of the negatively charged oligonucleotide, a positively charged ion-pair reagent and the reversed-phase surface. Changing the alkylamine can alter retention and resolution, and changing the organic modifier can alter solvent strength and selectivity. Column ligand, pore structure and hardware can add further effects. Agilent's oligonucleotide application note states that resolution depends on sample characteristics, chromatographic conditions, column choice and mobile-phase composition; its experiments also show different responses to ion-pair reagent, gradient slope and temperature. Thermo Fisher similarly demonstrates effects from flow, gradient curve, temperature and the selected ion-pair reagent in an acetonitrile-containing system.",
+          "Use a planned screen with interpretable factors and responses. A practical development matrix can compare acetonitrile and methanol across a justified subset of reagents and column chemistries while holding sample load, detector settings and preparation practice constant. Measure named critical-pair resolution, peak capacity or a predeclared fingerprint metric, retention window, peak shape, pressure and repeatability. Capture failures and unresolved regions as data. Avoid selecting a condition merely because it produces the largest number of visible peaks if the required impurity classes remain unassigned or the method is too sensitive to routine preparation variation.",
+          "Treat published compositions as starting evidence rather than recipes. Reagent concentration, acid neutralisation, pH convention, water source and preparation sequence should follow the column and instrument constraints and the laboratory's safety procedures. Some ion-pair reagents can be persistent in an LC flow path or unsuitable for another detector configuration, so dedicated equipment, cleaning or a documented compatibility assessment may be needed. Do not infer that an HPLC/UV condition is automatically transferable to LC-MS, or that a volatile reagent alone guarantees acceptable mass-spectrometric response or background.",
+        ],
+        points: [
+          "Name the impurity class and critical pair before ranking conditions.",
+          "Vary only factors included in the approved screen and record actual preparations.",
+          "Use column and instrument limits as hard boundaries for pH, temperature, pressure and solvent exposure.",
+          "Select the condition on predefined performance and operability criteria, not one favourable chromatogram.",
+        ],
+      },
+      {
+        heading: "Lock the method variables that can imitate an acetonitrile effect",
+        paragraphs: [
+          "Once a condition is selected, convert it into a reproducible procedure before comparing solvent lots. Lock the exact ion-pair reagent and acid lots, target concentration, pH measurement approach, water source, acetonitrile proportion, preparation order, mixing and equilibration. Define mobile-phase storage and use windows from method evidence. Alkylamine solutions, prepared mobile phases and open solvent containers should not be assumed stable indefinitely; investigate any time trend separately rather than allowing mobile-phase age to become a hidden lot variable.",
+          "Control the chromatographic system with the same discipline. Record column chemistry and lot, guard configuration, instrument and wetted path, mixer, dwell volume, temperature, flow, gradient table and curve, injection volume, sample diluent, sample age, needle wash, detector settings and integration method. Gradient accuracy matters because a small composition or timing difference can change a shallow impurity separation. Thermo Fisher's work shows that gradient curve and temperature can materially alter resolution in its tested system, while Agilent shows that shallower gradients can improve some oligonucleotide separations. Those findings justify control of the parameters; they do not provide universal settings for another column or sequence.",
+          "Build a blank and suitability ladder before interpreting lot differences. Include water and additive blanks where technically meaningful, a prepared mobile-phase blank, injection blank, system-suitability mixture and an impurity-challenge sample. If the procedure uses UV detection, review the method wavelength and gradient baseline. If it uses MS, review relevant background ions, adduct patterns, signal response and source stability. A feature that appears in the complete prepared phase but not in neat acetonitrile points to a different investigation from a feature that follows the candidate solvent through matched preparations.",
+        ],
+      },
+      {
+        heading: "Build an acetonitrile therapeutic oligonucleotide impurity profiling IP-RPLC lot bridge",
+        paragraphs: [
+          "Start the bridge while a serviceable approved lot remains. Use matched outgoing and candidate preparations and hold every locked variable constant. Randomise or bracket the preparations within one sequence so instrument drift, column conditioning and sample ageing do not align with solvent identity. Where the method risk justifies it, compare more than one preparation, day or analyst and include representative product or process samples in addition to system suitability. Approval should be limited to the tested grade, package, method and handling condition; a bottle study does not automatically qualify a drum-transfer process.",
+          "Predefine the evidence package. At minimum, review blank profile, retention and relative retention, named critical-pair resolution, impurity count or fingerprint metric, peak shape, area or height precision where applicable, pressure profile and system-suitability status. For quantitative procedures, use the validated performance characteristics and established acceptance criteria. Compare patterns, not only averages: a candidate lot that meets mean retention but produces preparation-dependent shoulders or a recurrent blank feature deserves investigation before release.",
+          "Document review supports the study without replacing it. Confirm product and grade identity, batch, package, certificate of analysis, supplier specification, manufacture or retest information where supplied and the change-notification route. The LANCHROM document library contains separate HPLC and LC-MS acetonitrile families; selection of a listed grade is only the beginning of the user's qualification. Do not extend catalogue wording into an ASO-specific suitability, regulatory approval or impurity limit unless that claim appears in an approved controlled specification and the method bridge supports the intended use.",
+          "When a difference appears, repeat the smallest experiment that can isolate it. A paired mobile-phase remake can test preparation error; channel reversal or a controlled instrument comparison can test mixing and flow-path effects; a retained solvent aliquot can test whether the response follows the bottle; and a reference column can test column history. Keep observations, material disposition and root-cause confidence as separate conclusions. Timing alone—such as a shift occurring after a new lot was opened—is a signal to investigate, not proof of causation.",
+        ],
+      },
+      {
+        heading: "Maintain the procedure through risk-based lifecycle control",
+        paragraphs: [
+          "EMA's current ICH Q14 page describes science- and risk-based development and maintenance of analytical procedures, including robustness, parameter ranges, control strategy and lifecycle management. Apply that principle by linking the selected IP-RPLC variables to procedure performance. The development report should explain why modifier, ion-pair reagent, column and gradient were chosen; the routine method should state the parameters and suitability tests that keep the procedure in control; and the change plan should define which events require assessment or partial redevelopment.",
+          "Trend solvent lots, suitability metrics, blank features and investigations together. A stable record can support efficient future qualification, while recurring shifts can reveal that a preparation, column or instrument factor needs tighter control. Close each study with the approved scope, deviations, raw-data location, residual uncertainty and future trigger. This preserves the distinction between evidence that a candidate acetonitrile lot is suitable for one named procedure and an unsupported claim that the solvent is universally suitable for therapeutic-oligonucleotide analysis.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A Swiss ASO laboratory separates method development from a second-source bridge",
+      context: "An illustrative pharmaceutical development laboratory needs an impurity fingerprint for a low-purity synthetic ASO and a qualified second acetonitrile source. Its current screening work includes several ion-pair reagents and columns, but procurement needs a decision that will remain interpretable after the method is locked.",
+      actions: [
+        "The team defines the target impurity classes and uses a low-purity development sample plus a separate critical-pair suitability mixture.",
+        "It screens methanol and acetonitrile with selected reagent and stationary-phase combinations, using predefined resolution, fingerprint and operability responses.",
+        "After selecting an acetonitrile condition, it freezes reagent preparation, column, temperature, gradient, sample diluent and detector settings before comparing suppliers.",
+        "Outgoing and candidate acetonitrile lots are bracketed with blanks, suitability material and representative ASO samples, and approval is limited to the tested method, grade and bottle format.",
+      ],
+      result: "The workflow can distinguish a development choice from a material qualification decision and preserve evidence when a chromatographic difference appears. This is an illustrative scenario, not a LANCHROM customer result, an ASO-specific product claim or proof that acetonitrile is preferable for every oligonucleotide impurity class.",
+    },
+    checklist: [
+      "Analytical target profile names the required impurity classes and decision",
+      "Development and routine lot-bridge protocols are separate",
+      "Representative impurity, stressed or low-purity samples are justified",
+      "Modifier, ion-pair reagent and column screen has predefined responses",
+      "Column and instrument compatibility limits are documented",
+      "Water, reagents, pH approach and mobile-phase preparation are controlled",
+      "Gradient, temperature, flow, dwell volume and equilibration are locked",
+      "Outgoing and candidate acetonitrile lots are compared in matched preparations",
+      "Blank profile, critical-pair resolution and fingerprint comparability are reviewed",
+      "Product, grade, batch, package, certificate and change route are confirmed",
+      "Approval scope and any restrictions are explicit",
+      "Raw data, deviations, root-cause confidence and future change triggers are retained",
+    ],
+    sources: [
+      { label: "PubMed - 2026 automated IP-RPLC screening for oligonucleotide pharmaceutical mixtures", href: "https://pubmed.ncbi.nlm.nih.gov/42541919/" },
+      { label: "Thermo Fisher Scientific - Separation of Mixed-Base Oligonucleotides", href: "https://assets.thermofisher.com/TFS-Assets/CMD/Application-Notes/AN-21476-LC-Mixed-Base-Oligonucleotides-AN21476-EN.pdf" },
+      { label: "Agilent - Oligonucleotide Analysis with Ion-Pair Reversed-Phase Chromatography", href: "https://www.agilent.com/cs/library/applications/an-ion-pair-chromatography-1260-infinity-ii-prime-lc-5994-5323en-agilent.pdf" },
+      { label: "EMA - ICH Q14 analytical procedure development", href: "https://www.ema.europa.eu/en/ich-q14-analytical-procedure-development-scientific-guideline" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Acetonitrile", href: "/products/lcms-solvents/acetonitrile" },
+      { label: "View HPLC Grade Acetonitrile", href: "/products/hplc-grade-solvents/acetonitrile" },
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Explore LC-MS Analysis", href: "/applications/lcms-analysis" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
