@@ -2268,6 +2268,114 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Explore LC-MS Analysis", href: "/applications/lcms-analysis" },
     ],
   },
+  {
+    slug: "methanol-quppe-polar-pesticide-extraction-qualification",
+    title: "Methanol QuPPe Polar-Pesticide Extraction Qualification: A Solvent-Lot and Recovery Workflow",
+    shortTitle: "Methanol QuPPe Extraction Qualification",
+    description: "A methanol QuPPe polar pesticide extraction qualification workflow for bridging solvent lots while controlling acid, matrix, EDTA, vessels, blanks and recovery evidence.",
+    primaryKeyword: "methanol QuPPe polar pesticide extraction qualification",
+    tag: "Pesticide Residue Analysis",
+    readingTime: "11 min technical guide",
+    intro: "Methanol QuPPe polar pesticide extraction qualification is more than comparing two solvent certificates. In a highly polar pesticide workflow, acidified methanol works alongside matrix water, acid, EDTA where applicable, vessel surfaces, internal standards, calibration and LC- or IC-MS/MS conditions. A defensible solvent-lot bridge holds those variables constant, uses matrix-specific recovery evidence and separates a methanol contribution from metal-cation interactions, contamination, preparation error and instrument response.",
+    painPoints: [
+      { title: "A solvent change is blamed for every low recovery", detail: "Glyphosate, AMPA and other highly polar analytes can respond to matrix composition, metal cations, vessel surfaces and calibration as well as the extraction solvent, so timing alone does not establish root cause." },
+      { title: "The method version is not frozen", detail: "If extraction composition, EDTA use, analyte scope or measurement conditions change during the lot comparison, the laboratory cannot tell whether methanol or the procedure caused the result." },
+      { title: "A clean reagent blank is treated as sufficient", detail: "A blank can reveal contamination but cannot demonstrate extraction recovery, matrix effect or internal-standard behaviour across the commodities in the laboratory's intended scope." },
+      { title: "Certificate review replaces method evidence", detail: "Identity, grade, batch and certificate data support traceability, but they do not show that a candidate lot is suitable for a particular acidified-methanol extraction and matrix range." },
+    ],
+    sections: [
+      {
+        heading: "Freeze the QuPPe method version and intended scope",
+        paragraphs: [
+          "Begin by naming the exact controlled procedure, analytes, commodity groups, reporting level and measurement route. The EURL-SRM release page identifies QuPPe-PO version 12.3 as the current released collection and notes revisions including a changed paraquat and diquat extraction approach and updated information on contamination sources. That is a reminder to check the current method before work starts. Do not build a qualification protocol from an older copy simply because it is already in the laboratory folder.",
+          "The accessible QuPPe-PO version 12.1 document provides useful background on the role of acidified methanol: test portions are water-adjusted, extracted with acidified methanol, centrifuged and filtered before LC- or IC-MS/MS analysis. It also states that methanol should be at least HPLC quality and that MS-quality methanol is preferred for mobile-phase preparation. Use those statements as source context, not as a LANCHROM specification and not as authority to replace the current version. The controlled laboratory method must define the actual acid composition, volume, extraction ratio and any analyte-specific branch used in the bridge.",
+          "Set the approval boundary before selecting experiments. A bridge for glyphosate and AMPA in cereals does not automatically cover paraquat in fruit, chlorate in vegetables or every other QuPPe analyte. Record which analyte-matrix combinations create the worst credible challenge and why they represent the intended routine scope.",
+        ],
+        points: [
+          "Record the current method version and any laboratory-controlled modifications.",
+          "Name the analytes, commodity groups, levels and LC- or IC-MS/MS route covered.",
+          "Keep extraction-solvent approval separate from mobile-phase approval where the uses differ.",
+        ],
+      },
+      {
+        heading: "Map variables that can imitate a methanol-lot effect",
+        paragraphs: [
+          "Create a cause map before opening the candidate lot. Include methanol, water adjustment, acid identity and lot, EDTA identity and concentration where used, internal-standard addition, sample mass, homogenisation, extraction ratio, mixing, temperature, centrifugation, filtration, vessel material, calibration approach, column, source condition and sequence order. Each uncontrolled factor can move apparent recovery or response.",
+          "Matrix chemistry deserves explicit control. The EURL-SRM method notes that calcium and magnesium can affect compounds such as glyphosate and AMPA and uses EDTA for specified commodity types. A later EURL-hosted study confirmed recovery suppression from metal cations and found that EDTA materially changed glyphosate and AMPA recovery in its tested matrices. The transferable conclusion is not that one EDTA treatment solves every matrix. It is that solvent comparisons must hold EDTA, matrix and water conditions constant and must not assign a metal-driven recovery change to methanol without evidence.",
+          "Container and consumable controls matter for highly polar analytes and trace-level work. The method document recommends plastic vessels for several compounds because surface interactions can occur, and it warns that filters and other materials can contribute contamination for some targets. Use the same validated tube, cap, filter, vial and dispenser types for both lots. If a vessel or filter must change, study it as a separate factor instead of embedding it in the solvent decision.",
+        ],
+      },
+      {
+        heading: "Design the methanol QuPPe polar pesticide extraction qualification bridge",
+        paragraphs: [
+          "Start while enough approved methanol remains to run outgoing and candidate lots in a matched design. Confirm product and grade identity, batch and package, certificate of analysis, supplier specification, storage condition and opening history. Prepare acidified methanol from each lot using the same acid lot, calibrated equipment, sequence and timing. Randomise or bracket preparations so analyst, day, extraction order and source drift do not align with solvent identity.",
+          "Use a sample ladder that answers different questions. Neat-solvent and prepared-reagent blanks check methanol, acid, water and preparation background. Full procedural blanks include vessels, filters and every preparation step. Matrix blanks reveal endogenous or interfering response. Pre-extraction fortified samples challenge extraction plus measurement, while post-extraction or matrix-matched comparisons can help separate extraction recovery from matrix response when they are appropriate to the controlled method. Representative incurred material can add realism when available and justified, but it does not replace known fortification controls.",
+          "Select matrices from the intended scope rather than the easiest blank commodity. Include at least one matrix with the relevant metal or binding challenge when it is part of routine work, and keep commodity homogenisation and water adjustment matched. Use isotope-labelled internal standards according to the method, but review both raw analyte and internal-standard responses as well as corrected results.",
+          "Predefine the comparison outputs and decision rules. Review reagent and procedural blank contribution, recovery, precision, internal-standard response, retention time, ion ratio, calibration residuals, carry-over and system-suitability status. Use the laboratory's validated limits and current SANTE guidance rather than creating universal acceptance limits for methanol. Compare patterns by analyte, matrix, level, preparation and run position.",
+        ],
+        points: [
+          "Bracket outgoing and candidate lots within matched preparation and analytical blocks.",
+          "Include blanks, matrix controls and fortified samples with distinct diagnostic purposes.",
+          "Review uncorrected and internal-standard-corrected responses where the method provides both.",
+          "Limit approval to the tested grade, package, method and handling conditions.",
+        ],
+      },
+      {
+        heading: "Interpret recovery, blank and calibration evidence together",
+        paragraphs: [
+          "The European Commission's SANTE/11312/2021 v2026 guidance states that within-laboratory validation should show a method is fit for its intended purpose and should be supported by performance verification during routine analysis. It also treats routine recovery checks as part of ongoing quantitative-method control. A solvent-lot bridge can contribute to that evidence, but it does not replace the laboratory's complete validation, quality-control or accreditation obligations.",
+          "When recovery shifts, follow an ordered investigation. First confirm preparation records, fortification, internal-standard addition and calculation. Next compare matrix and reagent blanks, raw responses and internal-standard behaviour. Then test the smallest plausible factor: remake both acidified-methanol preparations, repeat a matched matrix, compare EDTA or water preparation under the controlled method, or examine vessel and filter blanks. Only call the candidate methanol a root cause when the response follows the lot under otherwise matched conditions and competing explanations have been reasonably challenged.",
+          "Keep contamination and recovery conclusions separate. A methanol lot can have an acceptable blank yet behave differently in an extraction interaction, while a high procedural blank may originate from acid, water, filters, labware or the LC flow path rather than methanol. Similarly, a calibration problem can imitate recovery loss when matrix matching, standard addition or internal-standard application changes. State what the evidence resolves and what remains uncertain before material disposition.",
+        ],
+      },
+      {
+        heading: "Convert the bridge into receiving and change control",
+        paragraphs: [
+          "After acceptance, connect the approved material to routine records. Receiving checks should verify supplier, exact product and grade, batch, package, seal condition, certificate and storage requirements. Preparation records should identify the methanol, acid, water, EDTA, internal standards, vessels and filters used. Trend blank signals, recovery, internal-standard response and investigations by material lot and commodity group. This history makes the next supplier or lot decision faster and more defensible.",
+          "Define change triggers from method risk. A different methanol grade, manufacturing source, package or closure; a new acid or EDTA source; altered vessel or filter; expanded analyte or commodity scope; revised QuPPe version; or changed LC/IC-MS/MS configuration may require targeted verification or broader validation. Decide the scope before routine samples are affected. A certificate update alone is not proof that a method bridge is unnecessary, and a successful bridge does not remove the need to assess later changes.",
+          "Close the study with three separate statements: whether the candidate lot is approved for the named use, whether any observed deviation has a supported root cause, and what residual uncertainty remains. Preserve raw data, preparation records, certificates, deviations and approval restrictions. This gives purchasing a clear material decision while keeping scientific conclusions proportional to the evidence.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A German food laboratory bridges a second methanol lot for glyphosate work",
+      context: "An illustrative official-control laboratory uses a controlled QuPPe-PO workflow for glyphosate and AMPA in cereals and fruit. It needs a second LC-MS methanol lot but has previously seen matrix-dependent recovery changes that were incorrectly attributed to solvent supply.",
+      actions: [
+        "The team freezes the current method version, analyte scope, formic-acid and EDTA lots, water source, plastic vessels, filters, calibration approach and LC-MS/MS conditions.",
+        "Outgoing and candidate methanol lots are converted to matched acidified preparations and bracketed within the same extraction and analytical blocks.",
+        "Reagent blanks, procedural blanks, matrix blanks and pre-extraction spikes are run for one cereal and one fruit matrix, with raw and isotope-labelled internal-standard-corrected responses reviewed separately.",
+        "A matrix-specific shift triggers a controlled repeat focused on EDTA preparation and matrix water adjustment before any methanol disposition is made.",
+      ],
+      result: "The laboratory can approve or reject the candidate lot for the defined method without turning a matrix or preparation effect into an unsupported supplier conclusion. This is an illustrative scenario, not a LANCHROM customer result, a prescribed validation design or a claim of universal QuPPe suitability.",
+    },
+    checklist: [
+      "Current QuPPe method version and laboratory modifications identified",
+      "Analyte, commodity, reporting level and measurement scope defined",
+      "Outgoing methanol retained for a matched comparison",
+      "Methanol grade, batch, package, certificate and opening history recorded",
+      "Acid, water, EDTA and internal-standard materials held constant",
+      "Vessel, filter, vial and dispenser types controlled",
+      "Reagent, procedural and matrix blanks assigned distinct purposes",
+      "Representative pre-extraction fortified samples included",
+      "Raw and internal-standard-corrected responses reviewed",
+      "Recovery, precision, ion ratio, retention and carry-over assessed",
+      "Acceptance rules tied to the validated method and current guidance",
+      "Approval scope, deviations, residual uncertainty and change triggers documented",
+    ],
+    sources: [
+      { label: "EURL-SRM - QuPPe-PO Method Version 12.3 release page", href: "https://www.eurl-pesticides.eu/docs/public/tmplt_article.asp?CntID=1299&LabID=200&Lang=EN&Pdf=False&Theme_ID=1" },
+      { label: "EURL-SRM - QuPPe-PO V12.1 acidified-methanol method document", href: "https://eurl-pesticides.eu/userfiles/file/EurlSRM/EurlSrm_meth_QuPPe_PO_V12_1.pdf" },
+      { label: "EURL-SRM - EDTA and IC-MS/MS study for glyphosate and AMPA", href: "https://eurl-pesticides.eu/docs/public/tmplt_article.asp?CntID=1334&LabID=200&Lang=EN" },
+      { label: "European Commission - SANTE/11312/2021 v2026 analytical quality control", href: "https://food.ec.europa.eu/system/files/2023-11/pesticides_mrl_guidelines_wrkdoc_2021-11312.pdf" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Methanol", href: "/products/lcms-solvents/methanol" },
+      { label: "View HPLC Grade Methanol", href: "/products/hplc-grade-solvents/methanol" },
+      { label: "Explore Pesticide Residue Analysis", href: "/applications/pesticide-residue-analysis" },
+      { label: "Review Solvent Supplier Qualification", href: "/resources/blog/hplc-solvent-supplier-qualification-eu-gmp" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
