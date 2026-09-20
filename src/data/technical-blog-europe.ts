@@ -2268,6 +2268,107 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Explore LC-MS Analysis", href: "/applications/lcms-analysis" },
     ],
   },
+  {
+    slug: "acetonitrile-galnac-sirna-plasma-lcms-sample-preparation",
+    title: "Acetonitrile for GalNAc-siRNA Plasma LC-MS: A Differential-Precipitation and Solvent-Lot Qualification Workflow",
+    shortTitle: "Acetonitrile for GalNAc-siRNA Plasma LC-MS",
+    description: "An acetonitrile GalNAc siRNA plasma LC-MS sample preparation workflow for bracketing differential precipitation, recovery, matrix effect and solvent-lot changes.",
+    primaryKeyword: "acetonitrile GalNAc siRNA plasma LC-MS sample preparation",
+    tag: "Oligonucleotide Bioanalysis",
+    readingTime: "11 min technical guide",
+    intro: "Acetonitrile GalNAc siRNA plasma LC-MS sample preparation requires a deliberately controlled precipitation window. Too little organic solvent can leave high-abundance plasma proteins in the supernatant; too much can reduce recovery by drawing the oligonucleotide into the precipitate. A useful qualification plan therefore treats final acetonitrile concentration, addition sequence, matrix source and solvent lot as connected method variables rather than assuming that a conventional small-molecule protein-precipitation ratio will transfer.",
+    painPoints: [
+      { title: "The useful precipitation window is narrow", detail: "A condition that removes abundant proteins can also co-precipitate a GalNAc-siRNA, so visual pellet formation does not prove acceptable analyte recovery." },
+      { title: "Recovery and extract cleanliness are confused", detail: "A strong response can coexist with matrix effect, background ions or residual proteins, while a clean-looking supernatant can still have lost analyte." },
+      { title: "One result is extended across matrices and sequences", detail: "Plasma species, donor lot, anticoagulant, siRNA chemistry and metabolite profile can change precipitation and LC-MS behaviour." },
+      { title: "The solvent changes with the workflow", detail: "A candidate acetonitrile lot is often introduced beside a new plate, transfer volume, dry-down endpoint or reconstitution step, preventing a defensible root-cause decision." },
+    ],
+    sections: [
+      {
+        heading: "Define differential precipitation before transferring a published condition",
+        paragraphs: [
+          "Differential protein precipitation is not simply a stronger version of routine protein precipitation. The operating aim is to remove large, high-abundance plasma proteins while retaining the GalNAc-siRNA in the liquid phase. Final organic content is therefore a selectivity variable. The relevant output is not whether a pellet forms, but whether protein depletion and analyte recovery remain balanced for the intended siRNA, metabolite panel, plasma matrix and quantitative range.",
+          "A 2025 Analytical Chemistry study titrated final acetonitrile content from 50% to 64% in rat plasma and reported progressively lower Givosiran recovery as acetonitrile increased. The authors selected 55% for their workflow and observed similar patterns for four additional GalNAc-siRNAs. They also recommended further assay-specific optimisation of sample volume, acetonitrile concentration, transfer and reconstitution. The published 55% condition is therefore useful evidence for bracketing a development study; it is not a universal recipe, a LANCHROM specification or an acceptance limit for human plasma.",
+          "Write the intended method decision before preparing samples. Identify the parent strands and metabolites that must be measured, the primary matrix and anticoagulant, the expected concentration interval, the required throughput and whether the procedure supports exploratory work or regulated study samples. This scope prevents a favourable result for one sequence or one plasma pool from becoming an unsupported platform claim.",
+        ],
+      },
+      {
+        heading: "Bracket the acetonitrile window and control the full preparation sequence",
+        paragraphs: [
+          "Build a small concentration study around a scientifically justified starting point rather than testing only one solvent-to-sample ratio. Calculate final acetonitrile content from every aqueous and organic addition, including internal-standard solution and any prediluted precipitant. Hold plasma volume, addition order, mixing energy, contact time, temperature, centrifugation force and time, transfer volume, vessel material, dry-down endpoint and reconstitution constant. Record actual additions and visible pellet or supernatant observations without using appearance as the release decision.",
+          "Use response measures that reveal the trade-off. Protein depletion or a suitable surrogate can indicate cleanup, while pre-extraction and post-extraction spikes estimate recovery. Track the parent and relevant metabolites separately because molecular structure and protein association may differ. Include internal-standard response, precision, chromatographic pressure and retention, and any evidence of adsorption or carryover. When the method includes evaporation, confirm that apparent precipitation loss is not actually caused by dry-down, surface interaction or incomplete reconstitution.",
+          "Challenge the proposed range rather than selecting the highest mean response from one plate. Repeat preparations near the lower and upper boundaries, randomise positions and include a pooled control across runs. A practical operating window should tolerate routine preparation variation without crossing into incomplete protein removal or analyte coprecipitation. Freeze that window before starting a solvent-supplier comparison; otherwise development and material qualification become inseparable.",
+        ],
+        points: [
+          "Express the experiment as final acetonitrile content and actual component volumes.",
+          "Keep addition order, mixing, temperature and centrifugation transferable between analysts.",
+          "Review each parent strand, metabolite and internal standard rather than a pooled response alone.",
+        ],
+      },
+      {
+        heading: "Separate recovery, matrix effect, selectivity and instrument response",
+        paragraphs: [
+          "Recovery asks how much analyte survives preparation relative to a post-extraction reference. Matrix effect asks how co-extracted material changes ionisation response. Selectivity asks whether endogenous or related components interfere with the measured analyte and internal standard. These are different questions and need a sample ladder that can distinguish them: neat standards, solvent and reagent blanks, extracted blank plasma, pre-extraction spikes, post-extraction spikes and suitability material. A single high extracted peak cannot answer all four questions.",
+          "The current EMA ICH M10 guideline frames validation around suitability for the intended purpose and includes selectivity, matrix effect, calibration, accuracy, precision, carry-over, dilution integrity and stability among the relevant chromatographic method characteristics. It also calls for matrix-effect assessment across independent matrix sources or lots. Use the approved laboratory protocol to define the number and type of sources and the acceptance criteria; do not turn this article or a supplier certificate into a substitute validation plan.",
+          "Oligonucleotides add method-specific risks. A 2026 roadmap review highlights nonspecific binding, matrix effects, nuclease degradation and ion-pairing interference across the LC-MS workflow. A 2026 expert white paper likewise notes that oligonucleotide-specific considerations are not fully defined by the general ICH M10 framework and recommends fit-for-purpose decisions where conventional approaches do not transfer. These sources support deliberate controls; they do not establish a universal solvent grade, precipitation ratio or recovery threshold.",
+        ],
+      },
+      {
+        heading: "Run an acetonitrile GalNAc siRNA plasma LC-MS sample preparation lot bridge",
+        paragraphs: [
+          "Start the bridge while an approved outgoing lot remains usable. Prepare outgoing and candidate acetonitrile conditions with the same plasma pools, analyte and internal-standard stocks, aqueous components, plates, pipettes, centrifuge, evaporation equipment, reconstitution solvent, LC column and detector state. Randomise or bracket the two solvent lots within the sequence so plate position, source drift and sample age do not align with material identity. Define container opening and dispensing history because handling can change the solvent presented to the method.",
+          "Compare evidence at three levels. First, verify exact product, grade, batch, package, certificate and supplier specification, while recognising that documentation cannot prove method suitability. Second, review preparation outputs: pellet or supernatant observations, transfer yield, blanks and recovery. Third, evaluate method outputs: internal-standard-normalised matrix response, calibration and QC behaviour, selectivity, carry-over, pressure, retention and reinjection performance where applicable. Approval should cover only the tested method, grade, package and handling conditions.",
+          "When a difference appears, repeat the smallest controlled experiment that can locate it. A matched remake can test preparation error; post-extraction spikes can separate recovery from ionisation; an alternate plasma pool can test matrix dependence; a retained aliquot can test whether a signal follows the solvent lot; and a dry-down-free comparison can isolate evaporation or surface loss. Keep observation, material disposition and root-cause confidence as separate conclusions. Temporal association with a new lot is a reason to investigate, not proof that the solvent caused the change.",
+        ],
+      },
+      {
+        heading: "Convert the study into a maintained control strategy",
+        paragraphs: [
+          "Document the selected acetonitrile window, critical preparation parameters, suitability tests, approved material scope and raw-data location. Routine records should identify the solvent, plasma, analyte and internal-standard lots, plate or tube type, critical equipment and preparation date. Trend recovery, matrix response, blank features, pressure and failed runs together so a gradual method shift is visible before it becomes a supplier complaint or study interruption.",
+          "Define change triggers from the method risk. A different acetonitrile grade, manufacturing source, package or closure; a new anticoagulant or species; a modified siRNA sequence or metabolite panel; altered transfer, evaporation or reconstitution; or a new LC-MS platform may require a targeted bridge or broader partial validation. ICH M10 links partial-validation scope to the nature and extent of the change. The bioanalytical and quality owners should make that decision from the controlled procedure and accumulated evidence.",
+          "Close the bridge with an explicit decision: accepted for the named method and package, rejected with an identified cause, or unresolved pending further study. Avoid descriptions such as universally suitable or matrix independent. A defensible record states what was tested, what passed, what remained uncertain and which future change will reopen the assessment.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A German CRO qualifies acetonitrile for a five-analyte GalNAc-siRNA panel",
+      context: "An illustrative bioanalytical laboratory is transferring a plasma LC-MS/MS panel containing several GalNAc-siRNAs and a metabolite. Recovery falls when a conventional high-organic protein-precipitation ratio is used, and procurement also needs to introduce a candidate acetonitrile lot.",
+      actions: [
+        "The team first brackets final acetonitrile content while fixing plasma volume, addition order, mixing, temperature, centrifugation, transfer, dry-down and reconstitution.",
+        "It measures protein-removal evidence, parent and metabolite recovery, internal-standard response and matrix effect across representative plasma sources instead of selecting conditions by pellet appearance.",
+        "After freezing the operating window, outgoing and candidate acetonitrile lots are randomised in matched preparations with solvent, reagent, extracted-matrix, pre-extraction and post-extraction controls.",
+        "Quality limits approval to the tested assay, LC-MS acetonitrile grade and package, and records change triggers for plasma, sequence, preparation and supply changes.",
+      ],
+      result: "The study can distinguish analyte coprecipitation, matrix-dependent response and a genuine solvent-lot interaction before material release. This is an illustrative scenario, not a LANCHROM customer result, a universal precipitation formula or evidence that one solvent specification guarantees GalNAc-siRNA assay performance.",
+    },
+    checklist: [
+      "Intended siRNA, metabolite panel, matrix and study purpose defined",
+      "Final acetonitrile content calculated from every liquid addition",
+      "Concentration window bracketed rather than copied from one publication",
+      "Addition order, mixing, temperature and centrifugation controlled",
+      "Transfer, evaporation and reconstitution steps challenged",
+      "Neat, solvent, reagent and extracted-matrix blanks included",
+      "Pre-extraction and post-extraction spikes compared",
+      "Recovery and matrix effect assessed separately",
+      "Representative independent plasma sources or lots included",
+      "Outgoing and candidate solvent lots tested in matched preparations",
+      "Product, grade, batch, package and certificate verified",
+      "Approval scope, deviations, uncertainty and future change triggers recorded",
+    ],
+    sources: [
+      { label: "PubMed Central - Differential protein precipitation for GalNAc-siRNA plasma LC-MS", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12163879/" },
+      { label: "PubMed - Roadmap for LC-MS bioanalysis of oligonucleotide therapeutics", href: "https://pubmed.ncbi.nlm.nih.gov/41421289/" },
+      { label: "Journal of Pharmaceutical and Biomedical Analysis - Points to consider for oligonucleotide LC-MS bioanalysis", href: "https://www.sciencedirect.com/science/article/pii/S1347436726000315" },
+      { label: "EMA - ICH M10 bioanalytical method validation", href: "https://www.ema.europa.eu/en/ich-m10-bioanalytical-method-validation-scientific-guideline" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Acetonitrile", href: "/products/lcms-solvents/acetonitrile" },
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Explore Clinical Mass Spectrometry", href: "/applications/clinical-mass-spec" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
