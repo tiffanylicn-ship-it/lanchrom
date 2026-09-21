@@ -2369,6 +2369,108 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "methanol-pesticide-vial-adsorption-water-uhplc-ms",
+    title: "Methanol for Pesticide Vial Adsorption in Water UHPLC-MS: A Qualification Workflow",
+    shortTitle: "Methanol and Pesticide Vial Adsorption in Water UHPLC-MS",
+    description: "A methanol pesticide vial adsorption water UHPLC-MS workflow for separating surface loss, solvent effects, hold time and lot changes in direct-injection methods.",
+    primaryKeyword: "methanol pesticide vial adsorption water UHPLC-MS",
+    tag: "Water Analysis",
+    readingTime: "11 min technical guide",
+    intro: "Methanol pesticide vial adsorption water UHPLC-MS investigations become necessary when hydrophobic analytes lose response in aqueous standards while more polar compounds remain stable. The symptom can look like instrument drift or matrix suppression, yet the loss may occur before injection as the analyte contacts a vial, cap, filter or transfer surface. A defensible qualification workflow therefore brackets methanol proportion, container material, hold time and solvent lot while keeping chromatography and electrospray conditions under control.",
+    painPoints: [
+      { title: "Response falls while the vial waits", detail: "Late-eluting or hydrophobic pesticides can show time-dependent loss in aqueous standards, creating low-end curvature or failed reinjections that are wrongly assigned to source sensitivity." },
+      { title: "One methanol percentage becomes a rule", detail: "A published composition is copied without checking the laboratory's analyte panel, vial, injection volume, initial mobile phase or electrospray response." },
+      { title: "Vial and solvent changes are mixed together", detail: "A candidate methanol lot is introduced with new glass, polypropylene, caps, filters or autosampler conditions, so the cause of a response shift cannot be isolated." },
+      { title: "A cleaner chromatogram is treated as validation", detail: "Blank appearance alone does not establish analyte recovery, calibration behaviour, matrix suitability, stability or controlled method performance." },
+    ],
+    sections: [
+      {
+        heading: "Recognise surface loss before changing the LC-MS method",
+        paragraphs: [
+          "Begin with the response pattern. Surface loss is plausible when the largest decline occurs for hydrophobic or later-eluting compounds, becomes stronger at lower concentration, changes with contact time or vessel material, and is reduced by adding an organic component. That pattern is different from a sudden loss shared by every analyte, a retention shift across the run, or a source response decline that also affects a continuously infused reference. None of these clues proves adsorption alone, but they determine which controlled comparison should come first.",
+          "The 2025 Molecules study evaluated 15 pesticides in water by UHPLC-ESI-MS/MS and compared five organic solvents, multiple addition ratios and glass versus plastic injection vials. Under its specific conditions, adsorption effects varied by analyte and concentration, were more important for several hydrophobic late-eluting compounds, and were generally greater in the tested plastic vials than in glass. The authors found methanol effective in reducing those effects. This is strong evidence for an experimental design, not evidence that every pesticide method needs the same vial or methanol percentage.",
+          "Separate four mechanisms in the investigation record: loss to a contact surface, poor analyte solubility or instability in the prepared solution, electrospray response changed by injection composition, and instrument or column carryover. Record preparation time, vial loading time, injection order, analyte class, retention, peak shape, internal-standard response and blank behaviour. If a filter or transfer tube is used, include it as its own contact step rather than treating the autosampler vial as the only possible surface.",
+        ],
+      },
+      {
+        heading: "Bracket methanol, vial material and hold time in one interpretable design",
+        paragraphs: [
+          "Build a small factorial study around the current controlled method. Use representative early- and late-eluting analytes, including the compounds that showed the original symptom, and test at least a low and a routine concentration. Compare the approved vial system with the proposed alternative and bracket a method-compatible methanol range. Prepare each composition from the same water, pesticide stock and internal-standard solutions, then randomise positions so that solvent composition or vial type is not aligned with autosampler location or source drift.",
+          "Measure an initial time point and justified later points within the laboratory's proposed autosampler window. Use fresh independent preparations where repeated piercing, evaporation or reinjection could become a confounder. Track absolute response, internal-standard-normalised response, calibration residuals, precision, retention and peak shape by analyte rather than averaging the complete panel. A mean recovery can hide failure of a hydrophobic compound while more polar analytes remain unaffected.",
+          "In the published study, 30% methanol-water performed well for its 15-analyte system, while the Shimadzu application for a different 52-analyte polar-pesticide method added 2 mL methanol to 8 mL sample before direct LC-MS/MS analysis. Those distinct examples show why composition is method-specific. Test a justified range that remains compatible with injection volume, initial gradient conditions, column focusing and ionisation. Do not convert either published ratio into a LANCHROM recommendation, universal acceptance criterion or substitute for local validation.",
+        ],
+        points: [
+          "Hold pesticide stock, water, internal standards, injection volume and LC-MS settings constant.",
+          "Randomise vial material and methanol condition across the sequence.",
+          "Evaluate low-level and routine-level samples at defined hold times.",
+          "Review each analyte and labelled standard, not only a panel average.",
+        ],
+      },
+      {
+        heading: "Run a methanol pesticide vial adsorption water UHPLC-MS lot bridge",
+        paragraphs: [
+          "Once the working methanol range and vial system are frozen, compare the approved outgoing lot with the candidate lot. Use the same bottle-opening procedure, pipettes, volumetric preparation, water lot, pesticide stocks, internal standards, vials, caps, analyst, autosampler temperature, column and instrument state. Alternate or randomise outgoing and candidate preparations in the sequence. A bridge performed after changing the organic percentage or vial material cannot determine whether a result follows the solvent lot or the revised procedure.",
+          "Use a control ladder that locates the source of a difference. Include solvent and water blanks, a prepared diluent blank, standards prepared directly in the final vial, standards exposed to every transfer or filtration step, and representative matrix samples where the method requires them. A post-contact or freshly prepared comparator can help distinguish surface loss from ionisation response. If the analytical procedure permits it, a retained portion transferred into a different qualified vial can test whether the pattern follows the container, but the transfer itself must be recorded as another contact event.",
+          "Documentation confirms identity and traceability but does not prove method suitability. Verify product name, grade, batch, package and certificate, then evaluate the analytical evidence defined in the protocol. Approval should be limited to the tested grade, package, methanol range, vial system, method and analyte panel. A difference that appears after a lot change is an investigation trigger, not proof of supplier causation; remake the smallest matched experiment capable of testing preparation error, container interaction, matrix dependence or instrument drift.",
+        ],
+      },
+      {
+        heading: "Connect direct-injection evidence to the water method's intended use",
+        paragraphs: [
+          "ISO/CD 26459 is currently a committee draft under development, not a published International Standard. Its scope includes pesticide and metabolite analysis in drinking water, groundwater and surface water by mass-spectrometric methods, including direct injection for LC and several extraction approaches. The draft notes that laboratories should characterise the performance of their own methods. It provides useful context for planning performance work, but its status must be checked before a laboratory cites or adopts it in a controlled procedure.",
+          "Directive (EU) 2020/2184 establishes pesticide parameters for water intended for human consumption and places monitoring decisions within the applicable regulatory framework. The analytical team should use the current directive, national implementation, accreditation scope and approved method to set analytes, reporting limits, validation characteristics and acceptance criteria. This article does not establish legal compliance or replace those controlled requirements.",
+          "Direct injection reduces preparation steps, yet it also sends the prepared sample and its organic modifier directly into the chromatographic system. A methanol level that improves surface recovery may change focusing, peak width, retention or electrospray response, especially if the injection plug is strong relative to the initial mobile phase. Evaluate those outputs alongside recovery. If the method uses dilution, extraction or online enrichment instead, reproduce that complete sample path because the dominant surface and composition risks may move to a different step.",
+        ],
+      },
+      {
+        heading: "Turn the experiment into an operating control",
+        paragraphs: [
+          "Record the selected methanol range, preparation order, mixing, vial and cap references, fill volume, filter or transfer materials, autosampler temperature, maximum hold time and reinjection rule. Define system suitability and analyte-specific checks before routine use. Trending should retain concentration and hold-time context; otherwise a slow response decline in low aqueous standards can disappear inside a daily pass/fail summary.",
+          "Specify when the study must be reopened. Relevant changes can include pesticide-panel expansion, a more hydrophobic analyte, lower reporting level, new vial or cap material, different filter, changed injection volume, revised initial mobile phase, new autosampler temperature, different methanol grade or package, and extended sample residence time. Use the laboratory's change-control process to decide whether a focused bridge, partial validation or broader redevelopment is appropriate.",
+          "Close every investigation with a bounded conclusion: surface interaction supported, solvent-lot effect supported, method-composition effect supported, or unresolved. State the tested conditions and uncertainty. A disciplined conclusion may approve a candidate methanol lot for one defined method while still requiring a separate assessment for another pesticide panel. That boundary is more useful than calling a solvent or vial universally suitable.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A French water laboratory investigates falling response in late-eluting pesticides",
+      context: "An illustrative laboratory observes progressive response loss for several hydrophobic pesticides in aqueous standards after both a methanol lot and autosampler-vial supply changed. Polar analytes and instrument checks remain stable, but the available data do not identify the cause.",
+      actions: [
+        "The team freezes the LC-MS method and compares outgoing and candidate methanol lots across a justified composition bracket using the same pesticide and internal-standard stocks.",
+        "It randomises qualified glass and proposed polypropylene vials, includes direct-to-vial and full-transfer preparations, and measures initial and defined autosampler hold-time responses.",
+        "Results are reviewed by analyte, concentration and contact path alongside peak shape, retention, internal-standard response, blanks and carryover.",
+        "Quality approves only the tested methanol, package, vial system and hold time, and records change triggers for the analyte panel, injection conditions and contact materials.",
+      ],
+      result: "The design can separate vial-related loss, preparation composition, solvent-lot response and instrument behaviour before a material decision is made. This is an illustrative scenario, not a LANCHROM customer result, a universal methanol recipe or evidence that one vial material is always superior.",
+    },
+    checklist: [
+      "Intended water matrix, pesticide panel and reporting range defined",
+      "Hydrophobic and late-eluting problem analytes identified",
+      "Current method and initial mobile-phase conditions frozen",
+      "Methanol range justified and calculated as final composition",
+      "Vial, cap, filter and transfer materials recorded by lot",
+      "Low and routine concentrations prepared independently",
+      "Initial and justified autosampler hold times compared",
+      "Outgoing and candidate methanol lots randomised in one study",
+      "Surface loss, stability, ionisation and carryover assessed separately",
+      "Peak shape, retention, blanks and internal-standard response reviewed",
+      "Approval scope limited to the tested method, grade and package",
+      "Uncertainty, deviations and future change triggers documented",
+    ],
+    sources: [
+      { label: "PubMed Central - Organic-solvent additions and pesticide adsorption in water UHPLC-MS/MS", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11722058/" },
+      { label: "ISO - ISO/CD 26459 water pesticide methods by GC-MS and LC-MS", href: "https://www.iso.org/standard/93527.html" },
+      { label: "EUR-Lex - Directive (EU) 2020/2184 on drinking-water quality", href: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32020L2184" },
+      { label: "Shimadzu - Direct LC-MS/MS determination of regulated pesticides and herbicides in water", href: "https://www.ssi.shimadzu.com/sites/ssi.shimadzu.com/files/pim/pim_document_file/ssi/applications/application_note/25331/LCMS-8060NX%20Application%20News%20-%20LCMS-8060NX_Determination%20of%20Regulated%20Polar%20Pesticides%20and%20Herbicides%20in%20Water%20by%20LC-MSMS.pdf" },
+    ],
+    productLinks: [
+      { label: "View HPLC Grade Methanol", href: "/products/hplc-grade-solvents/methanol" },
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Explore Water Testing", href: "/applications/water-testing" },
+      { label: "Explore Pesticide Residue Analysis", href: "/applications/pesticide-residue-analysis" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
