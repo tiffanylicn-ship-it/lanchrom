@@ -2470,6 +2470,108 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "isopropanol-post-column-polar-pesticide-icms",
+    title: "Isopropanol in Polar-Pesticide IC-MS: A Post-Column Response and Solvent-Lot Qualification Plan",
+    shortTitle: "Isopropanol in Polar-Pesticide IC-MS",
+    description: "An isopropanol post-column make-up solvent polar pesticide IC-MS workflow for comparing analyte response, blanks, recovery and solvent lots.",
+    primaryKeyword: "isopropanol post-column make-up solvent polar pesticide IC-MS",
+    tag: "Pesticide Residue Analysis",
+    readingTime: "11 min technical guide",
+    intro: "Using an isopropanol post-column make-up solvent in polar pesticide IC-MS can improve desolvation for some compounds while reducing useful response for others. The laboratory therefore needs more than a pooled sensitivity result or an LC-MS grade label. A defensible qualification compares no make-up flow, the current IPA and candidate lots under locked chromatography and source conditions, then decides analyte by analyte whether the post-column stream belongs in the method at all.",
+    painPoints: [
+      { title: "Response moves in opposite directions", detail: "The same IPA stream can increase peak area for one polar analyte and suppress another, so a panel average can hide a method-critical failure." },
+      { title: "Supplier or lot identity matters", detail: "A published IC-MS study found materially different compound-specific effects from three LC-MS-quality IPA sources; grade naming alone did not predict method behaviour." },
+      { title: "Background is mistaken for sensitivity", detail: "Higher area is not useful when solvent or procedural background also rises, signal-to-noise falls or recovery and ion ratios become unstable." },
+      { title: "Several variables change together", detail: "A new solvent, tee, flow rate, suppressor state or source tune is often introduced in one intervention, leaving no defensible root-cause conclusion." },
+    ],
+    sections: [
+      {
+        heading: "Decide whether a post-column organic stream is needed",
+        paragraphs: [
+          "Suppressed anion chromatography delivers a largely aqueous effluent to the mass spectrometer. Adding an organic solvent after the suppressor can change droplet formation and desolvation, but it also changes the chemical environment entering the ion source. Treat post-column addition as a method variable, not as a routine accessory. State the decision first: is the study screening an optional make-up stream, transferring an established method, investigating lost response or qualifying a replacement IPA lot?",
+          "Thermo Fisher's 2026 customer application note provides a direct caution. In a validated water IC-MS/MS workflow, the authors compared no make-up solvent with three sources of LC-MS-quality IPA at a fixed post-column flow. The effects were compound-specific and source-dependent. Some peak areas increased, while AMPA, glufosinate, glyphosate and maleic hydrazide showed losses under one or more IPA conditions. Signal-to-noise did not necessarily follow peak area. The authors ultimately omitted make-up solvent from that method because the sensitivity and recovery effects were undesirable and unpredictable.",
+          "That result is valuable evidence for experimental design, not a universal verdict. It came from a defined suppressed-IC system, water matrices, analyte panel, plumbing configuration, flow and source tune. A food extract, different suppressor, alternate ion source or other pesticide panel may behave differently. Begin with a genuine no-make-up control and require the IPA stream to demonstrate a useful, reproducible benefit for the intended method rather than assuming that more organic solvent means better ionisation.",
+        ],
+      },
+      {
+        heading: "Lock the IC-MS system before comparing IPA conditions",
+        paragraphs: [
+          "Draw the flow path from the suppressor outlet to the source. Record tee material and position, capillary dimensions, total delay volume, make-up pump and mixer, IPA flow, analytical flow, source connection and waste or divert-valve timing. Hold the eluent generator or mobile phase, suppressor condition, column, temperature, injection volume and gradient constant. On the detector side, lock polarity, spray voltage, gas settings, temperatures, transition list, dwell or cycle time and integration rules. A candidate IPA should not receive a fresh source clean or a more favourable tune than the no-make-up control.",
+          "Use a balanced sequence that prevents instrument drift from aligning with solvent identity. Alternate or randomise no-make-up, outgoing IPA and candidate IPA blocks; include conditioning injections; and use the same standards, internal standards and representative matrices. If switching requires flushing, define the volume and equilibration time from measured system volume rather than visual judgement. Record pressure, spray stability and any leakage or bubble formation because a response change can originate in delivery rather than chemistry.",
+          "Keep the make-up solvent composition simple during the first comparison. If additive concentration, water content or a second organic component also changes, the study cannot assign the response to IPA. When an established method uses an additive, prepare matched solutions with the same stock and verified volumes. A secondary experiment can then examine additive or flow robustness after the basic no-make-up and IPA comparison is understood.",
+        ],
+        points: [
+          "Fix tee position, analytical flow, IPA flow and source settings before the sequence starts.",
+          "Use the same standards, internal standards, matrices and integration method across conditions.",
+          "Document switching and equilibration volumes so residual solvent does not blur the comparison.",
+        ],
+      },
+      {
+        heading: "Evaluate every analyte, blank and matrix separately",
+        paragraphs: [
+          "Build a response table by analyte rather than reporting one average percentage. At minimum, compare peak area or height, internal-standard-normalised response where available, signal-to-noise, ion ratio, retention, peak shape and precision. Review the low end of the calibration range and the reporting level, not only abundant standards. A large area increase can still be a poor outcome if noise rises more quickly, identification ratios drift or the calibration model becomes less reliable.",
+          "Use a blank ladder to locate background: instrument or mobile-phase blank, no-make-up blank, direct IPA or make-up-solution blank, full procedural blank and extracted blank matrix. The SANTE/11312/2021 v2026 guidance includes procedural blanks in validation design and specifically recognises that target-analyte background can arise from glassware, extraction solvents or eluents. It calls for measures to minimise that background and routine reagent blanks where variable contamination could cause false positives or inflated results. Apply the laboratory's controlled method and reporting rules rather than importing acceptance limits from this article.",
+          "Recovery and matrix effects must also stay visible. SANTE v2026 treats ongoing recovery checks as performance verification and recommends that critical aspects of the scope be represented. The EURL-SRM record for highly polar pesticides in plant commodities likewise notes that matrix effects can strongly impair determination and describes an online SPE-LC-MS/MS response to that problem. It is a different separation workflow, but it reinforces why a solvent comparison performed only in neat water standards cannot qualify a food or feed method.",
+        ],
+      },
+      {
+        heading: "Run an isopropanol post-column make-up solvent polar pesticide IC-MS lot bridge",
+        paragraphs: [
+          "Start while a serviceable outgoing lot remains. Confirm exact product, grade, batch, package, certificate and opening history for both lots. Documentation establishes identity and release status; it does not prove that the candidate will reproduce compound-specific IC-MS behaviour. The LANCHROM document library lists a separate LC-MS IPA family, but users should request the current controlled specification, safety data sheet and batch-specific certificate and then qualify the material in their own method.",
+          "Use a staged bridge. First, run no-make-up and direct-solvent blanks to establish the system and solvent background. Second, compare outgoing and candidate IPA with the same multi-analyte standards across the calibrated range. Third, analyse procedural blanks, fortified matrix and representative routine material using the approved preparation. Where internal standards are available, examine both absolute and normalised response because normalisation may correct some variability while hiding a large loss in raw sensitivity.",
+          "Predefine the decision structure. The laboratory may retain IPA for all analytes, restrict it to a defined panel, qualify one lot but reject another, or remove make-up flow if the no-make-up condition is more robust. Set method-specific acceptance criteria before reviewing the data and require that every reportable analyte remains fit for purpose. Do not rescue a failed compound by averaging it with analytes that improved. If the method is used for official-control work, document how the chosen condition supports the applicable validation, recovery and identification requirements.",
+          "When a difference appears, repeat the smallest controlled experiment that can locate it. A retained aliquot tests whether the effect follows the IPA bottle; a matched make-up preparation tests dilution error; reversing pump channels tests delivery hardware; a no-matrix sequence tests whether the change requires matrix; and a controlled source check tests whether contamination or tuning drift explains it. Keep the observation, material disposition and root-cause confidence as separate conclusions.",
+        ],
+      },
+      {
+        heading: "Maintain the method through routine controls and change management",
+        paragraphs: [
+          "Translate the qualification into a short control plan. Identify the approved IPA grade, package, lot-introduction test, make-up composition and flow, switching procedure, blank sequence, representative recovery checks and system-suitability responses. Trend analyte-resolved response, signal-to-noise, blank features, internal-standard behaviour and source maintenance together. This makes it easier to distinguish a gradual source problem from an abrupt solvent or preparation change.",
+          "Define triggers for partial or full reassessment: a different supplier, grade, manufacturing source, package or closure; a revised make-up flow; replacement of the tee or capillary; suppressor or column change; source hardware or tuning change; expanded analyte scope; new commodity group; or a reporting-level change. Commission Implementing Regulation (EU) 2026/748 establishes the coordinated 2027-2029 Union pesticide-control programme and includes polar pesticides such as glyphosate and glufosinate in scheduled monitoring. It creates planning context, but it does not prescribe this IC-MS configuration, require IPA or replace laboratory validation.",
+          "Close each bridge with an explicit scope: accepted for the named method, analyte panel, matrices, grade and package; rejected with an assignable reason; or unresolved pending targeted work. Preserve chromatograms, raw data, preparation records and deviations. The useful claim is narrow and auditable: the tested IPA lot was suitable for a defined post-column IC-MS use under stated conditions. Avoid extending that decision to every polar pesticide method or every LC-MS application.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A German residue laboratory investigates a response shift after changing IPA source",
+      context: "An illustrative official-control laboratory uses suppressed IC-MS for a polar-analyte panel. After an IPA source change, several compounds gain peak area while glyphosate-related and glufosinate responses fall, and the team must decide whether the solvent, delivery path, matrix or source state explains the pattern.",
+      actions: [
+        "The laboratory locks the suppressor, tee, flows, column, source tune and standards, then compares no-make-up flow, retained outgoing IPA and the candidate lot in a balanced sequence.",
+        "It reviews every analyte's absolute and internal-standard-normalised response, signal-to-noise, ion ratio, calibration behaviour and precision rather than using a panel average.",
+        "Direct-solvent, procedural and extracted-matrix blanks are paired with fortified matrices to separate solvent background, recovery and matrix effects.",
+        "A targeted repeat follows the response difference back to the IPA condition, after which quality limits approval to the tested panel, matrices, package and post-column settings.",
+      ],
+      result: "The study can support retaining, restricting or removing the IPA stream without assuming that an organic make-up solvent always improves ionisation. This is an illustrative scenario, not a LANCHROM customer result, a guaranteed sensitivity outcome or a prescribed official-control method.",
+    },
+    checklist: [
+      "Intended method decision and reportable analyte panel defined",
+      "No-make-up condition included as a genuine control",
+      "Suppressor, tee, tubing, flows and source settings locked",
+      "Outgoing and candidate IPA identity, batch, package and history recorded",
+      "Switching volume and equilibration time documented",
+      "Direct IPA, procedural and extracted-matrix blanks included",
+      "Low-level standards and representative matrices tested",
+      "Peak response, signal-to-noise, ion ratios and precision reviewed by analyte",
+      "Recovery and matrix effects assessed under the approved method",
+      "Acceptance criteria fixed before data review",
+      "Approval scope and any analyte restrictions stated explicitly",
+      "Raw data, deviations, investigations and future change triggers retained",
+    ],
+    sources: [
+      { label: "Thermo Fisher Scientific - Polar-anionic-pesticide IC-MS/MS validation and IPA-source comparison", href: "https://documents.thermofisher.com/TFS-Assets/CMD/Application-Notes/can-000166-ic-ics-6000-drinking-water-polar-anionic-pesticides-can000166-na-en.pdf" },
+      { label: "European Commission - SANTE/11312/2021 v2026 pesticide-residue quality-control guidance", href: "https://food.ec.europa.eu/system/files/2023-11/pesticides_mrl_guidelines_wrkdoc_2021-11312.pdf" },
+      { label: "EUR-Lex - Commission Implementing Regulation (EU) 2026/748", href: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R0748" },
+      { label: "EURL-SRM - Online SPE-LC-MS/MS for highly polar pesticide residues", href: "https://eurl-pesticides.eu/docs/public/tmplt_article.asp?CntID=1337&LabID=200&Lang=EN" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade IPA", href: "/products/lcms-solvents/ipa-for-lc-ms" },
+      { label: "View HPLC Grade IPA", href: "/products/hplc-grade-solvents/ipa" },
+      { label: "Explore Pesticide Residue Analysis", href: "/applications/pesticide-residue-analysis" },
+      { label: "Explore Food Safety Testing", href: "/applications/food-safety-testing" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
