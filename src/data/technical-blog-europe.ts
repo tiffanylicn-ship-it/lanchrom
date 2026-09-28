@@ -2470,6 +2470,107 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "acetonitrile-igg-glycopeptide-hilic-spe-qualification",
+    title: "Acetonitrile for IgG Glycopeptide HILIC-SPE: A Solvent-Composition and Lot-Qualification Workflow",
+    shortTitle: "Acetonitrile Qualification for IgG Glycopeptide HILIC-SPE",
+    description: "An acetonitrile HILIC SPE glycopeptide enrichment qualification workflow covering solvent composition, neutral and sialylated glycoforms, blanks and lot bridging.",
+    primaryKeyword: "acetonitrile HILIC SPE glycopeptide enrichment qualification",
+    tag: "Glycoproteomics Qualification",
+    readingTime: "11 min technical guide",
+    intro: "Acetonitrile HILIC SPE glycopeptide enrichment qualification is not a certificate-only exercise. In an IgG digest, the percentage of organic solvent, acidifier, sorbent chemistry and sample water all influence which glycopeptides are retained, washed away or co-eluted with non-glycosylated peptides. A useful qualification therefore fixes the enrichment method, compares outgoing and candidate acetonitrile lots in parallel, and evaluates neutral and sialylated glycoforms separately before routine LC-MS analysis.",
+    painPoints: [
+      { title: "A published solvent composition is treated as universal", detail: "Loading and wash percentages developed for one sorbent, digest and glycopeptide population may not transfer unchanged to another HILIC-SPE workflow." },
+      { title: "Sialylated glycopeptide loss is assigned to the solvent", detail: "Charge, hydrophilicity, acidifier and sample preparation can shift recovery, so a low signal does not by itself identify an acetonitrile-lot effect." },
+      { title: "Several variables change during the lot bridge", detail: "New sorbent, digest, conditioning volume, acidifier or evaporation conditions can align with the candidate lot and make the comparison uninterpretable." },
+      { title: "Enrichment and analytical HILIC are conflated", detail: "A HILIC-SPE recovery change and a HILIC-column retention shift are different investigations and require different controls." },
+    ],
+    sections: [
+      {
+        heading: "Define the HILIC-SPE enrichment decision before selecting a composition",
+        paragraphs: [
+          "Begin with the decision the enrichment must support. Record the IgG source, digestion procedure, expected glycopeptide classes, sorbent chemistry, sample load, downstream LC-MS method and the outputs used to accept the preparation. Include representative neutral and sialylated glycoforms rather than reducing the result to total glycopeptide signal. The aim is to determine whether the enrichment remains suitable when the acetonitrile lot changes, not to prove that one organic percentage is best for every glycoprotein method.",
+          "Published procedures are starting points. A 2024 study of aminopropyl HILIC-SPE evaluated organic solvent identity, acidifier and acetonitrile concentration because these conditions produced glycopeptide-specific effects. Its reported conditioning, loading, washing and elution compositions belong to that study's materials and design. They can inform a laboratory experiment, but they are not LANCHROM specifications or universal instructions. Establish the laboratory's controlled method and acceptance criteria before comparing solvent lots.",
+        ],
+        points: [
+          "Name the glycopeptide classes and LC-MS outputs that determine fitness for use.",
+          "Keep HILIC-SPE enrichment separate from analytical HILIC-column troubleshooting.",
+          "Treat literature compositions as method-development evidence, not automatic release limits.",
+        ],
+      },
+      {
+        heading: "Control conditioning, loading, washing and elution as one composition system",
+        paragraphs: [
+          "Write each SPE step as a measured composition. Record acetonitrile and water fractions, acidifier identity and concentration, preparation order, actual volumes, contact time, flow or centrifugation conditions and the water introduced with the digest. The nominal loading mixture can differ from the effective mixture when an aqueous digest is added to organic solvent. Prepare outgoing- and candidate-lot solutions by the same sequence, with calibrated devices and the same reagent-water and acidifier lots, so that solvent identity is the intended difference.",
+          "Organic solvent identity can change selectivity as well as overall recovery. A ZIC-HILIC enrichment study found that acetonitrile provided the best compromise for its experimental glycopeptide set, while other alcohols favoured different subsets or increased co-enrichment of unmodified peptides. That result should not be transferred directly across sorbents. Within an established acetonitrile method, monitor composition-sensitive outcomes: glycopeptide recovery, non-glycosylated peptide carryover, neutral-to-sialylated coverage and replicate precision. Do not use extract clarity or total signal as the sole acceptance result.",
+        ],
+      },
+      {
+        heading: "Run a paired outgoing-and-candidate acetonitrile lot bridge",
+        paragraphs: [
+          "Start the bridge while an approved outgoing lot is still available. Verify chemical identity, grade, batch, package and certificate for both lots, but use the enrichment experiment to establish method suitability. Split one homogeneous IgG digest across matched preparations. Hold digest load, sorbent lot, conditioning and wash composition, acidifier, elution, evaporation, reconstitution and LC-MS sequence constant. Alternate or randomise preparation positions and injection order so that bench position or source drift does not become the apparent lot effect.",
+          "Build controls with distinct purposes. A reagent blank tests the preparation path; a non-enriched digest reference shows the material entering SPE; a pooled enriched quality-control sample monitors the analytical sequence; and replicate enrichments estimate preparation precision. If a difference appears, repeat the smallest controlled comparison capable of locating it. Changing the sorbent or acidifier during the investigation may improve a signal, but it no longer answers whether the acetonitrile lots were equivalent in the approved method.",
+        ],
+        points: [
+          "Use one homogeneous digest and one sorbent lot for the primary comparison.",
+          "Bracket or randomise lots across preparation and injection order.",
+          "Retain enough outgoing and candidate material for a targeted repeat.",
+        ],
+      },
+      {
+        heading: "Interpret glycoform coverage, recovery and carryover without over-assigning cause",
+        paragraphs: [
+          "Review predefined glycopeptides individually and by meaningful class. Compare peak-area ratios to an appropriate reference, total and class-specific recovery, detection consistency, replicate variation, retention, mass accuracy and non-glycosylated peptide carryover. Neutral and sialylated structures can respond differently to enrichment conditions, so an unchanged total signal can conceal selective loss. Conversely, one low-abundance feature should not reject a solvent lot without confirming integration, identification evidence and precision near the method's working range.",
+          "Separate preparation effects from downstream LC-MS behaviour. Reinjecting a pooled enriched sample can test analytical repeatability, but it cannot reproduce an SPE recovery loss. A non-enriched or post-enrichment reference can help locate suppression or response changes, while preparation replicates show whether the difference follows the enrichment. Analytical HILIC guidance may help interpret sample-solvent compatibility and chromatographic retention, yet it does not replace the SPE controls. Document unresolved effects instead of forcing every difference into a solvent-pass or solvent-fail conclusion.",
+        ],
+      },
+      {
+        heading: "Release the lot with a method-scoped change-control record",
+        paragraphs: [
+          "Approve or reject the candidate against criteria defined by the laboratory's validated use. The record should link product, grade, batch and package to the IgG digest, sorbent, enrichment procedure, LC-MS method, raw data, calculations, deviations and reviewer decision. State exactly what was qualified: for example, one aminopropyl HILIC-SPE procedure for a defined IgG glycopeptide panel. A successful bridge does not automatically qualify another glycoprotein, sorbent chemistry, acidifier, scale or analytical platform.",
+          "Maintain the control by trending procedural blanks, pooled quality controls, representative neutral and sialylated glycopeptides, carryover and preparation precision. Define requalification triggers such as a solvent grade or package change, revised sorbent, altered organic percentage, new acidifier, different digestion workflow, expanded glycoform scope or material LC-MS change. This turns acetonitrile lot introduction into a reproducible quality decision while leaving method optimisation separate and scientifically traceable.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A Swiss biosimilar laboratory bridges acetonitrile lots for IgG glycopeptide enrichment",
+      context: "An illustrative laboratory uses aminopropyl HILIC-SPE before LC-MS glycopeptide mapping. A candidate acetonitrile lot must replace the outgoing lot without confusing solvent effects with sorbent, acidifier, digest or instrument changes.",
+      actions: [
+        "The team splits one homogeneous IgG digest and fixes load, sorbent lot, conditioning, wash, acidifier, elution, evaporation and reconstitution across both acetonitrile lots.",
+        "Matched procedural blanks and replicate enrichments are prepared in alternating positions, followed by a pooled enriched quality-control sample in the LC-MS sequence.",
+        "Neutral and sialylated glycoform coverage, non-glycosylated peptide carryover, class-specific recovery, precision and retention are reviewed instead of relying on total signal alone.",
+        "Quality limits approval to the tested HILIC-SPE procedure and records triggers for sorbent, composition, digestion, package and platform changes.",
+      ],
+      result: "The bridge can show whether the candidate lot is suitable for the defined enrichment workflow and can direct an investigation when a difference follows preparation or LC-MS analysis. This is an illustrative scenario, not a customer result, a universal composition or a guaranteed product-performance claim.",
+    },
+    checklist: [
+      "IgG source, digest procedure and intended decision defined",
+      "Representative neutral and sialylated glycopeptides selected",
+      "Sorbent chemistry, lot and sample load held constant",
+      "Conditioning, loading, wash and elution compositions recorded",
+      "Water contribution from the digest included in the composition",
+      "Acidifier identity, lot and concentration controlled",
+      "Outgoing and candidate acetonitrile lots prepared in parallel",
+      "Procedural blanks and preparation replicates included",
+      "Pooled enriched quality control used during LC-MS analysis",
+      "Recovery, class coverage, precision and peptide carryover reviewed",
+      "Product, grade, batch, package and certificate linked to raw data",
+      "Approval scope and requalification triggers documented",
+    ],
+    sources: [
+      { label: "International Journal of Molecular Sciences - Optimising HILIC-SPE for glycopeptide enrichment", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10901958/" },
+      { label: "Scientific Reports - Organic solvent effects in ZIC-HILIC glycopeptide enrichment", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5203826/" },
+      { label: "NCBI Bookshelf - HILIC glycan and glycopeptide sample preparation", href: "https://www.ncbi.nlm.nih.gov/books/NBK593815/" },
+      { label: "Waters - HILIC glycopeptide mapping with a wide-pore amide phase", href: "https://www.waters.com/nextgen/en/library/application-notes/2015/hilic-glycopeptide-mapping-with-a-wide-pore-amide-stationary-phase.html" },
+    ],
+    productLinks: [
+      { label: "View HPLC Grade Acetonitrile", href: "/products/hplc-grade-solvents/acetonitrile" },
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Explore LC-MS Analysis", href: "/applications/lcms-analysis" },
+      { label: "Explore Pharmaceutical Analysis", href: "/applications/pharmaceutical-analysis" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
