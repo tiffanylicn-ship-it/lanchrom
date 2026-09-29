@@ -2470,6 +2470,112 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "methanol-pmo-plasma-protein-precipitation-lcms-qualification",
+    title: "Methanol Precipitation for PMO Plasma LC-MS/MS: A Recovery, Matrix-Effect and Lot-Qualification Plan",
+    shortTitle: "Methanol Qualification for PMO Plasma LC-MS/MS",
+    description: "A methanol PMO plasma protein precipitation LC-MS qualification plan covering recovery, matrix effect, low-adsorption flow paths and solvent-lot bridging.",
+    primaryKeyword: "methanol PMO plasma protein precipitation LC-MS qualification",
+    tag: "Oligonucleotide Bioanalysis",
+    readingTime: "11 min technical guide",
+    intro: "Methanol PMO plasma protein precipitation LC-MS qualification is not a choice between a high recovery number and a solvent certificate. Phosphorodiamidate morpholino oligomers have a neutral backbone and method-specific plasma behaviour that can differ from phosphorothioate antisense oligonucleotides or siRNA. A useful qualification therefore connects precipitation recovery, residual-matrix ionisation effects, adsorption across the LC flow path and the quality-system impact of a solvent-lot change before the methanol is released for a defined assay.",
+    painPoints: [
+      { title: "One oligonucleotide workflow is applied to every chemistry", detail: "A precipitation condition that suits a neutral-backbone PMO may perform poorly for a highly charged or strongly protein-bound oligonucleotide." },
+      { title: "Recovery and matrix effect are collapsed into one response", detail: "A high extracted peak can hide ion enhancement or suppression, while a lower peak can reflect precipitation loss, adsorption or chromatography rather than the methanol lot." },
+      { title: "Metal-surface adsorption is mistaken for extraction loss", detail: "PMO response can change across injectors, connectors, tubing, frits and columns, so sample preparation cannot be qualified without controlling the analytical flow path." },
+      { title: "A lot change enters during validation without a scoped bridge", detail: "Changing methanol beside plasma source, preparation ratio or LC hardware makes it difficult to decide whether targeted partial validation is sufficient." },
+    ],
+    sections: [
+      {
+        heading: "Define the PMO and intended bioanalytical decision first",
+        paragraphs: [
+          "Begin with the molecule rather than the generic word oligonucleotide. Record the PMO sequence and length, backbone and conjugation state, intended species and plasma matrix, anticoagulant, expected concentration range, sample volume and study purpose. Identify whether the assay supports exploratory screening, nonclinical pharmacokinetics or regulated study-sample analysis. The required evidence and documentation depend on that intended use, and a result for one PMO should not be assumed to cover a different chemistry.",
+          "A 2026 peer-reviewed study developed a plasma LC-MS/MS method for viltolarsen and tested another PMO sequence. In its rat-plasma experiments, methanol protein precipitation produced recoveries of 93.4% and 102% at two studied viltolarsen concentrations, compared with 60.3% and 58.5% for acetonitrile. The study also evaluated human plasma and a second PMO. Those findings support a PMO-specific development hypothesis, not a universal methanol recovery claim, a LANCHROM specification or a replacement for validation in the laboratory's own matrix and method.",
+          "Keep the comparison boundary explicit. The same paper explains that PMOs have a neutral backbone and relatively low plasma-protein binding, while other oligonucleotides such as phosphorothioate antisense oligonucleotides can behave differently during precipitation. Earlier regulated PMOplus work used automated solid-phase extraction for human plasma, demonstrating that SPE remains a legitimate comparator when recovery, selectivity, automation or robustness requirements favour it. The development decision is whether methanol precipitation is fit for this analyte and purpose, not whether it is categorically superior to every extraction strategy.",
+        ],
+      },
+      {
+        heading: "Develop methanol protein precipitation as a controlled sample-processing step",
+        paragraphs: [
+          "Map every addition that determines the final preparation. Fix plasma volume, methanol-to-plasma ratio, internal-standard solution, addition order, mixing device and duration, temperature, contact time, centrifugation force and time, transfer volume, evaporation endpoint and reconstitution composition. Record the tube or plate material and the time between preparation and injection. A solvent comparison is interpretable only when these variables do not align with the candidate methanol lot.",
+          "Use a small, justified development range instead of copying one published ratio. Compare methanol and an appropriate existing preparation only where the method question requires it. At each condition, measure more than visual pellet formation: include analyte and internal-standard recovery, supernatant transfer, replicate precision, blank response and any evidence of precipitation carryover. If evaporation or concentration is part of the workflow, challenge it separately because incomplete reconstitution or surface loss can look like poor precipitation recovery.",
+          "Freeze the operating procedure before beginning the material bridge. If methanol percentage, mixing energy and reconstitution are optimised at the same time as the lot comparison, a favourable result cannot be assigned to the material. Retain enough outgoing and candidate solvent to repeat a targeted comparison after an anomalous result, and document container opening and dispensing history so the tested material can be reconstructed.",
+        ],
+        points: [
+          "Calculate the final solvent composition from every liquid addition.",
+          "Keep precipitation development separate from solvent-lot qualification.",
+          "Use measured recovery and precision rather than pellet appearance as the decision basis.",
+        ],
+      },
+      {
+        heading: "Separate PMO recovery, matrix effect and low-adsorption flow-path performance",
+        paragraphs: [
+          "Build a control ladder with distinct questions. A neat reference checks instrument response without plasma. A post-extraction spike challenges the processed matrix and ion source while bypassing most preparation loss. A pre-extraction spike passes through precipitation, transfer, concentration and reconstitution. Extracted blank plasma tests endogenous interference, and a procedural solvent blank follows the preparation without plasma. Review analyte and internal-standard behaviour together, while recognising that a small-molecule internal standard may not reproduce every PMO loss mechanism.",
+          "The 2026 PMO study illustrates the trade-off. Methanol improved recovery for the tested PMOs, but the crude precipitate created stronger ion suppression under the study's HILIC conditions. Gradient reversed-phase chromatography reduced the observed suppression. This does not establish RPLC as the answer for every PMO method; it shows why precipitation recovery and matrix effect must be assessed separately and why the chromatographic method is part of the sample-preparation decision.",
+          "Control adsorption as a third mechanism. Oligonucleotide response can be affected by contact with metallic surfaces in the injector, connectors, tubing, frits and column. The study observed a higher PMO response with its reduced-interaction column than with the conventional comparison column. A laboratory bridge should therefore keep the complete flow path, conditioning history, column lot and injection sequence constant. If response differs, compare retained extracts or post-extraction spikes before concluding that the methanol lot changed extraction recovery.",
+        ],
+      },
+      {
+        heading: "Run a paired methanol PMO plasma protein precipitation LC-MS qualification bridge",
+        paragraphs: [
+          "Start while the approved outgoing methanol lot is still available. Verify the exact product, grade, batch, package and certificate for both lots, but treat documentation as identity and release evidence rather than proof of assay suitability. Split shared plasma pools and analyte stocks across matched outgoing- and candidate-lot preparations. Alternate or randomise plate positions and injection order so sample age, edge effects or source drift do not become the apparent lot difference.",
+          "Use matrices representative of the intended scope. ICH M10 describes matrix-effect evaluation across independent matrix sources or lots for chromatographic methods and expects the matrix used in validation to reflect study samples. The laboratory's approved protocol should define the number of sources, concentrations, replicates and acceptance limits. Include haemolysed or lipaemic challenges where scientifically relevant to the intended population; do not infer those limits from the solvent supplier or from this article.",
+          "Review recovery, matrix factor or equivalent matrix-response evidence, selectivity, accuracy, precision, carry-over, dilution integrity and stability according to the method stage. Also compare pressure, retention, peak shape, internal-standard response, adsorption-sensitive behaviour and processed-sample reinjection where applicable. When a difference appears, repeat the smallest diagnostic experiment that can locate it: a matched preparation repeat, post-extraction spike, alternate plasma source, dry-down-free comparison or retained-extract reinjection.",
+        ],
+        points: [
+          "Use common plasma, analyte and internal-standard stocks for the primary lot comparison.",
+          "Prevent plate position and injection order from matching solvent identity.",
+          "Separate material disposition from the confidence assigned to a suspected root cause.",
+        ],
+      },
+      {
+        heading: "Set the validation scope and maintain a method-specific control strategy",
+        paragraphs: [
+          "ICH M10 states that modifications to an already fully validated method may be evaluated by partial validation, with the scope determined by the nature and extent of the change. Its examples for chromatographic methods include a change in sample-processing procedures, analytical method, sample volume, matrix and storage conditions. A methanol lot replacement is not automatically identical to changing the precipitation procedure, but the laboratory should use documented risk assessment and method history to decide whether a focused lot bridge, partial validation or broader work is warranted.",
+          "Record what the approval covers: the named PMO assay, plasma species and anticoagulant, methanol grade and package, preparation procedure, LC-MS platform and controlled flow path. Link raw data, calculations, deviations and reviewer decisions to the material identity. The EMA oligonucleotide manufacturing guideline is still a consultation-closed draft and addresses development and manufacture rather than serving as a direct bioanalytical validation rule; it can provide quality context but should not be cited as final law for the assay.",
+          "Maintain the qualified state by trending procedural blanks, recovery controls, matrix response, accuracy and precision, carry-over, retention and adsorption-sensitive signals. Define requalification triggers such as a new methanol grade or package, changed precipitation ratio, different plasma matrix, revised PMO sequence or conjugate, new internal standard, altered evaporation, different column surface or LC-MS platform. Close every bridge as accepted within a named scope, rejected with an assignable cause, or unresolved pending further evidence.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A Swiss DMPK laboratory introduces a methanol lot during PMO assay validation",
+      context: "An illustrative laboratory is validating a plasma LC-MS/MS assay for a neutral-backbone PMO. Methanol precipitation has been selected during development, and the approved solvent lot will not cover the remaining validation runs.",
+      actions: [
+        "The team reserves outgoing methanol and prepares matched candidate-lot sets from shared rat and human plasma pools while holding ratio, mixing, temperature, centrifugation, transfer, evaporation and reconstitution constant.",
+        "Pre-extraction spikes, post-extraction spikes, extracted blanks and neat references are used to separate precipitation recovery from matrix response and instrument behaviour.",
+        "The same low-adsorption flow path, column, conditioning history and bracketed injection sequence are used for both lots, with recovery, matrix effect, accuracy, precision and carry-over reviewed together.",
+        "Quality documents the change assessment, limits approval to the tested PMO assay and determines the partial-validation scope from the approved protocol and ICH M10 principles.",
+      ],
+      result: "The bridge can show whether the candidate lot remains suitable for the defined assay and whether any difference follows precipitation, plasma matrix or LC surfaces. This is an illustrative scenario, not a customer result, a universal PMO method or a claim that methanol guarantees regulatory acceptance.",
+    },
+    checklist: [
+      "PMO sequence, backbone, conjugation state and intended use defined",
+      "Species, plasma matrix, anticoagulant and concentration range documented",
+      "Methanol ratio, addition order, mixing and temperature controlled",
+      "Centrifugation, transfer, evaporation and reconstitution fixed",
+      "Neat, procedural, extracted-matrix and zero blanks included",
+      "Pre-extraction and post-extraction spikes compared",
+      "Recovery and matrix effect evaluated as separate characteristics",
+      "Low-adsorption flow path and column state held constant",
+      "Representative independent plasma sources or lots assessed",
+      "Outgoing and candidate methanol lots prepared in matched sets",
+      "Product, grade, batch, package and certificate linked to raw data",
+      "Approval scope, partial-validation rationale and change triggers recorded",
+    ],
+    sources: [
+      { label: "Drug Metabolism and Pharmacokinetics - Methanol precipitation for PMO plasma LC-MS/MS", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12997995/" },
+      { label: "Bioanalysis - Regulated PMOplus plasma LC-MS/MS using automated SPE", href: "https://pubmed.ncbi.nlm.nih.gov/28520455/" },
+      { label: "EMA - ICH M10 bioanalytical method validation", href: "https://www.ema.europa.eu/en/ich-m10-bioanalytical-method-validation-scientific-guideline" },
+      { label: "EMA - Draft guideline on development and manufacture of oligonucleotides", href: "https://www.ema.europa.eu/en/development-manufacture-oligonucleotides-scientific-guideline" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Methanol", href: "/products/lcms-solvents/methanol" },
+      { label: "View HPLC Grade Methanol", href: "/products/hplc-grade-solvents/methanol" },
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Explore Clinical Mass Spectrometry", href: "/applications/clinical-mass-spec" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
