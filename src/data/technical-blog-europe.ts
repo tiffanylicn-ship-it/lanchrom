@@ -2576,6 +2576,113 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Explore Clinical Mass Spectrometry", href: "/applications/clinical-mass-spec" },
     ],
   },
+  {
+    slug: "acetonitrile-automated-medicinal-cannabis-pesticide-extraction",
+    title: "Acetonitrile Automated Pesticide Extraction for Medicinal Cannabis: An LC-MS Qualification Plan",
+    shortTitle: "Automated Medicinal-Cannabis Pesticide Extraction",
+    description: "An acetonitrile automated pesticide extraction medicinal cannabis LC-MS qualification plan for rehydration, blank control, robotic transfer and solvent-lot bridging.",
+    primaryKeyword: "acetonitrile automated pesticide extraction medicinal cannabis LC-MS qualification",
+    tag: "Medicinal Cannabis LC-MS",
+    readingTime: "11 min technical guide",
+    intro: "Acetonitrile automated pesticide extraction medicinal cannabis LC-MS qualification has to control more than the solvent bottle. Dried flowering material is heterogeneous and resinous, a miniaturised preparation magnifies small liquid-handling errors, and a robotic sequence can reproduce a biased transfer as consistently as a correct one. A defensible qualification plan therefore connects comminution, controlled rehydration, acetonitrile identity, filtration, procedural blanks, matrix-matched recovery and instrument response before a laboratory releases a method or a new solvent lot.",
+    painPoints: [
+      { title: "A small test portion may not represent the batch", detail: "Flower, leaf fragments, resin-rich surfaces and variable particle size can make a precise robotic extraction unrepresentative when comminution and sub-sampling are weak." },
+      { title: "Microlitre errors change the effective extraction", detail: "At miniaturised scale, water and acetonitrile dispensing, evaporation, transfer height and residual volume can alter the extraction ratio and the final matrix load." },
+      { title: "Blank background can be assigned to the plant", detail: "Pesticides or interfering features may follow solvent, water, vials, filters, the liquid handler or the LC-MS sequence rather than the cannabis test portion." },
+      { title: "A solvent-lot change overlaps with method transfer", detail: "Introducing a new acetonitrile lot while changing rehydration, robotic scripts, filtration or calibration prevents a clear material-suitability decision." },
+    ],
+    sections: [
+      {
+        heading: "Define the medicinal-cannabis decision before miniaturising the method",
+        paragraphs: [
+          "Start with the intended analytical decision: routine screening, quantitative release testing, investigation of a suspected residue, or transfer of an already validated procedure. Record the material type, target list, reporting range, required identification evidence, reference or action limits, and the markets and quality system that govern the result. Name dried flowering tops explicitly when that is the validated matrix.",
+          "A 2026 Talanta study provides a useful development example. The authors coupled a robotic preparation platform to UHPLC-MS/MS and used 30 mg of dried Cannabis sativa flowering tops, 50 microlitres of water for rehydration and 200 microlitres of acetonitrile as the sole extraction solvent. They evaluated characteristics including repeatability, linearity, quantification limits, recovery and accuracy. Those volumes and results belong to the published platform, samples and analyte panel. They are not a universal cannabis procedure, a LANCHROM specification or evidence that another laboratory can omit its own verification.",
+          "The quality context must also remain precise. EDQM states that the European Pharmacopoeia Cannabis flower monograph 3028 became the legally binding European standard on 1 July 2024. Germany's Federal Ministry of Health separately confirms that medicinal cannabis remains subject to medicinal-product provisions on pharmaceutical quality and official oversight. Neither source makes one pesticide extraction method mandatory.",
+        ],
+      },
+      {
+        heading: "Control comminution, sub-sampling and rehydration as method variables",
+        paragraphs: [
+          "Automation begins after a representative test portion exists. Define how the laboratory inspects, conditions and comminutes the dried flower, how it prevents segregation, and how the test portion is selected. Record particle-size expectations and any hold time between milling and weighing. If a 30 mg or similarly small portion is used, challenge sub-sampling with replicate portions from a shared homogenised material and with representative materials that differ in morphology or resin content. A low robotic relative standard deviation cannot compensate for biased sampling upstream.",
+          "SANTE/11312/2021 v2026 introduces an explicit criterion for acceptable sub-sampling variability and states that sample comminution should provide sufficient homogeneity. The document is written for pesticide residues in food and feed, so a laboratory should justify how its principles are applied within the medicinal-cannabis method and quality system. It is an analytical control reference, not a classification of cannabis as food or feed.",
+          "Treat rehydration as a controlled extraction factor, not a casual pre-wet. Fix water quality, volume, addition accuracy, contact time, temperature and order of addition. Monitor wetting and adhesion to the vial wall or dispensing path. The published study included controlled rehydration before acetonitrile extraction, but the appropriate water-to-sample relationship must be established for the laboratory's material, hardware and analytes.",
+        ],
+        points: [
+          "Separate sampling and comminution precision from robotic preparation precision.",
+          "Verify water delivery gravimetrically or with another calibrated approach at the working volume.",
+          "Define maximum hold times after milling, weighing, rehydration and extraction.",
+        ],
+      },
+      {
+        heading: "Qualify the robotic path and build a blank ladder",
+        paragraphs: [
+          "Map the automated preparation as a sequence of controlled contacts. Include the weighing station, vial and closure, water and acetonitrile reservoirs, probe, mixing, incubation, filtration, transfer height and injection. Confirm liquid-handler accuracy and precision with the actual solvent properties and working volumes; water-only calibration may not answer the method question.",
+          "Use a blank ladder that can locate rather than merely detect background. An instrument or mobile-phase blank challenges the LC-MS sequence. A neat-acetonitrile injection challenges the solvent and injection path. A preparation blank runs water, acetonitrile, vial, mixing and filtration without plant material. A filter or consumable blank isolates suspect components where needed. A blank cannabis matrix, if scientifically justified and demonstrably suitable for the target panel, supports matrix-matched calibration and recovery work. The identities and roles of these controls should be explicit in the sequence plan.",
+          "SANTE v2026 adds validation guidance for situations where background may be present in procedural blanks or blank samples. Do not subtract a recurring feature automatically or label it a plant residue without investigation. Review retention time, transitions or accurate-mass evidence, ion ratios where applicable, blank frequency, carryover and the relationship to reservoir refill or consumable changes. When background appears, rerun the smallest diagnostic control that can distinguish solvent, water, filter, robot and instrument sources.",
+        ],
+        points: [
+          "Challenge the first and last positions in a robotic batch and positions near refill events.",
+          "Track actual aspirated and dispensed performance at the method's microlitre volumes.",
+          "Keep carryover checks separate from full procedural blanks because they answer different questions.",
+        ],
+      },
+      {
+        heading: "Use acetonitrile automated pesticide extraction medicinal cannabis LC-MS qualification controls",
+        paragraphs: [
+          "Build controls that separate extraction recovery, matrix effect and instrument response. A pre-extraction fortification follows rehydration, acetonitrile extraction, mixing, filtration, transfer and LC-MS analysis. A post-extraction fortification bypasses most preparation loss but retains the final matrix presented to the instrument. A neat reference challenges response without the extracted plant matrix. Used together, these controls help determine whether a lower signal follows incomplete extraction, filtration or transfer loss, ion suppression or enhancement, or instrument behaviour.",
+          "SANTE v2026 notes that when calibration corrects for losses during extraction or cleanup, absolute recovery should still be verified with a recovery experiment using matrix-matched calibration. Apply that principle to the approved method rather than copying the published study's acceptance figures. Review recovery by relevant analyte class and concentration, because an average across pesticides can hide poor behaviour for a smaller subset. Include repeatability across independently prepared portions and enough days, analysts or robotic batches to support the intended decision.",
+          "Matrix scope deserves a planned bridge. The European Commission guidance clarifies verification when a method extends to new matrices within a commodity group. Define which cultivars, flower characteristics, moisture states and processing histories are represented, then justify extensions. One blank material should not be assumed to cover every dried flower; where a true blank is unavailable, document the alternative calibration and interference strategy.",
+        ],
+      },
+      {
+        heading: "Run an acetonitrile lot bridge without changing the method at the same time",
+        paragraphs: [
+          "Reserve enough approved outgoing acetonitrile to compare it directly with the candidate lot. Link product name, grade, batch, package, certificate and opening history to every preparation, but recognise that supplier documentation establishes identity and release data rather than fitness for the laboratory's complete method. Split common water, standards, blank matrix and homogenised representative samples across matched preparations. Alternate or randomise robotic positions and injection order so reservoir location, preparation age or source drift does not align with solvent identity.",
+          "The bridge should include neat-solvent checks, full preparation blanks, representative fortified portions, matrix-matched controls and routine-like samples. Hold comminution, water addition, extraction ratio, mixing, filtration, transfer, calibration and LC-MS settings constant. Compare blank features, recovery, matrix response, repeatability, identification criteria, carryover, retention, internal-standard response, system pressure and any observed filter or liquid-handling behaviour. Acceptance limits must come from the laboratory's validated method, historical performance and intended use.",
+          "Investigate differences with targeted repeats. If a feature follows neat acetonitrile and the preparation blank, inspect the solvent and reservoir path. If it appears only after filtration, isolate the filter or vial. If recovery changes but post-extraction response is stable, focus on extraction and transfer. If both lots shift across the sequence, investigate the instrument or matrix batch before disposing of material. Close the bridge as accepted within a named scope, rejected with an assignable cause, or unresolved pending evidence.",
+          "Maintain the qualified state with defined triggers. Reassess when the acetonitrile grade or package changes, the robotic script or hardware is revised, a new filter is introduced, test-portion size changes, the target pesticide list expands, a materially different flower matrix enters scope or the LC-MS platform changes. A successful bridge supports only the tested combination of method, matrix range, material and system; it does not guarantee regulatory acceptance or performance in another laboratory.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A German contract laboratory transfers dried-flower pesticide preparation to a robot",
+      context: "An illustrative laboratory has an established manual UHPLC-MS/MS residue method for dried medicinal-cannabis flowers. It is introducing a robotic microextraction and a candidate acetonitrile lot while preserving the approved reporting purpose.",
+      actions: [
+        "The team qualifies comminution and sub-sampling with replicate small portions before assessing the robot, then fixes water volume, contact time, acetonitrile volume, mixing, filtration and transfer.",
+        "Outgoing and candidate solvent lots are distributed across alternating robot positions with neat-solvent, preparation, filter and matrix controls included in each comparison batch.",
+        "Pre-extraction fortifications, post-extraction fortifications and neat references are reviewed by analyte class to separate recovery from matrix response and instrument behaviour.",
+        "Quality limits approval to the tested dried-flower scope, target panel, acetonitrile grade and package, robotic method and LC-MS platform, with change triggers recorded.",
+      ],
+      result: "The transfer can identify whether a difference follows sampling, rehydration, acetonitrile, filtration, robotic handling or LC-MS response before routine release. This is an illustrative scenario, not a LANCHROM customer result, a validated universal cannabis method or evidence of regulatory approval.",
+    },
+    checklist: [
+      "Intended analytical decision, target panel and reporting scope defined",
+      "Dried-flower matrix boundary and excluded cannabis product forms recorded",
+      "Comminution and small-test-portion homogeneity verified",
+      "Water quality, rehydration volume, time and temperature controlled",
+      "Acetonitrile grade, batch, package and opening history traceable",
+      "Robotic aspiration, dispensing, mixing and transfer performance qualified",
+      "Instrument, neat-solvent, preparation and filter blanks assigned clear roles",
+      "Blank cannabis matrix suitability or alternative calibration strategy documented",
+      "Pre-extraction, post-extraction and neat controls compared",
+      "Recovery, matrix response, identification and carryover reviewed by analyte class",
+      "Outgoing and candidate acetonitrile lots tested in matched, randomised sets",
+      "Approval scope, unresolved observations and future change triggers recorded",
+    ],
+    sources: [
+      { label: "PubMed - Talanta study of automated pesticide analysis in Cannabis flowering tops", href: "https://pubmed.ncbi.nlm.nih.gov/42284746/" },
+      { label: "European Commission - SANTE/11312/2021 v2026 pesticide-residue AQC and validation", href: "https://food.ec.europa.eu/system/files/2023-11/pesticides_mrl_guidelines_wrkdoc_2021-11312.pdf" },
+      { label: "EDQM - Ph. Eur. Cannabis flower monograph 3028 implementation webinar", href: "https://www.edqm.eu/en/-/webinar-on-the-new-ph.-eur.-cannabis-flower-monograph-3028-" },
+      { label: "German Federal Ministry of Health - Medicinal cannabis quality and oversight FAQ", href: "https://www.bundesgesundheitsministerium.de/en/themen/cannabis/faq-cannabis-act/page" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Acetonitrile", href: "/products/lcms-solvents/acetonitrile" },
+      { label: "Explore Cannabis Analysis", href: "/applications/cannabis-analysis" },
+      { label: "Explore Pesticide Residue Analysis", href: "/applications/pesticide-residue-analysis" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
