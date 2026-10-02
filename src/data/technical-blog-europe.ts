@@ -3525,6 +3525,108 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "acidified-acetonitrile-aquatic-food-glucocorticoid-lcms-qualification",
+    title: "Acidified Acetonitrile for Aquatic-Food Glucocorticoid LC-MS Qualification: An Extraction Plan",
+    shortTitle: "Aquatic-Food Glucocorticoid Extraction Qualification",
+    description: "An acidified acetonitrile aquatic food glucocorticoid LC-MS qualification plan for matrix scope, extraction controls, isomer separation and solvent-lot bridging.",
+    primaryKeyword: "acidified acetonitrile aquatic food glucocorticoid LC-MS qualification",
+    tag: "Aquatic Food LC-MS",
+    readingTime: "11 min technical guide",
+    intro: "Acidified acetonitrile aquatic food glucocorticoid LC-MS qualification cannot be reduced to copying an extraction recipe or comparing two solvent certificates. Fish, shrimp and crab bring different protein, lipid, pigment and water loads; glucocorticoid panels can include closely related isomers and acetate derivatives; and every buffer, cleanup and evaporation step can change recovery or ionisation. A defensible plan therefore fixes the analytical decision and matrix scope, separates extraction performance from LC-MS response, and bridges a candidate acetonitrile lot without implying that one published method is universally transferable or automatically satisfies European official-control requirements.",
+    painPoints: [
+      { title: "One aquatic matrix is treated as representative", detail: "A clean fish extract does not establish recovery or matrix-effect control for shrimp, crab or another species with a different protein, lipid, pigment and moisture profile." },
+      { title: "The extraction sequence changes during the solvent comparison", detail: "Changing buffer, acid concentration, cleanup, evaporation or reconstitution alongside the acetonitrile lot makes the material decision impossible to interpret." },
+      { title: "Isomer separation is hidden inside a recovery average", detail: "Acceptable panel-level recovery can conceal inadequate resolution or integration for pairs such as betamethasone and dexamethasone." },
+      { title: "A research procedure is mistaken for an EU compliance route", detail: "Published conditions can guide development, but the laboratory still needs a validated method, controlled scope and jurisdiction-specific interpretation." },
+    ],
+    sections: [
+      {
+        heading: "Define the residue decision, matrix boundary and regulatory role",
+        paragraphs: [
+          "Begin with the result the method must support: exploratory screening, quantitative routine testing, confirmation of a suspected residue, method extension to another aquatic food, or introduction of a new solvent lot. Record the analyte list, whether parent glucocorticoids and acetate derivatives are included, the applicable decision levels, required identification evidence, target matrices and the quality system governing the work. Do not describe a broad aquatic-food method when the validation covers only one species or tissue type.",
+          "A 2026 Foods study provides a useful development model rather than a ready-made European method. It evaluated 12 glucocorticoids and eight isotope-labelled surrogates in grass carp, large yellow croaker, Chinese mitten crab, shrimp and bullfrog, and it addressed both isomer separation and complex-matrix extraction. The laboratory should use those findings to identify variables worth challenging, while deriving acceptance criteria from its own intended use, historical performance and applicable rules.",
+          "The regulatory boundary matters. Commission Implementing Regulation (EU) 2021/808 sets performance requirements for analytical methods used in official controls of pharmacologically active substance residues in food-producing animals and products of animal origin. Delegated Regulation (EU) 2022/1644 and Implementing Regulation (EU) 2022/1646 establish risk-based control planning and practical arrangements. These texts do not prescribe the paper's extraction sequence, approve a solvent supplier or establish method fitness merely because a published recovery was reproduced.",
+        ],
+      },
+      {
+        heading: "Freeze the buffer, acidified acetonitrile and cleanup sequence",
+        paragraphs: [
+          "Map the procedure from homogenised test portion to final vial. Control sample mass, homogenisation, isotope-surrogate addition, buffer identity and pH, EDTA preparation, acetonitrile-to-sample ratio, formic-acid concentration, order and timing of additions, mixing, sonication, salting out, centrifugation, dispersive cleanup, nitrogen evaporation, reconstitution and filtration. A lot comparison is meaningful only when those factors are held constant or deliberately randomised.",
+          "In the cited study, the authors first compared methanol with acetonitrile, then compared 80% aqueous acetonitrile, acetonitrile containing 2% formic acid, and a sequential system using McIlvaine-Na2EDTA buffer followed by 2% formic acid in acetonitrile. Their selected procedure used a 2.00 g homogenised portion, 2.0 mL buffer and 8.0 mL acidified acetonitrile before salting out and dispersive cleanup. Those quantities and the reported recoveries belong to that analyte panel, equipment and matrix set; they are not LANCHROM specifications or a universal starting recipe.",
+          "Treat the aqueous and organic stages as one extraction system. Buffer pH, EDTA concentration and matrix water can alter analyte release and co-extraction, while acid concentration and acetonitrile volume can change protein precipitation and phase behaviour. Prepare buffer and acidified solvent from traceable materials, document actual preparation calculations and hold times, and investigate abnormal clarity, phase volume, emulsion or evaporation behaviour before assigning a difference to the acetonitrile lot.",
+        ],
+        points: [
+          "Use one homogenised matrix pool when directly comparing outgoing and candidate solvent lots.",
+          "Prepare both acidified-solvent batches with the same formic-acid and water lots where the method allows.",
+          "Keep cleanup sorbent, filter, vessel and evaporation conditions common across the bridge.",
+        ],
+      },
+      {
+        heading: "Design the acidified acetonitrile aquatic food glucocorticoid LC-MS qualification bridge",
+        paragraphs: [
+          "Reserve enough approved outgoing acetonitrile for a paired comparison with the candidate lot. Link product, grade, batch, package, certificate, opening date and dispensing history to each preparation. Split common homogenates, standards, isotope surrogates, buffer, acid and cleanup materials across both lots. Alternate preparation order and LC-MS injection order so that analyst sequence, extract age or source drift does not align with one solvent identity.",
+          "Build a control set that can locate a difference. Neat-solvent and mobile-phase blanks challenge the material and instrument path. Full procedural blanks include buffer, acid, acetonitrile, salts, sorbents, vessels, evaporation and filtration. Blank or low-background matrices, where scientifically justified, support fortified recovery work. Pre-extraction fortifications challenge the entire process; post-extraction fortifications help separate preparation loss from matrix-dependent response; neat references show response without extracted matrix. Isotope-labelled surrogates should be evaluated individually rather than treated as a single pass-or-fail average.",
+          "Compare analyte-resolved recovery, relative matrix effect, repeatability, retention, peak shape, identification evidence, blank response, carryover and internal-standard behaviour. Regulation (EU) 2021/808 requires relative matrix effect to be determined and addresses representative matrix lots within method validation; the laboratory should apply the current consolidated text and any competent-authority guidance to its official-control scope. For a routine internal bridge, predefine a proportionate design that remains anchored to the validated method and does not silently narrow the evidence.",
+        ],
+      },
+      {
+        heading: "Keep matrix effects and isomer resolution as separate decisions",
+        paragraphs: [
+          "Protein-rich aquatic foods can produce both extraction loss and electrospray suppression or enhancement. The cited study observed analyte-dependent matrix effects in Chinese mitten crab even after its selected extraction and cleanup. An isotope-labelled standard can compensate for part of that response variability when it behaves appropriately, but compensation does not make co-extractives disappear and does not prove that all matrices behave alike. Review raw analyte and surrogate responses as well as calculated concentrations.",
+          "Use a matrix map rather than one pooled conclusion. Select representative fish, crustacean and other validated categories based on composition and intended use. For each, compare pre-extraction and post-extraction controls, inspect blank interferences and examine whether the candidate lot changes phase separation, cleanup load or final extract appearance. If a difference is limited to one matrix, challenge matrix homogeneity, water content and cleanup before rejecting the solvent across the entire scope.",
+          "Chromatographic selectivity is a second axis. The study used a pentafluorophenyl column to resolve critical isomer pairs, including betamethasone and dexamethasone. A solvent-lot bridge should therefore retain system-suitability or analyte-specific resolution checks and review integration for each critical pair. Stable total response cannot rescue a method that merges isomers, and acceptable resolution cannot compensate for matrix-biased quantitation. Close both decisions explicitly.",
+        ],
+      },
+      {
+        heading: "Release the lot within a named scope and maintain the qualified state",
+        paragraphs: [
+          "Document the conclusion as accepted, rejected or unresolved for the named method, analyte panel, matrix range, acetonitrile grade and package, buffer and cleanup procedure, column and LC-MS platform. Summarise deviations and investigations, link raw data and chromatograms, and identify any matrices or analytes that remain outside scope. Eurachem's 2025 validation guide supports a fitness-for-purpose approach, including sampling, sample handling, performance characteristics, reporting and continuing internal quality control.",
+          "Convert the study into routine controls. Receiving records should confirm exact product, grade, batch, package, seal and current documents. Preparation records should identify the acetonitrile, formic acid, buffer components, salts, cleanup sorbents, filters and standards. Trend procedural-blank features, analyte and surrogate response, recovery, relative matrix effect, critical-pair resolution and investigations by material lot and matrix category.",
+          "Define reassessment triggers before routine samples are affected. Examples include a new solvent grade, supplier, manufacturing source, package or closure; a changed buffer or acid source; a new cleanup sorbent or filter; revised homogenisation or extraction ratio; an expanded glucocorticoid panel; a new aquatic species or tissue; and a different column or mass-spectrometry platform. A successful lot bridge preserves a controlled method within its tested boundary; it does not establish universal suitability or a regulatory conclusion for another laboratory.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A French contract laboratory extends a fish method to shrimp and crab",
+      context: "An illustrative laboratory has a controlled LC-MS/MS glucocorticoid procedure for fish muscle. It wants to add shrimp and high-lipid crab while introducing a candidate acetonitrile lot, without confusing matrix extension with the material decision.",
+      actions: [
+        "The team first freezes its fish procedure and compares outgoing and candidate acetonitrile lots with matched fish homogenate, blanks, fortifications and critical-isomer checks.",
+        "After the solvent bridge is interpreted, shrimp and crab are assessed as separate matrix extensions using common standards, buffer, acid, cleanup and LC-MS conditions.",
+        "Pre-extraction, post-extraction and neat controls are reviewed by analyte and surrogate to distinguish recovery from matrix-dependent response.",
+        "Quality limits approval to the tested matrices, analyte panel, solvent grade and package, extraction sequence, cleanup and instrument platform, with change triggers recorded.",
+      ],
+      result: "The staged design can show whether an observed shift follows the acetonitrile lot, the new matrix or the analytical system before routine release. This is an illustrative scenario, not a customer result, a universal method or a statement of regulatory approval.",
+    },
+    checklist: [
+      "Analytical decision, analyte panel and identification requirements defined",
+      "Aquatic species, tissue and excluded matrices recorded",
+      "Homogenisation and representative test-portion procedure controlled",
+      "Buffer pH, EDTA, formic acid and water preparations traceable",
+      "Acetonitrile product, grade, batch, package and opening history recorded",
+      "Extraction order, ratios, timing, temperature and mixing frozen",
+      "Salting-out, cleanup, evaporation, reconstitution and filtration controlled",
+      "Outgoing and candidate lots compared in matched, randomised preparations",
+      "Neat-solvent, procedural and matrix controls assigned clear roles",
+      "Recovery and relative matrix effect reviewed by analyte and matrix",
+      "Critical isomer resolution, integration and identification evidence checked",
+      "Approval scope, deviations, unresolved findings and change triggers documented",
+    ],
+    sources: [
+      { label: "Foods - LC-MS/MS determination and isomer separation of glucocorticoids in aquatic foods", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12940018/" },
+      { label: "EUR-Lex - Consolidated Regulation (EU) 2021/808 on analytical methods for pharmacologically active substance residues", href: "https://eur-lex.europa.eu/eli/reg_impl/2021/808/2026-04-19/eng" },
+      { label: "EUR-Lex - Delegated Regulation (EU) 2022/1644 on risk-based residue controls", href: "https://eur-lex.europa.eu/eli/reg_del/2022/1644/oj/eng" },
+      { label: "EUR-Lex - Implementing Regulation (EU) 2022/1646 on official-control plans", href: "https://eur-lex.europa.eu/eli/reg_impl/2022/1646/oj/eng" },
+      { label: "Eurachem - The Fitness for Purpose of Analytical Methods, third edition 2025", href: "https://www.eurachem.org/index.php/publications/guides/mv" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Acetonitrile", href: "/products/lcms-solvents/acetonitrile" },
+      { label: "Explore Veterinary Drug Residue Testing", href: "/applications/veterinary-drug-residue" },
+      { label: "Explore Food Safety Testing", href: "/applications/food-safety-testing" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
