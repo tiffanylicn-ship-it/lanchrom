@@ -3525,6 +3525,120 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "acetonitrile-water-cereulide-infant-formula-extraction-qualification",
+    title: "Acetonitrile/Water Cereulide Infant Formula LC-MS Extraction Qualification: A Matrix-Control Plan",
+    shortTitle: "Cereulide Extraction from Infant Formula",
+    description: "An acetonitrile water cereulide infant formula LC-MS extraction qualification plan for hydration, partitioning, isotope dilution, matrix controls and solvent-lot bridging.",
+    primaryKeyword: "acetonitrile water cereulide infant formula LC-MS extraction qualification",
+    tag: "Food Safety LC-MS",
+    readingTime: "11 min read",
+    intro: "Acetonitrile water cereulide infant formula LC-MS extraction qualification is not simply a choice between two solvent recipes. Powdered formula can contain compact, low-moisture protein and lipid structures that restrict access to cereulide, so a clear chromatogram may still follow incomplete extraction. A defensible workflow must establish the matrix boundary, control hydration and partitioning, use isotope dilution appropriately, and separate extraction yield from ionisation, calibration and solvent-lot effects before results support a release or investigation decision.",
+    painPoints: [
+      {
+        title: "Acetonitrile-only extraction can create a false low result",
+        detail: "A 2026 study found that direct acetonitrile extraction could systematically underestimate cereulide when contaminated ingredients were incorporated into powdered infant formula. The failure followed matrix access, not merely detector sensitivity.",
+      },
+      {
+        title: "Hydration and salting-out variables are easy to blur together",
+        detail: "Water volume, contact time, salt composition, mixing, temperature and phase transfer all affect a partitioning workflow. If several change at once, the laboratory cannot explain a recovery shift or reproduce the method across sites.",
+      },
+      {
+        title: "Solvent-lot effects can be confused with matrix extraction failure",
+        detail: "A candidate acetonitrile lot may change blank response or instrument behaviour, but poor homogenisation, incomplete wetting, isotope-standard timing, consumables or phase sampling can produce similar symptoms.",
+      },
+      {
+        title: "Incident urgency can outrun method control",
+        detail: "The 2026 European incident created a legitimate need for rapid testing, yet an official protocol, an ISO method and a peer-reviewed alternative are not interchangeable without a documented scope, local verification and authorised reporting rules.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Define the method boundary before choosing the extraction",
+        paragraphs: [
+          "Start with the analytical decision. State whether the laboratory is screening incoming ingredients, investigating retained product, supporting a recall, releasing finished formula or transferring a routine method. Record the product types in scope: powdered infant formula, follow-on formula, liquid formula, powdered arachidonic-acid oil or another matrix. These materials should not be grouped merely because they share a product label. Water activity, lipid and protein structure, particle history and the way contamination entered the matrix can change extraction behaviour.",
+          "ISO 18465:2017 remains current and describes quantitative LC-MS/MS analysis of cereulide in food. The ISO catalogue alone does not establish that one preparation is equally effective for every formulation. The 2026 peer-reviewed study reported that acetonitrile-only preparation could substantially underestimate cereulide in powdered infant formula when the toxin was associated with tainted ingredients. The authors attributed the problem to access through compact protein-lipid structures and validated a water/acetonitrile partitioning and salting-out approach for their tested matrices. Treat those findings as a strong verification trigger, not as permission to copy numerical performance into another laboratory's claim.",
+          "The European Commission's 2026 incident page links a recommended sample-preparation protocol in use at the Austrian Agency for Health and Food Safety. That protocol adds water before acetonitrile and QuEChERS salts, then separates and filters the organic phase for LC-MS/MS. It is direct operational evidence that water-assisted extraction is relevant during the incident. The laboratory must still control its own equipment, matrix range, standards, reporting level and quality system, and must follow the current competent-authority instructions that apply to its work.",
+        ],
+        points: [
+          "Name the formula type, ingredient history and reporting purpose explicitly.",
+          "Separate an official protocol, a published research method and the laboratory's authorised method.",
+          "Define who can approve method changes and results used for regulatory decisions.",
+        ],
+      },
+      {
+        heading: "Qualify hydration, partitioning and isotope-standard timing",
+        paragraphs: [
+          "Design the extraction study around variables that can be assigned. Begin with representative matrix materials, including at least one challenging high-fat or otherwise structurally dense powder where relevant. Fix sample mass, particle handling and equilibration. Compare the approved preparation with the candidate water-assisted preparation in matched portions, changing only planned factors. Water volume and quality, hydration time, temperature, order of addition, acetonitrile-to-water relationship, salt composition, shaking energy, centrifugation and phase-transfer position should each have a defined set point or justified range.",
+          "The internal standard cannot correct an extraction step it did not experience. Record whether isotopically labelled cereulide is added before hydration, after water addition, before partitioning or only to the final extract. A pre-extraction addition can monitor more of the process, but its behaviour must be demonstrated rather than assumed. Use separately prepared post-extraction additions and neat references to distinguish extraction recovery from final-extract matrix effect and instrument response. Do not rely on the ratio alone if both native and labelled compounds are lost together before they can equilibrate with the trapped analyte.",
+          "Include incurred or process-representative material when it is available and authorised, because a powder fortified on the surface may not reproduce toxin incorporated through an ingredient. Where an incurred control is unavailable, document the limitation and use complementary matrix-matched controls, extraction repeats and standard-addition or other justified experiments. The purpose is to test access to the analyte, not to manufacture a convenient pass result.",
+        ],
+      },
+      {
+        heading: "Build a control ladder that locates the failure",
+        paragraphs: [
+          "A useful sequence should answer where a signal or loss originates. A mobile-phase or injection blank challenges the LC-MS system. A neat acetonitrile blank challenges the candidate solvent and injection path. A full procedural blank adds water, salts, tube, cap, mixing, centrifugation, filter and transfer. A blank formula extract tests endogenous and process background. Matrix fortifications before extraction, additions after extraction and neat standards separate recovery, matrix response and instrument performance. Include carryover challenges after the highest relevant standard or sample rather than assuming a blank elsewhere in the sequence is equivalent.",
+          "Review the controls as a pattern. A feature present in neat acetonitrile and the procedural blank points toward solvent or system background. A feature appearing only after salt, tube or filter contact points toward preparation materials. Stable post-extraction response with lower pre-extraction recovery directs attention to hydration, partitioning or transfer. Similar losses in both retained and candidate solvent lots argue against a simple lot cause. If only one product type fails, investigate matrix structure and incurred contamination history before changing the LC-MS method.",
+          "EFSA's 2026 rapid assessment supplied the acute-risk context used by EU risk managers during the incident, while the Commission coordinated measures and laboratory recommendations. Those documents explain why low-level accuracy matters; they do not replace the laboratory's calibration model, identification criteria, uncertainty evaluation or authorisation process. Keep public-health thresholds and method acceptance limits in separate controlled records, and verify that the current values are used for the intended jurisdiction and product category.",
+        ],
+      },
+      {
+        heading: "Run an acetonitrile water cereulide infant formula LC-MS extraction qualification bridge",
+        paragraphs: [
+          "Reserve enough approved acetonitrile to test the outgoing and candidate lots in the same study. Link grade, batch, package, certificate, opening date and storage history to every preparation, but do not treat certificate conformity as proof that the lot is fit for the complete cereulide method. Split common powder portions, water, salts, standards and consumables across matched preparations. Randomise or alternate extraction and injection order so formula heterogeneity, preparation age and source drift do not align with solvent identity.",
+          "Compare both solvent lots through the full control ladder and representative matrices. Review solvent and procedural blanks, native-to-labelled response, pre-extraction recovery, post-extraction matrix effect, repeatability, ion ratios or other identification evidence, retention, carryover, phase volume, emulsion behaviour, filter performance and system pressure. Acceptance criteria should come from the laboratory's validated method and reporting purpose. Published recovery or precision values describe the cited study and should not become local limits without scientific and quality approval.",
+          "When a difference appears, reduce the problem rather than repeating the whole batch unchanged. Cross the suspect solvent with a common water and salt lot; inject neat extracts without additional preparation where safe; compare filtered and unfiltered aliquots if the method permits; or repeat phase transfer from a shared extraction. A conclusion should state whether the candidate lot is accepted for a defined scope, rejected for an assignable cause or held while evidence remains unresolved. The bridge supports the tested method and matrices only; it is not a general supplier approval or regulatory endorsement.",
+        ],
+      },
+      {
+        heading: "Release the method with matrix and change-control safeguards",
+        paragraphs: [
+          "Create a release package that another analyst can reconstruct. Include the approved procedure, matrix scope, sampling and homogenisation record, reagent and consumable identities, extraction sequence, raw control results, chromatograms, calculations, deviations, investigation outcomes and authorising signatures. Preserve evidence that the method can recover cereulide from the relevant powder structure, not only from solvent standards or freshly fortified surfaces. Where the laboratory supports an incident response, retain the version of the competent-authority instruction used for each reporting period.",
+          "Define requalification triggers before routine work begins. Reassess when formula composition or supplier changes, a new ingredient route enters scope, sample mass or hydration conditions change, the QuEChERS salt formulation or tube changes, the isotope standard is replaced, filtration or centrifugation changes, the acetonitrile grade or package changes, or the LC-MS platform is modified. Trend procedural-blank response, control recovery, labelled-standard behaviour and matrix-specific precision by batch rather than reviewing each result in isolation.",
+          "Finally, keep the commercial claim narrow. LANCHROM product and document links can support a technical conversation about LC-MS acetonitrile, traceability and lot documentation. They do not state that a solvent is pre-approved for cereulide testing, that it reproduces the cited method or that it guarantees compliance. Fitness is established by the user's controlled qualification with the actual formula, extraction, consumables and instrument.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A French infant-nutrition laboratory investigates low recovery during a solvent-lot change",
+      context: "An illustrative laboratory supports finished powdered-formula testing. A candidate acetonitrile lot arrives while a high-fat formula shows lower recovery than the laboratory's routine control, and the team must separate solvent suitability from incomplete matrix extraction.",
+      actions: [
+        "The team keeps the approved method in service for authorised work, then opens a controlled verification study comparing its current preparation with a water-assisted partitioning approach in matched powder portions.",
+        "Outgoing and candidate acetonitrile lots are crossed with common water, salt, tube and filter lots, with extraction order randomised and full procedural blanks included.",
+        "Pre-extraction isotope additions, post-extraction additions and neat references are reviewed alongside a process-representative control to separate matrix access, transfer loss and ionisation effects.",
+        "Quality records the justified matrix scope, acceptance evidence, reporting limitations and triggers for formula, reagent, consumable or instrument changes before authorising routine use.",
+      ],
+      result: "The laboratory can decide whether the observation follows powder hydration, partitioning, consumables, the candidate acetonitrile lot or LC-MS response before releasing results. This is an illustrative scenario, not a LANCHROM customer result, a validated universal method or a regulatory approval claim.",
+    },
+    checklist: [
+      "Analytical decision, jurisdiction and authorised reporting use defined",
+      "Powdered, liquid and ingredient matrices separated in the scope",
+      "Sampling, homogenisation and representative test portions documented",
+      "Water quality, volume, temperature and hydration time controlled",
+      "Acetonitrile grade, lot, package and opening history traceable",
+      "Salt composition, mixing, centrifugation and phase transfer fixed",
+      "Isotope-standard timing justified for the extraction question",
+      "Neat-solvent, procedural, consumable and matrix blanks assigned roles",
+      "Pre-extraction, post-extraction and neat controls compared",
+      "Process-representative or incurred control strategy documented",
+      "Recovery, matrix effect, identification and carryover criteria approved",
+      "Matrix limits, deviations, approval decision and change triggers recorded",
+    ],
+    sources: [
+      { label: "PubMed - Water/acetonitrile partitioning for reliable cereulide measurement in powdered infant formula", href: "https://pubmed.ncbi.nlm.nih.gov/42320125/" },
+      { label: "ISO - ISO 18465:2017 quantitative determination of cereulide by LC-MS/MS", href: "https://www.iso.org/standard/62512.html" },
+      { label: "EFSA - 2026 rapid risk assessment on cereulide in infant formula", href: "https://www.efsa.europa.eu/en/news/efsa-provides-rapid-risk-assessment-cereulide-infant-formula" },
+      { label: "European Commission - 2026 cereulide incident coordination", href: "https://food.ec.europa.eu/food-safety/acn/acn-incidents/cereulide-incident_en" },
+      { label: "European Commission - Recommended infant-formula cereulide sample preparation protocol", href: "https://food.ec.europa.eu/document/download/62729e1e-fa45-4a0c-ac15-6fb432e2344f_en?filename=rasff_cereulide-incident_sample-preparation_ages.pdf" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Acetonitrile", href: "/products/lcms-solvents/acetonitrile" },
+      { label: "Explore Food Safety Testing", href: "/applications/food-safety-testing" },
+      { label: "Explore Food Testing Laboratories", href: "/industries/food-testing" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
