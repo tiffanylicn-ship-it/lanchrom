@@ -3525,6 +3525,114 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "acetonitrile-microflow-pesticide-lchrms-qualification",
+    title: "Acetonitrile for Microflow LC-HRMS Pesticide Residues: A Solvent-Qualification and EU 2027 Plan",
+    shortTitle: "Acetonitrile Microflow Pesticide LC-HRMS Qualification",
+    description: "An acetonitrile microflow LC-HRMS pesticide residue solvent qualification plan covering blanks, low-flow fluidics, matrix controls and the EU 2027 framework.",
+    primaryKeyword: "acetonitrile microflow LC-HRMS pesticide residue solvent qualification",
+    tag: "Food Safety LC-MS",
+    readingTime: "11 min technical guide",
+    intro: "Acetonitrile microflow LC-HRMS pesticide residue solvent qualification is not a scaled-down version of an analytical-flow solvent check. At microlitre-per-minute flow, the candidate solvent lot, gradient-forming hardware, low-volume connections, emitter and food extract can all change the observed blank, retention and response. A useful transfer plan therefore has to separate those variables before a laboratory decides that the solvent, the microflow platform or the method is suitable for routine work. This guide turns current research and European control requirements into a bounded qualification workflow without treating one published method as an official reference method or a universal recipe.",
+    painPoints: [
+      { title: "Low-flow faults look like solvent faults", detail: "Small mixing, connection, leak or gradient-delivery differences can shift retention and response, yet the candidate acetonitrile lot is often blamed first." },
+      { title: "Blank background consumes the reporting margin", detail: "Solvent, vial, filter, mobile-phase reservoir, injector and source background can become material when a microflow system is used for low-level multiresidue work." },
+      { title: "One matrix hides transfer risk", detail: "Tomato, orange and avocado extracts challenge ionisation, carryover and contamination differently, so a single convenient matrix cannot establish the intended food scope." },
+      { title: "Research performance is mistaken for regulatory status", detail: "A peer-reviewed microflow study can guide experiments, but official-control use still requires laboratory evidence, quality control and correct interpretation under the applicable EU framework." },
+    ],
+    sections: [
+      {
+        heading: "Define the transfer claim before touching the microflow system",
+        paragraphs: [
+          "Write the intended decision in one sentence: for example, whether a candidate LC-MS acetonitrile lot and a defined microflow LC-HRMS configuration can support an existing pesticide-residue scope in named commodities. This prevents a solvent bridge from becoming an uncontrolled redevelopment exercise. Record the analyte list, residue definitions, commodity groups, reporting limits, extraction and cleanup already in use, acquisition modes, identification rules and the results that will remain outside the study.",
+          "The 2026 Food Chemistry study developed a Q-Orbitrap workflow that combined full scan, variable data-independent acquisition and data-dependent MS2. It used a 0.3 mm internal-diameter column at 15 µL/min and evaluated 239 pesticides in tomato, orange and avocado. Those conditions are valuable evidence that microflow can support broad residue monitoring, but they are study-specific. They do not establish an acetonitrile specification, approve a different instrument, or demonstrate every pesticide-and-commodity combination in another laboratory.",
+          "Decide whether the work is a solvent-lot bridge, an analytical-flow-to-microflow transfer, a new matrix extension, or a combination. If more than one factor must change, stage the work. First establish that the microflow path can deliver a controlled blank and gradient with the retained solvent lot. Then compare retained and candidate acetonitrile. Finally introduce the matrix or scope extension. A staged design preserves diagnostic power when performance changes.",
+        ],
+        points: [
+          "Name the exact instrument, column, emitter, solvent grade, package and matrix scope.",
+          "Keep extraction and cleanup fixed when the decision concerns post-extraction chromatography.",
+          "Predefine which changes require partial validation, wider validation or method redevelopment.",
+        ],
+      },
+      {
+        heading: "Build an acetonitrile blank ladder before the matrix sequence",
+        paragraphs: [
+          "Start with controls that locate background rather than a single blank that only proves it exists. A no-injection acquisition challenges the detector and data system. A mobile-phase or bypass blank challenges reservoirs and the flow path. A neat-acetonitrile injection adds the solvent, vial and injector. A full procedural blank adds extraction reagents, consumables and transfers. A matrix blank then adds the commodity. Use the same acquisition windows and data-processing rules intended for routine samples so that low-level features are assessed consistently.",
+          "Compare the retained and candidate acetonitrile lots in matched preparations. Link each result to the product, grade, batch, container, opening date and storage history. Split a common water source, additives, vials and standards across the lots, and alternate injection order so time-dependent source contamination is not aligned with one solvent. Supplier documentation establishes identity and release information; it does not by itself prove fitness in the laboratory's microflow method.",
+          "The European Commission's SANTE/11312/2021 v2026 guidance requires reagent blanks in routine sequences when background can vary and stresses avoiding false positives or falsely high results. Apply that principle to the complete path. If a feature follows the neat solvent and mobile-phase blank, investigate the solvent or reservoir. If it appears only after preparation, isolate the filter, vial and extraction reagents. If both lots rise together late in a sequence, investigate carryover or source fouling before rejecting material.",
+        ],
+      },
+      {
+        heading: "Qualify microflow delivery as a system, not a nominal flow rate",
+        paragraphs: [
+          "Low nominal flow does not guarantee correct delivery at the column or stable spray at the source. Map the actual gradient-forming architecture, mixer volume, capillary dimensions, unions, injection path and emitter connection. Record pressure at defined mobile-phase compositions, observed gradient delay, retention of representative early and late analytes, peak width, peak shape and the time required to re-equilibrate. A leak, trapped gas pocket or poorly seated low-volume fitting may cause a response pattern that resembles a solvent change.",
+          "Run a simple system-characterisation sequence before complex food extracts. Use mobile-phase blanks, a controlled reference mixture and repeated injections that challenge both gradient endpoints and polarity or acquisition transitions where applicable. Trend pressure ripple, retention-time difference, peak-area precision, mass accuracy, qualifier-ion detection and source stability. Acceptance criteria should come from the laboratory's intended method and historical capability, not from copying the publication's reported outcome.",
+          "When transferring from analytical flow, calculate only a starting gradient based on column volumes and then confirm it experimentally. Dwell volume, extra-column volume and mixing behaviour do not scale perfectly with column internal diameter. Keep temperature, injection solvent and injection volume within a justified range because a strong or oversized plug can distort peaks in a narrow-bore system. Document every changed parameter so a later solvent-lot comparison does not silently include a hardware or method revision.",
+        ],
+        points: [
+          "Challenge the system after reservoir refill, fitting changes and extended idle periods.",
+          "Use a defined pass/fail response when spray becomes intermittent or pressure is unstable.",
+          "Retain pressure, gradient and source traces alongside chromatograms and processed results.",
+        ],
+      },
+      {
+        heading: "Separate matrix response from acetonitrile and emitter performance",
+        paragraphs: [
+          "Tomato, orange and avocado are useful contrasting matrices because they do not present the same co-extractive load. The 2026 study reported broad performance across those matrices, including stable retention and peak area and low matrix effects for most compounds. Treat that result as a rationale for a matrix-stratified experiment, not proof that the laboratory's extracts will behave identically. The extraction method, dilution, cleanup, source geometry and target list can alter the outcome.",
+          "Use matrix blanks, post-extraction fortifications and, where required by the approved procedure, pre-extraction recovery controls. A neat reference shows instrument response without matrix. A post-extraction fortification challenges ionisation and final-extract compatibility. A pre-extraction fortification also includes extraction and cleanup. Review results by analyte class and commodity rather than relying on one overall average. Pair low and high matrix-load samples with solvent blanks to expose carryover and slow source contamination.",
+          "SANTE v2026 states that matrix effects should be assessed during initial validation and that new matrices need evidence within the claimed commodity scope. It also frames ongoing performance verification as evidence that minor adjustments have not unacceptably changed performance. For a microflow transfer, define which commodities are representative, which require their own verification, and what evidence is needed before a result can enter the routine reporting process.",
+        ],
+      },
+      {
+        heading: "Close acetonitrile microflow LC-HRMS pesticide residue solvent qualification for EU 2027",
+        paragraphs: [
+          "Commission Implementing Regulation (EU) 2026/765 is in force and applies from 1 January 2027. It lays down rules for official-control sampling, laboratory analysis, measurement uncertainty and interpretation of pesticide-residue results, and it recognises the European Union Reference Laboratories' analytical-quality-control guidance. This does not turn a particular microflow publication into a mandatory or officially approved method. The laboratory must still show that its method is fit for the intended substance-and-commodity scope and that the associated quality controls support the reported decision.",
+          "Build the release decision around evidence, not the promise of lower solvent consumption. Compare retained and candidate acetonitrile for blank features, retention, pressure, area precision, mass accuracy, qualifier evidence, matrix response, carryover and sequence stability. Include proficiency-test or reference-material evidence when available and relevant. The published study reported markedly lower solvent use than classical analytical-flow LC, but any local environmental or cost claim should be calculated from the actual method, cleaning cycles, failed runs, consumables and waste route.",
+          "Close the protocol with one of three outcomes: accepted within a named scope, rejected with an assignable cause, or unresolved pending additional evidence. Record open deviations and the residual risk. Define requalification triggers such as a solvent grade or package change, altered water or additive source, column or emitter change, tubing revision, software or acquisition change, new pesticide group, new commodity group, modified extraction, or a trend in blanks, pressure, retention or response.",
+          "EFSA's 2024 EU pesticide-residue report illustrates why scope and interpretation matter: official programmes combine many substance-and-commodity decisions, measurement uncertainty and follow-up actions. A technically successful solvent bridge supports the tested analytical system; it does not independently establish legal compliance of a food sample. Keep the validated measurement, the applicable maximum residue level, measurement uncertainty and the authority's decision process as distinct records.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A food-testing laboratory transfers three matrices to microflow LC-HRMS",
+      context: "An illustrative UK contract laboratory uses a conventional-flow LC-HRMS pesticide method for tomato, orange and avocado extracts. It plans a microflow evaluation while introducing a candidate acetonitrile lot, but it does not want a combined change to obscure the cause of any failed blank, retention shift or response loss.",
+      actions: [
+        "The team freezes extraction and cleanup, establishes the microflow gradient and source stability with retained acetonitrile, and documents pressure, retention and reference-mixture response.",
+        "Retained and candidate lots are then compared in alternating mobile-phase, neat-solvent and procedural blanks using common water, additives, standards, vials and sequence timing.",
+        "Matrix blanks and fortified tomato, orange and avocado extracts are bracketed with solvent blanks; response, qualifier evidence, carryover and source drift are reviewed separately by matrix and analyte class.",
+        "Quality approves only the tested instrument, flow path, column, acquisition workflow, solvent grade and named matrix scope, and records the work still required before official-control reporting.",
+      ],
+      result: "The staged study can distinguish candidate-solvent behaviour from microflow delivery, emitter stability and commodity-specific matrix effects. This is an illustrative scenario, not a LANCHROM customer result, a universal method or evidence that the configuration has regulatory approval.",
+    },
+    checklist: [
+      "Intended analytical decision and pesticide-and-commodity scope defined",
+      "Research method distinguished from the laboratory's controlled procedure",
+      "Retained and candidate acetonitrile grade, batch, package and opening history recorded",
+      "Extraction and cleanup held constant during the post-extraction transfer",
+      "No-injection, mobile-phase, neat-solvent, procedural and matrix blanks assigned clear roles",
+      "Microflow mixer, tubing, unions, column and emitter configuration documented",
+      "Pressure, gradient delay, retention, peak shape and re-equilibration assessed",
+      "Mass accuracy, qualifier evidence, area precision and source stability trended",
+      "Tomato, orange and avocado or justified representative matrices tested separately",
+      "Matrix effect, carryover and recovery controls matched to the intended procedure",
+      "EU 2027 applicability, measurement uncertainty and reporting responsibilities reviewed",
+      "Approval scope, deviations, unresolved risks and requalification triggers recorded",
+    ],
+    sources: [
+      { label: "PubMed - 2026 microflow Q-Orbitrap LC-HRMS pesticide-residue study", href: "https://pubmed.ncbi.nlm.nih.gov/41719665/" },
+      { label: "EUR-Lex - Commission Implementing Regulation (EU) 2026/765", href: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R0765" },
+      { label: "European Commission - SANTE/11312/2021 v2026 pesticide-residue AQC and validation", href: "https://food.ec.europa.eu/system/files/2023-11/pesticides_mrl_guidelines_wrkdoc_2021-11312.pdf" },
+      { label: "EFSA - 2024 European Union report on pesticide residues in food", href: "https://efsa.onlinelibrary.wiley.com/doi/full/10.2903/j.efsa.2026.10054" },
+      { label: "European Commission - EU multiannual pesticide control programmes", href: "https://food.ec.europa.eu/plants/pesticides/maximum-residue-levels/enforcement/eu-multi-annual-control-programmes_en" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Acetonitrile", href: "/products/lcms-solvents/acetonitrile" },
+      { label: "Explore Pesticide Residue Analysis", href: "/applications/pesticide-residue-analysis" },
+      { label: "Explore UPLC and High-Throughput Analysis", href: "/applications/uplc-high-throughput-analysis" },
+      { label: "Explore Food Safety Testing Labs", href: "/industries/food-testing" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
