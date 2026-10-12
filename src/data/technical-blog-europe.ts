@@ -3525,6 +3525,113 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "acetonitrile-amino-acid-hilic-elsd-qualification",
+    title: "Acetonitrile for Amino-Acid HILIC–ELSD: A Column-Selection and Solvent-Lot Qualification Plan",
+    shortTitle: "Amino-Acid HILIC–ELSD Solvent Qualification",
+    description: "An acetonitrile amino acid HILIC ELSD solvent qualification plan for controlling column selectivity, buffer concentration, water, detector response and lot bridging.",
+    primaryKeyword: "acetonitrile amino acid HILIC ELSD solvent qualification",
+    tag: "Pharmaceutical HILIC",
+    readingTime: "11 min technical guide",
+    intro: "Acetonitrile amino acid HILIC ELSD solvent qualification is difficult because the signal can change even when the solvent is not the root cause. Underivatized amino acids have different ionic and hydrophilic interactions, HILIC retention is sensitive to mobile-phase composition and column history, and an evaporative detector responds to the complete nebulisation and evaporation environment. A useful qualification therefore locks the analyte subset, stationary phase, buffer, water, preparation sequence and ELSD settings before it asks whether a candidate acetonitrile lot is suitable.",
+    painPoints: [
+      { title: "One column is expected to suit every amino acid", detail: "A phase that separates one amino-acid subset can compress another, so a whole-panel average can hide the critical leucine, isoleucine or valine pair." },
+      { title: "Buffer and solvent effects are changed together", detail: "Adjusting ammonium formate, aqueous fraction and acetonitrile source in the same experiment prevents a clear explanation of retention or selectivity changes." },
+      { title: "ELSD response is treated as a fixed property", detail: "Nebuliser conditions, evaporation, mobile-phase volatility, preparation age and injection solvent can alter background and response independently of column resolution." },
+      { title: "A lot bridge tests standards but not dosage-form matrix", detail: "A neat standard can pass while capsule excipients, sample solvent or preparation variability changes recovery, peak shape or the detector background." },
+    ],
+    sections: [
+      {
+        heading: "Define the amino-acid subset and intended result first",
+        paragraphs: [
+          "Begin with the analytical target profile rather than a generic requirement to separate amino acids. Record the dosage form or material, the amino acids that must be reported, the concentration range, the result being used for release or development, and the resolution, precision, accuracy and reporting expectations already established by the laboratory. An assay for branched-chain amino acids has a narrower selectivity problem than a procedure intended to cover all 20 proteinogenic amino acids, and it should not inherit a column choice simply because that phase ranked well for a broader panel.",
+          "A 2026 Journal of Separation Science study illustrates why this boundary matters. The authors evaluated all 20 proteinogenic amino acids across 18 polar stationary phases with acetonitrile/aqueous mobile phases and ELSD. Their statistical ranking selected different optimal columns when the analyte subset changed. The complete set and a leucine-isoleucine-valine capsule application therefore answer different separation questions; the study does not identify one universally preferred HILIC phase.",
+          "Keep the published performance in its proper scope. The capsule assay was reported as linear over approximately 0.1 to 1.0 mg/mL, with results including 102%-104% of label claim across six preparations and injection precision at or below 0.45% relative standard deviation. Those figures describe the authors' method, products, columns and detector conditions. They are not acceptance criteria for another laboratory, a compendial procedure or a LANCHROM product claim. The receiving laboratory must set criteria from its own intended purpose, controlled procedure and validation knowledge.",
+        ],
+      },
+      {
+        heading: "Separate column selectivity from acetonitrile, water and buffer variables",
+        paragraphs: [
+          "Treat stationary phase, aqueous fraction and ionic environment as independent factors during development. In the 2026 study, pH from 3.5 to 6.0 and ammonium formate from 10 to 100 mM were examined on three high-ranked columns. Most amino acids were relatively insensitive to the tested pH range, while arginine and lysine showed a buffer-concentration dependence opposite to the other analytes. The authors identified 50 mM ammonium formate without pH adjustment as the best compromise for their complete analyte set. That result is a design-space observation, not a universal HILIC recipe.",
+          "Agilent's HILIC guide reinforces the need to screen phase chemistry and control the mobile phase. It describes ionic, dipole and hydrogen-bonding contributions to selectivity, identifies buffered aqueous phase and acetonitrile as common method-development variables, and warns that phosphate has limited solubility at high acetonitrile content. A laboratory should use such guidance to define experiments, while the actual buffer identity, concentration and pH remain method-specific decisions.",
+          "Prepare retained-lot and candidate-lot mobile phases from the same water and buffer stock when scientifically appropriate, using calibrated vessels and one documented order of addition. Record actual masses or volumes, final composition, appearance, preparation time, filtration or degassing and storage. Do not compensate for a candidate-lot difference by changing the column, buffer or aqueous fraction during the bridge; first determine whether the observation follows solvent identity under fixed conditions.",
+        ],
+        points: [
+          "Rank columns against the required amino-acid subset, not the largest available panel.",
+          "Hold water source, buffer lot, concentration, pH approach and preparation order constant.",
+          "Confirm buffer solubility and mobile-phase clarity at the working acetonitrile fraction.",
+        ],
+      },
+      {
+        heading: "Control high-organic preparation and ELSD response as separate systems",
+        paragraphs: [
+          "HILIC composition errors can be small in absolute volume but large relative to the aqueous fraction. Define how acetonitrile and water are measured, how hygroscopic exposure is limited, how bottles and reservoirs are closed, and how long prepared phases may stand before use. Establish an equilibration instruction based on the selected column and method rather than relying only on a fixed number of column volumes. Follow retention and pressure until the method's predefined stable state is reached.",
+          "The injection solvent deserves its own control. A sample diluent that is much stronger or more aqueous than the starting mobile phase can change focusing, peak width or selectivity, especially at a large injection volume. Match standards, recovery samples and dosage-form preparations as closely as the procedure permits. If solubility requires a different diluent, document and challenge the difference across the reportable range instead of treating it as an invisible preparation detail.",
+          "ELSD adds a second response system after the chromatographic separation. Freeze the detector model, drift-tube or evaporation temperature, nebuliser gas, gain or filter settings, flow path and acquisition method during a solvent comparison. Include a mobile-phase blank, injection blank and representative standard sequence, and review baseline, noise, drift, peak area, response precision and carryover alongside resolution. The objective is not to prove that a solvent has an intrinsic ELSD response; it is to show that the complete controlled method remains fit for its intended use with the tested lot.",
+        ],
+        points: [
+          "Trace acetonitrile, water, buffer and sample-diluent preparation independently.",
+          "Use the same column history and equilibration endpoint for both solvent lots.",
+          "Trend chromatographic separation and ELSD background instead of reducing the bridge to peak area alone.",
+        ],
+      },
+      {
+        heading: "Run an acetonitrile amino acid HILIC ELSD solvent qualification bridge",
+        paragraphs: [
+          "Reserve enough approved outgoing acetonitrile for a direct comparison with the candidate lot. Confirm product identity, grade, batch, package, opening date and available controlled documentation for both. Supplier information supports material traceability, but it does not demonstrate suitability for the laboratory's exact HILIC-ELSD procedure. The comparison must use the intended package and handling pattern where these can affect routine exposure to water or contamination.",
+          "Use a balanced sequence rather than running all retained-lot preparations before all candidate-lot preparations. Split common buffer, water, reference material and representative capsule composite across independently prepared mobile phases. Alternate injections or preparation blocks so that detector drift, column ageing and elapsed time do not align with solvent identity. Include system blanks, mobile-phase blanks, working standards, system-suitability material, independently prepared samples and a carryover check appropriate to the method.",
+          "Compare the variables that can change the analytical decision: critical-pair resolution, retention and relative retention, peak width or asymmetry, pressure, blank features, baseline behaviour, calibration response, injection precision, preparation precision, recovery or accuracy, and carryover. For an amino-acid subset, review each named analyte and critical pair. A mean across the panel can conceal a loss of selectivity that matters to the result.",
+          "Investigate differences with targeted controls. If retention shifts for standards and samples while the blank remains quiet, review composition, mixing and equilibration. If blank background follows one prepared mobile phase, repeat with freshly prepared portions and isolate solvent, water and buffer contributions. If standards are stable but capsule results change, focus on sample dilution, excipient effects and preparation recovery. If both lots drift in the same direction over time, examine the column and detector before assigning the cause to acetonitrile.",
+        ],
+      },
+      {
+        heading: "Approve a narrow scope and maintain it through change control",
+        paragraphs: [
+          "Close the study with an explicit decision: accepted for the named method and package, rejected with an assignable reason, or unresolved pending defined work. State the amino-acid subset, matrix or dosage form, stationary phase, buffer system, acetonitrile grade and package, detector configuration and software method covered by the decision. Do not silently extend a successful capsule bridge to biological matrices, LC-MS detection, a different HILIC chemistry or a complete amino-acid panel.",
+          "EMA's current ICH Q14 guideline describes science- and risk-based analytical procedure development, robustness, control strategy and lifecycle management for procedures that are fit for their intended purpose. Applied here, that means preserving the knowledge gained from column ranking, buffer studies, solvent handling and detector controls rather than filing only a pass/fail table. Define which parameters are fixed, which have established ranges and which changes trigger focused or full reassessment.",
+          "Useful triggers include a new acetonitrile supplier or manufacturing source, grade, package or closure; a water or buffer change; a different stationary-phase chemistry or column dimension; a revised sample diluent or injection volume; ELSD hardware, gas or temperature changes; a new amino acid or dosage form; and a reporting-range change. Routine trending of critical-pair resolution, retention, blank response and control-sample precision can then distinguish gradual method drift from a discrete material change.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A German capsule QC laboratory bridges a new acetonitrile lot",
+      context: "An illustrative pharmaceutical QC laboratory measures leucine, isoleucine and valine in a capsule product by HILIC–ELSD. It needs to introduce a candidate HPLC acetonitrile lot without reopening the stationary-phase and buffer choices established during method development.",
+      actions: [
+        "The team fixes the column, ammonium-formate preparation, water source, sample diluent, injection volume, equilibration endpoint and ELSD settings before opening the comparison.",
+        "Retained and candidate acetonitrile lots are used to prepare independent mobile phases from common controlled materials, and injections are balanced across the sequence.",
+        "Blanks, standards, system-suitability material and independently prepared capsule composites are reviewed for critical-pair resolution, retention, background, response, precision and recovery.",
+        "Quality documents the approved scope by method, amino-acid subset, product matrix, acetonitrile grade and package, with triggers for future reassessment.",
+      ],
+      result: "The design can show whether a difference follows acetonitrile, mobile-phase preparation, column state, ELSD response or capsule preparation before the new lot is released. This is an illustrative scenario, not a LANCHROM customer result, a validated universal method or evidence of regulatory approval.",
+    },
+    checklist: [
+      "Intended analytical decision, matrix and amino-acid subset defined",
+      "Critical analytes and separation pairs named before column ranking",
+      "Stationary phase, dimensions, temperature and column history controlled",
+      "Water source, buffer identity, concentration and preparation order recorded",
+      "Acetonitrile grade, batch, package and opening history traceable",
+      "Buffer solubility and high-organic mobile-phase clarity confirmed",
+      "Sample diluent, injection volume and preparation hold times fixed",
+      "ELSD gas, temperature, gain and acquisition settings locked",
+      "Mobile-phase, injection and carryover blanks assigned distinct purposes",
+      "Retained and candidate lots tested in a balanced comparison",
+      "Resolution, retention, background, response, precision and recovery reviewed",
+      "Approval scope, unresolved observations and change triggers documented",
+    ],
+    sources: [
+      { label: "PubMed - 2026 HILIC design space for 20 amino acids and a capsule assay", href: "https://pubmed.ncbi.nlm.nih.gov/42856022/" },
+      { label: "Agilent - HILIC column and method-development guide for polar compounds", href: "https://www.agilent.com/cs/library/brochures/brochure-new-hilic-agilent-5994-2798en-agilent.pdf" },
+      { label: "Thermo Fisher Scientific - Underivatized amino-acid HILIC application", href: "https://appslab.thermofisher.com/App/4326/underivatized-amino-acid-analysis-wine-by-hilic-separation-mass-detection" },
+      { label: "EMA - ICH Q14 analytical procedure development", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q14-analytical-procedure-development" },
+    ],
+    productLinks: [
+      { label: "View HPLC Grade Acetonitrile", href: "/products/hplc-grade-solvents/acetonitrile" },
+      { label: "View Gradient Grade Acetonitrile", href: "/products/gradient-grade-solvents/acetonitrile" },
+      { label: "Explore Pharmaceutical Analysis", href: "/applications/pharmaceutical-analysis" },
+      { label: "Open Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
