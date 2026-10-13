@@ -3632,6 +3632,114 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "methanol-water-soybean-meal-2d-lc-extraction-qualification",
+    title: "Methanol/Water for Soybean-Meal 2D-LC–MS: An Extraction and Solvent-Lot Qualification Plan",
+    shortTitle: "Soybean-Meal 2D-LC–MS Extraction Qualification",
+    description: "A methanol water soybean meal 2D-LC extraction qualification plan for controlling milling, solvent ratio, process comparisons, feature evidence and lot bridging.",
+    primaryKeyword: "methanol water soybean meal 2D-LC extraction qualification",
+    tag: "Foodomics Extraction",
+    readingTime: "11 min technical guide",
+    intro: "Methanol water soybean meal 2D-LC extraction qualification must separate two sources of change: the extraction that makes phytochemicals observable and the fermentation or enzymatic treatment that may genuinely alter the meal. If milling, solvent composition, lot identity, contact time or extract handling moves with the process comparison, a larger feature list can be mistaken for new biology. A useful transfer plan fixes the extraction first and then bridges methanol lots without treating one published 1:1 mixture as a universal method.",
+    painPoints: [
+      { title: "Processing and extraction effects are confounded", detail: "Raw, fermented and hydrolysed meals differ physically as well as chemically, so one preparation can extract them unequally and exaggerate an apparent process effect." },
+      { title: "A 1:1 ratio is treated as a complete procedure", detail: "Nominal methanol/water composition does not control particle size, solvent-to-solid ratio, mixing, temperature, time, centrifugation, transfer or storage." },
+      { title: "Feature counts become identity or benefit claims", detail: "Detected or tentatively assigned signals need annotation evidence, blanks and confirmation; more features do not by themselves prove nutritional value, safety or regulatory suitability." },
+      { title: "A solvent-lot bridge ignores the two-dimensional system", detail: "A quiet neat-solvent blank can pass while matrix recovery, modulation, retention alignment or MS response changes in the complete 2D-LC–MS workflow." },
+    ],
+    sections: [
+      {
+        heading: "Set the soybean-meal decision before choosing extraction conditions",
+        paragraphs: [
+          "Start by naming the decision the data must support: exploratory comparison, workflow transfer, process trending or investigation of a missing phytochemical class. Record the material definition, bioprocess, sampling point, storage history and whether the result is qualitative profiling, relative abundance or validated quantitation. These uses require different controls and must not share acceptance criteria by default.",
+          "A 2026 Journal of Chromatography A study provides a focused development example. The authors used comprehensive two-dimensional liquid chromatography coupled to tandem mass spectrometry to compare soybean meal with material fermented using Saccharomyces cerevisiae and material hydrolysed with food-grade cellulase. Among the extraction conditions they evaluated, methanol/water at 1:1 by volume produced the highest extraction yield and the most diverse phytochemical profile. That finding belongs to the authors' samples, preparation and analytical platform; it is a starting hypothesis, not a LANCHROM specification or a universal optimum for every soybean ingredient.",
+          "Keep the European feed context separate from analytical performance. The European Commission explains that feed-material marketing is governed through Regulation (EC) No 767/2009 and points to the Catalogue established by Commission Regulation (EU) No 68/2013. Those sources help a European laboratory define product identity and market context. They do not designate this research extraction as an official-control method, approve a processed meal or establish an acceptance limit for a 2D-LC–MS profile.",
+        ],
+      },
+      {
+        heading: "Turn the 1:1 methanol/water mixture into a controlled extraction",
+        paragraphs: [
+          "Define the sample before defining the solvent. Document drying or moisture normalisation, milling equipment, sieve or particle-size target, mixing of the bulk material, test-portion mass and time between milling and extraction. Raw and processed meals can differ in friability, residual moisture and particle distribution. If the laboratory compares equal wet masses without understanding those differences, apparent recovery changes may follow water and surface area rather than bioprocess chemistry.",
+          "Prepare the 1:1 mixture with calibrated equipment and a stated basis, normally volume by volume when reproducing the study. Record methanol product, grade, lot, package, opening history, water source and lot, measured volumes, order of addition, vessel and preparation time. Fix the solvent-to-solid ratio, mixing device and energy, extraction temperature and duration, settling or centrifugation conditions, supernatant transfer, filtration, dilution and storage. A ratio alone is not reproducible unless every high-impact contact step has an owner and record.",
+          "Challenge a justified operating range before routine transfer. Studies around solvent composition, test-portion mass, contact time and temperature can show whether the selected point is stable or sits on a steep response boundary. Evaluate representative raw, fermented and hydrolysed materials rather than only one matrix. Eurachem's current fitness-for-purpose guide treats sampling, sample handling, validation planning and performance characteristics as connected parts of the measurement procedure; use that principle to identify variables requiring robustness evidence.",
+        ],
+        points: [
+          "Separate dry-mass or moisture effects from solvent-composition effects.",
+          "Prepare independent extraction replicates, not repeated injections from one vial.",
+          "Freeze the operating procedure before comparing methanol lots.",
+        ],
+      },
+      {
+        heading: "Protect the 2D-LC–MS evidence chain from blank to annotated feature",
+        paragraphs: [
+          "Use a blank ladder with distinct purposes. A mobile-phase or injection blank examines the instrumental path. A neat extraction-solvent blank challenges methanol and water. A full procedural blank includes vessels, mixing, centrifugation, filters and transfers. A pooled matrix extract can monitor repeatability and signal drift across a long sequence. Randomise or balance sample classes so untreated, fermented and hydrolysed meals do not align with preparation day, column state or source contamination.",
+          "Control both separation dimensions and their interface. Hold first- and second-dimension columns, temperatures, flow programmes, modulation or transfer settings, injection volume, equilibration and wash routines constant during an extraction or solvent comparison. Track retention in each dimension, peak or feature shape, pressure, carryover and MS response. A changed feature map may arise from extraction, chromatographic alignment, transfer efficiency, ionisation or data processing, so retained extracts and reinjections are useful diagnostic tools.",
+          "Predefine the feature-evidence ladder. Exact mass and retention behaviour may support grouping, while MS/MS evidence and authentic standards can strengthen identification. Keep tentative soyasaponin assignments visibly tentative and distinguish presence/absence from a signal crossing a processing threshold. Fix peak picking, blank filtering, alignment, normalisation and missing-value rules before comparing groups. Report the independent samples and extraction replicates behind each conclusion.",
+        ],
+        points: [
+          "Review procedural blanks before interpreting rare or class-specific features.",
+          "Use pooled QC trends to separate analytical drift from sample-class differences.",
+          "Preserve raw data, processing parameters and annotation confidence with the result.",
+        ],
+      },
+      {
+        heading: "Interpret isoflavone and soyasaponin changes within the study boundary",
+        paragraphs: [
+          "The 2026 study identified 12 isoflavones in the untreated soybean meal. Under the authors' conditions, both bioprocesses converted glycosylated isoflavones to their corresponding aglycones, which were the isoflavones reported in the fermented and enzyme-treated materials. The paper also reported 39 tentatively identified soyasaponins: 28 were unique to untreated meal and only three were common to all three sample types. These results justify class-aware comparisons, but they should not be copied into release criteria for another material or process.",
+          "The reported feature changes were also extensive and process-specific. Fermentation was associated with 39 compounds no longer detected and 42 newly detected under the study conditions, including 18 soyasaponins. Enzymatic hydrolysis was associated with 43 compounds no longer detected and 36 newly detected, including seven soyasaponins not observed in the fermented material. Phrase such observations as detected-profile differences. A newly detected signal may reflect liberation, transformation, improved extraction or movement above a detection threshold; disappearance can reflect conversion, suppression, instability or movement below that threshold.",
+          "Build confirmation around the intended claim. Support process discrimination with blanks, pooled QC behaviour and marker review. For a named compound, require evidence appropriate to the identification level. Quantitative comparison also needs calibration, recovery, matrix-effect, precision, working-range and stability evidence. Do not infer improved nutrition, reduced risk or legal conformity from a broader chromatographic profile alone.",
+        ],
+      },
+      {
+        heading: "Run a paired methanol water soybean meal 2D-LC extraction qualification bridge",
+        paragraphs: [
+          "Reserve enough approved methanol from the outgoing lot to compare it directly with the candidate lot. Confirm identity, grade, batch, package, opening date and controlled documentation, but treat supplier documents as material traceability rather than proof of method suitability. Prepare independent 1:1 methanol/water mixtures with the same water lot and calibrated equipment. Use shared, well-homogenised portions of representative untreated, fermented and hydrolysed meals, and balance preparation and injection order across solvent lots.",
+          "Compare more than total feature count. Review procedural-blank signals, extraction yield or a justified mass-balance proxy, internal-standard behaviour where used, pooled-QC precision, retention alignment, class-level isoflavone and soyasaponin response, representative marker recovery, matrix effect, carryover and injection stability. Define acceptance rules from historical method performance and intended use before seeing the candidate-lot result. If the workflow remains exploratory, record decision rules as study criteria rather than labelling the exercise a validated release method.",
+          "Investigate differences with the smallest discriminating experiment. If blank signals follow one solvent mixture, separate methanol, water and consumable contributions. If neat standards are stable but meal extracts diverge, examine particle size, moisture, extraction recovery and matrix effect. If retained extracts move together on reinjection, review the 2D separation, source and data pipeline. If only one processed material changes, test whether its physical matrix or process chemistry interacts with the extraction before assigning the result to solvent quality.",
+          "Close the bridge as accepted for the named extraction, materials, 2D-LC–MS configuration and package; rejected with an assignable cause; or unresolved pending defined work. Set requalification triggers for source, grade, package, water, milling, moisture treatment, bioprocess, solvent ratio, columns, modulation, MS-source work and material data-pipeline changes.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A French ingredient laboratory transfers a soybean-meal profiling workflow",
+      context: "An illustrative feed-ingredient laboratory wants to compare untreated soybean meal with yeast-fermented and cellulase-treated pilot batches. It also needs to introduce a candidate methanol lot without confusing an extraction change with a bioprocess effect.",
+      actions: [
+        "The team homogenises each material, records moisture and milling controls, and freezes the 1:1 methanol/water preparation, solvent-to-solid ratio, mixing, temperature, centrifugation and storage steps.",
+        "Outgoing- and candidate-lot extracts are prepared from shared material pools in balanced order with neat-solvent blanks, full procedural blanks and pooled matrix QC samples.",
+        "The laboratory compares blanks, extraction replicates, 2D retention alignment, isoflavone and soyasaponin class response, selected marker evidence, carryover and pooled-QC precision before reviewing process differences.",
+        "The approval record limits the conclusion to the named materials, extraction procedure, solvent grade and package, chromatographic configuration and data-processing version.",
+      ],
+      result: "The design can show whether a changed profile follows soybean processing, extraction execution, methanol lot, chromatography, ionisation or data treatment before the laboratory releases the new lot. This is an illustrative scenario, not a LANCHROM customer result, a validated universal method or evidence of feed-market approval.",
+    },
+    checklist: [
+      "Intended profiling, transfer or quantitative decision defined",
+      "Untreated, fermented and hydrolysed materials identified and traceable",
+      "Moisture basis, milling, homogenisation and test-portion procedure recorded",
+      "Methanol, water, lots, packages and opening history documented",
+      "1:1 preparation basis and calibrated measuring equipment specified",
+      "Solvent-to-solid ratio, mixing, time and temperature fixed",
+      "Centrifugation, filtration, transfer, storage and injection timing controlled",
+      "Neat-solvent, procedural and carryover blanks assigned distinct roles",
+      "Independent extraction replicates and pooled QC samples included",
+      "2D retention, modulation, MS response and processing parameters locked",
+      "Annotation confidence separated from tentative feature assignments",
+      "Approval scope, acceptance rules and requalification triggers documented",
+    ],
+    sources: [
+      { label: "PubMed - 2026 soybean-meal comprehensive 2D-LC–MS/MS study", href: "https://pubmed.ncbi.nlm.nih.gov/42828874/" },
+      { label: "Journal of Chromatography A - soybean-meal phytochemical profiling study", href: "https://doi.org/10.1016/j.chroma.2026.467469" },
+      { label: "Eurachem - Fitness for Purpose of Analytical Methods, third edition", href: "https://www.eurachem.org/images/stories/Guides/pdf/MV_guide_3rd_ed_V1_EN.pdf" },
+      { label: "European Commission - Feed marketing and the feed-material catalogue", href: "https://food.ec.europa.eu/food-safety/animal-feed/feed-marketing_en" },
+      { label: "EUR-Lex - Commission Regulation (EU) No 68/2013", href: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02013R0068-20220724" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Methanol", href: "/products/lcms-grade-solvents/methanol-for-lc-ms" },
+      { label: "View HPLC Grade Methanol", href: "/products/hplc-grade-solvents/methanol" },
+      { label: "Explore LC-MS Analysis", href: "/applications/lcms-analysis" },
+      { label: "Explore Food Safety Testing Laboratories", href: "/industries/food-testing" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
