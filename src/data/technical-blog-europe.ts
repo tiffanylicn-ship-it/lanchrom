@@ -3740,6 +3740,114 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Explore Food Safety Testing Laboratories", href: "/industries/food-testing" },
     ],
   },
+  {
+    slug: "acetonitrile-rc-filtration-cannabinoid-urine-lcms-qualification",
+    title: "Acetonitrile and RC Filtration for Urinary Cannabinoid LC–MS/MS: A Particle-Control and Lot-Qualification Plan",
+    shortTitle: "Urinary Cannabinoid LC–MS/MS Cleanup Qualification",
+    description: "An acetonitrile cannabinoid urine LC-MS filtration qualification plan for controlling hydrolysis, precipitation, RC membranes, particles, matrix effect and lot changes.",
+    primaryKeyword: "acetonitrile cannabinoid urine LC-MS filtration qualification",
+    tag: "Toxicology Sample Preparation",
+    readingTime: "11 min technical guide",
+    intro: "Acetonitrile cannabinoid urine LC-MS filtration qualification is not a solvent-only exercise. In a hydrolysed urine workflow, enzyme conditions, precipitation, centrifugation, membrane chemistry and the LC flow path can all change recovery, matrix effect or pressure. A defensible lot bridge therefore treats acetonitrile and the final filter as a coupled sample-preparation system, while keeping the published method firmly within its own six-analyte and instrument boundary.",
+    painPoints: [
+      { title: "Hydrolysis variability is assigned to the solvent", detail: "Incomplete or inconsistent deconjugation can shift free-analyte response before acetonitrile or a membrane ever contacts the sample." },
+      { title: "A clear supernatant is treated as particle-free", detail: "Visual clarity after centrifugation does not demonstrate that the extract meets the particle-control needs of the column, inlet frit and routine sequence." },
+      { title: "Membrane loss is hidden inside total recovery", detail: "RC and PTFE can interact differently with individual cannabinoids, while filter extractables and urine matrix effects can alter the same LC–MS signals." },
+      { title: "Two lot changes create one unexplained deviation", detail: "Introducing candidate solvent and filter lots together without a factorial comparison makes it difficult to assign a response, blank or pressure shift." },
+    ],
+    sections: [
+      {
+        heading: "Define the urinary cannabinoid decision before transferring the cleanup",
+        paragraphs: [
+          "Start with the intended result and sample population. A laboratory may be transferring a research method, supporting clinical or forensic toxicology, investigating an adverse pressure trend, or replacing an acetonitrile or filter lot in an established procedure. Record the reportable analytes, conjugates addressed by hydrolysis, identification rules, calibration range, internal standards and whether the result is qualitative, semi-quantitative or quantitative. Acceptance criteria must follow that intended use rather than the convenience of one published preparation.",
+          "A 2026 Journal of Chromatography B study offers a focused development example for six urinary targets: THC, THC-OH, THC-COOH, CBD, CBD-OH and CBD-COOH. The authors compared protein precipitation with acetonitrile or an 80:20 acetone/acetonitrile mixture, filtration through 0.2 µm regenerated-cellulose or PTFE membranes, and combinations of precipitation and filtration. They selected 100% acetonitrile precipitation followed by an RC filter because the combination balanced analyte performance with the need to limit particles entering the LC system. That result belongs to the study's urine, enzymes, materials, analytes and platform; it does not establish RC or one solvent ratio as universally optimal.",
+          "Keep analytical transfer separate from the wider European cannabis context. The EUDA's 2026 report documents continuing cannabis relevance and an evolving European market, but it does not prescribe a urine test, reporting threshold or sample-cleanup procedure. A laboratory must use the legal, accreditation and toxicology requirements applicable to its own service and jurisdiction.",
+        ],
+      },
+      {
+        heading: "Control hydrolysis before testing acetonitrile or filters",
+        paragraphs: [
+          "Hydrolysis is an upstream source of variation. Fix enzyme identity and lot, activity basis, sample volume, buffer or pH conditions, enzyme volume, mixing, incubation time and temperature, and the delay before precipitation. Include controls that can show whether relevant glucuronides were converted consistently. If the free-analyte response changes after an enzyme lot or incubation change, a downstream solvent comparison cannot by itself explain the result.",
+          "The 2026 study compared two enzymatic approaches and selected conditions for its own samples before evaluating the complete method. A transfer laboratory should reproduce only what it can justify and then challenge the variables that matter locally. Urine concentration, pH, storage, freeze-thaw history and endogenous solids can vary between specimens. Pooled blank urine is useful during development, but representative individual sources and incurred samples may reveal matrix behaviour that a single pool conceals.",
+          "Design the sequence so hydrolysis and cleanup effects can be separated. Include an appropriate non-hydrolysed or hydrolysis-control condition during investigation, process calibrators and quality controls through the same preparation, and add internal standards at the stage defined by the procedure. Record deviations in incubation or sample timing rather than normalising them away during data processing.",
+        ],
+        points: [
+          "Lock enzyme, pH, time and temperature before opening a solvent-lot bridge.",
+          "Use matrix sources that represent the intended sample population.",
+          "Trend hydrolysis-control evidence independently from precipitation and filtration evidence.",
+        ],
+      },
+      {
+        heading: "Treat precipitation, centrifugation and RC filtration as one controlled train",
+        paragraphs: [
+          "Specify every contact step: urine volume, acetonitrile-to-sample ratio, solvent addition order, tube material, mixing energy and duration, centrifuge force rather than rpm alone, time, temperature, transfer depth, filter membrane, pore size, diameter, housing material, hold-up volume and receiving vial. The study used a defined 200 µL urine and 800 µL acetonitrile preparation followed by high-speed centrifugation and 0.2 µm RC filtration. Those details explain the published outcome but should be treated as a transfer starting point, not copied as an unqualified universal procedure.",
+          "A visible pellet and a clear supernatant are useful observations, not release tests. Precipitated protein can redisperse during transfer, fine material can remain suspended, and filter loading can change between specimens. Monitor filtration time or backpressure where the device permits, delivered extract volume and visible membrane or housing anomalies. In the LC sequence, trend system pressure, inlet-frit interventions and retention or peak-shape changes that might indicate accumulated material.",
+          "Membrane compatibility is analyte-specific. In the study, filtration alone produced low recovery for several cannabinoids, RC was generally preferable to PTFE in the selected combined cleanup, and CBD-OH remained sensitive to the preparation. Acetone/acetonitrile combinations also produced implausibly high readings in some filtered conditions. These observations support a structured comparison of adsorption, extractables and matrix response; they do not justify assuming that an apparent value above 100% is improved extraction.",
+        ],
+      },
+      {
+        heading: "Build a blank and matrix-effect ladder that can assign the cause",
+        paragraphs: [
+          "Use blanks with different questions. An LC mobile-phase or injection blank examines the flow path and carryover. A neat solvent blank challenges acetonitrile and water. A filter blank passes the intended solvent through the membrane and housing. A full procedural blank includes enzyme, tubes, precipitation, centrifugation, filtration and transfer. A blank urine extract adds the biological matrix. Review each before interpreting a low-level analyte signal or blaming the solvent lot.",
+          "Measure recovery and matrix effect as separate characteristics. Compare pre-extraction and post-extraction spikes with neat standards using the laboratory's validated calculation, then examine internal-standard-normalised results for each analyte. The study found that urine affected CBD-OH and CBD-COOH more strongly than several other targets under its conditions. A single total-recovery average could therefore hide a clinically or forensically important analyte-specific shift.",
+          "Add evidence for particles and system protection without claiming that a 0.2 µm label proves the complete extract is safe for every column. Use a justified particulate or turbidity check when available, filtration behaviour, pressure trends, guard-column or inlet-frit history, and repeated blank injections. Investigate a rising pressure separately from ion suppression: particles, precipitation after dilution, mobile-phase incompatibility, column fouling and instrument restrictions need different tests.",
+        ],
+        points: [
+          "Give solvent, filter, procedural and matrix blanks distinct identities in the sequence.",
+          "Review cannabinoid-specific recovery and matrix factor rather than one pooled number.",
+          "Connect sample-preparation observations to downstream pressure and carryover trends.",
+        ],
+      },
+      {
+        heading: "Run a paired acetonitrile cannabinoid urine LC-MS filtration qualification bridge",
+        paragraphs: [
+          "Reserve enough approved acetonitrile and RC filters to compare retained and candidate lots directly. Use a two-by-two design when both materials may change: retained solvent with retained filter, candidate solvent with retained filter, retained solvent with candidate filter, and candidate solvent with candidate filter. Prepare independent replicates from shared, well-mixed urine pools and balance preparation and injection order. Keep enzyme lot, tubes, centrifuge, pipettes, mobile phases, column, source state and data processing fixed.",
+          "Predefine the outputs and rules before viewing candidate results. Review solvent and filter blanks, hydrolysis controls, precipitation behaviour, filtration time, delivered volume, analyte and internal-standard response, absolute and relative recovery, matrix factor, calibration and QC performance, carryover, retention, peak shape and system pressure. EMA's ICH M10 frames bioanalytical validation around fitness for intended purpose; Eurachem likewise emphasises planned performance characteristics, sampling, blanks and documentation. Apply the framework appropriate to the laboratory rather than describing a material bridge as regulatory approval.",
+          "Investigate with the smallest discriminating experiment. If a blank feature follows one acetonitrile lot through both filter lots, isolate solvent, water and vial contributions. If it follows one membrane lot with both solvents, examine filter extractables, rinsing policy and housing. If neat and post-extraction standards agree but pre-extraction samples diverge, revisit hydrolysis, precipitation and matrix recovery. If all extracts shift together on reinjection, review the LC–MS system and data processing before rejecting materials.",
+          "Close the bridge as accepted for the named urine method, analytes, acetonitrile grade and package, RC device and instrument configuration; rejected with an assignable cause; or unresolved pending defined work. Set reassessment triggers for enzyme, solvent source or grade, filter membrane or housing, urine population, sample volume, hydrolysis, centrifugation, column, source maintenance and software integration changes.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A UK toxicology laboratory changes acetonitrile and RC-filter lots",
+      context: "An illustrative toxicology laboratory uses enzymatic hydrolysis, acetonitrile precipitation and 0.2 µm RC filtration for a six-analyte urinary cannabinoid panel. A solvent lot and a filter lot will change within the same month, while sporadic column-pressure increases are under investigation.",
+      actions: [
+        "The team freezes enzyme, hydrolysis, precipitation, centrifugation, transfer, LC–MS and processing conditions and prepares a two-by-two retained/candidate solvent and filter comparison.",
+        "Neat solvent, filter, full procedural and blank-urine extracts are assigned separate sequence positions, with low and high matrix QCs prepared independently.",
+        "Analysts compare analyte-specific recovery and matrix factor, internal-standard response, filtration behaviour, blank signals, carryover, retention, peak shape and pressure trend.",
+        "Quality limits approval to the tested method, six analytes, acetonitrile grade and package, RC device and instrument configuration, and records material and method change triggers.",
+      ],
+      result: "The design can show whether a change follows acetonitrile, the RC filter, their interaction, upstream hydrolysis or the LC–MS system before either candidate lot is released. This is an illustrative scenario, not a LANCHROM customer result, a validated universal method or evidence of legal or regulatory approval.",
+    },
+    checklist: [
+      "Intended toxicology decision, sample population and reportable analytes defined",
+      "Hydrolysis enzyme, lot, pH, time, temperature and controls fixed",
+      "Urine, acetonitrile and internal-standard volumes recorded",
+      "Acetonitrile grade, lot, package and opening history traceable",
+      "Tube, mixing, centrifuge force, time and temperature controlled",
+      "RC membrane, pore size, diameter, housing and lot traceable",
+      "Solvent, filter, procedural and blank-urine extracts distinguished",
+      "Retained and candidate solvent/filter combinations tested independently",
+      "Recovery and matrix effect reviewed by analyte",
+      "Filtration behaviour, delivered volume and particle evidence reviewed",
+      "Carryover, retention, peak shape and system pressure trended",
+      "Approval scope, unresolved observations and reassessment triggers documented",
+    ],
+    sources: [
+      { label: "Journal of Chromatography B - 2026 urinary cannabinoid LC–MS/MS optimisation", href: "https://doi.org/10.1016/j.jchromb.2026.125051" },
+      { label: "PubMed - urinary cannabinoid method record (PMID 41985223)", href: "https://pubmed.ncbi.nlm.nih.gov/41985223/" },
+      { label: "Eurachem - Fitness for Purpose of Analytical Methods, third edition", href: "https://www.eurachem.org/index.php/publications/guides/mv" },
+      { label: "EMA - ICH M10 bioanalytical method validation", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-m10-bioanalytical-method-validation" },
+      { label: "EUDA - Cannabis in the European Drug Report 2026", href: "https://www.euda.europa.eu/publications/european-drug-report/2026/cannabis_en" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Acetonitrile", href: "/products/lcms-grade-solvents/acetonitrile-for-lc-ms" },
+      { label: "Open the SPE Sample Preparation Guide", href: "/guides/spe-sample-preparation-guide" },
+      { label: "Read the Complete Guide to LC-MS Solvents", href: "/guides/complete-guide-to-lcms-solvents" },
+      { label: "Explore LC-MS Analysis", href: "/applications/lcms-analysis" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
