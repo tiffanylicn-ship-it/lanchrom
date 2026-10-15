@@ -3740,6 +3740,113 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Explore Food Safety Testing Laboratories", href: "/industries/food-testing" },
     ],
   },
+  {
+    slug: "acetonitrile-glp1-agonist-pharmaceutical-lchrms-qualification",
+    title: "Acetonitrile GLP-1 Agonist Pharmaceutical LC-HRMS Qualification: A Nine-Analyte Plan",
+    shortTitle: "GLP-1 Agonist LC-HRMS Solvent Qualification",
+    description: "An acetonitrile GLP-1 agonist pharmaceutical LC-HRMS qualification plan for controlling DFA, DMSO, peptide identity evidence, blanks and solvent-lot bridging.",
+    primaryKeyword: "acetonitrile GLP-1 agonist pharmaceutical LC-HRMS qualification",
+    tag: "Pharmaceutical Peptide Analysis",
+    readingTime: "11 min technical guide",
+    intro: "Acetonitrile GLP-1 agonist pharmaceutical LC-HRMS qualification cannot be reduced to comparing a certificate or one peak area. A multiplexed peptide method combines chromatographic selectivity, solvent and additive preparation, intact-mass evidence, fragment-ion confirmation and formulation-matrix behaviour. A defensible solvent-lot bridge therefore holds water, difluoroacetic acid (DFA), dimethyl sulfoxide (DMSO), column, instrument and data rules constant while it asks whether the candidate acetonitrile lot remains suitable for the laboratory's defined nine-analyte procedure.",
+    painPoints: [
+      { title: "A published nine-analyte panel is treated as a universal method", detail: "The reported column, gradient, additives, instrument and three tested formulations do not automatically cover every GLP-1 medicine, impurity profile or laboratory platform." },
+      { title: "DFA, DMSO and acetonitrile change together", detail: "When additive stocks, preparation order and solvent lot all change in one experiment, a retention, background or fragmentation difference has no clear cause." },
+      { title: "One response number replaces identity evidence", detail: "Peak area can remain stable while retention, accurate mass, isotope pattern, fragment coverage, carryover or a critical separation changes." },
+      { title: "The bridge ignores formulation and sequence effects", detail: "A neat reference solution may pass even though excipients, dilution, autosampler time, source contamination or injection order alter the pharmaceutical sample result." },
+    ],
+    sections: [
+      {
+        heading: "Set the pharmaceutical question and the nine-analyte boundary",
+        paragraphs: [
+          "Begin with the decision the procedure must support. Record whether the laboratory is identifying an active peptide, quantifying labelled content, screening multiple GLP-1 receptor agonists, investigating a suspected product or transferring a development method. Name the analytes and formulations in scope, the reportable range, reference materials, identity rules and quantitative acceptance criteria. A screening procedure covering nine structurally diverse peptides has a different analytical target profile from a product-specific release assay or an impurity procedure.",
+          "A 2026 Journal of Chromatography A study provides a useful, method-specific starting point. Its panel comprised bofanglutide, ecnoglutide, exenatide, liraglutide, mazdutide, retatrutide, semaglutide, survodutide and tirzepatide. The authors used reversed-phase LC-HRMS with accurate-mass full scan and data-dependent HRMS/MS, then applied a dilute-and-shoot preparation to marketed liraglutide, semaglutide and tirzepatide formulations. Those results demonstrate the authors' procedure; they do not establish a compendial method, approve a solvent grade or validate every formulation and impurity.",
+          "Keep regulatory context equally narrow. EMA's current synthetic-peptide guideline addresses manufacturing, characterisation, specifications and analytical control for synthetic peptides and became legally effective on 1 June 2026. It does not prescribe this LC-HRMS procedure or certify any acetonitrile lot. Use it to frame the quality questions that analytical evidence must support, then define the laboratory's method scope and validation obligations from the actual intended use.",
+        ],
+        points: [
+          "List the nine target peptides and identify which are reference, screening or reportable analytes.",
+          "Separate active-peptide identity and assay from impurity, degradation and falsification questions.",
+          "Limit the bridge to named formulations, preparation steps, instrument configuration and reporting rules.",
+        ],
+      },
+      {
+        heading: "Freeze the DFA, DMSO and acetonitrile preparation system",
+        paragraphs: [
+          "In the published study, both water and acetonitrile mobile phases contained 0.1% DFA and 0.5% DMSO, and the multistep gradient ran on a C18 column at 50 degrees Celsius and 0.3 mL/min. Treat those values as study conditions, not LANCHROM instructions or universal peptide settings. A transferring laboratory should document whether percentages are volume-based or otherwise defined, how additive stocks are prepared, the order of addition, final volumes, mixing, filtration or degassing, storage vessels, preparation age and expiry.",
+          "Design the solvent comparison so only the acetonitrile lot changes. Use the same water, DFA and DMSO lots and common additive stocks where scientifically appropriate. Prepare retained- and candidate-lot organic phases independently with calibrated equipment, and record actual masses or volumes rather than relying on nominal bottle markings. Inspect appearance and track preparation and reservoir time. If the method requires a different additive system, establish that system during development before using it to judge the solvent lot.",
+          "DFA and DMSO can affect chromatography and MS response, so they deserve independent controls. A retention or fragment-intensity difference is not evidence of an acetonitrile problem if the additive concentration, stock age or mixing sequence changed. Include additive-free or deliberately separated diagnostic preparations only when the investigation plan justifies them; do not alter the routine method inside the formal lot comparison and then claim equivalence.",
+        ],
+        points: [
+          "Record additive identity, lot, concentration basis, stock age and preparation order.",
+          "Use one controlled water source and fixed vessels, transfer tools and final-volume procedure.",
+          "Bracket the working sequence with freshly prepared retained- and candidate-lot phases.",
+        ],
+      },
+      {
+        heading: "Protect peptide identity evidence from blank to fragmentation",
+        paragraphs: [
+          "Build a blank ladder before reviewing samples. A mobile-phase blank challenges solvent and additives; an injection blank checks the autosampler and flow path; a formulation-diluent blank adds the preparation vehicle; and a carryover blank follows a justified high-level standard or sample. Compare background ions, adduct or cluster features, baseline behaviour, pressure and any signals near the target retention windows. A quiet neat solvent is useful but cannot replace the complete prepared-phase blank.",
+          "Evaluate identity as a chain of evidence. Predefine retention windows, precursor mass tolerance, isotope or charge-state expectations, fragment-ion criteria and rules for conflicting results. The published method combined full-scan accurate mass with data-dependent fragmentation and reported study-specific mass accuracy and fragment coverage. Another laboratory must establish its own criteria from its instrument, reference materials, acquisition settings and intended decision; it should not copy the paper's performance numbers into a release specification without supporting work.",
+          "Review each peptide rather than averaging the panel. Long, modified and differently charged peptides can respond differently to column history, source settings, adsorption and mobile-phase composition. Track critical separations, retention, peak width or asymmetry, precursor and fragment response, mass error, identification consistency and carryover for all analytes in scope. A stable average area can conceal loss of evidence for one low-response or closely eluting peptide.",
+        ],
+      },
+      {
+        heading: "Run the acetonitrile GLP-1 agonist pharmaceutical LC-HRMS qualification bridge",
+        paragraphs: [
+          "Reserve enough approved outgoing acetonitrile for a direct, paired comparison. Confirm product identity, grade, batch, package, opening date and available controlled documents for both lots. Supplier documentation establishes traceability and a reference specification boundary; it does not demonstrate fitness for this peptide procedure. Include the intended package and routine withdrawal practice where repeated opening or transfer can influence water exposure or contamination.",
+          "Use a balanced sequence that prevents time and instrument drift from aligning with solvent identity. Prepare independent mobile phases and, where feasible, independent reference and formulation preparations. Alternate retained- and candidate-lot blocks, place pooled or system-suitability material through the run, and include the blank ladder and carryover checks. Hold column, temperature, flow, gradient, injection volume, wash programme, source cleaning state, tune settings and acquisition method constant.",
+          "Compare method-relevant outcomes against criteria defined before unblinding the lot identity. These can include blank features, pressure, retention and relative retention, critical-pair resolution, peak shape, precursor response, fragment-ion evidence, mass error, calibration behaviour, repeatability, preparation precision, formulation recovery or accuracy, carryover and autosampler stability. Use the laboratory's validated or development history to set limits; a certificate value or the published paper's result is not a substitute.",
+          "Investigate with the smallest discriminating experiment. If blank features follow one prepared organic phase, separate acetonitrile, additive stock, vessel and preparation contributions. If reference solutions agree but formulation samples diverge, review dilution, excipients, adsorption and matrix effects. If both lots drift together, examine column equilibration, source state and sequence time. If full-scan evidence is stable but fragmentation changes, review precursor selection, collision settings and ion statistics before assigning causality to the solvent.",
+        ],
+      },
+      {
+        heading: "Approve a narrow scope and maintain lifecycle control",
+        paragraphs: [
+          "Close the study with an explicit decision: accepted for the named procedure and package, rejected for an assignable reason, or unresolved pending defined work. The approval record should link solvent and additive lots to preparation records, reference materials, formulations, raw files, integrations, identity assessments, calculations, deviations and reviewer conclusions. State exclusions clearly, such as other GLP-1 products, impurity methods, plasma bioanalysis, different columns or a different mass-spectrometer platform.",
+          "EMA's ICH Q14 guideline describes science- and risk-based analytical procedure development, robustness, control strategy and lifecycle management. ICH Q2(R2) frames validation around suitability for the intended purpose and the relevant performance characteristics. Applied here, the laboratory should preserve what the bridge teaches about solvent and additive sensitivity, define acceptable operating ranges where supported and connect future changes to proportionate reassessment. Neither guideline makes a successful lot comparison a universal approval.",
+          "Set requalification triggers before routine use. Examples include a new acetonitrile source, grade, package or closure; a DFA, DMSO or water change; revised additive concentration or phase-preparation procedure; a new formulation or peptide; altered reference material; column chemistry or dimension changes; major LC or HRMS maintenance; acquisition or processing revisions; and a changed reporting purpose. Trend blanks, system suitability, mass error, fragment evidence and carryover so emerging method drift is detected before it is mistaken for a batch-specific solvent failure.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A German pharmaceutical QC laboratory transfers a nine-agonist screening procedure",
+      context: "An illustrative laboratory is extending a three-product LC-HRMS check to a nine-analyte GLP-1 agonist panel while introducing a candidate acetonitrile lot. It must separate solvent effects from additive preparation, formulation matrix, column state and identity-processing changes.",
+      actions: [
+        "The team defines the nine analytes, three representative formulations, identity rules, quantitative checks and method exclusions before preparing either solvent lot.",
+        "Retained- and candidate-lot organic phases use the same controlled DFA and DMSO stocks, water, vessels, preparation order and timing, with independent preparations and a balanced injection sequence.",
+        "Mobile-phase, injection and formulation-diluent blanks are reviewed alongside retention, critical resolution, precursor mass, fragment evidence, response, carryover and formulation-sample precision.",
+        "The approval record limits the conclusion to the tested solvent grade and package, additive system, column, instrument, acquisition method, data rules and named formulations.",
+      ],
+      result: "The design can show whether a changed observation follows acetonitrile lot, additives, preparation, formulation matrix, chromatography, ionisation or data treatment before the laboratory releases the candidate lot. This is an illustrative scenario, not a LANCHROM customer result, a regulatory approval or evidence that the published method is universally suitable.",
+    },
+    checklist: [
+      "Intended screening, identity or quantitative decision documented",
+      "Nine analytes and representative formulations defined",
+      "Reference-material identity, purity and preparation records controlled",
+      "Acetonitrile grade, batch, package and opening history recorded",
+      "Water, DFA and DMSO lots and stock preparations fixed",
+      "Percentage basis, mixing order, final volume and phase age specified",
+      "Column, temperature, gradient, flow, injection and wash settings locked",
+      "Mobile-phase, injection, formulation-diluent and carryover blanks assigned",
+      "Full-scan mass and fragment-ion identity criteria predefined",
+      "Retention, resolution, response, precision and carryover reviewed per peptide",
+      "Formulation preparation and autosampler stability challenged where relevant",
+      "Approval scope, exclusions and requalification triggers recorded",
+    ],
+    sources: [
+      { label: "PubMed - Multiplexed LC-HRMS method for nine GLP-1 receptor agonists", href: "https://pubmed.ncbi.nlm.nih.gov/42603384/" },
+      { label: "EMA - Development and manufacture of synthetic peptides", href: "https://www.ema.europa.eu/en/scientific-guidelines/development-manufacture-synthetic-peptides" },
+      { label: "EMA - ICH Q14 analytical procedure development", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q14-analytical-procedure-development" },
+      { label: "EMA - ICH Q2(R2) validation of analytical procedures", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q2r2-validation-analytical-procedures" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Acetonitrile", href: "/products/lcms-grade-solvents/acetonitrile-for-lc-ms" },
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Explore LC-MS Analysis", href: "/applications/lcms-analysis" },
+      { label: "Read the Complete Guide to LC-MS Solvents", href: "/guides/complete-guide-to-lcms-solvents" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
