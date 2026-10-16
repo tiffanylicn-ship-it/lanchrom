@@ -3740,6 +3740,112 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Explore Food Safety Testing Laboratories", href: "/industries/food-testing" },
     ],
   },
+  {
+    slug: "methanol-patulin-apple-lcms-reconstitution-qualification",
+    title: "Methanol for Patulin LC–MS/MS in Apple Products: A Reconstitution and Solvent-Lot Qualification Plan",
+    shortTitle: "Patulin LC–MS/MS Reconstitution Qualification",
+    description: "A methanol patulin apple LC-MS reconstitution qualification plan for controlling residue dissolution, water dilution, peak shape, matrix effects and solvent-lot bridging.",
+    primaryKeyword: "methanol patulin apple LC-MS reconstitution qualification",
+    tag: "Food Contaminant Analysis",
+    readingTime: "11 min technical guide",
+    intro: "Methanol patulin apple LC-MS reconstitution qualification is not a one-variable solvent check. After an apple extract is evaporated, the laboratory must recover patulin from the vessel, keep the reconstituted solution compatible with the LC method and preserve peak shape after the final water dilution. If evaporation, mixing, matrix, dilution or solvent lot changes at the same time, a failed recovery or asymmetric peak cannot be assigned to methanol. This plan turns a recent application study into a controlled transfer and lot-bridging workflow without treating the study as an official method or a universal LANCHROM performance claim.",
+    painPoints: [
+      { title: "The dry residue is not visibly recovered", detail: "A clear vial can still hide incomplete wetting, wall retention or inconsistent mixing, so nominal reconstitution volume alone does not prove quantitative transfer." },
+      { title: "Water improves peak shape but changes the sample solvent", detail: "Final dilution can help chromatographic compatibility while also changing analyte concentration, matrix precipitation, adsorption and injection-solvent strength." },
+      { title: "Apple matrices are grouped too broadly", detail: "Juice, puree, concentrate, dried apple and infant food differ in solids and co-extractives, so one matrix cannot automatically represent every product or regulatory level." },
+      { title: "A solvent lot is judged inside a moving method", detail: "Changes in extraction, evaporation, glassware, water, internal standard, column state or source cleanliness can be mistaken for a methanol-lot effect." },
+    ],
+    sections: [
+      {
+        heading: "Define the patulin decision and the regulatory boundary first",
+        paragraphs: [
+          "Start with the decision the laboratory needs to make: transfer a research LC–MS/MS procedure, extend an established method to another apple matrix, investigate poor reconstitution or approve a new methanol lot. Record the products covered, reporting units, target range, required confirmation criteria and whether the work is development, verification or validation. A solvent bridge cannot supply evidence that the wider measurement procedure has not established.",
+          "Commission Regulation (EU) 2023/915 sets different maximum levels for patulin by product category: 50 µg/kg for specified fruit juices and related beverages, 25 µg/kg for solid apple products placed on the market for the final consumer, and 10 µg/kg for listed apple products for infants and young children and for baby food. Use the current consolidated legal text to classify the actual product. These limits define a regulatory decision point; they do not prescribe methanol, LC–MS/MS or the acceptance criteria for a solvent-lot comparison.",
+          "Keep the alternative reference method visible. ISO 8128-1 remains current after its 2022 confirmation and describes ethyl-acetate extraction followed by aqueous sodium-carbonate partitioning and HPLC with UV detection for apple juice and related products. A laboratory adopting another LC–MS/MS workflow must establish fitness for its own intended use and quality system. A recent publication can support method development, but it does not automatically replace an ISO method, an official-control procedure or a laboratory's approved method.",
+        ],
+      },
+      {
+        heading: "Control extraction, evaporation and residue recovery as one chain",
+        paragraphs: [
+          "The 2026 Scientific Reports study developed a single-step ethyl-acetate extraction assisted by ascorbic acid, followed by evaporation, residue dissolution in methanol and final dilution with water. During development, the authors compared water, acetonitrile, methanol and acidified variants for dissolving the residue. Under their conditions, methanol alone was operationally favourable because the material did not adhere to the tube wall after shaking and the solution was compatible with the mobile phase; subsequent water dilution produced symmetric peaks. These observations are study-specific development evidence, not a specification for every apple product or methanol grade.",
+          "Translate that sequence into controlled operations. Define test-portion mass, homogenisation, ethyl-acetate volume, ascorbic-acid amount, mixing time and energy, phase transfer, evaporation temperature, endpoint and time before reconstitution. For the residue step, specify methanol volume, delivery device, vessel material, wetting and mixing pattern, contact time, visual inspection and transfer recovery. Then define water source, water-to-methanol ratio, order and rate of addition, final mixing, clarification or filtration, and the maximum interval to injection.",
+          "Use process observations as evidence rather than decoration. Record film, droplets or crystals on the vessel wall; incomplete redispersion; haze after water addition; precipitate after standing; and any volume loss during transfer. Pair those observations with internal-standard response, recovery, peak symmetry, retention, ion ratio and replicate precision. If dissolution differs before injection, a later instrument response alone cannot identify whether the cause was methanol quality, operator technique, container contact or matrix residue.",
+        ],
+        points: [
+          "Freeze the evaporation endpoint before comparing solvent lots.",
+          "Use calibrated delivery devices for both methanol and water.",
+          "Include a defined inspection and mixing step before final dilution.",
+        ],
+      },
+      {
+        heading: "Build blanks and controls around the reconstitution step",
+        paragraphs: [
+          "Use a blank ladder that separates sources. A mobile-phase blank monitors the LC–MS path. A neat methanol and water blank checks the reconstitution solvents. An evaporation blank sends the solvents through the evaporation vessel and residue-recovery handling. A full procedural blank includes extraction reagent, ascorbic acid, tubes, transfers and evaporation. Finally, a matrix blank and a fortified matrix show whether a clean solvent background also supports the intended recovery and ionisation response.",
+          "Bracket retained and candidate methanol lots within the same instrument state. Use one controlled water lot, extraction-reagent lot, ascorbic-acid lot, vessel type, internal-standard solution, column and mobile-phase preparation. Prepare independent extracts rather than repeatedly injecting one shared vial. Balance preparation and injection order so that one methanol lot does not always coincide with a cleaner source, fresher column state or earlier place in the sequence.",
+          "The product document is only one layer of evidence. LANCHROM's reference TDS identifies Methanol for LC-MS as an LC-MS grade product offered in 1 L and 4 L formats, while the reference specification summary directs users to the current controlled grade-specific specification, SDS and batch COA for qualification or purchasing. Do not convert catalogue statements into method performance. Record the exact grade, batch, package, opening history and controlled documents, then make the method-level decision from the paired laboratory evidence.",
+        ],
+        points: [
+          "Assign every blank a named contamination source or process step.",
+          "Use the isotopically labelled internal standard consistently where the method requires it.",
+          "Investigate a changed blank before interpreting low-level matrix results.",
+        ],
+      },
+      {
+        heading: "Represent apple matrices without borrowing published performance",
+        paragraphs: [
+          "The cited study examined multiple apple and apple-derived foods and reported matrix-dependent effects. That supports a matrix-family strategy, not a claim that every local juice, puree, concentrate, dried product or infant food is already covered. Select representative materials based on solids, pectin or fibre, concentration, processing and intended regulatory category. Include the most difficult matrix known to the laboratory and avoid using one clear juice as the sole bridge for a high-solids puree or dried snack.",
+          "Define performance characteristics from intended use and established method knowledge. Eurachem's 2025 fitness-for-purpose guide connects validation planning, sampling and sample handling with characteristics such as selectivity, working range, precision, bias or recovery, detection capability, robustness and uncertainty. For a solvent-lot bridge, choose the subset that can reveal a material-related change: procedural-blank response, recovery, internal-standard-normalised response, matrix effect, precision, retention, peak shape, ion ratio, carryover and solution stability.",
+          "Set acceptance rules before unblinding the candidate-lot comparison. Use historical method capability, validated criteria and regulatory decision risk rather than copying the publication's numerical results. If the method changes beyond the solvent lot—for example, a new matrix, extraction ratio, evaporation device or reconstitution composition—treat the work as a broader verification or validation question. Document any conclusion as limited to the tested procedure, matrix families, methanol grade and packaging format.",
+        ],
+      },
+      {
+        heading: "Run the methanol patulin apple LC-MS reconstitution qualification bridge",
+        paragraphs: [
+          "Reserve enough approved methanol to perform a direct paired comparison with the candidate lot. Prepare independent calibration or control solutions and representative fortified matrices with both lots using the same controlled extraction and evaporation workflow. A useful sequence includes solvent blanks, full procedural blanks, low and decision-relevant fortified materials, a higher challenge level, matrix-specific controls and carryover blanks. Replication should reflect the established method and the decision risk rather than a convenient number of injections.",
+          "Review the evidence in a diagnostic order. First compare observation records and blanks. Next assess internal-standard response and solvent or procedural contamination. Then compare recovery, precision, peak symmetry, retention, ion ratio and matrix effect across the selected apple products. Finally inspect carryover and reinjection or hold-time behaviour. A difference limited to the full procedural blank points toward extraction consumables or handling; a difference that follows methanol in neat standards and matrices supports a solvent investigation; a matrix-only difference calls for recovery or ion-suppression work before rejecting the lot.",
+          "Close the bridge as accepted for the named method and scope, rejected with an assignable cause, or unresolved with a defined next experiment. Record who reviewed the raw data, which controlled product documents were used and which triggers require reassessment. Suitable triggers can include methanol source or grade, package or closure, water source, extraction reagent, evaporation equipment, reconstitution ratio, vessel material, matrix extension, column or source change, and a revised reporting or regulatory decision point.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A French apple-puree laboratory bridges an incoming methanol lot",
+      context: "An illustrative food laboratory uses an internally controlled patulin LC–MS/MS procedure for apple puree and juice. It needs to introduce a candidate LC-MS methanol lot without confusing residue recovery with matrix, evaporation or source-condition changes.",
+      actions: [
+        "The team freezes homogenisation, extraction, ascorbic-acid addition, phase transfer, evaporation endpoint, reconstitution volume, water dilution and injection timing.",
+        "Retained and candidate methanol lots are assigned to independent blank, juice and puree preparations in balanced order with one water lot and one internal-standard solution.",
+        "Reviewers compare wall wetting, solution clarity, procedural blanks, internal-standard response, recovery, precision, peak symmetry, retention, ion ratio, matrix effect and carryover.",
+        "Quality limits the conclusion to the tested LC–MS/MS procedure, apple matrices, methanol grade and package, and records change triggers for future lots or method changes.",
+      ],
+      result: "The design can show whether a difference follows methanol, residue recovery, final water dilution, apple matrix or instrument state before the candidate lot is released. This is an illustrative scenario, not a LANCHROM customer result, a validated universal method or evidence of regulatory approval.",
+    },
+    checklist: [
+      "Intended regulatory, transfer or solvent-lot decision defined",
+      "Apple product categories and matrix representatives documented",
+      "Homogenisation, extraction and ascorbic-acid steps controlled",
+      "Evaporation temperature, endpoint and hold time fixed",
+      "Methanol grade, batch, package and opening history traceable",
+      "Methanol wetting, mixing and residue inspection standardised",
+      "Water source, dilution ratio, order of addition and final volume fixed",
+      "Mobile-phase, solvent, evaporation and procedural blanks assigned",
+      "Independent preparations balanced across retained and candidate lots",
+      "Recovery, matrix effect, precision, peak shape and ion ratio reviewed",
+      "Carryover, reconstitution stability and injection timing evaluated",
+      "Approval scope, unresolved observations and change triggers recorded",
+    ],
+    sources: [
+      { label: "Scientific Reports - 2026 one-step extraction and LC–MS/MS method for patulin in apple products", href: "https://www.nature.com/articles/s41598-026-56715-y" },
+      { label: "EUR-Lex - Commission Regulation (EU) 2023/915 on maximum levels for food contaminants", href: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0915" },
+      { label: "ISO - ISO 8128-1 method for patulin in apple juice", href: "https://www.iso.org/standard/15193.html" },
+      { label: "Eurachem - Fitness for Purpose of Analytical Methods, third edition", href: "https://www.eurachem.org/images/stories/Guides/pdf/MV_guide_3rd_ed_V1_EN.pdf" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Methanol", href: "/products/lcms-grade-solvents/methanol-for-lc-ms" },
+      { label: "View HPLC Grade Methanol", href: "/products/hplc-grade-solvents/methanol" },
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Explore Food Safety Testing Laboratories", href: "/industries/food-testing" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
