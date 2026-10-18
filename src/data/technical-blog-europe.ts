@@ -3846,6 +3846,112 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Explore Food Safety Testing Laboratories", href: "/industries/food-testing" },
     ],
   },
+  {
+    slug: "acetone-hexane-herbal-pesticide-gcms-matrix-effect-qualification",
+    title: "Acetone/Hexane for Herbal-Pesticide GC–MS/MS: A Matrix-Effect and Solvent-Lot Qualification Plan",
+    shortTitle: "Herbal-Pesticide GC–MS/MS Matrix-Effect Qualification",
+    description: "An acetone hexane herbal pesticide GC-MS matrix effect qualification plan for controlling injection-solvent composition, matrix calibration, dilution and solvent-lot changes.",
+    primaryKeyword: "acetone hexane herbal pesticide GC-MS matrix effect qualification",
+    tag: "Food Residue Analysis",
+    readingTime: "11 min technical guide",
+    intro: "Acetone hexane herbal pesticide GC-MS matrix effect qualification must distinguish a true solvent-lot change from the behaviour of each botanical matrix, inlet condition and calibration design. A recent study found that changing the injection solvent and dilution changed both signal suppression and enhancement across seven herbs. That evidence supports a controlled investigation, not a universal 9:1 recipe or a claim that a named solvent grade will remove matrix effects. The practical task is to lock the complete injection system, compare retained and candidate lots in matched preparations and approve only the scope that the laboratory has actually tested.",
+    painPoints: [
+      { title: "One solvent ratio is applied to every herb", detail: "Dry mint, chamomile, green coffee, fennel, hibiscus, lemongrass and thyme can carry different co-extractives, so one matrix cannot prove suitability for the other six." },
+      { title: "Suppression and enhancement are averaged away", detail: "A panel-level mean can hide pesticide-specific bias in opposite directions and can make an apparently stable sequence unsuitable for individual reportable analytes." },
+      { title: "Dilution is treated as a universal correction", detail: "Dilution lowers co-extractives but also lowers analyte response, and the cited study found that its effect depended on both matrix and pesticide." },
+      { title: "A new solvent lot enters a moving GC system", detail: "Changes in liner activity, inlet maintenance, calibration matrix, extract age or hexane-to-acetone preparation can be mistaken for a solvent-quality problem." },
+    ],
+    sections: [
+      {
+        heading: "Define the residue decision and regulatory boundary before changing solvent",
+        paragraphs: [
+          "Start with the decision the method must support: development, transfer, extension to a new herb, investigation of matrix bias or qualification of replacement acetone and hexane lots. Record the pesticide scope, commodity definitions, reporting level, calibration approach, confirmation rules and whether results will support official control, supplier monitoring or internal screening. A solvent bridge cannot compensate for an undefined analytical scope.",
+          "The 2026 Scientific Reports study offers a bounded development example. The authors evaluated 219 pesticide residues in dry mint, chamomile, green coffee, fennel, hibiscus, lemongrass and thyme by GC–MS/MS. They compared ethyl acetate with a 9:1 hexane/acetone injection solvent and studied serial dilution in a factorial design. The direction and extent of matrix effect varied with the herb, pesticide and experimental condition. Treat those findings as a hypothesis for local verification; they do not establish a universal injection solvent, dilution factor or acceptance limit.",
+          "For European food and feed work, keep method performance separate from the legal residue decision. Regulation (EC) No 396/2005 sets the framework for pesticide maximum residue levels and requires official-control analytical methods to comply with the relevant criteria. The Commission's SANTE/11312/2021 v2026 document provides current analytical quality-control and method-validation guidance. Neither source designates the research paper's 9:1 mixture as a prescribed method, and neither proves that one solvent lot is suitable for every herbal commodity.",
+        ],
+      },
+      {
+        heading: "Turn 9:1 hexane/acetone into a controlled injection-solvent preparation",
+        paragraphs: [
+          "A ratio is not a complete preparation instruction. Define whether 9:1 is measured by volume, the calibrated devices used, preparation order, mixing procedure, vessel and closure, batch size, preparation date, hold time and storage conditions. Record the exact chemical identity of the non-polar component rather than relying on the word hexane, which can be used imprecisely. The controlled method should state whether it requires n-hexane, another defined material or a specified isomer mixture.",
+          "Trace both components independently by product name, grade, batch, package and opening history. The LANCHROM reference TDS files identify Acetone for GC and n-Hexane for GC as GC-grade products offered for GC analysis and pesticide-residue testing, while their reference specification summaries direct users to the current controlled grade-specific specification, SDS and batch COA for qualification or purchase. Those documents establish product and document scope only. They must not be converted into claims about a particular pesticide panel, matrix-effect reduction or method recovery.",
+          "Control evaporation as well as composition. A loosely capped mixture, repeated transfers or long autosampler residence can shift the effective ratio and analyte concentration. Use compatible containers, consistent fill volumes and a defined maximum age. If the method includes solvent exchange after extraction, document the evaporation endpoint, reconstitution recovery and transfer steps. Prepare independent retained-lot and candidate-lot mixtures rather than splitting one mixed bottle after an uncontrolled preparation.",
+        ],
+        points: [
+          "State chemical identity, grade and 9:1 preparation basis in the controlled procedure.",
+          "Use calibrated volume delivery and trace both solvent lots and packages.",
+          "Set mixture age, storage and autosampler-residence limits from local stability evidence.",
+        ],
+      },
+      {
+        heading: "Measure matrix effect by pesticide and herb, not by one panel average",
+        paragraphs: [
+          "Build a matrix map before approving the injection solvent. For every herb in scope, compare response in a blank-matrix extract with response in solvent at matched concentrations and under the laboratory's established calculation. Retain analyte-level results so strong enhancement for one pesticide is not cancelled by suppression for another. Include the difficult pigments, oils and volatile components represented by the actual materials rather than assuming that botanical products form one homogeneous group.",
+          "SANTE/11312/2021 v2026 states that matrix effects occur frequently in GC and LC methods and should be assessed during initial validation. It describes matrix-matched calibration as a common compensation approach and notes that exact matrix matching is generally more accurate than using one representative matrix across different commodities. Its validation table says that more than 20% signal suppression or enhancement needs to be addressed in calibration. Use the current controlled document and the laboratory's quality system when applying these criteria; do not copy the study's classification boundaries without confirming that they match the intended procedure.",
+          "Calibration is part of the experiment, not a calculation added afterward. Compare solvent calibration, exact matrix matching, a justified representative matrix, standard addition or suitable internal standards according to method needs. Include reagent blanks, injection-solvent blanks, blank extracts, fortified extracts and full procedural spikes. If a suitable blank herb is unavailable, document how naturally incurred residues and background are separated from the spiked response.",
+        ],
+        points: [
+          "Review analyte-by-matrix response ratios before summarising the panel.",
+          "Keep calibration standards and samples in equivalent injection-solvent composition.",
+          "Challenge each new herb or justify its representation within an established commodity group.",
+        ],
+      },
+      {
+        heading: "Separate dilution, inlet activity and carryover from a solvent-lot effect",
+        paragraphs: [
+          "Dilution can reduce the amount of co-extractive reaching the inlet, but it also reduces pesticide concentration and can move some analytes toward the reporting limit. Test planned dilution levels with the same extracts and both solvent-lot pairs, then compare matrix effect, detectability, calibration residuals, precision and confirmation performance. A dilution that improves one herb while weakening another pesticide cannot be adopted as a panel-wide remedy without a risk-based decision.",
+          "Control the GC inlet as its own variable. Fix liner design and lot, seal, column, injection mode, volume, temperature programme, carrier-gas settings and maintenance state during the bridge. Use a conditioning and blank sequence that is defined in advance. Track response by injection order because active sites may become masked by matrix deposits, creating apparent improvement that follows sequence history rather than solvent composition. Insert solvent and matrix blanks after high-level or difficult samples to reveal carryover and inlet memory.",
+          "Investigate in a diagnostic order. First compare neat-solvent and prepared-mixture blanks for background and unexpected peaks. Next compare standards in solvent to locate preparation or inlet-response differences. Then review matched herb extracts for analyte-specific suppression or enhancement. Finally compare carryover, calibration fit, fortified recovery and precision. If a difference appears only after one matrix, investigate that matrix and inlet condition before rejecting acetone or hexane. If it follows one component across blanks, standards and matrices, open a documented solvent-lot investigation.",
+        ],
+      },
+      {
+        heading: "Run the acetone hexane herbal pesticide GC-MS matrix effect qualification bridge",
+        paragraphs: [
+          "Reserve enough approved acetone and hexane to compare directly with candidate lots. A paired design can evaluate the outgoing/outgoing mixture, candidate-acetone/outgoing-hexane mixture, outgoing-acetone/candidate-hexane mixture and candidate/candidate mixture. This separates the two components and their interaction without changing the extract, calibration design or inlet state. Randomise or balance preparation and injection order so one combination does not always occupy the cleanest part of the sequence.",
+          "Use representative blank extracts and fortified materials for every herb in the approved scope, with levels chosen around the method's reporting decision and established validation range. Review blank interference, matrix effect, response, calibration residuals, identification criteria, recovery, repeatability, carryover and dilution behaviour using predefined acceptance rules. Eurachem's current fitness-for-purpose guide emphasises planned validation, sampling and sample handling, performance characteristics, reporting and continuing quality control; use that lifecycle structure to connect the one-time bridge with routine monitoring.",
+          "Close the study as accepted for the named pesticide panel, herbal matrices, extraction, injection-solvent identity and ratio, solvent grades, packages, GC–MS/MS configuration and calibration model; rejected with an assignable cause; or unresolved with a defined next experiment. Record change triggers for solvent source or grade, package, ratio, extract cleanup, herb extension, liner or column design, injection programme, calibration approach and reporting level. This prevents a narrow lot comparison from being represented as a universal method validation.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A Dutch botanical laboratory bridges paired acetone and n-hexane lots",
+      context: "An illustrative food-testing laboratory uses a 9:1 n-hexane/acetone injection solvent for a multiresidue GC–MS/MS panel in dry mint, chamomile, hibiscus and thyme. It needs to introduce candidate lots of both solvents after seeing higher response in several late-sequence thyme extracts.",
+      actions: [
+        "The team freezes extraction, cleanup, dilution, calibration model, liner, column, inlet programme and maintenance state, then prepares all four retained/candidate solvent combinations with calibrated equipment.",
+        "Shared blank extracts and fortified pools from each herb are aliquoted into the four mixtures, with neat-mixture blanks, matrix blanks and carryover checks distributed through a balanced sequence.",
+        "Reviewers compare analyte-level matrix effect, blank peaks, calibration residuals, identification criteria, recovery, precision and injection-order trends instead of relying on a panel average.",
+        "Quality limits the conclusion to the tested matrices, pesticide scope, 9:1 preparation, solvent grades and packages, instrument configuration and calibration procedure, with explicit requalification triggers.",
+      ],
+      result: "The design can show whether the response shift follows acetone, n-hexane, their prepared mixture, thyme co-extractives or inlet history before either candidate lot is released. This is an illustrative scenario, not a LANCHROM customer result, a validated universal method or evidence of regulatory compliance.",
+    },
+    checklist: [
+      "Intended residue decision, pesticide scope and herbal matrices defined",
+      "Injection-solvent chemical identities and 9:1 preparation basis specified",
+      "Acetone and hexane grades, lots, packages and opening history traceable",
+      "Extraction, cleanup, dilution and extract hold time controlled",
+      "Liner, seal, column, injection programme and maintenance state fixed",
+      "Solvent, mixture, matrix and procedural blanks assigned distinct roles",
+      "Exact or justified representative matrix-calibration approach documented",
+      "Retained and candidate solvent combinations tested in balanced order",
+      "Analyte-by-matrix suppression and enhancement reviewed",
+      "Reporting-level detectability, recovery and precision verified after dilution",
+      "Carryover and injection-order trends assessed before lot disposition",
+      "Approval scope, unresolved observations and requalification triggers recorded",
+    ],
+    sources: [
+      { label: "Scientific Reports - 2026 injection-solvent and dilution study across seven herbal matrices", href: "https://www.nature.com/articles/s41598-026-72448-4" },
+      { label: "European Commission - SANTE/11312/2021 v2026 pesticide-residue analytical quality-control guidance", href: "https://food.ec.europa.eu/document/download/d4786faf-c574-4222-a5c6-45086b3920b8_en?filename=pesticides_mrl_guidelines_wrkdoc_2021-11312.pdf" },
+      { label: "EUR-Lex - Regulation (EC) No 396/2005 on pesticide maximum residue levels", href: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005R0396" },
+      { label: "Eurachem - Fitness for Purpose of Analytical Methods, third edition", href: "https://eurachem.org/index.php/publications/guides/mv" },
+    ],
+    productLinks: [
+      { label: "View Acetone for GC", href: "/products/gc-grade-solvents/acetone-for-gc" },
+      { label: "View n-Hexane for GC", href: "/products/gc-grade-solvents/n-hexane-for-gc" },
+      { label: "Browse GC Grade Solvents", href: "/products/high-purity-solvents/gc-grade-solvents" },
+      { label: "Read the Complete Guide to GC Solvents", href: "/guides/complete-guide-to-gc-solvents" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
