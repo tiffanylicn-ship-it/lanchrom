@@ -3952,6 +3952,112 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Read the Complete Guide to GC Solvents", href: "/guides/complete-guide-to-gc-solvents" },
     ],
   },
+  {
+    slug: "isopropanol-polysorbate80-mab-hplc-cad-carryover-qualification",
+    title: "Isopropanol in Polysorbate-80 HPLC–CAD: Separating Solvent-Lot Effects from Valve Carryover",
+    shortTitle: "Polysorbate-80 HPLC–CAD Carryover Qualification",
+    description: "An isopropanol polysorbate 80 mAb HPLC-CAD carryover qualification plan for separating IPA-lot effects from protein matrix, valve timing and unswept flow-path volume.",
+    primaryKeyword: "isopropanol polysorbate 80 mAb HPLC-CAD carryover qualification",
+    tag: "Biopharmaceutical Analysis",
+    readingTime: "11 min technical guide",
+    intro: "Isopropanol polysorbate 80 mAb HPLC-CAD carryover qualification should not begin by blaming the newest solvent lot. In a trap-and-elute workflow, a protein-rich formulation passes through valves, connecting tubing and a trapping column before retained polysorbate is released with strong organic solvent. Residual monoclonal-antibody matrix in an unswept volume can therefore enter the CAD elution window at the same moment as the IPA step and create an apparent recovery problem. This workflow uses controlled lot bracketing, orthogonal UV evidence and documented valve challenges to distinguish solvent, preparation, fluidics and matrix causes without converting one application study into a universal method claim.",
+    painPoints: [
+      { title: "High recovery looks like a better extraction", detail: "CAD responds to non-volatile material, so protein coeluting with PS80 can add response and make a biased result appear to be improved recovery." },
+      { title: "The strongest solvent arrives at the diagnostic moment", detail: "The IPA elution step can release retained PS80 and material left in unswept tubing or valve passages, making time coincidence look like solvent causation." },
+      { title: "Valve changes and lot changes are bundled", detail: "If timing, flow path, formic-acid preparation and IPA lot change together, the laboratory cannot assign a recovery shift to any one factor." },
+      { title: "A clean neat blank is treated as sufficient", detail: "Neat IPA may be quiet while a protein-containing preparation still reveals matrix retention, valve carryover or CAD interference during the full method." },
+    ],
+    sections: [
+      {
+        heading: "Define the PS80 decision before changing solvent or hardware",
+        paragraphs: [
+          "Start with one decision: investigate a biased PS80 result, approve a candidate IPA lot, transfer an established trap-and-elute procedure or evaluate a proposed valve configuration. Record the mAb formulation, PS80 range, trapping chemistry, detectors, instrument configuration and controlled acceptance criteria. A solvent bridge can support only the tested method and package; it cannot establish that a new fluidic design, matrix or calibration model is equivalent without additional evidence.",
+          "The 2026 Waters application note studied an Oasis MAX trap-and-elute workflow in which aqueous acidic conditions retained polysorbate while the mAb matrix was directed to waste. The retained material was then eluted with a high-organic step based on IPA. The authors held chromatographic conditions consistent while comparing valve arrangements and reported less protein coelution with a dedicated fluid-sweep step. Treat this as evidence that flow-path design can be an assignable cause, not as proof that every high recovery has the same cause or that every system requires two valves.",
+          "ICH Q14 frames analytical-procedure development around intended purpose, prior knowledge, risk assessment, parameter understanding, performance criteria and lifecycle control. Apply that logic here by identifying the variables that could move PS80 response before testing them. Separate material variables such as IPA, water, formic acid and calibration standard from physical variables such as valve position, dwell volume, connections, trap condition and detector state. Predefine what result would support, weaken or leave unresolved each hypothesis.",
+        ],
+      },
+      {
+        heading: "Map the trap-and-elute path and the unswept volumes",
+        paragraphs: [
+          "Draw the actual flow path for trapping, washing, any sweep step and elution. Mark every valve port, loop, tee, detector cell and connecting capillary that sees the protein-rich sample or a change in solvent strength. Record commanded and observed valve events, pump composition, flow, pressure and the time that each segment is exposed to aqueous wash or IPA. The useful question is not only whether a valve switched, but whether the previous fluid was displaced from every relevant volume before the CAD window opened.",
+          "In the cited study, mobile phase A was 2% formic acid in water and mobile phase B was 2% formic acid in isopropanol. A single-valve arrangement directed mAb matrix to waste, then routed the IPA-eluted PS80 through UV and CAD. The double-valve arrangement added a fluid sweep after trapping and before PS80 elution. Those compositions, components and timings are study-specific. A laboratory should reproduce them only within an approved transfer or development protocol and should verify compatibility, pressure and detector requirements on its own equipment.",
+          "Use the 280 nm trace as an orthogonal diagnostic when the configured system permits it. Waters used UV absorbance to follow protein because the tested mAb gave a strong response while PS80 did not provide a measurable signal at that wavelength under the study conditions. A UV feature overlapping the CAD elution window can therefore support a residual-protein hypothesis. It does not identify the protein, quantify every coeluent or replace CAD suitability; it is one line of evidence to compare with blanks, pressure, recovery and valve-event logs.",
+        ],
+        points: [
+          "Verify the plumbing against the controlled instrument method rather than a generic schematic.",
+          "Measure or calculate swept volumes and allow sufficient wash volume before elution.",
+          "Preserve pressure and valve-event traces with the chromatograms.",
+        ],
+      },
+      {
+        heading: "Build blanks and controls that isolate matrix, preparation and carryover",
+        paragraphs: [
+          "Create a diagnostic ladder. Start with water, IPA and prepared-mobile-phase blanks to screen the solvent and additive backgrounds. Add a no-injection gradient or programme blank to observe the system response to the composition and valve sequence. Run a PS80 standard without protein to assess retention, elution and CAD response. Then add a protein-only control, a formulation blank where available and PS80-spiked mAb preparations. Follow a high-matrix sample with a blank to test sequence carryover rather than inferring it from one chromatogram.",
+          "Hold formic-acid lot, water, preparation vessels, trap column, connection geometry, detector settings and data processing constant during the IPA comparison. Prepare retained- and candidate-lot mobile phases independently using calibrated equipment, and balance their preparation and injection order. Record actual composition, preparation time, degassing practice and hold time. A difference that follows one preparation but disappears when it is remade is not yet evidence of a raw-solvent lot effect.",
+          "NIST describes RM 8671 as a reference material that may support system suitability, method or instrument performance comparisons and method qualification. That makes it a useful common control when suitable for the laboratory's protocol, but it is not a substitute for the actual product matrix. The Waters study used both NISTmAb and a more concentrated research-grade mAb challenge. A practical design can use a characterized control to monitor the system and representative formulation samples to test matrix-specific behaviour, with the role of each material stated in advance.",
+        ],
+      },
+      {
+        heading: "Run the isopropanol polysorbate 80 mAb HPLC-CAD carryover qualification bridge",
+        paragraphs: [
+          "Reserve enough approved IPA to bracket the candidate lot in the same qualified instrument state. Compare neat and prepared-mobile-phase blanks first, then PS80 standards, protein controls and independently prepared spiked matrices. Use the laboratory's established calibration model and system-suitability rules. Review blank response, CAD baseline, retention window, peak area or response, recovery, precision, UV at 280 nm where available, carryover, pressure and valve-event timing. Replication should match the decision risk and the established procedure rather than a convenient injection count.",
+          "Interpret the evidence in a fixed order. If a feature appears in neat candidate IPA and prepared mobile phase but not the retained lot, investigate solvent, package and preparation records. If both IPA lots are clean but protein-only controls produce UV and CAD response during elution, investigate matrix removal and fluidics. If the feature follows only one valve programme, inspect swept volume and timing. If it appears after high-matrix samples regardless of lot, test carryover and cleaning. If recovery shifts without a matching blank or UV change, review calibration, standard preparation, integration and CAD operating state before assigning a cause.",
+          "Do not use the application note's numerical recoveries as universal acceptance limits. In its specific experiments, the double-valve arrangement gave results closer to expected spike concentrations, and the authors also noted that one comparison involved different LC, CAD and column hardware. Local criteria should come from the approved analytical procedure, historical capability and intended reporting range. A hardware modification may require broader verification, validation or change control even when it improves a diagnostic result.",
+        ],
+        points: [
+          "Change only the IPA lot during the primary material bridge.",
+          "Challenge valve configuration separately under a documented method-development or change-control plan.",
+          "Use orthogonal evidence before rejecting a solvent lot or approving a hardware change.",
+        ],
+      },
+      {
+        heading: "Close the investigation with a bounded decision and requalification triggers",
+        paragraphs: [
+          "Close the study as accepted for the named IPA grade, lot, package and procedure; rejected with an assignable cause; or unresolved with a specific next experiment. The report should link raw data to mobile-phase preparation, instrument configuration, valve events, trap identity, standards and sample materials. Document whether a difference followed solvent, preparation, matrix, valve programme, detector state or sequence history, and state what the evidence does not establish.",
+          "The LANCHROM reference TDS lists Isopropanol (IPA) across several grades and directs users to the current grade-specific specification, SDS and batch COA. The reference specification summary likewise warns that acceptance limits can differ by grade. Use those controlled documents for product identity and purchasing review, then make the method-suitability decision from laboratory evidence. Do not infer PS80 recovery, CAD cleanliness or valve compatibility from a catalogue grade name.",
+          "Set triggers for reassessment: IPA source, grade, package or closure; water or formic-acid source; mobile-phase composition or hold time; trap column or connection change; valve maintenance or timing; tubing dimensions; detector service; calibration model; mAb concentration or formulation; PS80 standard; and extension to another product. This preserves the diagnostic knowledge and prevents a future deviation from being reduced to another unsupported solvent-lot assumption.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A Swiss biologics laboratory separates an IPA lot change from valve carryover",
+      context: "An illustrative analytical-development laboratory sees elevated apparent PS80 recovery after introducing a candidate HPLC-grade IPA lot in a trap-and-elute HPLC–CAD method for a concentrated mAb formulation. A recent valve-service event occurred in the same week, so solvent and fluidic causes are both plausible.",
+      actions: [
+        "The team freezes water, formic acid, PS80 standard, trap column, mAb pool, preparation vessels, detector settings, integration and sequence timing.",
+        "Retained and candidate IPA lots are bracketed through solvent blanks, prepared-mobile-phase blanks, PS80 standards, protein-only controls, spiked matrix preparations and post-matrix carryover blanks.",
+        "The laboratory compares CAD response with 280 nm UV, pressure and valve-event records, then repeats the fluidic challenge with a documented sweep step without changing the solvent lots.",
+        "Quality limits the conclusion to the tested method, formulation, IPA grade and package, and records separate actions for material approval and any valve-method change.",
+      ],
+      result: "The design can show whether the shifted result follows IPA, mobile-phase preparation, retained protein, valve timing or sequence carryover before either the solvent lot is rejected or the fluidic configuration is changed. This is an illustrative scenario, not a LANCHROM customer result, a validated universal method or a claim that a double-valve arrangement is required for every PS80 assay.",
+    },
+    checklist: [
+      "Intended investigation, transfer or IPA-lot decision defined",
+      "mAb formulation, PS80 range and matrix challenge documented",
+      "IPA grade, lot, package, opening history and controlled documents traceable",
+      "Water, formic acid, composition, preparation and hold time fixed",
+      "Trap column, tubing, valves, port map and swept volumes recorded",
+      "Valve events, flow, pressure and detector settings preserved",
+      "Solvent, mobile-phase, programme and carryover blanks assigned",
+      "PS80-only, protein-only and representative matrix controls included",
+      "Retained and candidate IPA preparations independently bracketed",
+      "CAD, 280 nm UV, recovery, precision and carryover reviewed together",
+      "Material and hardware conclusions kept as separate decisions",
+      "Approval scope, unresolved causes and requalification triggers recorded",
+    ],
+    sources: [
+      { label: "Waters - improved PS80 recovery by CAD with a double-valve configuration", href: "https://www.waters.com/nextgen/us/en/library/application-notes/2026/improved-recovery-of-polysorbate-80-by-charged-aerosol-detection-enhancing-performance-with-a-double-valve-configuration.html" },
+      { label: "NIST - Monoclonal Antibody Reference Material 8671", href: "https://www.nist.gov/programs-projects/nist-monoclonal-antibody-reference-material-8671" },
+      { label: "EMA - ICH Q14 analytical procedure development", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q14-analytical-procedure-development" },
+      { label: "EDQM - Harmonisation status for excipient monographs", href: "https://www.edqm.eu/en/harmonisation-status-for-excipient-monographs-pdg-" },
+    ],
+    productLinks: [
+      { label: "View HPLC Grade Isopropanol (IPA)", href: "/products/hplc-grade-solvents/ipa" },
+      { label: "Browse HPLC Grade Solvents", href: "/products/hplc-grade-solvents" },
+      { label: "Read the Complete Guide to HPLC Solvents", href: "/guides/complete-guide-to-hplc-solvents" },
+      { label: "Explore Biotechnology and Cell Therapy", href: "/industries/biotechnology" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
