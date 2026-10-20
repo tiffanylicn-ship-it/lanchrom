@@ -4058,6 +4058,112 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Explore Biotechnology and Cell Therapy", href: "/industries/biotechnology" },
     ],
   },
+  {
+    slug: "acetonitrile-api-residual-protein-amino-acid-hilic-ms-qualification",
+    title: "Acetonitrile for Residual-Protein HILIC–MS in APIs: An Amino-Acid Analysis Qualification Plan",
+    shortTitle: "API Residual-Protein HILIC–MS Qualification",
+    description: "An acetonitrile API residual protein amino acid HILIC-MS qualification plan for controlling hydrolysis, acidic reconstitution, matrix effects and solvent-lot changes.",
+    primaryKeyword: "acetonitrile API residual protein amino acid HILIC-MS qualification",
+    tag: "API Quality Control",
+    readingTime: "11 min technical guide",
+    intro: "Acetonitrile API residual protein amino acid HILIC-MS qualification must cover the full preparation chain, not just a bottle comparison. Protein residues are hydrolysed, the hydrolysate is clarified and dried, and released amino acids are reconstituted in an ACN-rich acidic solution before HILIC–MS/MS. A response shift can therefore originate from hydrolysis, evaporation, reconstitution, matrix interference, HILIC equilibration or the mass spectrometer. This plan separates those causes and produces bounded evidence without claiming that a grade or certificate proves API control.",
+    painPoints: [
+      { title: "Bradford and MS results disagree", detail: "A colour response can depend on protein composition and API interference, while amino-acid analysis measures a different evidence chain; disagreement cannot be assigned to ACN without controls." },
+      { title: "Hydrolysis losses look like solvent recovery", detail: "Incomplete release or degradation of individual amino acids can change calculated residual protein before the reconstitution solvent ever reaches the sample." },
+      { title: "The 90:10 reconstitution is treated as nominal", detail: "Water, residual acid, incomplete dry-down and volumetric error can change HILIC focusing, response and matrix behaviour even when the bottle label is unchanged." },
+      { title: "Several method elements change together", detail: "A new ACN lot introduced with a buffer, column, source clean or calibration change leaves the laboratory unable to identify the cause of a shifted result." },
+    ],
+    sections: [
+      {
+        heading: "Define the residual-protein decision and the measurement boundary",
+        paragraphs: [
+          "State whether the procedure supports process development, an impurity investigation, change control or routine release. Define the API family, manufacturing route, matrix load, reportable range and approved expression of residual protein. Free amino acids in the API are not automatically equivalent to protein-derived amino acids. If the calculation subtracts free amino acids before hydrolysis from total amino acids after hydrolysis, both measurements and their uncertainty belong inside the control strategy.",
+          "The 2026 Journal of Pharmaceutical Analysis study compared conventional protein assays across diverse proteins and peptides, then developed amino-acid analysis by HILIC–MS/MS for small-molecule APIs. Its Bradford investigation showed that dye response varies with amino-acid composition and coloured API solutions can interfere with absorbance. The workflow was applied to eight commercial APIs. These findings justify orthogonal investigation; they do not create a universal residual-protein limit or validate the published procedure elsewhere.",
+          "ICH Q7 requires an appropriate quality system and says analytical validation should reflect the purpose of the analysis and production stage. It also calls for controlled records when a validated method is modified. Define the controlled result, acceptable procedure performance, evaluated change and approver before the experiment. A solvent bridge should not silently become a new impurity method or process-validation claim.",
+        ],
+      },
+      {
+        heading: "Control hydrolysis, dry-down and acidic ACN reconstitution as one chain",
+        paragraphs: [
+          "Map the complete preparation rather than beginning at the LC vial. The cited study added stable-isotope-labelled amino-acid internal standards before acid hydrolysis, used 6 M HCl under nitrogen, hydrolysed at 110 °C for 22 hours, cooled and centrifuged the hydrolysate, then dried an aliquot by vacuum centrifugation. Those conditions were optimized for that study and are not default settings for another API. Acid strength, temperature, time, oxygen exclusion, antioxidant use, sample mass, mixing, centrifugation and aliquot selection can all alter the amino-acid pattern presented to the instrument.",
+          "After drying, the study reconstituted samples in ACN/water 90:10 (v/v) containing 0.01 M HCl. That composition approximated its initial HILIC conditions and supported its selected response and linearity. Treat the ratio and acid concentration as procedure parameters, not as instructions transferred by citation. Record the actual dry-down endpoint, residual volume, calibrated additions, preparation order, mixing, clarification and time to injection. A wet residue changes the effective organic fraction; an over-dried or poorly mixed sample may not redissolve consistently; evaporation vessels and caps can add background or adsorption effects.",
+          "Use matched controls to locate loss: an unhydrolysed free-amino-acid aliquot, hydrolysis blank, justified matrix blank, protein or peptide controls, process spikes and the method's co-processed internal standards. Review individual amino acids before collapsing them into a total-protein estimate. A common shift across labile amino acids requires a different investigation from a feature confined to one retention region or candidate-ACN preparation.",
+        ],
+        points: [
+          "Specify the calculation that separates free and protein-derived amino acids.",
+          "Control residual water and acid after evaporation rather than assuming complete dry-down.",
+          "Keep hydrolysis and reconstitution blanks traceable to every reagent lot and vessel set.",
+        ],
+      },
+      {
+        heading: "Separate solvent effects from HILIC, matrix and MS effects",
+        paragraphs: [
+          "HILIC retention is sensitive to the complete injection and mobile-phase environment. Lock the aqueous source, buffer identities and concentrations, formic acid, preparation order, measured pH approach where applicable, gradient, injection volume, column chemistry, temperature, flow and equilibration. Keep the sample diluent compatible with the controlled method. A retention or peak-shape change that appears after switching ACN can still result from a different water contribution, buffer precipitation, column conditioning or an injection plug that no longer matches the initial mobile phase.",
+          "Build a blank ladder: neat retained and candidate ACN, each acidic reconstitution solvent, blanks that undergo evaporation and reconstitution, and complete hydrolysis blanks. Follow with standards, matrix-matched controls and representative API samples. Review relevant background ions, retention, peak shape, response, internal-standard behaviour, carryover and source stability. A feature that follows neat candidate ACN strengthens the material hypothesis; one appearing only after hydrolysis points first to the reagent and vessel chain.",
+          "Matrix evidence is equally important. The cited study evaluated process recovery, matrix effect, parallelism, dilution integrity and stability in its selected hydrolysate system. A laboratory should choose the characteristics needed for its own intended purpose under ICH Q2(R2), using predefined criteria and suitable reference materials. Do not import the paper's reported performance numbers as local acceptance limits. Replication, API lots and concentration levels should reflect the decision risk, anticipated matrix variability and the procedure's established range.",
+        ],
+      },
+      {
+        heading: "Run the acetonitrile API residual protein amino acid HILIC-MS qualification bridge",
+        paragraphs: [
+          "Reserve enough approved ACN to bracket the candidate lot in one stable instrument state. Prepare retained and candidate reconstitution solvents independently with calibrated equipment, and randomise or alternate them through the sequence so time and source condition do not align with lot. Hold the API pool, hydrolysis reagents, internal-standard solution, vessels, dry-down programme, reconstitution volume, HILIC column and mobile-phase additives constant. If the mobile phase also contains ACN, decide in advance whether the primary comparison changes sample-diluent ACN only, mobile-phase ACN only or both in a factorial design; an uncontrolled simultaneous switch cannot locate the effect.",
+          "Link each observation to a next test. A candidate-only neat blank feature points toward solvent or package. A difference confined to the acidic 90:10 preparation may involve water, HCl, mixing or container history. A shift shared by both lots after hydrolysis points toward digestion, dry-down, matrix or instrument state. Divergence between native amino acids and stable-isotope standards may reveal analyte-specific loss; matched movement can indicate a broader preparation effect. Preserve chromatograms, records and raw calculations.",
+          "Review the supplier evidence alongside, not instead of, method data. Confirm chemical identity, selected grade, batch, package, seal condition, certificate of analysis, current specification, safety data sheet and change-notification route. The LANCHROM library lists a distinct Acetonitrile for LC-MS product family and separates reference product documents from batch-specific release evidence. That supports purchasing and traceability; it does not demonstrate residual-protein recovery, HILIC selectivity or suitability for a particular API without the laboratory bridge.",
+        ],
+        points: [
+          "Change only one ACN role at a time unless the design deliberately estimates interactions.",
+          "Bracket retained and candidate preparations across the same hydrolysis and instrument sequence.",
+          "Base disposition on method performance, traceability and predefined criteria together.",
+        ],
+      },
+      {
+        heading: "Close with a bounded decision, lifecycle controls and triggers",
+        paragraphs: [
+          "Classify the outcome as accepted for the named procedure and package, rejected with an assignable cause, or unresolved with a specified next experiment. The report should connect every result to API and solvent lots, preparation records, hydrolysis batch, internal standards, column, mobile phases, instrument state and data-processing version. State what the study did not establish. Agreement between one retained and one candidate lot does not prove universal supplier equivalence, process clearance, regulatory compliance or suitability for every API matrix.",
+          "ICH Q14 places analytical procedures within a lifecycle of intended purpose, risk assessment, parameter understanding, validation, routine monitoring and change management. ICH Q2(R2) provides the current framework for demonstrating characteristics such as specificity or selectivity, range, accuracy and precision as appropriate to the procedure. Use the approved local protocol to determine whether the solvent change needs a focused bridge, partial revalidation or broader work. Neither guideline prescribes a universal ACN grade, 90:10 diluent or residual-protein limit.",
+          "Set reassessment triggers before routine use: ACN source, grade, site, package or closure; water or acid; hydrolysis programme; internal-standard lot; evaporation equipment; reconstitution ratio; HILIC column or buffer; instrument service; MS transitions; API process; calculation; and reporting range. Trend them with blanks, suitability results and investigations so the newest solvent container does not become the default explanation.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A UK CDMO bridges ACN for an API residual-protein method",
+      context: "An illustrative CDMO uses hydrolysis followed by amino-acid HILIC–MS/MS as orthogonal evidence when a Bradford result for an enzymatically manufactured small-molecule API is difficult to interpret. It must introduce a candidate LC-MS-grade ACN lot without confusing solvent, dry-down and API-matrix effects.",
+      actions: [
+        "The team freezes API pool, sample mass, HCl and internal-standard lots, hydrolysis programme, vacuum-dry settings, water, HILIC buffer, column and MS method.",
+        "Retained and candidate ACN lots are compared first as neat and acidic 90:10 blanks, then through complete preparation blanks, standards, spiked API matrix and representative process samples.",
+        "The sequence brackets both lots and reviews individual amino acids, internal-standard response, retention, peak shape, matrix effect, process recovery, carryover and the calculated free-versus-total amino-acid difference.",
+        "Quality limits approval to the tested procedure, API family, ACN grade and package, and records separate actions for any Bradford disagreement or process-impurity investigation.",
+      ],
+      result: "The design can show whether a changed result follows ACN, acidic reconstitution, hydrolysis, dry-down, matrix or instrument state before the candidate lot is accepted or rejected. This is an illustrative scenario, not a LANCHROM customer result, a validated universal method, a residual-protein specification or evidence of GMP compliance.",
+    },
+    checklist: [
+      "Intended API quality decision and reporting boundary defined",
+      "Free-amino-acid and total-amino-acid calculation documented",
+      "API, protein or peptide controls and matrix coverage justified",
+      "Hydrolysis acid, antioxidant, temperature, time and oxygen controls fixed",
+      "Stable-isotope internal standards and addition point controlled",
+      "Dry-down endpoint, vessels and reconstitution volume recorded",
+      "ACN/water ratio and acid concentration prepared with calibrated equipment",
+      "Neat, reconstitution, preparation and hydrolysis blanks assigned distinct roles",
+      "Retained and candidate ACN lots bracketed in a balanced sequence",
+      "HILIC equilibration, buffer, column and injection conditions locked",
+      "Individual amino acids, matrix effect, recovery and carryover reviewed",
+      "Approval scope, uncertainty and requalification triggers recorded",
+    ],
+    sources: [
+      { label: "Journal of Pharmaceutical Analysis - Bradford limitations and AAA-HILIC-MS/MS for protein residues in APIs", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13392951/" },
+      { label: "ICH - Q7 Good Manufacturing Practice Guide for Active Pharmaceutical Ingredients", href: "https://database.ich.org/sites/default/files/Q7_Guideline.pdf" },
+      { label: "ICH - Q14 Analytical Procedure Development", href: "https://database.ich.org/sites/default/files/ICH_Q14_Guideline_2023_1116.pdf" },
+      { label: "ICH - Q2(R2) Validation of Analytical Procedures", href: "https://database.ich.org/sites/default/files/ICH_Q2%28R2%29_Guideline_2023_1130_ErrorCorrection_2025.pdf" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Acetonitrile", href: "/products/lcms-solvents/acetonitrile" },
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Browse Pharmaceutical Grade Solvents", href: "/products/high-purity-solvents/pharmaceutical-grade-solvents" },
+      { label: "Read the Complete Guide to LC-MS Solvents", href: "/guides/complete-guide-to-lcms-solvents" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
