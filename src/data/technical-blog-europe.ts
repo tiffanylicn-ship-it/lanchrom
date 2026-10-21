@@ -4164,6 +4164,115 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Read the Complete Guide to LC-MS Solvents", href: "/guides/complete-guide-to-lcms-solvents" },
     ],
   },
+  {
+    slug: "isopropanol-neutral-pfas-food-packaging-gcms-extraction-qualification",
+    title: "Isopropanol in Neutral-PFAS Food-Packaging GC–MS: A Four-Solvent Extraction Qualification Plan",
+    shortTitle: "Neutral-PFAS Packaging GC–MS Extraction Qualification",
+    description: "An isopropanol neutral PFAS food packaging GC-MS extraction qualification plan for controlling four-solvent extraction, blanks, matrix effects and PPWR evidence boundaries.",
+    primaryKeyword: "isopropanol neutral PFAS food packaging GC-MS extraction qualification",
+    tag: "PFAS Analysis",
+    readingTime: "12 min technical guide",
+    intro: "Isopropanol neutral PFAS food packaging GC-MS extraction qualification is a system-level decision, not a certificate check on one bottle. A 2026 peer-reviewed method used two sequential extraction steps with hexane, isopropyl alcohol, methanol and acetonitrile to cover volatile and semi-volatile neutral PFAS in paper and plastic packaging. European laboratories can use that study to design a controlled solvent-lot bridge, but the targeted GC–MS/MS result is complementary evidence: it does not by itself demonstrate compliance with every PFAS limit in the EU Packaging and Packaging Waste Regulation (PPWR).",
+    painPoints: [
+      { title: "One targeted method is treated as the whole PPWR answer", detail: "Neutral PFAS measured by GC–MS/MS are only one analytical scope; they cannot be silently equated with total fluorine, ionic PFAS, polymeric PFAS or the complete legal decision." },
+      { title: "Four solvents are changed as one uncontrolled bundle", detail: "Switching hexane, IPA, methanol and acetonitrile together makes a recovery or blank shift impossible to assign to one material or extraction step." },
+      { title: "Packaging blanks and solvent blanks are confused", detail: "Paper fibres, coatings, plastics, caps, filters and concentration vessels can add or lose analytes, while volatile targets and solvent background can also move during evaporation." },
+      { title: "A supplier document is used as method suitability", detail: "Identity, grade, specification and batch traceability support qualification, but only the laboratory method can show whether a candidate IPA lot is acceptable for its target panel and reporting range." },
+    ],
+    sections: [
+      {
+        heading: "Define the neutral-PFAS question before selecting the evidence",
+        paragraphs: [
+          "Begin with the compounds and decision the procedure must support. The 2026 Journal of Chromatography A study developed fast low-pressure GC–MS/MS for 37 volatile and semi-volatile neutral PFAS, including fluorotelomer alcohols, acrylates, methacrylates, perfluoroalkane sulfonamides and sulfonamido alcohols. It validated extraction in paper- and plastic-based food-contact materials. That is a distinct scope from the non-volatile ionic PFAS commonly measured by LC–MS/MS, from non-target screening, and from methods that estimate total or organic fluorine.",
+          "Write the target list, matrix types, reporting purpose and identification rules into the protocol. A packaging investigation may need several analytical streams because a non-detect in a neutral-PFAS GC panel does not establish that other targeted PFAS, unknown precursors or polymeric fluorinated material are absent. Likewise, a total-fluorine result cannot identify which neutral compounds produced it. Use the GC method for the question it can answer and link any broader conclusion to the other controlled methods required by the laboratory's decision framework.",
+          "The published method achieved an eight-minute run under its selected low-pressure conditions, but its results are not transferable acceptance criteria. Column phase, inlet behaviour, transitions, calibration, internal standards, matrix and instrument configuration remain local variables. A transferring laboratory should establish performance for its own intended purpose.",
+        ],
+        points: [
+          "Separate neutral volatile and semi-volatile PFAS from ionic, polymeric and total-fluorine scopes.",
+          "Define paper, plastic, coating and composite matrices that the qualification actually covers.",
+          "State whether the result supports screening, investigation, supplier control or a regulated decision.",
+        ],
+      },
+      {
+        heading: "Keep PPWR limits and the analytical method in separate layers",
+        paragraphs: [
+          "Article 5(5) of Regulation (EU) 2025/40 applies PFAS limits to food-contact packaging placed on the EU market from 12 August 2026. It sets thresholds for any PFAS measured by targeted analysis, the sum of PFAS measured by targeted analysis with precursor degradation where applicable, and PFAS including polymers. The regulation defines the legal boundary; it does not declare that one neutral-PFAS GC panel covers every threshold, matrix or compound class.",
+          "The Commission's 2026 PPWR guidance makes this limitation operational. It states that there is no harmonised EU methodology for PFAS in food-contact packaging and recommends a stepwise enforcement approach using total fluorine, confirmation of organic versus inorganic fluorine where needed, and direct TOP analysis for the targeted concentration limits. The guidance also connects applicability to when food-contact packaging is placed on the market. Laboratories should therefore map each reported result to the relevant step and seek current regulatory or competent-authority interpretation rather than presenting a solvent-qualified GC method as standalone legal proof.",
+          "Build an evidence matrix with rows for the applicable PPWR threshold, analytical scope, sample, method, uncertainty and decision rule. Place neutral-PFAS GC–MS/MS only in the row it supports, with separate rows for other measurements and manufacturer or importer documentation. This makes gaps visible before a report is issued.",
+        ],
+      },
+      {
+        heading: "Control the two-step, four-solvent extraction as one system",
+        paragraphs: [
+          "The cited research used two sequential extraction steps and four complementary solvents—hexane, isopropyl alcohol, methanol and acetonitrile—to broaden recovery across different neutral-PFAS chemistries. Complementarity is the reason not to treat IPA in isolation during method setup. Freeze the solvent identities and grades, extraction order, volumes, material-to-solvent ratio, contact time, agitation, temperature, centrifugation, transfer, concentration, reconstitution and final vial conditions. If the laboratory adapts any published parameter, record it as development rather than implying exact reproduction.",
+          "Packaging preparation can dominate variability. Define how coatings, laminates, printed areas, seams, adhesives and plastics are sampled, cut or homogenised, and how tools are cleaned. Use matrix-specific controls because paper and plastic can differ in wetting, adsorption and extractable background. Replicates should represent sampling as well as injection.",
+          "Volatile and semi-volatile targets add handling risk. Cap vessels consistently, control open time and document final volume. Review whether evaporation changes recovery by compound class. Keep internal-standard timing fixed and distinguish extraction loss from post-extraction loss; a clear extract does not prove that the full panel was retained.",
+        ],
+        points: [
+          "Assign every solvent a controlled lot, role, step and volume.",
+          "Hold sampling, vessel, cap, transfer and concentration variables constant during a lot bridge.",
+          "Evaluate paper and plastic separately before pooling conclusions.",
+        ],
+      },
+      {
+        heading: "Isolate IPA-lot effects from blanks, matrix and GC behaviour",
+        paragraphs: [
+          "Create a blank ladder before comparing packaging extracts. Start with instrument and vial blanks, then neat-solvent blanks for each of the four solvents, combined extraction-solvent blanks, complete procedural blanks and matrix blanks appropriate to paper and plastic. Follow them with standards, matrix spikes and representative samples. This order shows whether a feature follows the candidate IPA directly, appears only after solvents are combined, enters during preparation or is released from a packaging matrix.",
+          "Use retained and candidate IPA lots in matched preparations while keeping the other three solvents on one qualified lot. Alternate or randomise the two IPA conditions through the preparation and analytical sequence so that inlet condition, source drift and time do not align with lot. Review blank contribution, analyte-specific recovery, internal-standard response, retention, transition ratios, repeatability, carryover and concentration loss. A common change across many volatile compounds may indicate handling or evaporation; one feature present in neat candidate IPA supports a narrower material investigation.",
+          "GC suitability belongs in the same investigation. The study evaluated low-pressure GC phases under vacuum-outlet conditions and found that phase selection matters for volatile PFAS. Lock column identity, dimensions, conditioning history, inlet liner, injection mode, gas flow, pressure programme, oven programme, transfer line, source conditions and MRM transitions. Check for contamination or memory after high standards and matrix extracts. Replacing a liner or column during the solvent comparison creates a second change that must be bracketed or separately qualified.",
+          "Review supplier evidence after, not instead of, method data. Confirm identity, grade, batch, package, seal, specification, batch certificate and safety documentation. LANCHROM's library lists HPLC, gradient, isocratic and LC–MS IPA grade families and separates reference summaries from controlled grade-specific specifications and batch COAs. This supports traceability, not a claim that any IPA lot is neutral-PFAS-free or method-suitable without local testing.",
+        ],
+      },
+      {
+        heading: "Run the isopropanol neutral PFAS food packaging GC-MS extraction qualification bridge",
+        paragraphs: [
+          "Reserve enough retained IPA to prepare a balanced comparison against the candidate lot. Predefine the matrices, compounds, spike levels, replicates and acceptance criteria using the method's established performance and reporting purpose. Prepare separate retained- and candidate-IPA solvent sets with the same hexane, methanol and acetonitrile lots. Include independent preparations rather than repeated injections of one extract, because the qualification decision concerns extraction as well as GC precision.",
+          "Start with neat and combined blanks before committing scarce matrix material. If those pass, process procedural blanks, representative paper and plastic blanks, matrix spikes across the working range and routine samples. Bracket the sequence with suitability standards and place retained and candidate preparations across the run. Investigate analytes individually and by chemically meaningful class; a mean recovery can hide one fluorotelomer alcohol or sulfonamide that behaves differently.",
+          "Classify the outcome as accepted for the named method, matrices, IPA grade and package; rejected with an assignable cause; or unresolved with a specified next experiment. Record solvent and packaging lots, preparation batches, vessels, instrument configuration, calculations, deviations and raw data. A successful comparison of one retained and one candidate lot does not prove supplier equivalence for all lots, establish universal extraction efficiency or close the broader PPWR evidence matrix.",
+          "Maintain the decision through change control. Triggers can include solvent source, grade, site, package or closure; extraction or concentration changes; new packaging matrices or targets; column or inlet changes; reporting limits; and revised guidance. Trend blank features and class-specific recovery so future investigations start with evidence.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A Dutch packaging laboratory bridges IPA after the PPWR application date",
+      context: "An illustrative food-contact-material laboratory uses a validated two-step, four-solvent extraction and targeted GC–MS/MS panel for neutral PFAS in coated paper and plastic packaging. Its retained HPLC-grade IPA lot is nearly exhausted, and a candidate lot must be introduced without confusing solvent background, matrix behaviour or the laboratory's wider PPWR evidence process.",
+      actions: [
+        "The team fixes test-portion preparation, solvent order and volumes, extraction time, vessels, internal standards, concentration, final volume, GC column, inlet and MRM method; only the IPA lot changes.",
+        "Retained and candidate IPA are compared through neat, combined-solvent and procedural blanks before matched paper and plastic matrix blanks, spikes and representative packaging are prepared.",
+        "The sequence alternates both conditions and reviews compound-class recovery, blank contribution, internal-standard response, retention, transition ratios, evaporation loss and carryover against predefined local criteria.",
+        "Quality limits approval to the named neutral-PFAS GC method, packaging matrices, IPA grade and package, while separate total-fluorine and other targeted evidence remain in the PPWR decision matrix.",
+      ],
+      result: "The bridge can show whether a changed result follows the IPA lot, combined solvent set, preparation chain, packaging matrix or GC system before the candidate lot is accepted. This is an illustrative scenario, not a LANCHROM customer result, a universal extraction protocol or proof of PPWR compliance.",
+    },
+    checklist: [
+      "Neutral-PFAS target list and GC reporting purpose defined",
+      "PPWR evidence matrix separates targeted, precursor and total-fluorine questions",
+      "Paper, plastic, coating and composite matrix scope documented",
+      "Hexane, IPA, methanol and acetonitrile roles and lots traceable",
+      "Extraction order, volumes, contact time and agitation fixed",
+      "Vessels, caps, tools, concentration and final volume controlled",
+      "Neat, combined-solvent, procedural and matrix blanks assigned distinct roles",
+      "Retained and candidate IPA compared with the other solvents held constant",
+      "Independent preparations and representative matrix spikes included",
+      "Blank contribution, class-specific recovery and internal standards reviewed",
+      "GC column, inlet, pressure programme, transitions and carryover controlled",
+      "Approval scope, unresolved gaps and requalification triggers recorded",
+    ],
+    sources: [
+      { label: "USDA ARS - Neutral PFAS in food packaging by fast low-pressure GC-MS/MS", href: "https://www.ars.usda.gov/research/publications/publication/?seqNo115=435343" },
+      { label: "PubMed - 2026 neutral-PFAS food-packaging GC-MS/MS method", href: "https://pubmed.ncbi.nlm.nih.gov/42418917/" },
+      { label: "EUR-Lex - Regulation (EU) 2025/40 on packaging and packaging waste", href: "https://eur-lex.europa.eu/eli/reg/2025/40/oj" },
+      { label: "EUR-Lex - 2026 Commission guidance for Regulation (EU) 2025/40", href: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AC_202603084" },
+      { label: "European Commission - PPWR application and food-contact-packaging PFAS restrictions", href: "https://environment.ec.europa.eu/news/new-eu-rules-packaging-enter-application-2026-08-11_en" },
+    ],
+    productLinks: [
+      { label: "View HPLC Grade Isopropanol", href: "/products/hplc-grade-solvents/ipa" },
+      { label: "View HPLC Grade Methanol", href: "/products/hplc-grade-solvents/methanol" },
+      { label: "View HPLC Grade Acetonitrile", href: "/products/hplc-grade-solvents/acetonitrile" },
+      { label: "Read the Complete Guide to GC Solvents", href: "/guides/complete-guide-to-gc-solvents" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
