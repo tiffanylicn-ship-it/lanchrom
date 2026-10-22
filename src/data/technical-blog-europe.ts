@@ -4273,6 +4273,103 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Read the Complete Guide to GC Solvents", href: "/guides/complete-guide-to-gc-solvents" },
     ],
   },
+  {
+    slug: "methanol-ceftazidime-ceftriaxone-lcms-injection-solvent-qualification",
+    title: "Methanol for Ceftazidime and Ceftriaxone LC–MS: A Split-Peak and Carryover Qualification Plan",
+    shortTitle: "Methanol for Ceftazidime/Ceftriaxone LC–MS Qualification",
+    description: "A methanol ceftazidime ceftriaxone LC-MS injection solvent qualification plan for separating split peaks, beta-lactam instability, DMSO effects and carryover.",
+    primaryKeyword: "methanol ceftazidime ceftriaxone LC-MS injection solvent qualification",
+    tag: "LC-MS Troubleshooting",
+    readingTime: "11 min technical guide",
+    intro: "A ceftazidime peak that splits after extraction and ceftriaxone that appears in the following blank can look like one solvent problem. In practice, injection strength, methanol quality, beta-lactam stability, stock composition and gradient washout can move together. This guide turns methanol ceftazidime ceftriaxone LC-MS injection solvent qualification into a controlled sequence that identifies the responsible variable before a method change.",
+    painPoints: [
+      { title: "Split peaks are blamed on the methanol lot", detail: "A strong or mismatched injection plug, residual DMSO and the starting gradient can distort focusing even when the methanol itself is suitable." },
+      { title: "Instability is confused with chromatographic loss", detail: "Ceftazidime and ceftriaxone can change during preparation and autosampler storage, so falling area or altered shape may reflect pH, temperature, light or elapsed time." },
+      { title: "Carryover has more than one location", detail: "The needle, wash path, injector, tubing and column can retain different residues; a single blank after a high standard does not identify the source." },
+      { title: "Several fixes are introduced together", detail: "Changing dilution solvent, pH, DMSO, injection volume and wash programme in one experiment can improve the run without producing transferable qualification evidence." },
+    ],
+    sections: [
+      {
+        heading: "Read the published 90:10 water/methanol result as a method-specific clue",
+        paragraphs: [
+          "A 2026 Clinical Chemistry conference abstract describes systematic optimisation of a multi-antibiotic LC–MS/MS assay for serum and cerebrospinal fluid. The authors reported split peaks and calibration instability for ceftazidime, analyte instability during autosampler storage and substantial ceftriaxone carryover. In their workflow, diluting extracted samples to 90:10 water/methanol better matched a strongly aqueous gradient start and reduced solvent-induced peak distortion. They also reduced the DMSO content of the ceftazidime stock, controlled pH, temperature and light, evaluated injection volume and gradient start, and added high-organic washout segments.",
+          "Those observations provide a useful troubleshooting map, not a universal recipe. The exact 90:10 composition, pH, wash time and performance results belong to the reported instruments, column, preparation and analyte panel. A receiving laboratory should not copy one condition and assume equivalence. It should identify which variables are critical for its own assay, define acceptance criteria from the intended use and then test the proposed change under the actual serum, CSF or other validated matrix conditions.",
+          "A candidate LC–MS-grade methanol lot can be assessed for the named method, package and preparation sequence, but a successful bridge does not prove that every lot or grade will correct beta-lactam instability or carryover. Supplier identity and batch traceability support the investigation; local analytical evidence makes the suitability decision.",
+        ],
+      },
+      {
+        heading: "Freeze the injection-plug variables before comparing methanol lots",
+        paragraphs: [
+          "Start by writing the injection plug as a composition, not merely as a sample name. Record the final water, methanol, buffer, acid, DMSO and matrix proportions; extraction or dilution volumes; internal-standard addition; vial type; injection volume; and time from preparation to injection. Record the initial mobile-phase composition, flow, column temperature and pre-injection equilibration. A nominally identical extract can focus differently if residual stock solvent or evaporation changes its effective elution strength.",
+          "Build a small diagnostic matrix before consuming a full validation set. Compare the current injection composition with one matched to the initial mobile phase while holding the retained methanol lot constant. If peak shape improves, repeat with the candidate lot. Include each analyte separately and in the multi-analyte mix. Use the same column state and bracket conditions so time-dependent degradation does not masquerade as a lot effect.",
+          "Review more than a visual chromatogram. Predefine peak splitting or shoulder criteria, retention, peak width or symmetry, internal-standard response, integrated area and calibration residuals. Inspect whether an integration rule changes the apparent result. A methanol-lot bridge is persuasive only when the candidate and retained lots are compared through independently prepared samples under the same controlled injection conditions.",
+        ],
+      },
+      {
+        heading: "Separate beta-lactam stability from methanol performance",
+        paragraphs: [
+          "The published abstract treated stability as a linked but distinct problem. Its authors evaluated non-stabilised samples over time and then implemented pH adjustment, cold handling and light protection. Another laboratory should begin with conditions justified for its method. Prepare low and high quality controls, and where relevant a mid-level control, in each intended matrix. Challenge the real bench, autosampler and reinjection windows rather than borrowing the abstract's time points as acceptance criteria.",
+          "Use a time-zero reference and a planned sequence that allows retained- and candidate-methanol preparations to age in parallel. Track area or concentration, internal-standard behaviour and peak morphology at each point. If degradation products or alternate transitions are monitored, define their role before the run. Avoid interpreting a smaller peak as a solvent-quality failure until pH, container, temperature, light exposure, freeze-thaw history and elapsed time have been reconciled.",
+          "ICH M10 states that bioanalytical validation should reflect the sample-analysis workflow and includes stability, carry-over and reinjection reproducibility among the chromatographic elements to evaluate unless justified otherwise. It also notes that modifications to a fully validated method may be addressed through partial validation according to the nature and extent of the change. That framework supports a risk-based bridge, but the method owner must decide whether a new injection composition, stock solvent or wash programme is a minor operating adjustment or a change requiring broader validation and controlled approval.",
+        ],
+      },
+      {
+        heading: "Map ceftriaxone carryover before changing the wash programme",
+        paragraphs: [
+          "Place a blank immediately after the upper calibrator or another justified high sample, then add a second blank and, where useful, a low control. This shows whether the response decays, persists or biases a low concentration. Repeat after a solvent-only injection to distinguish sample-path residue from a persistent system feature. Record the injector configuration, needle-wash solvents, wash volumes or times, seals and maintenance state.",
+          "Waters' current system guidance defines carryover operationally as analyte appearing in subsequent injections and highlights inadequate needle washing, insufficiently strong or incompatible wash solvent, short wash duration, and too little time at final gradient conditions as possible contributors. It also advises checking that the sample does not precipitate in the wash solvent. These principles justify testing wash strength, duration and high-organic column washout separately. They do not establish an acceptance limit for a different instrument or method.",
+          "Run one-variable experiments in a logical order: confirm blank identity and integration, test needle-wash compatibility, extend wash contact or volume within instrument limits, evaluate injector cleaning, and then challenge the gradient's high-organic hold and re-equilibration. If a stronger wash lowers needle-path carryover but the second blank remains positive, investigate the valve, tubing, source or column rather than continuing to increase methanol strength. Use the method's low-end reporting risk to set the local carryover criterion and document how any detected response affects samples.",
+        ],
+      },
+      {
+        heading: "Run and document the methanol injection-solvent qualification bridge",
+        paragraphs: [
+          "Once injection composition, stability controls and carryover diagnostics are understood, compare retained and candidate methanol lots in the complete method. Use the intended grade and package, and hold other reagents, vials, column and instrument method constant where practicable. Include methanol and mobile-phase blanks, process blanks in each matrix, calibration standards, low/mid/high controls, a high-to-blank challenge and stability samples aligned with the routine batch length.",
+          "ICH Q2(R2) describes validation as an intended-purpose exercise with predefined performance characteristics and criteria, and supports science- and risk-based decisions about partial or full revalidation after change. For this bridge, the protocol should state which results decide acceptance: peak morphology, retention, calibration model and residuals, QC accuracy and precision, internal-standard response, matrix-specific behaviour, carryover, processed-sample stability and pressure. Do not retrofit acceptance criteria after seeing a preferred lot's data.",
+          "Close the study with a bounded disposition: accepted for the named ceftazidime/ceftriaxone method, matrices, LC–MS methanol grade and container; rejected with an assignable cause; or unresolved with the next experiment specified. Record raw data, preparation records, methanol and reagent lots, deviations, integration changes and maintenance actions. Establish requalification triggers for supplier, manufacturing site, grade, packaging, injection composition, DMSO content, column, gradient, wash programme, matrix scope or intended reportable range.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A UK clinical-research laboratory separates a methanol change from three concurrent failure modes",
+      context: "An illustrative laboratory observes ceftazidime peak shoulders and ceftriaxone in the first blank while preparing to introduce a candidate LC–MS-grade methanol lot for a serum and CSF research assay. The team has also changed its ceftazidime stock preparation and shortened the gradient wash, so the methanol lot cannot be assessed from the first failed sequence alone.",
+      actions: [
+        "The laboratory restores the controlled pH, temperature, light, DMSO and wash conditions, documents the final injection-plug composition, and confirms the retained lot reproduces the established method state.",
+        "It compares current and mobile-phase-matched injection compositions with the retained lot, using independent serum and CSF preparations and time-balanced injections before introducing the candidate lot.",
+        "Retained and candidate methanol are then bracketed through blanks, calibration standards, matrix controls, stability time points and a high-calibrator-to-two-blank carryover challenge.",
+        "Quality reviews peak morphology, calibration residuals, QC performance, internal-standard response, matrix-specific stability and carryover against predefined local criteria, with wash changes assessed separately.",
+      ],
+      result: "The study can show whether the observed failure follows injection composition, beta-lactam handling, the methanol lot or the wash programme, and can limit approval to the tested method and packages. This is an illustrative scenario, not a LANCHROM customer result, a clinical recommendation or a guarantee of method performance.",
+    },
+    checklist: [
+      "Intended assay use, matrices and reportable range defined",
+      "Final water, methanol, buffer and DMSO proportions documented",
+      "Initial mobile-phase composition and injection volume controlled",
+      "Ceftazidime and ceftriaxone stock preparation traceable",
+      "pH, temperature, light exposure and elapsed time fixed",
+      "Retained and candidate methanol grades, lots and packages recorded",
+      "Independent preparations included for each relevant matrix",
+      "Process, mobile-phase and carryover blanks assigned distinct roles",
+      "Peak morphology, integration and calibration residual criteria predefined",
+      "Processed-sample stability and reinjection window challenged",
+      "Needle wash and high-organic gradient washout evaluated separately",
+      "Approval scope, deviations and requalification triggers recorded",
+    ],
+    sources: [
+      { label: "Clinical Chemistry - Multi-antibiotic LC-MS/MS optimisation for serum and CSF", href: "https://academic.oup.com/clinchem/article/72/Supplement_1/hvag086.632/8855003" },
+      { label: "ICH - M10 bioanalytical method validation and study sample analysis", href: "https://database.ich.org/sites/default/files/M10_Guideline_Step4_2022_0524.pdf" },
+      { label: "EMA - ICH Q2(R2) validation of analytical procedures", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q2r2-validation-analytical-procedures" },
+      { label: "ICH - Q14 analytical procedure development", href: "https://www.ich.org/page/quality-guidelines" },
+      { label: "Waters - Alliance iS carryover guidance", href: "https://help.waters.com/help/en/product-support/alliance-is-system-support/715008450/B69B8F0.html" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Methanol", href: "/products/lcms-grade-solvents/methanol-for-lc-ms" },
+      { label: "View HPLC Grade Methanol", href: "/products/hplc-grade-solvents/methanol" },
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Read the Complete Guide to LC-MS Solvents", href: "/guides/complete-guide-to-lcms-solvents" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
