@@ -4370,6 +4370,114 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Read the Complete Guide to LC-MS Solvents", href: "/guides/complete-guide-to-lcms-solvents" },
     ],
   },
+  {
+    slug: "methanol-pvc-blister-povidone-leachable-lchrms-qualification",
+    title: "Methanol for PVC-Blister/Povidone Leachable LC–HRMS: A Tablet-Extraction Qualification Plan",
+    shortTitle: "Methanol for PVC-Blister Leachable LC–HRMS Qualification",
+    description: "A methanol PVC blister povidone leachable LC-HRMS qualification plan for controlling tablet extraction, blanks, concentration recovery and packaging evidence.",
+    primaryKeyword: "methanol PVC blister povidone leachable LC-HRMS qualification",
+    tag: "Pharmaceutical Impurity Investigation",
+    readingTime: "11 min technical guide",
+    intro: "An unexpected stability impurity in a PVC-blistered tablet can be amplified by an intensive methanol extraction and still originate from packaging–excipient chemistry. A defensible methanol PVC blister povidone leachable LC-HRMS qualification therefore has two linked jobs: prove that extraction, concentration and mobile-phase evidence remain controlled across solvent lots, and preserve the packaging, placebo and orthogonal-identification controls needed to test the real impurity hypothesis.",
+    painPoints: [
+      { title: "Concentration magnifies both analyte and blank", detail: "A low-level methanol feature, vessel extractable or handling contaminant can become visible after repeated concentration and dry-down steps, especially when the blank does not follow the complete process." },
+      { title: "Recovery changes are mistaken for impurity formation", detail: "Sonication, mixing, centrifugation, filtration, evaporation and reconstitution can alter extraction recovery independently of the methanol lot or the packaging interaction under investigation." },
+      { title: "Packaging and excipient controls are incomplete", detail: "Finished tablets alone cannot distinguish API degradation from a PVC component, a povidone-related species or a reaction that occurs only when the formulation and blister are stored together." },
+      { title: "Accurate mass is treated as a final identity", detail: "A formula-compatible ion is useful evidence, but retention, isotope pattern, MS/MS, reference material and orthogonal structural work may be needed before assigning an unknown." },
+    ],
+    sections: [
+      {
+        heading: "Use the 2026 PVC-blister case as a map, not a universal method",
+        paragraphs: [
+          "A 2026 Pharmaceutics study investigated an unknown impurity detected during routine testing of a blister-packed oral solid dosage form. Placebo and packaging-line experiments showed that the signal was independent of API degradation and formed when tablet excipients were stored in sealed PVC blister packaging. The authors linked a PVC heat-stabiliser derivative with pyrrolidin-2-one, a povidone-related species, and used high-resolution MS, isotopic evidence, chemical synthesis, preparative separation and high-field NMR to establish the structure.",
+          "Methanol was central to the analytical workflow but was not identified as the cause of the impurity. The reported tablet preparation placed 96 tablets in a 50 mL flask with 40 mL LC–MS methanol, used two sonication periods around vortex mixing, centrifuged the extract, concentrated it to about 2 mL, diluted it again with methanol, centrifuged and filtered, dried the sample and reconstituted it in 90:10 water/isopropanol. Methanol containing 0.05% formic acid was also the LC organic phase. These details are study-specific and should not be copied as a validated LANCHROM or universal procedure.",
+          "The practical lesson is experimental separation. A laboratory should ask whether the observed response follows the tablet, placebo, blister component, combined packaging–formulation history, extraction chain, methanol lot or LC system. The published case makes a strong hypothesis for one product and material combination; it does not establish that every PVC blister, povidone-containing tablet or unexpected peak shares the same mechanism.",
+        ],
+      },
+      {
+        heading: "Freeze the extraction and concentration chain before comparing methanol lots",
+        paragraphs: [
+          "Write the extraction as a mass-and-volume balance. Record tablet count or powder mass, methanol volume, vessel geometry, mixing and sonication energy, temperature, hold time, centrifuge force and duration, supernatant transfer, filter material, evaporation endpoint, reconstitution composition and final volume. Record the methanol grade, batch, package, opening date and dispensing practice. Without that map, an apparent lot difference can actually be a change in solids loading, heat input, retained supernatant or concentration factor.",
+          "Dry-down and reconstitution deserve separate controls. A sample concentrated to a small residual volume and then taken to dryness can lose volatile or surface-active species, incompletely redissolve residue or collect contamination from the evaporation path. Run recovery samples introduced before extraction, before concentration and after reconstitution where scientifically appropriate. Those positions help locate loss or gain without claiming that one spike design covers every leachable or transformation product.",
+          "When bridging retained and candidate methanol, prepare independent replicates and alternate their processing order. Keep water, isopropanol, acid, filters, vials and equipment state constant where practicable. Compare mass balance, internal-standard response, target recovery, unknown-peak area, retention, isotope envelope, MS/MS quality and relevant blank response against criteria defined before the run. A candidate lot should be accepted only for the named extraction, LC method, grade and package tested.",
+        ],
+        points: [
+          "Use gravimetric or otherwise verified volume control where evaporation endpoints are critical.",
+          "Bracket the preparation batch with retained-lot and candidate-lot process controls.",
+          "Do not change filter, reconstitution solvent or LC wash programme during the lot comparison.",
+        ],
+      },
+      {
+        heading: "Build a control ladder that can test packaging–excipient interaction",
+        paragraphs: [
+          "Start with blanks that answer different questions. A neat methanol blank screens the bottle and direct injection path. A mobile-phase blank includes water, acid and reservoir handling. A full process blank travels through vessels, mixing, centrifugation, filtration, concentration, dry-down and reconstitution. A matrix blank or placebo adds formulation components. Treating these as interchangeable removes the location information needed to investigate a low-level feature.",
+          "Next add product and packaging controls that preserve history. Useful comparisons can include unpackaged tablets, placebo not exposed to packaging, placebo stored in the candidate blister, individual blister components, printed and unprinted components when relevant, and finished tablets from defined stability conditions. The exact set depends on the product question, material availability and approved protocol. Include time-zero and stored controls when the hypothesis involves a solid-state interaction developing during shelf life.",
+          "Interpret the ladder by pattern rather than by one positive vial. A peak present in neat methanol and every downstream sample suggests a different path from a peak absent in solvent and process blanks but present only after placebo–blister contact. A spike that recovers differently between retained and candidate methanol may indicate extraction or concentration behaviour, while a newly formed ion requires separate chemistry evidence. The laboratory should preserve negative results because they narrow the causal chain.",
+        ],
+        points: [
+          "Assign each blank and control a written diagnostic purpose.",
+          "Control storage time, temperature, humidity and package configuration for interaction studies.",
+          "Avoid pooling components when the objective is to locate a source.",
+          "Investigate carryover with ordered blanks after high-response samples.",
+        ],
+      },
+      {
+        heading: "Separate detection, tentative annotation and confirmed identity",
+        paragraphs: [
+          "LC–HRMS can show an accurate mass, isotope pattern and fragments consistent with a proposed composition, but those observations should be reported at the evidence level actually achieved. Review adducts, in-source fragments, charge state, retention and blank behaviour before assigning a molecular formula. Compare positive- and negative-ion evidence only when the method supports both. A library or database match can guide the next experiment but is not automatically a confirmed structure.",
+          "The 2026 study progressed beyond an accurate-mass feature. The team compared chromatographic and MS/MS profiles, considered plausible sulfur- and nitrogen-containing precursors, generated candidate reaction products, isolated sufficient material and used NMR for structural confirmation. That sequence illustrates why packaging investigations often need orthogonal evidence. A different laboratory may not need every technique, but it should state what evidence would distinguish a tentative annotation from a confirmed impurity.",
+          "Keep solvent qualification bounded within that identity strategy. Methanol-lot data can show whether background, recovery or response changes with the solvent under controlled conditions. They cannot, by themselves, prove the packaging source, reaction mechanism, toxicological relevance or regulatory disposition of an unknown. Those conclusions require the appropriate packaging, formulation, structural, safety and quality evidence reviewed by the responsible functions.",
+        ],
+      },
+      {
+        heading: "Run the methanol PVC blister povidone leachable LC–HRMS qualification under change control",
+        paragraphs: [
+          "Create a protocol that names the analytical purpose, product and packaging scope, retained and candidate methanol lots, preparation stages, control ladder, sequence order, data treatment and acceptance criteria. EMA's effective ICH Q2(R2) guideline frames validation around intended use and relevant performance characteristics, while ICH Q14 supports science- and risk-based analytical procedure development and lifecycle management. Use those principles to decide whether the solvent change needs a focused bridge, partial revalidation or a broader study under the laboratory's quality system.",
+          "EMA lists ICH Q3E as a draft whose consultation has closed, not as a final effective guideline. Its draft text nevertheless provides a useful current framework: justify extraction conditions and analytical procedures, consider interactions between packaging and formulation, and document quantification suitability. The separate EMA guideline on plastic immediate packaging materials remains an effective European reference for plastic packaging requirements. The method owner and regulatory team should determine which current requirements apply to the specific product and dossier.",
+          "Close the bridge with a bounded disposition: accepted for the named LC–HRMS extraction and container format; rejected with an assignable cause; or unresolved with the next discriminating experiment specified. Archive chromatograms, spectra, preparation records, solvent and packaging identifiers, calculations, deviations and stability histories. Define requalification triggers for methanol source, grade, manufacturing site, package or closure; extraction and evaporation parameters; filter or vessel; blister formulation; tablet excipients; LC column or gradient; and reporting threshold.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A Belgian stability laboratory separates a methanol change from a blister–placebo interaction",
+      context: "An illustrative laboratory detects a low-level unknown in aged PVC-blistered tablets while its retained LC–MS methanol lot is nearly exhausted. The signal becomes more visible after concentration, but existing sequences contain no full process blank and no unpackaged or placebo–blister control, so neither solvent background nor packaging–excipient chemistry has been isolated.",
+      actions: [
+        "The team freezes tablet mass, methanol volume, mixing, centrifugation, filtration, evaporation, reconstitution and LC–HRMS conditions, then defines acceptance and identity-evidence levels before testing.",
+        "It compares retained and candidate methanol through neat, mobile-phase and full-process blanks plus staged recovery samples, using independent preparations and alternating processing order.",
+        "It adds unpackaged tablets, unexposed placebo, blister components and placebo stored in the blister under defined conditions, while maintaining traceable time-zero and stability controls.",
+        "Quality reviews blank contribution, recovery, internal-standard response, retention, isotope pattern and MS/MS alongside the packaging-control pattern, escalating structural and safety work separately where needed.",
+      ],
+      result: "The study can show whether the changed response follows the methanol lot, concentration chain, formulation, blister component or stored combination before either the solvent or packaging hypothesis is accepted. This is an illustrative scenario, not a LANCHROM customer result, a universal tablet-extraction method or a regulatory conclusion.",
+    },
+    checklist: [
+      "Analytical purpose, product, packaging and stability condition defined",
+      "Methanol grade, lot, package, opening date and dispensing history recorded",
+      "Tablet mass, extraction volume and vessel geometry controlled",
+      "Mixing, sonication, temperature and hold times documented",
+      "Centrifugation, filtration and supernatant-transfer losses assessed",
+      "Concentration endpoint, dry-down and reconstitution controlled",
+      "Neat, mobile-phase and full-process blanks assigned distinct roles",
+      "Unpackaged tablet, placebo and blister-component controls selected",
+      "Retained and candidate methanol compared with independent preparations",
+      "Recovery, blank response, retention, isotope and MS/MS criteria predefined",
+      "Tentative annotation separated from confirmed structural identity",
+      "Disposition scope, deviations and requalification triggers approved",
+    ],
+    sources: [
+      { label: "PMC - 2026 PVC-blister/povidone leachable-derived impurity case study", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13610799/" },
+      { label: "EMA - Draft ICH Q3E extractables and leachables guideline", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q3e-extractables-leachables" },
+      { label: "EMA - Plastic immediate packaging materials guideline", href: "https://www.ema.europa.eu/en/scientific-guidelines/plastic-primary-packaging-materials" },
+      { label: "EMA - ICH Q2(R2) validation of analytical procedures", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q2r2-validation-analytical-procedures" },
+      { label: "EMA - ICH Q14 analytical procedure development", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q14-analytical-procedure-development" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Methanol", href: "/products/lcms-grade-solvents/methanol-for-lc-ms" },
+      { label: "Explore Pharmaceutical Analysis Applications", href: "/applications/pharmaceutical-analysis" },
+      { label: "Read the Complete Guide to LC-MS Solvents", href: "/guides/complete-guide-to-lcms-solvents" },
+      { label: "Open the Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
