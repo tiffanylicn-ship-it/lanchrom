@@ -4478,6 +4478,108 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open the Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "methanol-ffpe-breast-cancer-nucleoside-uhplc-ms-extraction-qualification",
+    title: "Methanol for FFPE Breast-Cancer Nucleoside UHPLC–MS: An Extraction and Lot-Qualification Plan",
+    shortTitle: "Methanol for FFPE Nucleoside UHPLC–MS Qualification",
+    description: "A methanol FFPE breast cancer nucleoside UHPLC-MS extraction qualification plan for controlling paraffin, heat, particulates, dry-down, recovery and solvent-lot changes.",
+    primaryKeyword: "methanol FFPE breast cancer nucleoside UHPLC-MS extraction qualification",
+    tag: "LC-MS Sample Preparation",
+    readingTime: "11 min technical guide",
+    intro: "Direct methanol extraction can simplify nucleoside profiling from formalin-fixed, paraffin-embedded breast tissue, but a stronger signal does not by itself prove that a new solvent lot is suitable. A defensible methanol FFPE breast cancer nucleoside UHPLC-MS extraction qualification must separate solvent background and recovery from fixation history, paraffin, heated extraction, particulate removal, dry-down and tissue heterogeneity before the candidate lot enters a continuing study.",
+    painPoints: [
+      { title: "Preservation history dominates the comparison", detail: "Fixation, block age, section thickness, tissue area and tumour content can change the extract before methanol-lot performance is considered." },
+      { title: "Paraffin and particles travel through preparation", detail: "Direct extraction avoids a separate xylene step, but wax, tissue debris and tube-to-tube transfer still need controlled centrifugation and blank evidence." },
+      { title: "Heat and dry-down create hidden variables", detail: "Temperature, exposure time, residual volume, overnight drying and reconstitution can alter recovery or concentrate background independently of the methanol lot." },
+      { title: "Research evidence is mistaken for clinical validation", detail: "A published FFPE workflow can guide an analytical bridge, but it does not establish diagnostic performance, universal superiority or suitability for every tissue and instrument." },
+    ],
+    sections: [
+      {
+        heading: "Read the 2026 FFPE methanol study as a bounded method example",
+        paragraphs: [
+          "A 2026 Analytical Chemistry study combined targeted UHPLC–MS with MALDI mass-spectrometry imaging to examine nucleosides in FFPE breast-cancer tissue. For the UHPLC–MS arm, 10 µm sections were placed in microcentrifuge tubes and extracted with 1 mL of 80% methanol at 70 °C for 40 minutes. After cooling, the preparation used two centrifugation stages, transferred the final supernatant, dried it overnight and stored it frozen before analysis. A subset underwent xylene pretreatment so the authors could compare direct methanol extraction with conventional deparaffinization.",
+          "The authors observed only minimal differences between the two FFPE preparation approaches, with slightly higher nucleoside signals after direct methanol extraction, and selected that route for UHPLC–MS. Fresh-frozen tissue was a separate control prepared with 80% methanol at room temperature for four hours. That difference matters: preservation state, heat and extraction time changed together, so the publication does not show that methanol alone makes FFPE and fresh-frozen material equivalent.",
+          "The same study used a biphenyl column and a water/methanol gradient containing acetic acid for UHPLC–MS, while its MALDI workflow retained xylene deparaffinization and different reagents. These are study-specific choices, not LANCHROM specifications or a universal pathology protocol. The transferable lesson is to define the analytical purpose and isolate the preparation variables before deciding whether a candidate methanol lot is fit for a named research workflow.",
+        ],
+      },
+      {
+        heading: "Define the FFPE nucleoside qualification question before opening a new lot",
+        paragraphs: [
+          "Write a short intended-purpose statement: for example, bridging one candidate LC–MS-grade methanol lot into an established targeted nucleoside research method for a defined FFPE breast-tissue cohort. Specify what is outside scope, such as diagnostic classification, comparison with other tumour types, MALDI imaging, clinical cut-offs or a change to the extraction composition. This boundary prevents a focused raw-material bridge from being presented as validation of the whole biological study.",
+          "Map the controlled inputs that can obscure a solvent effect. These include fixation protocol and duration, block age and storage, section thickness and number, tissue area, tumour and non-tumour content, microtome carryover, tube material, methanol/water preparation, extraction temperature and time, cooling, centrifuge force, supernatant transfer, dry-down, storage and reconstitution. Record instrument, column, mobile phases, injection volume, gradient, source settings and data-processing version as part of the analytical state.",
+          "Eurachem's 2025 fitness-for-purpose guide treats validation and verification as planned evidence against the method's intended use. ICH Q2(R2) and Q14 provide related intended-purpose, performance-characteristic, robustness and lifecycle concepts for pharmaceutical analytical procedures. They do not convert this pathology research method into a regulated release assay, but their discipline is useful: predefine the decision, critical variables, acceptance criteria and change triggers rather than selecting them after the candidate lot's results are known.",
+        ],
+      },
+      {
+        heading: "Control paraffin, particulates, heat and dry-down as separate failure modes",
+        paragraphs: [
+          "Use blanks with distinct diagnostic roles. A neat methanol blank screens the bottle and direct instrument path. A prepared 80:20 methanol/water blank adds the water source, mixing vessel and composition step. A full process blank follows heated incubation, cooling, both centrifugations, transfers, drying, storage and reconstitution. A blank paraffin or embedding-material control may be useful when permitted by the study design, but it should not be confused with a tissue matrix blank.",
+          "Standardise particulate control before the lot comparison. Hold tube type, section handling, centrifuge rotor, relative centrifugal force, temperature, duration, supernatant height and transferred volume constant. Inspect pellets and supernatants consistently and record unusual wax or debris. Adding an unplanned membrane filter can change adsorption and recovery, so a filtration step should be evaluated as its own method change rather than introduced only for the candidate lot.",
+          "Treat heat and evaporation as measurable stages. Verify extraction temperature at the sample position, start timing consistently and avoid uncontrolled warming during transfer. Define whether dry-down means a fixed time, a visually dry residue or another endpoint, and standardise the evaporation equipment and vessel position. Reconstitution volume, solvent composition, mixing and hold time should be recorded. These controls help distinguish a methanol-lot signal from incomplete redissolution, concentrated blank features or variable residue recovery.",
+        ],
+        points: [
+          "Prepare retained- and candidate-lot blanks through the complete process.",
+          "Use relative centrifugal force rather than instrument speed alone when transferring the method.",
+          "Do not change water, tubes, drying equipment or reconstitution conditions during the lot bridge.",
+        ],
+      },
+      {
+        heading: "Build a balanced methanol FFPE breast cancer nucleoside UHPLC-MS extraction qualification sequence",
+        paragraphs: [
+          "Reserve enough retained methanol to compare both lots in one balanced study. Prepare independent process blanks and tissue extracts rather than relying on repeated injections of one vial. Where material permits, use a pooled FFPE homogenate or a pooled section set to reduce biological heterogeneity during the solvent comparison, while retaining representative individual samples to check that the bridge behaves across the intended cohort. Randomise or alternate preparation order so block age, analyst time and instrument drift do not align with one methanol lot.",
+          "Use recovery additions at positions that answer different questions. An addition before extraction can challenge the complete preparation, while a post-extraction or post-reconstitution addition can help locate loss or ion suppression. Select representative ribonucleosides and deoxyribonucleosides across the method's range rather than averaging all analytes into one result. Acceptance should consider compound-specific recovery or response, replicate precision, retention, peak shape, internal-standard behaviour, blank contribution and carryover using criteria justified for the established method.",
+          "Include a system-suitability and drift plan. Bracket retained- and candidate-lot extracts with the same standard mixture or pooled quality-control material, distribute both conditions across the sequence, and review injection order. Compare extracted-ion traces and integration, not only a summary heatmap. If one nucleoside fails while the remainder agree, investigate its chemistry, integration, blank and stability before declaring the complete methanol lot unsuitable.",
+          "A fresh-frozen comparator can answer a biological or preservation question but should not become the sole lot-acceptance control. In the source study, fresh-frozen tissue used different extraction conditions. Keep it as a separately interpreted control and avoid treating a lower FFPE response as evidence of solvent failure. Similarly, a xylene-pretreated FFPE arm can test preparation strategy, but changing deparaffinization and methanol lot in the same comparison removes causal clarity.",
+        ],
+      },
+      {
+        heading: "Document a bounded lot decision and maintain study continuity",
+        paragraphs: [
+          "Conclude with one of three dispositions: accepted for the named FFPE nucleoside UHPLC–MS method, methanol grade and package; rejected with an assignable cause; or unresolved with the next discriminating experiment specified. Record supplier and lot identity, container and opening history, water source, preparation batches, section metadata, equipment, sequence, calculations, chromatograms, deviations and integration changes. A successful bridge does not prove equivalence across all methanol grades, packaging formats, tissues or extraction methods.",
+          "Separate analytical suitability from biological interpretation. A higher signal can result from improved extraction, matrix effects, preservation differences or altered ionisation; it is not automatically a more accurate measure of tissue biology. Do not infer clinical utility, diagnosis or treatment relevance from the solvent comparison. Any biomarker or pathology conclusion needs the appropriate study design, clinical evidence and governance beyond this raw-material qualification.",
+          "Define requalification triggers while the evidence is fresh. Relevant triggers can include methanol supplier, manufacturing site, grade, container or closure; water source or 80:20 preparation; fixation or embedding protocol; sectioning and pooling strategy; extraction temperature or time; centrifugation, drying or reconstitution; column, gradient, detector or processing software; and a change in the intended analyte panel or study use. Trending blank features, pooled-control response and recovery by lot makes later investigations faster and more defensible.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A German translational pathology laboratory bridges a methanol lot during an archival-tissue study",
+      context: "An illustrative laboratory is midway through targeted nucleoside profiling of stored FFPE breast-cancer blocks when its retained LC–MS methanol lot approaches depletion. Earlier batches used direct heated 80% methanol extraction, but block age, tissue area and preparation order were not balanced against solvent lot, so a simple before-and-after comparison could confound biological and analytical change.",
+      actions: [
+        "The team limits the decision to the existing FFPE UHPLC–MS research method and freezes section thickness, pooled tissue design, 80:20 composition, heat, cooling, centrifugation, dry-down, reconstitution, column and data processing.",
+        "Retained and candidate methanol are alternated through neat, prepared-solvent and full-process blanks, independent pooled-FFPE preparations, representative individual blocks and pre- and post-extraction recovery additions.",
+        "The sequence brackets both conditions with system suitability and pooled quality control, then reviews analyte-specific response, recovery, precision, retention, peak shape, internal standards, blanks and carryover against predefined local criteria.",
+        "Quality records the approved grade, package and method scope and sets requalification triggers, while pathology interpretations and any diagnostic claims remain outside the solvent-lot decision.",
+      ],
+      result: "The bridge can show whether a change follows the methanol lot, preparation chain, block characteristics or analytical sequence before the study continues. This is an illustrative scenario, not a LANCHROM customer result, a clinical validation or a guarantee that direct methanol extraction is superior for every FFPE workflow.",
+    },
+    checklist: [
+      "Research purpose, tissue scope and analyte panel defined",
+      "Fixation, block age, section thickness and tissue area recorded",
+      "Retained and candidate methanol grade, lot and package traceable",
+      "80:20 composition, water source and preparation timing controlled",
+      "Extraction temperature, duration and cooling standardised",
+      "Centrifuge force, temperature, time and transfer volume fixed",
+      "Dry-down endpoint, storage and reconstitution documented",
+      "Neat, prepared-solvent and full-process blanks assigned distinct roles",
+      "Independent pooled and representative tissue preparations included",
+      "Recovery, precision, retention, peak shape and blank criteria predefined",
+      "Fresh-frozen and xylene controls interpreted separately where used",
+      "Approval scope, unresolved questions and requalification triggers recorded",
+    ],
+    sources: [
+      { label: "PMC - 2026 UHPLC-MS and MALDI-MSI nucleoside profiling in FFPE breast cancer", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13629170/" },
+      { label: "Eurachem - Fitness for Purpose of Analytical Methods, third edition", href: "https://www.eurachem.org/index.php/3-publications/guides/144-gdmv2014" },
+      { label: "EMA - ICH Q2(R2) validation of analytical procedures", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q2r2-validation-analytical-procedures" },
+      { label: "EMA - ICH Q14 analytical procedure development", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q14-analytical-procedure-development" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Methanol", href: "/products/lcms-grade-solvents/methanol-for-lc-ms" },
+      { label: "View HPLC Grade Methanol", href: "/products/hplc-grade-solvents/methanol" },
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Read the Complete Guide to LC-MS Solvents", href: "/guides/complete-guide-to-lcms-solvents" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
