@@ -5119,6 +5119,102 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Read the Complete Guide to LC-MS Solvents", href: "/guides/complete-guide-to-lcms-solvents" },
     ],
   },
+  {
+    slug: "methanol-dissolved-oxygen-ghost-peak-hplc-uv-troubleshooting",
+    title: "Methanol Dissolved-Oxygen Ghost Peaks in HPLC-UV: A Troubleshooting and Blank-Control Plan",
+    shortTitle: "Methanol Dissolved-Oxygen Ghost Peaks in HPLC-UV",
+    description: "A methanol dissolved oxygen ghost peak HPLC UV troubleshooting plan for separating gas mismatch, solvent background, carryover and true impurities.",
+    primaryKeyword: "methanol dissolved oxygen ghost peak HPLC UV troubleshooting",
+    tag: "HPLC Troubleshooting",
+    readingTime: "11 min technical guide",
+    intro: "A repeatable unknown peak in a short-wavelength pharmaceutical HPLC-UV method can look like a new impurity or a failed methanol lot. Yet a less obvious mechanism is a dissolved-air mismatch between the injected sample solvent and the mobile phase after online degassing. This methanol dissolved oxygen ghost peak HPLC UV troubleshooting plan uses controlled blanks, wavelength evidence and paired solvent-lot comparisons to test that mechanism before the laboratory assigns an out-of-specification cause or changes a controlled procedure.",
+    painPoints: [
+      { title: "A blank peak is treated as a product impurity", detail: "The feature can be retained near an analyte, so retention time alone does not prove that it came from the sample or degradation pathway." },
+      { title: "Degassing state is not recorded", detail: "Air-equilibrated sample solvent and online-degassed mobile phase are compared without documenting the dissolved-gas mismatch that the injection creates." },
+      { title: "A bottle change becomes the only suspect", detail: "Solvent lot, sample preparation, injection volume, wavelength, carryover, column state and degasser performance can change together." },
+      { title: "The proposed fix changes the method", detail: "Turning off degassing, changing organic solvent or altering composition may affect precision or selectivity and therefore needs controlled evaluation." },
+    ],
+    sections: [
+      {
+        heading: "Define the dissolved-air mechanism before blaming the methanol lot",
+        paragraphs: [
+          "Shimadzu demonstrates the effect in reversed-phase UV detection by injecting a methanol/water mobile-phase mixture as the sample. When the injected solution was air-saturated and the delivered mobile phase was online-degassed, a positive retained peak appeared. Helium purging of the injected solution made the peak much smaller, while oxygen enrichment increased it. When the mobile phase was not online-degassed, the air-saturated injection produced little peak; injecting a helium-purged solution against that less-degassed mobile phase produced a negative peak. The direction therefore followed the mismatch rather than a conventional solute impurity.",
+          "Treat that experiment as a mechanism to test, not a universal diagnosis. A real unknown peak may instead arise from a UV-active contaminant, sample degradation, vial or closure extractables, carryover, additive contamination, column history, an instrument component or data processing. Shimadzu also notes that the spectral change is not explained by oxygen absorption alone and may involve interaction between oxygen and solvent. The investigation should therefore use neutral language such as candidate dissolved-air peak until orthogonal evidence is assembled.",
+        ],
+      },
+      {
+        heading: "Build a blank matrix that changes one gas condition at a time",
+        paragraphs: [
+          "Start from the controlled method and map every liquid that reaches the injector: sample diluent, mobile-phase channels, wash solvents, blank matrix and any preparation stock. Record solvent identity, grade, batch, package, opening history, water and additive lots, preparation order, mixing, filtration, degassing treatment, hold time and vessel. Keep column, flow, temperature, detector cell, wavelength, bandwidth, response settings, injection programme and sequence timing fixed. This prevents a nominal solvent comparison from becoming a comparison of several untracked preparations.",
+          "Prepare a small diagnostic matrix using the same methanol/water composition where scientifically possible: an air-equilibrated injection solution, a controlled-degassing counterpart, and matching mobile-phase blanks under the approved online-degasser state. Include no-injection or instrument blanks where the system supports them, plus the routine sample blank and carryover blank. Do not remove online degassing as the first corrective action; Shimadzu warns that this can introduce bubbles, unstable detection or poorer quantitative precision. Any temporary diagnostic change should be risk-assessed, documented and restored before routine work.",
+        ],
+        points: [
+          "Balance injection order so time, lamp drift and column conditioning do not align with one gas condition.",
+          "Use independent preparations to distinguish preparation variability from the gas-treatment effect.",
+          "Bracket suspicious samples with blanks rather than interpreting an isolated chromatogram.",
+        ],
+      },
+      {
+        heading: "Use sign, wavelength, injection volume and retention as diagnostic evidence",
+        paragraphs: [
+          "A candidate dissolved-air peak should respond predictably to the experiment. Compare positive versus negative direction as the sample/mobile-phase gas relationship is reversed. Review whether a mobile-phase-composition blank produces a feature at the same retention position and whether controlled degassing reduces it. Where the method permits, compare two predefined injection volumes: proportional area movement supports an injection-zone effect, but it is not specific enough to close the investigation by itself because carryover and solvent contaminants can also scale with injected volume.",
+          "Short-wavelength response is especially informative. In Shimadzu's methanol spectra, the absorbance difference between air-saturated and degassed methanol was much larger at 210 nm than at 254 nm; its worked example predicted a correspondingly larger peak at the shorter wavelength. Those values are source-specific observations, not LANCHROM specifications or acceptance limits. A laboratory may compare approved method wavelengths or collect a peak spectrum when its detector and procedure allow, while preserving the primary reportable wavelength and avoiding unapproved data substitution.",
+        ],
+      },
+      {
+        heading: "Separate gas handling from solvent-lot and system effects",
+        paragraphs: [
+          "If the event followed a bottle change, reserve enough retained approved lot for a paired bridge. Compare retained and candidate methanol under the same air-equilibrated and controlled-degassing preparations, with the same water, additives, vessels and sequence. Documentation confirms identity, grade and traceability; it does not show that one lot caused the peak. A result that follows gas condition across both lots points away from a batch-specific impurity, while a feature that follows one lot under matched gas conditions warrants a focused solvent-background investigation.",
+          "Keep a parallel system ladder. Review degasser status and maintenance records, purge history, reservoir headspace and refill practice, pump delivery, mixer and tubing changes, injector wash, vial lots, column installation and recent high-concentration samples. Run the laboratory's approved carryover and column-bypass checks where applicable. If both solvent lots move together over sequence time, examine system equilibration and drift. If only sample-containing injections show the feature, challenge sample stability and matrix chemistry before extending the solvent conclusion.",
+        ],
+      },
+      {
+        heading: "Turn the evidence into a controlled method and lot decision",
+        paragraphs: [
+          "EMA's effective ICH Q14 guideline describes science- and risk-based analytical procedure development, robustness, an analytical procedure control strategy and lifecycle management. ICH Q2(R2) connects validation to intended purpose and performance characteristics including specificity, precision, detection and quantitation capability. For an impurity method, the practical question is whether the procedure can distinguish the reportable analyte or impurity from a gas-related blank response under the range of handling conditions expected in routine use.",
+          "Close the investigation with a bounded conclusion: dissolved-air mismatch supported, solvent-lot background supported, another assignable cause supported, or unresolved with named next work. Define routine controls such as sample-solvent preparation, degassing practice, blank placement, maximum preparation hold, injection-volume limits and degasser checks only where evidence supports them. Changes to organic solvent, methanol ratio, pH, column or detector conditions can alter retention and selectivity; process them through the laboratory's method-development, validation and change-control system rather than treating them as informal troubleshooting shortcuts.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A stability laboratory investigates an unknown peak near a specified impurity",
+      context: "An illustrative German pharmaceutical QC laboratory observes a repeatable positive peak at 210 nm after opening a candidate methanol bottle. The peak is near a specified impurity, while the method uses online-degassed methanol/water mobile phase and a methanol-containing sample diluent.",
+      actions: [
+        "The team freezes the reportable sequence, preserves the candidate bottle and documents sample, mobile-phase, degasser, column and instrument history before assigning cause.",
+        "It prepares retained- and candidate-lot blanks with the same composition in air-equilibrated and controlled-degassing conditions, then runs them in a balanced sequence with matching mobile-phase and carryover blanks.",
+        "Analysts compare peak sign, area, retention, approved wavelength response and injection-volume behaviour while holding all other chromatographic variables constant.",
+        "Quality reviews whether the evidence supports a gas-handling control, a lot-specific supplier investigation, a sample-stability investigation or further method-development work.",
+      ],
+      result: "The framework can separate a dissolved-air mismatch from solvent background and true sample-related response before disposition. This is an illustrative scenario, not a LANCHROM customer result, a validated method, a promised analytical outcome or a regulatory conclusion.",
+    },
+    checklist: [
+      "Unknown-peak decision and reportable impurity risk defined before testing",
+      "Sample diluent and mobile-phase compositions recorded exactly",
+      "Methanol grade, batch, package and opening history documented",
+      "Water, additives, vessels, filtration and preparation age held constant",
+      "Online-degasser state, purge history and maintenance record captured",
+      "Air-equilibrated and controlled-degassing blanks prepared reproducibly",
+      "Retained- and candidate-lot comparisons balanced across sequence time",
+      "Mobile-phase, sample, no-injection and carryover blanks assigned as applicable",
+      "Peak sign, area, retention and approved wavelength response compared",
+      "Injection-volume challenge predefined and interpreted as supporting evidence only",
+      "Sample stability, column history, vial background and carryover reviewed",
+      "Conclusion, approval scope, corrective action and requalification triggers documented",
+    ],
+    sources: [
+      { label: "Shimadzu - Peaks from dissolved air in sample solvent", href: "https://www.ssi.shimadzu.com/service-support/technical-support/analysis-basics/lib/lctalk/37/37lab.html" },
+      { label: "Shimadzu - Degassing mobile phase solvents", href: "https://www.ssi.shimadzu.com/service-support/technical-support/analysis-basics/lib/lctalk/s5/index.html" },
+      { label: "EMA - ICH Q14 analytical procedure development", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q14-analytical-procedure-development" },
+      { label: "EMA - ICH Q2(R2) validation of analytical procedures", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q2r2-validation-analytical-procedures" },
+    ],
+    productLinks: [
+      { label: "View HPLC Grade Methanol", href: "/products/hplc-grade-solvents/methanol" },
+      { label: "Browse HPLC Grade Solvents", href: "/products/high-purity-solvents/hplc-grade-solvents" },
+      { label: "Read the Complete Guide to HPLC Solvents", href: "/guides/complete-guide-to-hplc-solvents" },
+      { label: "Open the Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
