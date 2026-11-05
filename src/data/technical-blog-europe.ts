@@ -5215,6 +5215,111 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open the Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "methanol-mmae-lenvatinib-plasma-lcms-qualification",
+    title: "Methanol for MMAE and Lenvatinib Plasma LC-MS/MS: A Protein-Precipitation and Lot-Bridge Plan",
+    shortTitle: "Methanol Qualification for MMAE and Lenvatinib Plasma LC-MS/MS",
+    description: "A methanol MMAE lenvatinib plasma LC-MS qualification plan for separating precipitation recovery, matrix effect, internal-standard response, carryover and solvent-lot change.",
+    primaryKeyword: "methanol MMAE lenvatinib plasma LC-MS qualification",
+    tag: "Oncology Bioanalysis",
+    readingTime: "11 min technical guide",
+    intro: "Methanol MMAE lenvatinib plasma LC-MS qualification has to protect two chemically different analytes in one fast bioanalytical workflow. A 2026 study used methanol protein precipitation, deuterated internal standards and positive-ESI MRM to measure monomethyl auristatin E (MMAE) and lenvatinib simultaneously in human plasma. Introducing a candidate methanol lot therefore requires more than comparing total peak area: the laboratory needs to distinguish precipitation recovery, matrix effect, analyte-to-internal-standard behaviour, carryover and study continuity before approving the material for a defined assay.",
+    painPoints: [
+      { title: "One response shift is assigned to the methanol lot", detail: "Changed recovery, plasma matrix, ion-source condition, internal-standard preparation and solvent background can all alter response, so total peak area alone cannot identify the cause." },
+      { title: "The two analytes are treated as one system", detail: "MMAE and lenvatinib can differ in precipitation loss, matrix sensitivity, calibration range and carryover risk; acceptable behaviour for one analyte does not release the other." },
+      { title: "A fast run hides sequence effects", detail: "A three-minute method can process many injections quickly, allowing source drift, sample age or high-to-low carryover to become aligned with one preparation or solvent lot." },
+      { title: "Lot bridging and method change are mixed", detail: "Changing methanol beside plasma source, precipitation ratio, internal-standard stock, column or source settings prevents a defensible material decision and can trigger a wider validation question." },
+    ],
+    sections: [
+      {
+        heading: "Define the paired-analyte decision before preparing plasma",
+        paragraphs: [
+          "The published assay is a useful starting point because it has a tightly defined scope. It measures MMAE, a payload used in antibody-drug conjugates, together with the tyrosine-kinase inhibitor lenvatinib in human plasma. The authors report methanol protein precipitation with deuterated internal standards, a 50 µL sample, a three-minute chromatographic run and positive-electrospray MRM detection. They evaluated selectivity, accuracy, precision, matrix effects, dilution, carryover and stability under ICH M10. Those method facts define a research precedent; they do not transfer the paper's numerical performance to another laboratory, instrument, patient population or solvent lot.",
+          "Write the bridge objective as a material decision for the laboratory's own controlled method. Record the two analytes, their isotope-labelled internal standards, plasma matrix and anticoagulant, validated ranges, sample volume, precipitation procedure, reporting purpose and study phase. State whether the work supports development, a full validation, a validated study method or a temporary investigation. If the laboratory is implementing the published procedure rather than changing material in an existing validated method, ICH M10 expects full validation of a literature method, not a solvent-only shortcut.",
+        ],
+        points: [
+          "Define separate decision criteria for MMAE and lenvatinib.",
+          "Keep the published 50 µL and three-minute conditions labelled as study-specific.",
+          "Identify the exact study and regulatory use before setting bridge scope.",
+        ],
+      },
+      {
+        heading: "Lock protein precipitation and internal-standard controls",
+        paragraphs: [
+          "Map every operation that affects the extract: plasma thaw and mixing, aliquot volume, internal-standard addition, methanol-to-plasma ratio, order and speed of addition, mixing energy, contact time, centrifugation force and temperature, supernatant transfer, dilution or evaporation, final composition and time to injection. Use the same plasma pools, analyte stocks and internal-standard stocks for retained- and candidate-lot preparations. Prepare independent replicates so a single pipetting or plate event cannot masquerade as lot behaviour.",
+          "ICH M10 calls for a suitable internal standard in calibration standards, quality controls and study samples, and recommends a stable isotope-labelled analyte where possible for MS detection. The paired study used deuterated agents, but isotope-labelled standards should still be reviewed rather than treated as perfect correction. Compare raw analyte area, raw internal-standard area and analyte-to-internal-standard ratio for each analyte. A stable ratio with both raw signals moving may suggest a shared ionisation or injection effect; a selective loss can direct the investigation toward preparation, adsorption, interference or standard integrity.",
+          "Control the candidate methanol as a named material: product, grade, batch, package, opening date and dispensing history. The TDS, specification and batch certificate support identity and traceability, but they do not demonstrate recovery or matrix control in the assay. Preserve enough retained and candidate material for a repeat if the first comparison exposes a difference.",
+        ],
+      },
+      {
+        heading: "Separate recovery, matrix effect and LC-MS response",
+        paragraphs: [
+          "Use a control ladder that answers one question at a time. Neat solutions compare instrument response without plasma. Post-extraction spikes expose processed-matrix ionisation effects while bypassing most precipitation loss. Pre-extraction spikes pass through precipitation, transfer and any concentration step. Extracted blank plasma tests endogenous interference, while a full procedural blank follows the preparation without analyte. Evaluate MMAE and lenvatinib separately at method-relevant levels because one combined response statistic can conceal opposing effects.",
+          "ICH M10 defines matrix effect as an altered analyte response caused by interfering, often unidentified matrix components and requires evaluation across independent matrix sources or lots during validation. For a lot bridge, the laboratory should use its approved validation history and a documented risk assessment to choose plasma sources, concentrations and replicates. Include haemolysed or lipaemic challenges when relevant to the intended population and existing method scope. Do not infer that a solvent comparison across one pooled plasma source covers the validated matrix claim.",
+          "Trend chromatographic and instrument evidence beside response: retention, peak shape, integration, pressure, background ions, source condition and injection sequence. If neat solutions are comparable but pre-extraction samples differ, repeat a post-extraction spike and a preparation without dry-down or dilution where the method allows. If both methanol lots drift together over time, investigate source state, autosampler exposure or sequence design before assigning a solvent-lot cause.",
+        ],
+      },
+      {
+        heading: "Run a methanol MMAE lenvatinib plasma LC-MS qualification bridge",
+        paragraphs: [
+          "Start while the currently approved methanol lot is still available. Prepare retained and candidate lots in parallel from common plasma and stock solutions, with at least two independent preparation sets where the protocol supports them. Balance plate position and alternate injection blocks so lot identity is not aligned with preparation order, autosampler time or source drift. Include solvent and processed blanks, zero samples, a full calibration for each analyte, low/medium/high QCs, a high-to-low carryover challenge and representative processed-sample stability or reinjection checks where applicable.",
+          "Review the two analytes as linked but independent release decisions. For each, compare calibration behaviour, accuracy and precision, internal-standard response, recovery evidence, matrix-response evidence, blank interference, dilution integrity, carryover and stability against predefined method criteria. ICH M10 defines carryover as residual analyte from a preceding sample and expects it to be assessed after the upper calibration standard during validation. A fast method makes sequence planning especially important: high MMAE or lenvatinib samples should not be allowed to compromise the next low sample unnoticed.",
+          "Use the smallest discriminating repeat when a result fails. Repeat matched preparations if replicate variability is high; use post-extraction spikes if plasma extracts diverge; reinject retained extracts if instrument drift is suspected; and reverse injection order if time is confounded with lot. Do not reject a methanol lot solely because one analyte area changed while ratio, blanks, QCs and diagnostics remain unexplained. Equally, do not release it because the second analyte passed. Record a separate conclusion for MMAE and lenvatinib and one final scope decision for the paired method.",
+        ],
+        points: [
+          "Blind or code lot identity where practical until predefined calculations are complete.",
+          "Keep plasma source, stocks, consumables, hardware and acquisition settings common.",
+          "Predefine investigation triggers as well as acceptance criteria.",
+        ],
+      },
+      {
+        heading: "Set validation scope and protect study continuity",
+        paragraphs: [
+          "ICH M10 states that modifications to a fully validated bioanalytical method may be evaluated by partial validation, with the extent based on the nature of the change. Its examples for chromatographic methods include changes in sample processing, sample volume, analytical method, matrix and storage. A new methanol lot is not automatically equivalent to changing the precipitation procedure, so the laboratory should combine method sensitivity, supplier and lot history, development evidence and study risk to decide whether routine incoming control, a focused bridge or partial validation is appropriate.",
+          "Eurachem frames validation and verification around intended use, specified requirements and objective evidence. Apply that logic to the material record: identify what the candidate lot is approved for, which evidence supported the decision and which risks remain outside scope. Link raw files, integrations, calculations, deviations, solvent documents, plasma sources, standard lots and reviewer approval. If a study is already running, define how retained samples, prepared extracts and batch chronology will be protected while the decision is pending.",
+          "Limit approval to the tested method, solvent grade and package, plasma matrix and anticoagulant, precipitation procedure, internal standards, column and LC-MS platform. Reassessment triggers can include a new methanol source or grade, packaging change, revised precipitation ratio, changed plasma matrix or anticoagulant, new internal-standard preparation, altered column or source configuration, wider calibration range or different study purpose. This keeps the bridge useful without turning one successful comparison into a universal solvent claim.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A Swiss CRO introduces a candidate methanol lot during an oncology PK study",
+      context: "An illustrative bioanalytical laboratory must introduce a candidate LC-MS methanol lot while supporting a study that measures MMAE and lenvatinib in human plasma. The approved method uses deuterated internal standards, and the outgoing lot is available only for a limited bridge.",
+      actions: [
+        "The team freezes plasma pools, analyte and internal-standard stocks, precipitation ratio, mixing, centrifugation, transfer, column, mobile phases and source settings before comparing materials.",
+        "Retained- and candidate-lot preparations are independently replicated and injected in balanced blocks with procedural blanks, zero samples, separate calibrations and low/medium/high QCs for both analytes.",
+        "Analysts review raw analyte and internal-standard areas, ratios, recovery and matrix diagnostics, calibration, carryover and processed-sample stability separately for MMAE and lenvatinib.",
+        "Any difference is investigated with a targeted repeat before Quality approves, restricts or rejects the candidate lot for the named method and study stage.",
+      ],
+      result: "The framework can distinguish a material signal from preparation, matrix, sequence and instrument effects while preserving a two-analyte study decision. This is an illustrative scenario, not a LANCHROM customer result, a validated procedure, a guaranteed lot outcome or a regulatory conclusion.",
+    },
+    checklist: [
+      "Assay purpose, study stage and bridge decision documented",
+      "MMAE and lenvatinib criteria defined separately",
+      "Plasma matrix, anticoagulant, sample volume and sources controlled",
+      "Analyte and deuterated internal-standard stocks shared across lots",
+      "Methanol grade, batch, package and opening history recorded",
+      "Precipitation ratio, order, mixing and centrifugation locked",
+      "Independent preparations and balanced injection order assigned",
+      "Procedural, extracted and carryover blanks included",
+      "Calibration and low/medium/high QCs reviewed for both analytes",
+      "Recovery and matrix-response diagnostics interpreted separately",
+      "Stability, reinjection and dilution checks scoped where applicable",
+      "Approval boundary, deviations and requalification triggers recorded",
+    ],
+    sources: [
+      { label: "PubMed - Simultaneous MMAE and lenvatinib human-plasma LC-MS/MS assay", href: "https://pubmed.ncbi.nlm.nih.gov/41762484/" },
+      { label: "Journal of Pharmaceutical and Biomedical Analysis - Original study DOI", href: "https://doi.org/10.1016/j.jpba.2026.117435" },
+      { label: "EMA - ICH M10 bioanalytical method validation", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-m10-bioanalytical-method-validation" },
+      { label: "Eurachem - Fitness for Purpose of Analytical Methods, third edition", href: "https://www.eurachem.org/index.php/publications/guides/mv" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Methanol", href: "/products/lcms-grade-solvents/methanol-for-lc-ms" },
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Explore LC-MS Analysis", href: "/applications/lcms-analysis" },
+      { label: "Read the Complete Guide to LC-MS Solvents", href: "/guides/complete-guide-to-lcms-solvents" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
