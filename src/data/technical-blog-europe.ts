@@ -5320,6 +5320,103 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Read the Complete Guide to LC-MS Solvents", href: "/guides/complete-guide-to-lcms-solvents" },
     ],
   },
+  {
+    slug: "methanol-n-nitroso-leucovorin-lcms-impurity-qualification",
+    title: "Methanol for N-Nitroso Leucovorin LC–MS/MS: A Blank, Specificity and Lot-Qualification Plan",
+    shortTitle: "N-Nitroso Leucovorin LC–MS/MS Methanol Qualification",
+    description: "A methanol N-nitroso leucovorin LC-MS impurity qualification plan for separating solvent blanks, mono-/di-nitroso specificity, matrix effects and lot changes.",
+    primaryKeyword: "methanol N-nitroso leucovorin LC-MS impurity qualification",
+    tag: "Pharmaceutical Impurity Testing",
+    readingTime: "12 min technical guide",
+    intro: "Methanol N-nitroso leucovorin LC-MS impurity qualification has two separate objectives: show that the analytical procedure can distinguish N-nitroso and di-nitroso leucovorin from the drug-product matrix, and show that a candidate solvent lot does not add a meaningful blank, response or chromatographic effect. Neither objective sets an acceptable intake or determines product disposition. This plan keeps those analytical decisions separate while turning a published LC–MS/MS method into a controlled, laboratory-specific lot bridge.",
+    painPoints: [
+      { title: "Trace response is assigned to the product", detail: "A solvent, mobile-phase additive, preparation vessel or autosampler carryover contribution can be mistaken for a drug-product NDSRI unless the blank hierarchy identifies where the signal enters." },
+      { title: "Structural similarity weakens specificity", detail: "Leucovorin and its mono- and di-nitroso related impurities require chromatographic and mass-spectrometric evidence; a nominal transition or retention time alone is not a complete identity argument." },
+      { title: "Several reagent lots change together", detail: "Introducing methanol, water and formic acid at the same time prevents the laboratory from assigning a changed baseline, retention, recovery or source response to one material." },
+      { title: "An analytical result becomes a regulatory conclusion", detail: "Method performance, solvent-lot acceptance, acceptable-intake assessment and batch disposition are connected decisions, but they have different evidence owners and approval routes." },
+    ],
+    sections: [
+      {
+        heading: "Define the leucovorin NDSRI method boundary before qualifying methanol",
+        paragraphs: [
+          "The 2026 Rapid Communications in Mass Spectrometry validation study addresses two named impurities in leucovorin drug products: N-nitroso leucovorin and di-nitroso leucovorin. The published procedure uses positive-electrospray selective reaction monitoring, a reversed-phase C8 column and gradient elution with methanol and water, both modified with 0.1% formic acid. That is a useful technical starting point because it identifies a concrete organic-solvent role, an acidic mobile-phase system and a difficult specificity problem around structurally related compounds.",
+          "Keep the transfer claim narrow. The paper reports its own validated procedure and sample scope; it does not make every methanol lot suitable, establish a LANCHROM method, replace a marketing-authorisation holder's nitrosamine risk assessment or create a European official procedure. Record the intended dosage form, sample preparation, target impurities, reporting purpose, instrument platform, column, acquisition conditions and controlled version of the laboratory procedure. A lot bridge can support only that documented scope unless additional matrices and conditions are deliberately validated.",
+        ],
+      },
+      {
+        heading: "Build a blank hierarchy that locates methanol and additive contributions",
+        paragraphs: [
+          "Start with blanks that answer different questions instead of repeating one nominal solvent blank. A no-injection or system blank, where supported by the instrument, tests persistent background without a new vial. A methanol blank and a water blank challenge the two bulk mobile-phase components. Fresh formic-acid-modified mobile phases test the prepared eluents, while a preparation blank follows the complete sample-contact path through vessels, filters or transfers. A placebo blank, when scientifically available, addresses formulation contribution; an unspiked drug-product extract then shows the combined matrix response before standards are added.",
+          "Place blanks around the highest standards and product extracts so that carryover can be separated from constant background. Record container, cap and vial lots, opening dates, preparation order, acid addition, final composition, filtration, storage temperature and hold time. Review the full chromatographic window rather than only the target retention times because a changing background feature can affect integration or ionisation without sharing an analyte transition. If a blank response is detected, step backwards through the hierarchy before assigning it to the product or the methanol lot.",
+        ],
+        points: [
+          "Use independent mobile-phase preparations to expose preparation-specific contamination.",
+          "Bracket retained and candidate solvent blocks with the same standards and blanks.",
+          "Predefine when blank response triggers reinjection, preparation replacement or a source investigation.",
+        ],
+      },
+      {
+        heading: "Bridge the methanol lot without changing water, formic acid or the LC–MS system",
+        paragraphs: [
+          "Reserve enough of the currently approved methanol lot for a paired comparison. Hold the water and formic-acid lots, preparation volumes, glassware, column, temperature, gradient table, flow, injection volume, autosampler wash, source settings, acquisition method and data-processing method constant. Prepare retained-lot and candidate-lot mobile phases independently and balance their sequence positions so that source conditioning, column equilibration and time-dependent drift do not align with one lot. Where practical, repeat preparations rather than treating replicate injections from one bottle as preparation replication.",
+          "Documentation establishes identity and traceability but cannot prove method equivalence by itself. Confirm the exact product, grade, batch, package and seal condition, then use the controlled supplier specification and batch-specific certificate appropriate to the purchase. LANCHROM's local product library identifies Methanol for LC-MS as an LC-MS Grade product for LC-MS analysis and bioanalysis and directs users to the current controlled specification, SDS and batch COA. It should not be used to infer a universal leucovorin recovery, blank limit, shelf life or regulatory approval.",
+        ],
+      },
+      {
+        heading: "Demonstrate specificity and fit-for-purpose performance near the reporting decision",
+        paragraphs: [
+          "The published study reports a 0.1–1.5 ng/mL validation range, a 0.05 ng/mL detection limit and a 0.1 ng/mL quantitation limit for its procedure. Treat those figures as study-specific evidence, not acceptance criteria transferred automatically to another instrument, product or laboratory. Establish the range and sensitivity needed for the laboratory's own reporting decision, then demonstrate that the retained- and candidate-lot preparations meet the same predefined criteria at the low end as well as across the working range.",
+          "ICH Q2(R2) frames validation around intended use and performance characteristics such as specificity, accuracy, precision, detection capability, quantitation capability, linearity and range. For this bridge, compare blank response, analyte response, retention, peak shape, integration, calibration behaviour, low-level precision and accuracy in the relevant matrix. Confirm that the two NDSRIs remain distinguishable from leucovorin and from each other under the controlled procedure. Review carryover after high-level injections and stability over the intended sequence duration. If the laboratory changes extraction, dosage form, column chemistry or acquisition conditions, treat that as method work rather than hiding it inside a solvent-lot comparison.",
+        ],
+      },
+      {
+        heading: "Keep solvent approval separate from nitrosamine risk and product disposition",
+        paragraphs: [
+          "EMA's nitrosamine guidance requires lifecycle risk evaluation, confirmatory testing when a risk is identified and appropriate updates to marketing authorisations. Its question-and-answer document was updated on 5 November 2026, including changes concerning acceptable-intake approaches and other nitrosamine policy topics. Those obligations belong to the marketing-authorisation holder and relevant Quality and Regulatory functions. A passing methanol bridge shows only that the candidate lot is suitable within the tested analytical procedure; it does not establish the acceptable intake, prove product compliance or authorise release of a drug-product batch.",
+          "EDQM makes the same scope principle visible in its OMCL method library: published NDSRI procedures are validated for declared nitrosamines in defined medicinal products, and other dosage forms require suitable validation. Close the methanol study with a bounded decision such as approved for the named procedure, approved with a restricted package or sequence condition, rejected for an assignable analytical effect, or investigation required. Record deviations, unresolved background, approval signatures, retained samples and requalification triggers. Route any confirmed product finding, limit assessment or batch decision through the laboratory's current regulatory and quality procedures.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A Swiss pharmaceutical laboratory transfers a two-NDSRI leucovorin procedure",
+      context: "An illustrative laboratory is transferring a leucovorin drug-product LC–MS/MS procedure while introducing a candidate LC-MS methanol lot. The analytical team must protect specificity for N-nitroso and di-nitroso leucovorin without treating the solvent bridge as an acceptable-intake or batch-release decision.",
+      actions: [
+        "The team locks the dosage-form preparation, standards, water and formic-acid lots, C8 column, gradient, source, acquisition and integration methods before preparing either methanol arm.",
+        "Retained and candidate methanol are compared in balanced blocks containing system, solvent, mobile-phase, preparation and carryover blanks plus matrix extracts and low/mid/high fortified samples.",
+        "Analysts review blank contribution, specificity from leucovorin, response, retention, peak shape, calibration, precision, accuracy and sequence stability against predefined laboratory criteria.",
+        "Quality approves or rejects the candidate methanol only for the tested procedure, while Regulatory Affairs separately assesses any confirmed NDSRI result and current EMA reporting obligations.",
+      ],
+      result: "The workflow can show whether the candidate solvent is analytically suitable without claiming that it controls nitrosamine formation or determines product compliance. This is an illustrative scenario, not a LANCHROM customer result, a validated LANCHROM method, a batch-performance claim or a regulatory conclusion.",
+    },
+    checklist: [
+      "Intended dosage form, impurity decision and laboratory procedure version defined",
+      "N-nitroso and di-nitroso leucovorin standards and traceability documented",
+      "Retained and candidate methanol grade, batch, package and opening history recorded",
+      "Water and formic-acid lots, composition and preparation order held constant",
+      "Column, gradient, flow, temperature, injection, wash and source settings locked",
+      "System, solvent, mobile-phase, preparation, placebo and matrix blanks assigned as applicable",
+      "Blank placement and carryover challenges predefined around high-level injections",
+      "Specificity from leucovorin and between both NDSRIs demonstrated",
+      "Low-level response, precision, accuracy and calibration behaviour compared by lot",
+      "Sequence stability, integration and data-processing rules reviewed consistently",
+      "Methanol approval separated from acceptable-intake and product-disposition decisions",
+      "Approval scope, deviations, retained samples and requalification triggers recorded",
+    ],
+    sources: [
+      { label: "PubMed - N-nitroso and di-nitroso leucovorin LC-MS/MS validation study", href: "https://pubmed.ncbi.nlm.nih.gov/41807320/" },
+      { label: "DOI - Rapid Communications in Mass Spectrometry leucovorin study", href: "https://doi.org/10.1002/rcm.70049" },
+      { label: "EMA - Nitrosamine guidance for marketing-authorisation holders", href: "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/referral-procedures-human-medicines/nitrosamine-impurities/nitrosamine-impurities-guidance-marketing-authorisation-holders" },
+      { label: "EDQM - Nitrosamine testing activities of the OMCL Network", href: "https://www.edqm.eu/en/nitrosamine-testing-activities-of-the-omcl-network" },
+      { label: "EMA - ICH Q2(R2) validation of analytical procedures", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q2r2-validation-analytical-procedures" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Methanol", href: "/products/lcms-grade-solvents/methanol-for-lc-ms" },
+      { label: "Browse LC-MS Mobile Phase Additives", href: "/products/high-purity-solvents/lcms-mobile-phase-additives" },
+      { label: "Explore LC-MS Analysis", href: "/applications/lcms-analysis" },
+      { label: "Open the Product Document Library", href: "/downloads" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
