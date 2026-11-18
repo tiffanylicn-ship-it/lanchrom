@@ -5417,6 +5417,111 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Open the Product Document Library", href: "/downloads" },
     ],
   },
+  {
+    slug: "methanol-ethambutol-2-aminobutanol-hplc-nqad-qualification",
+    title: "Methanol for Ethambutol HPLC-NQAD: A 2-Aminobutanol Impurity and Lot-Qualification Plan",
+    shortTitle: "Methanol Qualification for Ethambutol HPLC-NQAD",
+    description: "A methanol ethambutol 2-aminobutanol HPLC-NQAD qualification plan for controlling mobile-phase preparation, aerosol-detector settings, impurity response and solvent-lot change.",
+    primaryKeyword: "methanol ethambutol 2-aminobutanol HPLC-NQAD qualification",
+    tag: "Pharmaceutical Impurity Testing",
+    readingTime: "11 min technical guide",
+    intro: "Methanol ethambutol 2-aminobutanol HPLC-NQAD qualification is a combined material and detector-control problem. A 2025 study measured ethambutol hydrochloride and its highly polar, UV-poor (+)-2-aminobutanol impurity without derivatisation by using reversed-phase HPLC with an aerosol-based nano quantity analyte detector. Because the published work also examined mobile-phase composition, flow, nebulizer temperature and evaporator temperature, a laboratory cannot interpret a changed response as a methanol-lot effect unless those variables are controlled. This plan turns that constraint into a bounded lot bridge for a laboratory's own approved procedure.",
+    painPoints: [
+      { title: "Solvent and detector effects are confounded", detail: "Methanol composition, flow, nebulizer temperature and evaporator temperature can change together during troubleshooting, so a response shift is assigned to the solvent before the detector conditions are excluded." },
+      { title: "A UV-poor impurity is judged by a familiar HPLC model", detail: "Ethambutol and (+)-2-aminobutanol require an aerosol-based response in the published procedure; expectations copied from a UV method can misdirect baseline, sensitivity and specificity decisions." },
+      { title: "One mobile-phase preparation represents a whole lot", detail: "Replicate injections from one preparation estimate injection repeatability but do not expose weighing, TFA addition, mixing, filtration or preparation-to-preparation variation." },
+      { title: "A literature method is treated as a compendial release method", detail: "The paper supports a defined research procedure, not automatic suitability for every tablet product, NQAD platform, methanol grade or regulated laboratory." },
+    ],
+    sections: [
+      {
+        heading: "Define the HPLC-NQAD method boundary before comparing methanol lots",
+        paragraphs: [
+          "The published study addresses two named analytes in drug products: ethambutol hydrochloride and (+)-2-aminobutanol, described as Impurity I. Both are highly polar and lack strong ultraviolet chromophores. The authors used a C18 reversed-phase column, a mobile phase containing trifluoroacetic-acid solution and methanol, and NQAD detection. They investigated mobile-phase composition and ratio, mobile-phase flow, nebulizer temperature and evaporator temperature. Those facts establish a useful method-specific precedent; they do not establish that every C18 column, TFA concentration, detector model or methanol lot is interchangeable.",
+          "Start the bridge by recording the controlled laboratory procedure, dosage form, sample preparation, reference standards, reportable result, impurity decision level, column, mobile-phase composition, flow, injection, NQAD settings and data-processing method. State whether the work supports initial method implementation, transfer between laboratories, routine incoming control or a change to an already validated procedure. If the laboratory is adopting the literature method for a new product, the complete procedure still needs fit-for-purpose development and validation rather than a solvent-only comparison.",
+        ],
+        points: [
+          "Name ethambutol and (+)-2-aminobutanol separately in the study objective.",
+          "Keep published detector and sensitivity results labelled as study-specific.",
+          "Predefine the exact method, product and packaging scope that a passing bridge can approve.",
+        ],
+      },
+      {
+        heading: "Lock mobile-phase preparation and aerosol-detector controls",
+        paragraphs: [
+          "A solvent-lot comparison is interpretable only when the rest of the analytical system is stable. Reserve enough retained methanol for paired work, then hold the water and TFA lots, preparation order, volumes, vessels, mixing, filtration, storage, equilibration and hold time constant. Record methanol grade, batch, package, seal condition and opening history. Prepare retained- and candidate-lot mobile phases independently so that preparation variability is visible instead of hidden inside repeated injections from one bottle.",
+          "Freeze the column and its history, flow, temperature, injection volume, sample diluent, autosampler wash, gas supply, nebulizer temperature, evaporator temperature, acquisition method and integration rules. The paper's parameter investigation is particularly important here: adjusting aerosol-detector temperatures while introducing a new methanol lot creates two explanations for the same response change. If a detector setting must be changed for operational reasons, complete and document that investigation separately before restarting the solvent bridge.",
+          "Use a balanced sequence rather than running every retained-lot preparation first and every candidate-lot preparation last. Alternate or bracket the two materials so that conditioning, drift and source history do not align with one lot. Include adequate equilibration after switching mobile phases, but use the laboratory's established procedure rather than inventing a universal number of column volumes.",
+        ],
+      },
+      {
+        heading: "Build a sequence that separates background, impurity response and carryover",
+        paragraphs: [
+          "Assign each injection a diagnostic purpose. Mobile-phase and diluent blanks test background from the prepared solvents and sample-contact path. Ethambutol and (+)-2-aminobutanol reference solutions establish retention and response under the controlled conditions. Unspiked tablet preparations expose formulation contribution, while impurity-spiked preparations challenge recovery and discrimination in the relevant matrix. Carryover blanks placed after the highest standard or sample show whether a low-level response belongs to the current vial or the preceding injection.",
+          "Compare at least two independent preparations per methanol arm when the procedure and available material permit. Review the complete signal trace as well as the analyte windows: baseline level, noise, drift, unexpected features, retention, peak shape, resolution or other laboratory-defined separation criteria, analyte response, impurity response, calibration behaviour and carryover. Do not release a lot because the principal assay response is stable while the low-level impurity result is unexplained.",
+          "Investigate differences stepwise. First confirm preparation records, compositions, TFA addition, instrument state and sequence position. Then repeat the affected preparation or a targeted diagnostic rather than immediately changing several detector parameters. A repeat that uses new methanol, water, acid, column and temperature cannot identify which intervention corrected the problem.",
+        ],
+        points: [
+          "Include blanks before and after high-response injections.",
+          "Use the same reference-standard and tablet-sample pools across both solvent arms.",
+          "Review ethambutol and Impurity I performance separately before making one final lot decision.",
+        ],
+      },
+      {
+        heading: "Set acceptance criteria from the laboratory procedure, not the paper",
+        paragraphs: [
+          "The study reports strong performance for its own procedure, including sensitivity for both analytes and linear response over its evaluated ranges. Those results cannot be copied as another laboratory's release limits. The bridge criteria should come from the laboratory's validated or development-stage procedure and its intended reporting decision. They may include system suitability, blank response, retention, separation, response precision, calibration-model performance, accuracy in spiked product, lower-range precision and carryover, but every criterion needs a defined calculation and decision rule before data review.",
+          "ICH Q2(R2) asks that a validation protocol identify the intended purpose, performance characteristics and associated criteria. It also treats system suitability as an integral procedure check and describes specificity, range, accuracy and precision in relation to intended use. For an impurity procedure, demonstrate that (+)-2-aminobutanol can be measured without unacceptable interference from ethambutol, excipients or other likely components at the relevant level. A candidate solvent is acceptable only when the complete controlled procedure meets the predefined requirements.",
+          "Avoid a universal pass statement. A result can support approval for the tested methanol grade, batch and package in the named ethambutol tablet procedure on the specified column and detector configuration. It does not qualify the lot for every aerosol-based detector, every formulation, a different TFA composition or unrelated HPLC work. If the candidate lot fails, preserve the raw data and determine whether the cause is assignable to material, preparation, detector condition or an unresolved interaction before supplier escalation.",
+        ],
+      },
+      {
+        heading: "Connect the lot bridge to analytical lifecycle and change control",
+        paragraphs: [
+          "ICH Q14 describes science- and risk-based development and maintenance of analytical procedures, including robustness, parameter ranges, control strategy and lifecycle management. Use that framework to decide the size of the bridge. A mature procedure with broad operating knowledge and stable supplier history may justify a focused comparison, while a procedure close to its sensitivity limit or one being transferred between laboratories may need broader experiments or partial revalidation. The written rationale matters as much as the number of injections.",
+          "Close the study with traceable records: supplier specification and batch COA, methanol receipt and opening history, mobile-phase preparation sheets, TFA and water lots, reference-standard traceability, tablet sample identifiers, instrument and column records, sequences, raw data, calculations, deviations and reviewer approval. Link the conclusion to an explicit scope and inventory release decision so that future analysts know exactly what was qualified.",
+          "Define reassessment triggers before routine use. Examples include a new methanol source or grade, manufacturing-site or package change, revised TFA composition, different detector or gas configuration, new column chemistry, altered sample preparation, additional dosage form, changed impurity decision level or repeated baseline and response deviations. This prevents one successful bridge from becoming an unsupported claim of permanent or universal suitability.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A German generics laboratory bridges methanol during ethambutol impurity method transfer",
+      context: "An illustrative pharmaceutical QC laboratory is transferring an RP-HPLC-NQAD procedure for ethambutol tablets while its approved methanol lot is nearing depletion. The team must introduce a candidate HPLC methanol lot without confusing solvent effects with NQAD temperature, gas, column or mobile-phase preparation effects.",
+      actions: [
+        "The laboratory freezes the controlled procedure, TFA and water lots, column, flow, gas supply, nebulizer and evaporator temperatures, reference standards, tablet pool and integration method.",
+        "Analysts prepare retained- and candidate-lot mobile phases independently and inject balanced blocks containing mobile-phase blanks, diluent blanks, ethambutol standards, (+)-2-aminobutanol standards, unspiked tablet extracts, impurity-spiked extracts and carryover blanks.",
+        "The team reviews baseline and unexpected features, retention, peak shape, separation, response, calibration, lower-range precision, spike recovery and carryover for ethambutol and Impurity I against predefined laboratory criteria.",
+        "Quality approves, restricts or rejects the candidate lot only for the tested procedure and records any unresolved detector or preparation interaction for separate investigation.",
+      ],
+      result: "The design can distinguish a defensible methanol-lot signal from preparation, sequence and aerosol-detector variability. This is an illustrative scenario, not a LANCHROM customer result, a validated LANCHROM procedure, guaranteed detector performance or a regulatory conclusion.",
+    },
+    checklist: [
+      "Intended use, dosage form, analytes and impurity decision level documented",
+      "Controlled procedure version and transfer or change context recorded",
+      "Retained and candidate methanol grade, batch, package and opening history recorded",
+      "Water and TFA lots, composition and preparation order held constant",
+      "Column, flow, temperature, injection, wash and equilibration controls locked",
+      "NQAD gas supply, nebulizer and evaporator settings held constant",
+      "Independent mobile-phase preparations assigned to both solvent arms",
+      "Blanks, standards, unspiked and impurity-spiked tablet samples included",
+      "Balanced sequence and high-to-low carryover challenges predefined",
+      "Baseline, separation, response, calibration and lower-range criteria approved",
+      "Ethambutol and (+)-2-aminobutanol conclusions documented separately",
+      "Approval boundary, deviations and requalification triggers recorded",
+    ],
+    sources: [
+      { label: "PubMed - Derivatisation-free ethambutol and 2-aminobutanol RP-HPLC-NQAD method", href: "https://pubmed.ncbi.nlm.nih.gov/40065482/" },
+      { label: "DOI - Biomedical Chromatography ethambutol NQAD study", href: "https://doi.org/10.1002/bmc.70049" },
+      { label: "EMA - ICH Q14 analytical procedure development", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q14-analytical-procedure-development" },
+      { label: "EMA - ICH Q2(R2) validation of analytical procedures", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q2r2-validation-analytical-procedures" },
+    ],
+    productLinks: [
+      { label: "View HPLC Grade Methanol", href: "/products/hplc-grade-solvents/methanol" },
+      { label: "Browse HPLC Grade Solvents", href: "/products/high-purity-solvents/hplc-grade-solvents" },
+      { label: "Explore Pharmaceutical Analysis", href: "/applications/pharmaceutical-analysis" },
+      { label: "Explore Pharmaceutical Industry Solutions", href: "/industries/pharmaceutical" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
