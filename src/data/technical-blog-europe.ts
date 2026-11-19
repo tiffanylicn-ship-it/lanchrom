@@ -5522,6 +5522,112 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Explore Pharmaceutical Industry Solutions", href: "/industries/pharmaceutical" },
     ],
   },
+  {
+    slug: "acetonitrile-methanol-metamizole-on-column-hydrolysis-na-hilic-qualification",
+    title: "Acetonitrile/Methanol for Metamizole Impurity C: An On-Column Hydrolysis and NA-HILIC Qualification Plan",
+    shortTitle: "Metamizole Impurity C: NA-HILIC Solvent Qualification",
+    description: "An acetonitrile methanol metamizole on-column hydrolysis NA-HILIC qualification plan for controlling water, solvent ratio, false impurity-C response and column regeneration.",
+    primaryKeyword: "acetonitrile methanol metamizole on-column hydrolysis NA-HILIC qualification",
+    tag: "Pharmaceutical Impurity Testing",
+    readingTime: "11 min technical guide",
+    intro: "Acetonitrile methanol metamizole on-column hydrolysis NA-HILIC qualification begins with an unusual risk: the chromatographic procedure can create the impurity it is intended to measure. A 2026 study reported that aqueous reversed-phase, mixed-mode and HILIC configurations produced on-column conversion of metamizole to impurity C, while a non-aqueous HILIC-MS procedure suppressed the artifact under the study conditions. That finding makes solvent composition, water exposure, column state and regeneration part of one analytical control strategy. A laboratory changing either organic-solvent lot therefore needs more than matching certificates or replicate standard injections. It needs a paired-solvent bridge that can distinguish true batch impurity from preparation degradation, dynamic on-column conversion, solvent background and accumulated metamizole on the stationary phase.",
+    painPoints: [
+      { title: "The method can generate a false-positive impurity signal", detail: "Aqueous exposure can convert metamizole to impurity C during chromatography, so the reported result may combine material already present in the sample with artifact formed inside the system." },
+      { title: "Two solvent lots form one mobile-phase variable", detail: "Acetonitrile and methanol composition, water uptake and preparation error can interact; changing both lots together without a factorial bridge leaves the responsible material unresolved." },
+      { title: "Strong metamizole retention changes the column state", detail: "A short impurity-C elution window does not mean the column is clean. Retained metamizole can accumulate, alter pressure or carry into later work unless regeneration is controlled and evidenced." },
+      { title: "Published conditions become unsupported release limits", detail: "The paper's ratio, temperature, regeneration interval and performance belong to its column, instrument and samples; copying them does not qualify a new product, laboratory or LANCHROM lot." },
+    ],
+    sections: [
+      {
+        heading: "Define the metamizole on-column hydrolysis question before the solvent bridge",
+        paragraphs: [
+          "The primary analytical question is not simply whether impurity C can be detected. It is whether the procedure measures impurity C present before injection without creating a material additional response while metamizole migrates through the column. The original study describes a characteristic inter-peak plateau or dynamic chromatogram under aqueous configurations, consistent with continuing conversion during separation. Treat that profile as a diagnostic observation, not as proof that every raised result has the same cause. Sample preparation, solution hold time, pH, temperature, reference-standard integrity, carryover and genuine product impurity can still contribute.",
+          "Write an analytical target profile for the laboratory's actual decision. Name the metamizole material or dosage form, impurity-C reporting range, detector, required specificity, sample clock, preparation conditions and data-processing rules. State whether the work supports development, transfer, investigation or routine release testing. If the laboratory is adapting the published method, the whole procedure requires fit-for-purpose development and validation; a successful acetonitrile/methanol bridge cannot establish that the method is suitable for a different matrix or regulatory purpose.",
+          "Map the places where water can enter: solvent containers, hygroscopic reagents, volumetric vessels, sample solution, autosampler wash, injector path, column storage solvent and ambient handling. The aim is not to promise a literally water-free system. It is to define and hold the relevant exposure consistently enough that a result difference can be assigned to a tested variable rather than an undocumented change in the non-aqueous method boundary.",
+        ],
+        points: [
+          "Separate pre-injection degradation from conversion observed during chromatography.",
+          "Use the plateau profile as investigation evidence, not an automatic batch conclusion.",
+          "Limit approval to the product, procedure, solvent grades and packages actually tested.",
+        ],
+      },
+      {
+        heading: "Control acetonitrile, methanol and mobile-phase preparation as one system",
+        paragraphs: [
+          "The study's selected procedure used a buffered 97:3 acetonitrile/methanol mobile phase at low column temperature. That composition is a study-specific condition, not a universal recipe. For a controlled bridge, record both solvent grades, suppliers, batches, package sizes, seal condition, opening history and storage. Hold ammonium formate, formic acid, weighing, vessels, preparation order, final volume, mixing, filtration where applicable, transfer and hold time constant. Use the laboratory's verified preparation method and acceptance criteria rather than treating nominal bottle labels as evidence of the final blend.",
+          "Design the comparison so the two solvents are not inseparable. When material and procedure allow, use four arms: retained acetonitrile with retained methanol, candidate acetonitrile with retained methanol, retained acetonitrile with candidate methanol, and both candidate lots together. This structure can show whether a response follows one lot, the paired blend or preparation variability. If only the paired change can be tested, record that limitation and avoid concluding which individual solvent caused a difference.",
+          "Prepare independent mobile-phase replicates instead of drawing every result from one blend. Verify composition using the laboratory's controlled approach, and record elapsed time from preparation to injection. Balance or bracket retained and candidate arms across the sequence so that source drift, column conditioning and regeneration history do not align with one solvent pair. Keep column, flow, temperature, injection volume, sample diluent, wash, ion-source settings and integration rules unchanged during the comparison.",
+        ],
+      },
+      {
+        heading: "Build evidence that separates true impurity C from analytical artifact",
+        paragraphs: [
+          "Assign each injection a purpose. Solvent and mobile-phase blanks test background from the organic blend and reagents. An impurity-C reference solution establishes retention and response. A metamizole challenge solution tests whether the procedure generates the inter-peak plateau or an additional impurity-C response under the controlled conditions. Unspiked product preparations represent routine matrix, while impurity-C-spiked preparations challenge recovery and specificity near the laboratory's decision range. Place carryover blanks after the highest relevant metamizole or impurity-C load.",
+          "Use preparation-time controls to distinguish vial chemistry from on-column chemistry. Inject matched preparations promptly and at predefined later time points under controlled storage when solution stability is part of the question. A response that increases before injection points toward preparation or hold-time effects; a plateau linked to chromatographic residence points toward dynamic conversion; a stable feature in blanks points elsewhere. These patterns are hypotheses to confirm with targeted repeats, not substitutes for identity evidence.",
+          "Review the full chromatogram and system trace. Trend impurity-C response, metamizole retention, plateau or bridge features, peak shape, baseline, unexpected ions, pressure, carryover and repeatability. Compare candidate and retained arms against preapproved criteria derived from the laboratory procedure. Do not accept a solvent pair solely because the impurity-C standard is precise: the decisive challenge is whether a high metamizole load remains analytically distinct from the low-level impurity measurement.",
+        ],
+        points: [
+          "Include both an impurity-C standard and a separate metamizole artifact challenge.",
+          "Use matched fresh and held preparations when sample-solution stability is relevant.",
+          "Review chromatographic profiles and pressure alongside calculated impurity results.",
+        ],
+      },
+      {
+        heading: "Manage strong retention, regeneration and sequence memory",
+        paragraphs: [
+          "In the published procedure, impurity C eluted rapidly while metamizole was strongly retained. The authors introduced periodic column regeneration after a defined number of sample injections for their system. That interval is evidence of a column-state problem, not a transferable maintenance schedule. A receiving laboratory should establish its own regeneration trigger from sample load, retention, pressure, blank response, carryover and recovery of system performance.",
+          "Create a regeneration challenge during qualification. Run a predefined metamizole load, apply the controlled regeneration program, then inject a blank and suitability solution. Record pressure before and after, retention behaviour, residual signal and whether the next low-level impurity-C measurement meets its criteria. If a candidate solvent pair appears acceptable only after additional washing, treat the wash difference as part of the investigation rather than silently adding it to one arm.",
+          "Protect other methods that may share the instrument. Document the column as dedicated or define an evidenced transition procedure, including lines, injector, source and waste handling. Strongly retained material may not appear in the three-minute analytical window yet can affect later sequences. The bridge should therefore close with a demonstrated clean state and a controlled next-use decision, not merely the final reported sample result.",
+        ],
+      },
+      {
+        heading: "Set a bounded NA-HILIC solvent-qualification decision",
+        paragraphs: [
+          "ICH Q14 supports science- and risk-based analytical procedure development, including robustness, parameter ranges, control strategy and lifecycle management. Use that framework to rank acetonitrile/methanol composition, water exposure, temperature, flow, column state and regeneration as interacting procedure parameters. A focused lot bridge may be appropriate for a mature method with established operating knowledge; method transfer or an unexplained false-positive history may require broader robustness work or partial revalidation.",
+          "ICH Q2(R2) links validation characteristics to intended purpose. For an impurity procedure, the laboratory should predefine specificity, working range and lower-range performance, accuracy and precision as applicable, plus system suitability and carryover controls. The paper's reported analysis time, sensitivity, calibration and production-batch results cannot become another laboratory's criteria. They demonstrate feasibility under the authors' conditions, not guaranteed performance for a LANCHROM solvent lot or a different chromatographic system.",
+          "Close the bridge with an explicit scope: approved acetonitrile and methanol grades, batches and packages; named product and method version; column and detector configuration; preparation and regeneration procedures; deviations; reviewer decision; and retained samples. Define reassessment triggers such as a solvent source or grade change, package change, revised blend preparation, different column chemistry, altered sample diluent, changed temperature or regeneration program, new dosage form, or recurring plateau, pressure and carryover deviations.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A German API laboratory investigates a raised metamizole impurity-C result",
+      context: "An illustrative laboratory observes a higher impurity-C result after candidate acetonitrile and methanol lots are introduced together. The method owner must determine whether the change reflects product material, sample-solution degradation, on-column hydrolysis, column loading or one of the solvent lots.",
+      actions: [
+        "The team freezes the procedure, column, temperature, flow, reagents, sample pool, preparation clock, detector and data-processing rules, then records the retained and candidate solvent package histories.",
+        "Analysts prepare the four retained/candidate solvent combinations independently and run mobile-phase blanks, impurity-C standards, metamizole challenges, unspiked and spiked product preparations, hold-time controls and carryover blanks in balanced blocks.",
+        "After a predefined metamizole load, each arm receives the same regeneration challenge; pressure, residual signal, retention, plateau profile and the following low-level impurity-C response are reviewed against approved criteria.",
+        "Quality limits any approval to the tested solvent pair, product, column and procedure, while unresolved sample-age or column-state effects remain separate investigations.",
+      ],
+      result: "The design can distinguish a defensible solvent-lot conclusion from a false impurity-C signal created by preparation or chromatography. This is an illustrative scenario, not a LANCHROM customer result, a validated LANCHROM method, guaranteed artifact suppression or a regulatory conclusion.",
+    },
+    checklist: [
+      "Intended product, impurity-C decision and procedure version documented",
+      "Pre-injection degradation and on-column conversion hypotheses separated",
+      "Retained and candidate acetonitrile and methanol lots and packages recorded",
+      "Water-entry points, reagents, preparation order and hold time controlled",
+      "Column, temperature, flow, injection, wash, detector and integration locked",
+      "Independent mobile-phase preparations assigned to each comparison arm",
+      "Solvent, mobile-phase and carryover blanks placed for diagnosis",
+      "Impurity-C standards, metamizole challenges and spiked product included",
+      "Fresh and held preparations compared when solution stability is in scope",
+      "Plateau profile, response, retention, pressure and carryover criteria approved",
+      "Regeneration challenge and post-regeneration clean-state evidence documented",
+      "Approval scope, deviations, retained samples and reassessment triggers recorded",
+    ],
+    sources: [
+      { label: "ScienceDirect - Metamizole on-column hydrolysis and artifact-free NA-HILIC-MS study", href: "https://www.sciencedirect.com/science/article/pii/S0731708526003158" },
+      { label: "DOI - Journal of Pharmaceutical and Biomedical Analysis metamizole study", href: "https://doi.org/10.1016/j.jpba.2026.117647" },
+      { label: "EMA - ICH Q14 analytical procedure development", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q14-analytical-procedure-development" },
+      { label: "EMA - ICH Q2(R2) validation of analytical procedures", href: "https://www.ema.europa.eu/en/scientific-guidelines/ich-q2r2-validation-analytical-procedures" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Acetonitrile", href: "/products/lcms-grade-solvents/acetonitrile-for-lc-ms" },
+      { label: "View LC-MS Grade Methanol", href: "/products/lcms-grade-solvents/methanol-for-lc-ms" },
+      { label: "Browse Gradient Grade Solvents", href: "/products/high-purity-solvents/gradient-grade-solvents" },
+      { label: "Explore Pharmaceutical Analysis", href: "/applications/pharmaceutical-analysis" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
