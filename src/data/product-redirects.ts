@@ -33,14 +33,32 @@ export const PRODUCT_ROUTE_ALIASES = {
     "spe-sample-cleanup/mcx-mixed-cation-spe-150mg-6ml",
   "karl-fischer-reagents/volumetric-karl-fischer-reagent-two-component":
     "karl-fischer-reagents/kf-volumetric-reagent",
+  "laboratory-workflow-kits/sugar-organic-acid-full-analysis-kit":
+    "laboratory-workflow-kits/sugar-plus-organic-acid-full-analysis-kit",
 } as const;
 
-export const PRODUCT_REDIRECTS = Object.entries(PRODUCT_ROUTE_ALIASES).map(
+const ALIASED_PRODUCT_REDIRECTS = Object.entries(PRODUCT_ROUTE_ALIASES).map(
   ([source, destination]) => ({
     source: `/products/${source}`,
     destination: `/products/${destination}`,
   }),
 );
+
+const LEGACY_PRODUCT_REDIRECTS = [
+  {
+    source: "/products/trace-analysis-grade/trace-analysis-grade-hydrogen-peroxide-30",
+    destination: "/products/trace-analysis-chemicals/trace-analysis-grade-hydrogen-peroxide-30",
+  },
+  {
+    source: "/products/trace-analysis-grade/hydrogen-peroxide-30percent-for-trace-analysis",
+    destination: "/products/trace-analysis-chemicals/hydrogen-peroxide-30percent-for-trace-analysis",
+  },
+] as const;
+
+export const PRODUCT_REDIRECTS = [
+  ...ALIASED_PRODUCT_REDIRECTS,
+  ...LEGACY_PRODUCT_REDIRECTS,
+];
 
 const PRODUCT_REDIRECT_SOURCE_PATHS = new Set(
   PRODUCT_REDIRECTS.map(({ source }) => source),

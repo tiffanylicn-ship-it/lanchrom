@@ -5867,17 +5867,17 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "grades": [
       "pharma-usp"
     ],
-    "shortDescription": "Sugar + Organic Acid Full Analysis Kit for laboratory useQClaboratory use. One-stopSugarslaboratory useOrganic acidslaboratory useAnalysis kit，ContainsStandardlaboratory use.",
-    "description": "LANCHROM™ Sugar + Organic Acid Full Analysis Kit  is supplied for laboratory useQClaboratory use. One-stopSugarslaboratory useOrganic acidslaboratory useAnalysis kit，ContainsStandardlaboratory use. Packaging options: 1set.",
+    "shortDescription": "Matched laboratory workflow kit for sugar and organic acid analysis. Supplied as one set with 0.005 N sulfuric acid solution (7 L), ultrapure water (7 L), and a 5 mL standard.",
+    "description": "LANCHROM™ Sugar + Organic Acid Full Analysis Kit is a matched laboratory workflow set for sugar and organic acid analysis. The set contains 0.005 N sulfuric acid solution (7 L), ultrapure water (7 L), and a 5 mL standard.",
     "specifications": [
       {
         "parameter": "Grade/Performance",
-        "value": "One-stopSugarslaboratory useOrganic acidslaboratory useAnalysis kit，ContainsStandardlaboratory use",
+        "value": "Matched set for sugar and organic acid analysis",
         "testMethod": "Specification"
       },
       {
         "parameter": "Product Scope",
-        "value": "0.005N H₂SO₄ 7L + Ultrapure water7L + Standardlaboratory use5mL",
+        "value": "0.005 N H₂SO₄ solution 7 L + ultrapure water 7 L + standard 5 mL",
         "testMethod": "Catalog"
       },
       {
@@ -5892,7 +5892,8 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
       }
     ],
     "applications": [
-      "laboratory useQClaboratory use"
+      "Sugar and organic acid analysis",
+      "Laboratory quality control"
     ],
     "packSizes": [
       "1set"
@@ -5904,8 +5905,8 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "coaStatus": "request-only",
     "isHazmat": true,
     "seoTitle": "Sugar + Organic Acid Full Analysis Kit | Reagent Kits and Custom Sets | LANCHROM™",
-    "seoDescription": "LANCHROM™ Sugar + Organic Acid Full Analysis Kit: One-stopSugarslaboratory useOrganic acidslaboratory useAnalysis kit，ContainsStandardlaboratory use. Packaging: 1set. Request quote, CoA, SDS, and lead time.",
-    "keywords": ["Sugar + Organic Acid Full Analysis Kit"]
+    "seoDescription": "Sugar and organic acid analysis kit with 7 L of 0.005 N sulfuric acid solution, 7 L of ultrapure water, and a 5 mL standard. Request documents and a quote.",
+    "keywords": ["sugar and organic acid analysis kit"]
   },
   {
     "_id": "excel-reagent-kits-pesticide-residue-detection-solvent-kit",
@@ -10115,7 +10116,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Methanol | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Methanol: Pharmaceutical or industrial grade available, high purity, low residue. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": ["Methanol"]
+    "keywords": ["pharmaceutical grade methanol"]
   },
   {
     "_id": "excel-excipients-isopropyl-alcohol-ipa",
@@ -10219,7 +10220,7 @@ export const PRODUCTS_EXCEL_IMPORT: Product[] = [
     "isHazmat": true,
     "seoTitle": "Acetonitrile | Pharmaceutical Excipients and Food-Grade Chemicals | LANCHROM™",
     "seoDescription": "LANCHROM™ Acetonitrile: Pharmaceutical or industrial grade available, high purity, low residue. Packaging: 25L, 200L. Request quote, CoA, SDS, and lead time.",
-    "keywords": ["Acetonitrile"]
+    "keywords": ["pharmaceutical grade acetonitrile"]
   },
   {
     "_id": "excel-excipients-tetrahydrofuran-thf",

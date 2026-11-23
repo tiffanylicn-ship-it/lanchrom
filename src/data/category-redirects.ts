@@ -36,6 +36,11 @@ for (const [group, productLine] of Object.entries(PRODUCT_GROUPS)) {
   );
 }
 
+redirectMap.set(
+  "/products/chromatography-consumables/karl-fischer",
+  "/products/standards-reagents/karl-fischer-reagents",
+);
+
 export const CATEGORY_REDIRECTS = Array.from(
   redirectMap,
   ([source, destination]) => ({ source, destination }),

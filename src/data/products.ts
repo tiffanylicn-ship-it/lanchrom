@@ -303,6 +303,11 @@ const RAW_PRODUCTS_DEDUPED: Product[] = Array.from(
   }, new Map<string, Product>()).values()
 );
 
+const SOURCE_SPECIFIC_SEO_PRODUCT_IDS = new Set([
+  "excel-excipients-methanol",
+  "excel-excipients-acetonitrile",
+]);
+
 const NORMALIZED_PRODUCTS: Product[] = RAW_PRODUCTS_DEDUPED.map(p => {
   const slug = p.slug || autoSlug(p.name);
   const enrichment = PRODUCT_ENRICHMENTS[slug] || {};
@@ -340,7 +345,12 @@ const NORMALIZED_PRODUCTS: Product[] = RAW_PRODUCTS_DEDUPED.map(p => {
     tdsAvailable: p.tdsAvailable ?? false,
     sdsAvailable: p.sdsAvailable ?? false,
     coaStatus: p.coaStatus ?? "request-only",
-    seoDescription: enrichment.seoDescription || p.seoDescription,
+    // Methanol and acetonitrile have distinct pharmaceutical-grade records.
+    // Keep their source-specific descriptions instead of applying the HPLC
+    // enrichment that shares the same bare product slug.
+    seoDescription: SOURCE_SPECIFIC_SEO_PRODUCT_IDS.has(p._id || "")
+      ? p.seoDescription
+      : enrichment.seoDescription || p.seoDescription,
   };
 });
 

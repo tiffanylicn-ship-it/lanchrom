@@ -4053,7 +4053,7 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
     ],
     productLinks: [
       { label: "View HPLC Grade Isopropanol (IPA)", href: "/products/hplc-grade-solvents/ipa" },
-      { label: "Browse HPLC Grade Solvents", href: "/products/hplc-grade-solvents" },
+      { label: "Browse HPLC Grade Solvents", href: "/products/high-purity-solvents/hplc-grade-solvents" },
       { label: "Read the Complete Guide to HPLC Solvents", href: "/guides/complete-guide-to-hplc-solvents" },
       { label: "Explore Biotechnology and Cell Therapy", href: "/industries/biotechnology" },
     ],
