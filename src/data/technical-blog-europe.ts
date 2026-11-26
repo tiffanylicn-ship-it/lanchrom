@@ -5628,6 +5628,112 @@ export const EUROPE_HPLC_ARTICLES: TechnicalBlogArticle[] = [
       { label: "Explore Pharmaceutical Analysis", href: "/applications/pharmaceutical-analysis" },
     ],
   },
+  {
+    slug: "methanol-serum-urine-hair-hilic-hrms-extraction-qualification",
+    title: "Methanol for Serum, Urine and Hair HILIC-HRMS: An Extraction Qualification Plan",
+    shortTitle: "Multi-Matrix HILIC-HRMS Methanol Qualification",
+    description: "A methanol serum urine hair HILIC-HRMS extraction qualification plan covering matrix-specific preparation, reconstitution, blanks, pooled QC and solvent-lot bridging.",
+    primaryKeyword: "methanol serum urine hair HILIC-HRMS extraction qualification",
+    tag: "Untargeted Metabolomics",
+    readingTime: "11 min technical guide",
+    intro: "Methanol serum urine hair HILIC-HRMS extraction qualification is not a single comparison repeated three times. Serum proteins, urinary salts and the washing and disruption demands of hair create different risks before an extract reaches the instrument. A 2026 multi-matrix study selected methanol as the best overall extraction compromise among its tested conditions, yet required a different post-dry-down reconstitution system for urine than for serum and hair. Extraction recovery, residue solubility, HILIC injection compatibility and source response must therefore remain linked but separable questions. A defensible bridge holds each matrix workflow stable, balances retained and candidate solvent, and evaluates blanks, pooled quality-control samples and internal standards before lot release.",
+    painPoints: [
+      { title: "One solvent name hides three matrix behaviours", detail: "Protein-rich serum, salt-rich urine and washed solid hair do not challenge methanol in the same way, so a combined average can conceal a failure in one matrix." },
+      { title: "Extraction and reconstitution are treated as one variable", detail: "A changed feature profile may come from precipitation or extraction, dry-down recovery, residue solubility or mismatch with the HILIC starting conditions rather than the methanol lot alone." },
+      { title: "The lot bridge moves with the cohort", detail: "New sample pools, altered storage histories, hair-wash steps, instrument cleaning or data-processing changes can align with the candidate lot and create a false material conclusion." },
+      { title: "Feature counts become biological claims", detail: "Broad or reproducible analytical coverage does not validate a biomarker, establish clinical utility or prove that one preparation is universal across populations and platforms." },
+    ],
+    sections: [
+      {
+        heading: "Define a matrix-specific qualification question before opening the candidate lot",
+        paragraphs: [
+          "Begin with the intended analytical decision: a new multi-matrix method, extension from serum to urine and hair, longitudinal cohort, supplier change or routine receipt of a new lot. Name the LC-HRMS platform, HILIC column, polarity modes, sample populations, preparation versions and data-processing workflow. Solvent-lot approval covers only that system; it cannot establish clinical validity or transferability to another HILIC chemistry, grade or package.",
+          "The 2026 study compared eight extraction systems in serum and advanced three candidates into urine and hair. Under its conditions, methanol gave the best overall balance of extraction efficiency, reproducibility and metabolite coverage. This is method-development evidence, not a universal ranking. A receiving laboratory should treat the study's sample amounts, cold extraction, mixing, centrifugation, evaporation, reconstitution and injection details as a starting point and demonstrate fitness for its own use.",
+          "Write separate risk statements for serum, urine and hair. For serum, include protein precipitation, clotting or collection history and freeze-thaw exposure. For urine, include dilution, pH, salt burden, precipitate formation and variable specific gravity where relevant. For hair, include segment selection, external contamination, washing, cutting, weighed mass and extended extraction or disruption. Predefine which risks are controlled by sample handling, which are monitored by internal standards and pooled QCs, and which could plausibly follow the methanol lot.",
+        ],
+        points: [
+          "Approve a solvent lot for a named workflow and matrix scope, not for metabolomics in general.",
+          "Keep biological interpretation outside the material-release decision.",
+          "Use matrix-level criteria so a strong result in urine cannot mask a weak result in hair or serum.",
+        ],
+      },
+      {
+        heading: "Lock pre-analytical variables separately for serum, urine and hair",
+        paragraphs: [
+          "Create a controlled preparation sheet for each matrix. For serum and urine, fix aliquot volume, thawing and mixing sequence, internal-standard addition, sample-to-methanol ratio, solvent temperature, extraction time, agitation, centrifugation, supernatant transfer, dry-down endpoint and storage before reconstitution. For hair, additionally fix anatomical or study-defined collection, segment length, wash solvent and volume, wash sequence, drying, cut size, weighed mass, water addition and mechanical or ultrasonic treatment. Record deviations rather than smoothing them into a single batch statistic.",
+          "Use matched pooled material for the bridge where governance and sample availability allow. Split each pool into retained-lot and candidate-lot arms so biological composition is shared. Prepare independent replicates, not repeated injections of one vial, because the qualification must measure preparation variability as well as instrument repeatability. If a pool cannot represent the full cohort, include matrix-relevant reference or study material and document the limitation. Do not combine serum, urine and hair signals into one acceptance result.",
+          "Balance preparation and injection order so one lot does not always follow instrument start-up, source cleaning or late-batch drift. Keep vessels, caps, tips, filters, evaporation equipment and operators controlled or deliberately blocked. Record methanol supplier, grade, lot, package, seal condition, opening time, storage and dispensing history; bottle history can otherwise resemble a manufacturing-lot effect.",
+        ],
+      },
+      {
+        heading: "Separate methanol extraction from dry-down and HILIC reconstitution",
+        paragraphs: [
+          "Extraction answers whether metabolites and internal standards move reproducibly from the original matrix into the supernatant. Reconstitution answers whether the dried residue dissolves completely and enters an acetonitrile-rich HILIC system without precipitation, phase instability or distorted focusing. Evaluate these stages independently. Inspect supernatant clarity and pellet disturbance, track internal-standard behaviour through extraction, record the dry-down endpoint, and check the reconstituted vial for haze, layering or delayed precipitation before injection.",
+          "The original study selected acetonitrile/water 3:1 for its serum and hair residues but used acetonitrile/methanol 3:1 for urine. It reported phase instability and incomplete solubilisation when the tested urine residue was reconstituted in the acetonitrile/water system, attributing the practical problem to the urine salt burden. These ratios and observations belong to that method. They show why a shared methanol extraction does not justify a shared reconstitution solvent, not that every urine sample requires the same mixture.",
+          "Keep the approved reconstitution system constant within each matrix. If it must change, run a separate factorial experiment rather than bundling it with the lot decision. Review early peak shape, retention, pressure, injection repeatability, ion-suppression indicators and residue stability. Do not reject a candidate for an altered injection solvent or accept it because reconstitution masks extraction loss.",
+        ],
+        points: [
+          "Document extraction recovery and reconstitution completeness as different observations.",
+          "Use the same dry-down endpoint and matrix-specific reconstitution procedure in both lot arms.",
+          "Investigate visible instability before interpreting feature counts or peak areas.",
+        ],
+      },
+      {
+        heading: "Build the methanol serum urine hair HILIC-HRMS extraction qualification sequence",
+        paragraphs: [
+          "Assign every control a diagnostic purpose. A true or solvent blank tests mobile-phase and instrument background. A process blank follows the complete matrix preparation without biological sample and can expose contributions from methanol, water, vessels, caps, washing materials and evaporation. A system-suitability or test mixture checks chromatographic and mass-spectrometric readiness. Pooled matrix QCs measure preparation and analytical repeatability in a composition relevant to the study. Stable-isotope or other suitable internal standards can reveal stage-specific recovery and response changes when their identity, concentration and point of addition are controlled.",
+          "mQACC reporting recommendations distinguish true blanks from process blanks and call for the blank type, preparation, solvent supplier and purity, additives and acceptance criteria to be documented. They also emphasize reporting pooled or matrix-matched QC samples, replicate extracts, internal standards and analytical-batch design. Use that framework before data acquisition: define maximum acceptable blank contribution or carryover, pooled-QC precision rules, retention and peak-shape limits, internal-standard review rules, and the response to a failed control. Avoid inventing one universal feature-RSD cutoff; acceptance should reflect the laboratory's established method and study objective.",
+          "A practical bridge includes independent retained- and candidate-lot preparations of each matrix pool, interspersed pooled QCs, process blanks, true blanks, suitability material and carryover checks. Review raw chromatograms and pressure alongside processed feature tables. Compare internal-standard recovery and precision, feature distribution, retention, peak shape, background, carryover and reconstitution stability by matrix. Investigate lot-specific process-blank features before calling them biological or solvent impurities.",
+        ],
+      },
+      {
+        heading: "Release the lot with bounded evidence and maintain the study lifecycle",
+        paragraphs: [
+          "Make the decision at two levels. First, each matrix must meet its predefined control and comparison criteria. Second, the combined workflow must show no unresolved pattern that would compromise cross-matrix interpretation. A candidate may be suitable for serum and hair but require further investigation in urine; the record should allow a scoped decision rather than forcing an all-or-nothing conclusion. Document failed controls, repeats, exclusions and data-processing versions so the approval can be reconstructed.",
+          "Close the report with the methanol grade, lot and package; comparator; matrix materials; preparation versions; HILIC-HRMS configuration; reconstitution systems; sequence design; criteria; deviations; decision; and retained samples where permitted. The LANCHROM public TDS identifies Methanol for LC-MS for LC-MS analysis and bioanalysis, while directing users to the controlled specification, SDS and batch-specific COA. Use those controlled documents rather than turning a public summary into a performance guarantee.",
+          "Define lifecycle triggers before the cohort continues: a methanol supplier, grade, manufacturing site or package change; extended bottle-open time; altered sample collection or storage; new hair-wash procedure; revised extraction ratio; different dry-down or reconstitution condition; HILIC column or mobile-phase change; source maintenance; or material changes to feature extraction and annotation. Use bridge QCs across analytical batches and trend matrix-specific performance. This preserves study continuity without implying that a passed solvent bridge validates metabolite identities, biomarkers or clinical conclusions.",
+        ],
+      },
+    ],
+    caseStudy: {
+      label: "Illustrative application scenario",
+      title: "A UK metabolomics core adds urine and hair to a serum cohort",
+      context: "An illustrative core laboratory has an established serum HILIC-HRMS workflow and plans to introduce urine, hair and a candidate LC-MS methanol lot. The team needs to avoid aligning the new solvent with every other method change.",
+      actions: [
+        "The laboratory freezes its serum workflow, defines separate urine and hair preparation sheets, and qualifies each matrix-specific reconstitution condition before comparing methanol lots.",
+        "Matched serum, urine and hair pools are split between retained and candidate methanol, with independent preparations, matrix-specific process blanks, true blanks, suitability material, internal standards and balanced injection blocks.",
+        "Reviewers assess extraction recovery, pooled-QC precision, blank features, retention, peak shape, pressure, carryover and reconstitution stability separately for each matrix before examining cross-matrix coverage.",
+        "Quality approves only the tested lot, grade, package and workflow scope; biomarker interpretation and any future preparation change remain outside the material decision.",
+      ],
+      result: "The design can identify a matrix-specific preparation problem without assigning it automatically to the methanol lot or hiding it in a combined average. This is an illustrative framework, not a LANCHROM customer result, a validated clinical method, guaranteed metabolite coverage or a universal preparation protocol.",
+    },
+    checklist: [
+      "Intended study, matrices, cohort stage and HILIC-HRMS workflow documented",
+      "Retained and candidate methanol grade, lot, package and opening history recorded",
+      "Serum volume, storage, thawing and precipitation conditions locked",
+      "Urine volume, salt or dilution risks and preparation conditions controlled",
+      "Hair segment, wash, cut size, mass and extraction conditions fixed",
+      "Internal-standard identities, concentrations and addition stages documented",
+      "Independent retained- and candidate-lot preparations made from matched pools",
+      "True blanks, matrix process blanks and carryover checks placed in the sequence",
+      "Pooled QCs and suitability material distributed through balanced run blocks",
+      "Dry-down endpoint and matrix-specific reconstitution system held constant",
+      "Matrix-level recovery, precision, background, retention and peak-shape criteria approved",
+      "Decision scope, deviations, retained samples and lifecycle triggers recorded",
+    ],
+    sources: [
+      { label: "Springer Nature - Multi-matrix untargeted HILIC-HRMS workflow", href: "https://link.springer.com/article/10.1007/s11306-026-02549-8" },
+      { label: "PubMed Central - mQACC analytical QA/QC reporting recommendations", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9420093/" },
+      { label: "NIST - Metabolomics 2022 workshop report on LC-MS QA/QC best practices", href: "https://www.nist.gov/publications/metabolomics-2022-workshop-report-state-qaqc-best-practices-lc-ms-based-untargeted" },
+      { label: "PubMed Central - Metabolomics 2023 workshop report toward QA/QC consensus", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11233279/" },
+    ],
+    productLinks: [
+      { label: "View LC-MS Grade Methanol", href: "/products/lcms-grade-solvents/methanol-for-lc-ms" },
+      { label: "Browse LC-MS Grade Solvents", href: "/products/high-purity-solvents/lcms-grade-solvents" },
+      { label: "Explore LC-MS Analysis", href: "/applications/lcms-analysis" },
+      { label: "Explore Clinical Diagnostics", href: "/industries/clinical-diagnostics" },
+    ],
+  },
 ];
 
 export function getEuropeHplcArticle(slug: string) {
