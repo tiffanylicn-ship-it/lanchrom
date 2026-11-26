@@ -86,13 +86,13 @@ function SimpleDropdown({ items, viewAllHref, viewAllLabel, onMouseEnter, onMous
   return (
     <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className="absolute z-50 top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-[#E6E3DD] p-2.5 mt-1">
       {items.map(item => (
-        <Link key={item.href} href={item.href} className="flex items-center justify-between text-[15px] text-[#5C5A55] hover:text-[#003D91] hover:bg-[#FBFAF8] px-3 py-1.5 rounded-md transition-colors">
+        <Link key={item.href} href={item.href} prefetch={false} className="flex items-center justify-between text-[15px] text-[#5C5A55] hover:text-[#003D91] hover:bg-[#FBFAF8] px-3 py-1.5 rounded-md transition-colors">
           <span>{item.label}</span>
           {item.badge && <span className="text-[9px] font-bold bg-[#E8F0EF] text-[#003D91] px-1.5 py-0.5 rounded">{item.badge}</span>}
         </Link>
       ))}
       <div className="mt-1.5 pt-1.5 border-t border-[#EFEDE8]">
-        <Link href={viewAllHref} className="block text-[15px] font-semibold text-[#003D91] px-3 py-1.5 rounded-md hover:bg-[#FBFAF8]">{viewAllLabel}</Link>
+        <Link href={viewAllHref} prefetch={false} className="block text-[15px] font-semibold text-[#003D91] px-3 py-1.5 rounded-md hover:bg-[#FBFAF8]">{viewAllLabel}</Link>
       </div>
     </div>
   );
@@ -139,7 +139,7 @@ export default function Navbar() {
         <div className="flex items-center h-20 gap-6">
           <Link href="/" className="notranslate flex items-center flex-shrink-0" translate="no">
             <div className="leading-tight">
-              <Image src="/images/brand/lanchrom-logo.png" alt="LANCHROM™" width={944} height={181} className="h-11 sm:h-12 w-auto" priority />
+              <Image src="/images/brand/lanchrom-logo.png" alt="LANCHROM™" width={944} height={181} className="h-11 sm:h-12 w-auto" loading="eager" />
               <span className="text-[#8A8782] text-[11px] block text-center font-medium tracking-wide mt-0.5">ANALYTICAL SCIENCE</span>
             </div>
           </Link>
@@ -154,9 +154,9 @@ export default function Navbar() {
                     <div key={ci} className="space-y-5">
                       {col.map(group => (
                         <div key={group.heading}>
-                          <Link href={group.href} className="text-[11px] font-bold text-[#8A8782] uppercase tracking-wider mb-2 block hover:text-[#003D91] transition-colors">{group.heading} →</Link>
+                          <Link href={group.href} prefetch={false} className="text-[11px] font-bold text-[#8A8782] uppercase tracking-wider mb-2 block hover:text-[#003D91] transition-colors">{group.heading} →</Link>
                           <div className="space-y-0.5">{group.items.map(item => (
-                            <Link key={item.href} href={item.href} className="flex items-center justify-between text-[14.5px] text-[#5C5A55] hover:text-[#003D91] hover:bg-[#FBFAF8] px-2.5 py-1.5 rounded-md transition-colors">
+                            <Link key={item.href} href={item.href} prefetch={false} className="flex items-center justify-between text-[14.5px] text-[#5C5A55] hover:text-[#003D91] hover:bg-[#FBFAF8] px-2.5 py-1.5 rounded-md transition-colors">
                               <span>{item.label}</span>
                               {item.badge && <span className="text-[9px] font-bold bg-[#E8F0EF] text-[#003D91] px-1.5 py-0.5 rounded">{item.badge}</span>}
                             </Link>
@@ -165,7 +165,7 @@ export default function Navbar() {
                       ))}
                     </div>
                   ))}
-                  <div className="col-span-3 pt-3 border-t border-[#EFEDE8]"><Link href="/products" className="text-sm font-semibold text-[#003D91] hover:text-[#2C5154]">View All Products →</Link></div>
+                  <div className="col-span-3 pt-3 border-t border-[#EFEDE8]"><Link href="/products" prefetch={false} className="text-sm font-semibold text-[#003D91] hover:text-[#2C5154]">View All Products →</Link></div>
                 </div>
               )}
             </div>
@@ -188,7 +188,7 @@ export default function Navbar() {
               {openMenu === "about" && (
                 <div onMouseEnter={cancelClose} onMouseLeave={scheduleClose} className="absolute z-50 top-full left-0 w-56 bg-white rounded-xl shadow-xl border border-[#E6E3DD] p-2.5 mt-1">
                   {ABOUT_NAV.map(item => (
-                    <Link key={item.href} href={item.href} className="block text-[15px] text-[#5C5A55] hover:text-[#003D91] hover:bg-[#FBFAF8] px-3 py-2 rounded-md transition-colors">
+                    <Link key={item.href} href={item.href} prefetch={false} className="block text-[15px] text-[#5C5A55] hover:text-[#003D91] hover:bg-[#FBFAF8] px-3 py-2 rounded-md transition-colors">
                       {item.label}
                     </Link>
                   ))}
@@ -238,7 +238,7 @@ export default function Navbar() {
             { label: "Downloads", href: "/downloads" },
             { label: "Contact", href: "/contact" },
           ].map(item => (
-            <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="block text-[#5C5A55] hover:text-[#003D91] text-[16px] py-3 border-b border-[#EFEDE8]">{item.label}</Link>
+            <Link key={item.href} href={item.href} prefetch={false} onClick={() => setMobileOpen(false)} className="block text-[#5C5A55] hover:text-[#003D91] text-[16px] py-3 border-b border-[#EFEDE8]">{item.label}</Link>
           ))}
           {!isHome && (
             <Link href="/contact?type=sample" onClick={() => setMobileOpen(false)} className="block bg-[#3C6E71] text-white text-[16px] font-bold px-4 py-3.5 rounded-lg text-center mt-4">Get Free Sample</Link>

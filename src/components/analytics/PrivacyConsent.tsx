@@ -140,7 +140,7 @@ export default function PrivacyConsent() {
             <p>
               We use optional analytics to understand website performance. Analytics and
               CRM tracking stay off unless you accept. Essential site functions remain
-              available either way. Read our <Link href="/privacy">Privacy Policy</Link>.
+              available either way. Read our <Link href="/privacy" prefetch={false}>Privacy Policy</Link>.
             </p>
           </div>
           <div className={styles.actions}>

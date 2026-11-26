@@ -52,6 +52,7 @@ export default function IntegratedSolutions() {
             <Link
               key={panel.title}
               href={panel.href}
+              prefetch={false}
               onMouseEnter={() => setActiveIndex(index)}
               onFocus={() => setActiveIndex(index)}
               aria-current={activeIndex === index ? "true" : undefined}
@@ -72,7 +73,7 @@ export default function IntegratedSolutions() {
             <article
               key={panel.title}
               className={`absolute inset-0 transition-opacity duration-500 ${
-                activeIndex === index ? "z-10 opacity-100" : "pointer-events-none opacity-0"
+                activeIndex === index ? "z-10 block opacity-100" : "hidden"
               }`}
               aria-hidden={activeIndex !== index}
             >
@@ -82,7 +83,6 @@ export default function IntegratedSolutions() {
                 fill
                 sizes="(min-width: 1280px) 1280px, 100vw"
                 className="object-cover object-right"
-                priority={index === 0}
               />
               <div className="home-service-mask absolute inset-0 z-[1]" aria-hidden="true" />
               <div className="home-service-copy relative z-10 flex min-h-[650px] flex-col justify-center px-6 py-12 sm:px-8 md:min-h-[560px] md:px-8 lg:px-10">
@@ -97,7 +97,7 @@ export default function IntegratedSolutions() {
                     </li>
                   ))}
                 </ul>
-                <Link href={panel.href} className="mt-8 w-fit border-b border-[#0E918C] pb-1 text-base font-bold text-[#0A514C] hover:text-[#0E918C]">
+                <Link href={panel.href} prefetch={false} className="mt-8 w-fit border-b border-[#0E918C] pb-1 text-base font-bold text-[#0A514C] hover:text-[#0E918C]">
                   Explore {panel.title}
                 </Link>
               </div>

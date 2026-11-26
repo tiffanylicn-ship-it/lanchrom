@@ -69,12 +69,14 @@ export default function FloatingCTA() {
           <div className="flex gap-2 flex-wrap justify-center flex-shrink-0">
             <Link
               href="/contact?type=sample"
+              prefetch={false}
               className="bg-[#3C6E71] text-white font-bold text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg hover:bg-[#2C5154] transition-colors whitespace-nowrap"
             >
               Get Free Sample
             </Link>
             <Link
               href="/contact?type=quote"
+              prefetch={false}
               className="border border-[#D9D6CF] text-[#5C5A55] font-semibold text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg hover:bg-[#FBFAF8] transition-colors whitespace-nowrap"
             >
               Request Quote

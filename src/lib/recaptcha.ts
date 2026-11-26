@@ -11,12 +11,35 @@ declare global {
 
 const SCRIPT_WAIT_TIMEOUT_MS = 4000;
 const SCRIPT_WAIT_INTERVAL_MS = 150;
+const SCRIPT_ID = "google-recaptcha";
 
-// Waits briefly for the reCAPTCHA script to finish loading. The script tag
-// is injected with strategy="afterInteractive", so on a slow connection it
-// may genuinely not be attached to `window` yet by the time the visitor
-// submits a fast form. Polling here avoids treating "not loaded yet" the
-// same as "will never load".
+let recaptchaScriptPromise: Promise<void> | null = null;
+
+function loadRecaptchaScript(siteKey: string): Promise<void> {
+  if (window.grecaptcha) return Promise.resolve();
+  if (recaptchaScriptPromise) return recaptchaScriptPromise;
+
+  recaptchaScriptPromise = new Promise(resolve => {
+    const existing = document.getElementById(SCRIPT_ID) as HTMLScriptElement | null;
+    if (existing) {
+      waitForGrecaptcha(SCRIPT_WAIT_TIMEOUT_MS).then(() => resolve());
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.id = SCRIPT_ID;
+    script.async = true;
+    script.src = `https://www.google.com/recaptcha/api.js?render=${encodeURIComponent(siteKey)}`;
+    script.addEventListener("load", () => resolve(), { once: true });
+    script.addEventListener("error", () => resolve(), { once: true });
+    document.head.appendChild(script);
+  });
+
+  return recaptchaScriptPromise;
+}
+
+// Waits briefly for the reCAPTCHA client to become available after its script
+// has loaded. Polling avoids treating a slow initialization as a hard failure.
 function waitForGrecaptcha(timeoutMs: number): Promise<ReCaptchaClient | null> {
   return new Promise(resolve => {
     if (window.grecaptcha) {
@@ -49,6 +72,7 @@ export async function getRecaptchaToken(action: string): Promise<string> {
     const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
     if (!siteKey) return "";
 
+    await loadRecaptchaScript(siteKey);
     const client = await waitForGrecaptcha(SCRIPT_WAIT_TIMEOUT_MS);
     if (!client) return "";
 

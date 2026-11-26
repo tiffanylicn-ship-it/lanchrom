@@ -67,8 +67,9 @@ export default function HomeHeroSlideshow() {
         <Link
           key={slide.href}
           href={slide.href}
+          prefetch={false}
           className={`absolute inset-0 transition-opacity duration-700 ${
-            activeIndex === index ? "z-[1] opacity-100" : "pointer-events-none opacity-0"
+            activeIndex === index ? "z-[1] block opacity-100" : "hidden"
           }`}
           aria-label={`Open ${slide.label}`}
           aria-hidden={activeIndex !== index}
@@ -80,7 +81,7 @@ export default function HomeHeroSlideshow() {
             fill
             sizes="100vw"
             className="object-cover object-center"
-            priority={index === 0}
+            preload={index === 0}
           />
         </Link>
       ))}

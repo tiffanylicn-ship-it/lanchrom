@@ -51,7 +51,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-8">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-2">
-            <Link href="/" className="block mb-3">
+            <Link href="/" prefetch={false} className="block mb-3">
               <Image
                 src="/images/brand/lanchrom-logo.png"
                 alt="LANCHROM™"
@@ -81,7 +81,7 @@ export default function Footer() {
               <ul className="space-y-1.5">
                 {links.map(link => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-[#475569] hover:text-[#0E918C] text-xs transition-colors leading-snug">
+                    <Link href={link.href} prefetch={false} className="text-[#475569] hover:text-[#0E918C] text-xs transition-colors leading-snug">
                       {link.label}
                     </Link>
                   </li>
@@ -96,9 +96,9 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-[#64748B]">
           <p>© 2025 LANCHROM™. All rights reserved.</p>
           <div className="flex gap-4">
-            <Link href="/privacy" className="hover:text-[#0E918C] transition-colors">Privacy</Link>
-            <Link href="/sitemap.xml" className="hover:text-[#0E918C] transition-colors">Sitemap</Link>
-            <Link href="/contact" className="hover:text-[#0E918C] transition-colors">Contact</Link>
+            <Link href="/privacy" prefetch={false} className="hover:text-[#0E918C] transition-colors">Privacy</Link>
+            <Link href="/sitemap.xml" prefetch={false} className="hover:text-[#0E918C] transition-colors">Sitemap</Link>
+            <Link href="/contact" prefetch={false} className="hover:text-[#0E918C] transition-colors">Contact</Link>
           </div>
         </div>
       </div>

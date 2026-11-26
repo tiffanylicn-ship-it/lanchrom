@@ -60,12 +60,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body style={{ margin: 0, fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
-        {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
-          <Script
-            src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
-            strategy="afterInteractive"
-          />
-        )}
         <Navbar />
         <main>{children}</main>
         <Footer />

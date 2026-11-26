@@ -21,12 +21,12 @@ export default function SiteChatWidget() {
     <>
       <Script
         id="sitechat-config"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `window.SiteChatConfig = ${JSON.stringify(config)};`,
         }}
       />
-      <Script id="sitechat-widget" src={widgetUrl} strategy="afterInteractive" />
+      <Script id="sitechat-widget" src={widgetUrl} strategy="lazyOnload" />
     </>
   );
 }

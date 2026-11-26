@@ -86,8 +86,8 @@ export default function ElectronicGradeIPAPage() {
             <p className={styles.heroDescription}>Ultra high purity isopropanol for semiconductor and precision cleaning applications.</p>
             <p className={styles.heroMeta}><span>CAS 67-63-0</span><span>C₃H₈O</span><span>Purity ≥99.99%</span></p>
             <div className={styles.heroActions}>
-              <Link className={styles.primaryButton} href="#inquiry">Get free sample <FlaskConical aria-hidden="true" /></Link>
-              <Link className={styles.secondaryButton} href="#inquiry">Request quote <ArrowRight aria-hidden="true" /></Link>
+              <a className={styles.primaryButton} href="#inquiry">Get free sample <FlaskConical aria-hidden="true" /></a>
+              <a className={styles.secondaryButton} href="#inquiry">Request quote <ArrowRight aria-hidden="true" /></a>
               <a className={styles.heroDocumentLink} href="/documents/products/hplc-grade-solvents/ipa/LANCHROM-ipa-TDS.pdf" download>Download TDS <Download aria-hidden="true" /></a>
             </div>
           </div>

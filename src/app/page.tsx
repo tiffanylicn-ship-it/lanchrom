@@ -97,7 +97,7 @@ export default function HomePage() {
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {PRODUCT_CATEGORIES.map((category) => (
                 <div key={category.name} className="group relative min-h-[300px] overflow-hidden rounded-md bg-[#0A302E] shadow-sm">
-                  <Link href={category.href} className="absolute inset-0 z-10" aria-label={`View ${category.name}`}>
+                  <Link href={category.href} prefetch={false} className="absolute inset-0 z-10" aria-label={`View ${category.name}`}>
                     <Image src={category.img} alt={category.name} fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
                     <div className="absolute inset-x-0 bottom-0 h-[48%] bg-[#0E918C]/50 backdrop-blur-[1px]" />
                     <div className="absolute inset-x-0 bottom-0 p-5 transition-opacity duration-200 group-hover:opacity-0">
@@ -112,13 +112,13 @@ export default function HomePage() {
                     <ul className="space-y-1.5">
                       {category.products.map((p) => (
                         <li key={p.href}>
-                          <Link href={p.href} className="block text-sm font-semibold text-white/90 hover:text-[#5FD4DC] hover:underline underline-offset-2">
+                          <Link href={p.href} prefetch={false} className="block text-sm font-semibold text-white/90 hover:text-[#5FD4DC] hover:underline underline-offset-2">
                             {p.name}
                           </Link>
                         </li>
                       ))}
                     </ul>
-                    <Link href={category.href} className="mt-4 text-xs font-bold uppercase tracking-wide text-[#5FD4DC] hover:text-white">View all →</Link>
+                    <Link href={category.href} prefetch={false} className="mt-4 text-xs font-bold uppercase tracking-wide text-[#5FD4DC] hover:text-white">View all →</Link>
                   </div>
                 </div>
               ))}
@@ -179,7 +179,7 @@ export default function HomePage() {
                 { title: "Analytical Labs", text: "HPLC, LC-MS and GC solvents for testing and research.", href: "/industries/contract-laboratories" },
                 { title: "Biotechnology", text: "Life-science reagents and controlled process solvents.", href: "/industries/biotechnology" },
               ].map((item) => (
-                <Link key={item.title} href={item.href} className="group min-h-[190px] border-t-4 border-[#0E918C] bg-white/85 p-6 shadow-sm transition-transform hover:-translate-y-1">
+                <Link key={item.title} href={item.href} prefetch={false} className="group min-h-[190px] border-t-4 border-[#0E918C] bg-white/85 p-6 shadow-sm transition-transform hover:-translate-y-1">
                   <h3 className="text-lg font-bold text-[#173C36] group-hover:text-[#0E918C]" style={{ fontFamily: M }}>{item.title}</h3>
                   <p className="mt-4 text-sm leading-relaxed text-[#61726D]">{item.text}</p>
                   <span className="mt-6 block text-xs font-bold uppercase tracking-wider text-[#0A514C]">View industry</span>
@@ -187,7 +187,7 @@ export default function HomePage() {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Link href="/industries" className="border-b border-[#0A514C] pb-1 text-sm font-bold text-[#0A514C]">View all industries</Link>
+              <Link href="/industries" prefetch={false} className="border-b border-[#0A514C] pb-1 text-sm font-bold text-[#0A514C]">View all industries</Link>
             </div>
           </div>
         </section>
@@ -201,9 +201,9 @@ export default function HomePage() {
                 <p className="home-section-copy max-w-xl">Tell us your solvent, grade, packaging and destination. Our team will help define the next step.</p>
               </div>
               <div className="flex flex-wrap gap-3 md:justify-end">
-                <Link href="/contact?type=sample" className="rounded-md bg-[#0A514C] px-5 py-3 text-sm font-bold text-white hover:bg-[#083E3B]">Get A Free Sample</Link>
-                <Link href="/contact?type=quote" className="rounded-md border border-[#0A514C]/45 bg-white/55 px-5 py-3 text-sm font-bold text-[#0A514C] hover:bg-white">Request Quotation</Link>
-                <Link href="/downloads" className="rounded-md border border-[#0A514C]/45 bg-white/55 px-5 py-3 text-sm font-bold text-[#0A514C] hover:bg-white">CoA / SDS</Link>
+                <Link href="/contact?type=sample" prefetch={false} className="rounded-md bg-[#0A514C] px-5 py-3 text-sm font-bold text-white hover:bg-[#083E3B]">Get A Free Sample</Link>
+                <Link href="/contact?type=quote" prefetch={false} className="rounded-md border border-[#0A514C]/45 bg-white/55 px-5 py-3 text-sm font-bold text-[#0A514C] hover:bg-white">Request Quotation</Link>
+                <Link href="/downloads" prefetch={false} className="rounded-md border border-[#0A514C]/45 bg-white/55 px-5 py-3 text-sm font-bold text-[#0A514C] hover:bg-white">CoA / SDS</Link>
               </div>
             </div>
           </div>

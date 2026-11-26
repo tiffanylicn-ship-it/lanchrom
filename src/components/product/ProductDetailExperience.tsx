@@ -133,9 +133,9 @@ export default function ProductDetailExperience({
               {product.mw && <span>MW {product.mw}</span>}
             </p>
             <div className={styles.heroActions}>
-              <Link className={styles.primaryButton} href="#inquiry">Get free sample <FlaskConical aria-hidden="true" /></Link>
-              <Link className={styles.secondaryButton} href="#inquiry">Request quote <ArrowRight aria-hidden="true" /></Link>
-              <Link className={styles.heroDocumentLink} href="#documents">Technical documents <Download aria-hidden="true" /></Link>
+              <a className={styles.primaryButton} href="#inquiry">Get free sample <FlaskConical aria-hidden="true" /></a>
+              <a className={styles.secondaryButton} href="#inquiry">Request quote <ArrowRight aria-hidden="true" /></a>
+              <a className={styles.heroDocumentLink} href="#documents">Technical documents <Download aria-hidden="true" /></a>
             </div>
           </div>
         </div>
