@@ -523,6 +523,16 @@ for (const [source, destination] of Object.entries(PRODUCT_ROUTE_ALIASES)) {
 
 export const PRODUCTS: Product[] = Array.from(PRODUCTS_BY_ROUTE.values());
 
+// These are distinct Karl Fischer formulations whose meaningful qualifiers are
+// inside parentheses. The general category-listing normalizer intentionally
+// removes parenthetical grade text, so preserve these approved formulation
+// routes as separate cards without changing de-duplication for other products.
+const DISTINCT_CATEGORY_LISTING_VARIANTS = new Set([
+  "karl-fischer-reagents/kf-single-component-reagent",
+  "karl-fischer-reagents/kf-volumetric-reagent-two-component-solvent",
+  "karl-fischer-reagents/kf-volumetric-reagent-two-component-titrant",
+]);
+
 export function getProductBySlug(slug: string, category?: string) {
   const canonicalCategory = category ? getCanonicalCategorySlug(category) : undefined;
   const candidates = PRODUCTS.filter((product) =>
@@ -542,7 +552,11 @@ export function getProductsByCategory(category: string) {
     product.category === canonicalCategory || product.catalogCategories?.includes(canonicalCategory)
   );
   return Array.from(products.reduce((map, product) => {
-    const key = normalizeCatalogProductName(product.name);
+    const route = `${product.category}/${product.slug}`;
+    const normalizedName = normalizeCatalogProductName(product.name);
+    const key = DISTINCT_CATEGORY_LISTING_VARIANTS.has(route)
+      ? `${normalizedName}/${product.slug}`
+      : normalizedName;
     const existing = map.get(key);
     if (!existing || (
       product.category === canonicalCategory

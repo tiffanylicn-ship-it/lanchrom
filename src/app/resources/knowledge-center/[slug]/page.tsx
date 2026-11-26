@@ -6,6 +6,7 @@ import { KNOWLEDGE_BATCH3 } from "@/data/knowledge-articles-batch3";
 import { KNOWLEDGE_BATCH4 } from "@/data/knowledge-articles-batch4";
 import { getCategoryInfo } from "@/data/categories";
 import { getCategoryPath } from "@/data/product-line-pages";
+import { getCuratedKnowledgeLinks } from "@/data/knowledge-link-cohort";
 import type { ContentBlock } from "@/data/knowledge-articles";
 
 interface Props { params: Promise<{ slug: string }>; }
@@ -85,7 +86,11 @@ export default async function KnowledgeArticlePage({ params }: Props) {
   const article = getKnowledgeArticle(slug);
   if (!article) notFound();
 
-  const related = (article.relatedArticles ?? [])
+  const relatedSlugs = Array.from(new Set([
+    ...(article.relatedArticles ?? []),
+    ...getCuratedKnowledgeLinks(slug),
+  ])).filter(relatedSlug => relatedSlug !== slug).slice(0, 5);
+  const related = relatedSlugs
     .map(s => KNOWLEDGE_ARTICLES[s] ?? KNOWLEDGE_BATCH3[s] ?? KNOWLEDGE_BATCH4[s])
     .filter(Boolean);
 
